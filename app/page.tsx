@@ -10,7 +10,7 @@ const WA_DEF    = WA('Merhaba, terzi hizmeti hakkında bilgi almak istiyorum.');
 const MAPS      = 'https://maps.app.goo.gl/CNZghczJNRQX3mLM9';
 const BIZ       = 'Konyaaltı Terzi - Terzi Dikim Tamir Tadilat';
 const TODAY     = new Date().toISOString().split('T')[0];
-const OG        = `${SITE}/og-terzi.jpg`;
+const OG        = `${SITE}/terzi-can-hero.png`;
 
 // ─── METADATA ─────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
@@ -78,7 +78,7 @@ export const metadata: Metadata = {
     url: SITE, siteName: 'Terzi Hizmeti', locale: 'tr_TR',
     alternateLocale: ['en_US', 'ru_RU'],
     type: 'website',
-    images: [{ url: OG, width: 1200, height: 630, alt: 'Terzi Can Antalya — Konyaaltı Terzi Atölyesi', type: 'image/jpeg' }],
+    images: [{ url: OG, width: 1024, height: 1024, alt: 'Terzi Can Antalya — Konyaaltı Terzi Atölyesi', type: 'image/png' }],
   },
   twitter: {
     card: 'summary_large_image',
@@ -90,6 +90,10 @@ export const metadata: Metadata = {
     'geo.region': 'TR-07', 'geo.placename': 'Konyaaltı, Antalya',
     'geo.position': '36.8820;30.6980', 'ICBM': '36.8820, 30.6980',
     'contact': PHONE,
+  },
+  // ── Google Search Console doğrulama ──────────────────────────────
+  verification: {
+    google: 'W2S_Gr49EgkgWG7xAWWMc5qPW6Cw3wEnOi6O6UC9zkQ',
   },
 };
 
@@ -128,7 +132,7 @@ const jsonLd = {
       currenciesAccepted: 'TRY, EUR, USD, RUB',
       paymentAccepted: 'Cash, Credit Card',
       image: OG,
-      logo: `${SITE}/logo.png`,
+      logo: `${SITE}/terzi-can-hero.png`,
       hasMap: MAPS,
       foundingDate: '2017-06-09',
       address: {
@@ -225,7 +229,7 @@ const jsonLd = {
       datePublished: '2024-01-01',
       dateModified: TODAY,
       author: { '@type': 'Organization', name: BIZ, url: SITE },
-      publisher: { '@type': 'Organization', name: BIZ, logo: { '@type': 'ImageObject', url: `${SITE}/logo.png` } },
+      publisher: { '@type': 'Organization', name: BIZ, logo: { '@type': 'ImageObject', url: `${SITE}/terzi-can-hero.png` } },
       image: OG,
       about: { '@id': `${SITE}#business` },
       inLanguage: 'tr',
@@ -293,7 +297,7 @@ export default function TerziHizmetiPage() {
           /* HERO */
           .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;padding:7rem 1.5rem 3.5rem}
           .hero-bg{position:absolute;inset:0;z-index:0}
-          .hero-bg-img{width:100%;height:100%;object-fit:cover;object-position:center;filter:brightness(.25) saturate(.6)}
+          .hero-bg-img{width:100%;height:100%;object-fit:cover;object-position:center 20%;filter:brightness(.32) saturate(.7)}
           .hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,#0a0a0a 0%,rgba(10,10,10,.7) 50%,rgba(10,10,10,.3) 100%)}
           .hero-content{position:relative;z-index:2;max-width:900px;margin:0 auto;width:100%}
           .hero-tag{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,77,0,.4);color:#FF6B2B;font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;padding:6px 14px;border-radius:2px;margin-bottom:1.8rem}
@@ -407,10 +411,10 @@ export default function TerziHizmetiPage() {
         <section className="hero" id="main" aria-labelledby="hero-h">
           <div className="hero-bg" aria-hidden="true">
             <img
-              src="https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=1600&q=85&auto=format&fit=crop"
+              src="/terzi-can-hero.png"
               alt=""
               className="hero-bg-img"
-              width={1600} height={900}
+              width={1024} height={1024}
             />
             <div className="hero-overlay"/>
           </div>

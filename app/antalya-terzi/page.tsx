@@ -231,6 +231,19 @@ export default function TerziHizmetiHomePage() {
 
         {/* HERO — H1 */}
         <header style={{ position: 'relative', background: T.ink, padding: '4rem 1.5rem 0', overflow: 'hidden' }}>
+          {/* Yüklenen marka görseli — arka plan */}
+          <div style={{
+            position: 'absolute', inset: 0,
+            backgroundImage: "url('/terzi-can-hero.png')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center 20%',
+            opacity: 0.4,
+          }} aria-hidden="true" />
+          {/* Koyu katman — metin okunurluğu için */}
+          <div style={{
+            position: 'absolute', inset: 0,
+            background: `linear-gradient(180deg, ${T.ink} 0%, rgba(21,24,28,.75) 35%, rgba(21,24,28,.92) 75%, ${T.ink} 100%)`,
+          }} aria-hidden="true" />
           {/* Arka plan dikiş grid deseni */}
           <svg width="100%" height="100%" style={{ position: 'absolute', inset: 0, opacity: 0.05 }} aria-hidden="true">
             <pattern id="stitchgrid" width="48" height="48" patternUnits="userSpaceOnUse">

@@ -610,6 +610,7 @@ export default function TerziHizmetiPage() {
         <footer>
           <div>© {new Date().getFullYear()} Terzi Can · Konyaaltı, Antalya · {PHONE}</div>
           <nav className="foot-links" aria-label="Footer bağlantılar">
+            <a href="/antalya-terzi">Antalya Geneli Hizmet →</a>
             <a href="https://swaphubs.com/terzi">SwapHubs Terzi</a>
             <a href="https://swaphubs.com/online-tailor-service">Online Tailor (EN)</a>
             <a href="https://swaphubs.com/ru/atelie-antalya-online">Ателье (RU)</a>

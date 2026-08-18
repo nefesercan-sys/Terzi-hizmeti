@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 
 // ─── CONSTANTS ────────────────────────────────────────────────────────────────
-const SITE      = 'https://terzihizmeti.com.tr';
+// ✅ DÜZELTME: www eklendi — Yandex doğrulaması www ile yapıldı, ana sayfayla tutarlı olmalı
+const SITE      = 'https://www.terzihizmeti.com.tr';
 const PAGE_URL  = `${SITE}/antalya-terzi`;
 const PHONE     = '+90 531 898 64 18';
 const PHONE_TEL = '+905318986418';
@@ -146,73 +147,83 @@ export default function AntalyaTerziPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <div style={{ background: '#0a0a0a', color: '#f0f0f0', fontFamily: "'Inter','Segoe UI',system-ui,sans-serif", lineHeight: 1.6, minHeight: '100vh' }}>
+      {/* ✅ DÜZELTME: Tüm turuncu (#FF4D00) tema, ana sayfadaki yeşil/altın/krem
+          markasıyla eşleşecek şekilde değiştirildi. İki sayfa artık aynı marka
+          kimliğini taşıyor — bu hem kullanıcı güvenini hem de marka tutarlılığını
+          güçlendirir (tutarsız renk teması ziyaretçide "acaba doğru siteye mi
+          geldim" tereddüdü yaratabilir). */}
+      <div style={{ background: '#1E3329', color: '#F5F1E8', fontFamily: "'Inter','Segoe UI',system-ui,sans-serif", lineHeight: 1.6, minHeight: '100vh' }}>
         <style>{`
           @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Syne:wght@700;800&display=swap');
           *{box-sizing:border-box;margin:0;padding:0}
           .ff{font-family:'Syne',sans-serif}
           a{color:inherit;text-decoration:none}
 
-          .nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 20px;background:rgba(10,10,10,.9);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06)}
+          .nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 20px;background:rgba(30,51,41,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,169,110,.15)}
           .nav-logo{font-family:'Syne',sans-serif;font-size:1rem;font-weight:800;color:#fff;letter-spacing:.04em;display:flex;align-items:center;gap:8px}
-          .nav-dot{width:8px;height:8px;border-radius:50%;background:#FF4D00}
-          .nav-wa{display:inline-flex;align-items:center;gap:8px;background:#FF4D00;color:#fff;font-weight:700;font-size:.8rem;padding:9px 16px;border-radius:4px}
+          .nav-dot{width:8px;height:8px;border-radius:50%;background:#C9A96E}
+          .nav-wa{display:inline-flex;align-items:center;gap:8px;background:#C9A96E;color:#1E3329;font-weight:800;font-size:.8rem;padding:9px 16px;border-radius:4px}
           .nav-home{font-size:.78rem;color:rgba(255,255,255,.55)}
 
-          .hero{padding:8rem 1.5rem 3.5rem;position:relative;overflow:hidden}
+          .hero{padding:8rem 1.5rem 3.5rem;position:relative;overflow:hidden;background:linear-gradient(160deg,#1E3329 0%,#2C4A3E 100%)}
           .hero-bg{position:absolute;inset:0;z-index:0}
-          .hero-bg-img{width:100%;height:100%;object-fit:cover;object-position:center 15%;filter:brightness(.22) saturate(.6)}
-          .hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,#0a0a0a 0%,rgba(10,10,10,.75) 55%,rgba(10,10,10,.4) 100%)}
+          .hero-bg-img{width:100%;height:100%;object-fit:cover;object-position:center 15%;filter:brightness(.35) saturate(.75)}
+          .hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(30,51,41,.92) 0%,rgba(30,51,41,.7) 55%,rgba(30,51,41,.35) 100%)}
           .hero-content{position:relative;z-index:2;max-width:900px;margin:0 auto}
-          .hero-tag{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,77,0,.4);color:#FF6B2B;font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;font-weight:700;padding:6px 14px;border-radius:2px;margin-bottom:1.6rem}
+          .hero-tag{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(201,169,110,.5);color:#C9A96E;font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;font-weight:700;padding:6px 14px;border-radius:2px;margin-bottom:1.6rem}
           .hero h1{font-family:'Syne',sans-serif;font-size:clamp(2.2rem,7vw,4.4rem);font-weight:800;line-height:1.05;letter-spacing:-.02em;margin-bottom:1.1rem}
-          .hero h1 .accent{color:#FF4D00}
-          .hero-desc{font-size:1rem;color:rgba(255,255,255,.65);max-width:640px;line-height:1.75;margin-bottom:1.8rem}
+          .hero h1 .accent{color:#C9A96E}
+          .hero-desc{font-size:1rem;color:rgba(255,255,255,.7);max-width:640px;line-height:1.75;margin-bottom:1.8rem}
           .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
-          .btn-primary{display:inline-flex;align-items:center;gap:10px;background:#FF4D00;color:#fff;font-weight:800;font-size:.88rem;padding:13px 22px;border-radius:4px}
+          .btn-primary{display:inline-flex;align-items:center;gap:10px;background:#C9A96E;color:#1E3329;font-weight:800;font-size:.88rem;padding:13px 22px;border-radius:4px;transition:all .2s}
+          .btn-primary:hover{background:#B8955A;transform:translateY(-2px)}
           .btn-secondary{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.08);color:#fff;font-weight:600;font-size:.88rem;padding:13px 20px;border-radius:4px;border:1px solid rgba(255,255,255,.15)}
 
           .sec{padding:4rem 1.5rem}
           .ctr{max-width:980px;margin:0 auto}
-          .eyebrow{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:#FF4D00;font-weight:700;display:block;margin-bottom:.7rem}
-          .sec-h{font-family:'Syne',sans-serif;font-size:clamp(1.6rem,3.6vw,2.4rem);font-weight:800;line-height:1.15;margin-bottom:.5rem}
-          .sec-sub{font-size:.88rem;color:#888;max-width:560px;line-height:1.7}
+          .eyebrow{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:#C9A96E;font-weight:700;display:block;margin-bottom:.7rem}
+          .sec-h{font-family:'Syne',sans-serif;font-size:clamp(1.6rem,3.6vw,2.4rem);font-weight:800;line-height:1.15;margin-bottom:.5rem;color:#fff}
+          .sec-sub{font-size:.88rem;color:rgba(255,255,255,.55);max-width:560px;line-height:1.7}
           .sec-head{margin-bottom:2.2rem}
 
           .dist-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
-          .dist-card{background:#141414;border:1px solid rgba(255,255,255,.07);border-radius:6px;padding:16px 18px}
+          .dist-card{background:rgba(255,255,255,.04);border:1px solid rgba(201,169,110,.12);border-radius:6px;padding:16px 18px;transition:border-color .2s}
+          .dist-card:hover{border-color:rgba(201,169,110,.35)}
           .dist-name{font-size:.98rem;font-weight:700;color:#fff;display:flex;align-items:center;gap:8px;margin-bottom:.35rem}
           .dist-tag{font-size:.6rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700;padding:2px 8px;border-radius:20px}
-          .dist-tag.merkez{background:rgba(74,222,128,.12);color:#4ade80}
-          .dist-tag.yakin{background:rgba(96,165,250,.12);color:#60a5fa}
-          .dist-tag.turizm{background:rgba(251,191,36,.12);color:#fbbf24}
-          .dist-tag.uzak{background:rgba(248,113,113,.12);color:#f87171}
-          .dist-tag.cokuzak{background:rgba(168,85,247,.12);color:#c084fc}
-          .dist-note{font-size:.78rem;color:#888;line-height:1.5}
+          .dist-tag.merkez{background:rgba(201,169,110,.18);color:#C9A96E}
+          .dist-tag.yakin{background:rgba(143,168,140,.18);color:#8FA88C}
+          .dist-tag.turizm{background:rgba(212,175,55,.18);color:#D4AF37}
+          .dist-tag.uzak{background:rgba(200,150,120,.18);color:#C89678}
+          .dist-tag.cokuzak{background:rgba(255,255,255,.12);color:rgba(255,255,255,.7)}
+          .dist-note{font-size:.78rem;color:rgba(255,255,255,.5);line-height:1.5}
 
           .step-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.8rem}
-          .step-n{font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;color:rgba(255,77,0,.15);line-height:1;margin-bottom:.4rem}
+          .step-n{font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;color:rgba(201,169,110,.2);line-height:1;margin-bottom:.4rem}
           .step-t{font-weight:700;font-size:.92rem;color:#fff;margin-bottom:.4rem}
-          .step-d{font-size:.8rem;color:#888;line-height:1.6}
+          .step-d{font-size:.8rem;color:rgba(255,255,255,.55);line-height:1.6}
 
-          .faq-item{border-bottom:1px solid rgba(255,255,255,.06);padding:1.1rem 0}
+          .faq-item{border-bottom:1px solid rgba(201,169,110,.12);padding:1.1rem 0}
           .faq-q{font-weight:700;font-size:.9rem;color:#fff;margin-bottom:.4rem}
-          .faq-a{font-size:.8rem;color:#888;line-height:1.6}
+          .faq-a{font-size:.8rem;color:rgba(255,255,255,.55);line-height:1.6}
 
-          .cta-final{background:linear-gradient(135deg,#FF4D00 0%,#c73a00 100%);color:#fff;padding:3.5rem 1.5rem;text-align:center}
+          .cta-final{background:linear-gradient(135deg,#2C4A3E 0%,#1E3329 100%);color:#fff;padding:3.5rem 1.5rem;text-align:center;border-top:1px solid rgba(201,169,110,.15)}
           .cta-h{font-family:'Syne',sans-serif;font-size:clamp(1.5rem,3.4vw,2.2rem);font-weight:800;margin-bottom:.6rem}
-          .cta-sub{font-size:.9rem;color:rgba(255,255,255,.85);margin-bottom:1.6rem}
+          .cta-sub{font-size:.9rem;color:rgba(255,255,255,.75);margin-bottom:1.6rem}
           .cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-          .btn-white{display:inline-flex;align-items:center;gap:10px;background:#fff;color:#FF4D00;font-weight:800;font-size:.88rem;padding:13px 22px;border-radius:4px}
-          .btn-outline-white{display:inline-flex;align-items:center;gap:10px;background:transparent;color:#fff;font-weight:700;font-size:.88rem;padding:13px 22px;border-radius:4px;border:2px solid rgba(255,255,255,.5)}
+          .btn-white{display:inline-flex;align-items:center;gap:10px;background:#C9A96E;color:#1E3329;font-weight:800;font-size:.88rem;padding:13px 22px;border-radius:4px;transition:all .2s}
+          .btn-white:hover{background:#B8955A;transform:translateY(-2px)}
+          .btn-outline-white{display:inline-flex;align-items:center;gap:10px;background:transparent;color:#fff;font-weight:700;font-size:.88rem;padding:13px 22px;border-radius:4px;border:2px solid rgba(255,255,255,.4)}
 
-          footer{background:#050505;border-top:1px solid rgba(255,255,255,.05);padding:1.8rem 1.5rem;text-align:center;font-size:.72rem;color:#555}
+          footer{background:#152720;border-top:1px solid rgba(201,169,110,.12);padding:1.8rem 1.5rem;text-align:center;font-size:.72rem;color:rgba(255,255,255,.4)}
           .foot-links{display:flex;justify-content:center;gap:1.1rem;flex-wrap:wrap;margin-top:.6rem}
-          .foot-links a{color:#555}
+          .foot-links a{color:rgba(255,255,255,.4);transition:color .2s}
+          .foot-links a:hover{color:#C9A96E}
 
           .float{position:fixed;bottom:20px;right:16px;z-index:99;display:flex;flex-direction:column;gap:10px}
-          .fbtn{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.3rem;box-shadow:0 4px 14px rgba(0,0,0,.4)}
-          .fbtn-call{background:#FF4D00;color:#fff}
+          .fbtn{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.3rem;box-shadow:0 4px 14px rgba(0,0,0,.4);transition:transform .2s}
+          .fbtn:hover{transform:scale(1.1)}
+          .fbtn-call{background:#2C4A3E;color:#fff;border:1px solid rgba(201,169,110,.3)}
           .fbtn-wa{background:#25D366;color:#fff}
         `}</style>
 
@@ -238,7 +249,7 @@ export default function AntalyaTerziPage() {
           </div>
           <div className="hero-content">
             <span className="hero-tag">
-              <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#FF4D00', display: 'inline-block' }} />
+              <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#C9A96E', display: 'inline-block' }} />
               Antalya'nın Her İlçesine Hizmet
             </span>
             <h1 id="hero-h">

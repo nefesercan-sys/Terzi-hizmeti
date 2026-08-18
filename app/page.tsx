@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
 
 // ─── CONSTANTS ────────────────────────────────────────────────────────────────
-const SITE      = 'https://terzihizmeti.com.tr';
+// ✅ DÜZELTME: www eklendi — Yandex Webmaster doğrulaması www ile yapıldı.
+// Canonical URL, doğrulanan domain ile birebir eşleşmeli (NAP tutarlılığı).
+const SITE      = 'https://www.terzihizmeti.com.tr';
 const PHONE     = '+90 531 898 64 18';
 const PHONE_TEL = '+905318986418';
 const WA_NUM    = '905318986418';
@@ -356,7 +358,7 @@ export default function TerziHizmetiPage() {
           .svc-desc{font-size:.83rem;color:#6B7057;line-height:1.65;margin-bottom:1.2rem}
           .svc-foot{display:flex;align-items:center;justify-content:space-between}
           .svc-price{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:800;color:#2C4A3E}
-          .svc-time{font-size:.68rem;color:#4ade80;font-weight:600}
+          .svc-time{font-size:.68rem;color:#8FA88C;font-weight:600}
           .svc-btn{display:inline-block;font-size:.72rem;font-weight:700;color:#2C4A3E;border:1px solid rgba(44,74,62,.25);padding:.4rem 1rem;border-radius:2px;margin-top:.9rem;transition:all .2s}
           .svc-btn:hover{background:rgba(44,74,62,.08);border-color:#2C4A3E}
 
@@ -364,7 +366,7 @@ export default function TerziHizmetiPage() {
           .dist-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
           .dist-card{background:#EDE6DA;border:1px solid rgba(255,255,255,.06);border-radius:4px;padding:12px 14px;transition:all .2s}
           .dist-card.free{border-color:rgba(74,222,128,.2);background:rgba(74,222,128,.04)}
-          .dist-card:hover{border-color:rgba(255,77,0,.3);transform:translateY(-2px)}
+          .dist-card:hover{border-color:rgba(201,169,110,.4);transform:translateY(-2px)}
           .dist-name{font-size:.88rem;font-weight:700;color:#1A1A1A;display:block}
           .dist-tag{font-size:.62rem;color:#6B7057;text-transform:uppercase;letter-spacing:.08em;margin-top:.15rem;display:block}
           .dist-tag.free-tag{color:#2C4A3E;font-weight:700}
@@ -449,7 +451,7 @@ export default function TerziHizmetiPage() {
               <strong>Terzi Can</strong> — Antalya'nın güvenilir terzi atölyesi.
               Paça kısaltmadan özel gün kıyafeti dikimine, dikim, tamir ve tadilat işlerinde
               profesyonel ve hızlı çözüm. Konyaaltı merkezli, tüm Antalya'ya hizmet.
-              Hurma · Liman · Sarısu bölgesine <strong style={{color:'#4ade80'}}>ücretsiz servis</strong>.
+              Hurma · Liman · Sarısu bölgesine <strong style={{color:'#8FA88C'}}>ücretsiz servis</strong>.
             </p>
 
             <div className="hero-btns">
@@ -462,8 +464,13 @@ export default function TerziHizmetiPage() {
             </div>
 
             <div className="hero-stats" aria-label="İstatistikler">
+              {/* ✅ DÜZELTME: Sahte "4.9★ · 94 değerlendirme" kaldırıldı.
+                  Gerçek Google Business Profile'da henüz yorum yok — yanıltıcı
+                  rakam kullanmak Google'ın spam politikalarına aykırıdır ve
+                  aggregateRating schema'sıyla da tutarsızlık yaratırdı.
+                  Yerine doğrulanabilir, gerçek bilgiler kondu. */}
               {([
-                ['4.9★', 'Google Puanı', '94 değerlendirme'],
+                ['2017\'den', 'Beri Hizmet', 'Konyaaltı\'da'],
                 ['0–24s', 'Ekspres Teslim', 'Aynı gün'],
                 ['Antalya', 'Tüm Bölgeler', 'Konyaaltı merkez'],
                 ['%100', 'Şeffaf Fiyat', 'Sürpriz yok'],
@@ -550,7 +557,7 @@ export default function TerziHizmetiPage() {
                 ['04','Teslim Alın','Ütülenmiş, giyime hazır kıyafetinizi teslim alın ya da adresinize getirelim.'],
               ] as [string,string,string][]).map(([n,t,d])=>(
                 <div key={n} style={{paddingTop:'1.5rem',borderTop:`2px solid ${n==='01'?'#C9A96E':'rgba(44,74,62,.12)'}`,transition:'border-color .2s'}}>
-                  <div style={{fontFamily:'Syne,sans-serif',fontSize:'2.5rem',fontWeight:800,color:'rgba(255,77,0,.12)',lineHeight:1,marginBottom:'.5rem'}}>{n}</div>
+                  <div style={{fontFamily:'Syne,sans-serif',fontSize:'2.5rem',fontWeight:800,color:'rgba(44,74,62,.12)',lineHeight:1,marginBottom:'.5rem'}}>{n}</div>
                   <h3 style={{fontWeight:700,fontSize:'1rem',color:'#1A1A1A',marginBottom:'.5rem'}}>{t}</h3>
                   <p style={{fontSize:'.83rem',color:'#6B7057',lineHeight:1.65}}>{d}</p>
                 </div>
@@ -568,7 +575,7 @@ export default function TerziHizmetiPage() {
                 Konyaaltı'nın Tüm<br/>Mahallelerinde Terzi
               </h2>
               <p className="sec-sub">
-                Hurma, Sarısu ve Liman'a <strong style={{color:'#4ade80'}}>ücretsiz</strong> alım-teslimat.
+                Hurma, Sarısu ve Liman'a <strong style={{color:'#8FA88C'}}>ücretsiz</strong> alım-teslimat.
                 Diğer tüm mahallelere nominal ücretle kapıdan kapıya servis.
               </p>
             </div>

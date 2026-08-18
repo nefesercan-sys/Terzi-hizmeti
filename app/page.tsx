@@ -134,7 +134,6 @@ const jsonLd = {
       image: OG,
       logo: `${SITE}/terzi-can-hero.png`,
       hasMap: MAPS,
-      foundingDate: '2017-06-09',
       address: {
         '@type': 'PostalAddress',
         streetAddress: 'Liman Mahallesi',
@@ -295,10 +294,10 @@ export default function TerziHizmetiPage() {
           .nav-wa{display:inline-flex;align-items:center;gap:8px;background:#FF4D00;color:#fff;font-weight:700;font-size:.8rem;padding:9px 16px;border-radius:4px;letter-spacing:.03em}
 
           /* HERO */
-          .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;padding:7rem 1.5rem 3.5rem}
+          .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden;padding:8rem 1.5rem 4rem}
           .hero-bg{position:absolute;inset:0;z-index:0}
-          .hero-bg-img{width:100%;height:100%;object-fit:cover;object-position:center 20%;filter:brightness(.32) saturate(.7)}
-          .hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,#0a0a0a 0%,rgba(10,10,10,.7) 50%,rgba(10,10,10,.3) 100%)}
+          .hero-bg-img{width:100%;height:100%;object-fit:cover;object-position:center 30%;filter:brightness(.58) saturate(.85)}
+          .hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,.92) 0%,rgba(10,10,10,.55) 45%,rgba(10,10,10,.2) 100%)}
           .hero-content{position:relative;z-index:2;max-width:900px;margin:0 auto;width:100%}
           .hero-tag{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,77,0,.4);color:#FF6B2B;font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;padding:6px 14px;border-radius:2px;margin-bottom:1.8rem}
           .hero h1{font-family:'Syne',sans-serif;font-size:clamp(2.8rem,9vw,6rem);font-weight:800;line-height:1.0;letter-spacing:-.02em;margin-bottom:1.2rem}
@@ -449,7 +448,7 @@ export default function TerziHizmetiPage() {
 
             <div className="hero-stats" aria-label="İstatistikler">
               {([
-                ['3+', 'Dil Desteği', 'TR · EN · RU'],
+                ['4.9★', 'Google Puanı', '94 değerlendirme'],
                 ['0–24s', 'Ekspres Teslim', 'Aynı gün'],
                 ['Antalya', 'Tüm Bölgeler', 'Konyaaltı merkez'],
                 ['%100', 'Şeffaf Fiyat', 'Sürpriz yok'],
@@ -613,7 +612,7 @@ export default function TerziHizmetiPage() {
             <a href="/antalya-terzi">Antalya Geneli Hizmet →</a>
             <a href="https://swaphubs.com/terzi">SwapHubs Terzi</a>
             <a href="https://swaphubs.com/online-tailor-service">Online Tailor (EN)</a>
-            <a href="https://swaphubs.com/ru/atelie-antalya-online">Ателье (RU)</a>
+            <a href="https://swaphubs.com/ru/atelie-antalya">Ателье (RU)</a>
             <a href={MAPS} target="_blank" rel="noopener noreferrer">Google Maps</a>
           </nav>
           {/* AI discovery için yapısal metin */}

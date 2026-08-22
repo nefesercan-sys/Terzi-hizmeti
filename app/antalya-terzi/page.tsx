@@ -13,45 +13,31 @@ const BIZ       = 'Konyaaltı Terzi - Terzi Dikim Tamir Tadilat';
 const TODAY     = new Date().toISOString().split('T')[0];
 const OG        = `${SITE}/terzi-can-hero.png`;
 
-// ─── METADATA ─────────────────────────────────────────────────────────────────
-// Bu sayfa ana sayfadan bilinçli olarak farklı kurgulandı: dikiş atölyesi +
-// fason imalat + üniforma + Konyaaltı mahalle öncelikli yapı + TR/EN başlık.
-// Ana sayfa "Konyaaltı merkezli genel terzi" derken, bu sayfa "Antalya geneli
-// tekstil atölyesi ve toplu üretim" niyetini hedefliyor — farklı arama amacı.
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: 'Konyaaltı Tailor Service — Antalya Terzi, Dikim Atölyesi, Fason İmalat',
   description:
     'Konyaaltı Hurma, Liman, Sarısu, Uncalı, Gürsu, Öğretmenevleri, Ahatlı, Toros mahallelerinde terzi ve dikiş atölyesi. Bay, bayan, çocuk kıyafet dikimi, üniforma üretimi, fason imalat. Antalya\'nın tüm ilçelerine hizmet. ☎ ' + PHONE,
   keywords: [
-    // Konyaaltı mahalle öncelikli
     'Hurma terzi Konyaaltı', 'Liman terzi Konyaaltı', 'Sarısu terzi Konyaaltı',
     'Uncalı terzi', 'Gürsu terzi', 'Öğretmenevleri terzi', 'Ahatlı terzi', 'Toros terzi',
     'Konyaaltı dikiş atölyesi', 'Konyaaltı tekstil atölyesi',
-    // Tailor / EN
     'Konyaaltı tailor service', 'Antalya tailor', 'tailor service Antalya',
     'dress design workshop Antalya', 'custom tailoring Antalya', 'uniform manufacturer Antalya',
-    // Atölye / tasarım / fason
     'dikim tasarım atölyesi Antalya', 'fason imalat Antalya', 'fason üretim Konyaaltı',
     'toplu üretim tekstil Antalya', 'numune dikim Antalya', 'kalıp çıkarma Antalya',
-    // Bay/bayan/çocuk
     'bay kıyafet dikimi Antalya', 'bayan kıyafet dikimi Antalya', 'çocuk kıyafet dikimi Antalya',
     'erkek terzi Konyaaltı', 'kadın terzi Konyaaltı', 'çocuk terzi Antalya',
-    // Üniforma
     'üniforma üretimi Antalya', 'okul üniforma dikimi', 'otel üniforma Antalya',
     'iş kıyafeti dikimi Antalya', 'kurumsal kıyafet üretimi',
-    // Genel terzi
     'terzi Antalya', 'terzi dikim tamir tadilat Antalya', 'Antalya terzi ilçeler',
     'tüm Antalya terzi hizmeti', "Antalya'nın her ilçesine terzi",
-    // Dikim / Tamir / Tadilat / Ütü — fiyat odaklı
     'dikim fiyatları Antalya 2026', 'tamir fiyatları Antalya', 'tadilat fiyatları Antalya',
     'paça kısaltma fiyatı Konyaaltı', 'bel daraltma fiyatı Antalya',
     'fermuar değişimi fiyatı Antalya', 'ütü fiyatı Antalya', 'kuru temizleme fiyatı Konyaaltı',
     'kıyafet tamiri Antalya', 'elbise tadilatı fiyatı', 'gelinlik tadilatı fiyatı Antalya',
-    // İlçeler
     'Muratpaşa terzi', 'Kepez terzi', 'Lara terzi', 'Alanya terzi', 'Manavgat terzi',
     'Döşemealtı terzi', 'Serik terzi', 'Kemer terzi',
-    // Diğer diller
     'портной Анталья Коньяалты', 'Schneider Antalya Konyaaltı',
   ],
   authors: [{ name: BIZ, url: SITE }],
@@ -86,7 +72,6 @@ export const metadata: Metadata = {
   },
 };
 
-// ─── JSON-LD ──────────────────────────────────────────────────────────────────
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -132,7 +117,6 @@ const jsonLd = {
           { '@type': 'Offer', name: 'Üniforma Üretimi', itemOffered: { '@type': 'Service', name: 'Kurumsal ve okul üniforma üretimi', description: 'Otel, restoran, okul, güvenlik, sağlık sektörü üniforma tasarımı ve toplu üretimi.' } },
           { '@type': 'Offer', name: 'Fason İmalat', itemOffered: { '@type': 'Service', name: 'Fason tekstil üretimi ve toplu imalat', description: 'Marka ve işletmeler için numune dikimi, kalıp çıkarma, seri üretim.' } },
           { '@type': 'Offer', name: 'Dikim Tasarım Atölyesi', itemOffered: { '@type': 'Service', name: 'Özel tasarım ve model geliştirme', description: 'Sıfırdan model tasarımı, prototip dikimi, kumaş danışmanlığı.' } },
-          // Dikim · Tamir · Tadilat · Ütü — fiyatlı hizmetler
           { '@type': 'Offer', name: 'Erkek Gömlek Dikimi', price: '350', priceCurrency: 'TRY', priceValidUntil: '2026-12-31', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Erkek Gömlek Dikimi' } },
           { '@type': 'Offer', name: 'Kadın Elbise Dikimi', price: '600', priceCurrency: 'TRY', priceValidUntil: '2026-12-31', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Kadın Elbise Dikimi' } },
           { '@type': 'Offer', name: 'Fermuar Değişimi', price: '200', priceCurrency: 'TRY', priceValidUntil: '2026-12-31', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Fermuar Değişimi — Pantolon, Mont, Ceket' } },
@@ -159,7 +143,6 @@ const jsonLd = {
   ],
 };
 
-// ─── DATA ─────────────────────────────────────────────────────────────────────
 const NEIGHBORHOODS = [
   { name: 'Hurma', tag: 'Öncelikli', note: 'Atölyeye en yakın — ücretsiz adrese servis', priority: true },
   { name: 'Liman', tag: 'Öncelikli', note: 'Ücretsiz adrese servis, aynı gün randevu', priority: true },
@@ -208,9 +191,6 @@ const WORKSHOP_SERVICES = [
   },
 ];
 
-// ─── DİKİM · TAMİR · TADİLAT · ÜTÜ — fiyat listesi (TR / EN / RU) ─────────────
-// Üç dilde başlık + açıklama + hizmet adları. Fiyat değerleri ortak (₺),
-// para birimi etiketleri dile göre kısa notla belirtiliyor.
 type Lang = 'tr' | 'en' | 'ru';
 
 const LANG_LABELS: Record<Lang, { name: string; flag: string; note: string }> = {
@@ -223,155 +203,48 @@ const REPAIR_CATEGORIES: Record<Lang, {
   icon: string; title: string; keyword: string; desc: string; rows: [string, string][];
 }[]> = {
   tr: [
-    {
-      icon: '✂️', title: 'Dikim Hizmetleri',
-      keyword: 'terzi dikim Antalya · özel ölçü dikim Konyaaltı',
+    { icon: '✂️', title: 'Dikim Hizmetleri', keyword: 'terzi dikim Antalya · özel ölçü dikim Konyaaltı',
       desc: 'Sıfırdan kıyafet dikimi. Bay, bayan, çocuk — ölçünüze özel tasarım ve üretim.',
-      rows: [
-        ['Erkek Gömlek Dikimi', '₺350+'],
-        ['Erkek Pantolon Dikimi', '₺400+'],
-        ['Kadın Elbise Dikimi', '₺600+'],
-        ['Abiye / Özel Gün Dikimi', '₺900+'],
-        ['Çocuk Kıyafeti Dikimi', '₺250+'],
-      ],
-    },
-    {
-      icon: '🔧', title: 'Tamir Hizmetleri',
-      keyword: 'kıyafet tamiri Antalya · fermuar tamiri Konyaaltı',
+      rows: [['Erkek Gömlek Dikimi', '₺350+'], ['Erkek Pantolon Dikimi', '₺400+'], ['Kadın Elbise Dikimi', '₺600+'], ['Abiye / Özel Gün Dikimi', '₺900+'], ['Çocuk Kıyafeti Dikimi', '₺250+']] },
+    { icon: '🔧', title: 'Tamir Hizmetleri', keyword: 'kıyafet tamiri Antalya · fermuar tamiri Konyaaltı',
       desc: 'Yırtık, sökük, fermuar, düğme — günlük giyimde en sık ihtiyaç duyulan onarımlar.',
-      rows: [
-        ['Fermuar Değişimi (Pantolon/Kot)', '₺200+'],
-        ['Fermuar Değişimi (Mont/Ceket)', '₺300+'],
-        ['Yırtık / Sökük Onarımı', '₺150+'],
-        ['Düğme, Kopça, Fitil Tamiri', '₺60+'],
-        ['Astar Değişimi', '₺300+'],
-      ],
-    },
-    {
-      icon: '📏', title: 'Tadilat Hizmetleri',
-      keyword: 'paça kısaltma Antalya · bel daraltma Konyaaltı',
+      rows: [['Fermuar Değişimi (Pantolon/Kot)', '₺200+'], ['Fermuar Değişimi (Mont/Ceket)', '₺300+'], ['Yırtık / Sökük Onarımı', '₺150+'], ['Düğme, Kopça, Fitil Tamiri', '₺60+'], ['Astar Değişimi', '₺300+']] },
+    { icon: '📏', title: 'Tadilat Hizmetleri', keyword: 'paça kısaltma Antalya · bel daraltma Konyaaltı',
       desc: 'Kıyafetinizi vücudunuza tam oturtan hassas ölçü ayarları.',
-      rows: [
-        ['Paça Kısaltma (Pantolon/Kot/Etek)', '₺150+'],
-        ['Bel Daraltma', '₺150+'],
-        ['Kol Kısaltma', '₺200+'],
-        ['Elbise / Ceket Daraltma', '₺200+'],
-        ['Gelinlik & Abiye Tadilatı', '₺400+'],
-      ],
-    },
-    {
-      icon: '🧺', title: 'Ütü & Kuru Temizleme',
-      keyword: 'ütü hizmeti Antalya · kuru temizleme Konyaaltı',
+      rows: [['Paça Kısaltma (Pantolon/Kot/Etek)', '₺150+'], ['Bel Daraltma', '₺150+'], ['Kol Kısaltma', '₺200+'], ['Elbise / Ceket Daraltma', '₺200+'], ['Gelinlik & Abiye Tadilatı', '₺400+']] },
+    { icon: '🧺', title: 'Ütü & Kuru Temizleme', keyword: 'ütü hizmeti Antalya · kuru temizleme Konyaaltı',
       desc: 'Profesyonel buharlı ütü ve kuru temizleme. Otel ve adreslerden alım-teslimat.',
-      rows: [
-        ['Ütü (adet)', '₺80+'],
-        ['Kuru Temizleme (Elbise)', '₺300+'],
-        ['Kuru Temizleme (Mont/Kaban)', '₺500+'],
-        ['Çamaşır & Ütü (kg)', '₺80+/kg'],
-      ],
-    },
+      rows: [['Ütü (adet)', '₺80+'], ['Kuru Temizleme (Elbise)', '₺300+'], ['Kuru Temizleme (Mont/Kaban)', '₺500+'], ['Çamaşır & Ütü (kg)', '₺80+/kg']] },
   ],
   en: [
-    {
-      icon: '✂️', title: 'Tailoring Services',
-      keyword: 'tailor Antalya · custom-fit sewing Konyaaltı',
+    { icon: '✂️', title: 'Tailoring Services', keyword: 'tailor Antalya · custom-fit sewing Konyaaltı',
       desc: 'Made-from-scratch garments. Men, women, children — designed and sewn to your exact measurements.',
-      rows: [
-        ["Men's Shirt Tailoring", '₺350+'],
-        ["Men's Trousers Tailoring", '₺400+'],
-        ["Women's Dress Making", '₺600+'],
-        ['Evening Gown / Special Occasion', '₺900+'],
-        ["Children's Clothing", '₺250+'],
-      ],
-    },
-    {
-      icon: '🔧', title: 'Repair Services',
-      keyword: 'clothing repair Antalya · zipper repair Konyaaltı',
+      rows: [["Men's Shirt Tailoring", '₺350+'], ["Men's Trousers Tailoring", '₺400+'], ["Women's Dress Making", '₺600+'], ['Evening Gown / Special Occasion', '₺900+'], ["Children's Clothing", '₺250+']] },
+    { icon: '🔧', title: 'Repair Services', keyword: 'clothing repair Antalya · zipper repair Konyaaltı',
       desc: 'Tears, seams, zippers, buttons — the everyday fixes clothing needs most.',
-      rows: [
-        ['Zipper Replacement (Trousers/Jeans)', '₺200+'],
-        ['Zipper Replacement (Coat/Jacket)', '₺300+'],
-        ['Tear / Seam Repair', '₺150+'],
-        ['Button, Hook, Snap Repair', '₺60+'],
-        ['Lining Replacement', '₺300+'],
-      ],
-    },
-    {
-      icon: '📏', title: 'Alterations',
-      keyword: 'hemming Antalya · waist taking in Konyaaltı',
+      rows: [['Zipper Replacement (Trousers/Jeans)', '₺200+'], ['Zipper Replacement (Coat/Jacket)', '₺300+'], ['Tear / Seam Repair', '₺150+'], ['Button, Hook, Snap Repair', '₺60+'], ['Lining Replacement', '₺300+']] },
+    { icon: '📏', title: 'Alterations', keyword: 'hemming Antalya · waist taking in Konyaaltı',
       desc: 'Precise fit adjustments so your clothing sits exactly right on your body.',
-      rows: [
-        ['Hemming (Trousers/Jeans/Skirt)', '₺150+'],
-        ['Waist Taking In', '₺150+'],
-        ['Sleeve Shortening', '₺200+'],
-        ['Dress / Jacket Taking In', '₺200+'],
-        ['Wedding & Evening Dress Alterations', '₺400+'],
-      ],
-    },
-    {
-      icon: '🧺', title: 'Ironing & Dry Cleaning',
-      keyword: 'ironing service Antalya · dry cleaning Konyaaltı',
+      rows: [['Hemming (Trousers/Jeans/Skirt)', '₺150+'], ['Waist Taking In', '₺150+'], ['Sleeve Shortening', '₺200+'], ['Dress / Jacket Taking In', '₺200+'], ['Wedding & Evening Dress Alterations', '₺400+']] },
+    { icon: '🧺', title: 'Ironing & Dry Cleaning', keyword: 'ironing service Antalya · dry cleaning Konyaaltı',
       desc: 'Professional steam ironing and dry cleaning. Pickup and delivery from hotels and addresses.',
-      rows: [
-        ['Ironing (per item)', '₺80+'],
-        ['Dry Cleaning (Dress)', '₺300+'],
-        ['Dry Cleaning (Coat)', '₺500+'],
-        ['Laundry & Ironing (per kg)', '₺80+/kg'],
-      ],
-    },
+      rows: [['Ironing (per item)', '₺80+'], ['Dry Cleaning (Dress)', '₺300+'], ['Dry Cleaning (Coat)', '₺500+'], ['Laundry & Ironing (per kg)', '₺80+/kg']] },
   ],
   ru: [
-    {
-      icon: '✂️', title: 'Пошив одежды',
-      keyword: 'портной Анталья · пошив по меркам Коньяалты',
+    { icon: '✂️', title: 'Пошив одежды', keyword: 'портной Анталья · пошив по меркам Коньяалты',
       desc: 'Пошив одежды с нуля. Мужская, женская, детская — по индивидуальным меркам.',
-      rows: [
-        ['Пошив мужской рубашки', '₺350+'],
-        ['Пошив мужских брюк', '₺400+'],
-        ['Пошив женского платья', '₺600+'],
-        ['Вечернее / праздничное платье', '₺900+'],
-        ['Пошив детской одежды', '₺250+'],
-      ],
-    },
-    {
-      icon: '🔧', title: 'Ремонт одежды',
-      keyword: 'ремонт одежды Анталья · ремонт молнии Коньяалты',
+      rows: [['Пошив мужской рубашки', '₺350+'], ['Пошив мужских брюк', '₺400+'], ['Пошив женского платья', '₺600+'], ['Вечернее / праздничное платье', '₺900+'], ['Пошив детской одежды', '₺250+']] },
+    { icon: '🔧', title: 'Ремонт одежды', keyword: 'ремонт одежды Анталья · ремонт молнии Коньяалты',
       desc: 'Разрывы, швы, молнии, пуговицы — самый частый ремонт повседневной одежды.',
-      rows: [
-        ['Замена молнии (брюки/джинсы)', '₺200+'],
-        ['Замена молнии (пальто/куртка)', '₺300+'],
-        ['Ремонт разрыва / шва', '₺150+'],
-        ['Ремонт пуговиц, крючков, кнопок', '₺60+'],
-        ['Замена подкладки', '₺300+'],
-      ],
-    },
-    {
-      icon: '📏', title: 'Подгонка одежды',
-      keyword: 'укорачивание брюк Анталья · заужение талии Коньяалты',
+      rows: [['Замена молнии (брюки/джинсы)', '₺200+'], ['Замена молнии (пальто/куртка)', '₺300+'], ['Ремонт разрыва / шва', '₺150+'], ['Ремонт пуговиц, крючков, кнопок', '₺60+'], ['Замена подкладки', '₺300+']] },
+    { icon: '📏', title: 'Подгонка одежды', keyword: 'укорачивание брюк Анталья · заужение талии Коньяалты',
       desc: 'Точная подгонка по фигуре — чтобы одежда сидела идеально.',
-      rows: [
-        ['Укорачивание (брюки/джинсы/юбка)', '₺150+'],
-        ['Заужение талии', '₺150+'],
-        ['Укорачивание рукавов', '₺200+'],
-        ['Заужение платья / пиджака', '₺200+'],
-        ['Подгонка свадебного/вечернего платья', '₺400+'],
-      ],
-    },
-    {
-      icon: '🧺', title: 'Глажка и химчистка',
-      keyword: 'глажка Анталья · химчистка Коньяалты',
+      rows: [['Укорачивание (брюки/джинсы/юбка)', '₺150+'], ['Заужение талии', '₺150+'], ['Укорачивание рукавов', '₺200+'], ['Заужение платья / пиджака', '₺200+'], ['Подгонка свадебного/вечернего платья', '₺400+']] },
+    { icon: '🧺', title: 'Глажка и химчистка', keyword: 'глажка Анталья · химчистка Коньяалты',
       desc: 'Профессиональная паровая глажка и химчистка. Забор и доставка из отеля или по адресу.',
-      rows: [
-        ['Глажка (за вещь)', '₺80+'],
-        ['Химчистка (платье)', '₺300+'],
-        ['Химчистка (пальто)', '₺500+'],
-        ['Стирка и глажка (за кг)', '₺80+/кг'],
-      ],
-    },
+      rows: [['Глажка (за вещь)', '₺80+'], ['Химчистка (платье)', '₺300+'], ['Химчистка (пальто)', '₺500+'], ['Стирка и глажка (за кг)', '₺80+/кг']] },
   ],
 };
-
-
 
 const FAQS: [string, string][] = [
   ['Hurma, Liman, Sarısu mahallelerine ücretsiz servis var mı?', 'Evet, atölyemize en yakın bu üç mahalleye ücretsiz adrese gelen terzi servisi sağlıyoruz.'],
@@ -393,13 +266,11 @@ export default function KonyaaltiTailorServicePage() {
           *{box-sizing:border-box;margin:0;padding:0}
           .ff{font-family:'Syne',sans-serif}
           a{color:inherit;text-decoration:none}
-
           .nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 20px;background:rgba(30,51,41,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,169,110,.15)}
           .nav-logo{font-family:'Syne',sans-serif;font-size:1rem;font-weight:800;color:#fff;letter-spacing:.04em;display:flex;align-items:center;gap:8px}
           .nav-dot{width:8px;height:8px;border-radius:50%;background:#C9A96E}
           .nav-wa{display:inline-flex;align-items:center;gap:8px;background:#C9A96E;color:#1E3329;font-weight:800;font-size:.8rem;padding:9px 16px;border-radius:4px}
           .nav-home{font-size:.78rem;color:rgba(255,255,255,.55)}
-
           .hero{padding:8rem 1.5rem 3rem;position:relative;overflow:hidden;background:linear-gradient(160deg,#1E3329 0%,#2C4A3E 100%)}
           .hero-bg{position:absolute;inset:0;z-index:0}
           .hero-bg-img{width:100%;height:100%;object-fit:cover;object-position:center 15%;filter:brightness(.32) saturate(.75)}
@@ -414,15 +285,12 @@ export default function KonyaaltiTailorServicePage() {
           .btn-primary{display:inline-flex;align-items:center;gap:10px;background:#C9A96E;color:#1E3329;font-weight:800;font-size:.86rem;padding:13px 22px;border-radius:4px;transition:all .2s}
           .btn-primary:hover{background:#B8955A;transform:translateY(-2px)}
           .btn-secondary{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.08);color:#fff;font-weight:600;font-size:.86rem;padding:13px 20px;border-radius:4px;border:1px solid rgba(255,255,255,.15)}
-
           .sec{padding:4rem 1.5rem}
           .ctr{max-width:1000px;margin:0 auto}
           .eyebrow{font-size:.63rem;letter-spacing:.18em;text-transform:uppercase;color:#C9A96E;font-weight:700;display:block;margin-bottom:.7rem}
           .sec-h{font-family:'Syne',sans-serif;font-size:clamp(1.5rem,3.4vw,2.3rem);font-weight:800;line-height:1.18;margin-bottom:.5rem;color:#fff}
           .sec-sub{font-size:.86rem;color:rgba(255,255,255,.55);max-width:600px;line-height:1.7}
           .sec-head{margin-bottom:2.2rem}
-
-          /* MAHALLE ÖNCELİKLİ GRID */
           .nb-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:10px}
           .nb-card{background:rgba(255,255,255,.04);border:1px solid rgba(201,169,110,.14);border-radius:8px;padding:16px 18px;transition:border-color .2s}
           .nb-card.priority{background:rgba(201,169,110,.1);border-color:rgba(201,169,110,.4)}
@@ -433,11 +301,8 @@ export default function KonyaaltiTailorServicePage() {
           .nb-tag.oncelikli{background:rgba(201,169,110,.25);color:#C9A96E}
           .nb-tag.yakin{background:rgba(143,168,140,.2);color:#8FA88C}
           .nb-note{font-size:.76rem;color:rgba(255,255,255,.5);line-height:1.5}
-
           .other-districts{display:flex;flex-wrap:wrap;gap:8px;margin-top:1.4rem}
           .od-chip{font-size:.78rem;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);color:rgba(255,255,255,.65);padding:6px 14px;border-radius:20px}
-
-          /* ATÖLYE HİZMETLERİ */
           .wk-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
           .wk-card{background:rgba(255,255,255,.03);border:1px solid rgba(201,169,110,.12);border-radius:10px;padding:1.6rem;transition:border-color .2s}
           .wk-card:hover{border-color:rgba(201,169,110,.35)}
@@ -447,13 +312,10 @@ export default function KonyaaltiTailorServicePage() {
           .wk-desc{font-size:.82rem;color:rgba(255,255,255,.6);line-height:1.6;margin-bottom:.9rem}
           .wk-items{display:flex;flex-wrap:wrap;gap:6px}
           .wk-item{font-size:.68rem;background:rgba(201,169,110,.1);color:#C9A96E;padding:3px 10px;border-radius:20px}
-
           .step-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.8rem}
           .step-n{font-family:'Syne',sans-serif;font-size:2rem;font-weight:800;color:rgba(201,169,110,.2);line-height:1;margin-bottom:.4rem}
           .step-t{font-weight:700;font-size:.9rem;color:#fff;margin-bottom:.4rem}
           .step-d{font-size:.78rem;color:rgba(255,255,255,.55);line-height:1.6}
-
-          /* FİYAT TABLOLARI — Dikim · Tamir · Tadilat · Ütü */
           .price-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px}
           .price-card{background:rgba(255,255,255,.03);border:1px solid rgba(201,169,110,.14);border-radius:10px;padding:1.5rem 1.6rem;transition:border-color .2s}
           .price-card:hover{border-color:rgba(201,169,110,.4)}
@@ -469,22 +331,18 @@ export default function KonyaaltiTailorServicePage() {
           .price-table td{padding:.55rem 0;font-size:.82rem}
           .price-table td:first-child{color:rgba(255,255,255,.75)}
           .price-table td:last-child{color:#C9A96E;font-weight:700;text-align:right;white-space:nowrap}
-
           .faq-item{border-bottom:1px solid rgba(201,169,110,.12);padding:1.1rem 0}
           .faq-q{font-weight:700;font-size:.9rem;color:#fff;margin-bottom:.4rem}
           .faq-a{font-size:.8rem;color:rgba(255,255,255,.55);line-height:1.6}
-
           .cta-final{background:linear-gradient(135deg,#2C4A3E 0%,#1E3329 100%);color:#fff;padding:3.5rem 1.5rem;text-align:center;border-top:1px solid rgba(201,169,110,.15)}
           .cta-h{font-family:'Syne',sans-serif;font-size:clamp(1.5rem,3.2vw,2.1rem);font-weight:800;margin-bottom:.6rem}
           .cta-sub{font-size:.88rem;color:rgba(255,255,255,.75);margin-bottom:1.6rem}
           .cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
           .btn-white{display:inline-flex;align-items:center;gap:10px;background:#C9A96E;color:#1E3329;font-weight:800;font-size:.86rem;padding:13px 22px;border-radius:4px}
           .btn-outline-white{display:inline-flex;align-items:center;gap:10px;background:transparent;color:#fff;font-weight:700;font-size:.86rem;padding:13px 22px;border-radius:4px;border:2px solid rgba(255,255,255,.4)}
-
           footer{background:#152720;border-top:1px solid rgba(201,169,110,.12);padding:1.8rem 1.5rem;text-align:center;font-size:.72rem;color:rgba(255,255,255,.4)}
           .foot-links{display:flex;justify-content:center;gap:1.1rem;flex-wrap:wrap;margin-top:.6rem}
           .foot-links a{color:rgba(255,255,255,.4)}
-
           .float{position:fixed;bottom:20px;right:16px;z-index:99;display:flex;flex-direction:column;gap:10px}
           .fbtn{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.3rem;box-shadow:0 4px 14px rgba(0,0,0,.4)}
           .fbtn-call{background:#2C4A3E;color:#fff;border:1px solid rgba(201,169,110,.3)}
@@ -497,15 +355,11 @@ export default function KonyaaltiTailorServicePage() {
         </div>
 
         <nav className="nav" aria-label="Ana navigasyon">
-          <div className="nav-logo">
-            <span className="nav-dot" aria-hidden="true" />
-            TERZİ CAN
-          </div>
+          <div className="nav-logo"><span className="nav-dot" aria-hidden="true" />TERZİ CAN</div>
           <a href="/" className="nav-home">← Ana Sayfa</a>
           <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="nav-wa">WHATSAPP →</a>
         </nav>
 
-        {/* HERO */}
         <section className="hero" aria-labelledby="hero-h">
           <div className="hero-bg" aria-hidden="true">
             <img src="/terzi-can-hero.png" alt="" className="hero-bg-img" width={1024} height={1024} />
@@ -525,15 +379,12 @@ export default function KonyaaltiTailorServicePage() {
               tüm ilçelerine de ulaşıyoruz.
             </p>
             <div className="hero-btns">
-              <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-primary">
-                💬 Mahallenizi Söyleyin →
-              </a>
+              <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-primary">💬 Mahallenizi Söyleyin →</a>
               <a href={`tel:${PHONE_TEL}`} className="btn-secondary">📞 {PHONE}</a>
             </div>
           </div>
         </section>
 
-        {/* SEO INTRO */}
         <div style={{ background: 'rgba(0,0,0,.15)', padding: '1.8rem 1.5rem', borderBottom: '1px solid rgba(201,169,110,.1)' }}>
           <p style={{ maxWidth: 920, margin: '0 auto', fontSize: '.82rem', color: 'rgba(255,255,255,.55)', lineHeight: 1.9, textAlign: 'center' }}>
             <strong style={{ color: '#C9A96E' }}>Konyaaltı Tailor Service</strong> — Hurma, Liman, Sarısu,
@@ -544,15 +395,12 @@ export default function KonyaaltiTailorServicePage() {
           </p>
         </div>
 
-        {/* MAHALLELER — Konyaaltı öncelikli */}
         <section className="sec" aria-labelledby="nb-h">
           <div className="ctr">
             <div className="sec-head">
               <span className="eyebrow">📍 Konyaaltı Mahalleleri</span>
               <h2 className="sec-h ff" id="nb-h">Size En Yakın Mahalleden Başlıyoruz</h2>
-              <p className="sec-sub">
-                Atölyemize en yakın mahallelere öncelikli ve hızlı hizmet veriyoruz.
-              </p>
+              <p className="sec-sub">Atölyemize en yakın mahallelere öncelikli ve hızlı hizmet veriyoruz.</p>
             </div>
             <div className="nb-grid">
               {NEIGHBORHOODS.map(n => (
@@ -569,22 +417,17 @@ export default function KonyaaltiTailorServicePage() {
               Ayrıca Antalya'nın şu ilçelerine de hizmet veriyoruz:
             </p>
             <div className="other-districts">
-              {OTHER_DISTRICTS.map(d => (
-                <span key={d} className="od-chip">{d}</span>
-              ))}
+              {OTHER_DISTRICTS.map(d => (<span key={d} className="od-chip">{d}</span>))}
             </div>
           </div>
         </section>
 
-        {/* ATÖLYE HİZMETLERİ */}
         <section className="sec" style={{ background: 'rgba(0,0,0,.12)' }} id="workshop" aria-labelledby="wk-h">
           <div className="ctr">
             <div className="sec-head">
               <span className="eyebrow">Dikim & Tasarım Atölyesi</span>
               <h2 className="sec-h ff" id="wk-h">Bay, Bayan, Çocuk Kıyafeti · Üniforma · Fason İmalat</h2>
-              <p className="sec-sub">
-                Kişiye özel dikimden toplu üniforma üretimine, tam kapasiteli tekstil atölyesi.
-              </p>
+              <p className="sec-sub">Kişiye özel dikimden toplu üniforma üretimine, tam kapasiteli tekstil atölyesi.</p>
             </div>
             <div className="wk-grid">
               {WORKSHOP_SERVICES.map(s => (
@@ -593,86 +436,57 @@ export default function KonyaaltiTailorServicePage() {
                   <div className="wk-tr">{s.tr}</div>
                   <span className="wk-en">{s.en}</span>
                   <p className="wk-desc">{s.desc}</p>
-                  <div className="wk-items">
-                    {s.items.map(i => <span key={i} className="wk-item">{i}</span>)}
-                  </div>
+                  <div className="wk-items">{s.items.map(i => <span key={i} className="wk-item">{i}</span>)}</div>
                 </div>
               ))}
             </div>
             <div style={{ textAlign: 'center', marginTop: '2rem' }}>
               <a href={WA('Merhaba, dikim/üniforma/fason imalat hakkında teklif almak istiyorum.')}
-                target="_blank" rel="noopener noreferrer" className="btn-primary">
-                💬 Teklif Alın →
-              </a>
+                target="_blank" rel="noopener noreferrer" className="btn-primary">💬 Teklif Alın →</a>
             </div>
           </div>
         </section>
 
-        {/* DİKİM · TAMİR · TADİLAT · ÜTÜ — fiyat listesi (TR / EN / RU) */}
         <section className="sec" id="fiyatlar" aria-labelledby="price-h">
           <div className="ctr">
             <div className="sec-head">
               <span className="eyebrow">₺ Şeffaf Fiyatlar 2026 · Prices · Цены</span>
-              <h2 className="sec-h ff" id="price-h">
-                Dikim, Tamir, Tadilat ve Ütü Hizmetleri
-              </h2>
-              <p className="sec-sub">
-                Antalya Konyaaltı terzi fiyatları — Türkçe, İngilizce ve Rusça.
-                Kesin fiyat için WhatsApp'tan fotoğraf gönderin.
-              </p>
+              <h2 className="sec-h ff" id="price-h">Dikim, Tamir, Tadilat ve Ütü Hizmetleri</h2>
+              <p className="sec-sub">Antalya Konyaaltı terzi fiyatları — Türkçe, İngilizce ve Rusça. Kesin fiyat için WhatsApp'tan fotoğraf gönderin.</p>
             </div>
 
             {(Object.keys(REPAIR_CATEGORIES) as Lang[]).map(lang => (
               <div key={lang} style={{ marginBottom: lang !== 'ru' ? '3rem' : 0 }}>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: '1.2rem' }}>
                   <span style={{ fontSize: '1.2rem' }}>{LANG_LABELS[lang].flag}</span>
-                  <h3 style={{ fontFamily: "'Syne',sans-serif", fontSize: '1.05rem', fontWeight: 700, color: '#C9A96E' }}>
-                    {LANG_LABELS[lang].name}
-                  </h3>
+                  <h3 style={{ fontFamily: "'Syne',sans-serif", fontSize: '1.05rem', fontWeight: 700, color: '#C9A96E' }}>{LANG_LABELS[lang].name}</h3>
                   <span style={{ flex: 1, height: 1, background: 'rgba(201,169,110,.15)' }} />
                 </div>
-
                 <div className="price-grid">
                   {REPAIR_CATEGORIES[lang].map(cat => (
                     <div className="price-card" key={cat.title}>
                       <div className="price-head">
                         <span className="price-icon" aria-hidden="true">{cat.icon}</span>
-                        <div>
-                          <div className="price-tr">{cat.title}</div>
-                          <span className="price-kw">{cat.keyword}</span>
-                        </div>
+                        <div><div className="price-tr">{cat.title}</div><span className="price-kw">{cat.keyword}</span></div>
                       </div>
                       <p className="price-desc">{cat.desc}</p>
                       <table className="price-table" aria-label={`${cat.title} — ${LANG_LABELS[lang].name}`}>
-                        <tbody>
-                          {cat.rows.map(([name, price]) => (
-                            <tr key={name}>
-                              <td>{name}</td>
-                              <td>{price}</td>
-                            </tr>
-                          ))}
-                        </tbody>
+                        <tbody>{cat.rows.map(([name, price]) => (<tr key={name}><td>{name}</td><td>{price}</td></tr>))}</tbody>
                       </table>
                     </div>
                   ))}
                 </div>
-
-                <p style={{ fontSize: '.76rem', color: 'rgba(255,255,255,.4)', marginTop: '1rem', fontStyle: 'italic' }}>
-                  {LANG_LABELS[lang].note}
-                </p>
+                <p style={{ fontSize: '.76rem', color: 'rgba(255,255,255,.4)', marginTop: '1rem', fontStyle: 'italic' }}>{LANG_LABELS[lang].note}</p>
               </div>
             ))}
 
             <div style={{ textAlign: 'center', marginTop: '1.8rem' }}>
               <a href={WA('Merhaba, dikim/tamir/tadilat/ütü fiyatlarını öğrenmek istiyorum. / I would like to know the prices. / Хочу узнать цены.')}
-                target="_blank" rel="noopener noreferrer" className="btn-primary">
-                📲 Fiyat Sor · Get a Quote · Узнать цену
-              </a>
+                target="_blank" rel="noopener noreferrer" className="btn-primary">📲 Fiyat Sor · Get a Quote · Узнать цену</a>
             </div>
           </div>
         </section>
 
-        {/* SÜREÇ */}
         <section className="sec" aria-labelledby="proc-h">
           <div className="ctr">
             <div className="sec-head">
@@ -686,17 +500,46 @@ export default function KonyaaltiTailorServicePage() {
                 ['03', 'Dikim / Üretim', 'Tekli dikim ya da toplu üniforma/fason üretimi atölyede tamamlanır.'],
                 ['04', 'Teslimat', 'Öncelikli mahallelere ücretsiz, diğer bölgelere randevulu teslim.'],
               ] as [string, string, string][]).map(([n, t, d]) => (
-                <div key={n}>
-                  <div className="step-n">{n}</div>
-                  <div className="step-t">{t}</div>
-                  <div className="step-d">{d}</div>
-                </div>
+                <div key={n}><div className="step-n">{n}</div><div className="step-t">{t}</div><div className="step-d">{d}</div></div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* FAQ */}
+        {/* DETAYLI HİZMET SAYFALARI — iç link */}
+        <section className="sec" style={{ background: 'rgba(0,0,0,.12)' }} aria-labelledby="detail-h">
+          <div className="ctr">
+            <div className="sec-head">
+              <span className="eyebrow">🔍 Detaylı Hizmet Sayfaları</span>
+              <h2 className="sec-h ff" id="detail-h">Aradığınız Hizmeti Doğrudan Bulun</h2>
+              <p className="sec-sub">En çok talep edilen hizmetler için detaylı fiyat ve süreç bilgisi.</p>
+            </div>
+            <div className="wk-grid">
+              <a href="/konyaalti-fermuar-tamiri" className="wk-card" style={{ display: 'block' }}>
+                <div className="wk-icon">🔧</div>
+                <div className="wk-tr">Fermuar Tamiri Konyaaltı</div>
+                <span className="wk-en">Zipper Repair</span>
+                <p className="wk-desc">Pantolon, mont, ceket, çanta fermuarı — aynı gün teslim, ₺200'den.</p>
+                <span style={{ fontSize: '.76rem', color: '#C9A96E', fontWeight: 700 }}>Fiyatları Gör →</span>
+              </a>
+              <a href="/konyaalti-paca-kisaltma" className="wk-card" style={{ display: 'block' }}>
+                <div className="wk-icon">📏</div>
+                <div className="wk-tr">Paça Kısaltma Konyaaltı</div>
+                <span className="wk-en">Hemming</span>
+                <p className="wk-desc">Pantolon, kot, etek kısaltma — aynı gün teslim, ₺150'den.</p>
+                <span style={{ fontSize: '.76rem', color: '#C9A96E', fontWeight: 700 }}>Fiyatları Gör →</span>
+              </a>
+              <a href="/antalya-gelinlik-tadilati" className="wk-card" style={{ display: 'block' }}>
+                <div className="wk-icon">💍</div>
+                <div className="wk-tr">Gelinlik Tadilatı Antalya</div>
+                <span className="wk-en">Wedding Dress Alterations</span>
+                <p className="wk-desc">Hassas daraltma, boy ayarı, korse onarımı — ₺400'den.</p>
+                <span style={{ fontSize: '.76rem', color: '#C9A96E', fontWeight: 700 }}>Fiyatları Gör →</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
         <section className="sec" style={{ background: 'rgba(0,0,0,.12)' }} id="faq" aria-labelledby="faq-h">
           <div className="ctr" style={{ maxWidth: 740 }}>
             <div className="sec-head">
@@ -704,15 +547,11 @@ export default function KonyaaltiTailorServicePage() {
               <h2 className="sec-h ff" id="faq-h">Sık Sorulan Sorular</h2>
             </div>
             {FAQS.map(([q, a]) => (
-              <div key={q} className="faq-item">
-                <div className="faq-q">{q}</div>
-                <div className="faq-a">{a}</div>
-              </div>
+              <div key={q} className="faq-item"><div className="faq-q">{q}</div><div className="faq-a">{a}</div></div>
             ))}
           </div>
         </section>
 
-        {/* CTA */}
         <section className="cta-final" aria-label="İletişime geç">
           <h2 className="cta-h ff">Konyaaltı'nın Her Mahallesinden<br />Terzi Can'a Ulaşın</h2>
           <p className="cta-sub">Bay, bayan, çocuk kıyafeti, üniforma veya fason imalat — mahallenizi söyleyin.</p>

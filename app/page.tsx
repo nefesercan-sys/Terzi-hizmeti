@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 // ─── CONSTANTS ────────────────────────────────────────────────────────────────
 // ✅ DÜZELTME: www eklendi — Yandex Webmaster doğrulaması www ile yapıldı.
 // Canonical URL, doğrulanan domain ile birebir eşleşmeli (NAP tutarlılığı).
-const SITE      = 'https://www.terzihizmeti.com.tr';
+const SITE      = 'https://terzihizmeti.com.tr';
 const PHONE     = '+90 531 898 64 18';
 const PHONE_TEL = '+905318986418';
 const WA_NUM    = '905318986418';
@@ -12,7 +12,7 @@ const WA_DEF    = WA('Merhaba, terzi hizmeti hakkında bilgi almak istiyorum.');
 const MAPS      = 'https://maps.app.goo.gl/CNZghczJNRQX3mLM9';
 const BIZ       = 'Konyaaltı Terzi - Terzi Dikim Tamir Tadilat';
 const TODAY     = new Date().toISOString().split('T')[0];
-const OG        = `${SITE}/terzi-can-hero.png`;
+const OG        = `${SITE}/terzi-can-hero.jpg`;
 
 // ─── METADATA ─────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
@@ -134,7 +134,7 @@ const jsonLd = {
       currenciesAccepted: 'TRY, EUR, USD, RUB',
       paymentAccepted: 'Cash, Credit Card',
       image: OG,
-      logo: `${SITE}/terzi-can-hero.png`,
+      logo: `${SITE}/terzi-can-hero.jpg`,
       hasMap: MAPS,
       address: {
         '@type': 'PostalAddress',
@@ -230,7 +230,7 @@ const jsonLd = {
       datePublished: '2024-01-01',
       dateModified: TODAY,
       author: { '@type': 'Organization', name: BIZ, url: SITE },
-      publisher: { '@type': 'Organization', name: BIZ, logo: { '@type': 'ImageObject', url: `${SITE}/terzi-can-hero.png` } },
+      publisher: { '@type': 'Organization', name: BIZ, logo: { '@type': 'ImageObject', url: `${SITE}/terzi-can-hero.jpg` } },
       image: OG,
       about: { '@id': `${SITE}#business` },
       inLanguage: 'tr',
@@ -427,7 +427,7 @@ export default function TerziHizmetiPage() {
         <section className="hero" id="main" aria-labelledby="hero-h">
           <div className="hero-bg" aria-hidden="true">
             <img
-              src="/terzi-can-hero.png"
+              src="/terzi-can-hero.jpg"
               alt=""
               className="hero-bg-img"
               width={1024} height={1024}

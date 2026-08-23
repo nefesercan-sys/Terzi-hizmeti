@@ -8,8 +8,9 @@ const PHONE = '+90 531 898 64 18';
 const PHONE_E164 = '+905318986418';
 const WHATSAPP_LINK = `https://wa.me/${PHONE_E164.replace('+', '')}?text=${encodeURIComponent('Merhaba, Melis Style ürünleri hakkında bilgi almak istiyorum.')}`;
 
-// TODO: Gerçek ürün fotoğraflarını /public/images/melis-style/ altına bu
-// dosya adlarıyla yükleyin. Yüklenene kadar sayfa zarif bir placeholder gösterir.
+// DÜZELTME: Fotoğraflar public/images/melis-style/ yerine public/images/
+// altına yüklendi — yollar buna göre güncellendi. "plaj-cantasi-aztek-lifestyle.jpg"
+// henüz yüklenmedi, o yüzden 4. görsel şimdilik placeholder gösterecek.
 const PRODUCTS = [
   {
     id: 'plaj-cantasi-aztek',
@@ -17,10 +18,10 @@ const PRODUCTS = [
     category: 'Plaj Çantası',
     description: 'Krem bukle kumaş ve turkuaz-turuncu aztek desenli panel. İç fermuarlı cep, geniş sap, plaj ve günlük kullanım için ideal boyut.',
     images: [
-      '/images/melis-style/plaj-cantasi-aztek-1.jpg',
-      '/images/melis-style/plaj-cantasi-aztek-2.jpg',
-      '/images/melis-style/plaj-cantasi-aztek-3.jpg',
-      '/images/melis-style/plaj-cantasi-aztek-lifestyle.jpg',
+      '/images/plaj-cantasi-aztek-1.jpg',
+      '/images/plaj-cantasi-aztek-2.jpg',
+      '/images/plaj-cantasi-aztek-3.jpg',
+      '/images/plaj-cantasi-aztek-lifestyle.jpg',
     ],
   },
   {
@@ -28,14 +29,14 @@ const PRODUCTS = [
     name: 'Havlu Kumaş Makyaj / Plaj Çantası',
     category: 'Makyaj Çantası',
     description: 'Yumuşak havlu (terry) kumaş, örgü ip sap, turuncu fermuar detayı. Makyaj malzemeleri veya plaj eşyaları için kompakt boy.',
-    images: ['/images/melis-style/makyaj-cantasi-terry-1.jpg'],
+    images: ['/images/makyaj-cantasi-terry-1.jpg'],
   },
   {
     id: 'sapka-yesil-cicek',
     name: 'Yeşil Çiçek Desenli Bucket Şapka',
     category: 'Şapka',
     description: 'Havlu kumaş üzerine çiçek desenli, bağcıklı bucket şapka. Yazlık, hafif ve güneşten koruyucu.',
-    images: ['/images/melis-style/sapka-yesil-cicek-1.jpg'],
+    images: ['/images/sapka-yesil-cicek-1.jpg'],
   },
 ];
 
@@ -56,7 +57,7 @@ export const metadata: Metadata = {
     siteName: 'Terzi Hizmeti',
     locale: 'tr_TR',
     type: 'website',
-    images: [{ url: '/images/melis-style/plaj-cantasi-aztek-1.jpg', width: 1200, height: 1500, alt: 'Melis Style plaj çantası' }],
+    images: [{ url: '/images/plaj-cantasi-aztek-1.jpg', width: 1200, height: 1500, alt: 'Melis Style plaj çantası' }],
   },
   robots: {
     index: true,
@@ -91,8 +92,6 @@ const jsonLd = {
       category: p.category,
       brand: { '@type': 'Brand', name: 'Melis Style' },
       image: p.images.map((src) => `${BASE_URL}${src}`),
-      // TODO: Gerçek fiyat eklenince offers.price ve priceCurrency doldurulmalı —
-      // fiyat olmadan ürün, Google Alışveriş zengin sonuçlarına giremez.
       offers: {
         '@type': 'Offer',
         availability: 'https://schema.org/InStock',

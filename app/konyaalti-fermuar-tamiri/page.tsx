@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-const SITE     = 'https://www.terzihizmeti.com.tr';
+const SITE     = 'https://terzihizmeti.com.tr';
 const PAGE_URL = `${SITE}/konyaalti-fermuar-tamiri`;
 const PHONE     = '+90 531 898 64 18';
 const PHONE_TEL = '+905318986418';
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     title: 'Fermuar Tamiri Konyaaltı — Aynı Gün Değişim',
     description: 'Pantolon, mont, ceket, çanta fermuarı. Aynı gün teslim. ☎ ' + PHONE,
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'tr_TR', type: 'website',
-    images: [{ url: `${SITE}/terzi-can-hero.png`, width: 1024, height: 1024, alt: 'Fermuar Tamiri Konyaaltı' }],
+    images: [{ url: `${SITE}/terzi-can-hero.jpg`, width: 1024, height: 1024, alt: 'Fermuar Tamiri Konyaaltı' }],
   },
 };
 
@@ -127,7 +127,7 @@ export default function FermuarTamiriPage() {
 
         <section className="hero" aria-labelledby="hero-h">
           <div className="hero-bg" aria-hidden="true">
-            <img src="/terzi-can-hero.png" alt="" className="hero-bg-img" width={1024} height={1024} />
+            <img src="/terzi-can-hero.jpg" alt="" className="hero-bg-img" width={1024} height={1024} />
             <div className="hero-overlay" />
           </div>
           <div className="hero-content">

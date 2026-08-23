@@ -4,19 +4,11 @@ import './globals.css';
 
 // ✅ globals.css eklendi — tüm sayfalardaki tekrar eden inline <style> bloklarının
 // yerini alan paylaşılan stylesheet. Tarayıcı bunu bir kez indirip cache'ler,
-// her sayfa geçişinde aynı CSS'i yeniden parse etmesine yol açmaz. Bu,
-// özellikle çoklu sayfa gezinmesinde (ana sayfa → /antalya-terzi → /konyaalti-fermuar-tamiri gibi)
-// LCP'yi belirgin şekilde iyileştirir.
-//
-// DÜZELTME: Önceki sürümde bu dosya HEM metadata API (icons, verification)
-// HEM DE JSX içinde elle yazılmış <head> (meta/link etiketleri) içeriyordu.
-// Next.js App Router'da metadata API zaten kendi <head>'ini otomatik üretir;
-// üstüne ayrıca <head> döndürmek "head cannot be a child of body" tipi
-// render/hydration hatasına ve CI check'inin kırmızı X almasına yol açıyordu.
-// Aşağıda TÜM <head> içeriği metadata/viewport objelerine taşındı,
-// JSX'te artık elle <head> yazılmıyor.
+// her sayfa geçişinde yeniden parse etmez. Bu, özellikle çoklu sayfa gezinmesinde
+// (ana sayfa → /antalya-terzi → /konyaalti-fermuar-tamiri gibi) LCP'yi belirgin
+// şekilde iyileştirir.
 
-const SITE = 'https://www.terzihizmeti.com.tr';
+const SITE = 'https://terzihizmeti.com.tr';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
@@ -25,9 +17,9 @@ export const metadata: Metadata = {
     template: '%s | Terzi Can Antalya',
   },
   icons: {
-    icon: [{ url: '/terzi-can-hero.png', type: 'image/png' }],
-    apple: '/terzi-can-hero.png',
-    shortcut: '/terzi-can-hero.png',
+    icon: [{ url: '/terzi-can-hero.jpg', type: 'image/jpeg' }],
+    apple: '/terzi-can-hero.jpg',
+    shortcut: '/terzi-can-hero.jpg',
   },
   verification: {
     google: 'W2S_Gr49EgkgWG7xAWWMc5qPW6Cw3wEnOi6O6UC9zkQ',
@@ -44,6 +36,14 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="tr">
+      <head>
+        <meta name="google-site-verification" content="W2S_Gr49EgkgWG7xAWWMc5qPW6Cw3wEnOi6O6UC9zkQ" />
+        <meta name="yandex-verification" content="e7b38dec995b9142" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* ✅ Hero görseli için preload — LCP görselini tarayıcıya erkenden haber verir */}
+        <link rel="preload" as="image" href="/terzi-can-hero.jpg" />
+      </head>
       <body style={{ margin: 0, padding: 0, overflowX: 'hidden' }}>
         {children}
         <Analytics />

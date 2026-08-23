@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 
-const SITE     = 'https://www.terzihizmeti.com.tr';
+const SITE     = 'https://terzihizmeti.com.tr';
 const PAGE_URL = `${SITE}/blog/2026-yaz-sezonu-gelinlik-tadilat-rehberi`;
 const PHONE     = '+90 531 898 64 18';
 const PHONE_TEL = '+905318986418';
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     title: '2026 Yaz Sezonu Gelinlik Tadilat Rehberi',
     description: 'Yaz düğün sezonunda gelinlik tadilatı için pratik rehber.',
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'tr_TR', type: 'article',
-    images: [{ url: `${SITE}/terzi-can-hero.png`, width: 1024, height: 1024, alt: 'Yaz Sezonu Gelinlik Tadilatı' }],
+    images: [{ url: `${SITE}/terzi-can-hero.jpg`, width: 1024, height: 1024, alt: 'Yaz Sezonu Gelinlik Tadilatı' }],
   },
 };
 
@@ -49,9 +49,9 @@ const jsonLd = {
       author: { '@type': 'Organization', name: 'Terzi Can', url: SITE },
       publisher: {
         '@type': 'Organization', name: 'Terzi Can',
-        logo: { '@type': 'ImageObject', url: `${SITE}/terzi-can-hero.png` },
+        logo: { '@type': 'ImageObject', url: `${SITE}/terzi-can-hero.jpg` },
       },
-      image: `${SITE}/terzi-can-hero.png`,
+      image: `${SITE}/terzi-can-hero.jpg`,
       mainEntityOfPage: { '@type': 'WebPage', '@id': PAGE_URL },
       inLanguage: 'tr',
       articleSection: 'Terzi Rehberleri',
@@ -88,7 +88,7 @@ export default function BlogPostPage() {
 
         <section className="hero" style={{ paddingBottom: '2rem' }} aria-labelledby="hero-h">
           <div className="hero-bg" aria-hidden="true">
-            <img src="/terzi-can-hero.png" alt="" className="hero-bg-img" width={1024} height={1024} />
+            <img src="/terzi-can-hero.jpg" alt="" className="hero-bg-img" width={1024} height={1024} />
             <div className="hero-overlay" />
           </div>
           <div className="hero-content">

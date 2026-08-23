@@ -5,7 +5,7 @@ import { Inter, Syne } from 'next/font/google';
 const inter = Inter({ subsets: ['latin', 'latin-ext'], variable: '--font-inter', display: 'swap' });
 const syne  = Syne({ subsets: ['latin'], weight: ['700', '800'], variable: '--font-syne', display: 'swap' });
 
-const SITE      = 'https://www.terzihizmeti.com.tr';
+const SITE      = 'https://terzihizmeti.com.tr';
 const PAGE_URL  = `${SITE}/antalya-terzi`;
 const PHONE     = '+90 531 898 64 18';
 const PHONE_TEL = '+905318986418';
@@ -15,7 +15,7 @@ const WA_DEF    = WA('Merhaba, terzi ve tekstil atölyesi hizmetleriniz hakkınd
 const MAPS      = 'https://maps.app.goo.gl/CNZghczJNRQX3mLM9';
 const BIZ       = 'Konyaaltı Terzi - Terzi Dikim Tamir Tadilat';
 const TODAY     = new Date().toISOString().split('T')[0];
-const OG        = `${SITE}/terzi-can-hero.png`;
+const OG        = `${SITE}/terzi-can-hero.jpg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
@@ -271,7 +271,7 @@ export default function KonyaaltiTailorServicePage() {
         <header className="hero">
           <div className="hero-bg" aria-hidden="true">
             <Image
-              src="/terzi-can-hero.png"
+              src="/terzi-can-hero.jpg"
               alt=""
               fill
               priority

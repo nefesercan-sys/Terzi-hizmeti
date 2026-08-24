@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    // ✅ DÜZELTME: www eklendi — canonical domain ile tutarlı
-    sitemap: 'https://www.terzihizmeti.com.tr/sitemap.xml',
+    // ✅ DÜZELTME (2026-08-23): www geri alındı, non-www canonical
+    sitemap: 'https://terzihizmeti.com.tr/sitemap.xml',
   };
 }

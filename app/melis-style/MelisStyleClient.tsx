@@ -7,12 +7,11 @@ type Product = {
   name: string;
   category: string;
   description: string;
+  price: number;
   images: string[];
 };
 
 // ── Marka Paleti ──────────────────────────────────────────────────────────
-// Gerçek ürün fotoğraflarındaki renklerden türetildi: krem bukle kumaş,
-// dokuma desendeki koyu turkuaz ve pas turuncusu.
 const SAND = '#F4EEE3';
 const SAND_DEEP = '#E8DFCE';
 const TEAL = '#2C6E68';
@@ -22,6 +21,10 @@ const RUST_DEEP = '#A34F2C';
 const INK = '#241F1A';
 const MUTED = '#786F60';
 const CREAM = '#FBF8F2';
+
+function formatTRY(n: number) {
+  return `${n.toLocaleString('tr-TR')} ₺`;
+}
 
 function ProductImage({ src, alt }: { src: string; alt: string }) {
   const [broken, setBroken] = useState(false);
@@ -41,10 +44,9 @@ function ProductImage({ src, alt }: { src: string; alt: string }) {
   );
 }
 
-// Ürünlerdeki gerçek dokuma desenden esinlenen zigzag şerit — sayfanın imza öğesi
 function WeaveTrim({ tone = 'light' }: { tone?: 'light' | 'dark' }) {
   const a = tone === 'light' ? TEAL : SAND;
-  const b = tone === 'light' ? RUST : RUST;
+  const b = RUST;
   return (
     <div
       aria-hidden
@@ -71,6 +73,7 @@ export default function MelisStyleClient({ products, phone, phoneE164 }: { produ
   const [error, setError] = useState('');
 
   const selected = products.find((p) => p.id === selectedProduct);
+  const total = selected ? selected.price * quantity : 0;
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -84,6 +87,8 @@ export default function MelisStyleClient({ products, phone, phoneE164 }: { produ
       '',
       `Ürün: ${selected?.name ?? '-'}`,
       `Adet: ${quantity}`,
+      `Birim Fiyat: ${selected ? formatTRY(selected.price) : '-'}`,
+      `Toplam: ${formatTRY(total)}`,
       `Ad Soyad: ${fullName}`,
       `Adres: ${address}`,
       `Telefon: ${customerPhone}`,
@@ -132,7 +137,6 @@ export default function MelisStyleClient({ products, phone, phoneE164 }: { produ
                   El İşçiliği · Dokuma Detaylı · Yazlık Koleksiyon
                 </div>
 
-                {/* Wordmark — marka logosu */}
                 <h1 style={{ fontFamily: 'var(--ms-display)', fontStyle: 'italic', fontWeight: 500, fontSize: 'clamp(2.6rem, 6vw, 4.2rem)', lineHeight: 0.98, color: INK, margin: '0 0 4px', letterSpacing: '-0.01em' }}>
                   Melis <span style={{ color: RUST }}>Style</span>
                 </h1>
@@ -154,7 +158,10 @@ export default function MelisStyleClient({ products, phone, phoneE164 }: { produ
               </div>
 
               <div style={{ position: 'relative', aspectRatio: '4/5', borderRadius: 18, overflow: 'hidden', border: `1px solid ${SAND_DEEP}`, boxShadow: '0 20px 50px rgba(36,31,26,0.12)' }}>
-                <ProductImage src="/images/plaj-cantasi-aztek-lifestyle.jpg" alt="Melis Style plaj çantası — model fotoğrafı" />
+                {/* DÜZELTME: Hero görseli artık gerçek Melis Style ürün fotoğrafına
+                    bağlı — önceki "lifestyle" dosyası yanlışlıkla başka bir markanın
+                    (BISOU etiketli) ürün fotoğrafıydı. */}
+                <ProductImage src="/images/plaj-cantasi-aztek-1.jpg" alt="Melis Style aztek desenli plaj çantası" />
               </div>
             </div>
           </div>
@@ -179,6 +186,9 @@ export default function MelisStyleClient({ products, phone, phoneE164 }: { produ
                 >
                   <div style={{ position: 'relative', aspectRatio: '4/5', background: SAND }}>
                     <ProductImage src={p.images[0]} alt={p.name} />
+                    <div style={{ position: 'absolute', top: 10, right: 10, background: RUST, color: '#fff', fontSize: 12.5, fontWeight: 700, padding: '4px 10px', borderRadius: 999 }}>
+                      {formatTRY(p.price)}
+                    </div>
                   </div>
                   <div style={{ padding: '16px 16px 18px' }}>
                     <div style={{ fontSize: 10.5, textTransform: 'uppercase', letterSpacing: '0.14em', color: RUST_DEEP, fontWeight: 700, marginBottom: 6 }}>{p.category}</div>
@@ -193,9 +203,12 @@ export default function MelisStyleClient({ products, phone, phoneE164 }: { produ
           {/* SEÇİLİ ÜRÜN GALERİSİ */}
           {selected && selected.images.length > 1 && (
             <section style={{ marginBottom: 52 }}>
-              <h2 style={{ fontFamily: 'var(--ms-display)', fontStyle: 'italic', fontWeight: 500, fontSize: 22, color: INK, marginBottom: 16 }}>
-                {selected.name}
-              </h2>
+              <div style={{ display: 'flex', alignItems: 'baseline', gap: 12, marginBottom: 16 }}>
+                <h2 style={{ fontFamily: 'var(--ms-display)', fontStyle: 'italic', fontWeight: 500, fontSize: 22, color: INK, margin: 0 }}>
+                  {selected.name}
+                </h2>
+                <span style={{ fontSize: 16, fontWeight: 700, color: RUST_DEEP }}>{formatTRY(selected.price)}</span>
+              </div>
               <div className="ms-gallery" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 10 }}>
                 {selected.images.map((src) => (
                   <div key={src} style={{ position: 'relative', aspectRatio: '4/5', borderRadius: 12, overflow: 'hidden', border: `1px solid ${SAND_DEEP}`, background: SAND }}>
@@ -206,14 +219,14 @@ export default function MelisStyleClient({ products, phone, phoneE164 }: { produ
             </section>
           )}
 
-          {/* NASIL SİPARİŞ VERİLİR — gerçek bir sıra olduğu için numaralandırma anlamlı */}
+          {/* NASIL SİPARİŞ VERİLİR */}
           <section style={{ marginBottom: 52, background: SAND, borderRadius: 18, padding: '30px 28px' }}>
             <h2 style={{ fontFamily: 'var(--ms-display)', fontStyle: 'italic', fontWeight: 500, fontSize: 20, color: INK, marginBottom: 20 }}>Nasıl Sipariş Verilir</h2>
             <div className="ms-steps" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 18 }}>
               {[
                 ['01', 'Ürünü Seçin', 'Yukarıdaki koleksiyondan istediğiniz ürüne tıklayın.'],
                 ['02', 'Formu Doldurun', 'Ad, adres, telefon ve adet bilgisini girin.'],
-                ['03', "WhatsApp'tan Onaylayın", 'Sipariş detayları WhatsApp\'a iletilir, fiyat orada teyit edilir.'],
+                ['03', "WhatsApp'tan Onaylayın", 'Sipariş detayları ve toplam tutar WhatsApp\'a iletilir.'],
               ].map(([n, t, d]) => (
                 <div key={n}>
                   <div style={{ fontFamily: 'var(--ms-display)', fontSize: 22, color: RUST, fontWeight: 600, marginBottom: 6 }}>{n}</div>
@@ -228,7 +241,7 @@ export default function MelisStyleClient({ products, phone, phoneE164 }: { produ
           <section style={{ borderTop: `1px solid ${SAND_DEEP}`, paddingTop: 40 }}>
             <h2 style={{ fontFamily: 'var(--ms-display)', fontStyle: 'italic', fontWeight: 500, fontSize: 24, color: INK, marginBottom: 6 }}>Sipariş Formu</h2>
             <p style={{ fontSize: 14, color: MUTED, marginBottom: 24 }}>
-              Formu gönderdiğinizde bilgileriniz WhatsApp'a iletilir, fiyat ve teslimat orada teyit edilir.
+              Formu gönderdiğinizde bilgileriniz ve toplam tutar WhatsApp'a iletilir.
             </p>
 
             <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: 16, maxWidth: 460 }}>
@@ -236,7 +249,7 @@ export default function MelisStyleClient({ products, phone, phoneE164 }: { produ
                 <label style={{ display: 'block', fontSize: 12.5, fontWeight: 600, marginBottom: 6, color: INK, textTransform: 'uppercase', letterSpacing: '0.06em' }}>Ürün</label>
                 <select className="ms-input" value={selectedProduct} onChange={(e) => setSelectedProduct(e.target.value)}>
                   {products.map((p) => (
-                    <option key={p.id} value={p.id}>{p.name}</option>
+                    <option key={p.id} value={p.id}>{p.name} — {formatTRY(p.price)}</option>
                   ))}
                 </select>
               </div>
@@ -244,6 +257,11 @@ export default function MelisStyleClient({ products, phone, phoneE164 }: { produ
               <div>
                 <label style={{ display: 'block', fontSize: 12.5, fontWeight: 600, marginBottom: 6, color: INK, textTransform: 'uppercase', letterSpacing: '0.06em' }}>Adet</label>
                 <input className="ms-input" type="number" min={1} value={quantity} onChange={(e) => setQuantity(Math.max(1, Number(e.target.value)))} />
+              </div>
+
+              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', background: '#fff', border: `1px solid ${SAND_DEEP}`, borderRadius: 10, padding: '12px 16px' }}>
+                <span style={{ fontSize: 13.5, color: MUTED, fontWeight: 600 }}>Toplam Tutar</span>
+                <span style={{ fontSize: 18, fontWeight: 800, color: RUST_DEEP, fontFamily: 'var(--ms-display)' }}>{formatTRY(total)}</span>
               </div>
 
               <div>
@@ -280,7 +298,7 @@ export default function MelisStyleClient({ products, phone, phoneE164 }: { produ
                 type="submit"
                 style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: 8, padding: '15px 24px', borderRadius: 12, background: RUST, color: '#fff', fontWeight: 700, fontSize: 15, border: 'none', cursor: 'pointer', boxShadow: '0 8px 20px rgba(193,99,58,0.32)', fontFamily: 'var(--ms-body)' }}
               >
-                Siparişi WhatsApp'tan Gönder
+                Siparişi WhatsApp'tan Gönder — {formatTRY(total)}
               </button>
             </form>
 

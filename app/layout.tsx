@@ -1,6 +1,13 @@
 import type { Metadata, Viewport } from 'next';
 import { Analytics } from '@vercel/analytics/next';
+import { Inter, Syne } from 'next/font/google';
 import './globals.css';
+
+// DÜZELTME: Fontlar artık next/font ile yükleniyor — build zamanında indirilip
+// kendi sunucudan servis edilir (Google Fonts'a ekstra ağ bağlantısı yok),
+// otomatik font-display:swap uygular ve CLS'i (Cumulative Layout Shift) önler.
+const inter = Inter({ subsets: ['latin'], weight: ['400', '500', '600', '700', '800', '900'], variable: '--font-inter', display: 'swap' });
+const syne = Syne({ subsets: ['latin'], weight: ['700', '800'], variable: '--font-syne', display: 'swap' });
 
 // ✅ globals.css eklendi — tüm sayfalardaki tekrar eden inline <style> bloklarının
 // yerini alan paylaşılan stylesheet. Tarayıcı bunu bir kez indirip cache'ler,
@@ -12,9 +19,13 @@ const SITE = 'https://terzihizmeti.com.tr';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
+  // DÜZELTME: Şablon eki " | Terzi Can Antalya" (21 karakter) her alt sayfa
+  // başlığına otomatik ekleniyordu — bu, Google'ın ~60 karakterlik gösterim
+  // sınırını fazlasıyla aşıp en değerli kısımların (fiyat, hizmet) arama
+  // sonucunda "..." ile kesilmesine yol açıyordu. Kısaltıldı.
   title: {
-    default: 'Terzi Can — Antalya Konyaaltı Terzi Hizmeti | Dikim Tamir Tadilat',
-    template: '%s | Terzi Can Antalya',
+    default: 'Terzi Can — Antalya Konyaaltı Terzi Hizmeti',
+    template: '%s · Terzi Can',
   },
   icons: {
     icon: [{ url: '/terzi-can-hero.jpg', type: 'image/jpeg' }],
@@ -35,7 +46,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="tr">
+    <html lang="tr" className={`${inter.variable} ${syne.variable}`}>
       <head>
         <meta name="google-site-verification" content="W2S_Gr49EgkgWG7xAWWMc5qPW6Cw3wEnOi6O6UC9zkQ" />
         <meta name="yandex-verification" content="e7b38dec995b9142" />

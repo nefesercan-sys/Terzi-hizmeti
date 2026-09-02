@@ -11,6 +11,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Antalya geneli hizmet sayfası
     { url: `${SITE}/antalya-terzi`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.9 },
 
+    // ✅ YENİ — Hurma mahallesine özel derinlemesine içerik sayfası
+    { url: `${SITE}/hurma-terzi`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.92 },
+    { url: `${SITE}/liman-terzi`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.92 },
+    { url: `${SITE}/sarisu-terzi`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.92 },
+    { url: `${SITE}/uncali-terzi`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${SITE}/gursu-terzi`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.9 },
+
     // ✅ YENİ — long-tail "şehir + hizmet" kombinasyon sayfaları
     // Bunlar spesifik, düşük rekabetli aramalar için hızlı sıralanmaya aday
     { url: `${SITE}/konyaalti-fermuar-tamiri`, lastModified: NOW, changeFrequency: 'monthly', priority: 0.85 },

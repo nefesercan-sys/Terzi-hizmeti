@@ -19,9 +19,9 @@ const MODIFIED  = new Date().toISOString().split('T')[0];
 // çoğaltabilirsiniz.
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: '2026 Yaz Sezonu Gelinlik Tadilat Rehberi — Antalya Terzi Can',
+  title: '2026 Yaz Gelinlik Tadilat Rehberi',
   description:
-    'Yaz düğün sezonunda gelinlik tadilatı için bilmeniz gerekenler: ne zaman randevu almalısınız, hangi kumaşlar daha uzun sürer, sıcak havada kumaş bakımı. Antalya Konyaaltı\'dan pratik rehber.',
+    'Yaz düğün sezonunda gelinlik tadilatı: randevu zamanlaması, kumaş seçimi, sıcak havada bakım. Antalya Konyaaltı\'dan pratik rehber.',
   keywords: [
     'yaz düğün sezonu gelinlik tadilatı', 'gelinlik tadilat rehberi', 'Antalya yaz düğünü terzi',
     'gelinlik ne zaman tadilat yaptırılır', 'düğün sezonu terzi randevusu',

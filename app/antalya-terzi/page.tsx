@@ -19,9 +19,13 @@ const OG        = `${SITE}/terzi-can-hero.jpg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: 'Konyaaltı Tailor Service — Antalya Terzi, Dikim Atölyesi, Fason İmalat',
+  // DÜZELTME: Başlık İngilizce ifadeyle başlıyordu ("Konyaaltı Tailor
+  // Service") — bu sayfanın hedeflediği asıl arama niyeti Türkçe
+  // ("Hurma terzi", "Konyaaltı terzi"). Başlık Türkçe anahtar kelimelerle
+  // başlayacak şekilde yeniden yazıldı.
+  title: 'Hurma, Liman, Sarısu Terzi — Konyaaltı',
   description:
-    "Konyaaltı Hurma, Liman, Sarısu, Uncalı, Gürsu, Öğretmenevleri, Ahatlı, Toros mahallelerinde terzi ve dikiş atölyesi. Bay, bayan, çocuk kıyafet dikimi, üniforma üretimi, fason imalat. Antalya'nın tüm ilçelerine hizmet. ☎ " + PHONE,
+    "Konyaaltı Hurma, Liman, Sarısu, Uncalı, Gürsu mahallelerinde terzi ve dikiş atölyesi. Kıyafet dikimi, üniforma üretimi, fason imalat. ☎ " + PHONE,
   keywords: [
     'Hurma terzi Konyaaltı', 'Liman terzi Konyaaltı', 'Sarısu terzi Konyaaltı',
     'Uncalı terzi', 'Gürsu terzi', 'Öğretmenevleri terzi', 'Ahatlı terzi', 'Toros terzi',
@@ -44,7 +48,7 @@ export const metadata: Metadata = {
   },
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Konyaaltı Tailor Service — Terzi, Dikim Atölyesi, Fason İmalat',
+    title: 'Hurma, Liman, Sarısu Terzi — Konyaaltı',
     description: 'Hurma, Liman, Sarısu, Uncalı, Gürsu mahalleleri öncelikli. ☎ ' + PHONE,
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'tr_TR',
     alternateLocale: ['en_US'], type: 'website',

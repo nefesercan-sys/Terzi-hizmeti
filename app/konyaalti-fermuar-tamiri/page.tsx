@@ -17,9 +17,9 @@ const TODAY     = new Date().toISOString().split('T')[0];
 // sayfaları genel sayfalara göre daha hızlı ve yüksek sıralar.
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: 'Fermuar Tamiri Konyaaltı — Aynı Gün Fermuar Değişimi | Antalya',
+  title: 'Fermuar Tamiri Konyaaltı | ₺200\'den',
   description:
-    'Konyaaltı\'da fermuar tamiri ve değişimi. Pantolon, mont, ceket, çanta fermuarı — aynı gün teslim, ₺200\'den başlayan fiyatlarla. Hurma, Liman, Sarısu bölgesine ücretsiz servis. ☎ ' + PHONE,
+    'Konyaaltı\'da fermuar tamiri ve değişimi. Pantolon, mont, ceket fermuarı — aynı gün teslim, ₺200\'den. Hurma, Liman, Sarısu bölgesine ücretsiz servis.',
   keywords: [
     'fermuar tamiri Konyaaltı', 'fermuar değişimi Antalya', 'fermuar tamiri Antalya',
     'pantolon fermuarı değişimi', 'mont fermuarı tamiri', 'ceket fermuarı değişimi',

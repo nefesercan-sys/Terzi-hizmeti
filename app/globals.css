@@ -5,14 +5,21 @@
    her sayfa geçişinde aynı CSS'i yeniden parse etmesine yol açıyordu.
    Artık tek dosya, tarayıcı cache'inde kalıcı. */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Syne:wght@700;800&display=swap');
+/* DÜZELTME: @import url(...) kaldırıldı — CSS içinden font yüklemek
+   render-blocking'dir (tarayıcı CSS'i işlerken fontu görene kadar bekler,
+   bu da First Contentful Paint / Largest Contentful Paint süresini uzatır).
+   Fontlar artık layout.tsx'te next/font ile yükleniyor: bu yöntem fontu
+   build zamanında indirip kendi sunucunuzdan servis eder (Google Fonts'a
+   ekstra bir DNS/TLS bağlantısı gerekmez) ve otomatik font-display:swap
+   uygular. Aşağıdaki font-family tanımları artık next/font'un enjekte
+   ettiği CSS değişkenlerine (--font-inter, --font-syne) işaret ediyor. */
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  font-family: var(--font-inter), 'Segoe UI', system-ui, sans-serif;
   line-height: 1.6;
   background: #1E3329;
   color: #F5F1E8;
@@ -20,7 +27,7 @@ body {
 
 a { color: inherit; text-decoration: none; }
 
-.ff { font-family: 'Syne', sans-serif; }
+.ff { font-family: var(--font-syne), sans-serif; }
 
 /* ── NAV ─────────────────────────────────────────────────────────────── */
 .nav {
@@ -32,7 +39,7 @@ a { color: inherit; text-decoration: none; }
   border-bottom: 1px solid rgba(201,169,110,.15);
 }
 .nav-logo {
-  font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 800;
+  font-family: var(--font-syne), sans-serif; font-size: 1rem; font-weight: 800;
   color: #fff; letter-spacing: .04em; display: flex; align-items: center; gap: 8px;
 }
 .nav-dot { width: 8px; height: 8px; border-radius: 50%; background: #C9A96E; }
@@ -65,11 +72,11 @@ a { color: inherit; text-decoration: none; }
   padding: 6px 14px; border-radius: 2px; margin-bottom: 1.4rem;
 }
 .hero-eng {
-  font-family: 'Syne', sans-serif; font-size: .85rem; font-weight: 700;
+  font-family: var(--font-syne), sans-serif; font-size: .85rem; font-weight: 700;
   color: rgba(201,169,110,.85); letter-spacing: .06em; margin-bottom: .6rem; display: block;
 }
 .hero h1 {
-  font-family: 'Syne', sans-serif; font-size: clamp(2rem, 6.4vw, 3.8rem); font-weight: 800;
+  font-family: var(--font-syne), sans-serif; font-size: clamp(2rem, 6.4vw, 3.8rem); font-weight: 800;
   line-height: 1.08; letter-spacing: -.02em; margin-bottom: 1rem;
 }
 .hero h1 .accent { color: #C9A96E; }
@@ -111,7 +118,7 @@ a { color: inherit; text-decoration: none; }
   color: #C9A96E; font-weight: 700; display: block; margin-bottom: .7rem;
 }
 .sec-h {
-  font-family: 'Syne', sans-serif; font-size: clamp(1.5rem, 3.4vw, 2.3rem); font-weight: 800;
+  font-family: var(--font-syne), sans-serif; font-size: clamp(1.5rem, 3.4vw, 2.3rem); font-weight: 800;
   line-height: 1.18; margin-bottom: .5rem; color: #fff;
 }
 .sec-sub { font-size: .86rem; color: rgba(255,255,255,.55); max-width: 600px; line-height: 1.7; }
@@ -161,7 +168,7 @@ a { color: inherit; text-decoration: none; }
 /* ── PROCESS STEPS ───────────────────────────────────────────────────── */
 .step-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.8rem; }
 .step-n {
-  font-family: 'Syne', sans-serif; font-size: 2rem; font-weight: 800;
+  font-family: var(--font-syne), sans-serif; font-size: 2rem; font-weight: 800;
   color: rgba(201,169,110,.2); line-height: 1; margin-bottom: .4rem;
 }
 .step-t { font-weight: 700; font-size: .9rem; color: #fff; margin-bottom: .4rem; }
@@ -203,7 +210,7 @@ a { color: inherit; text-decoration: none; }
   counter-increment: howto; content: counter(howto);
   position: absolute; left: -1.1rem; top: 0;
   width: 2.2rem; height: 2.2rem; border-radius: 50%;
-  background: #C9A96E; color: #1E3329; font-family: 'Syne', sans-serif; font-weight: 800;
+  background: #C9A96E; color: #1E3329; font-family: var(--font-syne), sans-serif; font-weight: 800;
   display: flex; align-items: center; justify-content: center; font-size: .95rem;
 }
 .howto-t { font-weight: 700; font-size: .92rem; color: #fff; margin-bottom: .3rem; }
@@ -214,7 +221,7 @@ a { color: inherit; text-decoration: none; }
   background: linear-gradient(135deg, #2C4A3E 0%, #1E3329 100%); color: #fff;
   padding: 3.5rem 1.5rem; text-align: center; border-top: 1px solid rgba(201,169,110,.15);
 }
-.cta-h { font-family: 'Syne', sans-serif; font-size: clamp(1.5rem, 3.2vw, 2.1rem); font-weight: 800; margin-bottom: .6rem; }
+.cta-h { font-family: var(--font-syne), sans-serif; font-size: clamp(1.5rem, 3.2vw, 2.1rem); font-weight: 800; margin-bottom: .6rem; }
 .cta-sub { font-size: .88rem; color: rgba(255,255,255,.75); margin-bottom: 1.6rem; }
 .cta-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 
@@ -240,7 +247,7 @@ footer {
 /* ── BLOG ────────────────────────────────────────────────────────────── */
 .blog-meta { font-size: .74rem; color: rgba(255,255,255,.45); margin-bottom: 1.5rem; display: flex; gap: 12px; flex-wrap: wrap; }
 .blog-body { font-size: .92rem; color: rgba(255,255,255,.75); line-height: 1.9; max-width: 720px; }
-.blog-body h2 { font-family: 'Syne', sans-serif; font-size: 1.3rem; color: #fff; margin: 2rem 0 .8rem; }
+.blog-body h2 { font-family: var(--font-syne), sans-serif; font-size: 1.3rem; color: #fff; margin: 2rem 0 .8rem; }
 .blog-body p { margin-bottom: 1.1rem; }
 .blog-body ul { margin: 0 0 1.1rem 1.2rem; }
 .blog-body li { margin-bottom: .4rem; }

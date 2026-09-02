@@ -12,9 +12,9 @@ const TODAY     = new Date().toISOString().split('T')[0];
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: 'Paça Kısaltma Konyaaltı — Aynı Gün Pantolon Kısaltma | ₺150\'den',
+  title: 'Paça Kısaltma Konyaaltı | ₺150\'den',
   description:
-    'Konyaaltı\'da paça kısaltma hizmeti. Pantolon, kot, etek kısaltma — aynı gün teslim, ₺150\'den başlayan fiyatlarla. Hurma, Liman, Sarısu bölgesine ücretsiz servis. ☎ ' + PHONE,
+    'Konyaaltı\'da paça kısaltma hizmeti. Pantolon, kot, etek kısaltma — aynı gün teslim, ₺150\'den. Hurma, Liman, Sarısu bölgesine ücretsiz servis.',
   keywords: [
     'paça kısaltma Konyaaltı', 'pantolon kısaltma Antalya', 'kot paça kısaltma',
     'etek kısaltma Antalya', 'paça kısaltma fiyatı 2026', 'aynı gün paça kısaltma',

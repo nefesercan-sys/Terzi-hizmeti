@@ -12,9 +12,9 @@ const TODAY     = new Date().toISOString().split('T')[0];
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: 'Gelinlik Tadilatı Antalya — Hassas Daraltma ve Boy Ayarı | ₺400\'den',
+  title: 'Gelinlik Tadilatı Antalya | ₺400\'den',
   description:
-    'Antalya\'da gelinlik ve abiye tadilatı. Hassas daraltma, boy ayarı, detaylı onarım — ₺400\'den başlayan fiyatlarla, randevulu ve özenli hizmet. Konyaaltı merkezli atölye. ☎ ' + PHONE,
+    'Antalya\'da gelinlik ve abiye tadilatı. Hassas daraltma, boy ayarı, detaylı onarım. ₺400\'den, randevulu ve özenli hizmet. Konyaaltı merkezli atölye.',
   keywords: [
     'gelinlik tadilatı Antalya', 'abiye tadilatı Antalya', 'gelinlik daraltma Antalya',
     'gelinlik boy ayarı Konyaaltı', 'düğün kıyafeti tadilatı', 'nişanlık tadilatı Antalya',

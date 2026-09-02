@@ -18,11 +18,11 @@ const OG        = `${SITE}/terzi-can-hero.jpg`;
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: {
-    default: 'Terzi Hizmeti — Antalya Konyaaltı Terzi Can | Dikim Tamir Tadilat Ütü',
-    template: '%s | Terzi Can Antalya',
+    default: 'Terzi Can — Antalya Konyaaltı Terzi Hizmeti',
+    template: '%s · Terzi Can',
   },
   description:
-    'Antalya Konyaaltı\'da profesyonel terzi hizmeti. Paça kısaltma, fermuar değişimi, bel daraltma, elbise dikimi, gelinlik tadilatı, kuru temizleme ve ütü. Bay, bayan, çocuk kıyafetleri. Hurma · Liman · Sarısu · Gürsu · Uncalı. ☎ ' + PHONE,
+    'Konyaaltı terzi: paça kısaltma ₺150\'den, fermuar değişimi ₺200\'den, bel daraltma, elbise dikimi. Hurma, Liman, Sarısu, Gürsu, Uncalı\'ya servis.',
   keywords: [
     // Ana terimler
     'terzi Antalya', 'terzi hizmeti', 'terzi dikim', 'terzi tamir', 'terzi tadilat',
@@ -67,10 +67,10 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: SITE,
+    // DÜZELTME: /en ve /ru altında gerçek bir sayfa yok — bu iddia Google'a
+    // yanlış dil sinyali gönderiyordu. Sadece gerçekten var olan tr sürümü bırakıldı.
     languages: {
-      'tr': SITE,
-      'en': `${SITE}/en`,
-      'ru': `${SITE}/ru`,
+      'tr-TR': SITE,
       'x-default': SITE,
     },
   },
@@ -158,6 +158,11 @@ const jsonLd = {
       ].map(n => ({ '@type': 'Place', name: n })),
       contactPoint: [{
         '@type': 'ContactPoint',
+        // Bu numaranın "Terzi Servisi" olarak etiketlenmesi için eklendi.
+        // Not: Google'ın arama sonuçlarında hangi etiketi göstereceği kendi
+        // algoritmasına bağlıdır — bu alan destekleyici bir sinyaldir, garanti değildir.
+        // En güçlü kaynak Google Business Profil'deki işletme adıdır.
+        name: 'Terzi Servisi Hattı',
         telephone: PHONE_TEL,
         contactType: 'customer service',
         areaServed: 'TR',

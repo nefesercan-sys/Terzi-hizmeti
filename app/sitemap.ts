@@ -23,7 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE}/konyaalti-fermuar-tamiri`, lastModified: NOW, changeFrequency: 'monthly', priority: 0.85 },
     { url: `${SITE}/konyaalti-paca-kisaltma`,  lastModified: NOW, changeFrequency: 'monthly', priority: 0.85 },
     { url: `${SITE}/antalya-gelinlik-tadilati`, lastModified: NOW, changeFrequency: 'monthly', priority: 0.85 },
-    { url: `${SITE}antalya-uniforma-imalati`, lastModified: NOW, changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${SITE}/antalya-uniforma-imalati`, lastModified: NOW, changeFrequency: 'monthly', priority: 0.85 },
     // ✅ YENİ — blog / içerik tazeliği sayfaları
     { url: `${SITE}/blog/2026-yaz-sezonu-gelinlik-tadilat-rehberi`, lastModified: NOW, changeFrequency: 'yearly', priority: 0.6 },
 

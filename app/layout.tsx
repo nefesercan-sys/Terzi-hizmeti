@@ -50,8 +50,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <meta name="google-site-verification" content="W2S_Gr49EgkgWG7xAWWMc5qPW6Cw3wEnOi6O6UC9zkQ" />
         <meta name="yandex-verification" content="e7b38dec995b9142" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* DÜZELTME: fonts.googleapis.com/fonts.gstatic.com preconnect'leri kaldırıldı —
+            proje next/font ile fontları kendi sunucusunda barındırıyor (Google Fonts'a
+            hiç ağ isteği gitmiyor), bu preconnect'ler hiçbir zaman kullanılmayan boşa
+            harcanmış bağlantılardı. */}
         {/* ✅ Hero görseli için preload — LCP görselini tarayıcıya erkenden haber verir */}
         <link rel="preload" as="image" href="/terzi-can-hero.jpg" />
       </head>

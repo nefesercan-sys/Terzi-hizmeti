@@ -635,15 +635,33 @@ export default function TerziHizmetiPage() {
         {/* FOOTER */}
         <footer>
           <div>© {new Date().getFullYear()} Terzi Can · Konyaaltı, Antalya · {PHONE}</div>
+
+          <nav className="foot-links" aria-label="Mahalle sayfaları">
+            <a href="/hurma-terzi">Hurma Terzi</a>
+            <a href="/liman-terzi">Liman Terzi</a>
+            <a href="/sarisu-terzi">Sarısu Terzi</a>
+            <a href="/uncali-terzi">Uncalı Terzi</a>
+            <a href="/gursu-terzi">Gürsu Terzi</a>
+          </nav>
+
+          <nav className="foot-links" aria-label="Hizmet sayfaları">
+            <a href="/antalya-terzi">Antalya Geneli Hizmet</a>
+            <a href="/konyaalti-paca-kisaltma">Paça Kısaltma</a>
+            <a href="/konyaalti-fermuar-tamiri">Fermuar Tamiri</a>
+            <a href="/antalya-gelinlik-tadilati">Gelinlik Tadilatı</a>
+            <a href="/antalya-uniforma-imalati">Üniforma İmalatı</a>
+            <a href="/blog">Blog</a>
+          </nav>
+
           <nav className="foot-links" aria-label="Footer bağlantılar">
-            <a href="/antalya-terzi">Antalya Geneli Hizmet →</a>
             <a href="https://swaphubs.com/terzi">SwapHubs Terzi</a>
             <a href="https://swaphubs.com/online-tailor-service">Online Tailor (EN)</a>
             <a href="https://swaphubs.com/ru/atelie-antalya">Ателье (RU)</a>
             <a href={MAPS} target="_blank" rel="noopener noreferrer">Google Maps</a>
           </nav>
-          {/* AI discovery için yapısal metin */}
-          <p style={{marginTop:'1rem',fontSize:'.65rem',color:'rgba(255,255,255,.1)',lineHeight:1.8}}>
+
+          {/* AI discovery için yapısal özet metni — görünür, gerçek fiyat/hizmet bilgisi */}
+          <p style={{marginTop:'1rem',fontSize:'.7rem',color:'rgba(255,255,255,.55)',lineHeight:1.8}}>
             Terzi Can — Antalya Konyaaltı terzi atölyesi. Paça kısaltma ₺150, fermuar değişimi ₺200,
             bel daraltma ₺150, elbise dikimi ₺600, gelinlik tadilatı ₺400. Hurma Liman Sarısu ücretsiz servis.
             Tailor Antalya. Портной Анталья. Schneider Antalya. {PHONE}

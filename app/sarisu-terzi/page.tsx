@@ -251,6 +251,8 @@ export default function SarisuPage() {
           <nav className="foot-links" aria-label="Footer bağlantılar">
             <a href="/">Ana Sayfa</a>
             <a href="/antalya-terzi">Antalya Terzi</a>
+            <a href="/antalya-uniforma-imalati">Üniforma İmalatı</a>
+            <a href="/blog">Blog</a>
             <a href={MAPS} target="_blank" rel="noopener noreferrer">Google Maps</a>
           </nav>
         </footer>

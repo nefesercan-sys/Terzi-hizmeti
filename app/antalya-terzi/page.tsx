@@ -474,6 +474,13 @@ export default function KonyaaltiTailorServicePage() {
                   <p className="wk-desc">Hassas daraltma, boy ayarı, korse onarımı — ₺400&apos;den.</p>
                   <span style={{ fontSize: '.76rem', color: '#C9A96E', fontWeight: 700 }}>Fiyatları Gör <span aria-hidden="true">→</span></span>
                 </a>
+                <a href="/antalya-uniforma-imalati" className="wk-card" style={{ display: 'block' }}>
+                  <div className="wk-icon" aria-hidden="true">🏨</div>
+                  <h3 className="wk-tr">Üniforma İmalatı Antalya</h3>
+                  <span className="wk-en">Uniform Manufacturing</span>
+                  <p className="wk-desc">Otel, restoran, spa personeli için toplu üniforma dikimi ve nakış.</p>
+                  <span style={{ fontSize: '.76rem', color: '#C9A96E', fontWeight: 700 }}>Fiyatları Gör <span aria-hidden="true">→</span></span>
+                </a>
               </div>
             </div>
           </section>

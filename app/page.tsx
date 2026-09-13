@@ -653,6 +653,12 @@ export default function TerziHizmetiPage() {
             <a href="/blog">Blog</a>
           </nav>
 
+          <nav className="foot-links" aria-label="Diğer diller">
+            <a href="/en/tailor-service-antalya">English</a>
+            <a href="/ru/uslugi-portnogo-antalya">Русский</a>
+            <a href="/de/schneiderservice-antalya">Deutsch</a>
+          </nav>
+
           <nav className="foot-links" aria-label="Footer bağlantılar">
             <a href="https://swaphubs.com/terzi">SwapHubs Terzi</a>
             <a href="https://swaphubs.com/online-tailor-service">Online Tailor (EN)</a>

@@ -46,7 +46,16 @@ export const metadata: Metadata = {
     index: true, follow: true,
     googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
   },
-  alternates: { canonical: PAGE_URL },
+  alternates: {
+    canonical: PAGE_URL,
+    languages: {
+      'tr': PAGE_URL,
+      'en': 'https://terzihizmeti.com.tr/en/tailor-service-antalya',
+      'ru': 'https://terzihizmeti.com.tr/ru/uslugi-portnogo-antalya',
+      'de': 'https://terzihizmeti.com.tr/de/schneiderservice-antalya',
+      'x-default': PAGE_URL,
+    },
+  },
   openGraph: {
     title: 'Hurma, Liman, Sarısu Terzi — Konyaaltı',
     description: 'Hurma, Liman, Sarısu, Uncalı, Gürsu mahalleleri öncelikli. ☎ ' + PHONE,
@@ -518,10 +527,13 @@ export default function KonyaaltiTailorServicePage() {
           <div>© {new Date().getFullYear()} Terzi Can · Konyaaltı Tailor Service · {PHONE}</div>
           <nav className="foot-links" aria-label="Alt bilgi bağlantıları">
             <a href="/">Ana Sayfa</a>
+            <a href="/en/tailor-service-antalya">English</a>
+            <a href="/ru/uslugi-portnogo-antalya">Русский</a>
+            <a href="/de/schneiderservice-antalya">Deutsch</a>
             <a href="https://swaphubs.com/terzi">SwapHubs Terzi</a>
             <a href={MAPS} target="_blank" rel="noopener noreferrer">Google Maps</a>
           </nav>
-          <p style={{ marginTop: '1rem', fontSize: '.62rem', color: 'rgba(255,255,255,.15)', lineHeight: 1.8 }}>
+          <p style={{ marginTop: '1rem', fontSize: '.68rem', color: 'rgba(255,255,255,.45)', lineHeight: 1.8 }}>
             Konyaaltı Tailor Service — Hurma, Liman, Sarısu, Uncalı, Gürsu, Öğretmenevleri, Ahatlı,
             Toros terzi ve dikiş atölyesi. Bay, bayan, çocuk kıyafeti, üniforma üretimi, fason imalat.
             Antalya tüm ilçeler. {PHONE}

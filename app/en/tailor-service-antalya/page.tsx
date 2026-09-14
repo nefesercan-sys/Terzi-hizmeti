@@ -320,6 +320,12 @@ export default function TailorServiceAntalyaPage() {
             <a href={TR_URL}>Türkçe — Konyaaltı Terzi</a>
             <a href={MAPS} target="_blank" rel="noopener noreferrer">Google Maps</a>
           </nav>
+          <nav className="foot-links" aria-label="Hotel zones">
+            <a href="/en/tailor-service-antalya-hotels/belek">Belek Hotel Tailor</a>
+            <a href="/en/tailor-service-antalya-hotels/lara">Lara Hotel Tailor</a>
+            <a href="/en/tailor-service-antalya-hotels/guzeloba">Güzeloba Hotel Tailor</a>
+            <a href="/en/tailor-service-antalya-hotels/side">Side Hotel Tailor</a>
+          </nav>
           <p style={{ marginTop: '1rem', fontSize: '.68rem', color: 'rgba(255,255,255,.45)', lineHeight: 1.8 }}>
             Antalya Tailor Service — tailoring, repair, alterations and ironing across all Antalya districts:
             Konyaaltı, Muratpaşa, Kepez, Lara, Belek, Kemer, Side, Alanya, Manavgat and more. Mobile tailor to

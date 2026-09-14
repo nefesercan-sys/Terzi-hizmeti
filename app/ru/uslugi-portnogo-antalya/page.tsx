@@ -315,6 +315,12 @@ export default function UslugiPortnogoAntalyaPage() {
             <a href={TR_URL}>Türkçe — Konyaaltı Terzi</a>
             <a href={MAPS} target="_blank" rel="noopener noreferrer">Google Maps</a>
           </nav>
+          <nav className="foot-links" aria-label="Отельные зоны">
+            <a href="/ru/uslugi-portnogo-antalya-oteli/belek">Портной в Белеке</a>
+            <a href="/ru/uslugi-portnogo-antalya-oteli/lara">Портной в Ларе</a>
+            <a href="/ru/uslugi-portnogo-antalya-oteli/guzeloba">Портной в Гюзельобе</a>
+            <a href="/ru/uslugi-portnogo-antalya-oteli/side">Портной в Сиде</a>
+          </nav>
           <p style={{ marginTop: '1rem', fontSize: '.68rem', color: 'rgba(255,255,255,.45)', lineHeight: 1.8 }}>
             Портной Анталья — пошив, ремонт, подгонка и глажка во всех районах Антальи: Коньяалты, Муратпаша,
             Кепез, Лара, Белек, Кемер, Сиде, Аланья, Манавгат и другие. Выездной портной в отель или по адресу. {PHONE}

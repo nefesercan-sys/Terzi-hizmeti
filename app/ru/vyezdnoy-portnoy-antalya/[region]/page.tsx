@@ -1,0 +1,63 @@
+import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
+import { OTEL_BOLGELERI, bulOtelBolgesi } from '@/lib/otel-bolgeleri';
+import OtelBolgeSayfasi from '@/components/OtelBolgeSayfasi';
+
+const SITE = 'https://terzihizmeti.com.tr';
+const PHONE_TEL = '+905318986418';
+const MAPS = 'https://maps.app.goo.gl/CNZghczJNRQX3mLM9';
+const BASE_PATH = '/ru/uslugi-portnogo-antalya-oteli';
+
+export async function generateStaticParams() {
+  return OTEL_BOLGELERI.map((r) => ({ region: r.slug }));
+}
+
+export async function generateMetadata({ params }: { params: { region: string } }): Promise<Metadata> {
+  const r = bulOtelBolgesi(params.region);
+  if (!r) return {};
+  const url = `${SITE}${BASE_PATH}/${r.slug}`;
+  const title = `Портной в отеле ${r.name} Анталья — Выездной портной | Terzi Can`;
+  const desc = `Выездной портной в ваш отель в районе ${r.name}, Анталья. Пошив, подгонка, ремонт, глажка и химчистка с доставкой в номер. ${r.travelTime.ru}. Говорим по-русски.`;
+  return {
+    metadataBase: new URL(SITE),
+    title, description: desc,
+    keywords: [`портной ${r.name}`, `отель ${r.name} портной`, 'выездной портной Анталья', 'русскоговорящий портной Анталья', `${r.name} химчистка`],
+    alternates: {
+      canonical: url,
+      languages: {
+        'tr': `${SITE}/antalya-terzi`,
+        'en': `${SITE}/en/tailor-service-antalya-hotels/${r.slug}`,
+        'ru': url,
+        'de': `${SITE}/de/schneiderservice-antalya-hotels/${r.slug}`,
+        'x-default': `${SITE}/antalya-terzi`,
+      },
+    },
+    openGraph: { title, description: desc, url, type: 'website', locale: 'ru_RU' },
+    robots: { index: true, follow: true },
+  };
+}
+
+export default function OtelBolgeRuPage({ params }: { params: { region: string } }) {
+  const r = bulOtelBolgesi(params.region);
+  if (!r) notFound();
+
+  const url = `${SITE}${BASE_PATH}/${r.slug}`;
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      { '@type': 'Service', name: `Портной в отеле ${r.name} — выездной портной`,
+        provider: { '@type': 'ClothingStore', name: 'Terzi Can', telephone: PHONE_TEL, url: `${SITE}/antalya-terzi` },
+        areaServed: { '@type': 'Place', name: r.name }, url },
+      { '@type': 'FAQPage', mainEntity: [
+        { '@type': 'Question', name: `Вы приезжаете в отели ${r.name}?`, acceptedAnswer: { '@type': 'Answer', text: `Да, выездной портной Terzi Can приезжает в каждый отель района ${r.name}. Напишите название отеля в WhatsApp: +90 531 898 64 18.` } },
+      ] },
+    ],
+  };
+
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <OtelBolgeSayfasi lang="ru" region={r} allRegions={OTEL_BOLGELERI} basePath={BASE_PATH} maps={MAPS} />
+    </>
+  );
+}

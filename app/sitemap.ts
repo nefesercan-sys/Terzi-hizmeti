@@ -29,6 +29,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE}/ru/uslugi-portnogo-antalya`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.95 },
     { url: `${SITE}/de/schneiderservice-antalya`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.95 },
 
+    // ✅ YENİ — Otel bölgesi sayfaları: Belek/Lara/Güzeloba/Side × EN/RU/DE (2026-09)
+    ...['belek', 'lara', 'guzeloba', 'side'].flatMap((slug) => [
+      { url: `${SITE}/en/tailor-service-antalya-hotels/${slug}`, lastModified: NOW, changeFrequency: 'weekly' as const, priority: 0.9 },
+      { url: `${SITE}/ru/uslugi-portnogo-antalya-oteli/${slug}`, lastModified: NOW, changeFrequency: 'weekly' as const, priority: 0.9 },
+      { url: `${SITE}/de/schneiderservice-antalya-hotels/${slug}`, lastModified: NOW, changeFrequency: 'weekly' as const, priority: 0.9 },
+    ]),
+
     // ✅ blog / içerik tazeliği sayfaları
     { url: `${SITE}/blog`, lastModified: NOW, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${SITE}/blog/2026-yaz-sezonu-gelinlik-tadilat-rehberi`, lastModified: NOW, changeFrequency: 'yearly', priority: 0.6 },

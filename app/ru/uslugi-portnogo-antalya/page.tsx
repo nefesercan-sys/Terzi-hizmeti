@@ -316,10 +316,11 @@ export default function UslugiPortnogoAntalyaPage() {
             <a href={MAPS} target="_blank" rel="noopener noreferrer">Google Maps</a>
           </nav>
           <nav className="foot-links" aria-label="Отельные зоны">
-            <a href="/ru/uslugi-portnogo-antalya-oteli/belek">Портной в Белеке</a>
-            <a href="/ru/uslugi-portnogo-antalya-oteli/lara">Портной в Ларе</a>
-            <a href="/ru/uslugi-portnogo-antalya-oteli/guzeloba">Портной в Гюзельобе</a>
-            <a href="/ru/uslugi-portnogo-antalya-oteli/side">Портной в Сиде</a>
+            <a href="/ru/vyezdnoy-portnoy-antalya/belek">Портной в отеле Белек</a>
+            <a href="/ru/vyezdnoy-portnoy-antalya/lara">Портной в отеле Лара</a>
+            <a href="/ru/vyezdnoy-portnoy-antalya/guzeloba">Портной в отеле Гюзельоба</a>
+            <a href="/ru/vyezdnoy-portnoy-antalya/kemer">Портной в отеле Кемер</a>
+            <a href="/ru/vyezdnoy-portnoy-antalya/side">Портной в отеле Сиде</a>
           </nav>
           <p style={{ marginTop: '1rem', fontSize: '.68rem', color: 'rgba(255,255,255,.45)', lineHeight: 1.8 }}>
             Портной Анталья — пошив, ремонт, подгонка и глажка во всех районах Антальи: Коньяалты, Муратпаша,

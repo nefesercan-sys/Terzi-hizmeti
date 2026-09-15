@@ -5,7 +5,7 @@ const PHONE = '+90 531 898 64 18';
 const PHONE_TEL = '+905318986418';
 const WA_NUM = '905318986418';
 
-type Lang = 'en' | 'ru' | 'de';
+type Lang = 'tr' | 'en' | 'ru' | 'de';
 
 const T: Record<Lang, any> = {
   en: {
@@ -14,8 +14,8 @@ const T: Record<Lang, any> = {
     heroDesc: (r: string, blurb: string) => `${blurb} Terzi Can's mobile tailor comes directly to your hotel in ${r} — measurement, tailoring, alterations, ironing and dry cleaning delivered back to your room.`,
     waShare: 'Share Hotel Name', callLabel: PHONE,
     aboutH: (r: string) => `About ${r}`, travelLabel: 'Travel time:',
-    hotelsH: (r: string) => `Hotels We Serve in ${r}`, hotelsSub: 'We come to every hotel here — just tell us your hotel name on WhatsApp.',
-    otherHotelsNote: '+ every other hotel in this district.',
+    hotelsH: (r: string) => `Hotels in the ${r} Area`, hotelsSub: 'We can reach you at any hotel in this district — just share your hotel name on WhatsApp and we\'ll confirm.',
+    otherHotelsNote: 'Staying somewhere else in this district? We can still reach you — just ask.',
     servicesEyebrow: 'Tailoring & Repair Workshop', servicesH: 'Tailoring · Repair · Alterations · Ironing', servicesSub: 'A full-capacity textile workshop, delivered to your hotel.',
     services: [
       { icon: '👔', tr: 'Tailoring', en: 'Custom-fit clothing', desc: 'Custom-fit garments made to your exact measurements.', items: ['Shirt', 'Trousers', 'Suit', 'Dress'] },
@@ -49,8 +49,8 @@ const T: Record<Lang, any> = {
     heroDesc: (r: string, blurb: string) => `${blurb} Выездной портной Terzi Can приедет прямо в ваш отель в районе ${r} — снятие мерок, пошив, подгонка, глажка и химчистка с доставкой в номер.`,
     waShare: 'Отправить название отеля', callLabel: PHONE,
     aboutH: (r: string) => `О районе ${r}`, travelLabel: 'Время в пути:',
-    hotelsH: (r: string) => `Отели, которые мы обслуживаем в ${r}`, hotelsSub: 'Мы приезжаем в каждый отель — просто напишите название отеля в WhatsApp.',
-    otherHotelsNote: '+ все остальные отели этого района.',
+    hotelsH: (r: string) => `Отели в районе ${r}`, hotelsSub: 'Мы можем приехать в любой отель этого района — просто напишите название отеля в WhatsApp, и мы подтвердим.',
+    otherHotelsNote: 'Остановились в другом отеле этого района? Мы всё равно можем приехать — просто спросите.',
     servicesEyebrow: 'Мастерская пошива и ремонта', servicesH: 'Пошив · Ремонт · Подгонка · Глажка', servicesSub: 'Полноценная текстильная мастерская с доставкой в ваш отель.',
     services: [
       { icon: '👔', tr: 'Пошив', en: 'Одежда по меркам', desc: 'Пошив одежды по вашим точным меркам.', items: ['Рубашка', 'Брюки', 'Костюм', 'Платье'] },
@@ -84,8 +84,8 @@ const T: Record<Lang, any> = {
     heroDesc: (r: string, blurb: string) => `${blurb} Der mobile Schneider von Terzi Can kommt direkt zu Ihrem Hotel in ${r} — Maßnehmen, Schneidern, Änderungen, Bügeln und chemische Reinigung, geliefert auf Ihr Zimmer.`,
     waShare: 'Hotelnamen senden', callLabel: PHONE,
     aboutH: (r: string) => `Über ${r}`, travelLabel: 'Anfahrtszeit:',
-    hotelsH: (r: string) => `Hotels, die wir in ${r} bedienen`, hotelsSub: 'Wir kommen zu jedem Hotel — teilen Sie einfach Ihren Hotelnamen per WhatsApp mit.',
-    otherHotelsNote: '+ alle anderen Hotels in diesem Bezirk.',
+    hotelsH: (r: string) => `Hotels im Gebiet ${r}`, hotelsSub: 'Wir erreichen Sie in jedem Hotel dieses Bezirks — teilen Sie einfach Ihren Hotelnamen per WhatsApp mit, wir bestätigen den Termin.',
+    otherHotelsNote: 'Wohnen Sie in einem anderen Hotel dieses Bezirks? Wir erreichen Sie trotzdem — fragen Sie einfach nach.',
     servicesEyebrow: 'Schneider- und Reparaturwerkstatt', servicesH: 'Schneiderei · Reparatur · Änderungen · Bügelservice', servicesSub: 'Eine voll ausgestattete Textilwerkstatt, geliefert in Ihr Hotel.',
     services: [
       { icon: '👔', tr: 'Schneiderei', en: 'Maßgeschneiderte Kleidung', desc: 'Maßanfertigung nach Ihren genauen Maßen.', items: ['Hemd', 'Hose', 'Anzug', 'Kleid'] },
@@ -113,6 +113,41 @@ const T: Record<Lang, any> = {
     waBtn: 'Auf WhatsApp schreiben', mapsBtn: 'Google Maps',
     footTitle: 'Ähnlich', related: [] as [string, string][],
   },
+  tr: {
+    homeLabel: '← Ana Sayfa', tag: (r: string) => `📍 ${r} Otel Bölgesi · Otele Gelen Terzi`,
+    h1: (r: string) => <>Otele Gelen Terzi<br /><span className="accent">{r}</span></>,
+    heroDesc: (r: string, blurb: string) => `${blurb} Terzi Can'ın otele gelen terzisi ${r} bölgesindeki otelinize gelir — ölçü alma, dikim, tadilat, ütü ve kuru temizleme işleminizi tamamlayıp odanıza teslim eder.`,
+    waShare: 'Otel Adını Gönderin', callLabel: PHONE,
+    aboutH: (r: string) => `${r} Hakkında`, travelLabel: 'Ulaşım süresi:',
+    hotelsH: (r: string) => `${r} Bölgesindeki Oteller`, hotelsSub: 'Bu bölgedeki her otele ulaşabiliyoruz — otel adınızı WhatsApp\'tan iletin, size dönelim.',
+    otherHotelsNote: 'Bu bölgede başka bir otelde mi kalıyorsunuz? Yine de ulaşabiliriz — sorun yeter.',
+    servicesEyebrow: 'Dikim & Tamir Atölyesi', servicesH: 'Dikim · Tamir · Tadilat · Ütü', servicesSub: 'Tam kapasiteli bir tekstil atölyesi, otelinize kadar geliyor.',
+    services: [
+      { icon: '👔', tr: 'Dikim', en: 'Özel ölçü kıyafet', desc: 'Tam ölçünüze göre özel dikim kıyafet.', items: ['Gömlek', 'Pantolon', 'Takım Elbise', 'Elbise'] },
+      { icon: '🔧', tr: 'Tamir', en: 'Fermuar, yırtık, düğme', desc: 'Günlük tamirler — fermuar, sökük dikiş, düğme, astar.', items: ['Fermuar Değişimi', 'Yırtık Tamiri', 'Astar Değişimi'] },
+      { icon: '📏', tr: 'Tadilat', en: 'Boy kısaltma, daraltma', desc: 'Kıyafetin tam oturması için hassas ölçü ayarı.', items: ['Boy Kısaltma', 'Bel Daraltma', 'Kol Kısaltma'] },
+      { icon: '🧺', tr: 'Ütü & Kuru Temizleme', en: 'Buharlı ütü, kuru temizleme', desc: 'Profesyonel buharlı ütü ve kuru temizleme, alım-teslimatlı.', items: ['Ütü', 'Kuru Temizleme'] },
+    ],
+    priceEyebrow: '₺ Şeffaf Fiyatlar', priceH: 'Fiyatlar', priceSub: 'Otel ziyareti ücretsiz — sadece yapılan iş için ödeme yaparsınız.',
+    priceRows: [['Otel Ziyareti', 'ÜCRETSİZ'], ['Boy Kısaltma', '₺150+'], ['Fermuar Değişimi', '₺200+'], ['Elbise / Takım Tadilatı', '₺200+'], ['Gelinlik Tadilatı', '₺500+'], ['Ütü (adet başı)', '₺80+'], ['Kuru Temizleme', '₺300+']],
+    procEyebrow: 'Süreç', procH: 'Nasıl Çalışır',
+    steps: [
+      ['01', 'Otel & Oda Bilginizi Gönderin', `Otel adı ve oda numaranızı ${PHONE} numarasına iletin`],
+      ['02', '30 Dakikada Randevu', 'Size uygun bir saat belirleyip onaylıyoruz'],
+      ['03', 'Yerinde Ölçü Alma', 'Terzimiz gelir, ölçü alır ve kıyafeti teslim alır'],
+      ['04', '24–48 Saatte Teslim', 'Tamamlanan kıyafet odanıza geri teslim edilir'],
+    ],
+    faqEyebrow: 'SSS', faqH: 'Sık Sorulan Sorular',
+    faq: (r: string) => [
+      [`${r} bölgesindeki tüm otellere geliyor musunuz?`, `Evet! ${r} bölgesindeki her otele ulaşabiliyoruz — otel adınızı ve oda numaranızı WhatsApp'tan iletin.`],
+      ['Otel ziyareti ücretsiz mi?', 'Evet, tamamen ücretsiz — sadece dikim/tamir işi için ödeme yaparsınız.'],
+      ['Hizmet ne kadar sürede tamamlanır?', 'Çoğu tamir ve boy kısaltma işlemi 24–48 saat içinde tamamlanır.'],
+      ['Türkçe dışında dil konuşuyor musunuz?', 'Evet, ekibimiz Türkçe, İngilizce, Almanca ve Rusça konuşabiliyor.'],
+    ],
+    ctaH: (r: string) => <>{r} Bölgesinde Otele Gelen Terzi<br />Size Geliyoruz</>, ctaSub: 'Otel adınızı gönderin — 30 dakikada randevunuz netleşsin.',
+    waBtn: 'WhatsApp\'tan Yazın', mapsBtn: 'Google Haritalar',
+    footTitle: 'İlgili', related: [] as [string, string][],
+  },
 };
 
 export default function OtelBolgeSayfasi({ lang, region, allRegions, basePath, maps }: {
@@ -121,6 +156,7 @@ export default function OtelBolgeSayfasi({ lang, region, allRegions, basePath, m
   const t = T[lang];
   const waMsg = lang === 'ru' ? `Здравствуйте, я в отеле в районе ${region.name}. Мой отель: `
     : lang === 'de' ? `Hallo, ich bin in einem Hotel in ${region.name}. Mein Hotel: `
+    : lang === 'tr' ? `Merhaba, ${region.name} bölgesinde bir oteldeyim. Otelim: `
     : `Hello, I am at a hotel in ${region.name}. My hotel: `;
   const WA_URL = (m: string) => `https://wa.me/${WA_NUM}?text=${encodeURIComponent(m)}`;
   const WA_DEF = WA_URL(waMsg);
@@ -244,7 +280,7 @@ export default function OtelBolgeSayfasi({ lang, region, allRegions, basePath, m
       <footer>
         <div>© {new Date().getFullYear()} Terzi Can · {region.name} · {PHONE}</div>
         <nav className="foot-links" aria-label="Region links">
-          <a href={basePath}>{lang === 'ru' ? '← Все районы' : lang === 'de' ? '← Alle Bezirke' : '← All Districts'}</a>
+          <a href={basePath}>{lang === 'ru' ? '← Все районы' : lang === 'de' ? '← Alle Bezirke' : lang === 'tr' ? '← Tüm Bölgeler' : '← All Districts'}</a>
           {allRegions.filter((r) => r.slug !== region.slug).map((r) => (
             <a key={r.slug} href={`${basePath}/${r.slug}`}>{r.name}</a>
           ))}

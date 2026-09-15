@@ -6,7 +6,7 @@ import OtelBolgeSayfasi from '@/components/OtelBolgeSayfasi';
 const SITE = 'https://terzihizmeti.com.tr';
 const PHONE_TEL = '+905318986418';
 const MAPS = 'https://maps.app.goo.gl/CNZghczJNRQX3mLM9';
-const BASE_PATH = '/en/tailor-service-antalya-hotels';
+const BASE_PATH = '/en/hotel-tailor-antalya';
 
 export async function generateStaticParams() {
   return OTEL_BOLGELERI.map((r) => ({ region: r.slug }));
@@ -25,11 +25,11 @@ export async function generateMetadata({ params }: { params: { region: string } 
     alternates: {
       canonical: url,
       languages: {
-        'tr': `${SITE}/antalya-terzi`,
+        'tr': `${SITE}/otele-gelen-terzi-antalya/${r.slug}`,
         'en': url,
-        'ru': `${SITE}/ru/uslugi-portnogo-antalya-oteli/${r.slug}`,
-        'de': `${SITE}/de/schneiderservice-antalya-hotels/${r.slug}`,
-        'x-default': `${SITE}/antalya-terzi`,
+        'ru': `${SITE}/ru/vyezdnoy-portnoy-antalya/${r.slug}`,
+        'de': `${SITE}/de/schneider-service-hotel-antalya/${r.slug}`,
+        'x-default': `${SITE}/otele-gelen-terzi-antalya/${r.slug}`,
       },
     },
     openGraph: { title, description: desc, url, type: 'website', locale: 'en_US' },

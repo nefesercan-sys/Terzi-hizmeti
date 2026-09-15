@@ -29,11 +29,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE}/ru/uslugi-portnogo-antalya`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.95 },
     { url: `${SITE}/de/schneiderservice-antalya`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.95 },
 
-    // ✅ YENİ — Otel bölgesi sayfaları: Belek/Lara/Güzeloba/Side × EN/RU/DE (2026-09)
-    ...['belek', 'lara', 'guzeloba', 'side'].flatMap((slug) => [
-      { url: `${SITE}/en/tailor-service-antalya-hotels/${slug}`, lastModified: NOW, changeFrequency: 'weekly' as const, priority: 0.9 },
-      { url: `${SITE}/ru/uslugi-portnogo-antalya-oteli/${slug}`, lastModified: NOW, changeFrequency: 'weekly' as const, priority: 0.9 },
-      { url: `${SITE}/de/schneiderservice-antalya-hotels/${slug}`, lastModified: NOW, changeFrequency: 'weekly' as const, priority: 0.9 },
+    // ✅ DÜZELTİLDİ (2026-09) — Otel bölgesi sayfaları: gerçek klasör yollarıyla
+    // eşleşmeyen (404 veren) URL'ler yerine doğru yollar + eksik olan Kemer +
+    // her dil için "tüm bölgeler" hub sayfası + Türkçe karşılığı eklendi.
+    { url: `${SITE}/otele-gelen-terzi-antalya`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${SITE}/en/hotel-tailor-antalya`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${SITE}/ru/vyezdnoy-portnoy-antalya`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${SITE}/de/schneider-service-hotel-antalya`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.9 },
+    ...['belek', 'lara', 'guzeloba', 'kemer', 'side'].flatMap((slug) => [
+      { url: `${SITE}/otele-gelen-terzi-antalya/${slug}`, lastModified: NOW, changeFrequency: 'weekly' as const, priority: 0.92 },
+      { url: `${SITE}/en/hotel-tailor-antalya/${slug}`, lastModified: NOW, changeFrequency: 'weekly' as const, priority: 0.9 },
+      { url: `${SITE}/ru/vyezdnoy-portnoy-antalya/${slug}`, lastModified: NOW, changeFrequency: 'weekly' as const, priority: 0.9 },
+      { url: `${SITE}/de/schneider-service-hotel-antalya/${slug}`, lastModified: NOW, changeFrequency: 'weekly' as const, priority: 0.9 },
     ]),
 
     // ✅ blog / içerik tazeliği sayfaları

@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import { Analytics } from '@vercel/analytics/next';
 import { Inter, Syne } from 'next/font/google';
 import './globals.css';
+import LangSetter from './LangSetter';
 
 // DÜZELTME: Fontlar artık next/font ile yükleniyor — build zamanında indirilip
 // kendi sunucudan servis edilir (Google Fonts'a ekstra ağ bağlantısı yok),
@@ -82,6 +83,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }} />
       </head>
       <body style={{ margin: 0, padding: 0, overflowX: 'hidden' }}>
+        <LangSetter />
         {children}
         <Analytics />
       </body>

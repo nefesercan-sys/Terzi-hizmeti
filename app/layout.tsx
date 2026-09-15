@@ -44,6 +44,29 @@ export const viewport: Viewport = {
   themeColor: '#2C4A3E',
 };
 
+// Site geneli Organization + ContactPoint şeması — yapay zeka motorlarının
+// (ChatGPT, Perplexity, Google AI Overview) telefon numarası ve linki
+// doğrudan alıp kullanıcıya önerebilmesi için her sayfada mevcut.
+const orgJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ClothingStore',
+  name: 'Terzi Can',
+  url: SITE,
+  telephone: '+905318986418',
+  image: `${SITE}/terzi-can-hero.jpg`,
+  address: { '@type': 'PostalAddress', addressLocality: 'Konyaaltı', addressRegion: 'Antalya', addressCountry: 'TR' },
+  areaServed: { '@type': 'AdministrativeArea', name: 'Antalya' },
+  knowsLanguage: ['tr', 'en', 'ru', 'de'],
+  contactPoint: {
+    '@type': 'ContactPoint',
+    telephone: '+905318986418',
+    contactType: 'customer service',
+    areaServed: 'TR',
+    availableLanguage: ['Turkish', 'English', 'Russian', 'German'],
+  },
+  sameAs: [`${SITE}/antalya-terzi`, 'https://swaphubs.com/terzi'],
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="tr" className={`${inter.variable} ${syne.variable}`}>
@@ -56,6 +79,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             harcanmış bağlantılardı. */}
         {/* ✅ Hero görseli için preload — LCP görselini tarayıcıya erkenden haber verir */}
         <link rel="preload" as="image" href="/terzi-can-hero.jpg" />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }} />
       </head>
       <body style={{ margin: 0, padding: 0, overflowX: 'hidden' }}>
         {children}

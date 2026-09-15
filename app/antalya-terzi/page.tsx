@@ -111,7 +111,7 @@ const jsonLd = {
         'Hurma, Konyaaltı', 'Liman, Konyaaltı', 'Sarısu, Konyaaltı', 'Uncalı, Konyaaltı',
         'Gürsu, Konyaaltı', 'Öğretmenevleri, Konyaaltı', 'Ahatlı, Konyaaltı', 'Toros, Konyaaltı',
         'Konyaaltı', 'Muratpaşa', 'Kepez', 'Döşemealtı', 'Aksu', 'Serik',
-        'Lara', 'Alanya', 'Manavgat', 'Kemer', 'Antalya',
+        'Lara', 'Güzeloba', 'Belek', 'Alanya', 'Manavgat', 'Kemer', 'Side', 'Antalya',
       ].map((n) => ({ '@type': 'Place', name: n })),
       hasOfferCatalog: {
         '@type': 'OfferCatalog',
@@ -160,7 +160,7 @@ const NEIGHBORHOODS: Neighborhood[] = [
 ];
 
 const OTHER_DISTRICTS: string[] = [
-  'Muratpaşa', 'Kepez', 'Döşemealtı', 'Aksu', 'Lara', 'Serik', 'Kemer', 'Alanya', 'Manavgat',
+  'Muratpaşa', 'Kepez', 'Döşemealtı', 'Aksu', 'Lara', 'Güzeloba', 'Serik', 'Belek', 'Kemer', 'Alanya', 'Manavgat', 'Side',
 ];
 
 interface WorkshopService {
@@ -527,6 +527,7 @@ export default function KonyaaltiTailorServicePage() {
           <div>© {new Date().getFullYear()} Terzi Can · Konyaaltı Tailor Service · {PHONE}</div>
           <nav className="foot-links" aria-label="Alt bilgi bağlantıları">
             <a href="/">Ana Sayfa</a>
+            <a href="/otele-gelen-terzi-antalya">Otele Gelen Terzi</a>
             <a href="/en/tailor-service-antalya">English</a>
             <a href="/ru/uslugi-portnogo-antalya">Русский</a>
             <a href="/de/schneiderservice-antalya">Deutsch</a>
@@ -536,7 +537,7 @@ export default function KonyaaltiTailorServicePage() {
           <p style={{ marginTop: '1rem', fontSize: '.68rem', color: 'rgba(255,255,255,.45)', lineHeight: 1.8 }}>
             Konyaaltı Tailor Service — Hurma, Liman, Sarısu, Uncalı, Gürsu, Öğretmenevleri, Ahatlı,
             Toros terzi ve dikiş atölyesi. Bay, bayan, çocuk kıyafeti, üniforma üretimi, fason imalat.
-            Antalya tüm ilçeler. {PHONE}
+            Belek, Lara, Güzeloba, Kemer, Side otel bölgelerine otele gelen terzi servisi. Antalya tüm ilçeler. {PHONE}
           </p>
         </footer>
       </div>

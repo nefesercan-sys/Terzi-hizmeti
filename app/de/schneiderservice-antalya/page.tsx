@@ -316,10 +316,11 @@ export default function SchneiderserviceAntalyaPage() {
             <a href={MAPS} target="_blank" rel="noopener noreferrer">Google Maps</a>
           </nav>
           <nav className="foot-links" aria-label="Hotelzonen">
-            <a href="/de/schneiderservice-antalya-hotels/belek">Schneider in Belek</a>
-            <a href="/de/schneiderservice-antalya-hotels/lara">Schneider in Lara</a>
-            <a href="/de/schneiderservice-antalya-hotels/guzeloba">Schneider in Güzeloba</a>
-            <a href="/de/schneiderservice-antalya-hotels/side">Schneider in Side</a>
+            <a href="/de/schneider-service-hotel-antalya/belek">Schneider Belek Hotel</a>
+            <a href="/de/schneider-service-hotel-antalya/lara">Schneider Lara Hotel</a>
+            <a href="/de/schneider-service-hotel-antalya/guzeloba">Schneider Güzeloba Hotel</a>
+            <a href="/de/schneider-service-hotel-antalya/kemer">Schneider Kemer Hotel</a>
+            <a href="/de/schneider-service-hotel-antalya/side">Schneider Side Hotel</a>
           </nav>
           <p style={{ marginTop: '1rem', fontSize: '.68rem', color: 'rgba(255,255,255,.45)', lineHeight: 1.8 }}>
             Schneiderservice Antalya — Schneiderei, Reparatur, Änderungen und Bügelservice in allen Bezirken

@@ -21,7 +21,8 @@
 - **Mobile / hotel-visiting service:** free visits in Konyaaltı, Muratpaşa, Kepez and Lara;
   scheduled visits to every other Antalya district, including the hotel zones of Belek, Lara,
   Güzeloba, Kemer and Side — the tailor comes to the customer's hotel or home, takes measurements,
-  and delivers the finished garment back within 24–48 hours (same-day often possible)
+  and delivers the finished garment back within 24–48 hours (same-day often possible). Dedicated
+  hotel-zone pages exist in Turkish, English, German and Russian for each of these five districts.
 - **Turnaround:** most repairs and hemming completed same-day or within 24 hours
 
 ## Key Pages
@@ -31,10 +32,13 @@
 - English: https://terzihizmeti.com.tr/en/tailor-service-antalya
 - Russian: https://terzihizmeti.com.tr/ru/uslugi-portnogo-antalya
 - German: https://terzihizmeti.com.tr/de/schneiderservice-antalya
-- Belek hotel zone: /en/tailor-service-antalya-hotels/belek (+ ru/de equivalents)
-- Lara hotel zone: /en/tailor-service-antalya-hotels/lara (+ ru/de equivalents)
-- Güzeloba hotel zone: /en/tailor-service-antalya-hotels/guzeloba (+ ru/de equivalents)
-- Side hotel zone: /en/tailor-service-antalya-hotels/side (+ ru/de equivalents)
+- Belek hotel zone: /en/hotel-tailor-antalya/belek · /de/schneider-service-hotel-antalya/belek · /ru/vyezdnoy-portnoy-antalya/belek · /otele-gelen-terzi-antalya/belek (TR)
+- Lara hotel zone: /en/hotel-tailor-antalya/lara (+ de/ru/tr equivalents, same pattern)
+- Güzeloba hotel zone: /en/hotel-tailor-antalya/guzeloba (+ de/ru/tr equivalents)
+- Kemer hotel zone: /en/hotel-tailor-antalya/kemer (+ de/ru/tr equivalents)
+- Side hotel zone: /en/hotel-tailor-antalya/side (+ de/ru/tr equivalents)
+- All hotel zones hub: /otele-gelen-terzi-antalya (TR) · /en/hotel-tailor-antalya (EN) ·
+  /de/schneider-service-hotel-antalya (DE) · /ru/vyezdnoy-portnoy-antalya (RU)
 - Neighborhood pages: /hurma-terzi, /liman-terzi, /sarisu-terzi, /uncali-terzi, /gursu-terzi
 - Specific services: /konyaalti-paca-kisaltma (hemming), /konyaalti-fermuar-tamiri (zipper repair),
   /antalya-gelinlik-tadilati (wedding dress alterations), /antalya-uniforma-imalati (uniform manufacturing)

@@ -154,7 +154,7 @@ const jsonLd = {
         'Liman, Konyaaltı', 'Hurma, Konyaaltı', 'Sarısu, Konyaaltı',
         'Gürsu, Konyaaltı', 'Uncalı, Konyaaltı',
         'Konyaaltı', 'Muratpaşa', 'Kepez', 'Antalya',
-        'Lara', 'Belek', 'Kemer', 'Alanya', 'Manavgat',
+        'Lara', 'Güzeloba', 'Belek', 'Kemer', 'Side', 'Alanya', 'Manavgat',
       ].map(n => ({ '@type': 'Place', name: n })),
       contactPoint: [{
         '@type': 'ContactPoint',
@@ -642,6 +642,15 @@ export default function TerziHizmetiPage() {
             <a href="/sarisu-terzi">Sarısu Terzi</a>
             <a href="/uncali-terzi">Uncalı Terzi</a>
             <a href="/gursu-terzi">Gürsu Terzi</a>
+          </nav>
+
+          <nav className="foot-links" aria-label="Otel bölgeleri">
+            <a href="/otele-gelen-terzi-antalya">Otele Gelen Terzi</a>
+            <a href="/otele-gelen-terzi-antalya/belek">Belek</a>
+            <a href="/otele-gelen-terzi-antalya/lara">Lara</a>
+            <a href="/otele-gelen-terzi-antalya/guzeloba">Güzeloba</a>
+            <a href="/otele-gelen-terzi-antalya/kemer">Kemer</a>
+            <a href="/otele-gelen-terzi-antalya/side">Side</a>
           </nav>
 
           <nav className="foot-links" aria-label="Hizmet sayfaları">

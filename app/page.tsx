@@ -268,15 +268,20 @@ const C = {
   white:   '#FFFFFF',
 };
 
+// NOT: img alanlarındaki görseller, swaphubs.com/terzi sayfasında da kullanılan
+// aynı ücretsiz, ticari kullanıma uygun Pexels stok fotoğraflarıdır (tutarlılık
+// için aynı seçki kullanıldı). Gerçek atölye ve iş fotoğrafları çekildiğinde
+// bu URL'lerin kendi görsellerinizle değiştirilmesi hem daha özgün hem de
+// Google Business Profil'inizdeki görsellerle tutarlı olur.
 const SERVICES = [
-  { n:'01', title:'Paça Kısaltma', sub:'Pantolon · Etek · Kot', desc:'Erkek ve bayan pantolon, etek, kot paça kısaltma — temiz, görünmez dikiş.', price:'₺150+', time:'Aynı gün', wa:'Merhaba, paça kısaltma hakkında bilgi almak istiyorum.' },
-  { n:'02', title:'Fermuar Değişimi', sub:'Pantolon · Mont · Ceket · Çanta', desc:'Pantolon, mont, ceket, sweatshirt ve çanta fermuar değişimi, sıkışan fermuar tamiri.', price:'₺200+', time:'Aynı gün', wa:'Merhaba, fermuar değişimi yaptırmak istiyorum.' },
-  { n:'03', title:'Bel Daraltma', sub:'Elbise · Pantolon · Ceket', desc:'Elbise, pantolon ve ceketlerde bel daraltma, vücuda tam oturan ölçü ayarı.', price:'₺150+', time:'24 saat', wa:'Merhaba, bel daraltma hakkında bilgi almak istiyorum.' },
-  { n:'04', title:'Elbise Dikimi', sub:'Kadın · Erkek · Çocuk', desc:'Kadın elbisesi, erkek takım elbise, gömlek — ölçünüze özel sıfırdan dikim.', price:'₺600+', time:'3–7 gün', wa:'Merhaba, özel elbise dikimi hakkında bilgi almak istiyorum.' },
-  { n:'05', title:'Gelinlik & Abiye Tadilatı', sub:'Özel Gün Kıyafetleri', desc:'Özel gün kıyafetlerinde hassas daraltma, boy ayarı ve detaylı onarım.', price:'₺400+', time:'24–48 saat', wa:'Merhaba, gelinlik veya abiye tadilatı yaptırmak istiyorum.' },
-  { n:'06', title:'Kuru Temizleme & Ütü', sub:'Profesyonel Bakım', desc:'Profesyonel kuru temizleme, buharlı ütü ve pres hizmeti. Otellerden alım.', price:'₺80+', time:'2–48 saat', wa:'Merhaba, kuru temizleme veya ütü hizmeti almak istiyorum.' },
-  { n:'07', title:'Eve Gelen Terzi', sub:'Hurma · Liman · Sarısu Ücretsiz', desc:'Araçlı terzi servisi: adresinizde ölçü alma, dikip 24 saatte teslim.', price:'Ücretsiz', time:'24 saat', wa:'Merhaba, adresime terzi servisi almak istiyorum.' },
-  { n:'08', title:'Üniforma & Seri İmalat', sub:'Otel · Restoran · Okul · Güvenlik', desc:'Toplu üniforma üretimi, fason tekstil, seri imalat ve nakış hizmeti.', price:'Teklif Al', time:'Proje bazlı', wa:'Merhaba, üniforma veya seri imalat hakkında bilgi almak istiyorum.' },
+  { n:'01', title:'Paça Kısaltma', sub:'Pantolon · Etek · Kot', desc:'Erkek ve bayan pantolon, etek, kot paça kısaltma — temiz, görünmez dikiş.', price:'₺150+', time:'Aynı gün', wa:'Merhaba, paça kısaltma hakkında bilgi almak istiyorum.', img:'https://images.pexels.com/photos/6765056/pexels-photo-6765056.jpeg?auto=compress&cs=tinysrgb&w=800&h=533&fit=crop' },
+  { n:'02', title:'Fermuar Değişimi', sub:'Pantolon · Mont · Ceket · Çanta', desc:'Pantolon, mont, ceket, sweatshirt ve çanta fermuar değişimi, sıkışan fermuar tamiri.', price:'₺200+', time:'Aynı gün', wa:'Merhaba, fermuar değişimi yaptırmak istiyorum.', img:'https://images.pexels.com/photos/33952439/pexels-photo-33952439.jpeg?auto=compress&cs=tinysrgb&w=800&h=533&fit=crop' },
+  { n:'03', title:'Bel Daraltma', sub:'Elbise · Pantolon · Ceket', desc:'Elbise, pantolon ve ceketlerde bel daraltma, vücuda tam oturan ölçü ayarı.', price:'₺150+', time:'24 saat', wa:'Merhaba, bel daraltma hakkında bilgi almak istiyorum.', img:'https://images.pexels.com/photos/18022030/pexels-photo-18022030.jpeg?auto=compress&cs=tinysrgb&w=800&h=533&fit=crop' },
+  { n:'04', title:'Elbise Dikimi', sub:'Kadın · Erkek · Çocuk', desc:'Kadın elbisesi, erkek takım elbise, gömlek — ölçünüze özel sıfırdan dikim.', price:'₺600+', time:'3–7 gün', wa:'Merhaba, özel elbise dikimi hakkında bilgi almak istiyorum.', img:'https://images.pexels.com/photos/31112215/pexels-photo-31112215.jpeg?auto=compress&cs=tinysrgb&w=800&h=533&fit=crop' },
+  { n:'05', title:'Gelinlik & Abiye Tadilatı', sub:'Özel Gün Kıyafetleri', desc:'Özel gün kıyafetlerinde hassas daraltma, boy ayarı ve detaylı onarım.', price:'₺400+', time:'24–48 saat', wa:'Merhaba, gelinlik veya abiye tadilatı yaptırmak istiyorum.', img:'https://images.pexels.com/photos/8459366/pexels-photo-8459366.jpeg?auto=compress&cs=tinysrgb&w=800&h=533&fit=crop' },
+  { n:'06', title:'Kuru Temizleme & Ütü', sub:'Profesyonel Bakım', desc:'Profesyonel kuru temizleme, buharlı ütü ve pres hizmeti. Otellerden alım.', price:'₺80+', time:'2–48 saat', wa:'Merhaba, kuru temizleme veya ütü hizmeti almak istiyorum.', img:'https://images.pexels.com/photos/5202797/pexels-photo-5202797.jpeg?auto=compress&cs=tinysrgb&w=800&h=533&fit=crop' },
+  { n:'07', title:'Eve Gelen Terzi', sub:'Hurma · Liman · Sarısu Ücretsiz', desc:'Araçlı terzi servisi: adresinizde ölçü alma, dikip 24 saatte teslim.', price:'Ücretsiz', time:'24 saat', wa:'Merhaba, adresime terzi servisi almak istiyorum.', img:'https://images.pexels.com/photos/6765658/pexels-photo-6765658.jpeg?auto=compress&cs=tinysrgb&w=800&h=533&fit=crop' },
+  { n:'08', title:'Üniforma & Seri İmalat', sub:'Otel · Restoran · Okul · Güvenlik', desc:'Toplu üniforma üretimi, fason tekstil, seri imalat ve nakış hizmeti.', price:'Teklif Al', time:'Proje bazlı', wa:'Merhaba, üniforma veya seri imalat hakkında bilgi almak istiyorum.', img:'https://images.pexels.com/photos/5378708/pexels-photo-5378708.jpeg?auto=compress&cs=tinysrgb&w=800&h=533&fit=crop' },
 ];
 
 const DISTRICTS = [
@@ -353,11 +358,16 @@ export default function TerziHizmetiPage() {
 
           /* SERVICES */
           .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1px;background:rgba(255,255,255,.05)}
-          .svc-card{background:#F2EDE5;padding:1.8rem;transition:background .2s;position:relative;overflow:hidden}
+          .svc-card{background:#F2EDE5;transition:background .2s;position:relative;overflow:hidden;display:flex;flex-direction:column}
           .svc-card:hover{background:#EDE6DA}
-          .svc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#2C4A3E,#C9A96E);transform:scaleX(0);transform-origin:left;transition:transform .35s}
+          .svc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#2C4A3E,#C9A96E);transform:scaleX(0);transform-origin:left;transition:transform .35s;z-index:2}
           .svc-card:hover::before{transform:scaleX(1)}
-          .svc-n{font-family:'Syne',sans-serif;font-size:2.5rem;font-weight:800;color:rgba(44,74,62,.08);line-height:1;margin-bottom:.5rem}
+          .svc-img-wrap{position:relative;width:100%;aspect-ratio:3/2;overflow:hidden;background:#E4DCCC}
+          .svc-img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+          .svc-card:hover .svc-img{transform:scale(1.05)}
+          .svc-img-wrap::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,26,26,0) 55%,rgba(26,26,26,.55) 100%)}
+          .svc-n-onimg{position:absolute;bottom:.6rem;left:.9rem;font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:800;color:rgba(255,255,255,.9);line-height:1;text-shadow:0 1px 6px rgba(0,0,0,.35);z-index:1}
+          .svc-body{padding:1.5rem 1.8rem 1.8rem}
           .svc-title{font-size:1.05rem;font-weight:700;color:#1A1A1A;margin-bottom:.2rem}
           .svc-sub{font-size:.7rem;color:#2C4A3E;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.7rem}
           .svc-desc{font-size:.83rem;color:#6B7057;line-height:1.65;margin-bottom:1.2rem}
@@ -366,6 +376,12 @@ export default function TerziHizmetiPage() {
           .svc-time{font-size:.68rem;color:#8FA88C;font-weight:600}
           .svc-btn{display:inline-block;font-size:.72rem;font-weight:700;color:#2C4A3E;border:1px solid rgba(44,74,62,.25);padding:.4rem 1rem;border-radius:2px;margin-top:.9rem;transition:all .2s}
           .svc-btn:hover{background:rgba(44,74,62,.08);border-color:#2C4A3E}
+
+          /* GALLERY */
+          .gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+          .gallery-item{border-radius:6px;overflow:hidden;aspect-ratio:3/2;box-shadow:0 4px 18px rgba(28,24,20,.08)}
+          .gallery-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+          .gallery-item:hover img{transform:scale(1.04)}
 
           /* DISTRICTS */
           .dist-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
@@ -531,19 +547,55 @@ export default function TerziHizmetiPage() {
           <div className="svc-grid">
             {SERVICES.map(s=>(
               <div className="svc-card" key={s.n}>
-                <div className="svc-n">{s.n}</div>
-                <h3 className="svc-title">{s.title}</h3>
-                <div className="svc-sub">{s.sub}</div>
-                <p className="svc-desc">{s.desc}</p>
-                <div className="svc-foot">
-                  <span className="svc-price">{s.price}</span>
-                  <span className="svc-time">⏱ {s.time}</span>
+                <div className="svc-img-wrap">
+                  <img
+                    src={s.img}
+                    alt={`${s.title} — Antalya Konyaaltı Terzi Can profesyonel terzi hizmeti`}
+                    className="svc-img"
+                    loading="lazy"
+                    width={800}
+                    height={533}
+                  />
+                  <div className="svc-n svc-n-onimg">{s.n}</div>
                 </div>
-                <a href={WA(s.wa)} target="_blank" rel="noopener noreferrer" className="svc-btn">
-                  Sipariş Ver →
-                </a>
+                <div className="svc-body">
+                  <h3 className="svc-title">{s.title}</h3>
+                  <div className="svc-sub">{s.sub}</div>
+                  <p className="svc-desc">{s.desc}</p>
+                  <div className="svc-foot">
+                    <span className="svc-price">{s.price}</span>
+                    <span className="svc-time">⏱ {s.time}</span>
+                  </div>
+                  <a href={WA(s.wa)} target="_blank" rel="noopener noreferrer" className="svc-btn">
+                    Sipariş Ver →
+                  </a>
+                </div>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* ATÖLYEDEN KARELER — görsel güven bölümü */}
+        <section className="sec" style={{background:C.bg2,paddingTop:'3.5rem',paddingBottom:'3.5rem'}} aria-labelledby="gallery-h">
+          <div className="ctr">
+            <div className="sec-head" style={{marginBottom:'1.8rem'}}>
+              <span className="eyebrow">ATÖLYEMİZ</span>
+              <h2 className="sec-h ff" id="gallery-h" style={{fontSize:'clamp(1.5rem,3.2vw,2.1rem)'}}>Dikimden Teslime, İşin İçindeyiz</h2>
+              <p className="sec-sub">
+                Konyaaltı'daki atölyemizde her parça özenle ölçülür, dikilir ve kontrol edilerek teslim edilir.
+              </p>
+            </div>
+            <div className="gallery-grid">
+              {[
+                { img:'https://images.pexels.com/photos/6765056/pexels-photo-6765056.jpeg?auto=compress&cs=tinysrgb&w=700&h=467&fit=crop', alt:'Terzi müşteriye ölçü alıyor — Terzi Can Antalya Konyaaltı' },
+                { img:'https://images.pexels.com/photos/18022030/pexels-photo-18022030.jpeg?auto=compress&cs=tinysrgb&w=700&h=467&fit=crop', alt:'Kadın terzi dikiş makinesinde elbise dikiyor — Terzi Can Konyaaltı Antalya' },
+                { img:'https://images.pexels.com/photos/31112215/pexels-photo-31112215.jpeg?auto=compress&cs=tinysrgb&w=700&h=467&fit=crop', alt:'Tekstil imalat atölyesinde seri dikim — Terzi Can Antalya' },
+              ].map((g,i)=>(
+                <div className="gallery-item" key={i}>
+                  <img src={g.img} alt={g.alt} loading="lazy" width={700} height={467} />
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 

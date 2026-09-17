@@ -711,6 +711,7 @@ export default function TerziHizmetiPage() {
             <a href="/konyaalti-fermuar-tamiri">Fermuar Tamiri</a>
             <a href="/antalya-gelinlik-tadilati">Gelinlik Tadilatı</a>
             <a href="/antalya-uniforma-imalati">Üniforma İmalatı</a>
+            <a href="/anavera-tekstil">Anavera Tekstil — Tekstil İhracatı</a>
             <a href="/blog">Blog</a>
           </nav>
 

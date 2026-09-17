@@ -11,6 +11,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Antalya geneli hizmet sayfası
     { url: `${SITE}/antalya-terzi`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.9 },
 
+    // ✅ YENİ (2026-09) — Anavera Tekstil: B2B tekstil tasarım/üretim/ihracat
+    // markası (AB ve Rusya kurumsal alıcılar hedefli), terzihizmeti.com.tr
+    // altında ayrı bir bölüm olarak yayınlanıyor.
+    { url: `${SITE}/anavera-tekstil`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.85 },
+
     // ✅ Mahalle sayfaları
     { url: `${SITE}/hurma-terzi`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.92 },
     { url: `${SITE}/liman-terzi`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.92 },

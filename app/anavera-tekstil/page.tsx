@@ -25,12 +25,15 @@ export const metadata: Metadata = {
     'Turkish textile manufacturer', 'textile manufacturer Turkey', 'clothing manufacturer Turkey',
     'garment factory Turkey', 'textile exporter Turkey', 'uniform manufacturer Turkey',
     'knit fabric manufacturer', 'woven fabric manufacturer', 'private label clothing Turkey',
+    '100% cotton clothing manufacturer', 'natural linen clothing manufacturer Turkey',
+    'organic cotton garment manufacturer', 'linen menswear manufacturer', 'linen womenswear manufacturer',
     'OEM clothing manufacturer', 'wholesale clothing supplier Turkey', 'workwear manufacturer Turkey',
     'clothing manufacturer for Europe', 'textile supplier Russia', 'apparel sourcing Turkey',
     // Türkçe — yerli arama (fabrika/atölye arayanlar)
     'tekstil üretim fabrikası', 'tekstil atölyesi', 'giyim üretim fabrikası Türkiye',
     'konfeksiyon üretimi', 'toptan giyim üreticisi', 'üniforma üretici firma',
     'fason tekstil imalatı', 'ihracat tekstil firması', 'penye kumaş üretici', 'dokuma kumaş üretici',
+    '%100 pamuklu giyim üretici', 'doğal keten giyim üretici', 'keten bay bayan giyim imalatı',
     "Avrupa'ya tekstil ihracatı", "Rusya'ya tekstil ihracatı",
     // Русский — Россия
     'текстильная фабрика Турция', 'производство одежды Турция', 'пошив одежды на заказ Турция',
@@ -69,12 +72,22 @@ const jsonLd = {
         { '@type': 'Country', name: 'Italy' },
         { '@type': 'Country', name: 'Netherlands' },
       ],
-      makesOffer: [
-        { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Menswear — Knit & Woven', category: "Men's Clothing Manufacturing" } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Womenswear — Knit & Woven', category: "Women's Clothing Manufacturing" } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Kidswear — Knit & Woven', category: "Children's Clothing Manufacturing" } },
-        { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Corporate & Institutional Uniforms', category: 'Uniform Manufacturing' } },
-      ],
+      // DÜZELTME (2026-09): 'Product' tipi Google'ın zengin sonuç doğrulamasında
+      // offers/review/aggregateRating alanlarını zorunlu kılıyor — ama bunlar
+      // sabit fiyatlı perakende ürünleri değil, teklif bazlı B2B üretim
+      // hizmetleri. 'Service' tipine geçilerek bu geçersiz-öğe hatası çözüldü
+      // ve şema artık işin gerçek doğasını (talebe göre fiyatlandırılan
+      // üretim hizmeti) daha doğru yansıtıyor.
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: 'Textile Manufacturing Categories',
+        itemListElement: [
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Menswear Manufacturing — Knit & Woven', serviceType: "Men's Clothing Manufacturing" } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Womenswear Manufacturing — Knit & Woven', serviceType: "Women's Clothing Manufacturing" } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Kidswear Manufacturing — Knit & Woven', serviceType: "Children's Clothing Manufacturing" } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Corporate & Institutional Uniform Manufacturing', serviceType: 'Uniform Manufacturing' } },
+        ],
+      },
       sameAs: [`https://wa.me/${PHONE_E}`],
     },
     {
@@ -297,6 +310,59 @@ export default function AnaveraTekstilPage() {
                 </p>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* %100 DOĞAL PAMUK & KETEN — yeni bölüm, gerçek/lisanslı görsellerle */}
+        <section style={{ padding: '4.5rem 1.5rem', background: BG2 }} aria-labelledby="natural-h">
+          <div style={{ maxWidth: 1000, margin: '0 auto' }}>
+            <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
+              <span style={{ fontSize: '.65rem', letterSpacing: '.3em', textTransform: 'uppercase', color: GOLD, fontWeight: 700 }}>Natural Fibers</span>
+              <h2 id="natural-h" style={{ fontFamily: SERIF, fontSize: 'clamp(1.6rem,3.5vw,2.3rem)', color: NAVY, margin: '.8rem 0 .6rem' }}>
+                100% Natural Cotton &amp; Linen
+              </h2>
+              <p style={{ color: MUTE, fontSize: '.9rem', maxWidth: 620, margin: '0 auto' }}>
+                Menswear and womenswear produced from 100% natural cotton and linen fabric — breathable,
+                durable, and free of synthetic blends. A dedicated natural-fiber line alongside our standard
+                knit and woven categories, popular with EU and Russian buyers seeking sustainable, premium
+                fabric options.
+              </p>
+            </div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(260px,1fr))', gap: 2, background: 'rgba(15,31,61,.08)' }}>
+              <div style={{ background: '#fff' }}>
+                <div style={{ aspectRatio: '4/3', overflow: 'hidden' }}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="https://images.pexels.com/photos/17630522/pexels-photo-17630522.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+                    alt="100% natural cotton menswear — Anavera Tekstil Turkey"
+                    width={800} height={600} loading="lazy"
+                    style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                  />
+                </div>
+                <div style={{ padding: '1.3rem 1.4rem' }}>
+                  <h3 style={{ fontFamily: SERIF, fontSize: '1.05rem', color: NAVY, fontWeight: 700, marginBottom: '.4rem' }}>Menswear — Cotton &amp; Linen</h3>
+                  <p style={{ fontSize: '.82rem', color: MUTE, lineHeight: 1.7 }}>Shirts, t-shirts and summer wear cut from pure cotton and linen fabric.</p>
+                </div>
+              </div>
+              <div style={{ background: '#fff' }}>
+                <div style={{ aspectRatio: '4/3', overflow: 'hidden' }}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="https://images.pexels.com/photos/4256573/pexels-photo-4256573.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
+                    alt="100% natural linen womenswear — Anavera Tekstil Turkey"
+                    width={800} height={600} loading="lazy"
+                    style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                  />
+                </div>
+                <div style={{ padding: '1.3rem 1.4rem' }}>
+                  <h3 style={{ fontFamily: SERIF, fontSize: '1.05rem', color: NAVY, fontWeight: 700, marginBottom: '.4rem' }}>Womenswear — Cotton &amp; Linen</h3>
+                  <p style={{ fontSize: '.82rem', color: MUTE, lineHeight: 1.7 }}>Dresses and summer pieces made from natural linen fabric with fine detailing.</p>
+                </div>
+              </div>
+            </div>
+            <p style={{ fontSize: '.72rem', color: MUTE, marginTop: '1.3rem', textAlign: 'center', fontStyle: 'italic' }}>
+              * Representative fabric/style examples — send your own reference photos or fabric swatches via WhatsApp for a precise quote.
+            </p>
           </div>
         </section>
 

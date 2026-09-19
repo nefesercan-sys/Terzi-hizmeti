@@ -12,8 +12,9 @@ export async function generateStaticParams() {
   return OTEL_BOLGELERI.map((r) => ({ region: r.slug }));
 }
 
-export async function generateMetadata({ params }: { params: { region: string } }): Promise<Metadata> {
-  const r = bulOtelBolgesi(params.region);
+export async function generateMetadata({ params }: { params: Promise<{ region: string }> }): Promise<Metadata> {
+  const { region } = await params;
+  const r = bulOtelBolgesi(region);
   if (!r) return {};
   const url = `${SITE}${BASE_PATH}/${r.slug}`;
   const title = `Schneider im Hotel ${r.name} Antalya — Mobiler Schneider | Terzi Can`;
@@ -37,8 +38,9 @@ export async function generateMetadata({ params }: { params: { region: string } 
   };
 }
 
-export default function OtelBolgeDePage({ params }: { params: { region: string } }) {
-  const r = bulOtelBolgesi(params.region);
+export default async function OtelBolgeDePage({ params }: { params: Promise<{ region: string }> }) {
+  const { region } = await params;
+  const r = bulOtelBolgesi(region);
   if (!r) notFound();
 
   const url = `${SITE}${BASE_PATH}/${r.slug}`;

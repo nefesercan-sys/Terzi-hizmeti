@@ -7,75 +7,105 @@ const WA = (m: string) => `https://wa.me/${WA_NUM}?text=${encodeURIComponent(m)}
 type Lang = 'tr' | 'en' | 'ru' | 'de';
 
 // ─── MODEL GALERİSİ — gerçek kumaş/stil referans görselleri (Unsplash) ───────
+// ─── MODEL GALERİSİ — Gerçek Keten & Pamuk Doku Görselleri ───────
 const MODELLER = [
   {
     id: 'kadin-elbise',
-    img: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=700&q=80',
-    baslik: { tr: 'Kadın Keten Maxi Elbise', en: "Women's Linen Maxi Dress", ru: 'Женское льняное макси-платье', de: 'Damen Leinen-Maxikleid' },
+    img: 'https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=800&q=80',
+    baslik: { 
+      tr: 'Kadın Keten Maxi Elbise', 
+      en: "Women's Linen Maxi Dress", 
+      ru: 'Женское льняное макси-платье', 
+      de: 'Damen Leinen-Maxikleid' 
+    },
     aciklama: {
-      tr: 'Geniş kesim, bağcıklı bel — sahil ve şehir için serin, doğal keten.',
-      en: 'Relaxed fit, tie waist — cool, natural linen for beach or city wear.',
-      ru: 'Свободный крой, пояс на завязках — прохладный натуральный лён для пляжа и города.',
-      de: 'Lockere Passform, Bindegürtel — kühles, natürliches Leinen für Strand und Stadt.',
+      tr: 'Doğal bej keten kumaş, nefes alan rahat kesim — yaz günleri için ideal şıklık.',
+      en: 'Natural beige linen fabric, breathable relaxed fit — ideal elegance for summer days.',
+      ru: 'Натуральный бежевый лён, дышащий свободный крой — идеальная элегантность для лета.',
+      de: 'Natürlicher beigefarbener Leinenstoff, atmungsaktive lockere Passform — ideale Sommer-Eleganz.',
     },
   },
   {
-    id: 'kadin-bluz',
-    img: 'https://images.unsplash.com/photo-1603344204980-4edb0ea63148?w=700&q=80',
-    baslik: { tr: 'Kadın Pamuk Oversize Gömlek', en: "Women's Oversized Cotton Shirt", ru: 'Женская оверсайз рубашка из хлопка', de: 'Damen Oversize Baumwollhemd' },
+    id: 'kadin-gomlek',
+    img: 'https://images.unsplash.com/photo-1598554747436-c9293d6a588f?w=800&q=80',
+    baslik: { 
+      tr: 'Kadın Pamuk-Keten Oversize Gömlek', 
+      en: "Women's Cotton-Linen Oversized Shirt", 
+      ru: 'Женская оверсайз рубашка из хлопка и льна', 
+      de: 'Damen Oversize-Hemd aus Baumwolle und Leinen' 
+    },
     aciklama: {
-      tr: '%100 organik pamuk, oversize kesim — gündelik ve iş için.',
-      en: '100% organic cotton, oversized cut — for everyday and work.',
-      ru: '100% органический хлопок, свободный крой — на каждый день и для работы.',
-      de: '100% Bio-Baumwolle, Oversize-Schnitt — für Alltag und Büro.',
+      tr: '%100 organik pamuk ve keten dokuma, dökümlü ve ferah kullanım.',
+      en: '100% organic cotton and linen weave, flowing and comfortable wear.',
+      ru: '100% органический хлопок и льняное переплетение, свободный и легкий фасон.',
+      de: '100% Bio-Baumwolle und Leinenwebe, fließender und komfortabler Sitz.',
     },
   },
   {
     id: 'erkek-gomlek',
-    img: 'https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=700&q=80',
-    baslik: { tr: 'Erkek Keten Yazlık Gömlek', en: "Men's Linen Summer Shirt", ru: 'Мужская летняя льняная рубашка', de: 'Herren Leinen-Sommerhemd' },
+    img: 'https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?w=800&q=80',
+    baslik: { 
+      tr: 'Erkek Keten Yazlık Gömlek', 
+      en: "Men's Linen Summer Shirt", 
+      ru: 'Мужская летняя льняная рубашка', 
+      de: 'Herren Leinen-Sommerhemd' 
+    },
     aciklama: {
-      tr: 'Hafif dokulu, nefes alan keten — sıcak günlerde terletmez.',
-      en: 'Lightweight, breathable linen — stays cool on hot days.',
-      ru: 'Лёгкий, дышащий лён — не жарко даже в самые тёплые дни.',
-      de: 'Leichtes, atmungsaktives Leinen — bleibt auch an heißen Tagen kühl.',
+      tr: 'Hakiki keten dokusu, hakim veya klasik yaka — sıcak havalarda maksimum serinlik.',
+      en: 'Genuine linen texture, mandarin or classic collar — maximum coolness in hot weather.',
+      ru: 'Фактурный натуральный лён, воротник-стойка или классика — максимум прохлады в жару.',
+      de: 'Echte Leinenstruktur, Steh- oder Klassikkragen — maximale Kühlung bei hot Wetter.',
     },
   },
   {
     id: 'erkek-takim',
-    img: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=700&q=80',
-    baslik: { tr: 'Erkek Keten-Pamuk Takım', en: "Men's Linen-Cotton Suit", ru: 'Мужской костюм лён-хлопок', de: 'Herren Leinen-Baumwoll-Anzug' },
+    img: 'https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?w=800&q=80',
+    baslik: { 
+      tr: 'Erkek Keten Blazer & Pantolon', 
+      en: "Men's Linen Blazer & Trousers", 
+      ru: 'Мужской льняной блейзер и брюки', 
+      de: 'Herren Leinen-Sakko & Hose' 
+    },
     aciklama: {
-      tr: 'Hafif blazer + pantolon — düğün ve özel günler için doğal şıklık.',
-      en: 'Light blazer + trousers — natural elegance for weddings and special days.',
-      ru: 'Лёгкий блейзер + брюки — естественная элегантность для свадеб и особых случаев.',
-      de: 'Leichtes Sakko + Hose — natürliche Eleganz für Hochzeiten und besondere Anlässe.',
+      tr: 'Astarsız hafif ceket ve dökümlü keten pantolon kombini — yaz düğünleri ve davetler için.',
+      en: 'Unlined light blazer and draped linen trousers — for summer weddings and events.',
+      ru: 'Лёгкий пиджак без подкладки и льняные брюки — для летних свадеб и мероприятий.',
+      de: 'Ungefüttertes leichtes Sakko und fließende Leinenhose — für Sommerhochzeiten und Events.',
     },
   },
   {
     id: 'plaj-kaftan',
-    img: 'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?w=700&q=80',
-    baslik: { tr: 'Plaj Kaftanı / Kimono', en: 'Beach Kaftan / Kimono', ru: 'Пляжное кафтан / кимоно', de: 'Strandkaftan / Kimono' },
+    img: 'https://images.unsplash.com/photo-1502716119720-b23a93e5fe1b?w=800&q=80',
+    baslik: { 
+      tr: 'Plaj Kaftanı / Keten Kimono', 
+      en: 'Beach Kaftan / Linen Kimono', 
+      ru: 'Пляжное кафтан / льняное кимоно', 
+      de: 'Strandkaftan / Leinen-Kimono' 
+    },
     aciklama: {
-      tr: 'Açık kesim keten kimono — plaj üstü veya akşam için hafif bir katman.',
-      en: 'Open-cut linen kimono — a light layer for the beach or evening.',
-      ru: 'Свободного кроя льняное кимоно — лёгкий слой для пляжа или вечера.',
-      de: 'Offen geschnittener Leinen-Kimono — leichte Schicht für Strand oder Abend.',
+      tr: 'Hafif ve doğal keten kumaştan plaj üstü kimono — sahil ve otel kullanımı için ideal.',
+      en: 'Lightweight natural linen beach kimono — ideal for beach and resort wear.',
+      ru: 'Лёгкое кимоно из натурального льна — идеально для пляжа и отдыха у бассейна.',
+      de: 'Leichter Strandkimono aus natürlichem Leinen — ideal für Strand und Hotel resort.',
     },
   },
   {
     id: 'kadin-pantolon',
-    img: 'https://images.unsplash.com/photo-1509631179647-0177331693ae?w=700&q=80',
-    baslik: { tr: 'Kadın Keten Wide-Leg Pantolon', en: "Women's Wide-Leg Linen Trousers", ru: 'Женские широкие льняные брюки', de: 'Damen Leinen-Weitbeinhose' },
+    img: 'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=800&q=80',
+    baslik: { 
+      tr: 'Kadın Keten Wide-Leg Pantolon', 
+      en: "Women's Wide-Leg Linen Trousers", 
+      ru: 'Женские широкие льняные брюки', 
+      de: 'Damen Leinen-Weitbeinhose' 
+    },
     aciklama: {
-      tr: 'Yüksek bel, bol paça — ofisten sahile her ortama uyar.',
-      en: 'High waist, wide leg — fits every setting, from office to beach.',
-      ru: 'Высокая посадка, широкие штанины — подходят от офиса до пляжа.',
-      de: 'Hohe Taille, weites Bein — passt vom Büro bis zum Strand.',
+      tr: 'Yüksek bel, bol paça doğal keten pantolon — hem gündelik hem şık kombinler için.',
+      en: 'High-waisted, wide-leg natural linen trousers — for both casual and stylish looks.',
+      ru: 'Широкие льняные брюки с высокой посадкой — для повседневных и элегантных образов.',
+      de: 'High-Waist Weitbeinhose aus Naturleinen — für lässige und elegante Kombinationen.',
     },
   },
 ];
-
 const T: Record<Lang, any> = {
   tr: {
     tag: '🧵 Özel Dikim · %100 Keten & Pamuk',

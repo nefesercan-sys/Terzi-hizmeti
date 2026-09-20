@@ -8,101 +8,103 @@ type Lang = 'tr' | 'en' | 'ru' | 'de';
 
 // ─── MODEL GALERİSİ — gerçek kumaş/stil referans görselleri (Unsplash) ───────
 // ─── MODEL GALERİSİ — Gerçek Keten & Pamuk Doku Görselleri ───────
+// ─── MODEL GALERİSİ — %100 Keten, Pamuk ve Müslin Kumaş Modelleri ───────
+// ─── MODEL GALERİSİ — %100 Keten, Pamuk ve Müslin Kumaş Modelleri ───────
 const MODELLER = [
   {
-    id: 'kadin-elbise',
+    id: 'kadin-keten-elbise',
     img: 'https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=800&q=80',
     baslik: { 
-      tr: 'Kadın Keten Maxi Elbise', 
-      en: "Women's Linen Maxi Dress", 
-      ru: 'Женское льняное макси-платье', 
-      de: 'Damen Leinen-Maxikleid' 
+      tr: 'Kadın %100 Keten Uzun Maxi Elbise', 
+      en: "Women's 100% Linen Long Maxi Dress", 
+      ru: 'Женское льняное макси-платье 100%', 
+      de: 'Damen 100% Leinen Maxi-Kleid' 
     },
     aciklama: {
-      tr: 'Doğal bej keten kumaş, nefes alan rahat kesim — yaz günleri için ideal şıklık.',
-      en: 'Natural beige linen fabric, breathable relaxed fit — ideal elegance for summer days.',
-      ru: 'Натуральный бежевый лён, дышащий свободный крой — идеальная элегантность для лета.',
-      de: 'Natürlicher beigefarbener Leinenstoff, atmungsaktive lockere Passform — ideale Sommer-Eleganz.',
+      tr: 'Doğal bej ve ekru ketenden dökümlü, nefes alan uzun boy elbise. Sıcak havalarda maksimum rahatlık.',
+      en: 'Flowy, breathable long dress made of natural beige and off-white linen. Maximum comfort for hot weather.',
+      ru: 'Длинное дышащее платье из натурального бежевого льна. Максимальный комфорт в жару.',
+      de: 'Fließendes, atmungsaktives langes Kleid aus natürlichem Leinen. Maximaler Komfort für heiße Tage.',
     },
   },
   {
-    id: 'kadin-gomlek',
-    img: 'https://images.unsplash.com/photo-1598554747436-c9293d6a588f?w=800&q=80',
+    id: 'erkek-keten-takim',
+    img: 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=800&q=80',
     baslik: { 
-      tr: 'Kadın Pamuk-Keten Oversize Gömlek', 
-      en: "Women's Cotton-Linen Oversized Shirt", 
-      ru: 'Женская оверсайз рубашка из хлопка и льна', 
-      de: 'Damen Oversize-Hemd aus Baumwolle und Leinen' 
+      tr: 'Erkek Keten Gömlek & Pantolon Seti', 
+      en: "Men's Linen Shirt & Trousers Set", 
+      ru: 'Мужской комплект: льняная рубашка и брюки', 
+      de: 'Herren Leinenhemd & Hosen-Set' 
     },
     aciklama: {
-      tr: '%100 organik pamuk ve keten dokuma, dökümlü ve ferah kullanım.',
-      en: '100% organic cotton and linen weave, flowing and comfortable wear.',
-      ru: '100% органический хлопок и льняное переплетение, свободный и легкий фасон.',
-      de: '100% Bio-Baumwolle und Leinenwebe, fließender und komfortabler Sitz.',
+      tr: 'Hakim yaka dökümlü keten gömlek ve rahat kesim keten pantolon kombini. Şık ve serin.',
+      en: 'Mandarin collar flowing linen shirt and relaxed fit linen trousers combo. Stylish and cool.',
+      ru: 'Комплект из льняной рубашки с воротником-стойкой и свободными льняными брюками.',
+      de: 'Kombination aus Leinenhemd mit Stehkragen und locker sitzender Leinenhose.',
     },
   },
   {
-    id: 'erkek-gomlek',
-    img: 'https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?w=800&q=80',
+    id: 'kadin-muslin-takim',
+    img: 'https://images.unsplash.com/photo-1509631179647-0177331693ae?w=800&q=80',
     baslik: { 
-      tr: 'Erkek Keten Yazlık Gömlek', 
-      en: "Men's Linen Summer Shirt", 
-      ru: 'Мужская летняя льняная рубашка', 
-      de: 'Herren Leinen-Sommerhemd' 
+      tr: 'Kadın Müslin İkili Takım (Alt - Üst)', 
+      en: "Women's Muslin Two-Piece Set (Top & Bottom)", 
+      ru: 'Женский двухпредметный костюм из муслина', 
+      de: 'Damen Muslin Zweiteiler (Oberteil & Hose)' 
     },
     aciklama: {
-      tr: 'Hakiki keten dokusu, hakim veya klasik yaka — sıcak havalarda maksimum serinlik.',
-      en: 'Genuine linen texture, mandarin or classic collar — maximum coolness in hot weather.',
-      ru: 'Фактурный натуральный лён, воротник-стойка или классика — максимум прохлады в жару.',
-      de: 'Echte Leinenstruktur, Steh- oder Klassikkragen — maximale Kühlung bei hot Wetter.',
+      tr: '%100 pamuk müslin kumaş, yumuşak bürümcük dokulu rahat gömlek ve bol pantolon/şort seti.',
+      en: '100% cotton muslin fabric, soft crinkle texture relaxed shirt and wide pants/shorts set.',
+      ru: '100% хлопковый муслин, мягкая жатая текстура, свободная рубашка и широкие брюки.',
+      de: '100% Baumwoll-Muslin, weiche Crinkle-Textur, lockeres Hemd und weite Hose.',
     },
   },
   {
-    id: 'erkek-takim',
-    img: 'https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?w=800&q=80',
+    id: 'erkek-muslin-gomlek',
+    img: 'https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=800&q=80',
     baslik: { 
-      tr: 'Erkek Keten Blazer & Pantolon', 
-      en: "Men's Linen Blazer & Trousers", 
-      ru: 'Мужской льняной блейзер и брюки', 
-      de: 'Herren Leinen-Sakko & Hose' 
+      tr: 'Erkek Pamuk - Müslin Yazlık Gömlek', 
+      en: "Men's Cotton - Muslin Summer Shirt", 
+      ru: 'Мужская летняя рубашка из хлопкового муслина', 
+      de: 'Herren Baumwoll-Muslin Sommerhemd' 
     },
     aciklama: {
-      tr: 'Astarsız hafif ceket ve dökümlü keten pantolon kombini — yaz düğünleri ve davetler için.',
-      en: 'Unlined light blazer and draped linen trousers — for summer weddings and events.',
-      ru: 'Лёгкий пиджак без подкладки и льняные брюки — для летних свадеб и мероприятий.',
-      de: 'Ungefüttertes leichtes Sakko und fließende Leinenhose — für Sommerhochzeiten und Events.',
+      tr: 'Hafif ve terletmeyen %100 pamuk müslin dokuma. Salaş, rahat ve plaj/günlük kullanıma uygun.',
+      en: 'Lightweight and breathable 100% cotton muslin weave. Loose, comfortable for resort and daily wear.',
+      ru: 'Лёгкий 100% хлопковый муслин. Свободный крой, идеально для пляжа и повседневной носки.',
+      de: 'Leichte 100% Baumwoll-Muslinwebe. Locker und bequem für Strand und Alltag.',
     },
   },
   {
-    id: 'plaj-kaftan',
-    img: 'https://images.unsplash.com/photo-1502716119720-b23a93e5fe1b?w=800&q=80',
+    id: 'kadin-keten-pantolon',
+    img: 'https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?w=800&q=80',
     baslik: { 
-      tr: 'Plaj Kaftanı / Keten Kimono', 
-      en: 'Beach Kaftan / Linen Kimono', 
-      ru: 'Пляжное кафтан / льняное кимоно', 
-      de: 'Strandkaftan / Leinen-Kimono' 
+      tr: 'Kadın Keten Wide-Leg Pantolon & Kombin', 
+      en: "Women's Wide-Leg Linen Pants Outfit", 
+      ru: 'Женские широкие льняные брюки и топ', 
+      de: 'Damen Weitbein-Leinenhose & Outfit' 
     },
     aciklama: {
-      tr: 'Hafif ve doğal keten kumaştan plaj üstü kimono — sahil ve otel kullanımı için ideal.',
-      en: 'Lightweight natural linen beach kimono — ideal for beach and resort wear.',
-      ru: 'Лёгкое кимоно из натурального льна — идеально для пляжа и отдыха у бассейна.',
-      de: 'Leichter Strandkimono aus natürlichem Leinen — ideal für Strand und Hotel resort.',
+      tr: 'Yüksek bel, bol paça doğal keten pantolon ve üst kombin. İster sahilde ister şehirde.',
+      en: 'High-waisted wide-leg natural linen trousers and top combination. Perfect for beach or city.',
+      ru: 'Широкие льняные брюки с высокой посадкой и топ. Подходят как для города, так и для пляжа.',
+      de: 'High-Waist Weitbein-Leinenhose und Top. Perfekt für Strand oder Stadt.',
     },
   },
   {
-    id: 'kadin-pantolon',
-    img: 'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=800&q=80',
+    id: 'plaj-kaftan-kimono',
+    img: 'https://images.unsplash.com/photo-1518831959646-742c3a14ebf7?w=800&q=80',
     baslik: { 
-      tr: 'Kadın Keten Wide-Leg Pantolon', 
-      en: "Women's Wide-Leg Linen Trousers", 
-      ru: 'Женские широкие льняные брюки', 
-      de: 'Damen Leinen-Weitbeinhose' 
+      tr: 'Doğal Keten / Müslin Plaj Kaftanı & Kimono', 
+      en: 'Natural Linen / Muslin Beach Kaftan & Kimono', 
+      ru: 'Пляжный кафтан и кимоно из льна / муслина', 
+      de: 'Strandkaftan & Kimono aus Naturleinen / Muslin' 
     },
     aciklama: {
-      tr: 'Yüksek bel, bol paça doğal keten pantolon — hem gündelik hem şık kombinler için.',
-      en: 'High-waisted, wide-leg natural linen trousers — for both casual and stylish looks.',
-      ru: 'Широкие льняные брюки с высокой посадкой — для повседневных и элегантных образов.',
-      de: 'High-Waist Weitbeinhose aus Naturleinen — für lässige und elegante Kombinationen.',
+      tr: 'Açık kesim, dökümlü keten ve müslin kumaş kimono. Plaj üstü veya akşam yürüyüşleri için hafif katman.',
+      en: 'Open-cut, flowy linen and muslin kimono. Lightweight layer for beachwear or evening strolls.',
+      ru: 'Свободное кимоно из льна и муслина. Лёгкий слой для пляжа или вечерних прогулок.',
+      de: 'Offener Kimono aus Leinen und Muslin. Leichte Schicht für Strand oder Abendspaziergänge.',
     },
   },
 ];

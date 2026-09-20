@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next';
+import { OTEL_BOLGELERI } from '@/lib/otel-bolgeleri';
 
 const SITE = 'https://terzihizmeti.com.tr';
 const NOW  = new Date();
@@ -41,12 +42,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE}/en/hotel-tailor-antalya`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${SITE}/ru/vyezdnoy-portnoy-antalya`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${SITE}/de/schneider-service-hotel-antalya`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.9 },
-    ...['belek', 'lara', 'guzeloba', 'kemer', 'side'].flatMap((slug) => [
+    // DÜZELTME (2026-09-20): Sabit yazılmış ['belek','lara','guzeloba','kemer','side']
+    // listesi yerine OTEL_BOLGELERI'den dinamik üretiliyor — yeni bölge eklendiğinde
+    // (lib/otel-bolgeleri.ts) sitemap otomatik güncellenir, elle senkron gerekmez.
+    ...OTEL_BOLGELERI.flatMap(({ slug }) => [
       { url: `${SITE}/otele-gelen-terzi-antalya/${slug}`, lastModified: NOW, changeFrequency: 'weekly' as const, priority: 0.92 },
       { url: `${SITE}/en/hotel-tailor-antalya/${slug}`, lastModified: NOW, changeFrequency: 'weekly' as const, priority: 0.9 },
       { url: `${SITE}/ru/vyezdnoy-portnoy-antalya/${slug}`, lastModified: NOW, changeFrequency: 'weekly' as const, priority: 0.9 },
       { url: `${SITE}/de/schneider-service-hotel-antalya/${slug}`, lastModified: NOW, changeFrequency: 'weekly' as const, priority: 0.9 },
     ]),
+
+    // ✅ YENİ (2026-09-20) — Keten & Pamuk Özel Dikim Modelleri (yabancı misafirler)
+    { url: `${SITE}/keten-pamuk-ozel-dikim`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.88 },
+    { url: `${SITE}/en/linen-cotton-tailoring`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.88 },
+    { url: `${SITE}/ru/poshiv-lyon-hlopok`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.88 },
+    { url: `${SITE}/de/leinen-baumwolle-schneiderei`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.88 },
 
     // ✅ blog / içerik tazeliği sayfaları
     { url: `${SITE}/blog`, lastModified: NOW, changeFrequency: 'monthly', priority: 0.6 },

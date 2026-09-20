@@ -5,7 +5,7 @@ import OtelBolgeSayfasi from '@/components/OtelBolgeSayfasi';
 
 const SITE = 'https://terzihizmeti.com.tr';
 const PHONE_TEL = '+905318986418';
-const MAPS = 'https://maps.app.goo.gl/CNZghczJNRQX3mLM9';
+const MAPS = 'https://maps.app.goo.gl/QEgSkRoA8Nz8H62g8';
 const BASE_PATH = '/en/hotel-tailor-antalya';
 
 export async function generateStaticParams() {

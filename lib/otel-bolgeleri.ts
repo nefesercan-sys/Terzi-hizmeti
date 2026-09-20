@@ -106,6 +106,78 @@ export const OTEL_BOLGELERI: OtelBolgesi[] = [
       de: 'Side ist eine historische Kurstadt mit antiken Ruinen und einer großen Konzentration an Strandhotels, nahe Manavgat.',
     },
   },
+  {
+    slug: 'kundu',
+    name: 'Kundu',
+    hotels: [
+      'Concorde De Luxe Resort Lara Antalya', 'Swandor Hotels & Resort Topkapi Palace', 'Kremlin Palace',
+      'Grand Park Lara', 'Akra Antalya', 'Delta Hotels by Marriott Antalya Lara',
+    ],
+    travelTime: {
+      tr: 'Konyaaltı atölyemizden ~20–25 dk',
+      en: '~20–25 min from our Konyaaltı workshop', ru: '~20–25 мин от мастерской в Коньяалты', de: '~20–25 Min von unserer Werkstatt in Konyaaltı',
+    },
+    blurb: {
+      tr: 'Kundu (Aksu), Lara\\'nın hemen doğusunda, çok sayıda 5 yıldızlı all-inclusive resort barındıran bir otel bölgesi.',
+      en: 'Kundu (Aksu), just east of Lara, is a hotel district home to numerous 5-star all-inclusive resorts.',
+      ru: 'Кунду (Аксу), рядом с районом Лара, — отельный район с множеством 5-звёздочных курортов по системе «всё включено».',
+      de: 'Kundu (Aksu), direkt östlich von Lara, ist ein Hotelbezirk mit zahlreichen 5-Sterne-All-inclusive-Resorts.',
+    },
+  },
+  {
+    slug: 'konyaalti',
+    name: 'Konyaaltı',
+    hotels: [
+      'Hillside Su Hotel', 'Megasaray Westbeach Antalya', 'Sealife Family Resort Hotel',
+      'Özkaymak Falez Hotel', 'Crowne Plaza Hotel Antalya by IHG',
+    ],
+    travelTime: {
+      tr: 'Konyaaltı atölyemizin bulunduğu bölge — ~5–10 dk',
+      en: '~5–10 min — this is where our workshop is based', ru: '~5–10 мин — район, где находится наша мастерская', de: '~5–10 Min — hier befindet sich unsere Werkstatt',
+    },
+    blurb: {
+      tr: 'Konyaaltı, atölyemizin de bulunduğu bölge — 7 km\\'lik sahil şeridi boyunca sıralanan otel ve apart-otellere ev sahipliği yapıyor.',
+      en: 'Konyaaltı, where our own workshop is based, is home to hotels and aparthotels lined along a 7 km stretch of coastline.',
+      ru: 'Коньяалты, где расположена наша мастерская, — район с отелями и апарт-отелями вдоль 7-километровой береговой линии.',
+      de: 'Konyaaltı, wo sich unsere eigene Werkstatt befindet, beherbergt Hotels und Aparthotels entlang eines 7 km langen Küstenabschnitts.',
+    },
+  },
+  {
+    slug: 'goynuk',
+    name: 'Göynük',
+    hotels: [
+      'Kilikya Palace Göynük', 'Orange County Resort Hotel Kemer', 'Queen\\'s Park Resort Göynük',
+      'Grand Park Kemer', 'Seven Seas Hotel Life', 'NG Phaselis Bay',
+    ],
+    travelTime: {
+      tr: 'Konyaaltı atölyemizden ~45–50 dk',
+      en: '~45–50 min from our Konyaaltı workshop', ru: '~45–50 мин от мастерской в Коньяалты', de: '~45–50 Min von unserer Werkstatt in Konyaaltı',
+    },
+    blurb: {
+      tr: 'Göynük, Kemer\\'in kuzey komşusu — sakin bir otel şeridi, Göynük Kanyonu\\'na yakınlığıyla bilinir.',
+      en: 'Göynük, Kemer\\'s northern neighbour, is a quieter hotel row known for its proximity to Göynük Canyon.',
+      ru: 'Гёйнюк, северный сосед Кемера, — более тихий отельный район, известный близостью к каньону Гёйнюк.',
+      de: 'Göynük, der nördliche Nachbar von Kemer, ist eine ruhigere Hotelreihe, bekannt für die Nähe zum Göynük-Canyon.',
+    },
+  },
+  {
+    slug: 'muratpasa',
+    name: 'Muratpaşa',
+    hotels: [
+      'Akra Antalya', 'Rixos Downtown Antalya', 'Ramada Plaza by Wyndham Antalya', 'DoubleTree By Hilton Antalya City Centre',
+      'The Marmara Antalya', 'Hotel Su & Aqualand', 'Miracle Resort Hotel', 'Alp Paşa Hotel',
+    ],
+    travelTime: {
+      tr: 'Konyaaltı atölyemizden ~10–15 dk',
+      en: '~10–15 min from our Konyaaltı workshop', ru: '~10–15 мин от мастерской в Коньяалты', de: '~10–15 Min von unserer Werkstatt in Konyaaltı',
+    },
+    blurb: {
+      tr: 'Muratpaşa, Antalya\\'nın merkez ilçesi — Kaleiçi, şehir merkezi otelleri ve Lara\\'nın bir bölümünü kapsayan geniş bir bölge.',
+      en: 'Muratpaşa is Antalya\\'s central district, covering Kaleiçi, city-centre hotels and part of the Lara area.',
+      ru: 'Муратпаша — центральный район Антальи, охватывающий Калеичи, отели в центре города и часть района Лара.',
+      de: 'Muratpaşa ist der zentrale Bezirk von Antalya, der Kaleiçi, Stadtzentrumshotels und einen Teil des Lara-Gebiets umfasst.',
+    },
+  },
 ];
 
 export function bulOtelBolgesi(slug: string) {

@@ -72,8 +72,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="tr" className={`${inter.variable} ${syne.variable}`}>
       <head>
-        <meta name="google-site-verification" content="W2S_Gr49EgkgWG7xAWWMc5qPW6Cw3wEnOi6O6UC9zkQ" />
-        <meta name="yandex-verification" content="e7b38dec995b9142" />
+        {/* DÜZELTME (2026-09-20): google-site-verification ve yandex-verification
+            meta etiketleri buradan kaldırıldı — yukarıdaki metadata.verification
+            alanı (google/yandex) Next.js tarafından zaten otomatik <meta> olarak
+            render ediliyor. İkisi aynı anda olması siteyi bozmuyordu ama HTML'de
+            aynı etiketi gereksiz yere iki kez üretiyordu. */}
         {/* DÜZELTME: fonts.googleapis.com/fonts.gstatic.com preconnect'leri kaldırıldı —
             proje next/font ile fontları kendi sunucusunda barındırıyor (Google Fonts'a
             hiç ağ isteği gitmiyor), bu preconnect'ler hiçbir zaman kullanılmayan boşa

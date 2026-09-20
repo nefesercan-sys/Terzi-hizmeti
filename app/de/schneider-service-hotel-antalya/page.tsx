@@ -83,7 +83,7 @@ export default function OtelBolgeleriDeHub() {
             <div className="hero-overlay" />
           </div>
           <div className="hero-content">
-            <span className="hero-tag">🏨 Belek · Lara · Güzeloba · Kemer · Side</span>
+            <span className="hero-tag">🏨 Belek · Lara · Kundu · Konyaaltı · Kemer · Göynük · Muratpaşa · Side</span>
             <h1 id="hub-h">Schneider im Hotel — <span className="accent">Mobiler Service</span></h1>
             <p className="hero-desc">
               Wählen Sie Ihren Bezirk, teilen Sie Hotelname und Zeitpunkt per WhatsApp mit — unser

@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
-    { '@type': 'WebPage', '@id': `${PAGE_URL}#webpage`, url: PAGE_URL, name: metadata.title, inLanguage: 'tr' },
+   { '@type': 'WebPage', '@id': `${PAGE_URL}#webpage`, url: PAGE_URL, name: "Keten & Pamuk Özel Dikim Modelleri" }
     {
       '@type': 'Service', '@id': `${PAGE_URL}#service`,
       name: 'Keten & Pamuk Özel Dikim', serviceType: 'Custom Tailoring',

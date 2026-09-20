@@ -10,7 +10,7 @@ const PAGE_URL   = `${SITE}/antalya-uniforma-imalati`
 const PHONE      = '+90 531 898 64 18'
 const PHONE_TEL  = '+905318986418'
 const WA_NUM     = '905318986418'
-const MAPS       = 'https://maps.app.goo.gl/CNZghczJNRQX3mLM9'
+const MAPS       = 'https://maps.app.goo.gl/QEgSkRoA8Nz8H62g8'
 const OG         = `${SITE}/og-terzi-can.jpg`
 const TODAY      = new Date().toISOString().split('T')[0]
 

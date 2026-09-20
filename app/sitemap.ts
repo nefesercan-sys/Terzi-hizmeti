@@ -5,11 +5,12 @@ const SITE = "https://terzihizmeti.com.tr";
 const NOW = new Date();
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  // OTEL_BOLGELERI dizi veya obje olsa da slug listesini güvenle çıkarır:
+  // OTEL_BOLGELERI verisini güvenli bir şekilde slug (metin) dizisine çeviriyoruz
   const bolgeListesi: string[] = Array.isArray(OTEL_BOLGELERI)
     ? OTEL_BOLGELERI.map((b) => (typeof b === 'string' ? b : b.slug || String(b)))
     : Object.keys(OTEL_BOLGELERI);
 
+  // Otel bölgeleri için dinamik sayfalar (MetadataRoute.Sitemap tipine tam uygun)
   const otelSayfalari: MetadataRoute.Sitemap = bolgeListesi.flatMap((slug) => [
     { url: `${SITE}/otele-gelen-terzi-antalya/${slug}`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${SITE}/hotel-tailor-antalya/${slug}`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.9 },
@@ -17,6 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE}/de/schneider-service-hotel-antalya/${slug}`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.9 },
   ]);
 
+  // Sabit sayfalar
   const sabitSayfalar: MetadataRoute.Sitemap = [
     { url: SITE, lastModified: NOW, changeFrequency: 'weekly', priority: 1.0 },
     { url: `${SITE}/antalya-terzi`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.91 },

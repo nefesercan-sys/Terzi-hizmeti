@@ -7,108 +7,77 @@ const WA = (m: string) => `https://wa.me/${WA_NUM}?text=${encodeURIComponent(m)}
 type Lang = 'tr' | 'en' | 'ru' | 'de';
 
 // ─── MODEL GALERİSİ — gerçek kumaş/stil referans görselleri (Unsplash) ───────
-// ─── MODEL GALERİSİ — Gerçek Keten & Pamuk Doku Görselleri ───────
-// ─── MODEL GALERİSİ — %100 Keten, Pamuk ve Müslin Kumaş Modelleri ───────
-// ─── MODEL GALERİSİ — %100 Keten, Pamuk ve Müslin Kumaş Modelleri ───────
-// ─── MODEL GALERİSİ — Gerçek Keten & Pamuk Doku Görselleri ───────
+// Bunlar satılan hazır ürün değil, "bu tarz bir şey diktirmek istiyorum"
+// diyen misafirin gösterebileceği stil/model örnekleri.
 const MODELLER = [
   {
     id: 'kadin-elbise',
-    img: 'https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=800&q=80',
-    baslik: { 
-      tr: 'Kadın Keten Maxi Elbise', 
-      en: "Women's Linen Maxi Dress", 
-      ru: 'Женское льняное макси-платье', 
-      de: 'Damen Leinen-Maxikleid' 
-    },
+    img: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=700&q=80',
+    baslik: { tr: 'Kadın Keten Maxi Elbise', en: "Women's Linen Maxi Dress", ru: 'Женское льняное макси-платье', de: 'Damen Leinen-Maxikleid' },
     aciklama: {
-      tr: 'Doğal bej keten kumaş, nefes alan rahat kesim — yaz günleri için ideal şıklık.',
-      en: 'Natural beige linen fabric, breathable relaxed fit — ideal elegance for summer days.',
-      ru: 'Натуральный бежевый лён, дышащий свободный крой — идеальная элегантность для лета.',
-      de: 'Natürlicher beigefarbener Leinenstoff, atmungsaktive lockere Passform — ideale Sommer-Eleganz.',
+      tr: 'Geniş kesim, bağcıklı bel — sahil ve şehir için serin, doğal keten.',
+      en: 'Relaxed fit, tie waist — cool, natural linen for beach or city wear.',
+      ru: 'Свободный крой, пояс на завязках — прохладный натуральный лён для пляжа и города.',
+      de: 'Lockere Passform, Bindegürtel — kühles, natürliches Leinen für Strand und Stadt.',
     },
   },
   {
-    id: 'kadin-gomlek',
-    img: 'https://images.unsplash.com/photo-1598554747436-c9293d6a588f?w=800&q=80',
-    baslik: { 
-      tr: 'Kadın Pamuk-Keten Oversize Gömlek', 
-      en: "Women's Cotton-Linen Oversized Shirt", 
-      ru: 'Женская оверсайз рубашка из хлопка и льна', 
-      de: 'Damen Oversize-Hemd aus Baumwolle und Leinen' 
-    },
+    id: 'kadin-bluz',
+    img: 'https://images.unsplash.com/photo-1631186626171-d5010e20d347?w=700&q=80',
+    baslik: { tr: 'Kadın Pamuk Oversize Gömlek', en: "Women's Oversized Cotton Shirt", ru: 'Женская оверсайз рубашка из хлопка', de: 'Damen Oversize Baumwollhemd' },
     aciklama: {
-      tr: '%100 organik pamuk ve keten dokuma, dökümlü ve ferah kullanım.',
-      en: '100% organic cotton and linen weave, flowing and comfortable wear.',
-      ru: '100% органический хлопок и льняное переплетение, свободный и легкий фасон.',
-      de: '100% Bio-Baumwolle und Leinenwebe, fließender und komfortabler Sitz.',
+      tr: '%100 organik pamuk, oversize kesim — gündelik ve iş için.',
+      en: '100% organic cotton, oversized cut — for everyday and work.',
+      ru: '100% органический хлопок, свободный крой — на каждый день и для работы.',
+      de: '100% Bio-Baumwolle, Oversize-Schnitt — für Alltag und Büro.',
     },
   },
   {
     id: 'erkek-gomlek',
-    img: 'https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?w=800&q=80',
-    baslik: { 
-      tr: 'Erkek Keten Yazlık Gömlek', 
-      en: "Men's Linen Summer Shirt", 
-      ru: 'Мужская летняя льняная рубашка', 
-      de: 'Herren Leinen-Sommerhemd' 
-    },
+    img: 'https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=700&q=80',
+    baslik: { tr: 'Erkek Keten Yazlık Gömlek', en: "Men's Linen Summer Shirt", ru: 'Мужская летняя льняная рубашка', de: 'Herren Leinen-Sommerhemd' },
     aciklama: {
-      tr: 'Hakiki keten dokusu, hakim veya klasik yaka — sıcak havalarda maksimum serinlik.',
-      en: 'Genuine linen texture, mandarin or classic collar — maximum coolness in hot weather.',
-      ru: 'Фактурный натуральный лён, воротник-стойка или классика — максимум прохлады в жару.',
-      de: 'Echte Leinenstruktur, Steh- oder Klassikkragen — maximale Kühlung bei hot Wetter.',
+      tr: 'Hafif dokulu, nefes alan keten — sıcak günlerde terletmez.',
+      en: 'Lightweight, breathable linen — stays cool on hot days.',
+      ru: 'Лёгкий, дышащий лён — не жарко даже в самые тёплые дни.',
+      de: 'Leichtes, atmungsaktives Leinen — bleibt auch an heißen Tagen kühl.',
     },
   },
   {
     id: 'erkek-takim',
-    img: 'https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?w=800&q=80',
-    baslik: { 
-      tr: 'Erkek Keten Blazer & Pantolon', 
-      en: "Men's Linen Blazer & Trousers", 
-      ru: 'Мужской льняной блейзер и брюки', 
-      de: 'Herren Leinen-Sakko & Hose' 
-    },
+    img: 'https://images.unsplash.com/photo-1517467069232-26eee2e331b1?w=700&q=80',
+    baslik: { tr: 'Erkek Keten-Pamuk Takım', en: "Men's Linen-Cotton Suit", ru: 'Мужской костюм лён-хлопок', de: 'Herren Leinen-Baumwoll-Anzug' },
     aciklama: {
-      tr: 'Astarsız hafif ceket ve dökümlü keten pantolon kombini — yaz düğünleri ve davetler için.',
-      en: 'Unlined light blazer and draped linen trousers — for summer weddings and events.',
-      ru: 'Лёгкий пиджак без подкладки и льняные брюки — для летних свадеб и мероприятий.',
-      de: 'Ungefüttertes leichtes Sakko und fließende Leinenhose — für Sommerhochzeiten und Events.',
+      tr: 'Hafif blazer + pantolon — düğün ve özel günler için doğal şıklık.',
+      en: 'Light blazer + trousers — natural elegance for weddings and special days.',
+      ru: 'Лёгкий блейзер + брюки — естественная элегантность для свадеб и особых случаев.',
+      de: 'Leichtes Sakko + Hose — natürliche Eleganz für Hochzeiten und besondere Anlässe.',
     },
   },
   {
     id: 'plaj-kaftan',
-    img: 'https://images.unsplash.com/photo-1502716119720-b23a93e5fe1b?w=800&q=80',
-    baslik: { 
-      tr: 'Plaj Kaftanı / Keten Kimono', 
-      en: 'Beach Kaftan / Linen Kimono', 
-      ru: 'Пляжное кафтан / льняное кимоно', 
-      de: 'Strandkaftan / Leinen-Kimono' 
-    },
+    img: 'https://images.unsplash.com/photo-1581746989955-6b19860dc7de?w=700&q=80',
+    baslik: { tr: 'Plaj Kaftanı / Kimono', en: 'Beach Kaftan / Kimono', ru: 'Пляжное кафтан / кимоно', de: 'Strandkaftan / Kimono' },
     aciklama: {
-      tr: 'Hafif ve doğal keten kumaştan plaj üstü kimono — sahil ve otel kullanımı için ideal.',
-      en: 'Lightweight natural linen beach kimono — ideal for beach and resort wear.',
-      ru: 'Лёгкое кимоно из натурального льна — идеально для пляжа и отдыха у бассейна.',
-      de: 'Leichter Strandkimono aus natürlichem Leinen — ideal für Strand und Hotel resort.',
+      tr: 'Açık kesim keten kimono — plaj üstü veya akşam için hafif bir katman.',
+      en: 'Open-cut linen kimono — a light layer for the beach or evening.',
+      ru: 'Свободного кроя льняное кимоно — лёгкий слой для пляжа или вечера.',
+      de: 'Offen geschnittener Leinen-Kimono — leichte Schicht für Strand oder Abend.',
     },
   },
   {
     id: 'kadin-pantolon',
-    img: 'https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=800&q=80',
-    baslik: { 
-      tr: 'Kadın Keten Wide-Leg Pantolon', 
-      en: "Women's Wide-Leg Linen Trousers", 
-      ru: 'Женские широкие льняные брюки', 
-      de: 'Damen Leinen-Weitbeinhose' 
-    },
+    img: 'https://images.unsplash.com/photo-1509631179647-0177331693ae?w=700&q=80',
+    baslik: { tr: 'Kadın Keten Wide-Leg Pantolon', en: "Women's Wide-Leg Linen Trousers", ru: 'Женские широкие льняные брюки', de: 'Damen Leinen-Weitbeinhose' },
     aciklama: {
-      tr: 'Yüksek bel, bol paça doğal keten pantolon — hem gündelik hem şık kombinler için.',
-      en: 'High-waisted, wide-leg natural linen trousers — for both casual and stylish looks.',
-      ru: 'Широкие льняные брюки с высокой посадкой — для повседневных и элегантных образов.',
-      de: 'High-Waist Weitbeinhose aus Naturleinen — für lässige und elegante Kombinationen.',
+      tr: 'Yüksek bel, bol paça — ofisten sahile her ortama uyar.',
+      en: 'High waist, wide leg — fits every setting, from office to beach.',
+      ru: 'Высокая посадка, широкие штанины — подходят от офиса до пляжа.',
+      de: 'Hohe Taille, weites Bein — passt vom Büro bis zum Strand.',
     },
   },
 ];
+
 const T: Record<Lang, any> = {
   tr: {
     tag: '🧵 Özel Dikim · %100 Keten & Pamuk',
@@ -176,10 +145,8 @@ const T: Record<Lang, any> = {
   },
 };
 
-// DÜZELTME 1: lang parametresi opsiyonel (?) yapıldı ve 'tr' varsayılan olarak atandı
-export default function KetenPamukOzelDikim({ lang = 'tr' }: { lang?: Lang }) {
-  const t = T[lang] || T['tr']; // Olası hatalara karşı ekstra güvenlik
-  
+export default function KetenPamukOzelDikim({ lang }: { lang: Lang }) {
+  const t = T[lang];
   const waMsg = lang === 'ru' ? 'Здравствуйте, хочу заказать пошив из льна/хлопка. Модель: '
     : lang === 'de' ? 'Hallo, ich möchte etwas aus Leinen/Baumwolle schneidern lassen. Modell: '
     : lang === 'en' ? 'Hello, I would like to order custom linen/cotton tailoring. Style: '
@@ -211,9 +178,7 @@ export default function KetenPamukOzelDikim({ lang = 'tr' }: { lang?: Lang }) {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(260px,1fr))', gap: '1.2rem' }}>
             {MODELLER.map((m) => (
               <div key={m.id} style={{ background: '#fff', borderRadius: 6, overflow: 'hidden', border: '1px solid rgba(44,74,62,.12)' }}>
-                {/* DÜZELTME 2: ESLint img hatası görmezden gelindi */}
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={m.img} alt={m.baslik[lang] || m.baslik['tr']} style={{ width: '100%', height: 240, objectFit: 'cover', display: 'block' }} loading="lazy" />
+                <img src={m.img} alt={m.baslik[lang]} style={{ width: '100%', height: 240, objectFit: 'cover', display: 'block' }} loading="lazy" />
                 <div style={{ padding: '1.1rem' }}>
                   <h3 style={{ fontFamily: 'Georgia,serif', fontSize: '1rem', color: '#1C1814', marginBottom: '.4rem' }}>{m.baslik[lang]}</h3>
                   <p style={{ fontSize: '.8rem', color: '#7A6E62', lineHeight: 1.6, marginBottom: '.9rem' }}>{m.aciklama[lang]}</p>
@@ -232,8 +197,7 @@ export default function KetenPamukOzelDikim({ lang = 'tr' }: { lang?: Lang }) {
         <div style={{ maxWidth: 1000, margin: '0 auto' }}>
           <h2 style={{ fontFamily: 'Georgia,serif', fontSize: '1.6rem', color: '#1C1814', marginBottom: '2rem', textAlign: 'center' }}>{t.howH}</h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(180px,1fr))', gap: 1, background: '#E8E0D2' }}>
-            {/* DÜZELTME 3: Tuple tip hatası giderildi (any kullanıldı) */}
-            {t.steps.map(([ic, ti, d]: any, i: number) => (
+            {t.steps.map(([ic, ti, d]: string[], i: number) => (
               <div key={i} style={{ background: '#fff', padding: '2rem 1.5rem', textAlign: 'center' }}>
                 <div style={{ fontSize: '1.8rem', marginBottom: '.6rem' }}>{ic}</div>
                 <div style={{ fontFamily: 'Georgia,serif', fontSize: '.95rem', color: '#2C4A3E', marginBottom: '.3rem' }}>{ti}</div>

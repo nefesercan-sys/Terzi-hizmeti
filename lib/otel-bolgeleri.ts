@@ -118,7 +118,7 @@ export const OTEL_BOLGELERI: OtelBolgesi[] = [
       en: '~20–25 min from our Konyaaltı workshop', ru: '~20–25 мин от мастерской в Коньяалты', de: '~20–25 Min von unserer Werkstatt in Konyaaltı',
     },
     blurb: {
-      tr: 'Kundu (Aksu), Lara\\'nın hemen doğusunda, çok sayıda 5 yıldızlı all-inclusive resort barındıran bir otel bölgesi.',
+      tr: 'Kundu (Aksu), Lara\'nın hemen doğusunda, çok sayıda 5 yıldızlı all-inclusive resort barındıran bir otel bölgesi.',
       en: 'Kundu (Aksu), just east of Lara, is a hotel district home to numerous 5-star all-inclusive resorts.',
       ru: 'Кунду (Аксу), рядом с районом Лара, — отельный район с множеством 5-звёздочных курортов по системе «всё включено».',
       de: 'Kundu (Aksu), direkt östlich von Lara, ist ein Hotelbezirk mit zahlreichen 5-Sterne-All-inclusive-Resorts.',
@@ -136,7 +136,7 @@ export const OTEL_BOLGELERI: OtelBolgesi[] = [
       en: '~5–10 min — this is where our workshop is based', ru: '~5–10 мин — район, где находится наша мастерская', de: '~5–10 Min — hier befindet sich unsere Werkstatt',
     },
     blurb: {
-      tr: 'Konyaaltı, atölyemizin de bulunduğu bölge — 7 km\\'lik sahil şeridi boyunca sıralanan otel ve apart-otellere ev sahipliği yapıyor.',
+      tr: 'Konyaaltı, atölyemizin de bulunduğu bölge — 7 km\'lik sahil şeridi boyunca sıralanan otel ve apart-otellere ev sahipliği yapıyor.',
       en: 'Konyaaltı, where our own workshop is based, is home to hotels and aparthotels lined along a 7 km stretch of coastline.',
       ru: 'Коньяалты, где расположена наша мастерская, — район с отелями и апарт-отелями вдоль 7-километровой береговой линии.',
       de: 'Konyaaltı, wo sich unsere eigene Werkstatt befindet, beherbergt Hotels und Aparthotels entlang eines 7 km langen Küstenabschnitts.',
@@ -146,7 +146,7 @@ export const OTEL_BOLGELERI: OtelBolgesi[] = [
     slug: 'goynuk',
     name: 'Göynük',
     hotels: [
-      'Kilikya Palace Göynük', 'Orange County Resort Hotel Kemer', 'Queen\\'s Park Resort Göynük',
+      'Kilikya Palace Göynük', 'Orange County Resort Hotel Kemer', 'Queen\'s Park Resort Göynük',
       'Grand Park Kemer', 'Seven Seas Hotel Life', 'NG Phaselis Bay',
     ],
     travelTime: {
@@ -154,8 +154,8 @@ export const OTEL_BOLGELERI: OtelBolgesi[] = [
       en: '~45–50 min from our Konyaaltı workshop', ru: '~45–50 мин от мастерской в Коньяалты', de: '~45–50 Min von unserer Werkstatt in Konyaaltı',
     },
     blurb: {
-      tr: 'Göynük, Kemer\\'in kuzey komşusu — sakin bir otel şeridi, Göynük Kanyonu\\'na yakınlığıyla bilinir.',
-      en: 'Göynük, Kemer\\'s northern neighbour, is a quieter hotel row known for its proximity to Göynük Canyon.',
+      tr: 'Göynük, Kemer\'in kuzey komşusu — sakin bir otel şeridi, Göynük Kanyonu\'na yakınlığıyla bilinir.',
+      en: 'Göynük, Kemer\'s northern neighbour, is a quieter hotel row known for its proximity to Göynük Canyon.',
       ru: 'Гёйнюк, северный сосед Кемера, — более тихий отельный район, известный близостью к каньону Гёйнюк.',
       de: 'Göynük, der nördliche Nachbar von Kemer, ist eine ruhigere Hotelreihe, bekannt für die Nähe zum Göynük-Canyon.',
     },
@@ -172,8 +172,8 @@ export const OTEL_BOLGELERI: OtelBolgesi[] = [
       en: '~10–15 min from our Konyaaltı workshop', ru: '~10–15 мин от мастерской в Коньяалты', de: '~10–15 Min von unserer Werkstatt in Konyaaltı',
     },
     blurb: {
-      tr: 'Muratpaşa, Antalya\\'nın merkez ilçesi — Kaleiçi, şehir merkezi otelleri ve Lara\\'nın bir bölümünü kapsayan geniş bir bölge.',
-      en: 'Muratpaşa is Antalya\\'s central district, covering Kaleiçi, city-centre hotels and part of the Lara area.',
+      tr: 'Muratpaşa, Antalya\'nın merkez ilçesi — Kaleiçi, şehir merkezi otelleri ve Lara\'nın bir bölümünü kapsayan geniş bir bölge.',
+      en: 'Muratpaşa is Antalya\'s central district, covering Kaleiçi, city-centre hotels and part of the Lara area.',
       ru: 'Муратпаша — центральный район Антальи, охватывающий Калеичи, отели в центре города и часть района Лара.',
       de: 'Muratpaşa ist der zentrale Bezirk von Antalya, der Kaleiçi, Stadtzentrumshotels und einen Teil des Lara-Gebiets umfasst.',
     },

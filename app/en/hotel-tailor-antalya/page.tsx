@@ -82,7 +82,7 @@ export default function OtelBolgeleriEnHub() {
             <div className="hero-overlay" />
           </div>
           <div className="hero-content">
-            <span className="hero-tag">🏨 Belek · Lara · Güzeloba · Kemer · Side</span>
+            <span className="hero-tag">🏨 Belek · Lara · Kundu · Konyaaltı · Kemer · Göynük · Muratpaşa · Side</span>
             <h1 id="hub-h">Hotel Tailor — <span className="accent">Mobile Service</span></h1>
             <p className="hero-desc">
               Choose your district, share your hotel name and preferred time on WhatsApp — our tailor
@@ -181,6 +181,22 @@ export default function OtelBolgeleriEnHub() {
                 <div className="faq-a">{a}</div>
               </div>
             ))}
+          </div>
+        </section>
+
+        <section className="sec" style={{ background: 'rgba(0,0,0,.12)' }} aria-labelledby="linen-h">
+          <div className="ctr" style={{ maxWidth: 760, textAlign: 'center' }}>
+            <div className="sec-head">
+              <span className="eyebrow">🧵 New</span>
+              <h2 className="sec-h ff" id="linen-h">Linen & Cotton Custom Tailoring</h2>
+              <p className="sec-sub">
+                Want to dress this way while you're here? Have something custom-made in 100% natural
+                linen or cotton, to your exact measurements — browse the styles, order on WhatsApp.
+              </p>
+            </div>
+            <a href="/en/linen-cotton-tailoring" className="btn-primary" style={{ textDecoration: 'none', display: 'inline-block' }}>
+              View Styles →
+            </a>
           </div>
         </section>
 

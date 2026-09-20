@@ -9,8 +9,8 @@ const PHONE_TEL = '+905318986418';
 const WA_NUM    = '905318986418';
 const WA        = (m: string) => `https://wa.me/${WA_NUM}?text=${encodeURIComponent(m)}`;
 const WA_DEF    = WA('Merhaba, terzi hizmeti hakkında bilgi almak istiyorum.');
-const MAPS      = 'https://maps.app.goo.gl/CNZghczJNRQX3mLM9';
-const BIZ       = 'Konyaaltı Terzi - Terzi Dikim Tamir Tadilat';
+const MAPS      = 'https://maps.app.goo.gl/QEgSkRoA8Nz8H62g8';
+const BIZ       = 'TERZİ Can - Konyaaltı';
 const TODAY     = new Date().toISOString().split('T')[0];
 const OG        = `${SITE}/terzi-can-hero.jpg`;
 
@@ -138,10 +138,10 @@ const jsonLd = {
       hasMap: MAPS,
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'Liman Mahallesi',
+        streetAddress: 'Hurma Mahallesi',
         addressLocality: 'Konyaaltı',
         addressRegion: 'Antalya',
-        postalCode: '07070',
+        postalCode: '07130',
         addressCountry: 'TR',
       },
       geo: { '@type': 'GeoCoordinates', latitude: 36.8820, longitude: 30.6980 },

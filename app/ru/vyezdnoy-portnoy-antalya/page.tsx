@@ -82,7 +82,7 @@ export default function OtelBolgeleriRuHub() {
             <div className="hero-overlay" />
           </div>
           <div className="hero-content">
-            <span className="hero-tag">🏨 Белек · Лара · Гюзельоба · Кемер · Сиде</span>
+            <span className="hero-tag">🏨 Белек · Лара · Кунду · Коньяалты · Кемер · Гёйнюк · Муратпаша · Сиде</span>
             <h1 id="hub-h">Портной в отеле — <span className="accent">Выездной сервис</span></h1>
             <p className="hero-desc">
               Выберите ваш район, напишите название отеля и удобное время в WhatsApp — наш портной
@@ -180,6 +180,22 @@ export default function OtelBolgeleriRuHub() {
                 <div className="faq-a">{a}</div>
               </div>
             ))}
+          </div>
+        </section>
+
+        <section className="sec" style={{ background: 'rgba(0,0,0,.12)' }} aria-labelledby="linen-h">
+          <div className="ctr" style={{ maxWidth: 760, textAlign: 'center' }}>
+            <div className="sec-head">
+              <span className="eyebrow">🧵 Новинка</span>
+              <h2 className="sec-h ff" id="linen-h">Пошив на заказ из льна и хлопка</h2>
+              <p className="sec-sub">
+                Хотите одеваться так во время отдыха? Сшейте что-то на заказ из 100% натурального
+                льна или хлопка, точно по вашим меркам — посмотрите модели, закажите в WhatsApp.
+              </p>
+            </div>
+            <a href="/ru/poshiv-lyon-hlopok" className="btn-primary" style={{ textDecoration: 'none', display: 'inline-block' }}>
+              Смотреть модели →
+            </a>
           </div>
         </section>
 

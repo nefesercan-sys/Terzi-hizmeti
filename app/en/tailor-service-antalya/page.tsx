@@ -11,7 +11,7 @@ const PHONE_TEL = '+905318986418';
 const WA_NUM    = '905318986418';
 const WA        = (m: string) => `https://wa.me/${WA_NUM}?text=${encodeURIComponent(m)}`;
 const WA_DEF    = WA('Hello, I would like a mobile tailor to come to my hotel/address. My location: ');
-const MAPS      = 'https://maps.app.goo.gl/CNZghczJNRQX3mLM9';
+const MAPS      = 'https://maps.app.goo.gl/QEgSkRoA8Nz8H62g8';
 const TODAY     = new Date().toISOString().split('T')[0];
 const OG        = `${SITE}/terzi-can-hero.jpg`;
 

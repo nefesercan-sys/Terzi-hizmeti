@@ -671,6 +671,22 @@ export default function TerziHizmetiPage() {
           </div>
         </section>
 
+        <section className="sec" style={{ background: 'rgba(0,0,0,.03)' }} aria-labelledby="keten-home-h">
+          <div className="ctr" style={{ maxWidth: 760, textAlign: 'center' }}>
+            <div className="sec-head">
+              <span className="eyebrow">🧵 Yeni</span>
+              <h2 className="sec-h ff" id="keten-home-h">Keten & Pamuk Özel Dikim Modelleri</h2>
+              <p className="sec-sub">
+                %100 doğal keten veya pamuktan, tam ölçünüze özel diktirin. Model örneklerine göz atın,
+                WhatsApp'tan sipariş verin.
+              </p>
+            </div>
+            <a href="/keten-pamuk-ozel-dikim" className="btn-primary" style={{ textDecoration: 'none', display: 'inline-block' }}>
+              Modelleri Görüntüle →
+            </a>
+          </div>
+        </section>
+
         {/* CTA */}
         <section className="cta-final" aria-label="İletişime geç">
           <h2 className="cta-h ff">Terziniz Kapınızda,<br/>Kıyafetiniz 24 Saatte Hazır</h2>

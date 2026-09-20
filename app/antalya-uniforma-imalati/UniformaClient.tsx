@@ -7,7 +7,7 @@ const PHONE     = '+90 531 898 64 18'
 const PHONE_TEL = '+905318986418'
 const WA_NUM    = '905318986418'
 const wa = (msg: string) => `https://wa.me/${WA_NUM}?text=${encodeURIComponent(msg)}`
-const MAPS = 'https://maps.app.goo.gl/CNZghczJNRQX3mLM9'
+const MAPS = 'https://maps.app.goo.gl/QEgSkRoA8Nz8H62g8'
 
 // ── Sektörler ─────────────────────────────────────────────────────────────────
 const SEKTORLER = [

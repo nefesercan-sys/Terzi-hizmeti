@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import KetenPamukOzelDikim from '@/components/KetenPamukOzelDikim';
+import KetenPamukOzelDikim, { KETEN_PAMUK_T } from '@/components/KetenPamukOzelDikim';
 
 const SITE     = 'https://terzihizmeti.com.tr';
 const PAGE_URL = `${SITE}/en/linen-cotton-tailoring`;
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: 'Linen & Cotton Custom Tailoring Models | Terzi Can',
     description: '100% natural linen and cotton, tailored exactly to your measurements. Delivered to your hotel.',
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'en_US', alternateLocale: ['tr_TR'], type: 'website',
-    images: [{ url: OG, width: 1024, height: 1024, alt: 'Linen Cotton Custom Tailoring', type: 'image/jpeg' }],
+    images: [{ url: OG, width: 1024, height: 1024, alt: 'Linen Cotton Custom Tailoring', type: 'image/png' }],
   },
   twitter: { card: 'summary_large_image', title: 'Linen & Cotton Custom Tailoring', description: 'Custom-made in 100% natural fabric, to your measurements.', images: [OG] },
   other: { 'geo.region': 'TR-07', 'geo.placename': 'Antalya', contact: PHONE },
@@ -43,6 +43,12 @@ const jsonLd = {
       provider: { '@type': 'ClothingStore', name: 'Terzi Can', telephone: '+905318986418', url: `${SITE}/antalya-terzi` },
       areaServed: { '@type': 'AdministrativeArea', name: 'Antalya' },
       description: 'Custom tailoring in 100% natural linen and cotton, made to the guest\'s own measurements.',
+    },
+    {
+      '@type': 'FAQPage', '@id': `${PAGE_URL}#faq`,
+      mainEntity: KETEN_PAMUK_T.en.faq.map(([q, a]: string[]) => ({
+        '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a },
+      })),
     },
   ],
 };

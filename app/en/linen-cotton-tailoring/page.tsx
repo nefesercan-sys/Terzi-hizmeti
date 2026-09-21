@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: 'Linen & Cotton Custom Tailoring Models | Terzi Can',
     description: '100% natural linen and cotton, tailored exactly to your measurements. Delivered to your hotel.',
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'en_US', alternateLocale: ['tr_TR'], type: 'website',
-    images: [{ url: OG, width: 1024, height: 1024, alt: 'Linen Cotton Custom Tailoring', type: 'image/png' }],
+    images: [{ url: OG, width: 1024, height: 1024, alt: 'Linen Cotton Custom Tailoring', type: 'image/jpeg' }],
   },
   twitter: { card: 'summary_large_image', title: 'Linen & Cotton Custom Tailoring', description: 'Custom-made in 100% natural fabric, to your measurements.', images: [OG] },
   other: { 'geo.region': 'TR-07', 'geo.placename': 'Antalya', contact: PHONE },

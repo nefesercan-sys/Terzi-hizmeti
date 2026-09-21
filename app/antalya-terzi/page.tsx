@@ -19,29 +19,19 @@ const OG        = `${SITE}/terzi-can-hero.jpg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  // DÜZELTME: Başlık İngilizce ifadeyle başlıyordu ("Konyaaltı Tailor
-  // Service") — bu sayfanın hedeflediği asıl arama niyeti Türkçe
-  // ("Hurma terzi", "Konyaaltı terzi"). Başlık Türkçe anahtar kelimelerle
-  // başlayacak şekilde yeniden yazıldı.
   title: 'Hurma, Liman, Sarısu Terzi — Konyaaltı',
-  description:
-    "Konyaaltı Hurma, Liman, Sarısu, Uncalı, Gürsu mahallelerinde terzi ve dikiş atölyesi. Kıyafet dikimi, üniforma üretimi, fason imalat. ☎ " + PHONE,
+  description: "Konyaaltı Hurma, Liman, Sarısu, Uncalı, Gürsu mahallelerinde terzi ve dikiş atölyesi. Kıyafet dikimi, üniforma üretimi, fason imalat. ☎ " + PHONE,
   keywords: [
     'Hurma terzi Konyaaltı', 'Liman terzi Konyaaltı', 'Sarısu terzi Konyaaltı',
     'Uncalı terzi', 'Gürsu terzi', 'Öğretmenevleri terzi', 'Ahatlı terzi', 'Toros terzi',
-    'Konyaaltı dikiş atölyesi', 'Konyaaltı tekstil atölyesi',
-    'Konyaaltı tailor service', 'Antalya tailor', 'tailor service Antalya',
-    'dikim tasarım atölyesi Antalya', 'fason imalat Antalya', 'fason üretim Konyaaltı',
-    'bay kıyafet dikimi Antalya', 'bayan kıyafet dikimi Antalya', 'çocuk kıyafet dikimi Antalya',
-    'üniforma üretimi Antalya', 'terzi Antalya', 'terzi dikim tamir tadilat Antalya',
-    'paça kısaltma fiyatı Konyaaltı', 'bel daraltma fiyatı Antalya',
-    'fermuar değişimi fiyatı Antalya', 'ütü fiyatı Antalya', 'kuru temizleme fiyatı Konyaaltı',
-    'Muratpaşa terzi', 'Kepez terzi', 'Lara terzi', 'Alanya terzi', 'Manavgat terzi',
+    'Konyaaltı dikiş atölyesi', 'Konyaaltı tekstil atölyesi', 'fason imalat Antalya',
+    'bay kıyafet dikimi Antalya', 'bayan kıyafet dikimi Antalya', 'üniforma üretimi Antalya',
+    'terzi Antalya', 'paça kısaltma fiyatı Konyaaltı', 'fermuar değişimi fiyatı Antalya',
     'портной Анталья Коньяалты', 'Schneider Antalya Konyaaltı',
   ],
   authors: [{ name: BIZ, url: SITE }],
   creator: BIZ,
-  publisher: 'SwapHubs',
+  publisher: 'Terzi Hizmeti',
   robots: {
     index: true, follow: true,
     googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
@@ -50,9 +40,9 @@ export const metadata: Metadata = {
     canonical: PAGE_URL,
     languages: {
       'tr': PAGE_URL,
-      'en': 'https://terzihizmeti.com.tr/en/tailor-service-antalya',
-      'ru': 'https://terzihizmeti.com.tr/ru/uslugi-portnogo-antalya',
-      'de': 'https://terzihizmeti.com.tr/de/schneiderservice-antalya',
+      'en': `${SITE}/en/tailor-service-antalya`,
+      'ru': `${SITE}/ru/uslugi-portnogo-antalya`,
+      'de': `${SITE}/de/schneiderservice-antalya`,
       'x-default': PAGE_URL,
     },
   },
@@ -60,8 +50,8 @@ export const metadata: Metadata = {
     title: 'Hurma, Liman, Sarısu Terzi — Konyaaltı',
     description: 'Hurma, Liman, Sarısu, Uncalı, Gürsu mahalleleri öncelikli. ☎ ' + PHONE,
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'tr_TR',
-    alternateLocale: ['en_US'], type: 'website',
-    images: [{ url: OG, width: 1024, height: 1024, alt: 'Konyaaltı Tailor Service', type: 'image/png' }],
+    alternateLocale: ['en_US', 'ru_RU', 'de_DE'], type: 'website',
+    images: [{ url: OG, width: 1024, height: 1024, alt: 'Konyaaltı Tailor Service', type: 'image/jpeg' }],
   },
   twitter: {
     card: 'summary_large_image',
@@ -149,32 +139,6 @@ const jsonLd = {
       ],
     },
     {
-      '@type': 'Service',
-      '@id': `${PAGE_URL}#service`,
-      serviceType: 'Terzi, Dikim Atölyesi, Fason İmalat ve Üniforma Üretimi',
-      provider: { '@id': `${SITE}#business` },
-      areaServed: [
-        'Hurma, Konyaaltı', 'Liman, Konyaaltı', 'Sarısu, Konyaaltı', 'Uncalı, Konyaaltı',
-        'Gürsu, Konyaaltı', 'Öğretmenevleri, Konyaaltı', 'Ahatlı, Konyaaltı', 'Toros, Konyaaltı',
-        'Konyaaltı', 'Muratpaşa', 'Kepez', 'Döşemealtı', 'Aksu', 'Serik',
-        'Lara', 'Güzeloba', 'Belek', 'Alanya', 'Manavgat', 'Kemer', 'Side', 'Antalya',
-      ].map((n) => ({ '@type': 'Place', name: n })),
-      hasOfferCatalog: {
-        '@type': 'OfferCatalog',
-        name: 'Dikim, Tasarım ve Fason İmalat Hizmetleri',
-        itemListElement: [
-          { '@type': 'Offer', name: 'Erkek Gömlek Dikimi', price: '350', priceCurrency: 'TRY', priceValidUntil: '2026-12-31', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Erkek Gömlek Dikimi' } },
-          { '@type': 'Offer', name: 'Kadın Elbise Dikimi', price: '600', priceCurrency: 'TRY', priceValidUntil: '2026-12-31', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Kadın Elbise Dikimi' } },
-          { '@type': 'Offer', name: 'Fermuar Değişimi', price: '200', priceCurrency: 'TRY', priceValidUntil: '2026-12-31', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Fermuar Değişimi' } },
-          { '@type': 'Offer', name: 'Paça Kısaltma', price: '150', priceCurrency: 'TRY', priceValidUntil: '2026-12-31', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Paça Kısaltma' } },
-          { '@type': 'Offer', name: 'Bel Daraltma', price: '150', priceCurrency: 'TRY', priceValidUntil: '2026-12-31', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Bel Daraltma' } },
-          { '@type': 'Offer', name: 'Gelinlik & Abiye Tadilatı', price: '400', priceCurrency: 'TRY', priceValidUntil: '2026-12-31', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Gelinlik ve Abiye Tadilatı' } },
-          { '@type': 'Offer', name: 'Ütü Hizmeti', price: '80', priceCurrency: 'TRY', priceValidUntil: '2026-12-31', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Profesyonel Ütü' } },
-          { '@type': 'Offer', name: 'Kuru Temizleme', price: '300', priceCurrency: 'TRY', priceValidUntil: '2026-12-31', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Kuru Temizleme' } },
-        ],
-      },
-    },
-    {
       '@type': 'FAQPage',
       '@id': `${PAGE_URL}#faq`,
       mainEntity: [
@@ -226,8 +190,8 @@ const WORKSHOP_SERVICES: WorkshopService[] = [
   { icon: '✏️', tr: 'Dikim Tasarım Atölyesi', en: 'Design Workshop', desc: 'Sıfırdan model tasarımı, prototip dikimi, kumaş danışmanlığı.', items: ['Model Tasarımı', 'Prototip', 'Kumaş Danışmanlığı'] },
 ];
 
-type Lang = 'tr' | 'en' | 'ru';
-const LANGS: Lang[] = ['tr', 'en', 'ru'];
+type Lang = 'tr' | 'en' | 'ru' | 'de';
+const LANGS: Lang[] = ['tr', 'en', 'ru', 'de'];
 
 interface LangLabel {
   name: string;
@@ -239,6 +203,7 @@ const LANG_LABELS: Record<Lang, LangLabel> = {
   tr: { name: 'Türkçe', flag: '🇹🇷', note: 'Fiyatlar başlangıç fiyatıdır, kumaş ve işçilik durumuna göre değişebilir. KDV dahildir.' },
   en: { name: 'English', flag: '🇬🇧', note: 'Prices are starting prices and may vary depending on fabric and workmanship. VAT included.' },
   ru: { name: 'Русский', flag: '🇷🇺', note: 'Цены указаны от, могут меняться в зависимости от ткани и сложности работы. НДС включён.' },
+  de: { name: 'Deutsch', flag: '🇩🇪', note: 'Die Preise sind ab-Preise, können je nach Stoff und Arbeitsaufwand variieren. Inklusive MwSt.' },
 };
 
 interface RepairCategory {
@@ -291,6 +256,20 @@ const REPAIR_CATEGORIES: Record<Lang, RepairCategory[]> = {
     { icon: '🧺', title: 'Глажка и химчистка', keyword: 'глажка Анталья · химчистка Коньяалты',
       desc: 'Профессиональная паровая глажка и химчистка.',
       rows: [['Глажка (за вещь)', '₺80+'], ['Химчистка (платье)', '₺300+'], ['Химчистка (пальто)', '₺500+'], ['Стирка и глажка (за кг)', '₺80+/кг']] },
+  ],
+  de: [
+    { icon: '✂️', title: 'Schneiderdienste', keyword: 'Maßschneiderei Antalya · Konyaaltı',
+      desc: 'Maßgeschneiderte Kleidung. Herren, Damen, Kinder — exakt nach Ihren Maßen entworfen und genäht.',
+      rows: [['Herrenhemd maßgeschneidert', '₺350+'], ['Herrenhose maßgeschneidert', '₺400+'], ['Damenkleid maßgeschneidert', '₺600+'], ['Abendkleid / Besonderer Anlass', '₺900+'], ['Kinderkleidung', '₺250+']] },
+    { icon: '🔧', title: 'Reparaturdienste', keyword: 'Kleidungsreparatur Antalya · Reißverschluss Konyaaltı',
+      desc: 'Risse, Nähte, Reißverschlüsse, Knöpfe — die alltäglichen Reparaturen, die Kleidung am meisten braucht.',
+      rows: [['Reißverschluss (Hose/Jeans)', '₺200+'], ['Reißverschluss (Jacke/Mantel)', '₺300+'], ['Riss / Naht reparieren', '₺150+'], ['Knopf, Haken reparieren', '₺60+'], ['Futterwechsel', '₺300+']] },
+    { icon: '📏', title: 'Änderungsschneiderei', keyword: 'Hosen kürzen Antalya · Taille Konyaaltı',
+      desc: 'Präzise Passformanpassungen, damit Ihre Kleidung genau richtig an Ihrem Körper sitzt.',
+      rows: [['Kürzen (Hose/Jeans/Rock)', '₺150+'], ['Taille enger machen', '₺150+'], ['Ärmel kürzen', '₺200+'], ['Kleid / Jacke enger machen', '₺200+'], ['Braut- & Abendkleid ändern', '₺400+']] },
+    { icon: '🧺', title: 'Bügeln & Reinigung', keyword: 'Bügelservice Antalya · Reinigung Konyaaltı',
+      desc: 'Professionelles Dampfbügeln und chemische Reinigung. Abholung und Lieferung vom Hotel.',
+      rows: [['Bügeln (pro Stück)', '₺80+'], ['Chemische Reinigung (Kleid)', '₺300+'], ['Chemische Reinigung (Mantel)', '₺500+'], ['Waschen & Bügeln (pro kg)', '₺80+/kg']] },
   ],
 };
 
@@ -436,11 +415,11 @@ export default function KonyaaltiTailorServicePage() {
               <div className="sec-head">
                 <span className="eyebrow">₺ Şeffaf Fiyatlar 2026 · Prices · Цены</span>
                 <h2 className="sec-h" id="price-h">Dikim, Tamir, Tadilat ve Ütü Hizmetleri</h2>
-                <p className="sec-sub">Antalya Konyaaltı terzi fiyatları — Türkçe, İngilizce ve Rusça. Kesin fiyat için WhatsApp&apos;tan fotoğraf gönderin.</p>
+                <p className="sec-sub">Antalya Konyaaltı terzi fiyatları — Türkçe, İngilizce, Rusça ve Almanca. Kesin fiyat için WhatsApp&apos;tan fotoğraf gönderin.</p>
               </div>
 
               {LANGS.map((lang: Lang) => (
-                <div key={lang} style={{ marginBottom: lang !== 'ru' ? '3rem' : 0 }}>
+                <div key={lang} style={{ marginBottom: lang !== 'de' ? '3rem' : 0 }}>
                   <h3 style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: '1.2rem', fontFamily: 'var(--font-syne)', fontSize: '1.05rem', fontWeight: 700, color: '#C9A96E' }}>
                     <span aria-hidden="true">{LANG_LABELS[lang].flag}</span>
                     {LANG_LABELS[lang].name}

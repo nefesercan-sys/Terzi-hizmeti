@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: 'Пошив на заказ из льна и хлопка | Terzi Can',
     description: '100% натуральный лён и хлопок, пошив точно по вашим меркам. Доставка в отель.',
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'ru_RU', alternateLocale: ['tr_TR'], type: 'website',
-    images: [{ url: OG, width: 1024, height: 1024, alt: 'Пошив лён хлопок на заказ', type: 'image/png' }],
+    images: [{ url: OG, width: 1024, height: 1024, alt: 'Пошив лён хлопок на заказ', type: 'image/jpeg' }],
   },
   twitter: { card: 'summary_large_image', title: 'Пошив из льна и хлопка на заказ', description: 'Пошив из 100% натуральной ткани по вашим меркам.', images: [OG] },
   other: { 'geo.region': 'TR-07', 'geo.placename': 'Antalya', contact: PHONE },

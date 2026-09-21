@@ -12,13 +12,14 @@ const WA_NUM    = '905318986418';
 const WA        = (m: string) => `https://wa.me/${WA_NUM}?text=${encodeURIComponent(m)}`;
 const WA_DEF    = WA('Hello, I would like a mobile tailor to come to my hotel/address. My location: ');
 const MAPS      = 'https://maps.app.goo.gl/QEgSkRoA8Nz8H62g8';
-const TODAY     = new Date().toISOString().split('T')[0];
+const LAST_MOD  = '2024-08-25'; // Statik tarih (Hydration hatasını önler)
 const OG        = `${SITE}/terzi-can-hero.jpg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: 'Tailor Service Antalya · Mobile Tailor to Your Hotel · All Districts',
-  description: 'Tailoring, repair, alterations and ironing service across all Antalya districts. Mobile tailor comes to your hotel or address — Belek, Lara, Kemer, Alanya, Side, Konyaaltı. English speaking. ☎ ' + PHONE,
+  title: 'Tailor Service Antalya · Mobile Tailor to Your Hotel',
+  // SEO Optimizasyonu: Google'da kesilmemesi için ~150 karaktere optimize edildi
+  description: 'Mobile tailor, repair, alterations, and ironing service across all Antalya districts. We visit your hotel in Belek, Lara, Kemer, and Side.',
   keywords: [
     'tailor service Antalya', 'mobile tailor Antalya', 'hotel tailor Antalya',
     'English speaking tailor Antalya', 'clothing repair Antalya', 'alterations Antalya',
@@ -50,7 +51,7 @@ const jsonLd = {
       '@type': 'WebPage', '@id': `${PAGE_URL}#webpage`, url: PAGE_URL,
       name: 'Tailor Service Antalya — Mobile Tailor, Repair, Alterations, Ironing',
       description: 'Mobile tailor service across all Antalya districts, hotels and addresses.',
-      inLanguage: 'en', dateModified: TODAY,
+      inLanguage: 'en', dateModified: LAST_MOD,
       breadcrumb: { '@id': `${PAGE_URL}#breadcrumb` },
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['#hero-desc', '#seo-intro', '#faq'] },
     },

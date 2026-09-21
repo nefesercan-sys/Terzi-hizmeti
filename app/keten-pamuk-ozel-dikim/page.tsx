@@ -46,9 +46,9 @@ const jsonLd = {
     },
     {
       '@type': 'FAQPage', '@id': `${PAGE_URL}#faq`,
-      mainEntity: KETEN_PAMUK_T.tr.faq.map(([q, a]: string[]) => ({
+      mainEntity: KETEN_PAMUK_T.tr.faq?.map(([q, a]: string[]) => ({
         '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a },
-      })),
+      })) || [],
     },
   ],
 };

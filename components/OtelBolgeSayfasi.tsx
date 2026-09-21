@@ -7,6 +7,14 @@ const WA_NUM = '905318986418';
 
 type Lang = 'tr' | 'en' | 'ru' | 'de';
 
+// VIP SEO Metinleri için Tip Tanımlaması
+export interface SeoContent {
+  h1: string;
+  h2: string;
+  body1: string;
+  body2: string;
+}
+
 const T: Record<Lang, any> = {
   en: {
     homeLabel: '← Home', tag: (r: string) => `📍 ${r} Hotel Zone · Mobile Tailor`,
@@ -150,8 +158,13 @@ const T: Record<Lang, any> = {
   },
 };
 
-export default function OtelBolgeSayfasi({ lang, region, allRegions, basePath, maps }: {
-  lang: Lang; region: OtelBolgesi; allRegions: OtelBolgesi[]; basePath: string; maps: string;
+export default function OtelBolgeSayfasi({ lang, region, allRegions, basePath, maps, seoContent }: {
+  lang: Lang; 
+  region: OtelBolgesi; 
+  allRegions: OtelBolgesi[]; 
+  basePath: string; 
+  maps: string;
+  seoContent?: SeoContent; // VIP SEO içerik objesi buraya bağlanıyor
 }) {
   const t = T[lang];
   const waMsg = lang === 'ru' ? `Здравствуйте, я в отеле в районе ${region.name}. Мой отель: `
@@ -190,10 +203,30 @@ export default function OtelBolgeSayfasi({ lang, region, allRegions, basePath, m
       </header>
 
       <main id="main-content">
+        
+        {/* VIP SEO ve Hakkında Bölümü (Eğer seoContent gönderilmişse zengin SEO metni gösterilir) */}
         <section className="sec" aria-labelledby="about-h">
           <div className="ctr" style={{ maxWidth: 760 }}>
-            <h2 className="sec-h" id="about-h">{t.aboutH(region.name)}</h2>
-            <p className="sec-sub" style={{ marginBottom: '.6rem' }}>{region.blurb[lang]}</p>
+            <h2 className="sec-h" id="about-h">
+              {seoContent ? seoContent.h1 : t.aboutH(region.name)}
+            </h2>
+            
+            {seoContent && (
+              <h3 style={{ color: '#C9A96E', marginBottom: '1.2rem', fontSize: '1.25rem', fontWeight: 600 }}>
+                {seoContent.h2}
+              </h3>
+            )}
+            
+            <p className="sec-sub" style={{ marginBottom: seoContent ? '1rem' : '.6rem' }}>
+              {seoContent ? seoContent.body1 : region.blurb[lang]}
+            </p>
+            
+            {seoContent && (
+              <p className="sec-sub" style={{ marginBottom: '1.5rem' }}>
+                {seoContent.body2}
+              </p>
+            )}
+
             <p style={{ fontSize: '.85rem', color: '#C9A96E', fontWeight: 700 }}>🚗 {t.travelLabel} {region.travelTime[lang]}</p>
           </div>
         </section>
@@ -243,7 +276,7 @@ export default function OtelBolgeSayfasi({ lang, region, allRegions, basePath, m
               <caption className="visually-hidden">{t.priceH}</caption>
               <thead><tr><th scope="col" className="visually-hidden">Service</th><th scope="col" className="visually-hidden">Price</th></tr></thead>
               <tbody>
-                {t.priceRows.map((row: string[]) => (<tr key={row[0]}><td>{row[0]}</td><td style={{ color: row[1].match(/FREE|БЕСПЛАТНО|KOSTENLOS/) ? '#22c55e' : undefined, fontWeight: 600 }}>{row[1]}</td></tr>))}
+                {t.priceRows.map((row: string[]) => (<tr key={row[0]}><td>{row[0]}</td><td style={{ color: row[1].match(/FREE|БЕСПЛАТНО|KOSTENLOS|ÜCRETSİZ/) ? '#22c55e' : undefined, fontWeight: 600 }}>{row[1]}</td></tr>))}
               </tbody>
             </table>
           </div>

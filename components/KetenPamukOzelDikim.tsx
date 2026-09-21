@@ -12,7 +12,7 @@ type Lang = 'tr' | 'en' | 'ru' | 'de';
 const MODELLER = [
   {
     id: 'kadin-elbise',
-    img: 'https://images.pexels.com/photos/4256573/pexels-photo-4256573.jpeg?auto=compress&cs=tinysrgb&w=700&h=933&fit=crop',
+    img: 'https://images.unsplash.com/photo-1700317440740-627b8c533120?w=700&q=80',
     baslik: { tr: 'Kadın Keten Maxi Elbise', en: "Women's Linen Maxi Dress", ru: 'Женское льняное макси-платье', de: 'Damen Leinen-Maxikleid' },
     aciklama: {
       tr: 'Geniş kesim, bağcıklı bel — sahil ve şehir için serin, doğal keten.',
@@ -23,7 +23,7 @@ const MODELLER = [
   },
   {
     id: 'kadin-bluz',
-    img: 'https://images.pexels.com/photos/18022030/pexels-photo-18022030.jpeg?auto=compress&cs=tinysrgb&w=700&h=933&fit=crop',
+    img: 'https://images.unsplash.com/photo-1631186626171-d5010e20d347?w=700&q=80',
     baslik: { tr: 'Kadın Pamuk Oversize Gömlek', en: "Women's Oversized Cotton Shirt", ru: 'Женская оверсайз рубашка из хлопка', de: 'Damen Oversize Baumwollhemd' },
     aciklama: {
       tr: '%100 organik pamuk, oversize kesim — gündelik ve iş için.',
@@ -34,7 +34,7 @@ const MODELLER = [
   },
   {
     id: 'erkek-gomlek',
-    img: 'https://images.pexels.com/photos/17630522/pexels-photo-17630522.jpeg?auto=compress&cs=tinysrgb&w=700&h=933&fit=crop',
+    img: 'https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=700&q=80',
     baslik: { tr: 'Erkek Keten Yazlık Gömlek', en: "Men's Linen Summer Shirt", ru: 'Мужская летняя льняная рубашка', de: 'Herren Leinen-Sommerhemd' },
     aciklama: {
       tr: 'Hafif dokulu, nefes alan keten — sıcak günlerde terletmez.',
@@ -45,7 +45,7 @@ const MODELLER = [
   },
   {
     id: 'erkek-takim',
-    img: 'https://images.pexels.com/photos/6765658/pexels-photo-6765658.jpeg?auto=compress&cs=tinysrgb&w=700&h=933&fit=crop',
+    img: 'https://images.unsplash.com/photo-1517467069232-26eee2e331b1?w=700&q=80',
     baslik: { tr: 'Erkek Keten-Pamuk Takım', en: "Men's Linen-Cotton Suit", ru: 'Мужской костюм лён-хлопок', de: 'Herren Leinen-Baumwoll-Anzug' },
     aciklama: {
       tr: 'Hafif blazer + pantolon — düğün ve özel günler için doğal şıklık.',
@@ -56,7 +56,7 @@ const MODELLER = [
   },
   {
     id: 'plaj-kaftan',
-    img: 'https://images.pexels.com/photos/8459366/pexels-photo-8459366.jpeg?auto=compress&cs=tinysrgb&w=700&h=933&fit=crop',
+    img: 'https://images.unsplash.com/photo-1581746989955-6b19860dc7de?w=700&q=80',
     baslik: { tr: 'Plaj Kaftanı / Kimono', en: 'Beach Kaftan / Kimono', ru: 'Пляжное кафтан / кимоно', de: 'Strandkaftan / Kimono' },
     aciklama: {
       tr: 'Açık kesim keten kimono — plaj üstü veya akşam için hafif bir katman.',
@@ -67,7 +67,7 @@ const MODELLER = [
   },
   {
     id: 'kadin-pantolon',
-    img: 'https://images.pexels.com/photos/31112215/pexels-photo-31112215.jpeg?auto=compress&cs=tinysrgb&w=700&h=933&fit=crop',
+    img: 'https://images.unsplash.com/photo-1509631179647-0177331693ae?w=700&q=80',
     baslik: { tr: 'Kadın Keten Wide-Leg Pantolon', en: "Women's Wide-Leg Linen Trousers", ru: 'Женские широкие льняные брюки', de: 'Damen Leinen-Weitbeinhose' },
     aciklama: {
       tr: 'Yüksek bel, bol paça — ofisten sahile her ortama uyar.',
@@ -92,6 +92,14 @@ const T: Record<Lang, any> = {
       ['3️⃣', 'Dikim', 'Atölyemizde elinizle dikilir — genelde 3-5 gün içinde hazır.'],
       ['4️⃣', 'Teslim', 'Otelinize veya adresinize teslim edilir, ödeme teslimde.'],
     ],
+    faqH: 'Sık Sorulan Sorular',
+    faq: [
+      ['Hazır model mi seçmem lazım, kendi tasarımımı da diktirebilir miyim?', 'Hayır, hazır modelle sınırlı değilsiniz — kendi fotoğrafınızı veya fikrinizi WhatsApp\'tan gönderebilirsiniz, ona göre dikeriz.'],
+      ['Kumaşı siz mi seçiyorsunuz, ben mi?', 'Siz seçersiniz — %100 keten veya %100 pamuk arasından, WhatsApp\'ta görüşürken karar veriyoruz.'],
+      ['Dikim ne kadar sürüyor?', 'Genelde 3-5 gün içinde hazır oluyor, model karmaşıklığına göre değişebilir.'],
+      ['Otelime teslimat yapıyor musunuz?', 'Evet, Antalya genelindeki otellere teslim ediyoruz, ödeme teslimde alınır.'],
+      ['Ölçümü nasıl vereceğim?', 'WhatsApp üzerinden ölçülerinizi paylaşırsınız, isterseniz görüntülü görüşmeyle de yardımcı oluruz.'],
+    ],
     finalCta: 'Kendi Modelinizi Diktirin', finalSub: 'Fotoğraf gönderin, fiyat teklifi alın — 30 dakikada dönüş.',
     waBtn: 'WhatsApp ile Başlayın',
   },
@@ -107,6 +115,14 @@ const T: Record<Lang, any> = {
       ['2️⃣', 'Measurements & Fabric', 'Share your measurements on WhatsApp, choose linen or cotton.'],
       ['3️⃣', 'Tailoring', 'Hand-tailored in our workshop — usually ready in 3-5 days.'],
       ['4️⃣', 'Delivery', 'Delivered to your hotel or address, pay on delivery.'],
+    ],
+    faqH: 'Frequently Asked Questions',
+    faq: [
+      ['Do I have to pick a ready-made style, or can I have my own design made?', 'You are not limited to the gallery — send your own photo or idea on WhatsApp and we\'ll tailor it.'],
+      ['Do I choose the fabric, or do you?', 'You choose — 100% linen or 100% cotton, we\'ll confirm the choice with you on WhatsApp.'],
+      ['How long does tailoring take?', 'Usually ready within 3-5 days, depending on the complexity of the style.'],
+      ['Do you deliver to my hotel?', 'Yes, we deliver to hotels across Antalya, payment on delivery.'],
+      ['How do I give you my measurements?', 'You share them on WhatsApp — we can also help via a video call if needed.'],
     ],
     finalCta: 'Have Your Own Style Made', finalSub: 'Send a photo, get a price quote — usually within 30 minutes.',
     waBtn: 'Start on WhatsApp',
@@ -124,6 +140,14 @@ const T: Record<Lang, any> = {
       ['3️⃣', 'Пошив', 'Шьём вручную в мастерской — обычно готово за 3-5 дней.'],
       ['4️⃣', 'Доставка', 'Доставим в отель или по адресу, оплата при получении.'],
     ],
+    faqH: 'Часто задаваемые вопросы',
+    faq: [
+      ['Нужно ли выбирать готовую модель, или можно сшить своё?', 'Вы не ограничены галереей — пришлите своё фото или идею в WhatsApp, мы сошьём по нему.'],
+      ['Я выбираю ткань или вы?', 'Вы выбираете — 100% лён или 100% хлопок, окончательно определим в WhatsApp.'],
+      ['Сколько времени занимает пошив?', 'Обычно готово за 3-5 дней, в зависимости от сложности модели.'],
+      ['Вы доставляете в отель?', 'Да, доставляем в отели по всей Анталье, оплата при получении.'],
+      ['Как передать мерки?', 'Пришлите их в WhatsApp — при необходимости поможем и по видеосвязи.'],
+    ],
     finalCta: 'Сшить по своей модели', finalSub: 'Пришлите фото — получите цену в течение 30 минут.',
     waBtn: 'Начать в WhatsApp',
   },
@@ -140,13 +164,23 @@ const T: Record<Lang, any> = {
       ['3️⃣', 'Schneidern', 'Handgefertigt in unserer Werkstatt — meist in 3-5 Tagen fertig.'],
       ['4️⃣', 'Lieferung', 'Lieferung an Ihr Hotel oder Ihre Adresse, Zahlung bei Lieferung.'],
     ],
+    faqH: 'Häufig gestellte Fragen',
+    faq: [
+      ['Muss ich ein fertiges Modell wählen, oder kann ich mein eigenes Design schneidern lassen?', 'Sie sind nicht auf die Galerie beschränkt — senden Sie Ihr eigenes Foto oder Ihre Idee per WhatsApp, wir schneidern danach.'],
+      ['Wähle ich den Stoff, oder Sie?', 'Sie wählen — 100% Leinen oder 100% Baumwolle, wir bestätigen die Wahl gemeinsam per WhatsApp.'],
+      ['Wie lange dauert die Anfertigung?', 'Meist innerhalb von 3-5 Tagen fertig, je nach Komplexität des Modells.'],
+      ['Liefern Sie an mein Hotel?', 'Ja, wir liefern an Hotels in ganz Antalya, Zahlung bei Lieferung.'],
+      ['Wie gebe ich meine Maße an?', 'Teilen Sie sie per WhatsApp mit — bei Bedarf helfen wir auch per Videoanruf.'],
+    ],
     finalCta: 'Eigenen Stil schneidern lassen', finalSub: 'Foto senden, Preisangebot erhalten — meist innerhalb 30 Minuten.',
     waBtn: 'Mit WhatsApp beginnen',
   },
 };
 
-export default function KetenPamukOzelDikim({ lang }: { lang: Lang }) {
-  const t = T[lang];
+export const KETEN_PAMUK_T = T;
+
+export default function KetenPamukOzelDikim({ lang = 'tr' }: { lang?: Lang }) {
+  const t = T[lang] || T['tr'];
   const waMsg = lang === 'ru' ? 'Здравствуйте, хочу заказать пошив из льна/хлопка. Модель: '
     : lang === 'de' ? 'Hallo, ich möchte etwas aus Leinen/Baumwolle schneidern lassen. Modell: '
     : lang === 'en' ? 'Hello, I would like to order custom linen/cotton tailoring. Style: '
@@ -178,7 +212,8 @@ export default function KetenPamukOzelDikim({ lang }: { lang: Lang }) {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(260px,1fr))', gap: '1.2rem' }}>
             {MODELLER.map((m) => (
               <div key={m.id} style={{ background: '#fff', borderRadius: 6, overflow: 'hidden', border: '1px solid rgba(44,74,62,.12)' }}>
-                <img src={m.img} alt={m.baslik[lang]} style={{ width: '100%', height: 240, objectFit: 'cover', display: 'block' }} loading="lazy" />
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={m.img} alt={m.baslik[lang] || m.baslik['tr']} style={{ width: '100%', height: 240, objectFit: 'cover', display: 'block' }} loading="lazy" />
                 <div style={{ padding: '1.1rem' }}>
                   <h3 style={{ fontFamily: 'Georgia,serif', fontSize: '1rem', color: '#1C1814', marginBottom: '.4rem' }}>{m.baslik[lang]}</h3>
                   <p style={{ fontSize: '.8rem', color: '#7A6E62', lineHeight: 1.6, marginBottom: '.9rem' }}>{m.aciklama[lang]}</p>
@@ -205,6 +240,18 @@ export default function KetenPamukOzelDikim({ lang }: { lang: Lang }) {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section style={{ padding: '3.5rem 1.5rem' }}>
+        <div style={{ maxWidth: 760, margin: '0 auto' }}>
+          <h2 style={{ fontFamily: 'Georgia,serif', fontSize: '1.5rem', color: '#1C1814', marginBottom: '1.5rem', textAlign: 'center' }}>{t.faqH}</h2>
+          {t.faq.map(([q, a]: string[]) => (
+            <details key={q} style={{ borderBottom: '1px solid rgba(44,74,62,.15)', padding: '1rem 0' }}>
+              <summary style={{ cursor: 'pointer', fontSize: '.9rem', fontWeight: 600, color: '#1C1814' }}>{q}</summary>
+              <p style={{ marginTop: '.7rem', fontSize: '.83rem', color: '#7A6E62', lineHeight: 1.7 }}>{a}</p>
+            </details>
+          ))}
         </div>
       </section>
 

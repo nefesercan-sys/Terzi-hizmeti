@@ -107,3 +107,4 @@ export default async function OtelBolgeEnPage({ params }: { params: Promise<{ re
     </>
   );
 }
+ 

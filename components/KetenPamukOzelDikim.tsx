@@ -1,4 +1,4 @@
-'use client';
+
 
 const PHONE = '+90 531 898 64 18';
 const WA_NUM = '905318986418';

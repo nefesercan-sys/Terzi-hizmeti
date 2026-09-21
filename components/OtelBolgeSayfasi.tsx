@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import type { OtelBolgesi } from '@/lib/otel-bolgeleri';
 
 const PHONE = '+90 531 898 64 18';
@@ -164,13 +165,15 @@ export default function OtelBolgeSayfasi({ lang, region, allRegions, basePath, m
   allRegions: OtelBolgesi[]; 
   basePath: string; 
   maps: string;
-  seoContent?: SeoContent; // VIP SEO içerik objesi buraya bağlanıyor
+  seoContent?: SeoContent; 
 }) {
-  const t = T[lang];
+  const t = T[lang] || T['en'];
+  
   const waMsg = lang === 'ru' ? `Здравствуйте, я в отеле в районе ${region.name}. Мой отель: `
     : lang === 'de' ? `Hallo, ich bin in einem Hotel in ${region.name}. Mein Hotel: `
     : lang === 'tr' ? `Merhaba, ${region.name} bölgesinde bir oteldeyim. Otelim: `
     : `Hello, I am at a hotel in ${region.name}. My hotel: `;
+    
   const WA_URL = (m: string) => `https://wa.me/${WA_NUM}?text=${encodeURIComponent(m)}`;
   const WA_DEF = WA_URL(waMsg);
 
@@ -180,7 +183,7 @@ export default function OtelBolgeSayfasi({ lang, region, allRegions, basePath, m
 
       <nav className="nav" aria-label="Main navigation">
         <div className="nav-logo"><span className="nav-dot" aria-hidden="true" />TERZİ CAN</div>
-        <a href="/" className="nav-home">{t.homeLabel}</a>
+        <Link href="/" className="nav-home">{t.homeLabel}</Link>
         <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="nav-wa">WHATSAPP <span aria-hidden="true">→</span></a>
       </nav>
 
@@ -238,7 +241,7 @@ export default function OtelBolgeSayfasi({ lang, region, allRegions, basePath, m
               <p className="sec-sub">{t.hotelsSub}</p>
             </div>
             <ul className="other-districts" aria-label="Hotels">
-              {region.hotels.map((h) => (<li key={h} className="od-chip">{h}</li>))}
+              {region.hotels.map((h: string) => (<li key={h} className="od-chip">{h}</li>))}
             </ul>
             <p style={{ fontSize: '.8rem', color: 'rgba(255,255,255,.5)', marginTop: '1rem', fontStyle: 'italic' }}>{t.otherHotelsNote}</p>
           </div>
@@ -313,9 +316,9 @@ export default function OtelBolgeSayfasi({ lang, region, allRegions, basePath, m
       <footer>
         <div>© {new Date().getFullYear()} Terzi Can · {region.name} · {PHONE}</div>
         <nav className="foot-links" aria-label="Region links">
-          <a href={basePath}>{lang === 'ru' ? '← Все районы' : lang === 'de' ? '← Alle Bezirke' : lang === 'tr' ? '← Tüm Bölgeler' : '← All Districts'}</a>
+          <Link href={basePath}>{lang === 'ru' ? '← Все районы' : lang === 'de' ? '← Alle Bezirke' : lang === 'tr' ? '← Tüm Bölgeler' : '← All Districts'}</Link>
           {allRegions.filter((r) => r.slug !== region.slug).map((r) => (
-            <a key={r.slug} href={`${basePath}/${r.slug}`}>{r.name}</a>
+            <Link key={r.slug} href={`${basePath}/${r.slug}`}>{r.name}</Link>
           ))}
         </nav>
       </footer>

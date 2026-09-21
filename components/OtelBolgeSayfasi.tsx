@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import type { OtelBolgesi } from '@/lib/otel-bolgeleri';
@@ -16,7 +17,52 @@ export interface SeoContent {
   body2: string;
 }
 
-const T: Record<Lang, any> = {
+// Servis gridi için tip tanımlaması
+export interface ServiceItem {
+  icon: string;
+  tr: string;
+  en: string;
+  desc: string;
+  items: string[];
+}
+
+// Tüm çeviri sözlüğünün haritasını çıkaran ana arayüz
+export interface Translation {
+  homeLabel: string;
+  tag: (r: string) => string;
+  h1: (r: string) => ReactNode;
+  heroDesc: (r: string, blurb: string) => string;
+  waShare: string;
+  callLabel: string;
+  aboutH: (r: string) => string;
+  travelLabel: string;
+  hotelsH: (r: string) => string;
+  hotelsSub: string;
+  otherHotelsNote: string;
+  servicesEyebrow: string;
+  servicesH: string;
+  servicesSub: string;
+  services: ServiceItem[];
+  priceEyebrow: string;
+  priceH: string;
+  priceSub: string;
+  priceRows: [string, string][];
+  procEyebrow: string;
+  procH: string;
+  steps: [string, string, string][];
+  faqEyebrow: string;
+  faqH: string;
+  faq: (r: string) => [string, string][];
+  ctaH: (r: string) => ReactNode;
+  ctaSub: string;
+  waBtn: string;
+  mapsBtn: string;
+  footTitle: string;
+  related: [string, string][];
+}
+
+// Record<Lang, any> yerine Record<Lang, Translation> kullanarak tip güvenliği sağlıyoruz
+const T: Record<Lang, Translation> = {
   en: {
     homeLabel: '← Home', tag: (r: string) => `📍 ${r} Hotel Zone · Mobile Tailor`,
     h1: (r: string) => <>Hotel Tailor<br /><span className="accent">{r}</span></>,
@@ -207,7 +253,7 @@ export default function OtelBolgeSayfasi({ lang, region, allRegions, basePath, m
 
       <main id="main-content">
         
-        {/* VIP SEO ve Hakkında Bölümü (Eğer seoContent gönderilmişse zengin SEO metni gösterilir) */}
+        {/* VIP SEO ve Hakkında Bölümü */}
         <section className="sec" aria-labelledby="about-h">
           <div className="ctr" style={{ maxWidth: 760 }}>
             <h2 className="sec-h" id="about-h">
@@ -255,7 +301,7 @@ export default function OtelBolgeSayfasi({ lang, region, allRegions, basePath, m
               <p className="sec-sub">{t.servicesSub}</p>
             </div>
             <div className="wk-grid">
-              {t.services.map((s: any) => (
+              {t.services.map((s: ServiceItem) => (
                 <article className="wk-card" key={s.tr}>
                   <div className="wk-icon" aria-hidden="true">{s.icon}</div>
                   <h3 className="wk-tr">{s.tr}</h3>
@@ -279,7 +325,7 @@ export default function OtelBolgeSayfasi({ lang, region, allRegions, basePath, m
               <caption className="visually-hidden">{t.priceH}</caption>
               <thead><tr><th scope="col" className="visually-hidden">Service</th><th scope="col" className="visually-hidden">Price</th></tr></thead>
               <tbody>
-                {t.priceRows.map((row: string[]) => (<tr key={row[0]}><td>{row[0]}</td><td style={{ color: row[1].match(/FREE|БЕСПЛАТНО|KOSTENLOS|ÜCRETSİZ/) ? '#22c55e' : undefined, fontWeight: 600 }}>{row[1]}</td></tr>))}
+                {t.priceRows.map((row: [string, string]) => (<tr key={row[0]}><td>{row[0]}</td><td style={{ color: row[1].match(/FREE|БЕСПЛАТНО|KOSTENLOS|ÜCRETSİZ/) ? '#22c55e' : undefined, fontWeight: 600 }}>{row[1]}</td></tr>))}
               </tbody>
             </table>
           </div>
@@ -289,7 +335,7 @@ export default function OtelBolgeSayfasi({ lang, region, allRegions, basePath, m
           <div className="ctr">
             <div className="sec-head"><span className="eyebrow">{t.procEyebrow}</span><h2 className="sec-h" id="proc-h">{t.procH}</h2></div>
             <ol className="step-grid" aria-label={t.procH}>
-              {t.steps.map((s: string[]) => (<li key={s[0]}><span className="step-n" aria-hidden="true">{s[0]}</span><div className="step-t">{s[1]}</div><div className="step-d">{s[2]}</div></li>))}
+              {t.steps.map((s: [string, string, string]) => (<li key={s[0]}><span className="step-n" aria-hidden="true">{s[0]}</span><div className="step-t">{s[1]}</div><div className="step-d">{s[2]}</div></li>))}
             </ol>
           </div>
         </section>
@@ -297,7 +343,7 @@ export default function OtelBolgeSayfasi({ lang, region, allRegions, basePath, m
         <section className="sec" style={{ background: 'rgba(0,0,0,.12)' }} aria-labelledby="faq-h">
           <div className="ctr" style={{ maxWidth: 740 }}>
             <div className="sec-head"><span className="eyebrow">{t.faqEyebrow}</span><h2 className="sec-h" id="faq-h">{t.faqH}</h2></div>
-            {t.faq(region.name).map((item: string[]) => (
+            {t.faq(region.name).map((item: [string, string]) => (
               <details key={item[0]} className="faq-item"><summary className="faq-q">{item[0]}</summary><p className="faq-a">{item[1]}</p></details>
             ))}
           </div>

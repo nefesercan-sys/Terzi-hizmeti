@@ -12,7 +12,7 @@ type Lang = 'tr' | 'en' | 'ru' | 'de';
 const MODELLER = [
   {
     id: 'kadin-elbise',
-    img: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=700&q=80',
+    img: 'https://images.pexels.com/photos/4256573/pexels-photo-4256573.jpeg?auto=compress&cs=tinysrgb&w=700&h=933&fit=crop',
     baslik: { tr: 'Kadın Keten Maxi Elbise', en: "Women's Linen Maxi Dress", ru: 'Женское льняное макси-платье', de: 'Damen Leinen-Maxikleid' },
     aciklama: {
       tr: 'Geniş kesim, bağcıklı bel — sahil ve şehir için serin, doğal keten.',
@@ -23,7 +23,7 @@ const MODELLER = [
   },
   {
     id: 'kadin-bluz',
-    img: 'https://images.unsplash.com/photo-1631186626171-d5010e20d347?w=700&q=80',
+    img: 'https://images.pexels.com/photos/18022030/pexels-photo-18022030.jpeg?auto=compress&cs=tinysrgb&w=700&h=933&fit=crop',
     baslik: { tr: 'Kadın Pamuk Oversize Gömlek', en: "Women's Oversized Cotton Shirt", ru: 'Женская оверсайз рубашка из хлопка', de: 'Damen Oversize Baumwollhemd' },
     aciklama: {
       tr: '%100 organik pamuk, oversize kesim — gündelik ve iş için.',
@@ -34,7 +34,7 @@ const MODELLER = [
   },
   {
     id: 'erkek-gomlek',
-    img: 'https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=700&q=80',
+    img: 'https://images.pexels.com/photos/17630522/pexels-photo-17630522.jpeg?auto=compress&cs=tinysrgb&w=700&h=933&fit=crop',
     baslik: { tr: 'Erkek Keten Yazlık Gömlek', en: "Men's Linen Summer Shirt", ru: 'Мужская летняя льняная рубашка', de: 'Herren Leinen-Sommerhemd' },
     aciklama: {
       tr: 'Hafif dokulu, nefes alan keten — sıcak günlerde terletmez.',
@@ -45,7 +45,7 @@ const MODELLER = [
   },
   {
     id: 'erkek-takim',
-    img: 'https://images.unsplash.com/photo-1517467069232-26eee2e331b1?w=700&q=80',
+    img: 'https://images.pexels.com/photos/6765658/pexels-photo-6765658.jpeg?auto=compress&cs=tinysrgb&w=700&h=933&fit=crop',
     baslik: { tr: 'Erkek Keten-Pamuk Takım', en: "Men's Linen-Cotton Suit", ru: 'Мужской костюм лён-хлопок', de: 'Herren Leinen-Baumwoll-Anzug' },
     aciklama: {
       tr: 'Hafif blazer + pantolon — düğün ve özel günler için doğal şıklık.',
@@ -56,7 +56,7 @@ const MODELLER = [
   },
   {
     id: 'plaj-kaftan',
-    img: 'https://images.unsplash.com/photo-1581746989955-6b19860dc7de?w=700&q=80',
+    img: 'https://images.pexels.com/photos/8459366/pexels-photo-8459366.jpeg?auto=compress&cs=tinysrgb&w=700&h=933&fit=crop',
     baslik: { tr: 'Plaj Kaftanı / Kimono', en: 'Beach Kaftan / Kimono', ru: 'Пляжное кафтан / кимоно', de: 'Strandkaftan / Kimono' },
     aciklama: {
       tr: 'Açık kesim keten kimono — plaj üstü veya akşam için hafif bir katman.',
@@ -67,7 +67,7 @@ const MODELLER = [
   },
   {
     id: 'kadin-pantolon',
-    img: 'https://images.unsplash.com/photo-1509631179647-0177331693ae?w=700&q=80',
+    img: 'https://images.pexels.com/photos/31112215/pexels-photo-31112215.jpeg?auto=compress&cs=tinysrgb&w=700&h=933&fit=crop',
     baslik: { tr: 'Kadın Keten Wide-Leg Pantolon', en: "Women's Wide-Leg Linen Trousers", ru: 'Женские широкие льняные брюки', de: 'Damen Leinen-Weitbeinhose' },
     aciklama: {
       tr: 'Yüksek bel, bol paça — ofisten sahile her ortama uyar.',

@@ -37,6 +37,16 @@ export const metadata: Metadata = {
     google: 'W2S_Gr49EgkgWG7xAWWMc5qPW6Cw3wEnOi6O6UC9zkQ',
     yandex: 'e7b38dec995b9142',
   },
+  // ✅ YENİ: Çok dilli SEO (Hreflang) ve Yapay Zeka için dil haritası eklendi.
+  alternates: {
+    canonical: SITE,
+    languages: {
+      'tr-TR': `${SITE}`,
+      'en-US': `${SITE}/en/tailor-service-antalya`,
+      'de-DE': `${SITE}/de/schneiderservice-antalya`,
+      'ru-RU': `${SITE}/ru/uslugi-portnogo-antalya`,
+    },
+  },
 };
 
 export const viewport: Viewport = {
@@ -55,9 +65,65 @@ const orgJsonLd = {
   url: SITE,
   telephone: '+905318986418',
   image: `${SITE}/terzi-can-hero.jpg`,
-  address: { '@type': 'PostalAddress', addressLocality: 'Konyaaltı', addressRegion: 'Antalya', addressCountry: 'TR' },
-  areaServed: { '@type': 'AdministrativeArea', name: 'Antalya' },
+  // ✅ YENİ: Yapay zeka tarayıcıları için çok dilli temel açıklama eklendi.
+  description: 'Antalya Konyaaltı terzi, özel dikim, giysi tadilatı, tamir ve profesyonel buharlı ütü hizmeti. Tailor, alterations, repair, custom sewing & steam ironing service in Antalya.',
+  address: { 
+    '@type': 'PostalAddress', 
+    streetAddress: 'Konyaaltı', 
+    addressLocality: 'Konyaaltı', 
+    addressRegion: 'Antalya', 
+    addressCountry: 'TR' 
+  },
+  // ✅ YENİ: Sadece Antalya değil, mahalle bazlı hizmet noktaları belirtildi (Local SEO).
+  areaServed: [
+    { '@type': 'AdministrativeArea', name: 'Antalya' },
+    { '@type': 'AdministrativeArea', name: 'Konyaaltı' },
+    { '@type': 'AdministrativeArea', name: 'Liman' },
+    { '@type': 'AdministrativeArea', name: 'Hurma' },
+    { '@type': 'AdministrativeArea', name: 'Gürsu' },
+    { '@type': 'AdministrativeArea', name: 'Sarısu' },
+    { '@type': 'AdministrativeArea', name: 'Uncalı' }
+  ],
   knowsLanguage: ['tr', 'en', 'ru', 'de'],
+  // ✅ YENİ: AI arama motorları için çok dilli hizmet kataloğu eklendi.
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Tailoring, Alteration, Repair & Ironing Services',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Clothing Alterations & Repairs / Änderungsschneiderei / Ремонт одежды',
+          description: 'Pant hemming, zipper replacement, suit fitting, dress resizing.',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Professional Steam Ironing & Pressing / Bügelservice / Глажка одежды',
+          description: 'Steam pressing and ironing service for suits, dresses, and daily clothes.',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Custom Tailoring & Sewing / Maßschneiderei / Индивидуальный пошив',
+          description: 'Bespoke cotton, linen clothing, and custom curtain tailoring.',
+        },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Hotel Pickup & Mobile Tailor Service / Mobiler Hotel-Schneiderservice / Выездной портной в отель',
+          description: 'Express clothing pickup, alteration, ironing, and hotel delivery service.',
+        },
+      },
+    ],
+  },
   contactPoint: {
     '@type': 'ContactPoint',
     telephone: '+905318986418',

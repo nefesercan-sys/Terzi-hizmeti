@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import KetenPamukOzelDikim from '@/components/KetenPamukOzelDikim';
+import KetenPamukOzelDikim, { KETEN_PAMUK_T } from '@/components/KetenPamukOzelDikim';
 
 const SITE     = 'https://terzihizmeti.com.tr';
 const PAGE_URL = `${SITE}/ru/poshiv-lyon-hlopok`;
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: 'Пошив на заказ из льна и хлопка | Terzi Can',
     description: '100% натуральный лён и хлопок, пошив точно по вашим меркам. Доставка в отель.',
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'ru_RU', alternateLocale: ['tr_TR'], type: 'website',
-    images: [{ url: OG, width: 1024, height: 1024, alt: 'Пошив лён хлопок на заказ', type: 'image/jpeg' }],
+    images: [{ url: OG, width: 1024, height: 1024, alt: 'Пошив лён хлопок на заказ', type: 'image/png' }],
   },
   twitter: { card: 'summary_large_image', title: 'Пошив из льна и хлопка на заказ', description: 'Пошив из 100% натуральной ткани по вашим меркам.', images: [OG] },
   other: { 'geo.region': 'TR-07', 'geo.placename': 'Antalya', contact: PHONE },
@@ -43,6 +43,12 @@ const jsonLd = {
       provider: { '@type': 'ClothingStore', name: 'Terzi Can', telephone: '+905318986418', url: `${SITE}/antalya-terzi` },
       areaServed: { '@type': 'AdministrativeArea', name: 'Antalya' },
       description: 'Пошив на заказ из 100% натурального льна и хлопка, по индивидуальным меркам гостя.',
+    },
+    {
+      '@type': 'FAQPage', '@id': `${PAGE_URL}#faq`,
+      mainEntity: KETEN_PAMUK_T.ru.faq.map(([q, a]: string[]) => ({
+        '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a },
+      })),
     },
   ],
 };

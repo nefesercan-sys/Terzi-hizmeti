@@ -108,7 +108,8 @@ const jsonLd = {
           { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Nakış & Logo Baskı', description: 'Kurumsal logo nakışı, isim işlemesi, dijital baskı.' }, availability: 'https://schema.org/InStock' },
         ],
       },
-      aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.9', reviewCount: '94', bestRating: '5', worstRating: '1' },
+      // KALDIRILDI (2026-09): doğrulanamayan aggregateRating (4.9/94) — bu
+      // konuşmada defalarca bulunup temizlenen aynı sahte istatistik.
       sameAs: [MAPS, `https://wa.me/${WA_NUM}`, SITE],
     },
     {

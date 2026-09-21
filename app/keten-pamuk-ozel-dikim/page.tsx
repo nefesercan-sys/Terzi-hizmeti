@@ -27,7 +27,10 @@ export const metadata: Metadata = {
     title: 'Keten & Pamuk Özel Dikim Modelleri | Terzi Can',
     description: '%100 doğal keten ve pamuktan, tam ölçünüze özel dikim. Otelinize teslim.',
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'tr_TR', type: 'website',
-    images: [{ url: OG, width: 1024, height: 1024, alt: 'Keten Pamuk Özel Dikim', type: 'image/png' }],
+    // DÜZELTME: OG görseli .jpg dosyası ama type 'image/png' olarak
+    // işaretlenmişti — bazı sosyal medya kırıcıları (Facebook/LinkedIn)
+    // bu uyuşmazlıkta önizlemeyi reddedebilir. Gerçek türle eşleştirildi.
+    images: [{ url: OG, width: 1024, height: 1024, alt: 'Keten Pamuk Özel Dikim', type: 'image/jpeg' }],
   },
   twitter: { card: 'summary_large_image', title: 'Keten & Pamuk Özel Dikim', description: '%100 doğal kumaştan ölçünüze özel dikim.', images: [OG] },
   other: { 'geo.region': 'TR-07', 'geo.placename': 'Antalya', contact: PHONE },

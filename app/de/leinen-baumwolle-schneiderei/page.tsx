@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: 'Leinen & Baumwolle Maßschneiderei | Terzi Can',
     description: '100% natürliches Leinen und Baumwolle, genau nach Ihren Maßen geschneidert. Lieferung ans Hotel.',
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'de_DE', alternateLocale: ['tr_TR'], type: 'website',
-    images: [{ url: OG, width: 1024, height: 1024, alt: 'Leinen Baumwolle Maßschneiderei', type: 'image/png' }],
+    images: [{ url: OG, width: 1024, height: 1024, alt: 'Leinen Baumwolle Maßschneiderei', type: 'image/jpeg' }],
   },
   twitter: { card: 'summary_large_image', title: 'Leinen & Baumwolle Maßschneiderei', description: 'Maßanfertigung aus 100% Naturstoff, nach Ihren Maßen.', images: [OG] },
   other: { 'geo.region': 'TR-07', 'geo.placename': 'Antalya', contact: PHONE },

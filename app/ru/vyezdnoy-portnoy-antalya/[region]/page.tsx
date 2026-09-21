@@ -14,8 +14,9 @@ export async function generateStaticParams() {
   return OTEL_BOLGELERI.map((r) => ({ region: r.slug }));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ region: string }> }): Promise<Metadata> {
-  const { region } = await params;
+// Next.js 14 için düzeltilmiş params yapısı
+export async function generateMetadata({ params }: { params: { region: string } }): Promise<Metadata> {
+  const { region } = params;
   const r = bulOtelBolgesi(region);
   if (!r) return {};
 
@@ -45,8 +46,9 @@ export async function generateMetadata({ params }: { params: Promise<{ region: s
   };
 }
 
-export default async function OtelBolgeRuPage({ params }: { params: Promise<{ region: string }> }) {
-  const { region } = await params;
+// Next.js 14 için düzeltilmiş params yapısı
+export default async function OtelBolgeRuPage({ params }: { params: { region: string } }) {
+  const { region } = params;
   const r = bulOtelBolgesi(region);
   if (!r) notFound();
 

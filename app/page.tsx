@@ -240,7 +240,7 @@ const DISTRICTS = [
 ];
 
 const FAQS = [
-  ['Antalya paça kısaltma fiyatı 2026 ne kadar?','₺150\'den başlar. Aynı gün teslim.'],
+  ['Antalya paça kısaltma fiyatı ne kadar?','₺150\'den başlar. Aynı gün teslim.'],
   ['Is there an English or Russian speaking tailor in Antalya?','Yes! Terzi Can speaks English, Russian, German, and Turkish. Contact us on WhatsApp for fast response.'],
   ['Есть ли портной в Анталье, который говорит по-русски?','Да! Ателье Terzi Can в Коньяалты принимает заказы на русском языке. Подгонка одежды, ремонт, укорачивание брюк, замена молний, химчистка. Бесплатный выезд в Хурма, Лиман, Сарысу.'],
   ['Gibt es einen deutschsprachigen Schneider in Antalya?','Ja! Terzi Can in Konyaaltı bietet Änderungsschneiderei auf Deutsch, Englisch, Russisch und Türkisch. Kundenservice per WhatsApp.'],
@@ -475,7 +475,7 @@ export default function TerziHizmetiPage() {
             {[...Array(2)].map((_,i)=>(
               <span key={i} style={{display:'inline-flex',alignItems:'center'}}>
                 {['Paça Kısaltma','Tailor Antalya','Ателье Анталья','Schneider Konyaaltı','Fermuar Değişimi','Pants Hemming','Замена молнии','Bel Daraltma','Alterations','Eve Gelen Terzi','Mobile Pickup'].map(t=>(
-                  <span key={t} className="ticker-item">{t}<span className="ticker-dot">✦</span></span>
+                  <span key={`${i}-${t}`} className="ticker-item">{t}<span className="ticker-dot">✦</span></span>
                 ))}
               </span>
             ))}
@@ -618,7 +618,7 @@ export default function TerziHizmetiPage() {
 
         {/* FOOTER */}
         <footer>
-          <div>© {new Date().getFullYear()} Terzi Can · Konyaaltı, Antalya · {PHONE}</div>
+          <div>© 2026 Terzi Can · Konyaaltı, Antalya · {PHONE}</div>
           <div style={{marginTop:4,fontSize:'.68rem',color:'rgba(255,255,255,.4)'}}>We speak Turkish, English, Russian & German</div>
           <nav className="foot-links" aria-label="District Pages">
             <a href="/hurma-terzi">Hurma Terzi</a>

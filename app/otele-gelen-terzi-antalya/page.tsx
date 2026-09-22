@@ -38,9 +38,9 @@ export const metadata: Metadata = {
     canonical: PAGE_URL,
     languages: {
       'tr': PAGE_URL,
-      'en': `${SITE}/en/mobile-tailor-hotel-antalya`,
-      'ru': `${SITE}/ru/portnoy-v-otel-antalya`,
-      'de': `${SITE}/de/mobiler-schneider-hotel-antalya`,
+      'en': `${SITE}/en/hotel-tailor-antalya`,
+      'ru': `${SITE}/ru/vyezdnoy-portnoy-antalya`,
+      'de': `${SITE}/de/schneider-service-hotel-antalya`,
       'x-default': PAGE_URL,
     },
   },
@@ -385,9 +385,9 @@ export default function MobileTailorHotelPage() {
           <nav className="foot-links" aria-label="Alt bilgi bağlantıları">
             <a href="/">Ana Sayfa</a>
             <a href="/antalya-terzi">Konyaaltı Terzi Atölyesi</a>
-            <a href="/en/mobile-tailor-hotel-antalya">English</a>
-            <a href="/ru/portnoy-v-otel-antalya">Русский</a>
-            <a href="/de/mobiler-schneider-hotel-antalya">Deutsch</a>
+            <a href="/en/hotel-tailor-antalya">English</a>
+            <a href="/ru/vyezdnoy-portnoy-antalya">Русский</a>
+            <a href="/de/schneider-service-hotel-antalya">Deutsch</a>
             <a href="https://swaphubs.com/terzi">SwapHubs Profilimiz</a>
           </nav>
           <p style={{ marginTop: '1rem', fontSize: '.68rem', color: 'rgba(255,255,255,.45)', lineHeight: 1.8 }}>

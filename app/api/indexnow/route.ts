@@ -37,3 +37,4 @@ export async function GET() {
     return NextResponse.json({ success: false, error: 'Ping işlemi başarısız' }, { status: 500 });
   }
 }
+

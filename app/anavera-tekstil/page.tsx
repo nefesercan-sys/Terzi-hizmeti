@@ -1,5 +1,9 @@
 // app/anavera-tekstil/page.tsx
 import type { Metadata } from 'next';
+import Link from 'next/link';
+
+// URL parametrelerinin (searchParams) anlık algılanması için zorunlu
+export const dynamic = 'force-dynamic';
 
 const SITE       = 'https://terzihizmeti.com.tr';
 const PAGE_URL   = `${SITE}/anavera-tekstil`;
@@ -256,11 +260,20 @@ const translations = {
 
 type LangType = 'en' | 'tr' | 'de' | 'ru';
 
-export default function AnaveraTekstilPage({ searchParams }: { searchParams: { lang?: string } }) {
-  // Check URL param (?lang=tr), default to English
-  const currentLang = ['en', 'tr', 'de', 'ru'].includes(searchParams?.lang || '') ? (searchParams.lang as LangType) : 'en';
-  const t = translations[currentLang];
+type PageProps = {
+  searchParams: Promise<{ lang?: string }> | { lang?: string };
+};
 
+export default async function AnaveraTekstilPage({ searchParams }: PageProps) {
+  // Next.js 15 ve öncesi sürümler ile tam uyumluluk için await kullanıyoruz
+  const resolvedParams = await searchParams;
+  const rawLang = resolvedParams?.lang || '';
+  
+  const currentLang: LangType = ['en', 'tr', 'de', 'ru'].includes(rawLang)
+    ? (rawLang as LangType)
+    : 'en';
+    
+  const t = translations[currentLang];
   const WA_LINK = WA(t.waMessage);
 
   return (
@@ -281,13 +294,13 @@ export default function AnaveraTekstilPage({ searchParams }: { searchParams: { l
               
               {/* DYNAMIC LANGUAGE SWITCHER */}
               <div style={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
-                <a href="?lang=en" style={{ textDecoration: 'none', color: currentLang === 'en' ? '#E4C664' : '#94A3B8', fontWeight: currentLang === 'en' ? 800 : 400, transition: 'color 0.2s' }}>🇬🇧 EN</a>
+                <Link href="/anavera-tekstil?lang=en" style={{ textDecoration: 'none', color: currentLang === 'en' ? '#E4C664' : '#94A3B8', fontWeight: currentLang === 'en' ? 800 : 400, transition: 'color 0.2s' }}>🇬🇧 EN</Link>
                 <span style={{ color: '#334155' }}>·</span>
-                <a href="?lang=de" style={{ textDecoration: 'none', color: currentLang === 'de' ? '#E4C664' : '#94A3B8', fontWeight: currentLang === 'de' ? 800 : 400, transition: 'color 0.2s' }}>🇩🇪 DE</a>
+                <Link href="/anavera-tekstil?lang=de" style={{ textDecoration: 'none', color: currentLang === 'de' ? '#E4C664' : '#94A3B8', fontWeight: currentLang === 'de' ? 800 : 400, transition: 'color 0.2s' }}>🇩🇪 DE</Link>
                 <span style={{ color: '#334155' }}>·</span>
-                <a href="?lang=ru" style={{ textDecoration: 'none', color: currentLang === 'ru' ? '#E4C664' : '#94A3B8', fontWeight: currentLang === 'ru' ? 800 : 400, transition: 'color 0.2s' }}>🇷🇺 RU</a>
+                <Link href="/anavera-tekstil?lang=ru" style={{ textDecoration: 'none', color: currentLang === 'ru' ? '#E4C664' : '#94A3B8', fontWeight: currentLang === 'ru' ? 800 : 400, transition: 'color 0.2s' }}>🇷🇺 RU</Link>
                 <span style={{ color: '#334155' }}>·</span>
-                <a href="?lang=tr" style={{ textDecoration: 'none', color: currentLang === 'tr' ? '#E4C664' : '#94A3B8', fontWeight: currentLang === 'tr' ? 800 : 400, transition: 'color 0.2s' }}>🇹🇷 TR</a>
+                <Link href="/anavera-tekstil?lang=tr" style={{ textDecoration: 'none', color: currentLang === 'tr' ? '#E4C664' : '#94A3B8', fontWeight: currentLang === 'tr' ? 800 : 400, transition: 'color 0.2s' }}>🇹🇷 TR</Link>
               </div>
 
             </div>
@@ -459,7 +472,7 @@ export default function AnaveraTekstilPage({ searchParams }: { searchParams: { l
                   </div>
                   <div style={{ padding: '1.5rem', flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                     <div>
-                      <h3 style={{ fontSize: '1.3rem', fontWeight: 800, color: '#0F172A', marginBottom: '0.8rem' }}>{cat.title}</h3>
+                      <h3 style={{ fontSize: '1.3rem', fontWeight 800, color: '#0F172A', marginBottom: '0.8rem' }}>{cat.title}</h3>
                       <p style={{ fontSize: '0.95rem', color: '#64748B', lineHeight: 1.6, marginBottom: '1.5rem' }}>{cat.desc}</p>
                     </div>
                     <a href={WA_LINK} target="_blank" rel="noopener noreferrer" style={{ display: 'block', backgroundColor: '#F8FAFC', color: '#0F172A', textAlign: 'center', padding: '0.8rem 1rem', borderRadius: '8px', fontWeight: 700, fontSize: '0.95rem', textDecoration: 'none', border: '2px solid #E2E8F0', transition: 'all 0.2s' }}>

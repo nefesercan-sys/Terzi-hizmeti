@@ -1,10 +1,9 @@
 // app/anavera-tekstil/page.tsx
 //
 // Anavera Tekstil — Turkish textile design, manufacturing & export brand.
-// Published as a sub-page of terzihizmeti.com.tr (no separate domain).
-// Target audience: corporate/B2B buyers in the EU and Russia looking for
-// a Turkey-based textile manufacturer for menswear, womenswear, kidswear
-// and uniforms (knit & woven). Primary contact channel: WhatsApp Business.
+// GEO (Generative Engine Optimization) & Multilingual SEO Optimized Version
+// Target: EU (Germany/DACH), Russia (CIS), and Global English B2B Buyers.
+
 import type { Metadata } from 'next';
 
 const SITE       = 'https://terzihizmeti.com.tr';
@@ -12,44 +11,52 @@ const PAGE_URL   = `${SITE}/anavera-tekstil`;
 const PHONE      = '+90 531 898 64 18';
 const PHONE_E    = '+905318986418';
 const WA = (t: string) => `https://wa.me/${PHONE_E}?text=${encodeURIComponent(t)}`;
-const WA_DEFAULT = WA('Hello, I would like information about Anavera Tekstil textile manufacturing and export.');
+const WA_DEFAULT = WA('Hello, I would like information about Anavera Tekstil manufacturing. / Hallo / Здравствуйте');
 const TODAY = new Date().toISOString().split('T')[0];
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: 'Anavera Tekstil | Turkish Textile Manufacturer & Exporter — EU & Russia',
   description:
-    'Anavera Tekstil is a Turkey-based textile design, manufacturing and export company. Menswear, womenswear, kidswear and corporate uniforms — knit (jersey) and woven fabrics. Serving the European Union and Russia. Contact us on WhatsApp for quotes.',
+    'Turkey-based B2B textile manufacturer (Textilproduktion Türkei / производство одежды Турция). We export menswear, womenswear, and uniforms (knit & woven) to the EU (Germany) and Russia. English, German, and Russian support.',
   keywords: [
-    // English — EU/international B2B
-    'Turkish textile manufacturer', 'textile manufacturer Turkey', 'clothing manufacturer Turkey',
-    'garment factory Turkey', 'textile exporter Turkey', 'uniform manufacturer Turkey',
-    'knit fabric manufacturer', 'woven fabric manufacturer', 'private label clothing Turkey',
-    '100% cotton clothing manufacturer', 'natural linen clothing manufacturer Turkey',
-    'organic cotton garment manufacturer', 'linen menswear manufacturer', 'linen womenswear manufacturer',
-    'OEM clothing manufacturer', 'wholesale clothing supplier Turkey', 'workwear manufacturer Turkey',
-    'clothing manufacturer for Europe', 'textile supplier Russia', 'apparel sourcing Turkey',
-    // Türkçe — yerli arama (fabrika/atölye arayanlar)
-    'tekstil üretim fabrikası', 'tekstil atölyesi', 'giyim üretim fabrikası Türkiye',
-    'konfeksiyon üretimi', 'toptan giyim üreticisi', 'üniforma üretici firma',
-    'fason tekstil imalatı', 'ihracat tekstil firması', 'penye kumaş üretici', 'dokuma kumaş üretici',
-    '%100 pamuklu giyim üretici', 'doğal keten giyim üretici', 'keten bay bayan giyim imalatı',
-    "Avrupa'ya tekstil ihracatı", "Rusya'ya tekstil ihracatı",
-    // Русский — Россия
-    'текстильная фабрика Турция', 'производство одежды Турция', 'пошив одежды на заказ Турция',
-    'производитель униформы Турция', 'трикотаж оптом Турция', 'ткани оптом Турция',
+    // English — Global B2B
+    'Turkish textile manufacturer', 'clothing manufacturer Turkey', 'B2B garment factory Turkey',
+    'private label clothing Turkey', 'OEM textile Turkey', 'woven fabric manufacturer',
+    'knitwear manufacturer Turkey', 'uniform manufacturer Europe', '100% cotton clothing manufacturer',
+    
+    // German — DACH Region (Almanya, Avusturya, İsviçre)
+    'Textilproduktion Türkei', 'Textilhersteller Türkei', 'Kleiderfabrik Türkei', 
+    'B2B Textil Türkei', 'Bekleidungshersteller Türkei', 'Lohnkonfektion Türkei',
+    'Private Label Kleidung Türkei', 'Uniformen Hersteller Türkei', 'Großhandel Kleidung Türkei',
+    'Textilzulieferer Europa', 'Baumwolle Textilproduktion Türkei',
+
+    // Russian — CIS Region (Rusya, Belarus)
+    'текстильная фабрика Турция', 'производство одежды в Турции', 'пошив одежды оптом Турция',
+    'контрактное производство одежды Турция', 'пошив униформы Турция', 'турецкий текстиль оптом B2B',
+    'фабрика женской одежды Турция', 'мужская одежда оптом Турция', 'пошив на заказ Турция',
+
+    // Turkish — Local
+    'tekstil üretim fabrikası', 'fason giyim üretimi', 'ihracat tekstil atölyesi',
   ],
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
-  alternates: { canonical: PAGE_URL },
+  alternates: { 
+    canonical: PAGE_URL,
+    // Arama motorlarına sayfanın çok dilli kitleyi hedeflediğini bildirir
+    languages: {
+      'en-US': PAGE_URL,
+      'de-DE': PAGE_URL,
+      'ru-RU': PAGE_URL
+    }
+  },
   openGraph: {
-    title: 'Anavera Tekstil — Turkish Textile Design, Manufacturing & Export',
-    description: 'Menswear, womenswear, kidswear and uniforms — knit & woven. Turkey-based manufacturer serving the EU and Russia. WhatsApp: ' + PHONE,
+    title: 'Anavera Tekstil — Turkish Textile Manufacturing (EU & Russia)',
+    description: 'B2B Textile manufacturing in Turkey. Textilproduktion Türkei. производство одежды Турция. WhatsApp: ' + PHONE,
     url: PAGE_URL, siteName: 'Anavera Tekstil', locale: 'en_US', type: 'website',
-    images: [{ url: 'https://images.pexels.com/photos/31112215/pexels-photo-31112215.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop', width: 1200, height: 630, alt: 'Anavera Tekstil — Turkish textile manufacturing' }],
+    images: [{ url: 'https://images.pexels.com/photos/31112215/pexels-photo-31112215.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop', width: 1200, height: 630, alt: 'Anavera Tekstil — Turkish textile manufacturing factory' }],
   },
 };
 
-// ── JSON-LD: Organization + Product categories + FAQ ──
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -57,80 +64,57 @@ const jsonLd = {
       '@type': ['Organization', 'ClothingStore'],
       '@id': `${PAGE_URL}#business`,
       name: 'Anavera Tekstil',
-      alternateName: ['Anavera Textile', 'Анавера Текстиль'],
-      description: 'Turkey-based textile design, manufacturing and export company. Menswear, womenswear, kidswear and corporate uniforms in knit and woven fabrics, exporting to the European Union and Russia.',
+      alternateName: ['Anavera Textile', 'Anavera Textil', 'Анавера Текстиль'],
+      description: 'Turkey-based B2B textile design, manufacturing and export company. We provide OEM and private label services for the EU (Germany) and Russia.',
       url: PAGE_URL,
       telephone: PHONE_E,
       address: { '@type': 'PostalAddress', addressLocality: 'Antalya', addressCountry: 'TR' },
+      // AI'lara işletmenin hangi dillerde iletişim kurabildiğini kesin olarak bildirir
+      knowsLanguage: [
+        { '@type': 'Language', name: 'English', alternateName: 'en' },
+        { '@type': 'Language', name: 'German', alternateName: 'de' },
+        { '@type': 'Language', name: 'Russian', alternateName: 'ru' },
+        { '@type': 'Language', name: 'Turkish', alternateName: 'tr' }
+      ],
       areaServed: [
-        { '@type': 'Country', name: 'Turkey' },
-        { '@type': 'Place', name: 'European Union' },
-        { '@type': 'Country', name: 'Russia' },
         { '@type': 'Country', name: 'Germany' },
-        { '@type': 'Country', name: 'France' },
+        { '@type': 'Country', name: 'Russia' },
+        { '@type': 'Place', name: 'European Union' },
+        { '@type': 'Country', name: 'Austria' },
+        { '@type': 'Country', name: 'Switzerland' },
         { '@type': 'Country', name: 'Poland' },
-        { '@type': 'Country', name: 'Italy' },
         { '@type': 'Country', name: 'Netherlands' },
       ],
-      // DÜZELTME (2026-09): 'Product' tipi Google'ın zengin sonuç doğrulamasında
-      // offers/review/aggregateRating alanlarını zorunlu kılıyor — ama bunlar
-      // sabit fiyatlı perakende ürünleri değil, teklif bazlı B2B üretim
-      // hizmetleri. 'Service' tipine geçilerek bu geçersiz-öğe hatası çözüldü
-      // ve şema artık işin gerçek doğasını (talebe göre fiyatlandırılan
-      // üretim hizmeti) daha doğru yansıtıyor.
       hasOfferCatalog: {
         '@type': 'OfferCatalog',
-        name: 'Textile Manufacturing Categories',
+        name: 'Textile Manufacturing Categories / Textilproduktion / производство одежды',
         itemListElement: [
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Menswear Manufacturing — Knit & Woven', serviceType: "Men's Clothing Manufacturing" } },
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Womenswear Manufacturing — Knit & Woven', serviceType: "Women's Clothing Manufacturing" } },
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Kidswear Manufacturing — Knit & Woven', serviceType: "Children's Clothing Manufacturing" } },
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Corporate & Institutional Uniform Manufacturing', serviceType: 'Uniform Manufacturing' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Menswear Manufacturing', serviceType: "Men's Clothing Manufacturing" } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Womenswear Manufacturing', serviceType: "Women's Clothing Manufacturing" } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Kidswear Manufacturing', serviceType: "Children's Clothing Manufacturing" } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Uniform Manufacturing', serviceType: 'B2B Uniform Manufacturing' } },
         ],
       },
       sameAs: [`https://wa.me/${PHONE_E}`],
     },
     {
-      '@type': 'WebPage',
-      '@id': `${PAGE_URL}#webpage`,
-      url: PAGE_URL,
-      name: 'Anavera Tekstil — Turkish Textile Manufacturer & Exporter',
-      inLanguage: ['en', 'tr', 'ru'],
-      dateModified: TODAY,
-      about: { '@id': `${PAGE_URL}#business` },
-    },
-    {
       '@type': 'FAQPage',
       '@id': `${PAGE_URL}#faq`,
       mainEntity: [
-        { '@type': 'Question', name: 'What does Anavera Tekstil produce?', acceptedAnswer: { '@type': 'Answer', text: 'We design, manufacture and export all types of textile products: menswear, womenswear, kidswear and corporate uniforms, in both knit (jersey) and woven fabrics.' } },
-        { '@type': 'Question', name: 'Which countries do you export to?', acceptedAnswer: { '@type': 'Answer', text: 'We manufacture in Turkey and export to the European Union and Russia. Turkey\'s customs union with the EU and geographic proximity to both markets mean shorter lead times than Asian manufacturers.' } },
-        { '@type': 'Question', name: 'How can I request a quote or send a sample request?', acceptedAnswer: { '@type': 'Answer', text: `Contact us directly on WhatsApp Business: ${PHONE}. Share your product type, quantities, fabric preference and target price, and we will respond with a quote.` } },
-        { '@type': 'Question', name: 'Do you offer private label / OEM manufacturing?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. We manufacture under your own brand and labeling, from design development and sampling through to bulk production and export documentation.' } },
-        { '@type': 'Question', name: 'What is the difference between knit (penye) and woven (dokuma) fabric?', acceptedAnswer: { '@type': 'Answer', text: 'Knit (jersey/penye) fabrics are looped-construction, stretchable, and typically used for t-shirts, sweatshirts and underwear. Woven (dokuma) fabrics are cross-thread constructions, more structured, and typically used for shirts, trousers and formal uniforms. We produce both.' } },
+        { '@type': 'Question', name: 'What languages do you support for B2B communication?', acceptedAnswer: { '@type': 'Answer', text: 'We provide customer support and project management in English, German (Deutsch), Russian (Русский), and Turkish.' } },
+        { '@type': 'Question', name: 'Do you export to Germany and Russia?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, our primary export markets are the DACH region (Germany, Austria, Switzerland) and the CIS region (Russia). We handle all export documentation.' } },
+        { '@type': 'Question', name: 'What does Anavera Tekstil produce?', acceptedAnswer: { '@type': 'Answer', text: 'We manufacture menswear, womenswear, kidswear and corporate uniforms in both knit (jersey) and woven fabrics.' } },
       ],
     },
   ],
 };
 
-// ── Görsel/renk sabitleri ──
-const NAVY   = '#0F1F3D';
-const NAVY2  = '#16294F';
-const GOLD   = '#C9A227';
-const GOLD2  = '#E4C664';
-const BG     = '#F7F8FA';
-const BG2    = '#EEF0F4';
-const INK    = '#1A2233';
-const MUTE   = '#5B6478';
-const SERIF  = "'Georgia', serif";
-const SANS   = 'system-ui, -apple-system, sans-serif';
-
-// ── Ürün kategorileri (görseller — Pexels, ücretsiz ticari kullanım) ──
+// ... (Kategoriler ve adımlar aynı)
 const CATEGORIES = [
   {
     key: 'men',
     title: 'Menswear',
-    trTitle: 'Bay Giyim',
+    trTitle: 'Herrenbekleidung / Мужская одежда',
     fabrics: 'Knit & Woven',
     desc: 'Shirts, trousers, jackets, t-shirts, polo shirts, outerwear — made to your specifications and fabric standards.',
     img: 'https://images.pexels.com/photos/6765658/pexels-photo-6765658.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
@@ -138,7 +122,7 @@ const CATEGORIES = [
   {
     key: 'women',
     title: 'Womenswear',
-    trTitle: 'Bayan Giyim',
+    trTitle: 'Damenbekleidung / Женская одежда',
     fabrics: 'Knit & Woven',
     desc: 'Dresses, blouses, trousers, knitwear, outerwear — from pattern development to finished garment.',
     img: 'https://images.pexels.com/photos/18022030/pexels-photo-18022030.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
@@ -146,7 +130,7 @@ const CATEGORIES = [
   {
     key: 'kids',
     title: 'Kidswear',
-    trTitle: 'Çocuk Giyim',
+    trTitle: 'Kinderbekleidung / Детская одежда',
     fabrics: 'Knit & Woven',
     desc: 'T-shirts, sweatshirts, sleepwear, school and everyday wear — soft, durable and safety-tested fabrics.',
     img: 'https://images.pexels.com/photos/31047132/pexels-photo-31047132.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
@@ -154,7 +138,7 @@ const CATEGORIES = [
   {
     key: 'uniform',
     title: 'Corporate Uniforms',
-    trTitle: 'Üniforma',
+    trTitle: 'Uniformen / Униформа',
     fabrics: 'Knit & Woven',
     desc: 'Hotel, hospitality, healthcare, security, education, retail and industrial uniforms — bulk production.',
     img: 'https://images.pexels.com/photos/5378708/pexels-photo-5378708.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
@@ -173,87 +157,116 @@ export default function AnaveraTekstilPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <main style={{ fontFamily: SANS, background: BG, color: INK, minHeight: '100vh' }}>
+      <main className="font-sans bg-[#F7F8FA] text-[#1A2233] min-h-screen relative">
+        
+        {/* GLOBAL FLOATING WHATSAPP BUTTON */}
+        <a 
+          href={WA_DEFAULT} 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#128C7E] text-white p-4 rounded-full shadow-2xl transition-transform hover:scale-110 flex items-center justify-center"
+          aria-label="Contact on WhatsApp"
+        >
+          <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+             <path d="M12.031 21.002a9.7 9.7 0 0 1-4.94-1.341l-.354-.21-3.673.963.98-3.582-.23-.367a9.704 9.704 0 1 1 8.217 4.537zm.004-17.773a8.077 8.077 0 1 0 8.082 8.083 8.09 8.09 0 0 0-8.082-8.083zm3.82 11.026c-.209-.104-1.238-.611-1.43-.681-.192-.07-.332-.104-.472.105-.14.209-.541.681-.663.821-.122.14-.245.157-.454.052-.21-.104-.884-.326-1.684-1.042-.623-.557-1.043-1.246-1.165-1.455-.122-.21-.013-.323.092-.427.094-.094.21-.244.314-.366.104-.122.14-.21.21-.35.07-.14.035-.262-.017-.367-.052-.105-.472-1.137-.647-1.556-.17-.406-.343-.351-.472-.358h-.402c-.14 0-.367.052-.559.262-.192.21-.734.717-.734 1.748 0 1.031.751 2.027.856 2.167.105.14 1.478 2.257 3.58 3.116.5.204.891.326 1.196.417.502.16 1.059.137 1.5.083.498-.06 1.238-.505 1.413-1.005.174-.5.174-.93.122-1.02-.052-.09-.192-.143-.401-.248z"/>
+          </svg>
+        </a>
+
         {/* NAV */}
-        <nav style={{ padding: '.9rem 1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', background: NAVY, borderBottom: `2px solid ${GOLD}` }}>
-          <a href="/" style={{ color: '#fff', textDecoration: 'none', fontSize: '.72rem', opacity: .7 }}>← terzihizmeti.com.tr</a>
-          <div style={{ fontFamily: SERIF, color: '#fff', fontWeight: 700, letterSpacing: '.02em' }}>
-            ANAVERA <span style={{ color: GOLD2, fontStyle: 'italic', fontWeight: 400 }}>TEKSTİL</span>
+        <nav className="px-6 py-3.5 flex items-center justify-between bg-[#0F1F3D] border-b-2 border-[#C9A227] sticky top-0 z-40 shadow-md">
+          <a href="/" className="text-white text-xs opacity-70 hover:opacity-100 transition-opacity">← terzihizmeti.com.tr</a>
+          <div className="font-serif text-white font-bold tracking-wider">
+            ANAVERA <span className="text-[#E4C664] italic font-normal">TEKSTİL</span>
           </div>
-          <a href={WA_DEFAULT} target="_blank" rel="noopener noreferrer" style={{ color: GOLD2, textDecoration: 'none', fontSize: '.72rem', fontWeight: 700 }}>WhatsApp →</a>
+          <a href={WA_DEFAULT} target="_blank" rel="noopener noreferrer" className="text-[#E4C664] text-xs font-bold hover:underline">
+            WhatsApp →
+          </a>
         </nav>
 
         {/* HERO */}
-        <section style={{ background: `linear-gradient(135deg, ${NAVY} 0%, ${NAVY2} 60%, #1E2E52 100%)`, padding: '4.5rem 1.5rem 4rem', position: 'relative', overflow: 'hidden' }}>
-          <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '3px', background: `linear-gradient(90deg, transparent, ${GOLD}, transparent)` }} />
-          <div style={{ maxWidth: 980, margin: '0 auto' }}>
-            <div style={{ fontSize: '.65rem', letterSpacing: '.35em', textTransform: 'uppercase', color: GOLD2, marginBottom: '1.1rem', display: 'flex', alignItems: 'center', gap: '.8rem' }}>
-              <span style={{ width: 32, height: 1, background: GOLD, display: 'inline-block' }} />
-              Made in Turkey · Textile Design, Manufacturing &amp; Export
+        <section className="relative bg-gradient-to-br from-[#0F1F3D] via-[#16294F] to-[#1E2E52] px-6 pt-16 pb-20 overflow-hidden">
+          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#C9A227] to-transparent" />
+          <div className="max-w-5xl mx-auto relative z-10">
+            <div className="text-[10px] sm:text-xs tracking-[0.35em] uppercase text-[#E4C664] mb-5 flex items-center gap-3">
+              <span className="w-8 h-[1px] bg-[#C9A227] block" />
+              Made in Turkey · B2B Textile Production
             </div>
-            <h1 style={{ fontFamily: SERIF, fontSize: 'clamp(2rem,5.2vw,3.6rem)', fontWeight: 700, color: '#fff', lineHeight: 1.1, marginBottom: '1.3rem' }}>
+            <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight mb-5">
               Anavera Tekstil
               <br />
-              <span style={{ color: GOLD2, fontStyle: 'italic', fontWeight: 400, fontSize: 'clamp(1.15rem,3vw,1.9rem)' }}>
-                Turkish Textile Manufacturing for the EU &amp; Russia
+              <span className="text-[#E4C664] italic font-normal text-xl sm:text-2xl md:text-3xl mt-2 block">
+                Turkish Textile Manufacturing for the EU & Russia
               </span>
             </h1>
-            <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,.78)', lineHeight: 1.85, maxWidth: 640, marginBottom: '2rem' }}>
-              We design, manufacture and export <strong style={{ color: '#fff' }}>menswear, womenswear, kidswear and corporate
-              uniforms</strong> — in both <strong style={{ color: GOLD2 }}>knit (jersey)</strong> and <strong style={{ color: GOLD2 }}>woven</strong> fabrics.
-              Based in Turkey, built for European and Russian corporate buyers who need a reliable, export-ready production partner.
+            <p className="text-base sm:text-lg text-white/80 leading-relaxed max-w-2xl mb-8">
+              We design, manufacture and export <strong className="text-white">menswear, womenswear, kidswear and corporate uniforms</strong>. 
+              Reliable, export-ready OEM & Private Label production based in Turkey.
             </p>
-            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginBottom: '2.4rem' }}>
+            <div className="flex flex-wrap gap-4 mb-10">
               <a href={WA_DEFAULT} target="_blank" rel="noopener noreferrer"
-                style={{ background: GOLD, color: NAVY, padding: '1rem 2.1rem', fontWeight: 700, textDecoration: 'none', fontSize: '.85rem', letterSpacing: '.06em', textTransform: 'uppercase' }}>
-                💬 Request a Quote — WhatsApp
+                className="bg-[#C9A227] hover:bg-[#E4C664] text-[#0F1F3D] px-8 py-4 font-bold text-sm tracking-wider uppercase transition-colors rounded-sm shadow-lg">
+                💬 Request a Quote
               </a>
-              <a href={`tel:${PHONE_E}`} style={{ border: '1px solid rgba(255,255,255,.3)', color: '#fff', padding: '1rem 1.8rem', textDecoration: 'none', fontSize: '.85rem' }}>
+              <a href={`tel:${PHONE_E}`} className="border border-white/30 hover:bg-white/10 text-white px-7 py-4 text-sm transition-colors rounded-sm flex items-center">
                 📞 {PHONE}
               </a>
             </div>
-            <div style={{ display: 'flex', gap: '.5rem', flexWrap: 'wrap' }}>
-              {[['🇬🇧', 'English'], ['🇹🇷', 'Türkçe'], ['🇷🇺', 'Русский'], ['🇩🇪', 'Deutsch']].map(([f, l]) => (
-                <span key={l} style={{ fontSize: '.72rem', color: 'rgba(255,255,255,.6)', background: 'rgba(255,255,255,.06)', border: '1px solid rgba(255,255,255,.12)', padding: '.28rem .8rem', borderRadius: 2 }}>{f} {l}</span>
+            
+            {/* GEO Target: Multilingual Communication Badges */}
+            <div className="hidden md:flex gap-2 flex-wrap mb-4 items-center">
+              <span className="text-xs text-white/50 mr-2">We speak:</span>
+              {[['🇬🇧', 'English'], ['🇩🇪', 'Deutsch'], ['🇷🇺', 'Русский'], ['🇹🇷', 'Türkçe']].map(([f, l]) => (
+                <span key={l} className="text-xs text-white/80 bg-white/10 border border-white/20 px-3 py-1.5 rounded-full font-medium">{f} {l}</span>
               ))}
             </div>
           </div>
         </section>
 
+        {/* AI/GEO SUMMARY BLOCK (Highly optimized for ChatGPT / Perplexity parsing) */}
+        <section className="max-w-5xl mx-auto px-6 -mt-8 relative z-20">
+          <div className="bg-white p-6 md:p-8 rounded-lg shadow-xl border border-gray-100 flex flex-col md:flex-row gap-6 items-start md:items-center">
+            <div className="w-14 h-14 bg-[#0F1F3D]/5 rounded-full flex items-center justify-center flex-shrink-0 text-[#C9A227] text-2xl">
+              🏭
+            </div>
+            <div className="flex-1">
+              <h2 className="text-[#0F1F3D] font-bold text-sm mb-2 uppercase tracking-wider">B2B Manufacturing Facts (Textilproduktion / Производство)</h2>
+              <ul className="text-sm text-[#5B6478] leading-relaxed grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2">
+                <li><strong>📍 Location:</strong> Turkey (Direct export to DACH & CIS)</li>
+                <li><strong>💼 Services:</strong> OEM, Private Label, Cut-Make-Trim (CMT)</li>
+                <li><strong>🧵 Fabrics:</strong> Knit (Jersey), Woven, 100% Cotton & Linen</li>
+                <li><strong>🌐 Markets:</strong> European Union (Germany) & Russia</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
         {/* ABOUT */}
-        <section style={{ padding: '4rem 1.5rem', background: '#fff' }}>
-          <div style={{ maxWidth: 780, margin: '0 auto', textAlign: 'center' }}>
-            <span style={{ fontSize: '.65rem', letterSpacing: '.3em', textTransform: 'uppercase', color: GOLD, fontWeight: 700 }}>About Us</span>
-            <h2 style={{ fontFamily: SERIF, fontSize: 'clamp(1.5rem,3.2vw,2.1rem)', color: NAVY, margin: '.8rem 0 1.2rem' }}>
-              A Turkish Manufacturer Built for Export
+        <section className="py-20 px-6 bg-white">
+          <div className="max-w-3xl mx-auto text-center">
+            <span className="text-[10px] tracking-[0.3em] uppercase text-[#C9A227] font-bold">About Us</span>
+            <h2 className="font-serif text-3xl md:text-4xl text-[#0F1F3D] mt-3 mb-5">
+              Your Production Partner in Turkey
             </h2>
-            <p style={{ color: MUTE, fontSize: '.95rem', lineHeight: 1.9 }}>
-              Anavera Tekstil is a Turkey-based textile company covering the full production chain — design, pattern
-              development, sampling, bulk manufacturing and export logistics. We work with corporate and institutional
-              buyers across the European Union and Russia who need dependable, quality-controlled apparel and uniform
-              production without the long lead times of manufacturing further east. Every order — from a single
-              capsule collection to large uniform contracts — is quoted, sampled and produced to your specification.
+            <p className="text-[#5B6478] text-base leading-relaxed">
+              Anavera Tekstil is a Turkey-based textile company covering the full production chain. We work extensively with corporate buyers across Germany, the European Union, and Russia. Whether you are looking for a reliable <em>Textilhersteller</em> (textile manufacturer) for your fashion brand in Berlin, or bulk <em>пошив одежды</em> (apparel production) for Moscow, we deliver quality-controlled garments without the long lead times of Asian manufacturing.
             </p>
           </div>
         </section>
 
         {/* PRODUCT CATEGORIES */}
-        <section id="categories" style={{ padding: '4.5rem 1.5rem', background: BG2 }}>
-          <div style={{ maxWidth: 1100, margin: '0 auto' }}>
-            <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
-              <span style={{ fontSize: '.65rem', letterSpacing: '.3em', textTransform: 'uppercase', color: GOLD, fontWeight: 700 }}>Product Catalogue</span>
-              <h2 style={{ fontFamily: SERIF, fontSize: 'clamp(1.6rem,3.5vw,2.3rem)', color: NAVY, margin: '.8rem 0 .6rem' }}>
+        <section id="categories" className="py-20 px-6 bg-[#EEF0F4]">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <span className="text-[10px] tracking-[0.3em] uppercase text-[#C9A227] font-bold">Product Catalogue</span>
+              <h2 className="font-serif text-3xl md:text-4xl text-[#0F1F3D] mt-3 mb-2">
                 Menswear · Womenswear · Kidswear · Uniforms
               </h2>
-              <p style={{ color: MUTE, fontSize: '.9rem', maxWidth: 560, margin: '0 auto' }}>
-                Every category is available in both knit (jersey) and woven fabric construction.
-              </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(240px,1fr))', gap: 2, background: 'rgba(15,31,61,.08)' }}>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               {CATEGORIES.map((c) => (
-                <div key={c.key} style={{ background: '#fff', display: 'flex', flexDirection: 'column' }}>
-                  <div style={{ position: 'relative', aspectRatio: '4/3', overflow: 'hidden' }}>
+                <article key={c.key} className="bg-white flex flex-col shadow-sm hover:shadow-md transition-shadow group">
+                  <div className="relative aspect-4/3 overflow-hidden">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={c.img}
@@ -261,199 +274,126 @@ export default function AnaveraTekstilPage() {
                       width={800}
                       height={600}
                       loading="lazy"
-                      style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
-                    <span style={{ position: 'absolute', top: 10, left: 10, background: NAVY, color: GOLD2, fontSize: '.62rem', fontWeight: 700, letterSpacing: '.08em', textTransform: 'uppercase', padding: '.3rem .6rem' }}>
+                    <span className="absolute top-3 left-3 bg-[#0F1F3D] text-[#E4C664] text-[10px] font-bold tracking-widest uppercase px-2.5 py-1.5 shadow-sm">
                       {c.fabrics}
                     </span>
                   </div>
-                  <div style={{ padding: '1.3rem 1.4rem 1.5rem', flex: 1, display: 'flex', flexDirection: 'column' }}>
-                    <h3 style={{ fontFamily: SERIF, fontSize: '1.05rem', color: NAVY, fontWeight: 700, marginBottom: '.15rem' }}>{c.title}</h3>
-                    <div style={{ fontSize: '.68rem', color: GOLD, letterSpacing: '.08em', textTransform: 'uppercase', marginBottom: '.7rem' }}>{c.trTitle}</div>
-                    <p style={{ fontSize: '.82rem', color: MUTE, lineHeight: 1.7, marginBottom: '1.1rem', flex: 1 }}>{c.desc}</p>
-                    <a href={WA(`Hello, I am interested in ${c.title} production (knit & woven). Could you share more information?`)}
+                  <div className="p-6 flex-1 flex flex-col">
+                    <h3 className="font-serif text-lg text-[#0F1F3D] font-bold mb-1">{c.title}</h3>
+                    <div className="text-[10px] text-[#C9A227] tracking-widest uppercase mb-3">{c.trTitle}</div>
+                    <p className="text-sm text-[#5B6478] leading-relaxed mb-5 flex-1">{c.desc}</p>
+                    <a href={WA(`Hello, I am interested in ${c.title} production. / Hallo / Здравствуйте`)}
                       target="_blank" rel="noopener noreferrer"
-                      style={{ fontSize: '.72rem', fontWeight: 700, color: NAVY, textDecoration: 'none', borderBottom: `1px solid ${GOLD}`, alignSelf: 'flex-start', paddingBottom: 2 }}>
+                      className="text-xs font-bold text-[#0F1F3D] hover:text-[#C9A227] border-b border-[#C9A227] self-start pb-0.5 transition-colors">
                       Request a Quote →
                     </a>
                   </div>
-                </div>
+                </article>
               ))}
             </div>
-            <p style={{ fontSize: '.72rem', color: MUTE, marginTop: '1.3rem', textAlign: 'center', fontStyle: 'italic' }}>
-              * Images shown are representative product/production examples. Send your own reference images or tech
-              packs via WhatsApp for an accurate quote.
-            </p>
           </div>
         </section>
 
-        {/* KNIT vs WOVEN */}
-        <section style={{ padding: '4.5rem 1.5rem', background: '#fff' }}>
-          <div style={{ maxWidth: 900, margin: '0 auto' }}>
-            <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
-              <span style={{ fontSize: '.65rem', letterSpacing: '.3em', textTransform: 'uppercase', color: GOLD, fontWeight: 700 }}>Fabric Types</span>
-              <h2 style={{ fontFamily: SERIF, fontSize: 'clamp(1.5rem,3.2vw,2.1rem)', color: NAVY, margin: '.8rem 0' }}>Knit (Penye) &amp; Woven (Dokuma)</h2>
-            </div>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(280px,1fr))', gap: '1.2rem' }}>
-              <div style={{ border: `1px solid ${BG2}`, borderTop: `3px solid ${GOLD}`, padding: '1.8rem 1.6rem' }}>
-                <h3 style={{ fontFamily: SERIF, fontSize: '1.1rem', color: NAVY, marginBottom: '.6rem' }}>Knit / Jersey (Penye)</h3>
-                <p style={{ fontSize: '.85rem', color: MUTE, lineHeight: 1.8 }}>
-                  Looped-construction, stretchable fabric. Used for t-shirts, polo shirts, sweatshirts, underwear
-                  and children's everyday wear. Comfortable, breathable, cost-efficient for bulk orders.
-                </p>
-              </div>
-              <div style={{ border: `1px solid ${BG2}`, borderTop: `3px solid ${GOLD}`, padding: '1.8rem 1.6rem' }}>
-                <h3 style={{ fontFamily: SERIF, fontSize: '1.1rem', color: NAVY, marginBottom: '.6rem' }}>Woven (Dokuma)</h3>
-                <p style={{ fontSize: '.85rem', color: MUTE, lineHeight: 1.8 }}>
-                  Cross-thread construction, more structured and durable. Used for shirts, trousers, jackets and
-                  formal or industrial uniforms requiring shape retention and durability.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* %100 DOĞAL PAMUK & KETEN — yeni bölüm, gerçek/lisanslı görsellerle */}
-        <section style={{ padding: '4.5rem 1.5rem', background: BG2 }} aria-labelledby="natural-h">
-          <div style={{ maxWidth: 1000, margin: '0 auto' }}>
-            <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
-              <span style={{ fontSize: '.65rem', letterSpacing: '.3em', textTransform: 'uppercase', color: GOLD, fontWeight: 700 }}>Natural Fibers</span>
-              <h2 id="natural-h" style={{ fontFamily: SERIF, fontSize: 'clamp(1.6rem,3.5vw,2.3rem)', color: NAVY, margin: '.8rem 0 .6rem' }}>
-                100% Natural Cotton &amp; Linen
+        {/* 100% NATURAL COTTON & LINEN */}
+        <section className="py-20 px-6 bg-white" aria-labelledby="natural-h">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <span className="text-[10px] tracking-[0.3em] uppercase text-[#C9A227] font-bold">Natural Fibers</span>
+              <h2 id="natural-h" className="font-serif text-3xl md:text-4xl text-[#0F1F3D] mt-3 mb-3">
+                100% Natural Cotton & Linen
               </h2>
-              <p style={{ color: MUTE, fontSize: '.9rem', maxWidth: 620, margin: '0 auto' }}>
-                Menswear and womenswear produced from 100% natural cotton and linen fabric — breathable,
-                durable, and free of synthetic blends. A dedicated natural-fiber line alongside our standard
-                knit and woven categories, popular with EU and Russian buyers seeking sustainable, premium
-                fabric options.
+              <p className="text-[#5B6478] text-sm max-w-2xl mx-auto leading-relaxed">
+                Menswear and womenswear produced from 100% natural cotton (Baumwolle / хлопок) and linen (Leinen / лен). Popular with EU and Russian buyers seeking sustainable, premium fabric options.
               </p>
             </div>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(260px,1fr))', gap: 2, background: 'rgba(15,31,61,.08)' }}>
-              <div style={{ background: '#fff' }}>
-                <div style={{ aspectRatio: '4/3', overflow: 'hidden' }}>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <article className="bg-[#EEF0F4] shadow-sm hover:shadow-md transition-shadow group">
+                <div className="aspect-4/3 overflow-hidden">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src="https://images.pexels.com/photos/17630522/pexels-photo-17630522.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
                     alt="100% natural cotton menswear — Anavera Tekstil Turkey"
                     width={800} height={600} loading="lazy"
-                    style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <div style={{ padding: '1.3rem 1.4rem' }}>
-                  <h3 style={{ fontFamily: SERIF, fontSize: '1.05rem', color: NAVY, fontWeight: 700, marginBottom: '.4rem' }}>Menswear — Cotton &amp; Linen</h3>
-                  <p style={{ fontSize: '.82rem', color: MUTE, lineHeight: 1.7 }}>Shirts, t-shirts and summer wear cut from pure cotton and linen fabric.</p>
+                <div className="p-6">
+                  <h3 className="font-serif text-lg text-[#0F1F3D] font-bold mb-2">Menswear — Cotton & Linen</h3>
+                  <p className="text-sm text-[#5B6478] leading-relaxed">Shirts, t-shirts and summer wear cut from pure cotton and linen fabric.</p>
                 </div>
-              </div>
-              <div style={{ background: '#fff' }}>
-                <div style={{ aspectRatio: '4/3', overflow: 'hidden' }}>
+              </article>
+              <article className="bg-[#EEF0F4] shadow-sm hover:shadow-md transition-shadow group">
+                <div className="aspect-4/3 overflow-hidden">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src="https://images.pexels.com/photos/4256573/pexels-photo-4256573.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
                     alt="100% natural linen womenswear — Anavera Tekstil Turkey"
                     width={800} height={600} loading="lazy"
-                    style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <div style={{ padding: '1.3rem 1.4rem' }}>
-                  <h3 style={{ fontFamily: SERIF, fontSize: '1.05rem', color: NAVY, fontWeight: 700, marginBottom: '.4rem' }}>Womenswear — Cotton &amp; Linen</h3>
-                  <p style={{ fontSize: '.82rem', color: MUTE, lineHeight: 1.7 }}>Dresses and summer pieces made from natural linen fabric with fine detailing.</p>
+                <div className="p-6">
+                  <h3 className="font-serif text-lg text-[#0F1F3D] font-bold mb-2">Womenswear — Cotton & Linen</h3>
+                  <p className="text-sm text-[#5B6478] leading-relaxed">Dresses and summer pieces made from natural linen fabric with fine detailing.</p>
                 </div>
-              </div>
-            </div>
-            <p style={{ fontSize: '.72rem', color: MUTE, marginTop: '1.3rem', textAlign: 'center', fontStyle: 'italic' }}>
-              * Representative fabric/style examples — send your own reference photos or fabric swatches via WhatsApp for a precise quote.
-            </p>
-          </div>
-        </section>
-
-        {/* PROCESS */}
-        <section style={{ padding: '4.5rem 1.5rem', background: NAVY }}>
-          <div style={{ maxWidth: 1000, margin: '0 auto' }}>
-            <div style={{ textAlign: 'center', marginBottom: '2.5rem' }}>
-              <span style={{ fontSize: '.65rem', letterSpacing: '.3em', textTransform: 'uppercase', color: GOLD2 }}>Process</span>
-              <h2 style={{ fontFamily: SERIF, fontSize: 'clamp(1.5rem,3.2vw,2.1rem)', color: '#fff', margin: '.8rem 0' }}>From Inquiry to Export</h2>
-            </div>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(200px,1fr))', gap: 1, background: 'rgba(255,255,255,.06)' }}>
-              {STEPS.map((s) => (
-                <div key={s.n} style={{ background: 'rgba(255,255,255,.03)', padding: '2rem 1.5rem' }}>
-                  <div style={{ fontFamily: SERIF, fontSize: '2.2rem', fontWeight: 700, color: 'rgba(201,162,39,.3)', marginBottom: '.7rem' }}>{s.n}</div>
-                  <div style={{ fontSize: '.92rem', color: '#fff', fontWeight: 600, marginBottom: '.5rem' }}>{s.t}</div>
-                  <div style={{ fontSize: '.78rem', color: 'rgba(255,255,255,.55)', lineHeight: 1.7 }}>{s.d}</div>
-                </div>
-              ))}
+              </article>
             </div>
           </div>
         </section>
 
-        {/* WHY TURKEY */}
-        <section style={{ padding: '4.5rem 1.5rem', background: BG2 }}>
-          <div style={{ maxWidth: 900, margin: '0 auto' }}>
-            <div style={{ textAlign: 'center', marginBottom: '2.2rem' }}>
-              <span style={{ fontSize: '.65rem', letterSpacing: '.3em', textTransform: 'uppercase', color: GOLD, fontWeight: 700 }}>Why Turkey</span>
-              <h2 style={{ fontFamily: SERIF, fontSize: 'clamp(1.5rem,3.2vw,2.1rem)', color: NAVY, margin: '.8rem 0' }}>Why Manufacture With Us</h2>
+        {/* FAQ - Yapay Zeka (AI) İçin Optimize Edildi */}
+        <section id="faq" className="py-20 px-6 bg-[#EEF0F4]">
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-12">
+              <span className="text-[10px] tracking-[0.3em] uppercase text-[#C9A227] font-bold">FAQ</span>
+              <h2 className="font-serif text-3xl md:text-4xl text-[#0F1F3D] mt-3">Frequently Asked Questions</h2>
             </div>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(220px,1fr))', gap: '1.2rem' }}>
+            <div className="space-y-4">
               {[
-                ['🚚', 'Shorter Lead Times', 'Turkey is days, not weeks, from EU ports and Russian border crossings by road and sea.'],
-                ['🇪🇺', 'EU Customs Union', "Turkey's customs union with the EU can simplify duties on many finished textile goods."],
-                ['🧵', 'Full-Chain Capability', 'Design, sampling, cutting, sewing, finishing and export documentation under one process.'],
-                ['📦', 'Flexible Order Sizes', 'From small capsule collections to large uniform contracts.'],
-              ].map(([icon, t, d]) => (
-                <div key={t} style={{ background: '#fff', padding: '1.6rem 1.4rem', borderLeft: `3px solid ${GOLD}` }}>
-                  <div style={{ fontSize: '1.5rem', marginBottom: '.6rem' }}>{icon}</div>
-                  <div style={{ fontSize: '.9rem', fontWeight: 700, color: NAVY, marginBottom: '.4rem' }}>{t}</div>
-                  <div style={{ fontSize: '.78rem', color: MUTE, lineHeight: 1.7 }}>{d}</div>
-                </div>
+                ['What languages do you support for B2B communication?', 'We provide customer support and project management natively in English, German (Deutsch), Russian (Русский), and Turkish.'],
+                ['Do you export to Germany and Russia?', 'Yes, our primary export markets are the DACH region (Germany, Austria, Switzerland) and the CIS region (Russia). Turkey’s customs union with the EU simplifies logistics.'],
+                ['Do you offer private label / OEM manufacturing?', 'Yes. We manufacture under your own brand (Private Label / OEM), from design development and sampling through to bulk production and export.'],
+                ["What's the difference between knit and woven fabric?", 'Knit (jersey/penye) is stretchable fabric for t-shirts. Woven (dokuma) is structured fabric for shirts and uniforms. We produce both.'],
+              ].map(([q, a]) => (
+                <details key={q} className="group bg-white rounded-sm open:bg-[#0F1F3D] open:text-white transition-colors shadow-sm">
+                  <summary className="cursor-pointer font-bold text-sm p-5 list-none flex justify-between items-center">
+                    {q}
+                    <span className="text-[#C9A227] group-open:rotate-45 transition-transform text-xl leading-none">+</span>
+                  </summary>
+                  <p className="text-sm text-[#5B6478] group-open:text-white/70 px-5 pb-5 leading-relaxed">{a}</p>
+                </details>
               ))}
             </div>
-          </div>
-        </section>
-
-        {/* FAQ */}
-        <section id="faq" style={{ padding: '4.5rem 1.5rem', background: '#fff' }}>
-          <div style={{ maxWidth: 760, margin: '0 auto' }}>
-            <div style={{ textAlign: 'center', marginBottom: '2.2rem' }}>
-              <span style={{ fontSize: '.65rem', letterSpacing: '.3em', textTransform: 'uppercase', color: GOLD, fontWeight: 700 }}>FAQ</span>
-              <h2 style={{ fontFamily: SERIF, fontSize: 'clamp(1.5rem,3.2vw,2.1rem)', color: NAVY, margin: '.8rem 0' }}>Frequently Asked Questions</h2>
-            </div>
-            {[
-              ['What does Anavera Tekstil produce?', 'We design, manufacture and export all types of textile products: menswear, womenswear, kidswear and corporate uniforms, in both knit (jersey) and woven fabrics.'],
-              ['Which countries do you export to?', "We manufacture in Turkey and export to the European Union and Russia — including Germany, France, Poland, Italy, the Netherlands and beyond."],
-              ['How can I request a quote?', `Contact us directly on WhatsApp Business: ${PHONE}. Share your product type, quantities, fabric preference and target price.`],
-              ['Do you offer private label / OEM manufacturing?', 'Yes — from design development and sampling through to bulk production and export documentation, under your own brand.'],
-              ["What's the difference between knit and woven fabric?", 'Knit (jersey/penye) is stretchable, looped-construction fabric for t-shirts and casualwear. Woven (dokuma) is structured, cross-thread fabric for shirts, trousers and formal uniforms. We produce both.'],
-            ].map(([q, a]) => (
-              <details key={q} style={{ borderBottom: `1px solid ${BG2}`, padding: '1.1rem 0' }}>
-                <summary style={{ cursor: 'pointer', fontWeight: 600, color: NAVY, fontSize: '.92rem', listStyle: 'none' }}>{q}</summary>
-                <p style={{ fontSize: '.85rem', color: MUTE, lineHeight: 1.8, marginTop: '.7rem' }}>{a}</p>
-              </details>
-            ))}
           </div>
         </section>
 
         {/* CTA */}
-        <section style={{ padding: '3.5rem 1.5rem', background: `linear-gradient(135deg, ${GOLD}, ${GOLD2})`, textAlign: 'center' }}>
-          <div style={{ maxWidth: 680, margin: '0 auto' }}>
-            <h2 style={{ fontFamily: SERIF, fontSize: 'clamp(1.4rem,3.2vw,1.9rem)', color: NAVY, fontWeight: 700, marginBottom: '.6rem' }}>
+        <section className="py-16 px-6 bg-gradient-to-br from-[#C9A227] to-[#E4C664] text-center">
+          <div className="max-w-2xl mx-auto">
+            <h2 className="font-serif text-3xl text-[#0F1F3D] font-bold mb-3">
               Ready to Start Your Order?
             </h2>
-            <p style={{ color: 'rgba(15,31,61,.75)', fontSize: '.9rem', marginBottom: '1.6rem' }}>
-              Send us your product type, quantity and target fabric — we'll reply with a quote on WhatsApp.
+            <p className="text-[#0F1F3D]/80 text-sm mb-8">
+              Send us your product type, quantity and target fabric. We speak English, German, and Russian.
             </p>
             <a href={WA_DEFAULT} target="_blank" rel="noopener noreferrer"
-              style={{ background: NAVY, color: '#fff', padding: '.95rem 2.2rem', fontWeight: 700, textDecoration: 'none', fontSize: '.85rem', letterSpacing: '.06em', textTransform: 'uppercase', display: 'inline-block' }}>
+              className="bg-[#0F1F3D] hover:bg-[#16294F] text-white px-8 py-4 font-bold text-sm tracking-widest uppercase inline-block rounded-sm shadow-xl transition-colors">
               💬 Message Us on WhatsApp
             </a>
           </div>
         </section>
 
         {/* FOOTER */}
-        <footer style={{ background: NAVY2, color: 'rgba(255,255,255,.5)', padding: '2.5rem 1.5rem', textAlign: 'center', fontSize: '.75rem' }}>
-          <div style={{ fontFamily: SERIF, color: '#fff', marginBottom: '.5rem' }}>ANAVERA <span style={{ color: GOLD2, fontStyle: 'italic' }}>TEKSTİL</span></div>
-          <p style={{ marginBottom: '.4rem' }}>Turkish textile design, manufacturing &amp; export — {PHONE}</p>
-          <p style={{ fontSize: '.68rem', color: 'rgba(255,255,255,.3)' }}>
+        <footer className="bg-[#16294F] text-white/50 py-12 px-6 text-center text-xs">
+          <div className="font-serif text-white text-lg mb-2 tracking-wider">
+            ANAVERA <span className="text-[#E4C664] italic">TEKSTİL</span>
+          </div>
+          <p className="mb-3">Turkish textile design, manufacturing & export — {PHONE}</p>
+          <p className="text-white/30">
             © {new Date().getFullYear()} Anavera Tekstil ·{' '}
-            <a href="/" style={{ color: 'rgba(255,255,255,.4)' }}>terzihizmeti.com.tr</a>
+            <a href="/" className="hover:text-white transition-colors">terzihizmeti.com.tr</a>
           </p>
         </footer>
       </main>

@@ -19,14 +19,14 @@ export const metadata: Metadata = {
   keywords: [
     'Turkish textile manufacturer', 'textile manufacturer Turkey', 'clothing manufacturer Turkey',
     'garment factory Turkey', 'textile exporter Turkey', 'uniform manufacturer Turkey',
-    'fason tekstil imalatı', 'ihracat tekstil firması', 'tekstil atölyesi',
+    'kadın giyim üreticisi', 'erkek giyim imalatı', 'fason tekstil imalatı', 'ihracat tekstil firması',
     'текстильная фабрика Турция', 'производство одежды Турция'
   ],
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large' } },
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Anavera Tekstil — Premium Turkish Textile Manufacturing',
-    description: 'Turkey-based B2B clothing manufacturer serving the EU and Russia.',
+    title: 'Anavera Tekstil — Premium Menswear & Womenswear Manufacturing in Turkey',
+    description: 'Turkey-based B2B clothing manufacturer serving the EU, UK and CIS regions.',
     url: PAGE_URL, siteName: 'Anavera Tekstil', locale: 'en_US', type: 'website',
     images: [{ url: 'https://images.pexels.com/photos/3738088/pexels-photo-3738088.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop', width: 1200, height: 630 }],
   },
@@ -40,7 +40,7 @@ const jsonLd = {
       '@id': `${PAGE_URL}#business`,
       name: 'Anavera Tekstil',
       alternateName: ['Anavera Textile', 'Анавера Текстиль'],
-      description: 'Turkey-based high-capacity textile manufacturing and export company.',
+      description: 'Turkey-based high-capacity textile manufacturing and export company focusing on menswear, womenswear and corporate apparel.',
       url: PAGE_URL,
       telephone: PHONE_E,
       address: { '@type': 'PostalAddress', addressLocality: 'Antalya', addressCountry: 'TR' },
@@ -53,12 +53,12 @@ const jsonLd = {
 // --- MULTI-LANGUAGE DICTIONARY ---
 const translations = {
   en: {
-    topBarMsg: '✦ Direct B2B Export from Turkey to EU, UK & CIS',
+    topBarMsg: '✦ Direct B2B Menswear & Womenswear Export from Turkey',
     quoteBtn: 'Get B2B Quote',
-    heroVerified: 'Verified Turkish Manufacturer',
-    heroTitle1: 'Premium Garment Manufacturing for ',
+    heroVerified: 'Verified Turkish Garment Manufacturer',
+    heroTitle1: 'Premium Menswear & Womenswear Production for ',
     heroTitle2: 'Europe & CIS',
-    heroDesc: 'High-capacity OEM & Private Label production. We design, manufacture, and export menswear, womenswear, and uniforms using premium Turkish cotton and natural fabrics.',
+    heroDesc: 'High-capacity OEM & Private Label production. We design, manufacture, and export menswear, womenswear, and corporate uniforms using premium Turkish cotton, linen, and sustainable fabrics.',
     contactWa: 'Contact on WhatsApp',
     callUs: 'Call Us:',
     stat1: 'Pieces / Month',
@@ -68,12 +68,29 @@ const translations = {
     cert2Title: 'ISO 9001:2015', cert2Desc: 'Certified Quality Management',
     cert3Title: 'EU Customs Union', cert3Desc: 'ATR / EUR.1 Duty-free export',
     cert4Title: 'Full OEM / ODM', cert4Desc: 'Private label & custom packaging',
+    
+    // MEN & WOMEN SPECIAL SECTION
+    menSub: 'Menswear Manufacturing',
+    menTitle: 'Custom & OEM Menswear Collection',
+    menDesc: 'From high-end tailored shirts to casual polo tees, trousers, and blazers crafted with precision Turkish tailoring.',
+    men1Title: 'Dress Shirts & Polo Shirts', men1Desc: '100% Combed cotton, non-iron fabrics, and custom collar designs for men.',
+    men2Title: 'Blazers, Jackets & Suits', men2Desc: 'Structured shoulders, premium lining, and precise CAD patterns for European sizing.',
+    men3Title: 'Trousers & Casual Knitwear', men3Desc: 'Chinos, formal trousers, hoodies, and sweatshirts built for high durability.',
+
+    womenSub: 'Womenswear Manufacturing',
+    womenTitle: 'Elegance & Precision in Womenswear',
+    womenDesc: 'Delicate stitching, sophisticated patterns, and organic linen/cotton fabrics designed for modern womenswear lines.',
+    women1Title: 'Dresses & Blouses', women1Desc: 'Fluid drapes, custom prints, and breathable organic fabrics for summer and evening collections.',
+    women2Title: 'Blazers, Suits & Office Wear', women2Desc: 'Tailored feminine silhouettes, high-density stitching, and premium finishes.',
+    women3Title: 'Linen & Casual Wear', women3Desc: 'Pre-washed 100% Turkish linen and soft cotton jersey loungewear.',
+
     facSub: 'Manufacturing Excellence',
     facTitle: 'Modern Facilities in Turkey',
     facDesc: 'From meticulous pattern making to automated cutting, precision sewing, and dedicated quality control lines.',
     fac1Title: 'Precision Cutting & Patterning', fac1Desc: 'Advanced CAD pattern drafting and computerized fabric cutting ensures maximum fabric efficiency and zero sizing variance.',
     fac2Title: 'High-Speed Assembly Lines', fac2Desc: 'Skilled seamstresses operating specialized flatlock, overlock, and double-needle machinery for durable stitching.',
     fac3Title: '100% Quality Inspection', fac3Desc: 'AQL 2.5 standard quality checks applied at every stage — from raw fabric inspection to final ironing and polybagging.',
+    
     catSub: 'B2B Product Range',
     catTitle: 'Our Manufacturing Categories',
     cat1Title: 'Menswear Collection', cat1Desc: 'Premium shirts, polo-shirts, trousers, hoodies, and jackets. Knit and woven fabric options.',
@@ -82,18 +99,21 @@ const translations = {
     cat4Title: 'Corporate & Workwear', cat4Desc: 'Durable hotel, medical, security, and industrial uniforms customized to your brand.',
     catTag: 'Knit & Woven',
     catBtn: 'Inquire Order Terms →',
+
     ecoSub: 'Sustainable & Premium',
     ecoTitle: '100% Natural Organic Cotton & Pure Linen',
     ecoDesc: 'We produce high-end sustainable fashion lines using certified 100% Aegean cotton and Turkish flax linen. Popular among premium European resort brands and boutiques seeking breathable, eco-friendly garments.',
     ecoLi1: 'Pre-washed, pre-shrunk organic linen shirts & dresses',
     ecoLi2: 'Combed 100% cotton jersey with high color fastness',
     ecoLi3: 'Custom eco-friendly dyeing with GOTS compliance',
+
     faqSub: 'Frequently Asked Questions',
     faqTitle: 'B2B Export & Production Details',
     faq1Q: 'What is your Minimum Order Quantity (MOQ)?', faq1A: 'Our standard MOQ starts from 300-500 pieces per style/color, depending on fabric specification and garment complexity.',
     faq2Q: 'How fast can you deliver to EU & Russia?', faq2A: 'Sampling takes 7-10 business days. Bulk production takes 3-5 weeks depending on quantity. Road transport to Central Europe takes 4-6 days, and shipping to Russia takes 5-8 days.',
     faq3Q: 'Do you handle customs documentation (ATR / EUR.1)?', faq3A: 'Yes, we handle complete ATR certificates, EUR.1 movement certificates, commercial invoices, and packing lists for smooth duty-free customs clearance in the EU.',
     faq4Q: 'Can I order custom tags, labels, and packaging?', faq4A: 'Yes, we provide complete OEM Private Label services including woven brand labels, care labels, hangtags, barcodes, and custom printed polybags.',
+
     footDesc: 'Premium textile design, manufacturing, and export company in Turkey. Trusted by corporate buyers across Europe, UK, DACH, and CIS regions.',
     footContact: 'Contact & Sales',
     footProdBase: 'Production Base: Antalya / Turkey',
@@ -101,15 +121,15 @@ const translations = {
     footMarketsList: 'Germany · France · Italy · Netherlands · Poland · Austria · Switzerland · Russia · United Kingdom',
     footCopy: 'Anavera Tekstil. All rights reserved. A premium manufacturing branch of terzihizmeti.com.tr',
     waFloat: 'WhatsApp Quote',
-    waMessage: 'Hello, I would like information about Anavera Tekstil textile manufacturing and export.',
+    waMessage: 'Hello, I would like information about Anavera Tekstil menswear & womenswear manufacturing and export.',
   },
   tr: {
-    topBarMsg: '✦ Türkiye\'den AB, İngiltere ve BDT\'ye Doğrudan B2B İhracat',
+    topBarMsg: '✦ Türkiye\'den Kadın ve Erkek Giyiminde Doğrudan B2B İhracat',
     quoteBtn: 'B2B Teklif Al',
-    heroVerified: 'Onaylı Türk Üretici',
-    heroTitle1: 'Avrupa ve BDT İçin Premium ',
+    heroVerified: 'Onaylı Türk Konfeksiyon Üreticisi',
+    heroTitle1: 'Avrupa ve BDT İçin Premium Kadın & Erkek ',
     heroTitle2: 'Giyim Üretimi',
-    heroDesc: 'Yüksek kapasiteli OEM ve Özel Marka (Private Label) üretimi. Birinci sınıf Türk pamuğu ve doğal kumaşlar kullanarak erkek, kadın ve üniforma tasarımı, üretimi ve ihracatı yapıyoruz.',
+    heroDesc: 'Yüksek kapasiteli OEM ve Özel Marka (Private Label) üretimi. Birinci sınıf Türk pamuğu, keten ve sürdürülebilir kumaşlar kullanarak kadın, erkek ve kurumsal üniforma tasarımı, üretimi ve ihracatı yapıyoruz.',
     contactWa: 'WhatsApp\'tan Ulaşın',
     callUs: 'Bizi Arayın:',
     stat1: 'Adet / Ay',
@@ -119,12 +139,29 @@ const translations = {
     cert2Title: 'ISO 9001:2015', cert2Desc: 'Sertifikalı Kalite Yönetimi',
     cert3Title: 'AB Gümrük Birliği', cert3Desc: 'ATR / EUR.1 Gümrüksüz İhracat',
     cert4Title: 'Tam OEM / ODM', cert4Desc: 'Özel etiket ve ambalajlama',
+
+    // MEN & WOMEN SPECIAL SECTION
+    menSub: 'Erkek Giyim İmalatı',
+    menTitle: 'Özel Tasarım & OEM Erkek Giyim Koleksiyonu',
+    menDesc: 'Şık terzi dikimi gömleklerden casual polo tişörtlere, pantolon ve ceketlere kadar hassas Türk terziliği kalitesi.',
+    men1Title: 'Gömlek & Polo Tişört', men1Desc: '%100 Penye pamuk, ütü istemeyen kumaşlar ve erkeklere özel yaka tasarımları.',
+    men2Title: 'Blazer, Ceket & Takım', men2Desc: 'Avrupa beden ölçülerine uygun kalıplar, kaliteli iç astar ve sağlam dikim.',
+    men3Title: 'Pantolon & Casual Triko', men3Desc: 'Chino pantolonlar, kumaş pantolonlar, kapüşonlu sweatshirtler ve dayanıklı casual giyim.',
+
+    womenSub: 'Kadın Giyim İmalatı',
+    womenTitle: 'Kadın Giyimde Zarafet ve Hassas Dikim',
+    womenDesc: 'Modern kadın giyim koleksiyonları için tasarlanmış zarif dikişler, sofistike kalıplar ve organik keten/pamuk kumaşlar.',
+    women1Title: 'Elbise & Bluz Koleksiyonu', women1Desc: 'Yazlık ve davet koleksiyonları için dökümlü kumaşlar, özel baskılar ve nefes alan dokular.',
+    women2Title: 'Ceket, Takım & Ofis Şıklığı', women2Desc: 'Kadın anatomisine uygun kesimler, yüksek dikiş sıklığı ve birinci sınıf bitirişler.',
+    women3Title: 'Keten & Casual Giyim', women3Desc: 'Önceden yıkanmış %100 Türk keteni ve yumuşak pamuklu ev/günlük giyim koleksiyonları.',
+
     facSub: 'Üretimde Mükemmellik',
     facTitle: 'Türkiye\'deki Modern Tesislerimiz',
     facDesc: 'Titiz kalıp çıkarmadan otomatik kesime, hassas dikimden özel kalite kontrol hatlarına kadar uçtan uca üretim.',
     fac1Title: 'Hassas Kesim ve Kalıp', fac1Desc: 'Gelişmiş CAD kalıp çizimi ve bilgisayarlı kumaş kesimi, maksimum kumaş verimliliği ve sıfır beden sapması sağlar.',
     fac2Title: 'Yüksek Hızlı Montaj Hatları', fac2Desc: 'Dayanıklı dikiş için özel reçme, overlok ve çift iğne makinelerini kullanan yetenekli terziler.',
     fac3Title: '%100 Kalite Denetimi', fac3Desc: 'Ham kumaş denetiminden son ütüleme ve paketlemeye kadar her aşamada uygulanan AQL 2.5 standart kalite kontrolleri.',
+
     catSub: 'B2B Ürün Yelpazesi',
     catTitle: 'Üretim Kategorilerimiz',
     cat1Title: 'Erkek Giyim Koleksiyonu', cat1Desc: 'Premium gömlekler, polo yaka tişörtler, pantolonlar, kapüşonlular ve ceketler. Örme ve dokuma seçenekleri.',
@@ -133,18 +170,21 @@ const translations = {
     cat4Title: 'Kurumsal ve İş Giyimi', cat4Desc: 'Markanıza özel tasarlanmış dayanıklı otel, medikal, güvenlik ve endüstriyel üniformalar.',
     catTag: 'Örme ve Dokuma',
     catBtn: 'Sipariş Şartlarını Sorun →',
+
     ecoSub: 'Sürdürülebilir & Premium',
     ecoTitle: '%100 Doğal Organik Pamuk ve Saf Keten',
     ecoDesc: 'Sertifikalı %100 Ege pamuğu ve Türk keteni kullanarak üst düzey sürdürülebilir moda hatları üretiyoruz. Nefes alabilen, çevre dostu giysiler arayan seçkin Avrupa butikleri arasında popülerdir.',
     ecoLi1: 'Önceden yıkanmış, çekmez organik keten gömlekler ve elbiseler',
     ecoLi2: 'Yüksek renk haslığına sahip %100 penyelenmiş pamuklu jarse',
     ecoLi3: 'GOTS uyumlu özel çevre dostu boyama',
+
     faqSub: 'Sıkça Sorulan Sorular',
     faqTitle: 'B2B İhracat ve Üretim Detayları',
     faq1Q: 'Minimum Sipariş Miktarınız (MOQ) Nedir?', faq1A: 'Standart MOQ\'umuz kumaş özelliklerine ve giysi karmaşıklığına bağlı olarak stil/renk başına 300-500 adetten başlamaktadır.',
     faq2Q: 'Avrupa ve Rusya\'ya ne kadar hızlı teslimat yapabilirsiniz?', faq2A: 'Numune alımı 7-10 iş günü sürer. Toplu üretim miktara bağlı olarak 3-5 hafta sürer. Orta Avrupa\'ya karayolu taşımacılığı 4-6 gün, Rusya\'ya nakliye ise 5-8 gün sürmektedir.',
     faq3Q: 'Gümrük belgelerini (ATR / EUR.1) siz mi hallediyorsunuz?', faq3A: 'Evet, AB\'de sorunsuz gümrüksüz gümrükleme için eksiksiz ATR sertifikaları, EUR.1 dolaşım belgeleri, ticari faturalar ve paketleme listelerini biz hazırlıyoruz.',
     faq4Q: 'Özel etiket, marka ve ambalaj sipariş edebilir miyim?', faq4A: 'Evet, dokuma marka etiketleri, yıkama talimatları, karton etiketler, barkodlar ve özel baskılı poşetler dahil olmak üzere eksiksiz OEM Özel Marka (Private Label) hizmetleri sunuyoruz.',
+
     footDesc: 'Türkiye\'de birinci sınıf tekstil tasarımı, üretimi ve ihracat şirketi. Avrupa, İngiltere, DACH ve BDT bölgelerindeki kurumsal alıcıların güvenilir tercihi.',
     footContact: 'İletişim ve Satış',
     footProdBase: 'Üretim Üssü: Antalya / Türkiye',
@@ -152,15 +192,15 @@ const translations = {
     footMarketsList: 'Almanya · Fransa · İtalya · Hollanda · Polonya · Avusturya · İsviçre · Rusya · İngiltere',
     footCopy: 'Anavera Tekstil. Tüm hakları saklıdır. terzihizmeti.com.tr\'nin premium üretim şubesi.',
     waFloat: 'WhatsApp Teklif',
-    waMessage: 'Merhaba, Anavera Tekstil üretim ve ihracat şartları hakkında bilgi almak istiyorum.',
+    waMessage: 'Merhaba, Anavera Tekstil kadın ve erkek giyim üretimi ve ihracat şartları hakkında bilgi almak istiyorum.',
   },
   de: {
-    topBarMsg: '✦ Direkter B2B-Export von der Türkei in die EU, UK & GUS',
+    topBarMsg: '✦ Direkter B2B-Export von Damen- und Herrenbekleidung aus der Türkei',
     quoteBtn: 'B2B-Angebot einholen',
-    heroVerified: 'Verifizierter türkischer Hersteller',
-    heroTitle1: 'Premium-Bekleidungsherstellung für ',
+    heroVerified: 'Verifizierter türkischer Bekleidungshersteller',
+    heroTitle1: 'Premium Damen- & Herrenbekleidung für ',
     heroTitle2: 'Europa & GUS',
-    heroDesc: 'Hochkapazitative OEM- & Private-Label-Produktion. Wir entwerfen, produzieren und exportieren Herren-, Damen- und Arbeitskleidung aus hochwertiger türkischer Baumwolle und Naturstoffen.',
+    heroDesc: 'Hochkapazitative OEM- & Private-Label-Produktion. Wir entwerfen, produzieren und exportieren Herren-, Damen- und Arbeitskleidung aus hochwertiger türkischer Baumwolle, Leinen und nachhaltigen Stoffen.',
     contactWa: 'Auf WhatsApp kontaktieren',
     callUs: 'Rufen Sie uns an:',
     stat1: 'Stück / Monat',
@@ -170,12 +210,28 @@ const translations = {
     cert2Title: 'ISO 9001:2015', cert2Desc: 'Zertifiziertes Qualitätsmanagement',
     cert3Title: 'EU-Zollunion', cert3Desc: 'ATR / EUR.1 Zollfreier Export',
     cert4Title: 'Vollständiges OEM / ODM', cert4Desc: 'Eigenmarke & individuelle Verpackung',
+
+    menSub: 'Herrenbekleidung Produktion',
+    menTitle: 'Maßgeschneiderte OEM Herrenkollektion',
+    menDesc: 'Von hochwertigen Hemden bis hin zu lässigen Poloshirts, Hosen und Sakko-Jacken.',
+    men1Title: 'Hemden & Poloshirts', men1Desc: '100% gekämmte Baumwolle, bügelfreie Stoffe und individuelle Kragendesigns.',
+    men2Title: 'Blazer, Sakkos & Anzüge', men2Desc: 'Präzise CAD-Muster nach europäischen Konfektionsgrößen.',
+    men3Title: 'Hosen & Casual Strickwaren', men3Desc: 'Chinos, Stoffhosen, Hoodies und langlebige Sweatshirts.',
+
+    womenSub: 'Damenbekleidung Produktion',
+    womenTitle: 'Eleganz & Präzision in der Damenbekleidung',
+    womenDesc: 'Feine Nähte, anspruchsvolle Schnitte und Stoffe aus Bio-Leinen und Baumwolle für moderne Damenkollektionen.',
+    women1Title: 'Kleider & Blusen', women1Desc: 'Fließende Stoffe, individuelle Drucke und atmungsaktive Materialien.',
+    women2Title: 'Blazer, Anzüge & Office Wear', women2Desc: 'Maßgeschneiderte feminine Silhouetten und erstklassige Verarbeitungen.',
+    women3Title: 'Leinen & Lässige Kleidung', women3Desc: 'Vorgewaschenes 100% türkisches Leinen und weiche Baumwoll-Loungewear.',
+
     facSub: 'Exzellenz in der Fertigung',
     facTitle: 'Moderne Anlagen in der Türkei',
     facDesc: 'Von der sorgfältigen Schnittmustererstellung über das automatisierte Zuschneiden bis hin zum Präzisionsnähen und speziellen Qualitätskontrolllinien.',
     fac1Title: 'Präzisionszuschnitt & Musterung', fac1Desc: 'Modernste CAD-Schnittmustererstellung und computergesteuerter Stoffzuschnitt garantieren höchste Stoffeffizienz.',
     fac2Title: 'Hochgeschwindigkeits-Montagelinien', fac2Desc: 'Erfahrene Näherinnen bedienen spezielle Flatlock-, Overlock- und Doppel-Nadel-Maschinen.',
     fac3Title: '100% Qualitätskontrolle', fac3Desc: 'AQL 2.5 Standard-Qualitätsprüfungen in jeder Phase — von der Rohstoffprüfung bis zum finalen Bügeln.',
+
     catSub: 'B2B-Produktsortiment',
     catTitle: 'Unsere Fertigungskategorien',
     cat1Title: 'Herrenbekleidung', cat1Desc: 'Premium-Hemden, Poloshirts, Hosen, Hoodies und Jacken. Strick- und Webstoffoptionen.',
@@ -184,18 +240,21 @@ const translations = {
     cat4Title: 'Corporate & Berufsbekleidung', cat4Desc: 'Langlebige Hotel-, Medizin-, Sicherheits- und Industrieuniformen, angepasst an Ihre Marke.',
     catTag: 'Strick & Webware',
     catBtn: 'Bestellbedingungen anfragen →',
+
     ecoSub: 'Nachhaltig & Premium',
     ecoTitle: '100% Natürliche Bio-Baumwolle & Reines Leinen',
-    ecoDesc: 'Wir produzieren hochwertige nachhaltige Modelinien aus zertifizierter 100% Ägäis-Baumwolle und türkischem Flachsleinen. Beliebt bei europäischen Premium-Resortmarken.',
+    ecoDesc: 'Wir produzieren hochwertige nachhaltige Modelinien aus zertifizierter 100% Ägäis-Baumwolle und türkischem Flachsleinen.',
     ecoLi1: 'Vorgewaschene, einlaufsichere Bio-Leinenhemden & -kleider',
     ecoLi2: 'Gekämmter 100% Baumwoll-Jersey mit hoher Farbechtheit',
     ecoLi3: 'Individuelle, umweltfreundliche Färbung (GOTS-konform)',
+
     faqSub: 'Häufig gestellte Fragen',
     faqTitle: 'B2B Export- & Produktionsdetails',
     faq1Q: 'Wie hoch ist Ihre Mindestbestellmenge (MOQ)?', faq1A: 'Unsere Standard-MOQ beginnt bei 300-500 Stück pro Stil/Farbe, abhängig von den Stoffspezifikationen.',
-    faq2Q: 'Wie schnell können Sie in die EU & nach Russland liefern?', faq2A: 'Die Bemusterung dauert 7-10 Werktage. Die Massenproduktion dauert je nach Menge 3-5 Wochen. Der Straßentransport nach Mitteleuropa dauert 4-6 Tage.',
-    faq3Q: 'Kümmern Sie sich um die Zolldokumentation (ATR / EUR.1)?', faq3A: 'Ja, wir kümmern uns um vollständige ATR-Zertifikate, EUR.1-Warenverkehrsbescheinigungen, Handelsrechnungen und Packlisten.',
-    faq4Q: 'Kann ich individuelle Etiketten und Verpackungen bestellen?', faq4A: 'Ja, wir bieten komplette OEM Private Label-Dienstleistungen einschließlich gewebter Markenetiketten, Pflegeetiketten, Hangtags und bedruckter Polybeutel.',
+    faq2Q: 'Wie schnell können Sie in die EU & nach Russland liefern?', faq2A: 'Die Bemusterung dauert 7-10 Werktage. Die Massenproduktion dauert je nach Menge 3-5 Wochen.',
+    faq3Q: 'Kümmern Sie sich um die Zolldokumentation (ATR / EUR.1)?', faq3A: 'Ja, wir kümmern uns um vollständige ATR-Zertifikate, EUR.1-Warenverkehrsbescheinigungen und Handelsrechnungen.',
+    faq4Q: 'Kann ich individuelle Etiketten und Verpackungen bestellen?', faq4A: 'Ja, wir bieten komplette OEM Private Label-Dienstleistungen.',
+
     footDesc: 'Premium-Unternehmen für Textildesign, Produktion und Export in der Türkei. Vertrauenswürdiger Partner für Unternehmenskäufer in ganz Europa, UK, DACH und der GUS.',
     footContact: 'Kontakt & Vertrieb',
     footProdBase: 'Produktionsstandort: Antalya / Türkei',
@@ -203,15 +262,15 @@ const translations = {
     footMarketsList: 'Deutschland · Frankreich · Italien · Niederlande · Polen · Österreich · Schweiz · Russland · Großbritannien',
     footCopy: 'Anavera Tekstil. Alle Rechte vorbehalten. Ein Premium-Produktionszweig von terzihizmeti.com.tr',
     waFloat: 'WhatsApp Angebot',
-    waMessage: 'Hallo, ich hätte gerne Informationen zur Textilproduktion und zum Export von Anavera Tekstil.',
+    waMessage: 'Hallo, ich hätte gerne Informationen zur Produktion und zum Export von Damen- und Herrenbekleidung bei Anavera Tekstil.',
   },
   ru: {
-    topBarMsg: '✦ Прямой B2B экспорт из Турции в ЕС, Великобританию и СНГ',
+    topBarMsg: '✦ Прямой B2B экспорт женской и мужской одежды из Турции',
     quoteBtn: 'Получить B2B предложение',
-    heroVerified: 'Проверенный турецкий производитель',
-    heroTitle1: 'Производство одежды премиум-класса для ',
+    heroVerified: 'Проверенный турецкий производитель одежды',
+    heroTitle1: 'Производство женской и мужской одежды премиум-класса для ',
     heroTitle2: 'Европы и СНГ',
-    heroDesc: 'Высокопроизводительное OEM-производство. Мы проектируем, производим и экспортируем мужскую, женскую одежду и униформу, используя премиальный турецкий хлопок и натуральные ткани.',
+    heroDesc: 'Высокопроизводительное OEM-производство. Мы проектируем, производим и экспортируем мужскую, женскую одежду и униформу, используя премиальный турецкий хлопок, лен и экологичные ткани.',
     contactWa: 'Связаться в WhatsApp',
     callUs: 'Позвоните нам:',
     stat1: 'Штук / Месяц',
@@ -221,12 +280,28 @@ const translations = {
     cert2Title: 'ISO 9001:2015', cert2Desc: 'Сертифицированный менеджмент качества',
     cert3Title: 'Таможенный союз ЕС', cert3Desc: 'Беспошлинный экспорт ATR / EUR.1',
     cert4Title: 'Полный OEM / ODM', cert4Desc: 'Собственная торговая марка и упаковка',
+
+    menSub: 'Производство мужской одежды',
+    menTitle: 'OEM Коллекция мужской одежды',
+    menDesc: 'От премиальных рубашек до футболок поло, брюк и пиджаков высокой точности пошива.',
+    men1Title: 'Рубашки и Поло', men1Desc: '100% гребенной хлопок, ткани не требующие глажки и индивидуальные воротники.',
+    men2Title: 'Пиджаки, Блейзеры и Костюмы', men2Desc: 'Точные лекала в САПР по европейским размерным сеткам.',
+    men3Title: 'Брюки и Повседневный Трикотаж', men3Desc: 'Чиносы, классические брюки, худи и свитшоты высокой прочности.',
+
+    womenSub: 'Производство женской одежды',
+    womenTitle: 'Элегантность и точность в женской одежде',
+    womenDesc: 'Изящные швы, утонченные силуэты и ткани из органического льна и хлопка для современных женских коллекций.',
+    women1Title: 'Платья и Блузки', women1Desc: 'Струящиеся ткани, индивидуальные принты и дышащие органические материалы.',
+    women2Title: 'Пиджаки, Костюмы и Офисный стиль', women2Desc: 'Приталенные женственные силуэты, высокая плотность стежков и премиальная отделка.',
+    women3Title: 'Лен и Домашняя одежда', women3Desc: 'Предварительно постиранный 100% турецкий лен и мягкий хлопковый трикотаж.',
+
     facSub: 'Совершенство производства',
     facTitle: 'Современные мощности в Турции',
     facDesc: 'От тщательного создания лекал до автоматизированного раскроя, точного шитья и выделенных линий контроля качества.',
     fac1Title: 'Точный крой и лекала', fac1Desc: 'Усовершенствованная разработка лекал в САПР и компьютеризированный раскрой ткани.',
     fac2Title: 'Высокоскоростные сборочные линии', fac2Desc: 'Квалифицированные швеи работают на специализированном оборудовании для долговечных швов.',
     fac3Title: '100% Контроль качества', fac3Desc: 'Проверки качества стандарта AQL 2.5 применяются на каждом этапе.',
+
     catSub: 'Ассортимент B2B',
     catTitle: 'Наши категории производства',
     cat1Title: 'Мужская коллекция', cat1Desc: 'Рубашки премиум-класса, поло, брюки, худи и куртки. Трикотаж и тканые материалы.',
@@ -235,18 +310,21 @@ const translations = {
     cat4Title: 'Корпоративная и рабочая одежда', cat4Desc: 'Долговечная униформа для отелей, медицины, охраны и промышленности, адаптированная под ваш бренд.',
     catTag: 'Трикотаж и Ткань',
     catBtn: 'Узнать условия заказа →',
+
     ecoSub: 'Экологичность и Премиум',
     ecoTitle: '100% Натуральный органический хлопок и чистый лен',
-    ecoDesc: 'Мы производим высококачественные экологичные коллекции, используя сертифицированный 100% эгейский хлопок и турецкий лен. Популярно среди европейских курортных брендов.',
+    ecoDesc: 'Мы производим высококачественные экологичные коллекции, используя сертифицированный 100% эгейский хлопок и турецкий лен.',
     ecoLi1: 'Предварительно постиранные рубашки и платья из органического льна',
     ecoLi2: 'Гребенной джерси из 100% хлопка с высокой стойкостью цвета',
     ecoLi3: 'Индивидуальное экологичное окрашивание (стандарт GOTS)',
+
     faqSub: 'Часто задаваемые вопросы',
     faqTitle: 'Детали B2B экспорта и производства',
     faq1Q: 'Каков ваш минимальный объем заказа (MOQ)?', faq1A: 'Наш стандартный MOQ начинается от 300-500 штук на стиль/цвет, в зависимости от спецификации ткани.',
-    faq2Q: 'Как быстро вы можете доставить в ЕС и Россию?', faq2A: 'Изготовление образцов занимает 7-10 рабочих дней. Массовое производство занимает 3-5 недель. Доставка в Россию занимает 5-8 дней.',
-    faq3Q: 'Оформляете ли вы таможенные документы?', faq3A: 'Да, мы оформляем полные сертификаты, коммерческие счета и упаковочные листы для беспрепятственной таможенной очистки.',
-    faq4Q: 'Могу ли я заказать индивидуальные бирки и упаковку?', faq4A: 'Да, мы предоставляем полные услуги OEM Private Label, включая тканые фирменные этикетки, бирки, штрих-коды и пакеты с печатью.',
+    faq2Q: 'Как быстро вы можете доставить в ЕС и Россию?', faq2A: 'Изготовление образцов занимает 7-10 рабочих дней. Массовое производство занимает 3-5 недель.',
+    faq3Q: 'Оформляете ли вы таможенные документы?', faq3A: 'Да, мы оформляем полные сертификаты, коммерческие счета и упаковочные листы.',
+    faq4Q: 'Могу ли я заказать индивидуальные бирки и упаковку?', faq4A: 'Да, мы предоставляем полные услуги OEM Private Label.',
+
     footDesc: 'Премиальная компания по дизайну, производству и экспорту текстиля в Турции. Нам доверяют корпоративные покупатели по всей Европе и СНГ.',
     footContact: 'Контакты и Продажи',
     footProdBase: 'Производственная база: Анталия / Турция',
@@ -254,7 +332,7 @@ const translations = {
     footMarketsList: 'Германия · Франция · Италия · Нидерланды · Польша · Австрия · Швейцария · Россия · Великобритания',
     footCopy: 'Anavera Tekstil. Все права защищены. Премиальный производственный филиал terzihizmeti.com.tr',
     waFloat: 'WhatsApp Запрос',
-    waMessage: 'Здравствуйте, я хотел бы получить информацию о текстильном производстве и экспорте Anavera Tekstil.',
+    waMessage: 'Здравствуйте, я хотел бы получить информацию о производстве и экспорте женской и мужской одежды Anavera Tekstil.',
   }
 };
 
@@ -265,7 +343,7 @@ type PageProps = {
 };
 
 export default async function AnaveraTekstilPage({ searchParams }: PageProps) {
-  // Next.js 15 ve öncesi sürümler ile tam uyumluluk için await kullanıyoruz
+  // Next.js 15 uyumluluğu için await kullanımı
   const resolvedParams = await searchParams;
   const rawLang = resolvedParams?.lang || '';
   
@@ -346,11 +424,11 @@ export default async function AnaveraTekstilPage({ searchParams }: PageProps) {
                 {t.heroVerified}
               </div>
 
-              <h1 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 800, lineHeight: 1.1, marginBottom: '1.5rem', letterSpacing: '-0.02em' }}>
+              <h1 style={{ fontSize: 'clamp(2.3rem, 5vw, 3.8rem)', fontWeight: 800, lineHeight: 1.15, marginBottom: '1.5rem', letterSpacing: '-0.02em' }}>
                 {t.heroTitle1} <span style={{ color: '#E4C664' }}>{t.heroTitle2}</span>
               </h1>
 
-              <p style={{ fontSize: '1.15rem', color: '#E2E8F0', lineHeight: 1.7, marginBottom: '2.5rem', maxWidth: 650 }}>
+              <p style={{ fontSize: '1.15rem', color: '#E2E8F0', lineHeight: 1.7, marginBottom: '2.5rem', maxWidth: 680 }}>
                 {t.heroDesc}
               </p>
 
@@ -405,8 +483,98 @@ export default async function AnaveraTekstilPage({ searchParams }: PageProps) {
           </div>
         </section>
 
-        {/* PRODUCTION SHOWCASE */}
-        <section style={{ padding: '5rem 1rem', backgroundColor: '#F8FAFC' }}>
+        {/* 1. SPECIAL SHOWCASE: ERKEK GİYİM İMALATI (MENSWEAR) */}
+        <section style={{ padding: '5rem 1rem', backgroundColor: '#FFFFFF', borderBottom: '1px solid #E2E8F0' }}>
+          <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+            <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
+              <span style={{ color: '#D97706', fontWeight: 800, fontSize: '0.85rem', letterSpacing: '0.15em', textTransform: 'uppercase' }}>{t.menSub}</span>
+              <h2 style={{ fontSize: 'clamp(2rem, 3.5vw, 2.5rem)', fontWeight: 800, color: '#0F172A', marginTop: '0.5rem' }}>{t.menTitle}</h2>
+              <p style={{ color: '#64748B', maxWidth: 700, margin: '1rem auto 0', fontSize: '1.05rem', lineHeight: 1.6 }}>
+                {t.menDesc}
+              </p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem' }}>
+              {/* Erkek Gömlek & Polo */}
+              <div style={{ backgroundColor: '#F8FAFC', borderRadius: '16px', overflow: 'hidden', border: '1px solid #E2E8F0', boxShadow: '0 8px 20px rgba(0,0,0,0.04)' }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Erkek Gömlek ve Polo Üretimi" style={{ width: '100%', height: '260px', objectFit: 'cover' }} />
+                <div style={{ padding: '1.5rem' }}>
+                  <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#0F172A', marginBottom: '0.5rem' }}>{t.men1Title}</h3>
+                  <p style={{ fontSize: '0.95rem', color: '#64748B', lineHeight: 1.6 }}>{t.men1Desc}</p>
+                </div>
+              </div>
+
+              {/* Erkek Ceket & Takım */}
+              <div style={{ backgroundColor: '#F8FAFC', borderRadius: '16px', overflow: 'hidden', border: '1px solid #E2E8F0', boxShadow: '0 8px 20px rgba(0,0,0,0.04)' }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="https://images.pexels.com/photos/1040881/pexels-photo-1040881.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Erkek Ceket ve Takım Elbise İmalatı" style={{ width: '100%', height: '260px', objectFit: 'cover' }} />
+                <div style={{ padding: '1.5rem' }}>
+                  <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#0F172A', marginBottom: '0.5rem' }}>{t.men2Title}</h3>
+                  <p style={{ fontSize: '0.95rem', color: '#64748B', lineHeight: 1.6 }}>{t.men2Desc}</p>
+                </div>
+              </div>
+
+              {/* Erkek Casual & Pantolon */}
+              <div style={{ backgroundColor: '#F8FAFC', borderRadius: '16px', overflow: 'hidden', border: '1px solid #E2E8F0', boxShadow: '0 8px 20px rgba(0,0,0,0.04)' }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Erkek Casual ve Triko Üretimi" style={{ width: '100%', height: '260px', objectFit: 'cover' }} />
+                <div style={{ padding: '1.5rem' }}>
+                  <h3 style={{ fontSize: '1.25rem', fontWeight 800, color: '#0F172A', marginBottom: '0.5rem' }}>{t.men3Title}</h3>
+                  <p style={{ fontSize: '0.95rem', color: '#64748B', lineHeight: 1.6 }}>{t.men3Desc}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 2. SPECIAL SHOWCASE: KADIN GİYİM İMALATI (WOMENSWEAR) */}
+        <section style={{ padding: '5rem 1rem', backgroundColor: '#F8FAFC', borderBottom: '1px solid #E2E8F0' }}>
+          <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+            <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
+              <span style={{ color: '#D97706', fontWeight: 800, fontSize: '0.85rem', letterSpacing: '0.15em', textTransform: 'uppercase' }}>{t.womenSub}</span>
+              <h2 style={{ fontSize: 'clamp(2rem, 3.5vw, 2.5rem)', fontWeight: 800, color: '#0F172A', marginTop: '0.5rem' }}>{t.womenTitle}</h2>
+              <p style={{ color: '#64748B', maxWidth: 700, margin: '1rem auto 0', fontSize: '1.05rem', lineHeight: 1.6 }}>
+                {t.womenDesc}
+              </p>
+            </div>
+
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem' }}>
+              {/* Kadın Elbise & Bluz */}
+              <div style={{ backgroundColor: '#FFFFFF', borderRadius: '16px', overflow: 'hidden', border: '1px solid #E2E8F0', boxShadow: '0 8px 20px rgba(0,0,0,0.04)' }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Kadın Elbise ve Bluz Üretimi" style={{ width: '100%', height: '260px', objectFit: 'cover' }} />
+                <div style={{ padding: '1.5rem' }}>
+                  <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#0F172A', marginBottom: '0.5rem' }}>{t.women1Title}</h3>
+                  <p style={{ fontSize: '0.95rem', color: '#64748B', lineHeight: 1.6 }}>{t.women1Desc}</p>
+                </div>
+              </div>
+
+              {/* Kadın Ceket & Takım */}
+              <div style={{ backgroundColor: '#FFFFFF', borderRadius: '16px', overflow: 'hidden', border: '1px solid #E2E8F0', boxShadow: '0 8px 20px rgba(0,0,0,0.04)' }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="https://images.pexels.com/photos/1536619/pexels-photo-1536619.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Kadın Ceket ve Takım İmalatı" style={{ width: '100%', height: '260px', objectFit: 'cover' }} />
+                <div style={{ padding: '1.5rem' }}>
+                  <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#0F172A', marginBottom: '0.5rem' }}>{t.women2Title}</h3>
+                  <p style={{ fontSize: '0.95rem', color: '#64748B', lineHeight: 1.6 }}>{t.women2Desc}</p>
+                </div>
+              </div>
+
+              {/* Kadın Keten & Triko */}
+              <div style={{ backgroundColor: '#FFFFFF', borderRadius: '16px', overflow: 'hidden', border: '1px solid #E2E8F0', boxShadow: '0 8px 20px rgba(0,0,0,0.04)' }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Kadın Keten ve Casual Giyim Üretimi" style={{ width: '100%', height: '260px', objectFit: 'cover' }} />
+                <div style={{ padding: '1.5rem' }}>
+                  <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#0F172A', marginBottom: '0.5rem' }}>{t.women3Title}</h3>
+                  <p style={{ fontSize: '0.95rem', color: '#64748B', lineHeight: 1.6 }}>{t.women3Desc}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* PRODUCTION SHOWCASE (FACILITIES) */}
+        <section style={{ padding: '5rem 1rem', backgroundColor: '#FFFFFF' }}>
           <div style={{ maxWidth: 1200, margin: '0 auto' }}>
             <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
               <span style={{ color: '#D97706', fontWeight: 800, fontSize: '0.85rem', letterSpacing: '0.15em', textTransform: 'uppercase' }}>{t.facSub}</span>
@@ -417,29 +585,32 @@ export default async function AnaveraTekstilPage({ searchParams }: PageProps) {
             </div>
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem' }}>
-              <div style={{ backgroundColor: '#FFF', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 10px 25px rgba(0,0,0,0.05)', border: '1px solid #E2E8F0' }}>
+              {/* 1. Hassas Kesim ve Kalıp */}
+              <div style={{ backgroundColor: '#F8FAFC', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 10px 25px rgba(0,0,0,0.05)', border: '1px solid #E2E8F0' }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="https://images.pexels.com/photos/3738095/pexels-photo-3738095.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop" alt="Fabric Cutting" style={{ width: '100%', height: '240px', objectFit: 'cover' }} />
+                <img src="https://images.pexels.com/photos/3738095/pexels-photo-3738095.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop" alt="Precision Cutting & Patterning" style={{ width: '100%', height: '240px', objectFit: 'cover' }} />
                 <div style={{ padding: '1.5rem' }}>
                   <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#0F172A', marginBottom: '0.5rem' }}>{t.fac1Title}</h3>
                   <p style={{ fontSize: '0.95rem', color: '#64748B', lineHeight: 1.6 }}>{t.fac1Desc}</p>
                 </div>
               </div>
 
-              <div style={{ backgroundColor: '#FFF', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 10px 25px rgba(0,0,0,0.05)', border: '1px solid #E2E8F0' }}>
+              {/* 2. Yüksek Hızlı Montaj Hatları */}
+              <div style={{ backgroundColor: '#F8FAFC', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 10px 25px rgba(0,0,0,0.05)', border: '1px solid #E2E8F0' }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="https://images.pexels.com/photos/462235/pexels-photo-462235.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop" alt="Sewing Line" style={{ width: '100%', height: '240px', objectFit: 'cover' }} />
+                <img src="https://images.pexels.com/photos/4622350/pexels-photo-4622350.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop" alt="High-Speed Assembly Lines" style={{ width: '100%', height: '240px', objectFit: 'cover' }} />
                 <div style={{ padding: '1.5rem' }}>
-                  <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#0F172A', marginBottom: '0.5rem' }}>{t.fac2Title}</h3>
+                  <h3 style={{ fontSize: '1.25rem', fontWeight 800, color: '#0F172A', marginBottom: '0.5rem' }}>{t.fac2Title}</h3>
                   <p style={{ fontSize: '0.95rem', color: '#64748B', lineHeight: 1.6 }}>{t.fac2Desc}</p>
                 </div>
               </div>
 
-              <div style={{ backgroundColor: '#FFF', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 10px 25px rgba(0,0,0,0.05)', border: '1px solid #E2E8F0' }}>
+              {/* 3. %100 Kalite Denetimi */}
+              <div style={{ backgroundColor: '#F8FAFC', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 10px 25px rgba(0,0,0,0.05)', border: '1px solid #E2E8F0' }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="https://images.pexels.com/photos/6292850/pexels-photo-6292850.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop" alt="Quality Control" style={{ width: '100%', height: '240px', objectFit: 'cover' }} />
+                <img src="https://images.pexels.com/photos/8483488/pexels-photo-8483488.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop" alt="100% Quality Inspection" style={{ width: '100%', height: '240px', objectFit: 'cover' }} />
                 <div style={{ padding: '1.5rem' }}>
-                  <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#0F172A', marginBottom: '0.5rem' }}>{t.fac3Title}</h3>
+                  <h3 style={{ fontSize: '1.25rem', fontWeight 800, color: '#0F172A', marginBottom: '0.5rem' }}>{t.fac3Title}</h3>
                   <p style={{ fontSize: '0.95rem', color: '#64748B', lineHeight: 1.6 }}>{t.fac3Desc}</p>
                 </div>
               </div>
@@ -447,8 +618,8 @@ export default async function AnaveraTekstilPage({ searchParams }: PageProps) {
           </div>
         </section>
 
-        {/* PRODUCTS CATALOGUE */}
-        <section style={{ padding: '5rem 1rem', backgroundColor: '#FFFFFF' }}>
+        {/* PRODUCTS CATALOGUE OVERVIEW */}
+        <section style={{ padding: '5rem 1rem', backgroundColor: '#F8FAFC' }}>
           <div style={{ maxWidth: 1200, margin: '0 auto' }}>
             <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
               <span style={{ color: '#D97706', fontWeight: 800, fontSize: '0.85rem', letterSpacing: '0.15em', textTransform: 'uppercase' }}>{t.catSub}</span>
@@ -457,10 +628,10 @@ export default async function AnaveraTekstilPage({ searchParams }: PageProps) {
 
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
               {[
-                { img: 'https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop', title: t.cat1Title, desc: t.cat1Desc },
-                { img: 'https://images.pexels.com/photos/7679720/pexels-photo-7679720.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop', title: t.cat2Title, desc: t.cat2Desc },
+                { img: 'https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop', title: t.cat1Title, desc: t.cat1Desc },
+                { img: 'https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop', title: t.cat2Title, desc: t.cat2Desc },
                 { img: 'https://images.pexels.com/photos/1620760/pexels-photo-1620760.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop', title: t.cat3Title, desc: t.cat3Desc },
-                { img: 'https://images.pexels.com/photos/8483488/pexels-photo-8483488.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop', title: t.cat4Title, desc: t.cat4Desc },
+                { img: 'https://images.pexels.com/photos/3760529/pexels-photo-3760529.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop', title: t.cat4Title, desc: t.cat4Desc },
               ].map((cat, idx) => (
                 <div key={idx} style={{ borderRadius: '16px', overflow: 'hidden', backgroundColor: '#FFF', border: '1px solid #E2E8F0', boxShadow: '0 10px 20px rgba(0,0,0,0.06)', display: 'flex', flexDirection: 'column' }}>
                   <div style={{ height: '260px', position: 'relative' }}>

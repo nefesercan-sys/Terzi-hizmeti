@@ -472,7 +472,7 @@ export default async function AnaveraTekstilPage({ searchParams }: PageProps) {
                   </div>
                   <div style={{ padding: '1.5rem', flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                     <div>
-                      <h3 style={{ fontSize: '1.3rem', fontWeight 800, color: '#0F172A', marginBottom: '0.8rem' }}>{cat.title}</h3>
+                      <h3 style={{ fontSize: '1.3rem', fontWeight: 800, color: '#0F172A', marginBottom: '0.8rem' }}>{cat.title}</h3>
                       <p style={{ fontSize: '0.95rem', color: '#64748B', lineHeight: 1.6, marginBottom: '1.5rem' }}>{cat.desc}</p>
                     </div>
                     <a href={WA_LINK} target="_blank" rel="noopener noreferrer" style={{ display: 'block', backgroundColor: '#F8FAFC', color: '#0F172A', textAlign: 'center', padding: '0.8rem 1rem', borderRadius: '8px', fontWeight: 700, fontSize: '0.95rem', textDecoration: 'none', border: '2px solid #E2E8F0', transition: 'all 0.2s' }}>

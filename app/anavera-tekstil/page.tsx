@@ -520,7 +520,7 @@ export default async function AnaveraTekstilPage({ searchParams }: PageProps) {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src="https://images.pexels.com/photos/1183266/pexels-photo-1183266.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop" alt="Erkek Casual ve Triko Üretimi" style={{ width: '100%', height: '260px', objectFit: 'cover' }} />
                 <div style={{ padding: '1.5rem' }}>
-                  <h3 style={{ fontSize: '1.25rem', fontWeight 800, color: '#0F172A', marginBottom: '0.5rem' }}>{t.men3Title}</h3>
+                  <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#0F172A', marginBottom: '0.5rem' }}>{t.men3Title}</h3>
                   <p style={{ fontSize: '0.95rem', color: '#64748B', lineHeight: 1.6 }}>{t.men3Desc}</p>
                 </div>
               </div>
@@ -600,7 +600,7 @@ export default async function AnaveraTekstilPage({ searchParams }: PageProps) {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src="https://images.pexels.com/photos/4622350/pexels-photo-4622350.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop" alt="High-Speed Assembly Lines" style={{ width: '100%', height: '240px', objectFit: 'cover' }} />
                 <div style={{ padding: '1.5rem' }}>
-                  <h3 style={{ fontSize: '1.25rem', fontWeight 800, color: '#0F172A', marginBottom: '0.5rem' }}>{t.fac2Title}</h3>
+                  <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#0F172A', marginBottom: '0.5rem' }}>{t.fac2Title}</h3>
                   <p style={{ fontSize: '0.95rem', color: '#64748B', lineHeight: 1.6 }}>{t.fac2Desc}</p>
                 </div>
               </div>
@@ -610,7 +610,7 @@ export default async function AnaveraTekstilPage({ searchParams }: PageProps) {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src="https://images.pexels.com/photos/8483488/pexels-photo-8483488.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop" alt="100% Quality Inspection" style={{ width: '100%', height: '240px', objectFit: 'cover' }} />
                 <div style={{ padding: '1.5rem' }}>
-                  <h3 style={{ fontSize: '1.25rem', fontWeight 800, color: '#0F172A', marginBottom: '0.5rem' }}>{t.fac3Title}</h3>
+                  <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#0F172A', marginBottom: '0.5rem' }}>{t.fac3Title}</h3>
                   <p style={{ fontSize: '0.95rem', color: '#64748B', lineHeight: 1.6 }}>{t.fac3Desc}</p>
                 </div>
               </div>
@@ -677,7 +677,7 @@ export default async function AnaveraTekstilPage({ searchParams }: PageProps) {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src="https://images.pexels.com/photos/17630522/pexels-photo-17630522.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop" alt="Natural Cotton Menswear" style={{ width: '100%', height: '320px', objectFit: 'cover', borderRadius: '16px', border: '1px solid #334155' }} />
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="https://images.pexels.com/photos/4256573/pexels-photo-4256573.jpeg?auto=compress&cs=tinysrgb&w=600&h=800&fit=crop" alt="Linen Womenswear" style={{ width: '100%', height: '320px', objectFit: 'cover', borderRadius: '16px', border: '1px solid #334155', marginTop: '2rem' }} />
+              <img src="https://images.pexels.com/photos/4256573/pexels-photo-4256573.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop" alt="Linen Womenswear" style={{ width: '100%', height: '320px', objectFit: 'cover', borderRadius: '16px', border: '1px solid #334155', marginTop: '2rem' }} />
             </div>
           </div>
         </section>
@@ -700,7 +700,7 @@ export default async function AnaveraTekstilPage({ searchParams }: PageProps) {
               ].map(([question, answer], idx) => (
                 <details key={idx} style={{ backgroundColor: '#FFFFFF', padding: '1.5rem', borderRadius: '12px', border: '1px solid #E2E8F0', cursor: 'pointer', boxShadow: '0 4px 6px rgba(0,0,0,0.02)' }}>
                   <summary style={{ fontWeight: 800, color: '#0F172A', fontSize: '1.05rem', outline: 'none' }}>{question}</summary>
-                  <p style={{ marginTop: '1rem', color: '#475569', fontSize: '0.95rem', lineHeight: 1.7, margin: '1rem 0 0 0', paddingLeft: '1.2rem', borderLeft: '2px solid #C9A227' }}>{answer}</p>
+                  <p style={{ marginTop: '1rem', color: '#475569', fontSize: '0.95rem', lineHeight 1.7, margin: '1rem 0 0 0', paddingLeft: '1.2rem', borderLeft: '2px solid #C9A227' }}>{answer}</p>
                 </details>
               ))}
             </div>

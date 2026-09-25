@@ -29,9 +29,26 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Blog',
+  '@id': `${SITE}/blog#blog`,
+  name: 'Terzi Can Blog',
+  url: `${SITE}/blog`,
+  inLanguage: 'tr',
+  publisher: { '@type': 'Organization', name: 'Terzi Can', url: SITE },
+  blogPost: YAZILAR.map(y => ({
+    '@type': 'BlogPosting',
+    headline: y.baslik,
+    url: `${SITE}/blog/${y.slug}`,
+    datePublished: y.tarih,
+  })),
+};
+
 export default function BlogIndex() {
   return (
     <main style={{ maxWidth: 720, margin: '0 auto', padding: '3rem 1.5rem', fontFamily: 'system-ui, sans-serif' }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <a href="/" style={{ fontSize: '.85rem', color: '#666', textDecoration: 'none' }}>← Ana Sayfa</a>
       <h1 style={{ fontSize: 'clamp(1.6rem,4vw,2.4rem)', fontWeight: 800, margin: '1rem 0 2rem' }}>Blog</h1>
 

@@ -34,85 +34,19 @@ export const viewport: Viewport = {
   themeColor: '#2C4A3E',
 };
 
-const orgJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'ClothingStore',
-  name: 'Terzi Can',
-  url: SITE,
-  telephone: '+905318986418',
-  image: `${SITE}/terzi-can-hero.jpg`,
-  description: 'Antalya Konyaaltı terzi, özel dikim, giysi tadilatı, tamir ve profesyonel buharlı ütü hizmeti. Tailor, alterations, repair, custom sewing & steam ironing service in Antalya.',
-  address: { 
-    '@type': 'PostalAddress', 
-    streetAddress: 'Konyaaltı', 
-    addressLocality: 'Konyaaltı', 
-    addressRegion: 'Antalya', 
-    addressCountry: 'TR' 
-  },
-  areaServed: [
-    { '@type': 'AdministrativeArea', name: 'Antalya' },
-    { '@type': 'AdministrativeArea', name: 'Konyaaltı' },
-    { '@type': 'AdministrativeArea', name: 'Liman' },
-    { '@type': 'AdministrativeArea', name: 'Hurma' },
-    { '@type': 'AdministrativeArea', name: 'Gürsu' },
-    { '@type': 'AdministrativeArea', name: 'Sarısu' },
-    { '@type': 'AdministrativeArea', name: 'Uncalı' }
-  ],
-  knowsLanguage: ['tr', 'en', 'ru', 'de'],
-  hasOfferCatalog: {
-    '@type': 'OfferCatalog',
-    name: 'Tailoring, Alteration, Repair & Ironing Services',
-    itemListElement: [
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Clothing Alterations & Repairs / Änderungsschneiderei / Ремонт одежды',
-          description: 'Pant hemming, zipper replacement, suit fitting, dress resizing.',
-        },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Professional Steam Ironing & Pressing / Bügelservice / Глажка одежды',
-          description: 'Steam pressing and ironing service for suits, dresses, and daily clothes.',
-        },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Custom Tailoring & Sewing / Maßschneiderei / Индивидуальный пошив',
-          description: 'Bespoke cotton, linen clothing, and custom curtain tailoring.',
-        },
-      },
-      {
-        '@type': 'Offer',
-        itemOffered: {
-          '@type': 'Service',
-          name: 'Hotel Pickup & Mobile Tailor Service / Mobiler Hotel-Schneiderservice / Выездной портной в отель',
-          description: 'Express clothing pickup, alteration, ironing, and hotel delivery service.',
-        },
-      },
-    ],
-  },
-  contactPoint: {
-    '@type': 'ContactPoint',
-    telephone: '+905318986418',
-    contactType: 'customer service',
-    areaServed: 'TR',
-    availableLanguage: ['Turkish', 'English', 'Russian', 'German'],
-  },
-  sameAs: [`${SITE}/antalya-terzi`, 'https://swaphubs.com/terzi'],
-};
-
+// DÜZELTME (SEO denetimi): Bu dosyada daha önce her sayfada basılan tam bir
+// LocalBusiness/ClothingStore JSON-LD bloğu vardı. Ancak her alt sayfa
+// (app/page.tsx, app/antalya-terzi/page.tsx, app/hurma-terzi/page.tsx, vb.)
+// ZATEN aynı '@id' (`${SITE}#business`, `${SITE}#website`) ile kendi, daha
+// eksiksiz ve doğru adresli (Hurma Mahallesi, 07130) şemalarını basıyordu.
+// Aynı sayfada aynı @id için iki farklı/çelişen tanım olması (biri eksik/
+// genel, diğeri tam) arama motorlarının ve AI motorlarının işletme bilgisini
+// (NAP) doğru okumasını riske atıyordu. Global şema buradan tamamen
+// kaldırıldı — her rota kendi doğru JSON-LD'sini kendi basıyor (blog
+// sayfaları için de ayrıca eklendi, bkz. app/blog/**/page.tsx).
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="tr" className={`${inter.variable} ${syne.variable}`}>
-      <head>
-        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }} />
-      </head>
       <body>
         <LangSetter />
         {children}

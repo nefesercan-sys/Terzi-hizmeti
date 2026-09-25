@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 
 const SITE      = 'https://terzihizmeti.com.tr';
 const PAGE_URL  = `${SITE}/hurma-terzi`;
@@ -167,7 +168,7 @@ export default function HurmaTerziPage() {
 
         <section className="hero" aria-labelledby="hero-h">
           <div className="hero-bg" aria-hidden="true">
-            <img src="/terzi-can-hero.jpg" alt="" className="hero-bg-img" width={1024} height={1024} />
+            <Image src="/terzi-can-hero.jpg" alt="Terzi Can — Hurma mahallesi Konyaaltı terzi atölyesi" fill priority fetchPriority="high" sizes="100vw" className="hero-bg-img" />
             <div className="hero-overlay" />
           </div>
           <div className="hero-content">

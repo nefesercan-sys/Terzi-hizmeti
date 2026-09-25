@@ -15,7 +15,7 @@ const WA_DEF    = WA('Hello, I need a VIP mobile tailor service for my hotel. / 
 const MAPS      = 'https://maps.app.goo.gl/QEgSkRoA8Nz8H62g8';
 const BIZ       = 'TERZİ Can - VIP Mobile Tailor';
 const TODAY     = new Date().toISOString().split('T')[0];
-const OG        = `${SITE}/otel-terzi-hero.jpg`;
+const OG        = `${SITE}/terzi-can-hero.jpg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
@@ -216,8 +216,8 @@ export default function MobileTailorHotelPage() {
           <div className="hero-bg" aria-hidden="true">
             {/* VIP/Otel hizmetini yansıtacak bir görsel ismi kullanıldı */}
             <Image
-              src="/otel-terzi-hero.jpg"
-              alt=""
+              src="/terzi-can-hero.jpg"
+              alt="Terzi Can — Antalya otellerine gelen VIP mobil terzi hizmeti"
               fill
               priority
               fetchPriority="high"

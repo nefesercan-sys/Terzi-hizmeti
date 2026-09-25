@@ -22,11 +22,11 @@ const OG        = `${SITE}/terzi-can-hero.jpg`;
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: {
-    default: 'Terzi Can — Tailor Antalya | Портной Анталья | Schneider Konyaaltı',
+    default: 'Terzi Can — Konyaaltı Antalya Terzi Hizmeti',
     template: '%s · Terzi Can',
   },
   description:
-    'Antalya Konyaaltı Terzi Hizmeti (TR/EN/RU/DE). Paça kısaltma ₺150, fermuar değişimi ₺200, bel daraltma, özel dikim, kuru temizleme. Tailor & Alterations in Antalya (Hurma, Liman, Sarısu).',
+    'Konyaaltı Antalya terzi hizmeti: paça kısaltma ₺150, fermuar değişimi ₺200, bel daraltma, özel dikim. Hurma, Liman, Sarısu\'ya ücretsiz adrese servis. TR/EN/RU/DE.',
   keywords: [
     // Türkçe
     'terzi Antalya', 'terzi hizmeti', 'Konyaaltı terzi', 'paça kısaltma Antalya', 'fermuar değişimi Antalya',
@@ -54,13 +54,14 @@ export const metadata: Metadata = {
     index: true, follow: true,
     googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
   },
+  // NOT: Ana sayfanın kendi çeviri karşılığı yok (marka/hub sayfası).
+  // Gerçek EN/RU/DE karşılıkları /antalya-terzi kümesinde (bkz. o sayfanın
+  // alternates.languages tanımı) — burada olmayan bir sayfayı varmış gibi
+  // göstermemek için hreflang sadece kendine (x-default) işaret eder.
   alternates: {
     canonical: SITE,
     languages: {
       'tr-TR': SITE,
-      'en-US': SITE,
-      'ru-RU': SITE,
-      'de-DE': SITE,
       'x-default': SITE,
     },
   },
@@ -621,11 +622,27 @@ export default function TerziHizmetiPage() {
           <div>© 2026 Terzi Can · Konyaaltı, Antalya · {PHONE}</div>
           <div style={{marginTop:4,fontSize:'.68rem',color:'rgba(255,255,255,.4)'}}>We speak Turkish, English, Russian & German</div>
           <nav className="foot-links" aria-label="District Pages">
+            <a href="/antalya-terzi">Antalya Terzi (Tüm Bölgeler)</a>
             <a href="/hurma-terzi">Hurma Terzi</a>
             <a href="/liman-terzi">Liman Terzi</a>
             <a href="/sarisu-terzi">Sarısu Terzi</a>
             <a href="/uncali-terzi">Uncalı Terzi</a>
             <a href="/gursu-terzi">Gürsu Terzi</a>
+          </nav>
+          <nav className="foot-links" aria-label="Services">
+            <a href="/otele-gelen-terzi-antalya">Otele Gelen Terzi</a>
+            <a href="/keten-pamuk-ozel-dikim">Keten & Pamuk Özel Dikim</a>
+            <a href="/antalya-gelinlik-tadilati">Gelinlik Tadilatı</a>
+            <a href="/antalya-uniforma-imalati">Üniforma İmalatı</a>
+            <a href="/konyaalti-fermuar-tamiri">Fermuar Tamiri</a>
+            <a href="/konyaalti-paca-kisaltma">Paça Kısaltma</a>
+            <a href="/anavera-tekstil">Anavera Tekstil (B2B)</a>
+            <a href="/blog">Blog</a>
+          </nav>
+          <nav className="foot-links" aria-label="Languages">
+            <a href="/en/tailor-service-antalya">English</a>
+            <a href="/ru/uslugi-portnogo-antalya">Русский</a>
+            <a href="/de/schneiderservice-antalya">Deutsch</a>
           </nav>
           <nav className="foot-links" aria-label="Footer links">
             <a href={MAPS} target="_blank" rel="noopener noreferrer">Google Maps</a>

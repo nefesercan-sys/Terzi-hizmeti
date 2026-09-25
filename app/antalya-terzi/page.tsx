@@ -310,7 +310,7 @@ export default function KonyaaltiTailorServicePage() {
           <div className="hero-bg" aria-hidden="true">
             <Image
               src="/terzi-can-hero.jpg"
-              alt=""
+              alt="Terzi Can — Konyaaltı Antalya terzi ve dikiş atölyesi"
               fill
               priority
               fetchPriority="high"

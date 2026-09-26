@@ -328,6 +328,9 @@ export default function TailorServiceAntalyaPage() {
             <a href="/en/hotel-tailor-antalya/kemer">Kemer Hotel Tailor</a>
             <a href="/en/hotel-tailor-antalya/side">Side Hotel Tailor</a>
           </nav>
+          <nav className="foot-links" aria-label="B2B">
+            <a href="/en/anavera-tekstil">B2B Clothing Manufacturer (Anavera Tekstil)</a>
+          </nav>
           <p style={{ marginTop: '1rem', fontSize: '.68rem', color: 'rgba(255,255,255,.45)', lineHeight: 1.8 }}>
             Antalya Tailor Service — tailoring, repair, alterations and ironing across all Antalya districts:
             Konyaaltı, Muratpaşa, Kepez, Lara, Belek, Kemer, Side, Alanya, Manavgat and more. Mobile tailor to

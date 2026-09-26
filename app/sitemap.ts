@@ -37,6 +37,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // ✂️ 4. ÖZEL DİKİM & SPESİFİK TADİLATLAR (Priority: 0.82)
     { url: `${SITE}/keten-pamuk-ozel-dikim`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.82 },
     { url: `${SITE}/anavera-tekstil`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.82 },
+    { url: `${SITE}/en/anavera-tekstil`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.82 },
+    { url: `${SITE}/de/anavera-tekstil`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.82 },
+    { url: `${SITE}/ru/anavera-tekstil`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.82 },
     { url: `${SITE}/konyaalti-fermuar-tamiri`, lastModified: NOW, changeFrequency: 'monthly', priority: 0.82 },
     { url: `${SITE}/konyaalti-paca-kisaltma`, lastModified: NOW, changeFrequency: 'monthly', priority: 0.82 },
     { url: `${SITE}/antalya-gelinlik-tadilati`, lastModified: NOW, changeFrequency: 'monthly', priority: 0.82 },

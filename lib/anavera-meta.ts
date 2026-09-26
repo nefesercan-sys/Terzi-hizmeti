@@ -13,25 +13,25 @@ const COPY: Record<AnaveraLang, Copy> = {
     title: 'Anavera Tekstil | Turkish Clothing Manufacturer & Exporter',
     description: 'Turkish menswear & womenswear manufacturer exporting to the EU, UK and CIS. OEM/private label, ISO 9001, MOQ from 300 pcs. Get a B2B quote today.',
     ogLocale: 'en_US',
-    keywords: ['Turkish clothing manufacturer', 'clothing manufacturer Turkey', 'garment factory Turkey', 'private label manufacturer Turkey', 'uniform manufacturer Turkey', 'textile exporter Turkey', 'OEM apparel manufacturer Turkey'],
+    keywords: ['Turkish clothing manufacturer', 'clothing manufacturer Turkey', 'garment factory Turkey', 'private label manufacturer Turkey', 'uniform manufacturer Turkey', 'textile exporter Turkey', 'OEM apparel manufacturer Turkey', 'sample development manufacturer Turkey', 'mass production clothing Turkey', 'serial production garment factory', 'production tracking manufacturer', 'menswear womenswear kidswear manufacturer Turkey', 'kidswear manufacturer Turkey'],
   },
   de: {
     title: 'Anavera Tekstil | Bekleidungshersteller aus der Türkei',
     description: 'Türkischer Hersteller für Damen- & Herrenbekleidung, Export in die EU. OEM/Eigenmarke, ISO 9001, ab 300 Stück MOQ. Jetzt B2B-Angebot anfordern.',
     ogLocale: 'de_DE',
-    keywords: ['Bekleidungshersteller Türkei', 'Textilhersteller Türkei', 'Konfektionsware Türkei', 'Private Label Hersteller Türkei', 'Berufsbekleidung Hersteller Türkei', 'OEM Bekleidung Türkei'],
+    keywords: ['Bekleidungshersteller Türkei', 'Textilhersteller Türkei', 'Konfektionsware Türkei', 'Private Label Hersteller Türkei', 'Berufsbekleidung Hersteller Türkei', 'OEM Bekleidung Türkei', 'Musterentwicklung Hersteller Türkei', 'Serienproduktion Bekleidung Türkei', 'Massenproduktion Textilfabrik Türkei', 'Produktionsverfolgung Hersteller', 'Herren Damen Kinderbekleidung Hersteller Türkei', 'Kinderbekleidung Hersteller Türkei'],
   },
   ru: {
     title: 'Anavera Tekstil | Производитель одежды в Турции',
     description: 'Турецкий производитель мужской и женской одежды, экспорт в ЕС и Россию. OEM/частная марка, ISO 9001, от 300 шт. Запросите B2B-предложение.',
     ogLocale: 'ru_RU',
-    keywords: ['производитель одежды Турция', 'швейная фабрика Турция', 'текстильная фабрика Турция', 'пошив под частной маркой Турция', 'производитель униформы Турция', 'OEM одежда Турция'],
+    keywords: ['производитель одежды Турция', 'швейная фабрика Турция', 'текстильная фабрика Турция', 'пошив под частной маркой Турция', 'производитель униформы Турция', 'OEM одежда Турция', 'разработка образцов производитель Турция', 'серийное производство одежды Турция', 'массовое производство одежды фабрика', 'контроль производства одежды', 'производство мужской женской детской одежды Турция', 'производитель детской одежды Турция'],
   },
   tr: {
     title: 'Anavera Tekstil | Türkiye Tekstil Üretici ve İhracatçısı',
     description: 'Avrupa ve Rusya\'ya ihracat yapan Türk hazır giyim üreticisi. OEM/özel marka, ISO 9001, 300 adetten MOQ. Hemen B2B teklif alın.',
     ogLocale: 'tr_TR',
-    keywords: ['Türkiye tekstil üreticisi', 'hazır giyim üreticisi', 'fason tekstil imalatı', 'özel marka giyim üretimi', 'üniforma üreticisi Türkiye', 'ihracat tekstil firması Antalya'],
+    keywords: ['Türkiye tekstil üreticisi', 'hazır giyim üreticisi', 'fason tekstil imalatı', 'özel marka giyim üretimi', 'üniforma üreticisi Türkiye', 'ihracat tekstil firması Antalya', 'numune çalışması tekstil üreticisi', 'seri imalat konfeksiyon', 'toplu üretim tekstil fabrikası', 'üretim takibi tekstil', 'erkek kadın çocuk tekstili imalatı', 'çocuk tekstili üreticisi Türkiye'],
   },
 };
 
@@ -87,12 +87,15 @@ export function buildAnaveraJsonLd(lang: AnaveraLang) {
         knowsLanguage: ['en', 'de', 'ru', 'tr'],
         hasOfferCatalog: {
           '@type': 'OfferCatalog',
-          name: 'Apparel Manufacturing Categories',
+          name: 'Apparel Manufacturing Categories & Services',
           itemListElement: [
             { '@type': 'Offer', itemOffered: { '@type': 'Product', name: t.cat1Title, description: t.cat1Desc } },
             { '@type': 'Offer', itemOffered: { '@type': 'Product', name: t.cat2Title, description: t.cat2Desc } },
             { '@type': 'Offer', itemOffered: { '@type': 'Product', name: t.cat3Title, description: t.cat3Desc } },
             { '@type': 'Offer', itemOffered: { '@type': 'Product', name: t.cat4Title, description: t.cat4Desc } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: t.process1Title, description: t.process1Desc } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: t.process3Title, description: t.process3Desc } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: t.process4Title, description: t.process4Desc } },
           ],
         },
         contactPoint: {
@@ -117,6 +120,7 @@ export function buildAnaveraJsonLd(lang: AnaveraLang) {
           { '@type': 'Question', name: t.faq2Q, acceptedAnswer: { '@type': 'Answer', text: t.faq2A } },
           { '@type': 'Question', name: t.faq3Q, acceptedAnswer: { '@type': 'Answer', text: t.faq3A } },
           { '@type': 'Question', name: t.faq4Q, acceptedAnswer: { '@type': 'Answer', text: t.faq4A } },
+          { '@type': 'Question', name: t.faq5Q, acceptedAnswer: { '@type': 'Answer', text: t.faq5A } },
         ],
       },
     ],

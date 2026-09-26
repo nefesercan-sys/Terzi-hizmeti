@@ -322,6 +322,9 @@ export default function UslugiPortnogoAntalyaPage() {
             <a href="/ru/vyezdnoy-portnoy-antalya/kemer">Портной в отеле Кемер</a>
             <a href="/ru/vyezdnoy-portnoy-antalya/side">Портной в отеле Сиде</a>
           </nav>
+          <nav className="foot-links" aria-label="B2B">
+            <a href="/ru/anavera-tekstil">Производитель одежды B2B (Anavera Tekstil)</a>
+          </nav>
           <p style={{ marginTop: '1rem', fontSize: '.68rem', color: 'rgba(255,255,255,.45)', lineHeight: 1.8 }}>
             Портной Анталья — пошив, ремонт, подгонка и глажка во всех районах Антальи: Коньяалты, Муратпаша,
             Кепез, Лара, Белек, Кемер, Сиде, Аланья, Манавгат и другие. Выездной портной в отель или по адресу. {PHONE}

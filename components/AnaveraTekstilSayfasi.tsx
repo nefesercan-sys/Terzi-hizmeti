@@ -98,6 +98,15 @@ export const translations = {
     faq2Q: 'How fast can you deliver to EU & Russia?', faq2A: 'Sampling takes 7-10 business days. Bulk production takes 3-5 weeks depending on quantity. Road transport to Central Europe takes 4-6 days, and shipping to Russia takes 5-8 days.',
     faq3Q: 'Do you handle customs documentation (ATR / EUR.1)?', faq3A: 'Yes, we handle complete ATR certificates, EUR.1 movement certificates, commercial invoices, and packing lists for smooth duty-free customs clearance in the EU.',
     faq4Q: 'Can I order custom tags, labels, and packaging?', faq4A: 'Yes, we provide complete OEM Private Label services including woven brand labels, care labels, hangtags, barcodes, and custom printed polybags.',
+    faq5Q: 'Do you manufacture menswear, womenswear AND kidswear in the same order?', faq5A: 'Yes. We run dedicated lines for menswear, womenswear and kidswear/toddler apparel, and can combine categories in a single mixed order once each sample is approved.',
+
+    processSub: 'Sample Development & Production Process',
+    processTitle: 'From Sample Development to Mass Production and Production Tracking',
+    processDesc: 'Every order — menswear, womenswear or kidswear — follows the same controlled path from first sample to tracked mass production.',
+    process1Title: 'Sample Development', process1Desc: 'We build a sample/prototype from your design, tech pack or reference garment for your review.',
+    process2Title: 'Sample Approval', process2Desc: 'Fabric, pattern and stitching details are finalized together; mass production only starts after your sign-off.',
+    process3Title: 'Mass / Serial Production', process3Desc: 'High-capacity serial production for menswear, womenswear and kidswear, matched exactly to the approved sample.',
+    process4Title: 'Production Tracking & Reporting', process4Desc: 'Regular photo and status reports at each stage, so you can track your order until it ships.',
 
     footDesc: 'Premium textile design, manufacturing, and export company in Turkey. Trusted by corporate buyers across Europe, UK, DACH, and CIS regions.',
     footContact: 'Contact & Sales',
@@ -170,6 +179,15 @@ export const translations = {
     faq2Q: 'Avrupa ve Rusya\'ya ne kadar hızlı teslimat yapabilirsiniz?', faq2A: 'Numune alımı 7-10 iş günü sürer. Toplu üretim miktara bağlı olarak 3-5 hafta sürer. Orta Avrupa\'ya karayolu taşımacılığı 4-6 gün, Rusya\'ya nakliye ise 5-8 gün sürmektedir.',
     faq3Q: 'Gümrük belgelerini (ATR / EUR.1) siz mi hallediyorsunuz?', faq3A: 'Evet, AB\'de sorunsuz gümrüksüz gümrükleme için eksiksiz ATR sertifikaları, EUR.1 dolaşım belgeleri, ticari faturalar ve paketleme listelerini biz hazırlıyoruz.',
     faq4Q: 'Özel etiket, marka ve ambalaj sipariş edebilir miyim?', faq4A: 'Evet, dokuma marka etiketleri, yıkama talimatları, karton etiketler, barkodlar ve özel baskılı poşetler dahil olmak üzere eksiksiz OEM Özel Marka (Private Label) hizmetleri sunuyoruz.',
+    faq5Q: 'Aynı siparişte erkek, kadın VE çocuk tekstili üretebiliyor musunuz?', faq5A: 'Evet. Erkek giyim, kadın giyim ve çocuk/bebek giyimi için ayrı üretim hatlarımız var; her kategori için numune onaylandıktan sonra tek bir karma siparişte birleştirebiliyoruz.',
+
+    processSub: 'Numune Çalışması ve Üretim Süreci',
+    processTitle: 'Numune Çalışmasından Seri Üretime, Üretim Takibine Kadar',
+    processDesc: 'Erkek, kadın veya çocuk tekstili fark etmeksizin her sipariş, ilk numuneden takipli seri üretime kadar aynı kontrollü süreçten geçer.',
+    process1Title: 'Numune Geliştirme', process1Desc: 'Tasarımınıza, teknik paketinize veya referans ürününüze göre numune/prototip hazırlıyor, incelemenize sunuyoruz.',
+    process2Title: 'Numune Onayı', process2Desc: 'Kumaş, kalıp ve dikiş detayları birlikte netleştirilir; seri üretime yalnızca onayınızdan sonra geçilir.',
+    process3Title: 'Seri İmalat', process3Desc: 'Onaylanan numuneye birebir uygun, erkek, kadın ve çocuk tekstili için yüksek kapasiteli seri üretim.',
+    process4Title: 'Üretim Takibi & Raporlama', process4Desc: 'Her aşamada düzenli fotoğraf ve durum raporlarıyla siparişinizi sevkiyata kadar takip edebilirsiniz.',
 
     footDesc: 'Türkiye\'de birinci sınıf tekstil tasarımı, üretimi ve ihracat şirketi. Avrupa, İngiltere, DACH ve BDT bölgelerindeki kurumsal alıcıların güvenilir tercihi.',
     footContact: 'İletişim ve Satış',
@@ -242,6 +260,15 @@ export const translations = {
     faq2Q: 'Wie schnell können Sie in die EU & nach Russland liefern?', faq2A: 'Die Bemusterung dauert 7-10 Werktage. Die Massenproduktion dauert je nach Menge 3-5 Wochen.',
     faq3Q: 'Kümmern Sie sich um die Zolldokumentation (ATR / EUR.1)?', faq3A: 'Ja, wir kümmern uns um vollständige ATR-Zertifikate, EUR.1-Warenverkehrsbescheinigungen und Handelsrechnungen.',
     faq4Q: 'Kann ich individuelle Etiketten und Verpackungen bestellen?', faq4A: 'Ja, wir bieten komplette OEM Private Label-Dienstleistungen.',
+    faq5Q: 'Fertigen Sie Herren-, Damen- UND Kinderbekleidung in derselben Bestellung?', faq5A: 'Ja. Wir betreiben eigene Linien für Herren-, Damen- und Kinderbekleidung und können alle Kategorien nach Musterfreigabe in einer gemischten Bestellung kombinieren.',
+
+    processSub: 'Musterentwicklung & Produktionsprozess',
+    processTitle: 'Von der Musterentwicklung über die Serienproduktion bis zur Produktionsverfolgung',
+    processDesc: 'Jede Bestellung — Herren-, Damen- oder Kinderbekleidung — durchläuft denselben kontrollierten Weg vom ersten Muster bis zur nachverfolgten Serienproduktion.',
+    process1Title: 'Musterentwicklung', process1Desc: 'Wir erstellen ein Muster/Prototyp nach Ihrem Design, Tech Pack oder Referenzkleidungsstück zur Prüfung.',
+    process2Title: 'Musterfreigabe', process2Desc: 'Stoff, Schnittmuster und Nähdetails werden gemeinsam finalisiert; die Serienproduktion startet erst nach Ihrer Freigabe.',
+    process3Title: 'Serienproduktion', process3Desc: 'Hochkapazitive Serienproduktion für Herren-, Damen- und Kinderbekleidung, exakt nach dem freigegebenen Muster.',
+    process4Title: 'Produktionsverfolgung & Berichte', process4Desc: 'Regelmäßige Foto- und Statusberichte in jeder Phase, damit Sie Ihre Bestellung bis zum Versand verfolgen können.',
 
     footDesc: 'Premium-Unternehmen für Textildesign, Produktion und Export in der Türkei. Vertrauenswürdiger Partner für Unternehmenskäufer in ganz Europa, UK, DACH und der GUS.',
     footContact: 'Kontakt & Vertrieb',
@@ -314,6 +341,15 @@ export const translations = {
     faq2Q: 'Как быстро вы можете доставить в ЕС и Россию?', faq2A: 'Изготовление образцов занимает 7-10 рабочих дней. Массовое производство занимает 3-5 недель.',
     faq3Q: 'Оформляете ли вы таможенные документы?', faq3A: 'Да, мы оформляем полные сертификаты, коммерческие счета и упаковочные листы.',
     faq4Q: 'Могу ли я заказать индивидуальные бирки и упаковку?', faq4A: 'Да, мы предоставляем полные услуги OEM Private Label.',
+    faq5Q: 'Вы производите мужскую, женскую И детскую одежду в одном заказе?', faq5A: 'Да. У нас есть отдельные линии для мужской, женской и детской одежды, и после утверждения образца по каждой категории мы можем объединить их в один смешанный заказ.',
+
+    processSub: 'Разработка образцов и производственный процесс',
+    processTitle: 'От разработки образца до серийного производства и контроля производства',
+    processDesc: 'Каждый заказ — мужская, женская или детская одежда — проходит один и тот же контролируемый путь от первого образца до отслеживаемого серийного производства.',
+    process1Title: 'Разработка образца', process1Desc: 'Мы создаём образец/прототип по вашему дизайну, техпакету или референсному изделию для проверки.',
+    process2Title: 'Утверждение образца', process2Desc: 'Ткань, лекала и детали пошива согласовываются вместе; серийное производство начинается только после вашего утверждения.',
+    process3Title: 'Серийное производство', process3Desc: 'Высокопроизводительное серийное производство мужской, женской и детской одежды точно по утверждённому образцу.',
+    process4Title: 'Контроль производства и отчётность', process4Desc: 'Регулярные фото- и статус-отчёты на каждом этапе, чтобы вы могли отслеживать заказ вплоть до отгрузки.',
 
     footDesc: 'Премиальная компания по дизайну, производству и экспорту текстиля в Турции. Нам доверяют корпоративные покупатели по всей Европе и СНГ.',
     footContact: 'Контакты и Продажи',
@@ -533,26 +569,77 @@ export default function AnaveraTekstilSayfasi({ lang }: { lang: AnaveraLang }) {
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem' }}>
             <div style={{ backgroundColor: '#F8FAFC', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 10px 25px rgba(0,0,0,0.05)', border: '1px solid #E2E8F0' }}>
-              <img src="https://images.pexels.com/photos/3738095/pexels-photo-3738095.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop" alt={t.fac1Title} loading="lazy" style={{ width: '100%', height: '240px', objectFit: 'cover' }} />
+              <div style={{ height: '180px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'linear-gradient(135deg, #0F172A 0%, #1E293B 100%)' }}>
+                <svg width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#E4C664" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="20" cy="16" r="6" />
+                  <circle cx="20" cy="48" r="6" />
+                  <line x1="24.5" y1="20" x2="52" y2="44" />
+                  <line x1="24.5" y1="44" x2="52" y2="20" />
+                  <line x1="30" y1="32" x2="52" y2="32" strokeDasharray="3 4" opacity="0.6" />
+                </svg>
+              </div>
               <div style={{ padding: '1.5rem' }}>
                 <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#0F172A', marginBottom: '0.5rem' }}>{t.fac1Title}</h3>
                 <p style={{ fontSize: '0.95rem', color: '#64748B', lineHeight: 1.6 }}>{t.fac1Desc}</p>
               </div>
             </div>
             <div style={{ backgroundColor: '#F8FAFC', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 10px 25px rgba(0,0,0,0.05)', border: '1px solid #E2E8F0' }}>
-              <img src="https://images.pexels.com/photos/4622350/pexels-photo-4622350.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop" alt={t.fac2Title} loading="lazy" style={{ width: '100%', height: '240px', objectFit: 'cover' }} />
+              <div style={{ height: '180px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'linear-gradient(135deg, #0F172A 0%, #1E293B 100%)' }}>
+                <svg width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#E4C664" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="12" y="26" width="40" height="16" rx="3" />
+                  <circle cx="20" cy="42" r="4" fill="#E4C664" stroke="none" />
+                  <circle cx="44" cy="42" r="4" fill="#E4C664" stroke="none" />
+                  <path d="M18 26 V18 a4 4 0 0 1 4-4 h4" />
+                  <line x1="26" y1="14" x2="26" y2="26" strokeDasharray="2 3" opacity="0.7" />
+                </svg>
+              </div>
               <div style={{ padding: '1.5rem' }}>
                 <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#0F172A', marginBottom: '0.5rem' }}>{t.fac2Title}</h3>
                 <p style={{ fontSize: '0.95rem', color: '#64748B', lineHeight: 1.6 }}>{t.fac2Desc}</p>
               </div>
             </div>
             <div style={{ backgroundColor: '#F8FAFC', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 10px 25px rgba(0,0,0,0.05)', border: '1px solid #E2E8F0' }}>
-              <img src="https://images.pexels.com/photos/8483488/pexels-photo-8483488.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop" alt={t.fac3Title} loading="lazy" style={{ width: '100%', height: '240px', objectFit: 'cover' }} />
+              <div style={{ height: '180px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'linear-gradient(135deg, #0F172A 0%, #1E293B 100%)' }}>
+                <svg width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#E4C664" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="27" cy="27" r="15" />
+                  <line x1="38" y1="38" x2="52" y2="52" />
+                  <path d="M20 27 l5 5 l10 -10" strokeWidth="2.4" />
+                </svg>
+              </div>
               <div style={{ padding: '1.5rem' }}>
                 <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#0F172A', marginBottom: '0.5rem' }}>{t.fac3Title}</h3>
                 <p style={{ fontSize: '0.95rem', color: '#64748B', lineHeight: 1.6 }}>{t.fac3Desc}</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* NUMUNE / SAMPLE DEVELOPMENT & PRODUCTION TRACKING PROCESS */}
+      <style>{`@media (max-width: 900px) { .anavera-step-arrow { display: none; } }`}</style>
+      <section style={{ padding: '5rem 1rem', backgroundColor: '#F8FAFC', borderBottom: '1px solid #E2E8F0' }}>
+        <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+          <div style={{ textAlign: 'center', marginBottom: '3.5rem' }}>
+            <span style={{ color: '#D97706', fontWeight: 800, fontSize: '0.85rem', letterSpacing: '0.15em', textTransform: 'uppercase' }}>{t.processSub}</span>
+            <h2 style={{ fontSize: 'clamp(2rem, 3.5vw, 2.5rem)', fontWeight: 800, color: '#0F172A', marginTop: '0.5rem' }}>{t.processTitle}</h2>
+            <p style={{ color: '#64748B', maxWidth: 760, margin: '1rem auto 0', fontSize: '1.05rem', lineHeight: 1.6 }}>{t.processDesc}</p>
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))', gap: '1.5rem' }}>
+            {[
+              { n: '01', title: t.process1Title, desc: t.process1Desc },
+              { n: '02', title: t.process2Title, desc: t.process2Desc },
+              { n: '03', title: t.process3Title, desc: t.process3Desc },
+              { n: '04', title: t.process4Title, desc: t.process4Desc },
+            ].map((step, idx) => (
+              <div key={idx} style={{ backgroundColor: '#FFFFFF', borderRadius: '16px', padding: '1.75rem 1.5rem', border: '1px solid #E2E8F0', boxShadow: '0 8px 20px rgba(0,0,0,0.04)', position: 'relative' }}>
+                <div style={{ fontSize: '2.2rem', fontWeight: 800, color: '#F1E7CE', lineHeight: 1, marginBottom: '0.8rem' }}>{step.n}</div>
+                <h3 style={{ fontSize: '1.1rem', fontWeight: 800, color: '#0F172A', marginBottom: '0.5rem' }}>{step.title}</h3>
+                <p style={{ fontSize: '0.92rem', color: '#64748B', lineHeight: 1.6 }}>{step.desc}</p>
+                {idx < 3 && (
+                  <div className="anavera-step-arrow" style={{ position: 'absolute', top: '2rem', right: '-1rem', color: '#D97706', fontSize: '1.2rem' }} aria-hidden="true">→</div>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -626,6 +713,7 @@ export default function AnaveraTekstilSayfasi({ lang }: { lang: AnaveraLang }) {
               [t.faq2Q, t.faq2A],
               [t.faq3Q, t.faq3A],
               [t.faq4Q, t.faq4A],
+              [t.faq5Q, t.faq5A],
             ].map(([question, answer], idx) => (
               <details key={idx} style={{ backgroundColor: '#FFFFFF', padding: '1.5rem', borderRadius: '12px', border: '1px solid #E2E8F0', cursor: 'pointer', boxShadow: '0 4px 6px rgba(0,0,0,0.02)' }}>
                 <summary style={{ fontWeight: 800, color: '#0F172A', fontSize: '1.05rem', outline: 'none' }}>{question}</summary>

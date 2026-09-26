@@ -322,6 +322,9 @@ export default function SchneiderserviceAntalyaPage() {
             <a href="/de/schneider-service-hotel-antalya/kemer">Schneider Kemer Hotel</a>
             <a href="/de/schneider-service-hotel-antalya/side">Schneider Side Hotel</a>
           </nav>
+          <nav className="foot-links" aria-label="B2B">
+            <a href="/de/anavera-tekstil">B2B Bekleidungshersteller (Anavera Tekstil)</a>
+          </nav>
           <p style={{ marginTop: '1rem', fontSize: '.68rem', color: 'rgba(255,255,255,.45)', lineHeight: 1.8 }}>
             Schneiderservice Antalya — Schneiderei, Reparatur, Änderungen und Bügelservice in allen Bezirken
             von Antalya: Konyaaltı, Muratpaşa, Kepez, Lara, Belek, Kemer, Side, Alanya, Manavgat und mehr.

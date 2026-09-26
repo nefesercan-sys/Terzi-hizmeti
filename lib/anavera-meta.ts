@@ -1,9 +1,8 @@
-// lib/anavera-meta.ts
 import type { Metadata } from 'next';
 import { ANAVERA_URLS, translations, type AnaveraLang } from '@/components/AnaveraTekstilSayfasi';
 
-const SITE  = 'https://terzihizmeti.com.tr';
-const OG    = 'https://images.pexels.com/photos/3738088/pexels-photo-3738088.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop';
+const SITE    = 'https://terzihizmeti.com.tr';
+const OG      = 'https://images.pexels.com/photos/3738088/pexels-photo-3738088.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop';
 const PHONE_E = '+905318986418';
 
 type Copy = { title: string; description: string; ogLocale: string; keywords: string[] };
@@ -89,10 +88,11 @@ export function buildAnaveraJsonLd(lang: AnaveraLang) {
           '@type': 'OfferCatalog',
           name: 'Apparel Manufacturing Categories & Services',
           itemListElement: [
-            { '@type': 'Offer', itemOffered: { '@type': 'Product', name: t.cat1Title, description: t.cat1Desc } },
-            { '@type': 'Offer', itemOffered: { '@type': 'Product', name: t.cat2Title, description: t.cat2Desc } },
-            { '@type': 'Offer', itemOffered: { '@type': 'Product', name: t.cat3Title, description: t.cat3Desc } },
-            { '@type': 'Offer', itemOffered: { '@type': 'Product', name: t.cat4Title, description: t.cat4Desc } },
+            // Search Console 'Product' uyarısını çözen Service dönüşümleri:
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: t.cat1Title, description: t.cat1Desc } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: t.cat2Title, description: t.cat2Desc } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: t.cat3Title, description: t.cat3Desc } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Service', name: t.cat4Title, description: t.cat4Desc } },
             { '@type': 'Offer', itemOffered: { '@type': 'Service', name: t.process1Title, description: t.process1Desc } },
             { '@type': 'Offer', itemOffered: { '@type': 'Service', name: t.process3Title, description: t.process3Desc } },
             { '@type': 'Offer', itemOffered: { '@type': 'Service', name: t.process4Title, description: t.process4Desc } },

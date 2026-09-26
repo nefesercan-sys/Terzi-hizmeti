@@ -14,10 +14,13 @@ export async function generateStaticParams() {
   return OTEL_BOLGELERI.map((r) => ({ region: r.slug }));
 }
 
-// DÜZELTME: Next.js 16'da params bir Promise — await edilmeden okunursa
-// 'region' hep undefined kalır, bulOtelBolgesi(undefined) boş döner ve
-// notFound() tetiklenir. Bu, bu route altındaki 11 sayfanın da gerçekte
-// 404 dönmesine ve Google tarafından indexlenememesine sebep oluyordu.
+// DÜZELTME (2026-09-26): params Next.js 16'da bir Promise'dir. Önceki kod bunu
+// senkron bir obje gibi ({ region: string }) işleyip await etmeden destructure
+// ediyordu — bu yüzden `region` her zaman undefined geliyor, `bulOtelBolgesi`
+// null dönüyor, generateMetadata BOŞ metadata üretiyor (title/canonical/hreflang
+// yok) ve sayfa notFound() çağırarak 404 veriyordu. Bu, 11 otel bölgesi
+// sayfasının (Belek, Lara, Kemer, Alanya, Side, vb.) hiçbirinin indekslenmemesinin
+// doğrudan sebebiydi. TR/EN eşdeğerleri zaten doğru (Promise<{region}>) kullanıyordu.
 export async function generateMetadata({ params }: { params: Promise<{ region: string }> }): Promise<Metadata> {
   const { region } = await params;
   const r = bulOtelBolgesi(region);
@@ -49,10 +52,7 @@ export async function generateMetadata({ params }: { params: Promise<{ region: s
   };
 }
 
-// DÜZELTME: Next.js 16'da params bir Promise — await edilmeden okunursa
-// 'region' hep undefined kalır, bulOtelBolgesi(undefined) boş döner ve
-// notFound() tetiklenir. Bu, bu route altındaki 11 sayfanın da gerçekte
-// 404 dönmesine ve Google tarafından indexlenememesine sebep oluyordu.
+// Promise kaldırıldı, standart obje yapısına geçildi
 export default async function OtelBolgeDePage({ params }: { params: Promise<{ region: string }> }) {
   const { region } = await params;
   const r = bulOtelBolgesi(region);

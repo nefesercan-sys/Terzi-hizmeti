@@ -569,43 +569,24 @@ export default function AnaveraTekstilSayfasi({ lang }: { lang: AnaveraLang }) {
           </div>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem' }}>
             <div style={{ backgroundColor: '#F8FAFC', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 10px 25px rgba(0,0,0,0.05)', border: '1px solid #E2E8F0' }}>
-              <div style={{ height: '180px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'linear-gradient(135deg, #0F172A 0%, #1E293B 100%)' }}>
-                <svg width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#E4C664" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="20" cy="16" r="6" />
-                  <circle cx="20" cy="48" r="6" />
-                  <line x1="24.5" y1="20" x2="52" y2="44" />
-                  <line x1="24.5" y1="44" x2="52" y2="20" />
-                  <line x1="30" y1="32" x2="52" y2="32" strokeDasharray="3 4" opacity="0.6" />
-                </svg>
-              </div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="https://images.pexels.com/photos/2973399/pexels-photo-2973399.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop" alt={t.fac1Title} loading="lazy" style={{ width: '100%', height: '180px', objectFit: 'cover' }} />
               <div style={{ padding: '1.5rem' }}>
                 <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#0F172A', marginBottom: '0.5rem' }}>{t.fac1Title}</h3>
                 <p style={{ fontSize: '0.95rem', color: '#64748B', lineHeight: 1.6 }}>{t.fac1Desc}</p>
               </div>
             </div>
             <div style={{ backgroundColor: '#F8FAFC', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 10px 25px rgba(0,0,0,0.05)', border: '1px solid #E2E8F0' }}>
-              <div style={{ height: '180px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'linear-gradient(135deg, #0F172A 0%, #1E293B 100%)' }}>
-                <svg width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#E4C664" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="12" y="26" width="40" height="16" rx="3" />
-                  <circle cx="20" cy="42" r="4" fill="#E4C664" stroke="none" />
-                  <circle cx="44" cy="42" r="4" fill="#E4C664" stroke="none" />
-                  <path d="M18 26 V18 a4 4 0 0 1 4-4 h4" />
-                  <line x1="26" y1="14" x2="26" y2="26" strokeDasharray="2 3" opacity="0.7" />
-                </svg>
-              </div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="https://images.pexels.com/photos/31031031/pexels-photo-31031031.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop" alt={t.fac2Title} loading="lazy" style={{ width: '100%', height: '180px', objectFit: 'cover' }} />
               <div style={{ padding: '1.5rem' }}>
                 <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#0F172A', marginBottom: '0.5rem' }}>{t.fac2Title}</h3>
                 <p style={{ fontSize: '0.95rem', color: '#64748B', lineHeight: 1.6 }}>{t.fac2Desc}</p>
               </div>
             </div>
             <div style={{ backgroundColor: '#F8FAFC', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 10px 25px rgba(0,0,0,0.05)', border: '1px solid #E2E8F0' }}>
-              <div style={{ height: '180px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'linear-gradient(135deg, #0F172A 0%, #1E293B 100%)' }}>
-                <svg width="64" height="64" viewBox="0 0 64 64" fill="none" stroke="#E4C664" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="27" cy="27" r="15" />
-                  <line x1="38" y1="38" x2="52" y2="52" />
-                  <path d="M20 27 l5 5 l10 -10" strokeWidth="2.4" />
-                </svg>
-              </div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="https://images.pexels.com/photos/31047132/pexels-photo-31047132.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop" alt={t.fac3Title} loading="lazy" style={{ width: '100%', height: '180px', objectFit: 'cover' }} />
               <div style={{ padding: '1.5rem' }}>
                 <h3 style={{ fontSize: '1.25rem', fontWeight: 800, color: '#0F172A', marginBottom: '0.5rem' }}>{t.fac3Title}</h3>
                 <p style={{ fontSize: '0.95rem', color: '#64748B', lineHeight: 1.6 }}>{t.fac3Desc}</p>

@@ -102,6 +102,17 @@ const T: Record<Lang, any> = {
     ],
     finalCta: 'Kendi Modelinizi Diktirin', finalSub: 'Fotoğraf gönderin, fiyat teklifi alın — 30 dakikada dönüş.',
     waBtn: 'WhatsApp ile Başlayın',
+    wholesaleTag: '🏭 Toptan Üretim & İhracat',
+    wholesaleH: 'Tek Parça mı, Yoksa Seri İmalat mı?',
+    wholesaleDesc: 'Otel/mağaza zinciri, marka veya toptancıysanız — aynı keten ve pamuk kumaşlarla erkek, kadın ve çocuk giyiminde numune çalışması yapıp, onayınızın ardından seri imalata geçiyor, üretim takibini paylaşarak yerli ve yurt dışı (Avrupa, Rusya) müşterilere ihracat yapıyoruz.',
+    wholesaleSteps: [
+      ['1️⃣', 'Tasarım / Fotoğraf Gönderin', 'İstediğiniz modeli, çizimi veya referans fotoğrafı WhatsApp\'tan paylaşın.'],
+      ['2️⃣', 'Numune Geliştirme', 'Kalıbını çıkarıp tek bir numune dikiyoruz — onayınız olmadan seri imalata geçmiyoruz.'],
+      ['3️⃣', 'Seri İmalat', 'Numune onaylandıktan sonra istediğiniz adette (MOQ 300-500 adetten başlar) üretime geçiyoruz.'],
+      ['4️⃣', 'Üretim Takibi & İhracat', 'Kesim/dikim/kalite kontrol aşamalarını fotoğraf-video ile paylaşıyoruz; yurt dışına ATR/EUR.1 evraklarıyla ihracat yapıyoruz.'],
+    ] as [string, string, string][],
+    wholesaleCtaBtn: 'Toptan Teklif İste — WhatsApp',
+    wholesaleLinkText: 'Kurumsal üretim kataloğumuz için → Anavera Tekstil',
   },
   en: {
     tag: '🧵 Custom Tailoring · 100% Linen & Cotton',
@@ -126,6 +137,17 @@ const T: Record<Lang, any> = {
     ],
     finalCta: 'Have Your Own Style Made', finalSub: 'Send a photo, get a price quote — usually within 30 minutes.',
     waBtn: 'Start on WhatsApp',
+    wholesaleTag: '🏭 Wholesale Production & Export',
+    wholesaleH: 'One Piece, or Serial Production?',
+    wholesaleDesc: 'Hotel groups, retail chains, brands and wholesalers — we develop a sample in the same linen/cotton fabrics for menswear, womenswear or kidswear, then move to serial production after your approval, sharing production tracking and exporting to customers in Turkey and abroad (Europe, Russia).',
+    wholesaleSteps: [
+      ['1️⃣', 'Send Your Design', 'Share the style, sketch, or reference photo you want on WhatsApp.'],
+      ['2️⃣', 'Sample Development', 'We draft the pattern and sew a single sample — serial production starts only after your approval.'],
+      ['3️⃣', 'Serial Production', 'Once the sample is approved, we produce your required quantity (MOQ from 300-500 pcs).'],
+      ['4️⃣', 'Production Tracking & Export', 'We share cutting/sewing/QC updates by photo and video; export abroad with full ATR/EUR.1 documentation.'],
+    ] as [string, string, string][],
+    wholesaleCtaBtn: 'Request Wholesale Quote — WhatsApp',
+    wholesaleLinkText: 'See our full manufacturing catalogue → Anavera Tekstil',
   },
   ru: {
     tag: '🧵 Пошив на заказ · 100% лён и хлопок',
@@ -150,6 +172,17 @@ const T: Record<Lang, any> = {
     ],
     finalCta: 'Сшить по своей модели', finalSub: 'Пришлите фото — получите цену в течение 30 минут.',
     waBtn: 'Начать в WhatsApp',
+    wholesaleTag: '🏭 Оптовое производство и экспорт',
+    wholesaleH: 'Одна вещь или серийное производство?',
+    wholesaleDesc: 'Отельные сети, магазины, бренды и оптовики — мы разрабатываем образец из тех же льняных и хлопковых тканей для мужской, женской или детской одежды, затем переходим к серийному производству после вашего утверждения, делимся контролем производства и экспортируем клиентам в Турции и за рубежом (Европа, Россия).',
+    wholesaleSteps: [
+      ['1️⃣', 'Отправьте дизайн', 'Пришлите желаемую модель, эскиз или референс-фото в WhatsApp.'],
+      ['2️⃣', 'Разработка образца', 'Строим лекало и шьём один образец — серийное производство начинается только после утверждения.'],
+      ['3️⃣', 'Серийное производство', 'После утверждения образца производим нужный объём (MOQ от 300-500 шт).'],
+      ['4️⃣', 'Контроль производства и экспорт', 'Делимся фото/видео этапов раскроя, пошива и контроля качества; экспортируем с полным пакетом документов ATR/EUR.1.'],
+    ] as [string, string, string][],
+    wholesaleCtaBtn: 'Запросить оптовую цену — WhatsApp',
+    wholesaleLinkText: 'Полный каталог производства → Anavera Tekstil',
   },
   de: {
     tag: '🧵 Maßschneiderei · 100% Leinen & Baumwolle',
@@ -174,6 +207,17 @@ const T: Record<Lang, any> = {
     ],
     finalCta: 'Eigenen Stil schneidern lassen', finalSub: 'Foto senden, Preisangebot erhalten — meist innerhalb 30 Minuten.',
     waBtn: 'Mit WhatsApp beginnen',
+    wholesaleTag: '🏭 Großhandelsproduktion & Export',
+    wholesaleH: 'Einzelstück oder Serienproduktion?',
+    wholesaleDesc: 'Hotelgruppen, Handelsketten, Marken und Großhändler — wir entwickeln ein Muster aus denselben Leinen-/Baumwollstoffen für Herren-, Damen- oder Kinderbekleidung und gehen nach Ihrer Freigabe in die Serienproduktion, mit Produktionsverfolgung und Export an Kunden in der Türkei und im Ausland (Europa, Russland).',
+    wholesaleSteps: [
+      ['1️⃣', 'Design senden', 'Teilen Sie den gewünschten Stil, die Skizze oder ein Referenzfoto per WhatsApp mit.'],
+      ['2️⃣', 'Musterentwicklung', 'Wir erstellen das Schnittmuster und nähen ein einzelnes Muster — die Serienproduktion beginnt erst nach Ihrer Freigabe.'],
+      ['3️⃣', 'Serienproduktion', 'Nach Freigabe des Musters fertigen wir die gewünschte Menge (MOQ ab 300-500 Stück).'],
+      ['4️⃣', 'Produktionsverfolgung & Export', 'Wir teilen Foto-/Video-Updates zu Zuschnitt/Nähen/QK; Export ins Ausland mit vollständiger ATR/EUR.1-Dokumentation.'],
+    ] as [string, string, string][],
+    wholesaleCtaBtn: 'Großhandelsangebot anfragen — WhatsApp',
+    wholesaleLinkText: 'Unser vollständiger Produktionskatalog → Anavera Tekstil',
   },
 };
 
@@ -185,6 +229,13 @@ export default function KetenPamukOzelDikim({ lang = 'tr' }: { lang?: Lang }) {
     : lang === 'de' ? 'Hallo, ich möchte etwas aus Leinen/Baumwolle schneidern lassen. Modell: '
     : lang === 'en' ? 'Hello, I would like to order custom linen/cotton tailoring. Style: '
     : 'Merhaba, keten/pamuk özel dikim sipariş etmek istiyorum. Model: ';
+
+  const wholesaleWaMsg = lang === 'ru' ? 'Здравствуйте, интересует оптовое производство одежды из льна/хлопка. Категория: '
+    : lang === 'de' ? 'Hallo, ich interessiere mich für die Großhandelsproduktion von Leinen-/Baumwollbekleidung. Kategorie: '
+    : lang === 'en' ? 'Hello, I am interested in wholesale linen/cotton clothing production. Category: '
+    : 'Merhaba, keten/pamuk toptan giyim üretimi ile ilgileniyorum. Kategori: ';
+
+  const anaveraHref = lang === 'tr' ? '/anavera-tekstil' : `/${lang}/anavera-tekstil`;
 
   return (
     <main style={{ fontFamily: 'system-ui,sans-serif', background: '#FAF7F2', color: '#3A3028', minHeight: '100vh' }}>
@@ -239,6 +290,35 @@ export default function KetenPamukOzelDikim({ lang = 'tr' }: { lang?: Lang }) {
                 <div style={{ fontSize: '.77rem', color: '#7A6E62', lineHeight: 1.6 }}>{d}</div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* TOPTAN ÜRETİM & İHRACAT — SEO/AI: "seri imalat", "toptan üretim", "numune
+          çalışması" aramalarını da bu sayfaya bağlıyor; bireysel özel dikim
+          hizmetiyle aynı sayfada ama ayrı bir CTA ile sunuluyor, ve kurumsal
+          kataloğun tamamı için Anavera Tekstil'e link veriyor. */}
+      <section style={{ background: '#1C1814', padding: '4rem 1.5rem' }}>
+        <div style={{ maxWidth: 1000, margin: '0 auto' }}>
+          <div style={{ fontSize: '.68rem', letterSpacing: '.25em', textTransform: 'uppercase', color: '#D4B07A', marginBottom: '.8rem', textAlign: 'center' }}>{t.wholesaleTag}</div>
+          <h2 style={{ fontFamily: 'Georgia,serif', fontSize: '1.7rem', color: '#fff', marginBottom: '1rem', textAlign: 'center' }}>{t.wholesaleH}</h2>
+          <p style={{ color: 'rgba(255,255,255,.75)', fontSize: '.92rem', lineHeight: 1.8, maxWidth: 720, margin: '0 auto 2.5rem', textAlign: 'center' }}>{t.wholesaleDesc}</p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(200px,1fr))', gap: '1.2rem', marginBottom: '2.2rem' }}>
+            {t.wholesaleSteps.map(([ic, ti, d]: string[], i: number) => (
+              <div key={i} style={{ background: 'rgba(255,255,255,.04)', border: '1px solid rgba(212,176,122,.25)', borderRadius: 8, padding: '1.4rem 1.1rem' }}>
+                <div style={{ fontSize: '1.4rem', marginBottom: '.5rem' }}>{ic}</div>
+                <div style={{ fontFamily: 'Georgia,serif', fontSize: '.9rem', color: '#D4B07A', marginBottom: '.3rem' }}>{ti}</div>
+                <div style={{ fontSize: '.76rem', color: 'rgba(255,255,255,.6)', lineHeight: 1.6 }}>{d}</div>
+              </div>
+            ))}
+          </div>
+          <div style={{ textAlign: 'center' }}>
+            <a href={WA(wholesaleWaMsg)} target="_blank" rel="noopener noreferrer"
+              style={{ background: '#25d366', color: '#fff', padding: '.9rem 1.8rem', fontWeight: 700, textDecoration: 'none', fontSize: '.85rem', borderRadius: 4, display: 'inline-block', marginRight: '.8rem', marginBottom: '.8rem' }}>
+              💬 {t.wholesaleCtaBtn}
+            </a>
+            <br />
+            <a href={anaveraHref} style={{ color: '#D4B07A', fontSize: '.8rem', textDecoration: 'underline' }}>{t.wholesaleLinkText}</a>
           </div>
         </div>
       </section>

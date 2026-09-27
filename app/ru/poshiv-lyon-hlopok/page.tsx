@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   keywords: [
     'пошив лён Анталья', 'пошив хлопок Анталья', 'портной в отель лён',
     'натуральная ткань портной Анталья', 'Коньяалты портной лён', 'пошив на заказ Анталья',
+    'оптовое производство лён хлопок Турция', 'экспорт льна хлопка Турция', 'разработка образцов одежды Турция', 'серийное производство лён хлопок',
   ],
   authors: [{ name: 'Terzi Can', url: SITE }],
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },

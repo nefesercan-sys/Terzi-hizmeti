@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   keywords: [
     'Leinen Maßschneiderei Antalya', 'Baumwolle Maßschneiderei Antalya', 'Hotelschneider Leinen',
     'Naturstoff Schneider Antalya', 'Konyaaltı Leinen Schneider', 'Maßanfertigung Antalya',
+    'Leinen Baumwolle Großhandelshersteller Türkei', 'Leinen Baumwolle Export Türkei', 'Musterentwicklung Bekleidung Türkei', 'Serienproduktion Leinen Baumwolle',
   ],
   authors: [{ name: 'Terzi Can', url: SITE }],
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },

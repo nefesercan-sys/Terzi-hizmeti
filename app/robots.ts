@@ -1,25 +1,16 @@
 import { MetadataRoute } from 'next'
 
+// DÜZELTME (2026-09-27): Bu dosya yanlışlıkla swaphubs.com projesinin
+// robots.ts'i ile karışmıştı — /admin-ai/, /bal/, /ilan-ver, /panel/,
+// /profil/ gibi yollar bu (terzihizmeti.com.tr) projede HİÇ yok, o site
+// swaphubs.com'un pazaryeri/ilan sistemine ait. Ayrıca sitemap/host
+// swaphubs.com'a çevrilmişti — tam da terzihizmeti.com.tr'ye göç sürecinin
+// ortasında bu, Google'a yanlış kanonik domain sinyali verirdi. İkisi de
+// düzeltildi; Google-Extended/GPTBot/PerplexityBot/ClaudeBot izinleri
+// (iyi bir eklemeydi) korundu.
 export default function robots(): MetadataRoute.Robots {
-  // Ortak disallow listesi (Parametreler ve hassas yollar)
   const commonDisallows = [
-    '/admin/',
-    '/admin-ai/',
     '/api/',
-    '/panel/',
-    '/profil/',
-    '/mesajlar/',
-    '/bildirimler/',
-    '/giris',
-    '/uye-ol',
-    '/ilan-ver',
-    '/ilan-duzenle',
-    '/online-terzi-hizmeti/client',
-    '/bal/gorsel-yukle',
-    '/terzi-admin/',   // DÜZELTME (2026-09-26): şifre korumalı, bekleyen OTP kodlarını gösteriyor — kesinlikle taranmamalı
-    '/terzi-panel/',   // DÜZELTME (2026-09-26): terzi işletme paneli, oturum gerektiriyor
-    '/sifremi-unuttum',
-    '/sifre-sifirla',
     '/*?*sort=',
     '/*?*order=',
     '/*?*ref=',
@@ -37,7 +28,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: 'Googlebot',
         allow: '/',
-        disallow: commonDisallows, // Googlebot genel kuralları ezdiği için ortak liste eklendi
+        disallow: commonDisallows,
       },
       {
         userAgent: 'Google-Extended',
@@ -48,7 +39,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
       },
     ],
-    sitemap: 'https://swaphubs.com/sitemap.xml',
-    host: 'https://swaphubs.com',
+    sitemap: 'https://terzihizmeti.com.tr/sitemap.xml',
+    host: 'https://terzihizmeti.com.tr',
   }
 }

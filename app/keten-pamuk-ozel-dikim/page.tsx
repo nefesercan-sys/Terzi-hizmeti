@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   keywords: [
     'keten özel dikim Antalya', 'pamuk özel dikim Antalya', 'otele gelen terzi keten',
     'doğal kumaş dikim Antalya', 'Konyaaltı keten terzi', 'yabancı misafir özel dikim',
+    'keten pamuk toptan üretim', 'keten pamuk ihracat Türkiye', 'numune çalışması tekstil üreticisi', 'seri imalat keten pamuk',
   ],
   authors: [{ name: 'Terzi Can', url: SITE }],
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },

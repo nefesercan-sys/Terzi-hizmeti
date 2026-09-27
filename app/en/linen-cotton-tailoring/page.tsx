@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   keywords: [
     'linen custom tailoring Antalya', 'cotton custom tailoring Antalya', 'hotel tailor linen',
     'natural fabric tailor Antalya', 'Konyaaltı linen tailor', 'tourist custom tailoring Antalya',
+    'linen cotton wholesale manufacturer Turkey', 'linen cotton export Turkey', 'sample development garment Turkey', 'serial production linen cotton',
   ],
   authors: [{ name: 'Terzi Can', url: SITE }],
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },

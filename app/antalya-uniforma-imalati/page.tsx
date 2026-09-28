@@ -16,7 +16,7 @@ const TODAY      = new Date().toISOString().split('T')[0]
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: 'Antalya Üniforma İmalatı — Otel, Restoran, Okul, Hastane Kurumsal Giyim',
+  title: { absolute: "Üniforma İmalatı Antalya: Otel, Restoran, Okul, Hastane" },
   description:
     'Antalya geneli üniforma dikim ve tasarım firması. Otel personeli, restoran, okul, hastane, güvenlik üniforması. Kurumsal giyim tasarımı, kumaş seçimi, seri imalat, nakış ve logo baskı. Tüm Antalya\'ya hizmet. ☎ ' + PHONE,
   keywords: [

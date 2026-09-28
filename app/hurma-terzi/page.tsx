@@ -13,9 +13,9 @@ const TODAY     = new Date().toISOString().split('T')[0];
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: 'Hurma Terzi Konyaaltı | ₺150\'den',
+  title: 'Hurma Terzi Konyaaltı aAntalyada',
   description:
-    'Hurma terzi Konyaaltı: paça kısaltma ₺150\'den, fermuar değişimi ₺200\'den, bel daraltma, elbise dikimi. Ücretsiz adrese servis.',
+    'Hurma terzi Konyaaltı: paça kısaltma, fermuar değişimi, bel daraltma, elbise dikimi. Ücretsiz adrese servis.',
   keywords: [
     'Hurma terzi', 'Hurma mahallesi terzi', 'Hurma Konyaaltı terzi',
     'Hurma paça kısaltma', 'Hurma fermuar tamiri', 'Hurma bel daraltma',

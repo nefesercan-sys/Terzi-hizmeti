@@ -26,6 +26,8 @@ export const metadata: Metadata = {
     'Uncalı terzi', 'Gürsu terzi', 'Öğretmenevleri terzi', 'Ahatlı terzi', 'Toros terzi',
     'Konyaaltı dikiş atölyesi', 'Konyaaltı tekstil atölyesi', 'fason imalat Antalya',
     'bay kıyafet dikimi Antalya', 'bayan kıyafet dikimi Antalya', 'üniforma üretimi Antalya',
+    'Antalya\'da terzi hizmeti', 'terzi öner', 'elbise diktirmek', 'elbise tadilatı', 'elbisem yırtıldı', 'bel daraltma',
+    'özel dikim terzi', 'bay bayan terzi', 'terzi fiyatları', 'en yakın terzi', 'hafta sonu açık terzi',
     'terzi Antalya', 'paça kısaltma fiyatı Konyaaltı', 'fermuar değişimi fiyatı Antalya',
     'портной Анталья Коньяалты', 'Schneider Antalya Konyaaltı',
   ],
@@ -99,7 +101,7 @@ const jsonLd = {
       geo: { '@type': 'GeoCoordinates', latitude: 36.8820, longitude: 30.6980 },
       openingHoursSpecification: [{
         '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
         opens: '09:00', closes: '19:00',
       }],
       areaServed: [

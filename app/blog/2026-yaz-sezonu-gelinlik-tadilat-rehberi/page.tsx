@@ -11,7 +11,7 @@ const MODIFIED  = '2026-08-01';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: '2026 Yaz Sezonu Gelinlik Tadilat Rehberi',
+  title: { absolute: "2026 Yaz Sezonu Gelinlik Tadilat Rehberi | Antalya" },
   description:
     'Yaz düğün sezonunda gelinlik tadilatı nasıl planlanır? Randevu zamanlaması, kumaş seçimi, sıcak ve nemli havada gelinlik bakımı — Terzi Can\'dan pratik rehber.',
   alternates: { canonical: PAGE_URL },

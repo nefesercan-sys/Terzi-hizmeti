@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     'otele gelen terzi Antalya', 'VIP tailor Antalya', 'mobile tailor Belek',
     'Lara otel terzi', 'Kemer terzi', 'Kundu terzi', 'Belek tailor service',
     'портной с выездом в отель Анталья', 'mobiler Schneider Antalya',
-    'otel terzisi', 'ekspres terzi Antalya', 'adrese gelen terzi'
+    'otel terzisi', 'ekspres terzi Antalya', 'adrese gelen terzi', 'otelde terzi hizmeti', 'Antalya terzi servisi', 'evime gelen terzi'
   ],
   authors: [{ name: BIZ, url: SITE }],
   creator: BIZ,

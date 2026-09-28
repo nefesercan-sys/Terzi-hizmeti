@@ -22,7 +22,7 @@ const OG        = `${SITE}/terzi-can-hero.jpg`;
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: {
-    default: 'Terzi Can — Konyaaltı Antalya Terzi Hizmeti',
+    default: 'Terzi Can — Elbise Dikimi Tadilat Hizmeti',
     template: '%s · Terzi Can',
   },
   description:

@@ -18,7 +18,7 @@ const YAZILAR = [
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: 'Blog | Terzi Can Antalya',
+  title: { absolute: "Terzilik Rehberleri ve Blog | Terzi Can Antalya" },
   description: 'Terzi Can\'dan dikim, tadilat ve kıyafet bakımı üzerine pratik rehberler ve güncel bilgiler.',
   alternates: { canonical: `${SITE}/blog` },
   robots: { index: true, follow: true },

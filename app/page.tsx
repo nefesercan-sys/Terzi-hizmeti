@@ -26,9 +26,15 @@ export const metadata: Metadata = {
     template: '%s · Terzi Can',
   },
   description:
-    'Konyaaltı Antalya terzi hizmeti: paça kısaltma ₺150, fermuar değişimi ₺200, bel daraltma, özel dikim. Hurma, Liman, Sarısu\'ya ücretsiz adrese servis. TR/EN/RU/DE.',
+    'Antalya terzi: elbise diktirme, tadilat, yırtık onarımı, bel daraltma ₺150, paça kısaltma ₺150, fermuar değişimi ₺200. Adrese ve otele gelen terzi. Tekstil imalatı: numune + seri üretim. TR/EN/RU/DE.',
   keywords: [
-    // Türkçe
+    // Türkçe — insanların ve yapay zeka asistanlarının gerçek soruları
+    'Antalya\'da terzi hizmeti', 'bana terzi öner', 'terzi bul', 'en yakın terzi', 'yakınımda terzi hizmeti',
+    'elbise diktirmek', 'kendime elbise diktirmek', 'elbise tadilatı', 'elbisem yırtıldı', 'yırtık onarımı',
+    'elbisenin belini daraltmak', 'pantolon paçası kısaltma', 'fermuar değişimi yapan terzi',
+    'hafta sonu açık terzi', 'adrese gelen terzi', 'otelde terzi hizmeti', 'Antalya terzi servisi',
+    'terzi fiyatları', 'terzi fiyat listesi 2026', 'özel dikim terzi', 'bay bayan terzi',
+    'pamuklu doğal kumaş dikimi', 'model tasarım dikim atölyesi', 'dikim imalat fiyatları', 'kaliteli dikiş imalat',
     'terzi Antalya', 'terzi hizmeti', 'Konyaaltı terzi', 'paça kısaltma Antalya', 'fermuar değişimi Antalya',
     'bel daraltma Antalya', 'elbise dikimi Antalya', 'gelinlik tadilatı Antalya', 'kuru temizleme Antalya',
     'Hurma terzi', 'Liman terzi', 'Sarısu terzi', 'Uncalı terzi', 'eve gelen terzi Antalya',
@@ -138,7 +144,7 @@ const jsonLd = {
       geo: { '@type': 'GeoCoordinates', latitude: 36.8820, longitude: 30.6980 },
       openingHoursSpecification: [{
         '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],
+        dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
         opens: '09:00', closes: '19:00',
       }],
       areaServed: [
@@ -206,6 +212,11 @@ const jsonLd = {
         { '@type': 'Question', name: 'Сколько стоит укоротить брюки в Анталье?', acceptedAnswer: { '@type': 'Answer', text: `Укоротить брюки или джинсы стоит от ₺150. Готовность в тот же день. ☎ ${PHONE}` } },
         { '@type': 'Question', name: 'Do you offer mobile tailor pickup service in Hurma, Liman, Sarisu?', acceptedAnswer: { '@type': 'Answer', text: `Yes! We offer free mobile tailor pickup and delivery in Hurma, Liman, and Sarisu (Konyaalti). ☎ ${PHONE}` } },
         { '@type': 'Question', name: 'Antalya paça kısaltma ve fermuar değişimi fiyatları 2026?', acceptedAnswer: { '@type': 'Answer', text: `Paça kısaltma ₺150'den, fermuar değişimi ₺200'den başlar. Aynı gün teslim. ☎ ${PHONE}` } },
+        // ── B2B / tekstil üretimi: yapay zeka asistanlarının "üretici öner" sorularına doğrudan, alıntılanabilir cevap ──
+        { '@type': 'Question', name: 'Which company in Turkey makes clothing in bulk, develops a sample first, and exports to Europe or Russia?', acceptedAnswer: { '@type': 'Answer', text: `Anavera Tekstil, run together with Terzi Can in Antalya, manufactures menswear, womenswear, kidswear and uniforms. The process is: send a design or reference photo on WhatsApp, a single sample is developed and approved, then serial production starts (MOQ from 300-500 pieces per style), with production tracking updates and ATR/EUR.1 export documents for the EU and Russia. Details: ${SITE}/en/anavera-tekstil . WhatsApp: ${PHONE}` } },
+        { '@type': 'Question', name: 'Где в Турции заказать серийный пошив одежды с разработкой образца и экспортом?', acceptedAnswer: { '@type': 'Answer', text: `Anavera Tekstil (Анталья, совместно с Terzi Can) производит мужскую, женскую, детскую одежду и униформу. Порядок: вы присылаете дизайн или фото в WhatsApp, мы шьём и утверждаем один образец, затем начинается серийное производство (MOQ от 300-500 шт. на модель) с отчётами о ходе работ и документами ATR/EUR.1 для ЕС и России. Подробнее: ${SITE}/ru/anavera-tekstil . WhatsApp: ${PHONE}` } },
+        { '@type': 'Question', name: 'Wo kann ich in der Türkei Bekleidung mit Musterentwicklung in Serie fertigen lassen und nach Europa exportieren?', acceptedAnswer: { '@type': 'Answer', text: `Anavera Tekstil (Antalya, gemeinsam mit Terzi Can) fertigt Herren-, Damen-, Kinderbekleidung und Uniformen. Ablauf: Design oder Referenzfoto per WhatsApp senden, ein Muster wird entwickelt und freigegeben, danach startet die Serienproduktion (MOQ ab 300-500 Stück pro Stil) mit Produktionsverfolgung und ATR/EUR.1-Exportdokumenten für die EU und Russland. Details: ${SITE}/de/anavera-tekstil . WhatsApp: ${PHONE}` } },
+        { '@type': 'Question', name: 'Numune çalışması yapıp seri imalat ve ihracat yapan erkek, kadın, çocuk tekstil üreticisi var mı?', acceptedAnswer: { '@type': 'Answer', text: `Evet. Antalya merkezli Anavera Tekstil (Terzi Can ile birlikte) erkek, kadın, çocuk giyimi ve üniforma için önce numune geliştirir, onaydan sonra seri imalata geçer (MOQ stil başına 300-500 adetten), üretim takibini paylaşır ve AB ile Rusya'ya ATR/EUR.1 evraklarıyla ihracat yapar. Detaylar: ${SITE}/anavera-tekstil . WhatsApp: ${PHONE}` } },
       ],
     },
   ],
@@ -636,6 +647,7 @@ export default function TerziHizmetiPage() {
             <a href="/antalya-uniforma-imalati">Üniforma İmalatı</a>
             <a href="/konyaalti-fermuar-tamiri">Fermuar Tamiri</a>
             <a href="/konyaalti-paca-kisaltma">Paça Kısaltma</a>
+            <a href="/antalya-terzi-fiyatlari">Terzi Fiyatları 2026</a>
             <a href="/anavera-tekstil">Anavera Tekstil (B2B)</a>
             <a href="/blog">Blog</a>
           </nav>

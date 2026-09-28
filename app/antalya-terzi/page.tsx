@@ -19,7 +19,7 @@ const OG        = `${SITE}/terzi-can-hero.jpg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Antalya Terzi Servisi — Tüm Bölgeler, Adrese Gelir | ₺150'den" },
+  title: { absolute: "Antalya Terzi Servisi — Tüm Bölgeler, Adrese Gelir | tailor" },
   description: "Konyaaltı Hurma, Liman, Sarısu, Uncalı, Gürsu mahallelerinde terzi ve dikiş atölyesi. Kıyafet dikimi, üniforma üretimi, fason imalat. ☎ " + PHONE,
   keywords: [
     'Hurma terzi Konyaaltı', 'Liman terzi Konyaaltı', 'Sarısu terzi Konyaaltı',

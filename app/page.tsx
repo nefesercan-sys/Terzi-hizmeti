@@ -21,10 +21,7 @@ const OG        = `${SITE}/terzi-can-hero.jpg`;
 // ─── METADATA ─────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: {
-    default: 'Terzi Can — Elbise Dikimi Tadilat Hizmeti',
-    template: '%s · Terzi Can',
-  },
+  title: { absolute: "Terzi Can Antalya — Tadilat, Dikim, Tamir · Her Gün Açık" },
   description:
     'Antalya terzi: elbise diktirme, tadilat, yırtık onarımı, bel daraltma ₺150, paça kısaltma ₺150, fermuar değişimi ₺200. Adrese ve otele gelen terzi. Tekstil imalatı: numune + seri üretim. TR/EN/RU/DE.',
   keywords: [

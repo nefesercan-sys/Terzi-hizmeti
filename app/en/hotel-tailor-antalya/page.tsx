@@ -7,7 +7,7 @@ const WA_DEF = `https://wa.me/905318986418?text=${encodeURIComponent('Hello, I w
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: 'Hotel Tailor Antalya — Mobile Service in Every Hotel District',
+  title: { absolute: "Hotel Tailor Antalya: We Come to Belek, Lara, Kemer & Side" },
   description: "Mobile tailor service to hotels across Antalya's resort districts: Belek, Lara, Güzeloba, Kemer, Side. Alterations, repairs, ironing and dry cleaning — we come to you.",
   keywords: [
     'hotel tailor Antalya', 'mobile tailor Antalya', 'tailor Belek hotel', 'tailor Lara hotel',

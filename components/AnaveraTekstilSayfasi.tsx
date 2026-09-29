@@ -116,6 +116,8 @@ export const translations = {
     footCopy: 'Anavera Tekstil. All rights reserved. A premium manufacturing branch of terzihizmeti.com.tr',
     waFloat: 'WhatsApp Quote',
     waMessage: 'Hello, I would like information about Anavera Tekstil menswear & womenswear manufacturing and export.',
+    infoNote: 'For textile manufacturing, production and model/design work, we handle every stage: model/product development, then serial production planning and delivery. Lead time and pricing are evaluated per product. Contact us for information.',
+    infoBtn: '📩 Get Information: Sewing, Production & Model Development',
     breadcrumbHome: 'Home',
     langName: 'English',
   },
@@ -197,6 +199,8 @@ export const translations = {
     footCopy: 'Anavera Tekstil. Tüm hakları saklıdır. terzihizmeti.com.tr\'nin premium üretim şubesi.',
     waFloat: 'WhatsApp Teklif',
     waMessage: 'Merhaba, Anavera Tekstil kadın ve erkek giyim üretimi ve ihracat şartları hakkında bilgi almak istiyorum.',
+    infoNote: 'Tekstil imalat, üretim ve model/tasarım işleriniz için model/ürün çalışması ardından seri imalat üretim planlama ve teslimine kadar tüm aşamaları yapıyoruz. Termin ve fiyatlar ürün bazında değerlendirilir. Bilgi almak için iletişime geçin.',
+    infoBtn: '📩 Dikim, Üretim ve Model Çalışması İçin Bilgi Al',
     breadcrumbHome: 'Ana Sayfa',
     langName: 'Türkçe',
   },
@@ -278,6 +282,8 @@ export const translations = {
     footCopy: 'Anavera Tekstil. Alle Rechte vorbehalten. Ein Premium-Produktionszweig von terzihizmeti.com.tr',
     waFloat: 'WhatsApp Angebot',
     waMessage: 'Hallo, ich hätte gerne Informationen zur Produktion und zum Export von Damen- und Herrenbekleidung bei Anavera Tekstil.',
+    infoNote: 'Für Textilfertigung, Produktion und Modell-/Designarbeiten übernehmen wir alle Schritte: Modell-/Produktentwicklung, danach Planung der Serienproduktion und Lieferung. Lieferzeit und Preise werden je Produkt bewertet. Kontaktieren Sie uns für Informationen.',
+    infoBtn: '📩 Infos zu Näherei, Produktion & Modellentwicklung',
     breadcrumbHome: 'Startseite',
     langName: 'Deutsch',
   },
@@ -359,6 +365,8 @@ export const translations = {
     footCopy: 'Anavera Tekstil. Все права защищены. Премиальный производственный филиал terzihizmeti.com.tr',
     waFloat: 'WhatsApp Запрос',
     waMessage: 'Здравствуйте, я хотел бы получить информацию о производстве и экспорте женской и мужской одежды Anavera Tekstil.',
+    infoNote: 'По текстильному производству, изготовлению и моделированию/дизайну мы выполняем все этапы: разработка модели/образца, затем планирование серийного производства и поставка. Сроки и цены оцениваются по каждому изделию отдельно. Свяжитесь с нами для получения информации.',
+    infoBtn: '📩 Узнать о пошиве, производстве и разработке модели',
     breadcrumbHome: 'Главная',
     langName: 'Русский',
   },
@@ -593,6 +601,18 @@ export default function AnaveraTekstilSayfasi({ lang }: { lang: AnaveraLang }) {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* BİLGİ AL BANNER — kullanıcı isteğiyle eklendi: "model/ürün çalışması → seri imalat
+          üretim planlama ve teslim" süreç notu + öne çıkan "Bilgi Al" butonu. Numune/seri
+          üretim bölümünün hemen üstünde, tüm 4 dilde. */}
+      <section style={{ padding: '2.6rem 1rem', backgroundColor: '#0F172A', borderTop: '3px solid #E4C664', borderBottom: '3px solid #E4C664' }}>
+        <div style={{ maxWidth: 900, margin: '0 auto', textAlign: 'center' }}>
+          <p style={{ color: '#E2E8F0', fontSize: '1.02rem', lineHeight: 1.75, marginBottom: '1.6rem' }}>{t.infoNote}</p>
+          <a href={WA_LINK} target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.6rem', backgroundColor: '#E4C664', color: '#0F172A', padding: '1.1rem 2.2rem', borderRadius: '8px', fontWeight: 800, fontSize: '1.05rem', textDecoration: 'none', boxShadow: '0 6px 24px rgba(228,198,100,0.35)' }}>
+            {t.infoBtn}
+          </a>
         </div>
       </section>
 

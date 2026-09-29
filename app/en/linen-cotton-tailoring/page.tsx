@@ -11,7 +11,7 @@ const OG       = `${SITE}/terzi-can-hero.jpg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: 'Linen & Cotton Custom Tailoring Models · Antalya Konyaaltı',
+  title: { absolute: "Custom Linen & Cotton Clothing Antalya + Wholesale" },
   description: 'Custom tailoring in 100% natural linen and cotton for foreign guests. Pick a style, send your measurements, we deliver to your hotel. ☎ ' + PHONE,
   keywords: [
     'linen custom tailoring Antalya', 'cotton custom tailoring Antalya', 'hotel tailor linen',

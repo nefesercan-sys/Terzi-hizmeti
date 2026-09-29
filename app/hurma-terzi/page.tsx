@@ -13,7 +13,7 @@ const TODAY     = new Date().toISOString().split('T')[0];
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Hurma Mahallesi Terzi — Atölye Burada | ₺150'den" },
+  title: { absolute: "Hurma Mahallesi Terzi — Atölye Burada | Antalya" },
   description:
     'Hurma terzi Konyaaltı: paça kısaltma ₺150\'den, fermuar değişimi ₺200\'den, bel daraltma, elbise dikimi. Ücretsiz adrese servis.',
   keywords: [

@@ -19,7 +19,7 @@ const OG        = `${SITE}/terzi-can-hero.jpg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: 'Otele Gelen Terzi — Belek, Lara, Kemer | VIP Tailor Service',
+  title: { absolute: "Otelde Terzi Hizmeti: Belek, Lara, Kemer, Side — Otele Gelir" },
   description: "Antalya'da otellere ve adresinize gelen VIP terzi hizmeti. Belek, Lara, Kundu, Kemer bölgelerinde ölçü alma, ekspres tadilat ve teslimat. ☎ " + PHONE,
   keywords: [
     'otele gelen terzi Antalya', 'VIP tailor Antalya', 'mobile tailor Belek',

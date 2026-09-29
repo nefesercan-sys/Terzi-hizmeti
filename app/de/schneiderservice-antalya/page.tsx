@@ -17,9 +17,10 @@ const OG        = `${SITE}/terzi-can-hero.jpg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: 'Schneiderservice Antalya · Mobiler Schneider ins Hotel · Alle Bezirke',
+  title: { absolute: "Schneider Antalya: Änderung, Reparatur, Maß · 7 Tage offen" },
   description: 'Schneiderei, Reparatur, Änderungen und Bügelservice in allen Bezirken von Antalya. Mobiler Schneider kommt zu Ihrem Hotel oder Ihrer Adresse — Belek, Lara, Kemer, Alanya, Side, Konyaaltı. Wir sprechen Deutsch. ☎ ' + PHONE,
   keywords: [
+    'Schneider Preise Antalya', 'Schneider Sonntag geöffnet Antalya', 'Kleid ist gerissen Antalya', 'Taille enger machen Antalya',
     'Schneiderservice Antalya', 'mobiler Schneider Antalya', 'Schneider im Hotel Antalya',
     'deutschsprachiger Schneider Antalya', 'Kleidung reparieren Antalya', 'Änderungsschneiderei Antalya',
     'Hose kürzen Antalya', 'Bügelservice Antalya', 'Reinigung Antalya',
@@ -309,6 +310,7 @@ export default function SchneiderserviceAntalyaPage() {
         <footer>
           <div>© {new Date().getFullYear()} Terzi Can · Schneiderservice Antalya · {PHONE}</div>
           <nav className="foot-links" aria-label="Footer-Links">
+            <a href="/de/schneider-preise-antalya">Schneider Preise 2026</a>
             <a href="/">Ana Sayfa (TR)</a>
             <a href={EN_URL}>English</a>
             <a href={RU_URL}>Русский</a>

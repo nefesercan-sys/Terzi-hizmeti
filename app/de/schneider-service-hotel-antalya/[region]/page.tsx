@@ -27,13 +27,13 @@ export async function generateMetadata({ params }: { params: Promise<{ region: s
   if (!r) return {};
 
   const url = `${SITE}${BASE_PATH}/${r.slug}`;
-  const title = `VIP Änderungsschneiderei ${r.name} | Hotel-Service & Abholung`;
+  const title = `Schneider im Hotel ${r.name}, Antalya — Abholung & Änderung`;
   const desc = `Schnelle Kleiderreparatur im Urlaub? Terzi Can bietet professionelle Änderungsschneiderei mit VIP-Abholung in den Hotels von ${r.name}. Kontaktieren Sie uns über WhatsApp!`;
   const ogImage = `${SITE}/terzi-can-hero.jpg`;
 
   return {
     metadataBase: new URL(SITE),
-    title,
+    title: { absolute: title },
     description: desc,
     keywords: [`VIP Schneider ${r.name}`, `Änderungsschneiderei ${r.name}`, `Hotel Abholung Schneider ${r.name}`, 'Textilreparatur Antalya'],
     alternates: {

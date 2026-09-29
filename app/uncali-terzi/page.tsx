@@ -13,7 +13,7 @@ const TODAY     = new Date().toISOString().split('T')[0];
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: 'Terzi Konyaaltı Dikim Tamir Tadilat',
+  title: { absolute: "Uncalı Terzi: Paça, Bel Daraltma, Özel Dikim | ₺150'den" },
   description:
     'Uncalı terzi Konyaaltı: paça kısaltma ₺150\'den, fermuar değişimi ₺200\'den, bel daraltma, elbise dikimi. Adrese servis mevcuttur.',
   keywords: ['Uncalı terzi', 'Uncalı mahallesi terzi', 'Uncalı Konyaaltı terzi', 'Uncalı paça kısaltma', 'Uncalı fermuar tamiri', 'Uncalı bel daraltma', 'Uncalı elbise dikimi', 'Uncalı gelinlik tadilatı', 'Uncalı ütü hizmeti', 'Uncalı kuru temizleme', 'Uncalı terzi fiyatları 2026', 'Konyaaltı Uncalı dikiş atölyesi'],

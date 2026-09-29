@@ -23,13 +23,13 @@ export async function generateMetadata({ params }: { params: Promise<{ region: s
   if (!r) return {};
 
   const url = `${SITE}${BASE_PATH}/${r.slug}`;
-  const title = `VIP Ателье и Портной в ${r.name} | Доставка в отель`;
+  const title = `Портной в отель — ${r.name}, Анталья: подгонка и ремонт`;
   const desc = `Срочный ремонт и подгонка одежды во время отпуска. Ателье Terzi Can предлагает профессиональные услуги портного с выездом в отели ${r.name}. Пишите в WhatsApp!`;
   const ogImage = `${SITE}/terzi-can-hero.jpg`;
 
   return {
     metadataBase: new URL(SITE),
-    title,
+    title: { absolute: title },
     description: desc,
     keywords: [`VIP Ателье ${r.name}`, `выездной портной ${r.name}`, `ремонт одежды отель ${r.name}`, 'портной Анталия'],
     alternates: {

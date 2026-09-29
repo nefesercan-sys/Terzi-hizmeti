@@ -9,25 +9,25 @@ type Copy = { title: string; description: string; ogLocale: string; keywords: st
 
 const COPY: Record<AnaveraLang, Copy> = {
   en: {
-    title: 'Anavera Tekstil | Turkish Clothing Manufacturer & Exporter',
+    title: 'Anavera Tekstil: Sample-First Clothing Manufacturer, Turkey',
     description: 'Turkish menswear & womenswear manufacturer exporting to the EU, UK and CIS. OEM/private label, ISO 9001, MOQ from 300 pcs. Get a B2B quote today.',
     ogLocale: 'en_US',
     keywords: ['Turkish clothing manufacturer', 'clothing manufacturer Turkey', 'garment factory Turkey', 'private label manufacturer Turkey', 'uniform manufacturer Turkey', 'textile exporter Turkey', 'OEM apparel manufacturer Turkey', 'sample development manufacturer Turkey', 'mass production clothing Turkey', 'serial production garment factory', 'production tracking manufacturer', 'menswear womenswear kidswear manufacturer Turkey', 'kidswear manufacturer Turkey'],
   },
   de: {
-    title: 'Anavera Tekstil | Bekleidungshersteller aus der Türkei',
+    title: 'Anavera Tekstil: Muster, Serie & Export aus der Türkei',
     description: 'Türkischer Hersteller für Damen- & Herrenbekleidung, Export in die EU. OEM/Eigenmarke, ISO 9001, ab 300 Stück MOQ. Jetzt B2B-Angebot anfordern.',
     ogLocale: 'de_DE',
     keywords: ['Bekleidungshersteller Türkei', 'Textilhersteller Türkei', 'Konfektionsware Türkei', 'Private Label Hersteller Türkei', 'Berufsbekleidung Hersteller Türkei', 'OEM Bekleidung Türkei', 'Musterentwicklung Hersteller Türkei', 'Serienproduktion Bekleidung Türkei', 'Massenproduktion Textilfabrik Türkei', 'Produktionsverfolgung Hersteller', 'Herren Damen Kinderbekleidung Hersteller Türkei', 'Kinderbekleidung Hersteller Türkei'],
   },
   ru: {
-    title: 'Anavera Tekstil | Производитель одежды в Турции',
+    title: 'Anavera Tekstil: образец, серия и экспорт одежды из Турции',
     description: 'Турецкий производитель мужской и женской одежды, экспорт в ЕС и Россию. OEM/частная марка, ISO 9001, от 300 шт. Запросите B2B-предложение.',
     ogLocale: 'ru_RU',
     keywords: ['производитель одежды Турция', 'швейная фабрика Турция', 'текстильная фабрика Турция', 'пошив под частной маркой Турция', 'производитель униформы Турция', 'OEM одежда Турция', 'разработка образцов производитель Турция', 'серийное производство одежды Турция', 'массовое производство одежды фабрика', 'контроль производства одежды', 'производство мужской женской детской одежды Турция', 'производитель детской одежды Турция'],
   },
   tr: {
-    title: 'Anavera Tekstil | Türkiye Tekstil Üretici ve İhracatçısı',
+    title: 'Anavera Tekstil: Numune + Seri Üretim, İhracat | Türkiye',
     description: 'Avrupa ve Rusya\'ya ihracat yapan Türk hazır giyim üreticisi. OEM/özel marka, ISO 9001, 300 adetten MOQ. Hemen B2B teklif alın.',
     ogLocale: 'tr_TR',
     keywords: ['Türkiye tekstil üreticisi', 'hazır giyim üreticisi', 'fason tekstil imalatı', 'özel marka giyim üretimi', 'üniforma üreticisi Türkiye', 'ihracat tekstil firması Antalya', 'numune çalışması tekstil üreticisi', 'seri imalat konfeksiyon', 'toplu üretim tekstil fabrikası', 'üretim takibi tekstil', 'erkek kadın çocuk tekstili imalatı', 'çocuk tekstili üreticisi Türkiye'],
@@ -39,7 +39,7 @@ export function buildAnaveraMetadata(lang: AnaveraLang): Metadata {
   const url = ANAVERA_URLS[lang];
   return {
     metadataBase: new URL(SITE),
-    title: c.title,
+    title: { absolute: c.title },
     description: c.description,
     keywords: c.keywords,
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large' } },

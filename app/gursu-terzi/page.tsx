@@ -13,9 +13,9 @@ const TODAY     = new Date().toISOString().split('T')[0];
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: 'Gürsu Terzi Konyaaltı | ₺150\'den',
+  title: { absolute: "Gürsu Terzi — Elbise Tadilatı ve Dikim | ₺150'den" },
   description:
-    'Gürsu terzi Konyaaltı: paça kısaltma, fermuar değişimi, bel daraltma, elbise dikimi. Adrese servis mevcuttur.',
+    'Gürsu terzi Konyaaltı: paça kısaltma ₺150\'den, fermuar değişimi ₺200\'den, bel daraltma, elbise dikimi. Adrese servis mevcuttur.',
   keywords: ['Gürsu terzi', 'Gürsu mahallesi terzi', 'Gürsu Konyaaltı terzi', 'Gürsu paça kısaltma', 'Gürsu fermuar tamiri', 'Gürsu bel daraltma', 'Gürsu elbise dikimi', 'Gürsu gelinlik tadilatı', 'Gürsu ütü hizmeti', 'Gürsu kuru temizleme', 'Gürsu terzi fiyatları 2026', 'Konyaaltı Gürsu dikiş atölyesi'],
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   alternates: { canonical: PAGE_URL },

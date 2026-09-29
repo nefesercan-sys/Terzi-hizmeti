@@ -11,7 +11,7 @@ const OG       = `${SITE}/terzi-can-hero.jpg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: 'Leinen & Baumwolle Maßschneiderei Modelle · Antalya Konyaaltı',
+  title: { absolute: "Leinen- & Baumwollkleidung nach Maß, Antalya + Großhandel" },
   description: 'Maßschneiderei aus 100% natürlichem Leinen und Baumwolle für ausländische Gäste. Stil wählen, Maße senden, Lieferung ans Hotel. ☎ ' + PHONE,
   keywords: [
     'Leinen Maßschneiderei Antalya', 'Baumwolle Maßschneiderei Antalya', 'Hotelschneider Leinen',

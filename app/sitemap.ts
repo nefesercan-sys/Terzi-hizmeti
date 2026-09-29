@@ -44,6 +44,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE}/konyaalti-paca-kisaltma`, lastModified: NOW, changeFrequency: 'monthly', priority: 0.82 },
     { url: `${SITE}/antalya-gelinlik-tadilati`, lastModified: NOW, changeFrequency: 'monthly', priority: 0.82 },
     { url: `${SITE}/antalya-terzi-fiyatlari`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.90 },
+    { url: `${SITE}/en/tailor-prices-antalya`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.85 },
+    { url: `${SITE}/de/schneider-preise-antalya`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.85 },
+    { url: `${SITE}/ru/ceny-portnoy-antalya`, lastModified: NOW, changeFrequency: 'weekly', priority: 0.85 },
     { url: `${SITE}/antalya-uniforma-imalati`, lastModified: NOW, changeFrequency: 'monthly', priority: 0.82 },
 
     // 🌍 5. ÇOK DİLLİ LANDING SAYFALARI (Priority: 0.80 / 0.78)

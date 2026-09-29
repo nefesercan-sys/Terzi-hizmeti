@@ -11,7 +11,7 @@ const OG       = `${SITE}/terzi-can-hero.jpg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: 'Keten & Pamuk Özel Dikim Modelleri · Antalya Konyaaltı',
+  title: { absolute: "Keten & Pamuk Özel Dikim + Toptan Üretim | Antalya" },
   description: 'Yabancı misafirler için %100 doğal keten ve pamuk kumaştan özel dikim. Model seçin, ölçünüzü verin, otelinize teslim edelim. ☎ ' + PHONE,
   keywords: [
     'keten özel dikim Antalya', 'pamuk özel dikim Antalya', 'otele gelen terzi keten',

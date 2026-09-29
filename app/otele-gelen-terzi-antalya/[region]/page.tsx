@@ -17,11 +17,11 @@ export async function generateMetadata({ params }: { params: Promise<{ region: s
   const r = bulOtelBolgesi(region);
   if (!r) return {};
   const url = `${SITE}${BASE_PATH}/${r.slug}`;
-  const title = `${r.name} Otel Terzi Hizmeti — Otele Gelen Terzi | Terzi Can`;
+  const title = `${r.name} Otel Terzisi — Otele Gelen Terzi Hizmeti`;
   const desc = `${r.name} bölgesindeki otelinize terzi servisi. Dikim, tadilat, tamir, ütü ve kuru temizleme odanıza teslim. ${r.travelTime.tr}. Türkçe, İngilizce, Almanca, Rusça iletişim.`;
   return {
     metadataBase: new URL(SITE),
-    title, description: desc,
+    title: { absolute: title }, description: desc,
     keywords: [`${r.name} otel terzi`, `${r.name} terzi`, 'otele gelen terzi Antalya', `${r.name} fermuar tamiri`, `${r.name} ütü hizmeti`],
     alternates: {
       canonical: url,

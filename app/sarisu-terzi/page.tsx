@@ -13,7 +13,7 @@ const TODAY     = new Date().toISOString().split('T')[0];
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: 'Antalya Terzi Elbise Dikimi Tamiri ',
+  title: { absolute: "Sarısu Terzi — Adrese Servis, Paça ve Fermuar | ₺150'den" },
   description:
     'Sarısu terzi Konyaaltı: paça kısaltma ₺150\'den, fermuar değişimi ₺200\'den, bel daraltma, elbise dikimi. Ücretsiz adrese servis.',
   keywords: ['Sarısu terzi', 'Sarısu mahallesi terzi', 'Sarısu Konyaaltı terzi', 'Sarısu paça kısaltma', 'Sarısu fermuar tamiri', 'Sarısu bel daraltma', 'Sarısu elbise dikimi', 'Sarısu gelinlik tadilatı', 'Sarısu ütü hizmeti', 'Sarısu kuru temizleme', 'Sarısu terzi fiyatları 2026', 'Konyaaltı Sarısu dikiş atölyesi'],

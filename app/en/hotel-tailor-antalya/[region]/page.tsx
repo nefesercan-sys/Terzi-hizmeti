@@ -21,13 +21,13 @@ export async function generateMetadata({ params }: { params: Promise<{ region: s
 
   const url = `${SITE}${BASE_PATH}/${r.slug}`;
   // Yeni VIP SEO Başlığı ve Açıklaması (Dinamik)
-  const title = `VIP Tailor & Alteration Service in ${r.name} | Hotel Pickup`;
+  const title = `Hotel Tailor in ${r.name}, Antalya — Pickup & Alterations`;
   const desc = `Need urgent clothing alterations during your holiday? Terzi Can provides professional tailoring, hemming, and repair services with VIP hotel pickup in ${r.name}. Contact us via WhatsApp!`;
   const ogImage = `${SITE}/terzi-can-hero.jpg`;
 
   return {
     metadataBase: new URL(SITE),
-    title,
+    title: { absolute: title },
     description: desc,
     keywords: [
       `VIP tailor ${r.name}`, 

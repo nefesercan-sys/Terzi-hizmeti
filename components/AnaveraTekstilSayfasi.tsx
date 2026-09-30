@@ -767,3 +767,4 @@ export default function AnaveraTekstilSayfasi({ lang }: { lang: AnaveraLang }) {
     </div>
   );
 }
+ 

@@ -1,152 +1,220 @@
-// app/antalya-uniforma-imalati/page.tsx
-// Antalya geneli üniforma imalatı — otel, restoran, okul, hastane segmentli
-// Hedef: "üniforma dikim Antalya", "kurumsal giyim Antalya", "otel personel kıyafeti" vb.
+import type { Metadata, Viewport } from 'next';
 
-import type { Metadata } from 'next'
-import UniformaClient from './UniformaClient'
+// ── Mobil / Tarayıcı Yapılandırması ─────────────────────────────────────────
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  themeColor: '#ffffff',
+};
 
-const SITE       = 'https://terzihizmeti.com.tr'
-const PAGE_URL   = `${SITE}/antalya-uniforma-imalati`
-const PHONE      = '+90 531 898 64 18'
-const PHONE_TEL  = '+905318986418'
-const WA_NUM     = '905318986418'
-const MAPS       = 'https://maps.app.goo.gl/QEgSkRoA8Nz8H62g8'
-const OG         = `${SITE}/terzi-can-hero.jpg`
-const TODAY      = new Date().toISOString().split('T')[0]
+const SITE_URL      = 'https://terzihizmeti.com.tr/antalya-uniforma-imalati';
+const HOME_URL      = 'https://terzihizmeti.com.tr';
+const PHONE         = '+90 531 898 64 18';
+const PHONE_E164    = '+905318986418';
+const LAST_MODIFIED = '2026-10-01';
 
-export const metadata: Metadata = {
-  metadataBase: new URL(SITE),
-  title: 'Antalya Üniforma İmalatı — Otel, Restoran, Okul, Hastane Kurumsal Giyim',
-  description:
-    'Antalya geneli üniforma dikim ve tasarım firması. Otel personeli, restoran, okul, hastane, güvenlik üniforması. Kurumsal giyim tasarımı, kumaş seçimi, seri imalat, nakış ve logo baskı. Tüm Antalya\'ya hizmet. ☎ ' + PHONE,
-  keywords: [
-    'üniforma imalatı Antalya', 'üniforma dikim Antalya', 'kurumsal giyim Antalya',
-    'otel üniforması Antalya', 'otel personel kıyafeti', 'resepsiyon üniforması',
-    'restoran üniforması Antalya', 'garson kıyafeti', 'aşçı üniforması', 'şef ceketi',
-    'okul üniforması Antalya', 'okul kıyafeti dikimi', 'öğrenci forması',
-    'hastane üniforması Antalya', 'doktor önlüğü', 'hemşire üniforması', 'sağlık personeli kıyafeti',
-    'güvenlik üniforması Antalya', 'personel kıyafeti dikimi',
-    'toplu üniforma siparişi', 'fason üniforma üretimi', 'seri üniforma imalatı Antalya',
-    'üniforma tasarım firması', 'kurumsal kıyafet tasarımı Antalya',
-    'nakış logo baskı üniforma', 'üniforma fiyatları 2026',
-    'Konyaaltı üniforma', 'Muratpaşa üniforma', 'Lara üniforma', 'Kemer üniforma',
-    'Belek üniforma', 'Alanya üniforma', 'Manavgat üniforma', 'Side üniforma',
-  ],
-  alternates: {
-    canonical: PAGE_URL,
-    languages: { 'tr': PAGE_URL, 'x-default': PAGE_URL },
-  },
-  openGraph: {
-    type: 'website',
-    url: PAGE_URL,
-    siteName: 'Terzi Hizmeti',
-    title: 'Antalya Üniforma İmalatı — Otel, Restoran, Okul, Hastane',
-    description: 'Antalya geneli kurumsal giyim ve üniforma imalatı. Tasarım, kumaş, seri üretim, nakış — tek elden.',
-    locale: 'tr_TR',
-    images: [{ url: OG, width: 1200, height: 630, alt: 'Antalya Üniforma İmalatı — Terzi Can' }],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Antalya Üniforma İmalatı — Terzi Can',
-    description: 'Otel, restoran, okul, hastane üniforması. Tasarım + seri imalat + nakış. ☎ ' + PHONE,
-    images: [OG],
-  },
-  robots: {
-    index: true, follow: true,
-    googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
-  },
-  verification: { google: 'W2S_Gr49EgkgWG7xAWWMc5qPW6Cw3wEnOi6O6UC9zkQ' },
-  other: {
-    'geo.region': 'TR-07', 'geo.placename': 'Antalya',
-    'geo.position': '36.8851;30.6930', ICBM: '36.8851, 30.6930',
-  },
-}
+const PAGE_TITLE = 'Antalya Üniforma İmalatı & Kurumsal Kıyafet Dikimi — Terzi Can 2026';
+const PAGE_DESC  =
+  'Antalya otel, restoran, hastane, okul ve güvenlik personeli üniforma üretimi. Özel tasarım, nakış & baskı logosu ve seri imalat hizmeti. ☎ ' + PHONE;
+
+const OG_IMAGE = `${HOME_URL}/og/terzi-can-uniforma.jpg`;
+
+const ANTALYA_ILCELER = [
+  'Antalya','Konyaaltı','Muratpaşa','Kepez','Döşemealtı','Aksu',
+  'Lara','Belek','Kemer','Alanya','Manavgat','Side','Serik',
+  'Kaş','Kalkan','Finike','Kumluca','Gazipaşa','Mahmutlar',
+  'Kundu','Boğazkent','Kadriye','Beldibi','Göynük','Tekirova',
+].map(name => ({ '@type': 'City', name }));
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': ['LocalBusiness', 'ClothingStore'],
-      '@id': `${PAGE_URL}#business`,
-      name: 'Terzi Can — Üniforma İmalatı',
-      alternateName: ['Terzi Can Kurumsal Giyim', 'Antalya Üniforma Atölyesi'],
-      description: 'Antalya genelinde otel, restoran, okul, hastane ve kurumsal işletmeler için üniforma tasarımı, kumaş seçimi, seri imalat, nakış ve logo baskı hizmeti.',
-      url: PAGE_URL,
-      telephone: PHONE_TEL,
-      priceRange: '₺₺',
-      currenciesAccepted: 'TRY',
+      '@type': ['LocalBusiness', 'Tailor'],
+      '@id': `${HOME_URL}/#business`,
+      name: 'Terzi Can',
+      alternateName: [
+        'Antalya Üniforma İmalatı',
+        'Antalya Kurumsal Kıyafet Dikimi',
+        'Konyaaltı Terzi Can',
+      ],
+      description:
+        'Antalya genelinde otel, restoran, hastane, okul ve güvenlik firmaları için profesyonel üniforma üretimi ve özel tasarım dikiş atölyesi.',
+      url: HOME_URL,
+      telephone: PHONE_E164,
+      priceRange: '$$',
+      currenciesAccepted: 'TRY, EUR, USD, RUB',
       paymentAccepted: 'Cash, Credit Card, Bank Transfer',
-      image: OG,
-      hasMap: MAPS,
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'Hurma Mahallesi, Konyaaltı',
-        addressLocality: 'Antalya',
+        streetAddress: 'Hurma Mahallesi',
+        addressLocality: 'Konyaaltı',
         addressRegion: 'Antalya',
         postalCode: '07130',
         addressCountry: 'TR',
       },
       geo: { '@type': 'GeoCoordinates', latitude: 36.8851, longitude: 30.6930 },
-      openingHoursSpecification: [{
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],
-        opens: '09:00', closes: '19:00',
-      }],
-      areaServed: [
-        'Konyaaltı','Muratpaşa','Kepez','Döşemealtı','Aksu',
-        'Lara','Belek','Kemer','Alanya','Manavgat','Side','Serik',
-      ].map(n => ({ '@type': 'City', name: n })),
+      areaServed: ANTALYA_ILCELER,
       hasOfferCatalog: {
         '@type': 'OfferCatalog',
-        name: 'Üniforma İmalatı Hizmetleri',
+        name: 'Antalya Üniforma ve Kurumsal Kıyafet İmalatı Hizmetleri 2026',
         itemListElement: [
-          { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Otel Personel Üniforması', description: 'Resepsiyon, kat hizmetleri, üst düzey yönetici kıyafeti tasarım ve imalatı.' }, availability: 'https://schema.org/InStock' },
-          { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Restoran & Mutfak Üniforması', description: 'Garson, şef, aşçı üniforması ve önlük imalatı.' }, availability: 'https://schema.org/InStock' },
-          { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Okul Üniforması', description: 'Öğrenci forması, spor kıyafeti, okul öncesi üniforma tasarımı.' }, availability: 'https://schema.org/InStock' },
-          { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Hastane & Sağlık Üniforması', description: 'Doktor önlüğü, hemşire forması, sağlık personeli kıyafeti.' }, availability: 'https://schema.org/InStock' },
-          { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Güvenlik Üniforması', description: 'Güvenlik personeli, vale, teknik ekip kıyafeti.' }, availability: 'https://schema.org/InStock' },
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Nakış & Logo Baskı', description: 'Kurumsal logo nakışı, isim işlemesi, dijital baskı.' }, availability: 'https://schema.org/InStock' },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Güvenlik Üniforması',
+              description: 'Güvenlik personeli, vale, teknik ekip kıyafeti imalatı.',
+              areaServed: ANTALYA_ILCELER,
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Hastane & Sağlık Üniforması',
+              description: 'Doktor önlüğü, hemşire forması, sağlık personeli kıyafeti.',
+              areaServed: ANTALYA_ILCELER,
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Okul Üniforması',
+              description: 'Öğrenci forması, spor kıyafeti, okul öncesi üniforma tasarımı.',
+              areaServed: ANTALYA_ILCELER,
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Restoran & Mutfak Üniforması',
+              description: 'Garson, şef, aşçı üniforması ve önlük imalatı.',
+              areaServed: ANTALYA_ILCELER,
+            },
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Otel Personel Üniforması',
+              description: 'Resepsiyon, kat hizmetleri, kat görevlisi, bellboy ve spa kıyafetleri.',
+              areaServed: ANTALYA_ILCELER,
+            },
+          },
         ],
       },
-      // KALDIRILDI (2026-09): doğrulanamayan aggregateRating (4.9/94) — bu
-      // konuşmada defalarca bulunup temizlenen aynı sahte istatistik.
-      sameAs: [MAPS, `https://wa.me/${WA_NUM}`, SITE],
     },
+
     {
       '@type': 'WebPage',
-      '@id': `${PAGE_URL}#webpage`,
-      name: 'Antalya Üniforma İmalatı — Otel, Restoran, Okul, Hastane',
-      url: PAGE_URL,
-      isPartOf: { '@type': 'WebSite', '@id': `${SITE}#website`, name: 'Terzi Hizmeti', url: SITE },
-      about: { '@id': `${PAGE_URL}#business` },
-      dateModified: TODAY,
-      breadcrumb: {
-        '@type': 'BreadcrumbList',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Terzi Can', item: SITE },
-          { '@type': 'ListItem', position: 2, name: 'Üniforma İmalatı', item: PAGE_URL },
-        ],
-      },
+      '@id': `${SITE_URL}#webpage`,
+      name: PAGE_TITLE,
+      url: SITE_URL,
+      isPartOf: { '@id': `${HOME_URL}/#website` },
+      about: { '@id': `${HOME_URL}/#business` },
+      description: PAGE_DESC,
+      inLanguage: 'tr',
+      datePublished: '2024-01-01',
+      dateModified: LAST_MODIFIED,
+      lastReviewed: LAST_MODIFIED,
+      breadcrumb: { '@id': `${SITE_URL}#breadcrumb` },
+      mainEntity: { '@id': `${HOME_URL}/#business` },
     },
+
+    {
+      '@type': 'BreadcrumbList',
+      '@id': `${SITE_URL}#breadcrumb`,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Ana Sayfa', item: HOME_URL },
+        { '@type': 'ListItem', position: 2, name: 'Antalya Üniforma İmalatı', item: SITE_URL },
+      ],
+    },
+
     {
       '@type': 'FAQPage',
+      '@id': `${SITE_URL}#faq`,
       mainEntity: [
-        { '@type': 'Question', name: 'Antalya\'da toplu üniforma siparişi verebilir miyim?', acceptedAnswer: { '@type': 'Answer', text: `Evet. Minimum sipariş adedi işletme büyüklüğüne göre değişir — küçük işletmeler için 10 adetten, büyük zincirler için sınırsız üretim kapasitesi. WhatsApp'tan ihtiyacınızı belirtin. ☎ ${PHONE}` } },
-        { '@type': 'Question', name: 'Otel personeli için hangi üniformaları dikiyorsunuz?', acceptedAnswer: { '@type': 'Answer', text: 'Resepsiyon, kat hizmetleri, güvenlik, teknik ekip, animasyon ve yönetici kıyafetleri dahil otel personelinin tüm departmanları için özel tasarım üniforma üretiyoruz.' } },
-        { '@type': 'Question', name: 'Okul üniforması siparişi ne kadar sürede teslim edilir?', acceptedAnswer: { '@type': 'Answer', text: 'Sipariş adedine ve tasarım karmaşıklığına göre 2–4 hafta içinde teslim ediyoruz. Sezon başı yoğunluğu için erken sipariş önerilir.' } },
-        { '@type': 'Question', name: 'Hastane ve sağlık kuruluşları için üniforma imalatı yapıyor musunuz?', acceptedAnswer: { '@type': 'Answer', text: 'Evet. Doktor önlüğü, hemşire forması ve sağlık personeli kıyafetlerini hijyen standartlarına uygun kumaşlarla üretiyoruz.' } },
-        { '@type': 'Question', name: 'Logo nakış ve baskı hizmeti dahil mi?', acceptedAnswer: { '@type': 'Answer', text: 'Evet. Kurumsal logonuzu nakış veya dijital baskı ile üniformalara işliyoruz. Ayrı bir hizmet olarak da sipariş verilebilir.' } },
-        { '@type': 'Question', name: 'Antalya\'nın hangi bölgelerine hizmet veriyorsunuz?', acceptedAnswer: { '@type': 'Answer', text: 'Konyaaltı, Muratpaşa, Kepez, Lara, Belek, Kemer, Alanya, Manavgat, Side dahil tüm Antalya geneline üniforma imalatı ve teslimat hizmeti sunuyoruz.' } },
+        {
+          '@type': 'Question',
+          name: 'Antalya özel tasarım ve logolu üniforma yaptırabilir miyiz?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: `Evet, otel, restoran, okul, hastane ve güvenlik firmaları için firmanıza özel logo nakışlı veya baskılı üniforma üretimi yapıyoruz. WhatsApp: ${PHONE}`,
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Üniforma imalatında minimum sipariş adedi var mı?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: `Terzi Can atölyemizde hem az adetli özel siparişler hem de yüksek adetli seri imalatlar için çözüm sunuyoruz. WhatsApp: ${PHONE}`,
+          },
+        },
       ],
     },
   ],
-}
+};
 
-export default function UniformaPage() {
+// ── Metadata ──────────────────────────────────────────────────────────────────
+export const metadata: Metadata = {
+  metadataBase: new URL(HOME_URL),
+  title: PAGE_TITLE,
+  description: PAGE_DESC,
+  keywords: [
+    'Antalya üniforma imalatı','otel personeli kıyafeti Antalya','güvenlik üniforması Antalya',
+    'okul forması dikimi Antalya','aşçı kıyafeti Antalya','garson önlüğü Antalya',
+    'sağlık personeli forması Antalya','doktor önlüğü dikimi','özel dikim atölyesi Antalya',
+    'terzi can Antalya üniforma',
+  ],
+  authors: [{ name: 'Terzi Can', url: HOME_URL }],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
+  },
+  alternates: {
+    canonical: SITE_URL,
+  },
+  openGraph: {
+    title: PAGE_TITLE,
+    description: PAGE_DESC,
+    url: SITE_URL,
+    siteName: 'Terzi Can',
+    locale: 'tr_TR',
+    type: 'website',
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Antalya Üniforma İmalatı Terzi Can' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: PAGE_TITLE,
+    description: PAGE_DESC,
+    images: [OG_IMAGE],
+  },
+};
+
+export default function UniformaImalatiPage() {
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <UniformaClient />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <main className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold mb-4">Antalya Üniforma İmalatı & Kurumsal Kıyafet Dikimi</h1>
+        <p className="text-lg text-gray-700 leading-relaxed mb-6">
+          Terzi Can olarak Antalya genelindeki oteller, restoranlar, hastaneler, okullar ve güvenlik şirketleri için yüksek kaliteli kumaşlar ve özelleştirilebilir tasarımlarla profesyonel üniforma imalatı hizmeti sunuyoruz.
+        </p>
+      </main>
     </>
-  )
+  );
 }

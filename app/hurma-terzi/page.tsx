@@ -13,7 +13,7 @@ const TODAY     = new Date().toISOString().split('T')[0];
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Hurma Mahallesi Terzi — Atölye Burada | Antalya" },
+  title: { absolute: "Hurma Mahallesi Terzi — Yakınınızdaki Atölye" },
   description:
     'Hurma terzi Konyaaltı: paça kısaltma ₺150\'den, fermuar değişimi ₺200\'den, bel daraltma, elbise dikimi. Ücretsiz adrese servis.',
   keywords: [
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Hurma Terzi Konyaaltı | ₺150\'den',
+    title: 'Hurma Terzi Konyaaltı — Aynı Gün Tadilat',
     description: 'Hurma mahallesine özel terzi hizmeti. Paça, fermuar, bel daraltma, dikim, ütü. ₺150\'den. ☎ ' + PHONE,
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'tr_TR', type: 'website',
     images: [{ url: `${SITE}/terzi-can-hero.jpg`, width: 1024, height: 1024, alt: 'Hurma Terzi Konyaaltı' }],

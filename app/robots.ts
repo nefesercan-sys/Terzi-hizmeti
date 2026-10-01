@@ -8,6 +8,10 @@ import { MetadataRoute } from 'next'
 // ortasında bu, Google'a yanlış kanonik domain sinyali verirdi. İkisi de
 // düzeltildi; Google-Extended/GPTBot/PerplexityBot/ClaudeBot izinleri
 // (iyi bir eklemeydi) korundu.
+//
+// NOT (bu turda): "host" alanı bir önceki yüklemede eksik kalmıştı.
+// Google artık bu direktifi kullanmıyor ama Yandex hâlâ dikkate alıyor —
+// sitede Yandex doğrulama dosyası olduğu için bu alan geri eklendi.
 export default function robots(): MetadataRoute.Robots {
   const commonDisallows = [
     '/api/',
@@ -40,5 +44,6 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     sitemap: 'https://terzihizmeti.com.tr/sitemap.xml',
+    host: 'https://terzihizmeti.com.tr',
   }
 }

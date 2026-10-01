@@ -12,7 +12,7 @@ const TODAY     = new Date().toISOString().split('T')[0];
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Paça Kısaltma Fiyatı 2026 Konyaaltı | Terzi" },
+  title: { absolute: "Paça Kısaltma Fiyatı 2026 Konyaaltı — Aynı Gün Teslim" },
   description:
     'Konyaaltı\'da paça kısaltma hizmeti. Pantolon, kot, etek kısaltma — aynı gün teslim, ₺150\'den. Hurma, Liman, Sarısu bölgesine ücretsiz servis.',
   keywords: [

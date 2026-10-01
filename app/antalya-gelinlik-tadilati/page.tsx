@@ -12,7 +12,7 @@ const TODAY     = new Date().toISOString().split('T')[0];
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Gelinlik & Abiye Tadilatı Antalya | ₺400'den" },
+  title: { absolute: "Gelinlik & Abiye Tadilatı Antalya — Aynı Gün Prova" },
   description:
     'Antalya\'da gelinlik ve abiye tadilatı. Hassas daraltma, boy ayarı, detaylı onarım. ₺400\'den, randevulu ve özenli hizmet. Konyaaltı merkezli atölye.',
   keywords: [

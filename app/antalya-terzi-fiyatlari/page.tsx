@@ -18,7 +18,7 @@ const OG        = `${SITE}/terzi-can-hero.jpg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: 'Antalya Terzi Fiyat Listesi 2026 | Paça ₺150 · Fermuar ₺200',
+  title: 'Antalya Terzi Fiyat Listesi 2026 — Tüm Hizmetler Tek Sayfada',
   description:
     'Antalya terzi fiyatları 2026: paça kısaltma ₺150, bel daraltma ₺150, fermuar değişimi ₺200, elbise dikimi ₺600\'den. Fotoğrafı WhatsApp\'tan gönderin, net fiyatı öğrenin. Adrese ve otele gelen terzi. Her gün 09:00–19:00.',
   keywords: [
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     url: PAGE_URL, siteName: 'Terzi Can', locale: 'tr_TR', type: 'website',
     images: [{ url: OG, width: 1024, height: 1024, alt: 'Antalya terzi fiyat listesi' }],
   },
-  twitter: { card: 'summary_large_image', title: 'Antalya Terzi Fiyat Listesi 2026', description: 'Paça ₺150 · Fermuar ₺200 · Bel daraltma ₺150.', images: [OG] },
+  twitter: { card: 'summary_large_image', title: 'Antalya Terzi Fiyat Listesi 2026 — Tüm Hizmetler', description: 'Paça ₺150 · Fermuar ₺200 · Bel daraltma ₺150.', images: [OG] },
   other: { 'geo.region': 'TR-07', 'geo.placename': 'Antalya' },
 };
 

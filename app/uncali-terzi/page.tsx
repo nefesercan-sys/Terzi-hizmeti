@@ -13,14 +13,14 @@ const TODAY     = new Date().toISOString().split('T')[0];
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Uncalı Terzi: Paça, Bel Daraltma, Özel Dikim | Terzi " },
+  title: { absolute: "Uncalı Terzi: Paça, Bel Daraltma, Özel Dikim" },
   description:
     'Uncalı terzi Konyaaltı: paça kısaltma ₺150\'den, fermuar değişimi ₺200\'den, bel daraltma, elbise dikimi. Adrese servis mevcuttur.',
   keywords: ['Uncalı terzi', 'Uncalı mahallesi terzi', 'Uncalı Konyaaltı terzi', 'Uncalı paça kısaltma', 'Uncalı fermuar tamiri', 'Uncalı bel daraltma', 'Uncalı elbise dikimi', 'Uncalı gelinlik tadilatı', 'Uncalı ütü hizmeti', 'Uncalı kuru temizleme', 'Uncalı terzi fiyatları 2026', 'Konyaaltı Uncalı dikiş atölyesi'],
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Uncalı Terzi Konyaaltı | ₺150\'den',
+    title: 'Uncalı Terzi Konyaaltı — Özel Dikim ve Tadilat',
     description: 'Uncalı mahallesine terzi hizmeti. Paça, fermuar, bel daraltma, dikim, ütü. ₺150\'den. ☎ ' + PHONE,
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'tr_TR', type: 'website',
     images: [{ url: `${SITE}/terzi-can-hero.jpg`, width: 1024, height: 1024, alt: 'Uncalı Terzi Konyaaltı' }],

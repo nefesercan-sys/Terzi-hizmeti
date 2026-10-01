@@ -16,7 +16,7 @@ const TODAY      = new Date().toISOString().split('T')[0]
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Üniforma İmalatı Antalya: Otel, Restoran, Okul, Hastane" },
+  title: 'Antalya Üniforma İmalatı — Otel, Restoran, Okul, Hastane Kurumsal Giyim',
   description:
     'Antalya geneli üniforma dikim ve tasarım firması. Otel personeli, restoran, okul, hastane, güvenlik üniforması. Kurumsal giyim tasarımı, kumaş seçimi, seri imalat, nakış ve logo baskı. Tüm Antalya\'ya hizmet. ☎ ' + PHONE,
   keywords: [
@@ -89,7 +89,7 @@ const jsonLd = {
       geo: { '@type': 'GeoCoordinates', latitude: 36.8851, longitude: 30.6930 },
       openingHoursSpecification: [{
         '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
+        dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],
         opens: '09:00', closes: '19:00',
       }],
       areaServed: [
@@ -100,11 +100,11 @@ const jsonLd = {
         '@type': 'OfferCatalog',
         name: 'Üniforma İmalatı Hizmetleri',
         itemListElement: [
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Otel Personel Üniforması', description: 'Resepsiyon, kat hizmetleri, üst düzey yönetici kıyafeti tasarım ve imalatı.' }, availability: 'https://schema.org/InStock' },
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Restoran & Mutfak Üniforması', description: 'Garson, şef, aşçı üniforması ve önlük imalatı.' }, availability: 'https://schema.org/InStock' },
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Okul Üniforması', description: 'Öğrenci forması, spor kıyafeti, okul öncesi üniforma tasarımı.' }, availability: 'https://schema.org/InStock' },
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Hastane & Sağlık Üniforması', description: 'Doktor önlüğü, hemşire forması, sağlık personeli kıyafeti.' }, availability: 'https://schema.org/InStock' },
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Güvenlik Üniforması', description: 'Güvenlik personeli, vale, teknik ekip kıyafeti.' }, availability: 'https://schema.org/InStock' },
+          { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Otel Personel Üniforması', description: 'Resepsiyon, kat hizmetleri, üst düzey yönetici kıyafeti tasarım ve imalatı.' }, availability: 'https://schema.org/InStock' },
+          { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Restoran & Mutfak Üniforması', description: 'Garson, şef, aşçı üniforması ve önlük imalatı.' }, availability: 'https://schema.org/InStock' },
+          { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Okul Üniforması', description: 'Öğrenci forması, spor kıyafeti, okul öncesi üniforma tasarımı.' }, availability: 'https://schema.org/InStock' },
+          { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Hastane & Sağlık Üniforması', description: 'Doktor önlüğü, hemşire forması, sağlık personeli kıyafeti.' }, availability: 'https://schema.org/InStock' },
+          { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Güvenlik Üniforması', description: 'Güvenlik personeli, vale, teknik ekip kıyafeti.' }, availability: 'https://schema.org/InStock' },
           { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Nakış & Logo Baskı', description: 'Kurumsal logo nakışı, isim işlemesi, dijital baskı.' }, availability: 'https://schema.org/InStock' },
         ],
       },

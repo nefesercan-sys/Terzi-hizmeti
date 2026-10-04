@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: BIZ, url: SITE }],
   creator: BIZ,
-  publisher: 'SwapHubs',
+  publisher: 'Terzi can',
   robots: {
     index: true, follow: true,
     googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },

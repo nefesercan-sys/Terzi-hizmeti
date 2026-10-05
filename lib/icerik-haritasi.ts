@@ -26,7 +26,6 @@ const TR_SERVICES: MapLink[] = [
   { href: '/antalya-terzi-fiyatlari', label: 'Terzi fiyatları 2026' },
   { href: '/antalya-uniforma-imalati', label: 'Üniforma imalatı' },
   { href: '/keten-pamuk-ozel-dikim', label: 'Keten ve pamuk özel dikim' },
-  { href: '/anavera-tekstil', label: 'Anavera Tekstil' },
   { href: '/blog', label: 'Blog' },
 ];
 
@@ -100,7 +99,6 @@ export function getSiteMap(pathname: string): SiteMap | null {
             { href: EN_BASE, label: 'Hotel Tailor Antalya' },
             { href: '/en/tailor-prices-antalya', label: 'Tailor Prices Antalya' },
             { href: '/en/linen-cotton-tailoring', label: 'Linen & Cotton Tailoring' },
-            { href: '/en/anavera-tekstil', label: 'Anavera Tekstil' },
             { href: '/antalya-terzi', label: 'Antalya Terzi (Türkçe)' },
           ].filter(not),
         },
@@ -121,7 +119,6 @@ export function getSiteMap(pathname: string): SiteMap | null {
             { href: DE_BASE, label: 'Schneider Service Hotel Antalya' },
             { href: '/de/schneider-preise-antalya', label: 'Schneider Preise Antalya' },
             { href: '/de/leinen-baumwolle-schneiderei', label: 'Leinen & Baumwolle Schneiderei' },
-            { href: '/de/anavera-tekstil', label: 'Anavera Tekstil' },
             { href: '/antalya-terzi', label: 'Antalya Terzi (Türkçe)' },
           ].filter(not),
         },
@@ -141,7 +138,6 @@ export function getSiteMap(pathname: string): SiteMap | null {
           { href: RU_BASE, label: 'Выездной портной Анталья' },
           { href: '/ru/ceny-portnoy-antalya', label: 'Цены портного Анталья' },
           { href: '/ru/poshiv-lyon-hlopok', label: 'Пошив из льна и хлопка' },
-          { href: '/ru/anavera-tekstil', label: 'Anavera Tekstil' },
           { href: '/antalya-terzi', label: 'Antalya Terzi (Türkçe)' },
         ].filter(not),
       },

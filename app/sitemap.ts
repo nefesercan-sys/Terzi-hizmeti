@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 import { OTEL_BOLGELERI } from '@/lib/otel-bolgeleri';
 
 const SITE = "https://terzihizmeti.com.tr";
-const NOW = new Date();
+const NOW = new Date('2026-10-04');
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // OTEL_BOLGELERI verisini güvenli bir şekilde slug metin dizisine çeviriyoruz

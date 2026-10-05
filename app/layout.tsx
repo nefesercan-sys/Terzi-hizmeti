@@ -4,6 +4,7 @@ import { Inter, Syne } from 'next/font/google';
 import './globals.css';
 import LangSetter from './LangSetter';
 import IcerikHaritasi from '@/components/IcerikHaritasi';
+import { HizliEylemBandi, HizliAkis } from '@/components/HizliEylem';
 
 const inter = Inter({ subsets: ['latin'], weight: ['400', '500', '600', '700', '800', '900'], variable: '--font-inter', display: 'swap' });
 const syne = Syne({ subsets: ['latin'], weight: ['700', '800'], variable: '--font-syne', display: 'swap' });
@@ -50,7 +51,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="tr" className={`${inter.variable} ${syne.variable}`}>
       <body>
         <LangSetter />
+        <HizliEylemBandi />
         {children}
+        <HizliAkis />
         <IcerikHaritasi />
         <Analytics />
       </body>

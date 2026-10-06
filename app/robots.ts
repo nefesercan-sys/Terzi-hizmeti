@@ -1,17 +1,8 @@
 import { MetadataRoute } from 'next'
 
-// DÜZELTME (2026-09-27): Bu dosya yanlışlıkla swaphubs.com projesinin
-// robots.ts'i ile karışmıştı — /admin-ai/, /bal/, /ilan-ver, /panel/,
-// /profil/ gibi yollar bu (terzihizmeti.com.tr) projede HİÇ yok, o site
-// swaphubs.com'un pazaryeri/ilan sistemine ait. Ayrıca sitemap/host
-// swaphubs.com'a çevrilmişti — tam da terzihizmeti.com.tr'ye göç sürecinin
-// ortasında bu, Google'a yanlış kanonik domain sinyali verirdi. İkisi de
-// düzeltildi; Google-Extended/GPTBot/PerplexityBot/ClaudeBot izinleri
-// (iyi bir eklemeydi) korundu.
-//
-// NOT (bu turda): "host" alanı bir önceki yüklemede eksik kalmıştı.
-// Google artık bu direktifi kullanmıyor ama Yandex hâlâ dikkate alıyor —
-// sitede Yandex doğrulama dosyası olduğu için bu alan geri eklendi.
+// terzihizmeti.com.tr — robots.txt
+// 2026-10-06: Google'ın tanımadığı "Host" yönergesi kaldırıldı (Search Console uyarısı);
+// ChatGPT arama botu OAI-SearchBot açıkça eklendi.
 export default function robots(): MetadataRoute.Robots {
   const commonDisallows = [
     '/api/',
@@ -35,16 +26,17 @@ export default function robots(): MetadataRoute.Robots {
         disallow: commonDisallows,
       },
       {
-        userAgent: 'Google-Extended',
-        allow: '/',
-      },
-      {
-        userAgent: ['GPTBot', 'ChatGPT-User', 'PerplexityBot', 'ClaudeBot'],
+        userAgent: [
+          'Google-Extended',
+          'GPTBot',
+          'ChatGPT-User',
+          'OAI-SearchBot',
+          'PerplexityBot',
+          'ClaudeBot',
+        ],
         allow: '/',
       },
     ],
     sitemap: 'https://terzihizmeti.com.tr/sitemap.xml',
-    host: 'https://terzihizmeti.com.tr',
   }
 }
- 

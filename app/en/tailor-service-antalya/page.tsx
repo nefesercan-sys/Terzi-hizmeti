@@ -11,7 +11,7 @@ const PHONE_TEL = '+905318986418';
 const WA_NUM    = '905318986418';
 const WA        = (m: string) => `https://wa.me/${WA_NUM}?text=${encodeURIComponent(m)}`;
 const WA_DEF    = WA('Hello, I would like a mobile tailor to come to my hotel/address. My location: ');
-const MAPS      = 'https://maps.app.goo.gl/QEgSkRoA8Nz8H62g8';
+const MAPS      = 'https://www.google.com/maps?cid=5846987472659818117';
 const LAST_MOD  = '2024-08-25'; // Statik tarih (Hydration hatasını önler)
 const OG        = `${SITE}/terzi-can-hero.jpg`;
 

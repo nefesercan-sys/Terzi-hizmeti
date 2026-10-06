@@ -12,9 +12,9 @@ const PHONE_TEL = '+905318986418';
 const WA_NUM    = '905318986418';
 const WA        = (m: string) => `https://wa.me/${WA_NUM}?text=${encodeURIComponent(m)}`;
 const WA_DEF    = WA('Hello, I need a VIP mobile tailor service for my hotel. / Merhaba, otelime terzi servisi istiyorum.');
-const MAPS      = 'https://maps.app.goo.gl/QEgSkRoA8Nz8H62g8';
+const MAPS      = 'https://www.google.com/maps?cid=5846987472659818117';
 const BIZ       = 'TERZİ Can - VIP Mobile Tailor';
-const TODAY     = new Date().toISOString().split('T')[0];
+const TODAY     = '2026-10-04';
 const OG        = `${SITE}/terzi-can-hero.jpg`;
 
 export const metadata: Metadata = {
@@ -81,7 +81,7 @@ const jsonLd = {
         addressRegion: 'Antalya',
         addressCountry: 'TR',
       },
-      geo: { '@type': 'GeoCoordinates', latitude: 36.8820, longitude: 30.6980 },
+      geo: { '@type': 'GeoCoordinates', latitude: 36.857466, longitude: 30.596987 },
       areaServed: [
         'Belek, Antalya', 'Kadriye, Antalya', 'Lara, Antalya', 'Kundu, Antalya', 
         'Kemer, Antalya', 'Göynük, Antalya', 'Beldibi, Antalya', 'Serik, Antalya'

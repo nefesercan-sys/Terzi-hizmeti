@@ -5,7 +5,7 @@ import OtelBolgeSayfasi from '@/components/OtelBolgeSayfasi';
 
 const SITE      = 'https://terzihizmeti.com.tr';
 const PHONE_TEL = '+905318986418';
-const MAPS      = 'https://maps.app.goo.gl/QEgSkRoA8Nz8H62g8';
+const MAPS      = 'https://www.google.com/maps?cid=5846987472659818117';
 const BASE_PATH = '/otele-gelen-terzi-antalya';
 
 export async function generateStaticParams() {

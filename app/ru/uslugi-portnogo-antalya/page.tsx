@@ -11,8 +11,8 @@ const PHONE_TEL = '+905318986418';
 const WA_NUM    = '905318986418';
 const WA        = (m: string) => `https://wa.me/${WA_NUM}?text=${encodeURIComponent(m)}`;
 const WA_DEF    = WA('Здравствуйте, хочу вызвать выездного портного в отель/по адресу. Мой адрес: ');
-const MAPS      = 'https://maps.app.goo.gl/QEgSkRoA8Nz8H62g8';
-const TODAY     = new Date().toISOString().split('T')[0];
+const MAPS      = 'https://www.google.com/maps?cid=5846987472659818117';
+const TODAY     = '2026-10-04';
 const OG        = `${SITE}/terzi-can-hero.jpg`;
 
 export const metadata: Metadata = {

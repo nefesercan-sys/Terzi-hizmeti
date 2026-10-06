@@ -12,9 +12,9 @@ const PHONE_TEL = '+905318986418';
 const WA_NUM    = '905318986418';
 const WA        = (m: string) => `https://wa.me/${WA_NUM}?text=${encodeURIComponent(m)}`;
 const WA_DEF    = WA('Merhaba, terzi ve tekstil atölyesi hizmetleriniz hakkında bilgi almak istiyorum.');
-const MAPS      = 'https://maps.app.goo.gl/QEgSkRoA8Nz8H62g8';
-const BIZ       = 'TERZİ Can - Konyaaltı';
-const TODAY     = new Date().toISOString().split('T')[0];
+const MAPS      = 'https://www.google.com/maps?cid=5846987472659818117';
+const BIZ       = 'TERZİ Can Antalya Tailor Service';
+const TODAY     = '2026-10-04';
 const OG        = `${SITE}/terzi-can-hero.jpg`;
 
 export const metadata: Metadata = {
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
   },
   other: {
     'geo.region': 'TR-07', 'geo.placename': 'Konyaaltı, Antalya',
-    'geo.position': '36.8841;30.6980', 'ICBM': '36.8841, 30.6980',
+    'geo.position': '36.857466;30.596987', 'ICBM': '36.857466, 30.596987',
     'contact': PHONE,
   },
   verification: { google: 'W2S_Gr49EgkgWG7xAWWMc5qPW6Cw3wEnOi6O6UC9zkQ' },
@@ -98,11 +98,11 @@ const jsonLd = {
         postalCode: '07130',
         addressCountry: 'TR',
       },
-      geo: { '@type': 'GeoCoordinates', latitude: 36.8820, longitude: 30.6980 },
+      geo: { '@type': 'GeoCoordinates', latitude: 36.857466, longitude: 30.596987 },
       openingHoursSpecification: [{
         '@type': 'OpeningHoursSpecification',
         dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-        opens: '09:00', closes: '19:00',
+        opens: '08:00', closes: '23:00',
       }],
       areaServed: [
         'Liman, Konyaaltı', 'Hurma, Konyaaltı', 'Sarısu, Konyaaltı', 'Gürsu, Konyaaltı', 'Uncalı, Konyaaltı',

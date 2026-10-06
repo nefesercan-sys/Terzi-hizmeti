@@ -1,214 +1,204 @@
+// app/de/schneiderservice-antalya/page.tsx
+// DÜZELTME: Bu URL daha önce /de/schneider-service-hotel-antalya sayfasının neredeyse birebir
+// kopyasıydı (214 satır, tek fark başlık) ve canonical'ı o sayfayı gösteriyordu. Böylece
+// Almanca "genel terzi" sayfası fiilen yoktu. Artık EN/RU karşılıklarına denk, kendi
+// içeriği ve kendi canonical'ı olan gerçek bir Almanca ana hizmet sayfası.
 import type { Metadata } from 'next';
-import { OTEL_BOLGELERI } from '@/lib/otel-bolgeleri';
 
-const SITE = 'https://terzihizmeti.com.tr';
-const BASE_PATH = '/de/schneider-service-hotel-antalya';
-const WA_DEF = `https://wa.me/905318986418?text=${encodeURIComponent('Hallo, ich möchte Informationen zum Schneiderservice in meinem Hotel.')}`;
+const SITE      = 'https://terzihizmeti.com.tr';
+const PAGE_URL  = `${SITE}/de/schneiderservice-antalya`;
+const TR_URL    = `${SITE}/antalya-terzi`;
+const EN_URL    = `${SITE}/en/tailor-service-antalya`;
+const RU_URL    = `${SITE}/ru/uslugi-portnogo-antalya`;
+const HOTEL_URL = `${SITE}/de/schneider-service-hotel-antalya`;
+const PRICE_URL = `${SITE}/de/schneider-preise-antalya`;
+const PHONE     = '+90 531 898 64 18';
+const PHONE_TEL = '+905318986418';
+const WA        = (m: string) => `https://wa.me/905318986418?text=${encodeURIComponent(m)}`;
+const WA_DEF    = WA('Hallo, ich möchte ein Foto meines Kleidungsstücks senden und einen Preis erfahren.');
+const WA_HOTEL  = WA('Hallo, ich möchte einen Schneider in mein Hotel in Antalya bestellen. Hotelname und Standort sende ich Ihnen.');
+const MAPS      = 'https://www.google.com/maps?cid=5846987472659818117';
+const LAST_MOD  = '2026-10-04';
+const OG        = `${SITE}/terzi-can-hero.jpg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Hotel-Schneider Antalya — Belek, Lara, Kemer, Side" },
-  description: 'Mobiler Schneiderservice zu Hotels in den Ferienorten von Antalya: Belek, Lara, Güzeloba, Kemer, Side. Änderungsschneiderei, Reparatur, Bügelservice und chemische Reinigung — wir kommen zu Ihnen.',
+  title: { absolute: 'Schneider in Antalya: Änderungen, Reparatur, Maßanfertigung' },
+  description:
+    'Änderungsschneiderei in Antalya (Konyaaltı): Hose kürzen, Reißverschluss, Brautkleid, Maßanfertigung. Wir kommen ins Hotel. Deutsch gesprochen, täglich geöffnet.',
   keywords: [
-    'Schneider Hotel Antalya', 'mobiler Schneider Antalya', 'Änderungsschneiderei Hotel',
-    'Schneider Belek Hotel', 'Schneider Lara Hotel', 'Schneider Kemer Hotel', 'Schneider Side Hotel',
-    'Reißverschluss Reparatur Antalya', 'Kleidung kürzen Antalya', 'chemische Reinigung Hotel Antalya',
+    'Schneider Antalya', 'Änderungsschneiderei Antalya', 'Schneider Antalya Deutsch', 'Hose kürzen Antalya',
+    'Reißverschluss Reparatur Antalya', 'Brautkleid ändern Antalya', 'Maßanfertigung Antalya',
+    'mobiler Schneider Antalya', 'Schneider Konyaaltı', 'Kleidung reparieren Antalya', 'Schneider Sonntag geöffnet Antalya',
   ],
   alternates: {
-    canonical: `${SITE}${BASE_PATH}`,
-    languages: {
-      'tr': `${SITE}/otele-gelen-terzi-antalya`,
-      'en': `${SITE}/en/hotel-tailor-antalya`,
-      'ru': `${SITE}/ru/vyezdnoy-portnoy-antalya`,
-      'de': `${SITE}${BASE_PATH}`,
-      'x-default': `${SITE}${BASE_PATH}`,
-    },
+    canonical: PAGE_URL,
+    languages: { tr: TR_URL, en: EN_URL, ru: RU_URL, de: PAGE_URL, 'x-default': TR_URL },
   },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   openGraph: {
-    title: 'Schneider im Hotel Antalya — Mobiler Service',
-    description: 'Wir kommen zu Ihrem Hotel in Belek, Lara, Güzeloba, Kemer oder Side. Änderungen, Reparaturen, Bügelservice, chemische Reinigung.',
-    url: `${SITE}${BASE_PATH}`, siteName: 'Terzi Can', locale: 'de_DE', type: 'website',
-    images: [{ url: `${SITE}/terzi-can-hero.jpg`, width: 1024, height: 1024, alt: 'Schneider im Hotel Antalya' }],
+    title: 'Schneider in Antalya: Änderungen, Reparatur, Maßanfertigung',
+    description: 'Terzi Can in Konyaaltı: Änderungen, Reparaturen und Maßanfertigung. Wir kommen auch ins Hotel.',
+    url: PAGE_URL, siteName: 'Terzi Can', locale: 'de_DE', type: 'website',
+    images: [{ url: OG, width: 1024, height: 1024, alt: 'Schneider in Antalya, Terzi Can' }],
   },
 };
+
+const SERVICES: { title: string; desc: string; rows: [string, string][] }[] = [
+  { title: 'Änderungen', desc: 'Passform-Anpassungen, damit Kleidung genau sitzt.',
+    rows: [['Hose kürzen', 'ab ₺150'], ['Taille enger machen', 'ab ₺150'], ['Ärmel kürzen', 'ab ₺200'], ['Kleid / Jacke anpassen', 'ab ₺200'], ['Brautkleid und Abendkleid', 'ab ₺400']] },
+  { title: 'Reparatur', desc: 'Reißverschluss, Risse, Knöpfe und Futter.',
+    rows: [['Reißverschluss (Hose)', 'ab ₺200'], ['Reißverschluss (Mantel)', 'ab ₺300'], ['Riss / Naht reparieren', 'ab ₺150'], ['Knopf, Haken', 'ab ₺60']] },
+  { title: 'Maßanfertigung', desc: 'Kleidung nach Ihren Maßen, auch aus Leinen und Baumwolle.',
+    rows: [['Herrenhemd', 'ab ₺350'], ['Herrenhose', 'ab ₺400'], ['Damenkleid', 'ab ₺600'], ['Abendkleid', 'ab ₺900'], ['Kinderkleidung', 'ab ₺250']] },
+  { title: 'Bügeln und Reinigung', desc: 'Dampfbügeln und chemische Reinigung.',
+    rows: [['Bügeln (pro Stück)', 'ab ₺80'], ['Reinigung (Kleid)', 'ab ₺300'], ['Reinigung (Mantel)', 'ab ₺500']] },
+];
+
+const FREE_DISTRICTS = ['Konyaaltı', 'Muratpaşa', 'Kepez', 'Lara'];
+const OTHER_DISTRICTS = ['Belek', 'Kemer', 'Side', 'Serik', 'Manavgat', 'Alanya', 'Döşemealtı', 'Aksu'];
+
+const STEPS: [string, string][] = [
+  ['Foto senden', 'Senden Sie per WhatsApp ein Foto des Kleidungsstücks und der gewünschten Arbeit.'],
+  ['Preis erfahren', 'Wir nennen Ihnen Preis und Bearbeitungszeit für die Arbeit.'],
+  ['Termin oder Abholung', 'In der Werkstatt in Konyaaltı abgeben, oder Besuch im Hotel bzw. Abholung an Ihrer Adresse vereinbaren.'],
+  ['Fertig zurück', 'Sie holen das Stück ab, oder wir liefern es ins Hotel bzw. an Ihre Adresse.'],
+];
+
+const FAQS: [string, string][] = [
+  ['Gibt es in Antalya einen Schneider, der Deutsch spricht?', 'Ja. Das Team von Terzi Can spricht Deutsch, Englisch, Russisch und Türkisch. Am einfachsten schreiben Sie uns per WhatsApp.'],
+  ['Kommt der Schneider ins Hotel?', 'Ja. Wir besuchen Hotels, zum Beispiel in Belek, Lara, Kemer und Side. Senden Sie Hotelname und Standort per WhatsApp. Details zum Hotelservice: ' + HOTEL_URL],
+  ['Ist der Besuch kostenlos?', 'In Konyaaltı, Muratpaşa, Kepez und Lara ist der Besuch kostenlos. Für weiter entfernte Bezirke klären wir die Einzelheiten vorab per WhatsApp.'],
+  ['Wie bekomme ich einen Preis, ohne vorbeizukommen?', 'Senden Sie ein Foto des Kleidungsstücks und der gewünschten Arbeit per WhatsApp. Wir nennen Preis und Bearbeitungszeit. Preisliste: ' + PRICE_URL],
+  ['Wie schnell ist eine Änderung fertig?', 'Viele Reparaturen und das Kürzen von Hosen sind am selben Tag oder innerhalb von 24 Stunden fertig. Die genaue Zeit hängt von Arbeit und Auslastung ab und wird per WhatsApp bestätigt.'],
+  ['Können Sie ein Brautkleid oder Abendkleid ändern?', 'Ja. Brautkleid- und Abendkleid-Änderungen gibt es ab ₺400, je nach Aufwand. Senden Sie am besten vorab Fotos.'],
+  ['Haben Sie am Wochenende geöffnet?', 'Ja, die Werkstatt ist an sieben Tagen in der Woche geöffnet. Die aktuellen Zeiten stehen bei Google Maps.'],
+];
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': 'Service',
-      '@id': `${SITE}${BASE_PATH}#service`,
-      name: 'Mobiler Schneiderservice in Antalyas Hotelbezirken',
-      serviceType: 'Änderungsschneiderei, Reparatur, Bügelservice, chemische Reinigung — mobiler Hotelservice',
-      provider: { '@type': 'LocalBusiness', name: 'Terzi Can', telephone: '+905318986418', url: `${SITE}/antalya-terzi`,
-        hasMap: 'https://maps.app.goo.gl/QEgSkRoA8Nz8H62g8',
-        address: {
-          '@type': 'PostalAddress',
-          streetAddress: 'Hurma Mahallesi',
-          addressLocality: 'Konyaaltı',
-          addressRegion: 'Antalya',
-          postalCode: '07130',
-          addressCountry: 'TR',
-        },
-        geo: { '@type': 'GeoCoordinates', latitude: 36.8820, longitude: 30.6980 } },
-      areaServed: OTEL_BOLGELERI.map((r) => ({ '@type': 'Place', name: r.name })),
-      availableLanguage: ['de', 'en', 'ru', 'tr'],
+      '@type': 'WebPage', '@id': `${PAGE_URL}#webpage`, url: PAGE_URL, name: 'Schneider in Antalya', inLanguage: 'de',
+      dateModified: LAST_MOD, isPartOf: { '@id': `${SITE}#website` }, about: { '@id': `${SITE}#business` },
+    },
+    {
+      '@type': 'Service', '@id': `${PAGE_URL}#service`, serviceType: 'Änderungsschneiderei, Reparatur und Maßanfertigung',
+      provider: { '@id': `${SITE}#business` }, areaServed: { '@type': 'City', name: 'Antalya' }, availableLanguage: ['de', 'en', 'ru', 'tr'],
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog', name: 'Schneiderleistungen in Antalya',
+        itemListElement: SERVICES.map((s) => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name: s.title, description: s.desc } })),
+      },
+    },
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Terzi Can', item: SITE },
+        { '@type': 'ListItem', position: 2, name: 'Schneider in Antalya', item: PAGE_URL },
+      ],
     },
     {
       '@type': 'FAQPage',
-      mainEntity: [
-        { '@type': 'Question', name: 'Wie funktioniert der mobile Schneiderservice im Hotel?', acceptedAnswer: { '@type': 'Answer', text: 'Sie teilen uns Hotelname, Zimmernummer und einen passenden Zeitpunkt per WhatsApp mit. Unser Schneider kommt zu Ihnen, nimmt Maß oder holt das Kleidungsstück ab, und liefert es fertig repariert oder geändert zurück.' } },
-        { '@type': 'Question', name: 'In welche Hotelbezirke kommen Sie?', acceptedAnswer: { '@type': 'Answer', text: 'Wir bedienen Belek, Lara, Güzeloba, Kemer und Side sowie auf Anfrage weitere Bezirke Antalyas.' } },
-        { '@type': 'Question', name: 'Wie lange dauert eine Änderung oder Reparatur?', acceptedAnswer: { '@type': 'Answer', text: 'Die meisten Änderungen und Reparaturen sind innerhalb von 24 Stunden fertig. Für Hochzeits- oder Abendkleider empfehlen wir, uns möglichst früh zu kontaktieren.' } },
-        { '@type': 'Question', name: 'Welche Sprachen sprechen Sie?', acceptedAnswer: { '@type': 'Answer', text: 'Unser Team spricht Deutsch, Englisch, Russisch und Türkisch.' } },
-      ],
+      mainEntity: FAQS.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
     },
   ],
 };
 
-const SERVICES = [
-  { icon: '📏', t: 'Änderungsschneiderei', d: 'Kürzen, Enger machen, Anpassen — Hosen, Kleider, Anzüge, Röcke.' },
-  { icon: '🧵', t: 'Reparatur', d: 'Reißverschluss, Riss, Knopf, Futter — schnelle, saubere Reparatur.' },
-  { icon: '👗', t: 'Braut- & Abendkleid', d: 'Vorsichtige Anpassung für den besonderen Anlass, mit Termin vor Ort.' },
-  { icon: '🧺', t: 'Bügelservice & Reinigung', d: 'Dampfbügeln, professionelle chemische Reinigung, Abholung im Hotel.' },
-];
+const wrap = { maxWidth: 1040, margin: '0 auto', padding: '0 1.25rem' } as const;
+const card = { border: '1px solid rgba(128,128,128,.3)', borderRadius: 14, padding: '1.2rem', background: '#fff' } as const;
+const btn = { display: 'inline-block', background: '#25D366', color: '#fff', fontWeight: 800, padding: '.8rem 1.5rem', borderRadius: 10, textDecoration: 'none' } as const;
 
-export default function OtelBolgeleriDeHub() {
+export default function SchneiderserviceAntalya() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-
-      <div style={{ background: '#1E3329', color: '#F5F1E8', minHeight: '100vh' }}>
-        <nav className="nav" aria-label="Hauptnavigation">
-          <div className="nav-logo"><span className="nav-dot" aria-hidden="true" />TERZİ CAN</div>
-          <a href="/" className="nav-home">← Startseite</a>
-          <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="nav-wa">WHATSAPP →</a>
+      <main lang="de" style={{ fontFamily: 'inherit', color: '#1f2a26', background: '#F7F5F0' }}>
+        <nav aria-label="Breadcrumb" style={{ ...wrap, padding: '1rem 1.25rem 0', fontSize: '.8rem' }}>
+          <a href={SITE} style={{ color: '#5c6b64' }}>Terzi Can</a> <span>›</span> <strong>Schneider in Antalya</strong>
         </nav>
 
-        {/* HERO mit Bild */}
-        <section className="hero" aria-labelledby="hub-h">
-          <div className="hero-bg" aria-hidden="true">
-            <img src="/terzi-can-hero.jpg" alt="" className="hero-bg-img" width={1024} height={1024} />
-            <div className="hero-overlay" />
-          </div>
-          <div className="hero-content">
-            <span className="hero-tag">🏨 Belek · Lara · Kundu · Konyaaltı · Kemer · Göynük · Muratpaşa · Side</span>
-            <h1 id="hub-h">Schneider im Hotel — <span className="accent">Mobiler Service</span></h1>
-            <p className="hero-desc">
-              Wählen Sie Ihren Bezirk, teilen Sie Hotelname und Zeitpunkt per WhatsApp mit — unser
-              Schneider kommt zu Ihnen. Änderungen, Reparaturen, Bügelservice und chemische Reinigung,
-              direkt vor Ort in Ihrem Hotel.
+        <section style={{ background: '#2C4A3E', color: '#fff', padding: '3rem 0', marginTop: '.8rem' }}>
+          <div style={{ ...wrap, textAlign: 'center' }}>
+            <h1 style={{ fontSize: 'clamp(1.8rem,4.5vw,2.7rem)', fontWeight: 800, lineHeight: 1.2, margin: '0 0 1rem' }}>
+              Schneider in Antalya: Änderungen, Reparatur, Maßanfertigung
+            </h1>
+            <p id="hero-desc" style={{ maxWidth: 720, margin: '0 auto 1.6rem', lineHeight: 1.7, fontSize: '1.05rem', opacity: .92 }}>
+              Terzi Can ist eine Änderungsschneiderei in Hurma, Konyaaltı. Wir kürzen Hosen, wechseln Reißverschlüsse, ändern Brautkleider und
+              fertigen nach Maß. Auf Wunsch kommen wir ins Hotel oder holen Ihre Kleidung ab. Wir sprechen Deutsch, Englisch, Russisch und Türkisch.
             </p>
-            <div className="hero-btns">
-              <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-primary">💬 Auf WhatsApp schreiben →</a>
-              <a href="tel:+905318986418" className="btn-secondary">📞 +90 531 898 64 18</a>
+            <div style={{ display: 'flex', gap: '.7rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+              <a href={WA_DEF} target="_blank" rel="noopener noreferrer" style={btn}>Foto senden, Preis erfahren</a>
+              <a href={WA_HOTEL} target="_blank" rel="noopener noreferrer" style={{ ...btn, background: 'transparent', border: '1px solid rgba(255,255,255,.5)' }}>Schneider ins Hotel</a>
+              <a href={`tel:${PHONE_TEL}`} style={{ ...btn, background: 'transparent', border: '1px solid rgba(255,255,255,.5)' }}>{PHONE}</a>
             </div>
           </div>
         </section>
 
-        {/* EINLEITUNG — reichhaltiger Text */}
-        <section className="sec" aria-labelledby="about-h">
-          <div className="ctr" style={{ maxWidth: 760 }}>
-            <div className="sec-head">
-              <span className="eyebrow">Über den Service</span>
-              <h2 className="sec-h ff" id="about-h">Warum ein mobiler Schneider im Urlaub?</h2>
-              <p className="sec-sub">
-                Ein gerissener Reißverschluss vor dem Galadinner, ein Kleid, das eine kleine Anpassung
-                braucht, oder ein Anzug, der eine chemische Reinigung nötig hat — im Urlaub bleibt
-                selten Zeit, selbst eine Änderungsschneiderei zu finden. Terzi Can kommt direkt zu
-                Ihrem Hotel in Belek, Lara, Güzeloba, Kemer oder Side: Maßnehmen, Reparieren, Abholen
-                und Zurückbringen — alles ohne dass Sie Ihr Hotel verlassen müssen. Unser Team spricht
-                Deutsch, Englisch, Russisch und Türkisch, sodass die Kommunikation unkompliziert ist.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* LEISTUNGEN */}
-        <section className="sec" style={{ background: 'rgba(0,0,0,.12)' }} aria-labelledby="svc-h">
-          <div className="ctr">
-            <div className="sec-head">
-              <span className="eyebrow">Leistungen</span>
-              <h2 className="sec-h ff" id="svc-h">Was wir im Hotel für Sie erledigen</h2>
-            </div>
-            <div className="howto-list">
-              {SERVICES.map((s) => (
-                <div className="howto-item" key={s.t}>
-                  <div className="howto-t">{s.icon} {s.t}</div>
-                  <div className="howto-d">{s.d}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* BEZIRKE — mit Bild + Beschreibung */}
-        <section className="sec" aria-labelledby="regions-h">
-          <div className="ctr">
-            <div className="sec-head">
-              <span className="eyebrow">Bezirke</span>
-              <h2 className="sec-h ff" id="regions-h">Wählen Sie Ihren Hotelbezirk</h2>
-              <p className="sec-sub">Jeder Bezirk hat eine eigene Seite mit Hotelliste, Fahrzeit und direktem WhatsApp-Kontakt.</p>
-            </div>
-            <div className="wk-grid">
-              {OTEL_BOLGELERI.map((r) => (
-                <a key={r.slug} href={`${BASE_PATH}/${r.slug}`} className="wk-card" style={{ textDecoration: 'none', color: 'inherit' }}>
-                  <div className="wk-tr">{r.name}</div>
-                  <p className="wk-d">{r.blurb.de}</p>
-                  <p style={{ fontSize: '.75rem', color: 'rgba(245,241,232,.5)', marginTop: '.6rem' }}>⏱ {r.travelTime.de}</p>
-                </a>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* SO FUNKTIONIERT ES */}
-        <section className="sec" style={{ background: 'rgba(0,0,0,.12)' }} aria-labelledby="how-h">
-          <div className="ctr" style={{ maxWidth: 760 }}>
-            <div className="sec-head">
-              <span className="eyebrow">Ablauf</span>
-              <h2 className="sec-h ff" id="how-h">So funktioniert es</h2>
-            </div>
-            <div className="howto-list">
-              <div className="howto-item"><div className="howto-t">1. Nachricht senden</div><div className="howto-d">Hotelname, Zimmernummer und Anliegen per WhatsApp mitteilen.</div></div>
-              <div className="howto-item"><div className="howto-t">2. Termin vereinbaren</div><div className="howto-d">Wir bestätigen einen passenden Zeitpunkt, meist noch am selben Tag.</div></div>
-              <div className="howto-item"><div className="howto-t">3. Vor-Ort-Service</div><div className="howto-d">Unser Schneider kommt zu Ihnen, nimmt Maß oder holt das Kleidungsstück ab.</div></div>
-              <div className="howto-item"><div className="howto-t">4. Lieferung ins Hotel</div><div className="howto-d">Fertiges Stück wird innerhalb von 24 Stunden zurückgebracht.</div></div>
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ */}
-        <section className="sec" id="faq" aria-labelledby="faq-h">
-          <div className="ctr" style={{ maxWidth: 760 }}>
-            <div className="sec-head">
-              <span className="eyebrow">FAQ</span>
-              <h2 className="sec-h ff" id="faq-h">Häufig gestellte Fragen</h2>
-            </div>
-            {[
-              ['Wie funktioniert der mobile Schneiderservice im Hotel?', 'Sie teilen uns Hotelname, Zimmernummer und einen passenden Zeitpunkt per WhatsApp mit. Unser Schneider kommt zu Ihnen, nimmt Maß oder holt das Kleidungsstück ab, und liefert es fertig repariert oder geändert zurück.'],
-              ['In welche Hotelbezirke kommen Sie?', 'Wir bedienen Belek, Lara, Güzeloba, Kemer und Side sowie auf Anfrage weitere Bezirke Antalyas.'],
-              ['Wie lange dauert eine Änderung oder Reparatur?', 'Die meisten Änderungen und Reparaturen sind innerhalb von 24 Stunden fertig. Für Hochzeits- oder Abendkleider empfehlen wir, uns möglichst früh zu kontaktieren.'],
-              ['Welche Sprachen sprechen Sie?', 'Unser Team spricht Deutsch, Englisch, Russisch und Türkisch.'],
-            ].map(([q, a]) => (
-              <div key={q} className="faq-item">
-                <div className="faq-q">{q}</div>
-                <div className="faq-a">{a}</div>
+        <section style={{ ...wrap, padding: '2.5rem 1.25rem 0' }}>
+          <h2 style={{ fontSize: '1.5rem', fontWeight: 800, margin: '0 0 1rem' }}>Leistungen und Richtpreise</h2>
+          <p style={{ margin: '0 0 1.2rem', opacity: .8, fontSize: '.92rem' }}>Alle Preise sind Ab-Preise und hängen von Stoff und Aufwand ab. Stand: Oktober 2026.</p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(240px,1fr))', gap: '1rem' }}>
+            {SERVICES.map((s) => (
+              <div key={s.title} style={card}>
+                <h3 style={{ margin: '0 0 .3rem', fontSize: '1.05rem' }}>{s.title}</h3>
+                <p style={{ margin: '0 0 .8rem', fontSize: '.88rem', opacity: .8 }}>{s.desc}</p>
+                <ul style={{ listStyle: 'none', margin: 0, padding: 0, fontSize: '.92rem' }}>
+                  {s.rows.map(([n, p]) => (
+                    <li key={n} style={{ display: 'flex', justifyContent: 'space-between', gap: '.6rem', padding: '.3rem 0', borderTop: '1px solid rgba(128,128,128,.2)' }}>
+                      <span>{n}</span><strong style={{ whiteSpace: 'nowrap' }}>{p}</strong>
+                    </li>
+                  ))}
+                </ul>
               </div>
+            ))}
+          </div>
+          <p style={{ marginTop: '1rem', fontSize: '.92rem' }}>Die vollständige Liste: <a href={PRICE_URL}>Schneider-Preise Antalya</a></p>
+        </section>
+
+        <section style={{ ...wrap, padding: '2.5rem 1.25rem 0' }}>
+          <h2 style={{ fontSize: '1.5rem', fontWeight: 800, margin: '0 0 1rem' }}>So funktioniert es</h2>
+          <ol style={{ listStyle: 'none', margin: 0, padding: 0, display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(220px,1fr))', gap: '1rem' }}>
+            {STEPS.map(([t, d], i) => (
+              <li key={t} style={card}>
+                <div style={{ fontWeight: 800, color: '#2C4A3E', fontSize: '1.3rem' }}>{i + 1}</div>
+                <strong>{t}</strong>
+                <p style={{ margin: '.3rem 0 0', fontSize: '.9rem', lineHeight: 1.55, opacity: .85 }}>{d}</p>
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        <section style={{ ...wrap, padding: '2.5rem 1.25rem 0' }}>
+          <h2 style={{ fontSize: '1.5rem', fontWeight: 800, margin: '0 0 1rem' }}>Einsatzgebiet in Antalya</h2>
+          <div style={{ ...card }}>
+            <p style={{ margin: '0 0 .6rem' }}><strong>Kostenloser Besuch:</strong> {FREE_DISTRICTS.join(', ')}</p>
+            <p style={{ margin: '0 0 .6rem' }}><strong>Nach Absprache:</strong> {OTHER_DISTRICTS.join(', ')}</p>
+            <p style={{ margin: 0, fontSize: '.9rem', opacity: .8 }}>
+              Werkstatt: Hurma Mahallesi, 07130 Konyaaltı/Antalya. <a href={MAPS} target="_blank" rel="noopener noreferrer">Auf Google Maps ansehen</a>.
+              Hotelbezirke im Detail: <a href={HOTEL_URL}>Schneider im Hotel</a>.
+            </p>
+          </div>
+        </section>
+
+        <section id="sss" style={{ ...wrap, padding: '2.5rem 1.25rem 0' }}>
+          <h2 style={{ fontSize: '1.5rem', fontWeight: 800, margin: '0 0 1rem' }}>Häufige Fragen</h2>
+          <div style={{ display: 'grid', gap: '.8rem' }}>
+            {FAQS.map(([q, a]) => (
+              <details key={q} style={{ ...card, padding: '1rem 1.2rem' }}>
+                <summary style={{ fontWeight: 700, cursor: 'pointer' }}>{q}</summary>
+                <p style={{ margin: '.7rem 0 0', lineHeight: 1.65, fontSize: '.94rem' }}>{a}</p>
+              </details>
             ))}
           </div>
         </section>
 
-        <section className="cta-final" aria-label="Kontakt">
-          <h2 className="cta-h ff">Nicht in einem dieser Bezirke?</h2>
-          <p className="cta-sub">Wir erreichen Sie wahrscheinlich trotzdem — fragen Sie einfach per WhatsApp.</p>
-          <div className="cta-btns">
-            <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-white">💬 Auf WhatsApp schreiben</a>
-            <a href="tel:+905318986418" className="btn-outline-white">📞 +90 531 898 64 18</a>
-          </div>
+        <section style={{ ...wrap, padding: '2.5rem 1.25rem 3rem', textAlign: 'center' }}>
+          <a href={WA_DEF} target="_blank" rel="noopener noreferrer" style={btn}>Per WhatsApp starten</a>
+          <p style={{ marginTop: '1rem', fontSize: '.85rem', opacity: .7 }}>
+            Weitere Sprachen: <a href={TR_URL}>Türkçe</a> · <a href={EN_URL}>English</a> · <a href={RU_URL}>Русский</a>
+          </p>
         </section>
-      </div>
+      </main>
     </>
   );
 }

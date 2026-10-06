@@ -59,6 +59,7 @@ function regionLinks(base: string, lang: Lang, label: (n: string) => string): Ma
 
 export function getLang(pathname: string): Lang | null {
   const p = norm(pathname);
+  if (p === '/anavera-tekstil') return 'tr';
   if (p.startsWith('/en/')) return 'en';
   if (p.startsWith('/de/')) return 'de';
   if (p.startsWith('/ru/')) return 'ru';
@@ -79,6 +80,7 @@ export function getSiteMap(pathname: string): SiteMap | null {
       lang,
       heading: 'İlgili sayfalar',
       sections: [
+        { title: 'Toptan ve fason tekstil üretimi (B2B)', links: [{ href: '/anavera-tekstil', label: 'Anavera Tekstil — hazır giyim üretimi ve ihracat' }].filter(not) },
         { title: 'Terzi hizmetleri', links: TR_SERVICES.filter(not) },
         { title: 'Konyaaltı mahalleleri', links: TR_MAHALLELER.filter(not) },
         { title: 'Otele gelen terzi — bölgeler', links: regionLinks(TR_BASE, 'tr', (n) => `${n} otele gelen terzi`).filter(not) },
@@ -92,6 +94,7 @@ export function getSiteMap(pathname: string): SiteMap | null {
       lang,
       heading: 'More tailor services in Antalya',
       sections: [
+        { title: 'Clothing manufacturing in Turkey (B2B)', links: [{ href: '/en/anavera-tekstil', label: 'Anavera Tekstil — clothing manufacturer & exporter' }].filter(not) },
         {
           title: 'Services',
           links: [
@@ -112,6 +115,7 @@ export function getSiteMap(pathname: string): SiteMap | null {
       lang,
       heading: 'Weitere Schneider-Services in Antalya',
       sections: [
+        { title: 'Bekleidungsherstellung in der Türkei (B2B)', links: [{ href: '/de/anavera-tekstil', label: 'Anavera Tekstil — Bekleidungshersteller & Exporteur' }].filter(not) },
         {
           title: 'Services',
           links: [
@@ -131,6 +135,7 @@ export function getSiteMap(pathname: string): SiteMap | null {
     lang,
     heading: 'Другие услуги в Анталье',
     sections: [
+      { title: 'Производство одежды в Турции (B2B)', links: [{ href: '/ru/anavera-tekstil', label: 'Anavera Tekstil — производитель одежды и экспорт' }].filter(not) },
       {
         title: 'Услуги',
         links: [

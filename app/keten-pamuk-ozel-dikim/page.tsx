@@ -1,64 +1,349 @@
-import type { Metadata } from 'next';
-import KetenPamukOzelDikim, { KETEN_PAMUK_T } from '@/components/KetenPamukOzelDikim';
 
-const SITE     = 'https://terzihizmeti.com.tr';
-const PAGE_URL = `${SITE}/keten-pamuk-ozel-dikim`;
-const EN_URL   = `${SITE}/en/linen-cotton-tailoring`;
-const RU_URL   = `${SITE}/ru/poshiv-lyon-hlopok`;
-const DE_URL   = `${SITE}/de/leinen-baumwolle-schneiderei`;
-const PHONE    = '+90 531 898 64 18';
-const OG       = `${SITE}/terzi-can-hero.jpg`;
 
-export const metadata: Metadata = {
-  metadataBase: new URL(SITE),
-  title: { absolute: "Keten & Pamuk Özel Dikim + Toptan Üretim | Antalya" },
-  description: 'Yabancı misafirler için %100 doğal keten ve pamuk kumaştan özel dikim. Model seçin, ölçünüzü verin, otelinize teslim edelim. ☎ ' + PHONE,
-  keywords: [
-    'keten özel dikim Antalya', 'pamuk özel dikim Antalya', 'otele gelen terzi keten',
-    'doğal kumaş dikim Antalya', 'Konyaaltı keten terzi', 'yabancı misafir özel dikim',
-    'keten pamuk toptan üretim', 'keten pamuk ihracat Türkiye', 'numune çalışması tekstil üreticisi', 'seri imalat keten pamuk',
-  ],
-  authors: [{ name: 'Terzi Can', url: SITE }],
-  robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
-  alternates: {
-    canonical: PAGE_URL,
-    languages: { 'tr': PAGE_URL, 'en': EN_URL, 'ru': RU_URL, 'de': DE_URL, 'x-default': PAGE_URL },
+const PHONE = '+90 531 898 64 18';
+const WA_NUM = '905318986418';
+const WA = (m: string) => `https://wa.me/${WA_NUM}?text=${encodeURIComponent(m)}`;
+
+type Lang = 'tr' | 'en' | 'ru' | 'de';
+
+// ─── MODEL GALERİSİ — gerçek kumaş/stil referans görselleri (Unsplash) ───────
+// Bunlar satılan hazır ürün değil, "bu tarz bir şey diktirmek istiyorum"
+// diyen misafirin gösterebileceği stil/model örnekleri.
+const MODELLER = [
+  {
+    id: 'kadin-elbise',
+    img: 'https://images.unsplash.com/photo-1700317440740-627b8c533120?w=700&q=80',
+    baslik: { tr: 'Kadın Keten Maxi Elbise', en: "Women's Linen Maxi Dress", ru: 'Женское льняное макси-платье', de: 'Damen Leinen-Maxikleid' },
+    aciklama: {
+      tr: 'Geniş kesim, bağcıklı bel — sahil ve şehir için serin, doğal keten.',
+      en: 'Relaxed fit, tie waist — cool, natural linen for beach or city wear.',
+      ru: 'Свободный крой, пояс на завязках — прохладный натуральный лён для пляжа и города.',
+      de: 'Lockere Passform, Bindegürtel — kühles, natürliches Leinen für Strand und Stadt.',
+    },
   },
-  openGraph: {
-    title: 'Keten & Pamuk Özel Dikim Modelleri | Terzi Can',
-    description: '%100 doğal keten ve pamuktan, tam ölçünüze özel dikim. Otelinize teslim.',
-    url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'tr_TR', type: 'website',
-    images: [{ url: OG, width: 1024, height: 1024, alt: 'Keten Pamuk Özel Dikim', type: 'image/png' }],
+  {
+    id: 'kadin-bluz',
+    img: 'https://images.unsplash.com/photo-1631186626171-d5010e20d347?w=700&q=80',
+    baslik: { tr: 'Kadın Pamuk Oversize Gömlek', en: "Women's Oversized Cotton Shirt", ru: 'Женская оверсайз рубашка из хлопка', de: 'Damen Oversize Baumwollhemd' },
+    aciklama: {
+      tr: '%100 organik pamuk, oversize kesim — gündelik ve iş için.',
+      en: '100% organic cotton, oversized cut — for everyday and work.',
+      ru: '100% органический хлопок, свободный крой — на каждый день и для работы.',
+      de: '100% Bio-Baumwolle, Oversize-Schnitt — für Alltag und Büro.',
+    },
   },
-  twitter: { card: 'summary_large_image', title: 'Keten & Pamuk Özel Dikim', description: '%100 doğal kumaştan ölçünüze özel dikim.', images: [OG] },
-  other: { 'geo.region': 'TR-07', 'geo.placename': 'Antalya', contact: PHONE },
+  {
+    id: 'erkek-gomlek',
+    img: 'https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=700&q=80',
+    baslik: { tr: 'Erkek Keten Yazlık Gömlek', en: "Men's Linen Summer Shirt", ru: 'Мужская летняя льняная рубашка', de: 'Herren Leinen-Sommerhemd' },
+    aciklama: {
+      tr: 'Hafif dokulu, nefes alan keten — sıcak günlerde terletmez.',
+      en: 'Lightweight, breathable linen — stays cool on hot days.',
+      ru: 'Лёгкий, дышащий лён — не жарко даже в самые тёплые дни.',
+      de: 'Leichtes, atmungsaktives Leinen — bleibt auch an heißen Tagen kühl.',
+    },
+  },
+  {
+    id: 'erkek-takim',
+    img: 'https://images.unsplash.com/photo-1517467069232-26eee2e331b1?w=700&q=80',
+    baslik: { tr: 'Erkek Keten-Pamuk Takım', en: "Men's Linen-Cotton Suit", ru: 'Мужской костюм лён-хлопок', de: 'Herren Leinen-Baumwoll-Anzug' },
+    aciklama: {
+      tr: 'Hafif blazer + pantolon — düğün ve özel günler için doğal şıklık.',
+      en: 'Light blazer + trousers — natural elegance for weddings and special days.',
+      ru: 'Лёгкий блейзер + брюки — естественная элегантность для свадеб и особых случаев.',
+      de: 'Leichtes Sakko + Hose — natürliche Eleganz für Hochzeiten und besondere Anlässe.',
+    },
+  },
+  {
+    id: 'plaj-kaftan',
+    img: 'https://images.unsplash.com/photo-1581746989955-6b19860dc7de?w=700&q=80',
+    baslik: { tr: 'Plaj Kaftanı / Kimono', en: 'Beach Kaftan / Kimono', ru: 'Пляжное кафтан / кимоно', de: 'Strandkaftan / Kimono' },
+    aciklama: {
+      tr: 'Açık kesim keten kimono — plaj üstü veya akşam için hafif bir katman.',
+      en: 'Open-cut linen kimono — a light layer for the beach or evening.',
+      ru: 'Свободного кроя льняное кимоно — лёгкий слой для пляжа или вечера.',
+      de: 'Offen geschnittener Leinen-Kimono — leichte Schicht für Strand oder Abend.',
+    },
+  },
+  {
+    id: 'kadin-pantolon',
+    img: 'https://images.unsplash.com/photo-1509631179647-0177331693ae?w=700&q=80',
+    baslik: { tr: 'Kadın Keten Wide-Leg Pantolon', en: "Women's Wide-Leg Linen Trousers", ru: 'Женские широкие льняные брюки', de: 'Damen Leinen-Weitbeinhose' },
+    aciklama: {
+      tr: 'Yüksek bel, bol paça — ofisten sahile her ortama uyar.',
+      en: 'High waist, wide leg — fits every setting, from office to beach.',
+      ru: 'Высокая посадка, широкие штанины — подходят от офиса до пляжа.',
+      de: 'Hohe Taille, weites Bein — passt vom Büro bis zum Strand.',
+    },
+  },
+];
+
+const T: Record<Lang, any> = {
+  tr: {
+    tag: '🧵 Özel Dikim · %100 Keten & Pamuk',
+    h1a: 'Keten & Pamuk', h1b: 'Özel Dikim Modelleri',
+    heroDesc: 'Aşağıdaki modellerden birini beğenin ya da kendi fikrinizi getirin — %100 doğal keten veya pamuktan, tam sizin ölçünüze göre dikelim. Antalya Konyaaltı atölyemizde, otelinize teslim.',
+    galleryH: 'Model Örnekleri', gallerySub: 'Beğendiğiniz modeli WhatsApp\'tan gönderin, ölçünüzü alalım.',
+    ctaBtn: 'Bu Modeli İste — WhatsApp',
+    howH: 'Nasıl Çalışır?',
+    steps: [
+      ['1️⃣', 'Model Seçin', 'Aşağıdan bir model seçin ya da kendi fotoğrafınızı/fikrinizi gönderin.'],
+      ['2️⃣', 'Ölçü & Kumaş', 'WhatsApp\'tan ölçülerinizi paylaşın, keten veya pamuk kumaş seçin.'],
+      ['3️⃣', 'Dikim', 'Atölyemizde elinizle dikilir — genelde 3-5 gün içinde hazır.'],
+      ['4️⃣', 'Teslim', 'Otelinize veya adresinize teslim edilir, ödeme teslimde.'],
+    ],
+    faqH: 'Sık Sorulan Sorular',
+    faq: [
+      ['Hazır model mi seçmem lazım, kendi tasarımımı da diktirebilir miyim?', 'Hayır, hazır modelle sınırlı değilsiniz — kendi fotoğrafınızı veya fikrinizi WhatsApp\'tan gönderebilirsiniz, ona göre dikeriz.'],
+      ['Kumaşı siz mi seçiyorsunuz, ben mi?', 'Siz seçersiniz — %100 keten veya %100 pamuk arasından, WhatsApp\'ta görüşürken karar veriyoruz.'],
+      ['Dikim ne kadar sürüyor?', 'Genelde 3-5 gün içinde hazır oluyor, model karmaşıklığına göre değişebilir.'],
+      ['Otelime teslimat yapıyor musunuz?', 'Evet, Antalya genelindeki otellere teslim ediyoruz, ödeme teslimde alınır.'],
+      ['Ölçümü nasıl vereceğim?', 'WhatsApp üzerinden ölçülerinizi paylaşırsınız, isterseniz görüntülü görüşmeyle de yardımcı oluruz.'],
+    ],
+    finalCta: 'Kendi Modelinizi Diktirin', finalSub: 'Fotoğraf gönderin, fiyat teklifi alın — 30 dakikada dönüş.',
+    waBtn: 'WhatsApp ile Başlayın',
+    wholesaleTag: '🏭 Toptan Üretim & İhracat',
+    wholesaleH: 'Tek Parça mı, Yoksa Seri İmalat mı?',
+    wholesaleDesc: 'Otel/mağaza zinciri, marka veya toptancıysanız — aynı keten ve pamuk kumaşlarla erkek, kadın ve çocuk giyiminde numune çalışması yapıp, onayınızın ardından seri imalata geçiyor, üretim takibini paylaşarak yerli ve yurt dışı (Avrupa, Rusya) müşterilere ihracat yapıyoruz.',
+    wholesaleSteps: [
+      ['1️⃣', 'Tasarım / Fotoğraf Gönderin', 'İstediğiniz modeli, çizimi veya referans fotoğrafı WhatsApp\'tan paylaşın.'],
+      ['2️⃣', 'Numune Geliştirme', 'Kalıbını çıkarıp tek bir numune dikiyoruz — onayınız olmadan seri imalata geçmiyoruz.'],
+      ['3️⃣', 'Seri İmalat', 'Numune onaylandıktan sonra istediğiniz adette (minimum sipariş şartı yok) üretime geçiyoruz.'],
+      ['4️⃣', 'Üretim Takibi & İhracat', 'Kesim/dikim/kalite kontrol aşamalarını fotoğraf-video ile paylaşıyoruz; yurt dışına ATR/EUR.1 evraklarıyla ihracat yapıyoruz.'],
+    ] as [string, string, string][],
+    wholesaleCtaBtn: 'Toptan Teklif İste — WhatsApp',
+    wholesaleLinkText: 'Kurumsal üretim kataloğumuz için → Anavera Tekstil',
+  },
+  en: {
+    tag: '🧵 Custom Tailoring · 100% Linen & Cotton',
+    h1a: 'Linen & Cotton', h1b: 'Custom Tailoring Models',
+    heroDesc: 'Pick a style below or bring your own idea — we\'ll tailor it in 100% natural linen or cotton, made exactly to your measurements. Made in our Konyaaltı, Antalya workshop, delivered to your hotel.',
+    galleryH: 'Style Examples', gallerySub: 'Send the style you like on WhatsApp and we\'ll take your measurements.',
+    ctaBtn: 'Request This Style — WhatsApp',
+    howH: 'How It Works',
+    steps: [
+      ['1️⃣', 'Choose a Style', 'Pick a model below, or send us your own photo or idea.'],
+      ['2️⃣', 'Measurements & Fabric', 'Share your measurements on WhatsApp, choose linen or cotton.'],
+      ['3️⃣', 'Tailoring', 'Hand-tailored in our workshop — usually ready in 3-5 days.'],
+      ['4️⃣', 'Delivery', 'Delivered to your hotel or address, pay on delivery.'],
+    ],
+    faqH: 'Frequently Asked Questions',
+    faq: [
+      ['Do I have to pick a ready-made style, or can I have my own design made?', 'You are not limited to the gallery — send your own photo or idea on WhatsApp and we\'ll tailor it.'],
+      ['Do I choose the fabric, or do you?', 'You choose — 100% linen or 100% cotton, we\'ll confirm the choice with you on WhatsApp.'],
+      ['How long does tailoring take?', 'Usually ready within 3-5 days, depending on the complexity of the style.'],
+      ['Do you deliver to my hotel?', 'Yes, we deliver to hotels across Antalya, payment on delivery.'],
+      ['How do I give you my measurements?', 'You share them on WhatsApp — we can also help via a video call if needed.'],
+    ],
+    finalCta: 'Have Your Own Style Made', finalSub: 'Send a photo, get a price quote — usually within 30 minutes.',
+    waBtn: 'Start on WhatsApp',
+    wholesaleTag: '🏭 Wholesale Production & Export',
+    wholesaleH: 'One Piece, or Serial Production?',
+    wholesaleDesc: 'Hotel groups, retail chains, brands and wholesalers — we develop a sample in the same linen/cotton fabrics for menswear, womenswear or kidswear, then move to serial production after your approval, sharing production tracking and exporting to customers in Turkey and abroad (Europe, Russia).',
+    wholesaleSteps: [
+      ['1️⃣', 'Send Your Design', 'Share the style, sketch, or reference photo you want on WhatsApp.'],
+      ['2️⃣', 'Sample Development', 'We draft the pattern and sew a single sample — serial production starts only after your approval.'],
+      ['3️⃣', 'Serial Production', 'Once the sample is approved, we produce your required quantity (no minimum order).'],
+      ['4️⃣', 'Production Tracking & Export', 'We share cutting/sewing/QC updates by photo and video; export abroad with full ATR/EUR.1 documentation.'],
+    ] as [string, string, string][],
+    wholesaleCtaBtn: 'Request Wholesale Quote — WhatsApp',
+    wholesaleLinkText: 'See our full manufacturing catalogue → Anavera Tekstil',
+  },
+  ru: {
+    tag: '🧵 Пошив на заказ · 100% лён и хлопок',
+    h1a: 'Лён и хлопок', h1b: 'Модели на заказ',
+    heroDesc: 'Выберите модель ниже или предложите свою идею — сошьём из 100% натурального льна или хлопка точно по вашим меркам. Мастерская в Коньяалты, Анталья, доставка в отель.',
+    galleryH: 'Примеры моделей', gallerySub: 'Отправьте понравившуюся модель в WhatsApp — снимем мерки.',
+    ctaBtn: 'Заказать эту модель — WhatsApp',
+    howH: 'Как это работает',
+    steps: [
+      ['1️⃣', 'Выберите модель', 'Выберите модель ниже или пришлите своё фото/идею.'],
+      ['2️⃣', 'Мерки и ткань', 'Пришлите мерки в WhatsApp, выберите лён или хлопок.'],
+      ['3️⃣', 'Пошив', 'Шьём вручную в мастерской — обычно готово за 3-5 дней.'],
+      ['4️⃣', 'Доставка', 'Доставим в отель или по адресу, оплата при получении.'],
+    ],
+    faqH: 'Часто задаваемые вопросы',
+    faq: [
+      ['Нужно ли выбирать готовую модель, или можно сшить своё?', 'Вы не ограничены галереей — пришлите своё фото или идею в WhatsApp, мы сошьём по нему.'],
+      ['Я выбираю ткань или вы?', 'Вы выбираете — 100% лён или 100% хлопок, окончательно определим в WhatsApp.'],
+      ['Сколько времени занимает пошив?', 'Обычно готово за 3-5 дней, в зависимости от сложности модели.'],
+      ['Вы доставляете в отель?', 'Да, доставляем в отели по всей Анталье, оплата при получении.'],
+      ['Как передать мерки?', 'Пришлите их в WhatsApp — при необходимости поможем и по видеосвязи.'],
+    ],
+    finalCta: 'Сшить по своей модели', finalSub: 'Пришлите фото — получите цену в течение 30 минут.',
+    waBtn: 'Начать в WhatsApp',
+    wholesaleTag: '🏭 Оптовое производство и экспорт',
+    wholesaleH: 'Одна вещь или серийное производство?',
+    wholesaleDesc: 'Отельные сети, магазины, бренды и оптовики — мы разрабатываем образец из тех же льняных и хлопковых тканей для мужской, женской или детской одежды, затем переходим к серийному производству после вашего утверждения, делимся контролем производства и экспортируем клиентам в Турции и за рубежом (Европа, Россия).',
+    wholesaleSteps: [
+      ['1️⃣', 'Отправьте дизайн', 'Пришлите желаемую модель, эскиз или референс-фото в WhatsApp.'],
+      ['2️⃣', 'Разработка образца', 'Строим лекало и шьём один образец — серийное производство начинается только после утверждения.'],
+      ['3️⃣', 'Серийное производство', 'После утверждения образца производим нужный объём (минимального заказа нет).'],
+      ['4️⃣', 'Контроль производства и экспорт', 'Делимся фото/видео этапов раскроя, пошива и контроля качества; экспортируем с полным пакетом документов ATR/EUR.1.'],
+    ] as [string, string, string][],
+    wholesaleCtaBtn: 'Запросить оптовую цену — WhatsApp',
+    wholesaleLinkText: 'Полный каталог производства → Anavera Tekstil',
+  },
+  de: {
+    tag: '🧵 Maßschneiderei · 100% Leinen & Baumwolle',
+    h1a: 'Leinen & Baumwolle', h1b: 'Modelle nach Maß',
+    heroDesc: 'Wählen Sie unten einen Stil oder bringen Sie Ihre eigene Idee mit — wir schneidern aus 100% natürlichem Leinen oder Baumwolle, genau nach Ihren Maßen. Gefertigt in unserer Werkstatt in Konyaaltı, geliefert an Ihr Hotel.',
+    galleryH: 'Stilbeispiele', gallerySub: 'Senden Sie den gewünschten Stil per WhatsApp — wir nehmen Maß.',
+    ctaBtn: 'Diesen Stil anfragen — WhatsApp',
+    howH: 'So funktioniert es',
+    steps: [
+      ['1️⃣', 'Stil wählen', 'Wählen Sie ein Modell unten oder senden Sie Ihr eigenes Foto/Idee.'],
+      ['2️⃣', 'Maße & Stoff', 'Teilen Sie Ihre Maße per WhatsApp mit, wählen Sie Leinen oder Baumwolle.'],
+      ['3️⃣', 'Schneidern', 'Handgefertigt in unserer Werkstatt — meist in 3-5 Tagen fertig.'],
+      ['4️⃣', 'Lieferung', 'Lieferung an Ihr Hotel oder Ihre Adresse, Zahlung bei Lieferung.'],
+    ],
+    faqH: 'Häufig gestellte Fragen',
+    faq: [
+      ['Muss ich ein fertiges Modell wählen, oder kann ich mein eigenes Design schneidern lassen?', 'Sie sind nicht auf die Galerie beschränkt — senden Sie Ihr eigenes Foto oder Ihre Idee per WhatsApp, wir schneidern danach.'],
+      ['Wähle ich den Stoff, oder Sie?', 'Sie wählen — 100% Leinen oder 100% Baumwolle, wir bestätigen die Wahl gemeinsam per WhatsApp.'],
+      ['Wie lange dauert die Anfertigung?', 'Meist innerhalb von 3-5 Tagen fertig, je nach Komplexität des Modells.'],
+      ['Liefern Sie an mein Hotel?', 'Ja, wir liefern an Hotels in ganz Antalya, Zahlung bei Lieferung.'],
+      ['Wie gebe ich meine Maße an?', 'Teilen Sie sie per WhatsApp mit — bei Bedarf helfen wir auch per Videoanruf.'],
+    ],
+    finalCta: 'Eigenen Stil schneidern lassen', finalSub: 'Foto senden, Preisangebot erhalten — meist innerhalb 30 Minuten.',
+    waBtn: 'Mit WhatsApp beginnen',
+    wholesaleTag: '🏭 Großhandelsproduktion & Export',
+    wholesaleH: 'Einzelstück oder Serienproduktion?',
+    wholesaleDesc: 'Hotelgruppen, Handelsketten, Marken und Großhändler — wir entwickeln ein Muster aus denselben Leinen-/Baumwollstoffen für Herren-, Damen- oder Kinderbekleidung und gehen nach Ihrer Freigabe in die Serienproduktion, mit Produktionsverfolgung und Export an Kunden in der Türkei und im Ausland (Europa, Russland).',
+    wholesaleSteps: [
+      ['1️⃣', 'Design senden', 'Teilen Sie den gewünschten Stil, die Skizze oder ein Referenzfoto per WhatsApp mit.'],
+      ['2️⃣', 'Musterentwicklung', 'Wir erstellen das Schnittmuster und nähen ein einzelnes Muster — die Serienproduktion beginnt erst nach Ihrer Freigabe.'],
+      ['3️⃣', 'Serienproduktion', 'Nach Freigabe des Musters fertigen wir die gewünschte Menge (keine Mindestmenge).'],
+      ['4️⃣', 'Produktionsverfolgung & Export', 'Wir teilen Foto-/Video-Updates zu Zuschnitt/Nähen/QK; Export ins Ausland mit vollständiger ATR/EUR.1-Dokumentation.'],
+    ] as [string, string, string][],
+    wholesaleCtaBtn: 'Großhandelsangebot anfragen — WhatsApp',
+    wholesaleLinkText: 'Unser vollständiger Produktionskatalog → Anavera Tekstil',
+  },
 };
 
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@graph': [
-   { '@type': 'WebPage', '@id': `${PAGE_URL}#webpage`, url: PAGE_URL, name: "Keten & Pamuk Özel Dikim Modelleri" },
-    {
-      '@type': 'Service', '@id': `${PAGE_URL}#service`,
-      name: 'Keten & Pamuk Özel Dikim', serviceType: 'Custom Tailoring',
-      provider: { '@type': 'ClothingStore', name: 'Terzi Can', telephone: '+905318986418', url: `${SITE}/antalya-terzi` },
-      areaServed: { '@type': 'AdministrativeArea', name: 'Antalya' },
-      description: '%100 doğal keten ve pamuk kumaştan, misafirin ölçüsüne göre özel dikim hizmeti.',
-    },
-    {
-      '@type': 'FAQPage', '@id': `${PAGE_URL}#faq`,
-      mainEntity: KETEN_PAMUK_T.tr.faq?.map(([q, a]: string[]) => ({
-        '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a },
-      })) || [],
-    },
-  ],
-};
+export const KETEN_PAMUK_T = T;
 
-export default function Page() {
+export default function KetenPamukOzelDikim({ lang = 'tr' }: { lang?: Lang }) {
+  const t = T[lang] || T['tr'];
+  const waMsg = lang === 'ru' ? 'Здравствуйте, хочу заказать пошив из льна/хлопка. Модель: '
+    : lang === 'de' ? 'Hallo, ich möchte etwas aus Leinen/Baumwolle schneidern lassen. Modell: '
+    : lang === 'en' ? 'Hello, I would like to order custom linen/cotton tailoring. Style: '
+    : 'Merhaba, keten/pamuk özel dikim sipariş etmek istiyorum. Model: ';
+
+  const wholesaleWaMsg = lang === 'ru' ? 'Здравствуйте, интересует оптовое производство одежды из льна/хлопка. Категория: '
+    : lang === 'de' ? 'Hallo, ich interessiere mich für die Großhandelsproduktion von Leinen-/Baumwollbekleidung. Kategorie: '
+    : lang === 'en' ? 'Hello, I am interested in wholesale linen/cotton clothing production. Category: '
+    : 'Merhaba, keten/pamuk toptan giyim üretimi ile ilgileniyorum. Kategori: ';
+
+  const anaveraHref = lang === 'tr' ? '/anavera-tekstil' : `/${lang}/anavera-tekstil`;
+
   return (
-    <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <KetenPamukOzelDikim lang="tr" />
-    </>
+    <main style={{ fontFamily: 'system-ui,sans-serif', background: '#FAF7F2', color: '#3A3028', minHeight: '100vh' }}>
+      <section style={{ background: 'linear-gradient(135deg,#2C4A3E 0%,#3E6656 100%)', padding: '4.5rem 1.5rem 3.5rem' }}>
+        <div style={{ maxWidth: 860, margin: '0 auto' }}>
+          <div style={{ fontSize: '.68rem', letterSpacing: '.3em', textTransform: 'uppercase', color: '#D4B07A', marginBottom: '1rem' }}>{t.tag}</div>
+          <h1 style={{ fontFamily: 'Georgia,serif', fontSize: 'clamp(2rem,5vw,3.6rem)', fontWeight: 700, lineHeight: 1.05, color: '#fff', marginBottom: '1.2rem' }}>
+            {t.h1a}<br /><span style={{ color: '#D4B07A', fontStyle: 'italic' }}>{t.h1b}</span>
+          </h1>
+          <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,.85)', lineHeight: 1.8, maxWidth: 620, marginBottom: '1.8rem' }}>
+            {t.heroDesc}
+          </p>
+          <a href={WA(waMsg)} target="_blank" rel="noopener noreferrer"
+            style={{ background: '#25d366', color: '#fff', padding: '1rem 2rem', fontWeight: 700, textDecoration: 'none', fontSize: '.88rem', borderRadius: 4, display: 'inline-block' }}>
+            💬 {t.waBtn}
+          </a>
+        </div>
+      </section>
+
+      <section style={{ padding: '3.5rem 1.5rem' }}>
+        <div style={{ maxWidth: 1100, margin: '0 auto' }}>
+          <h2 style={{ fontFamily: 'Georgia,serif', fontSize: '1.6rem', color: '#1C1814', marginBottom: '.3rem', textAlign: 'center' }}>{t.galleryH}</h2>
+          <p style={{ color: '#7A6E62', fontSize: '.88rem', marginBottom: '2rem', textAlign: 'center' }}>{t.gallerySub}</p>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(260px,1fr))', gap: '1.2rem' }}>
+            {MODELLER.map((m) => (
+              <div key={m.id} style={{ background: '#fff', borderRadius: 6, overflow: 'hidden', border: '1px solid rgba(44,74,62,.12)' }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={m.img} alt={m.baslik[lang] || m.baslik['tr']} style={{ width: '100%', height: 240, objectFit: 'cover', display: 'block' }} loading="lazy" />
+                <div style={{ padding: '1.1rem' }}>
+                  <h3 style={{ fontFamily: 'Georgia,serif', fontSize: '1rem', color: '#1C1814', marginBottom: '.4rem' }}>{m.baslik[lang]}</h3>
+                  <p style={{ fontSize: '.8rem', color: '#7A6E62', lineHeight: 1.6, marginBottom: '.9rem' }}>{m.aciklama[lang]}</p>
+                  <a href={WA(waMsg + m.baslik[lang])} target="_blank" rel="noopener noreferrer"
+                    style={{ display: 'block', textAlign: 'center', background: '#2C4A3E', color: '#fff', padding: '.65rem', borderRadius: 4, textDecoration: 'none', fontSize: '.78rem', fontWeight: 600 }}>
+                    {t.ctaBtn}
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section style={{ background: '#F2EDE4', padding: '3.5rem 1.5rem' }}>
+        <div style={{ maxWidth: 1000, margin: '0 auto' }}>
+          <h2 style={{ fontFamily: 'Georgia,serif', fontSize: '1.6rem', color: '#1C1814', marginBottom: '2rem', textAlign: 'center' }}>{t.howH}</h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(180px,1fr))', gap: 1, background: '#E8E0D2' }}>
+            {t.steps.map(([ic, ti, d]: string[], i: number) => (
+              <div key={i} style={{ background: '#fff', padding: '2rem 1.5rem', textAlign: 'center' }}>
+                <div style={{ fontSize: '1.8rem', marginBottom: '.6rem' }}>{ic}</div>
+                <div style={{ fontFamily: 'Georgia,serif', fontSize: '.95rem', color: '#2C4A3E', marginBottom: '.3rem' }}>{ti}</div>
+                <div style={{ fontSize: '.77rem', color: '#7A6E62', lineHeight: 1.6 }}>{d}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* TOPTAN ÜRETİM & İHRACAT — SEO/AI: "seri imalat", "toptan üretim", "numune
+          çalışması" aramalarını da bu sayfaya bağlıyor; bireysel özel dikim
+          hizmetiyle aynı sayfada ama ayrı bir CTA ile sunuluyor, ve kurumsal
+          kataloğun tamamı için Anavera Tekstil'e link veriyor. */}
+      <section style={{ background: '#1C1814', padding: '4rem 1.5rem' }}>
+        <div style={{ maxWidth: 1000, margin: '0 auto' }}>
+          <div style={{ fontSize: '.68rem', letterSpacing: '.25em', textTransform: 'uppercase', color: '#D4B07A', marginBottom: '.8rem', textAlign: 'center' }}>{t.wholesaleTag}</div>
+          <h2 style={{ fontFamily: 'Georgia,serif', fontSize: '1.7rem', color: '#fff', marginBottom: '1rem', textAlign: 'center' }}>{t.wholesaleH}</h2>
+          <p style={{ color: 'rgba(255,255,255,.75)', fontSize: '.92rem', lineHeight: 1.8, maxWidth: 720, margin: '0 auto 2.5rem', textAlign: 'center' }}>{t.wholesaleDesc}</p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(200px,1fr))', gap: '1.2rem', marginBottom: '2.2rem' }}>
+            {t.wholesaleSteps.map(([ic, ti, d]: string[], i: number) => (
+              <div key={i} style={{ background: 'rgba(255,255,255,.04)', border: '1px solid rgba(212,176,122,.25)', borderRadius: 8, padding: '1.4rem 1.1rem' }}>
+                <div style={{ fontSize: '1.4rem', marginBottom: '.5rem' }}>{ic}</div>
+                <div style={{ fontFamily: 'Georgia,serif', fontSize: '.9rem', color: '#D4B07A', marginBottom: '.3rem' }}>{ti}</div>
+                <div style={{ fontSize: '.76rem', color: 'rgba(255,255,255,.6)', lineHeight: 1.6 }}>{d}</div>
+              </div>
+            ))}
+          </div>
+          <div style={{ textAlign: 'center' }}>
+            <a href={WA(wholesaleWaMsg)} target="_blank" rel="noopener noreferrer"
+              style={{ background: '#25d366', color: '#fff', padding: '.9rem 1.8rem', fontWeight: 700, textDecoration: 'none', fontSize: '.85rem', borderRadius: 4, display: 'inline-block', marginRight: '.8rem', marginBottom: '.8rem' }}>
+              💬 {t.wholesaleCtaBtn}
+            </a>
+            <br />
+            <a href={anaveraHref} style={{ color: '#D4B07A', fontSize: '.8rem', textDecoration: 'underline' }}>{t.wholesaleLinkText}</a>
+          </div>
+        </div>
+      </section>
+
+      <section style={{ padding: '3.5rem 1.5rem' }}>
+        <div style={{ maxWidth: 760, margin: '0 auto' }}>
+          <h2 style={{ fontFamily: 'Georgia,serif', fontSize: '1.5rem', color: '#1C1814', marginBottom: '1.5rem', textAlign: 'center' }}>{t.faqH}</h2>
+          {t.faq.map(([q, a]: string[]) => (
+            <details key={q} style={{ borderBottom: '1px solid rgba(44,74,62,.15)', padding: '1rem 0' }}>
+              <summary style={{ cursor: 'pointer', fontSize: '.9rem', fontWeight: 600, color: '#1C1814' }}>{q}</summary>
+              <p style={{ marginTop: '.7rem', fontSize: '.83rem', color: '#7A6E62', lineHeight: 1.7 }}>{a}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+
+      <section style={{ background: '#2C4A3E', padding: '3.5rem 1.5rem', textAlign: 'center' }}>
+        <h2 style={{ fontFamily: 'Georgia,serif', fontSize: '1.6rem', color: '#fff', marginBottom: '.7rem' }}>{t.finalCta}</h2>
+        <p style={{ color: 'rgba(255,255,255,.85)', marginBottom: '1.6rem', fontSize: '.9rem' }}>{t.finalSub}</p>
+        <a href={WA(waMsg)} target="_blank" rel="noopener noreferrer"
+          style={{ background: '#25d366', color: '#fff', padding: '1rem 2.3rem', fontWeight: 700, textDecoration: 'none', fontSize: '.9rem', borderRadius: 4, display: 'inline-block' }}>
+          💬 {t.waBtn}
+        </a>
+        <p style={{ color: 'rgba(255,255,255,.5)', marginTop: '1.2rem', fontSize: '.75rem' }}>{PHONE}</p>
+      </section>
+    </main>
   );
 }

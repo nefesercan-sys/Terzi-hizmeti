@@ -31,7 +31,7 @@ export function buildFiyatMetadata(lang: FLang): Metadata {
 export function buildFiyatJsonLd(lang: FLang) {
   const T = FT[lang];
   const url = FIYAT_URLS[lang];
-  const today = new Date().toISOString().split('T')[0];
+  const today = '2026-10-04'; // sabit: içerik gerçekten değişince güncelle
   return {
     '@context': 'https://schema.org',
     '@graph': [
@@ -55,7 +55,7 @@ export function buildFiyatJsonLd(lang: FLang) {
           openingHoursSpecification: [{
             '@type': 'OpeningHoursSpecification',
             dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-            opens: '09:00', closes: '19:00',
+            opens: '08:00', closes: '23:00',
           }],
           availableLanguage: ['tr', 'en', 'ru', 'de'],
         },

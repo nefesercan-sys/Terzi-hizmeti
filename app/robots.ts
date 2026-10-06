@@ -38,5 +38,7 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     sitemap: 'https://terzihizmeti.com.tr/sitemap.xml',
+],
+host: 'https://terzihizmeti.com.tr,
   }
 }

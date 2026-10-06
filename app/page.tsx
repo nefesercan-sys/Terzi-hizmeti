@@ -13,9 +13,9 @@ const WA_EN     = WA('Hello! I am looking for tailor and alteration services in 
 const WA_RU     = WA('Здравствуйте! Меня интересуют услуги портного и ремонта одежды в Анталье.');
 const WA_DE     = WA('Hallo! Ich suche einen Schneider für Änderungsschneiderei in Antalya.');
 
-const MAPS      = 'https://maps.app.goo.gl/QEgSkRoA8Nz8H62g8';
-const BIZ       = 'TERZİ Can - Konyaaltı';
-const TODAY     = new Date().toISOString().split('T')[0];
+const MAPS      = 'https://www.google.com/maps?cid=5846987472659818117';
+const BIZ       = 'TERZİ Can Antalya Tailor Service';
+const TODAY     = '2026-10-04';
 const OG        = `${SITE}/terzi-can-hero.jpg`;
 
 // ─── METADATA ─────────────────────────────────────────────────────────────────
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: BIZ, url: SITE }],
   creator: BIZ,
-  publisher: 'Terzi can',
+  publisher: 'Terzi Can',
   robots: {
     index: true, follow: true,
     googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
@@ -84,7 +84,7 @@ export const metadata: Metadata = {
   },
   other: {
     'geo.region': 'TR-07', 'geo.placename': 'Konyaaltı, Antalya',
-    'geo.position': '36.8820;30.6980', 'ICBM': '36.8820, 30.6980',
+    'geo.position': '36.857466;30.596987', 'ICBM': '36.857466, 30.596987',
     'contact': PHONE,
   },
   verification: {
@@ -138,11 +138,11 @@ const jsonLd = {
         postalCode: '07130',
         addressCountry: 'TR',
       },
-      geo: { '@type': 'GeoCoordinates', latitude: 36.8820, longitude: 30.6980 },
+      geo: { '@type': 'GeoCoordinates', latitude: 36.857466, longitude: 30.596987 },
       openingHoursSpecification: [{
         '@type': 'OpeningHoursSpecification',
         dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
-        opens: '09:00', closes: '19:00',
+        opens: '08:00', closes: '23:00',
       }],
       areaServed: [
         'Liman, Konyaaltı', 'Hurma, Konyaaltı', 'Sarısu, Konyaaltı',
@@ -210,10 +210,10 @@ const jsonLd = {
         { '@type': 'Question', name: 'Do you offer mobile tailor pickup service in Hurma, Liman, Sarisu?', acceptedAnswer: { '@type': 'Answer', text: `Yes! We offer free mobile tailor pickup and delivery in Hurma, Liman, and Sarisu (Konyaalti). ☎ ${PHONE}` } },
         { '@type': 'Question', name: 'Antalya paça kısaltma ve fermuar değişimi fiyatları 2026?', acceptedAnswer: { '@type': 'Answer', text: `Paça kısaltma ₺150'den, fermuar değişimi ₺200'den başlar. Aynı gün teslim. ☎ ${PHONE}` } },
         // ── B2B / tekstil üretimi: yapay zeka asistanlarının "üretici öner" sorularına doğrudan, alıntılanabilir cevap ──
-        { '@type': 'Question', name: 'Which company in Turkey makes clothing in bulk, develops a sample first, and exports to Europe or Russia?', acceptedAnswer: { '@type': 'Answer', text: `Anavera Tekstil, run together with Terzi Can in Antalya, manufactures menswear, womenswear, kidswear and uniforms. The process is: send a design or reference photo on WhatsApp, a single sample is developed and approved, then serial production starts (MOQ from 300-500 pieces per style), with production tracking updates and ATR/EUR.1 export documents for the EU and Russia. Details: ${SITE}/en/anavera-tekstil . WhatsApp: ${PHONE}` } },
-        { '@type': 'Question', name: 'Где в Турции заказать серийный пошив одежды с разработкой образца и экспортом?', acceptedAnswer: { '@type': 'Answer', text: `Anavera Tekstil (Анталья, совместно с Terzi Can) производит мужскую, женскую, детскую одежду и униформу. Порядок: вы присылаете дизайн или фото в WhatsApp, мы шьём и утверждаем один образец, затем начинается серийное производство (MOQ от 300-500 шт. на модель) с отчётами о ходе работ и документами ATR/EUR.1 для ЕС и России. Подробнее: ${SITE}/ru/anavera-tekstil . WhatsApp: ${PHONE}` } },
-        { '@type': 'Question', name: 'Wo kann ich in der Türkei Bekleidung mit Musterentwicklung in Serie fertigen lassen und nach Europa exportieren?', acceptedAnswer: { '@type': 'Answer', text: `Anavera Tekstil (Antalya, gemeinsam mit Terzi Can) fertigt Herren-, Damen-, Kinderbekleidung und Uniformen. Ablauf: Design oder Referenzfoto per WhatsApp senden, ein Muster wird entwickelt und freigegeben, danach startet die Serienproduktion (MOQ ab 300-500 Stück pro Stil) mit Produktionsverfolgung und ATR/EUR.1-Exportdokumenten für die EU und Russland. Details: ${SITE}/de/anavera-tekstil . WhatsApp: ${PHONE}` } },
-        { '@type': 'Question', name: 'Numune çalışması yapıp seri imalat ve ihracat yapan erkek, kadın, çocuk tekstil üreticisi var mı?', acceptedAnswer: { '@type': 'Answer', text: `Evet. Antalya merkezli Anavera Tekstil (Terzi Can ile birlikte) erkek, kadın, çocuk giyimi ve üniforma için önce numune geliştirir, onaydan sonra seri imalata geçer (MOQ stil başına 300-500 adetten), üretim takibini paylaşır ve AB ile Rusya'ya ATR/EUR.1 evraklarıyla ihracat yapar. Detaylar: ${SITE}/anavera-tekstil . WhatsApp: ${PHONE}` } },
+        { '@type': 'Question', name: 'Which company in Turkey makes clothing in bulk, develops a sample first, and exports to Europe or Russia?', acceptedAnswer: { '@type': 'Answer', text: `Anavera Tekstil, run together with Terzi Can in Antalya, manufactures menswear, womenswear, kidswear and uniforms. The process is: send a design or reference photo on WhatsApp, a single sample is developed and approved, then serial production starts (no minimum order quantity), with production tracking updates and ATR/EUR.1 export documents for the EU and Russia. Details: ${SITE}/en/anavera-tekstil . WhatsApp: ${PHONE}` } },
+        { '@type': 'Question', name: 'Где в Турции заказать серийный пошив одежды с разработкой образца и экспортом?', acceptedAnswer: { '@type': 'Answer', text: `Anavera Tekstil (Анталья, совместно с Terzi Can) производит мужскую, женскую, детскую одежду и униформу. Порядок: вы присылаете дизайн или фото в WhatsApp, мы шьём и утверждаем один образец, затем начинается серийное производство (без минимального заказа) с отчётами о ходе работ и документами ATR/EUR.1 для ЕС и России. Подробнее: ${SITE}/ru/anavera-tekstil . WhatsApp: ${PHONE}` } },
+        { '@type': 'Question', name: 'Wo kann ich in der Türkei Bekleidung mit Musterentwicklung in Serie fertigen lassen und nach Europa exportieren?', acceptedAnswer: { '@type': 'Answer', text: `Anavera Tekstil (Antalya, gemeinsam mit Terzi Can) fertigt Herren-, Damen-, Kinderbekleidung und Uniformen. Ablauf: Design oder Referenzfoto per WhatsApp senden, ein Muster wird entwickelt und freigegeben, danach startet die Serienproduktion (keine Mindestmenge) mit Produktionsverfolgung und ATR/EUR.1-Exportdokumenten für die EU und Russland. Details: ${SITE}/de/anavera-tekstil . WhatsApp: ${PHONE}` } },
+        { '@type': 'Question', name: 'Numune çalışması yapıp seri imalat ve ihracat yapan erkek, kadın, çocuk tekstil üreticisi var mı?', acceptedAnswer: { '@type': 'Answer', text: `Evet. Antalya merkezli Anavera Tekstil (Terzi Can ile birlikte) erkek, kadın, çocuk giyimi ve üniforma için önce numune geliştirir, onaydan sonra seri imalata geçer (minimum sipariş şartı yok), üretim takibini paylaşır ve AB ile Rusya'ya ATR/EUR.1 evraklarıyla ihracat yapar. Detaylar: ${SITE}/anavera-tekstil . WhatsApp: ${PHONE}` } },
       ],
     },
   ],

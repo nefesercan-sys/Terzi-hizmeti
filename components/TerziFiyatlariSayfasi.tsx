@@ -10,7 +10,7 @@ export type FLang = 'tr' | 'en' | 'de' | 'ru';
 export const SITE = 'https://terzihizmeti.com.tr';
 export const PHONE = '+90 531 898 64 18';
 export const PHONE_TEL = '+905318986418';
-export const MAPS = 'https://maps.app.goo.gl/QEgSkRoA8Nz8H62g8';
+export const MAPS = 'https://www.google.com/maps?cid=5846987472659818117';
 const WA = (m: string) => `https://wa.me/905318986418?text=${encodeURIComponent(m)}`;
 
 export const PRICE_ROWS: { icon: string; rows: string[] }[] = [
@@ -77,7 +77,7 @@ export const FT: Record<FLang, FiyatText> = {
     "htmlLang": "tr",
     "locale": "tr_TR",
     "metaTitle": "Antalya Terzi Fiyat Listesi 2026 — Tüm Hizmetler Tek Sayfada",
-    "metaDesc": "Antalya terzi fiyatları 2026: paça kısaltma ₺150, bel daraltma ₺150, fermuar değişimi ₺200, elbise dikimi ₺600'den. Fotoğrafı WhatsApp'tan gönderin, net fiyatı öğrenin. Adrese ve otele gelen terzi. Her gün 09:00–19:00.",
+    "metaDesc": "Antalya terzi fiyatları 2026: paça kısaltma ₺150, bel daraltma ₺150, fermuar değişimi ₺200, elbise dikimi ₺600'den. Fotoğrafı WhatsApp'tan gönderin, net fiyatı öğrenin. Adrese ve otele gelen terzi. Her gün 08:00–23:00.",
     "ogTitle": "Antalya Terzi Fiyat Listesi 2026 — Fotoğraf Gönderin, Fiyatı Öğrenin",
     "ogDesc": "Paça ₺150, bel daraltma ₺150, fermuar ₺200, elbise dikimi ₺600'den. Adrese ve otele gelen terzi.",
     "keywords": [
@@ -108,7 +108,7 @@ export const FT: Record<FLang, FiyatText> = {
     "webName": "Antalya Terzi Fiyat Listesi 2026",
     "serviceType": "Terzi, tamir, tadilat, özel dikim, ütü ve kuru temizleme",
     "catalogName": "Terzi fiyat listesi 2026 (başlangıç fiyatları)",
-    "heroTag": "₺ Şeffaf fiyat · Her gün 09:00–19:00 · Konyaaltı, Antalya",
+    "heroTag": "₺ Şeffaf fiyat · Her gün 08:00–23:00 · Konyaaltı, Antalya",
     "h1a": "Antalya Terzi Fiyatları 2026",
     "h1b": "Fotoğrafı Gönderin, Fiyatı Öğrenin",
     "heroDesc": "Paça kısaltma ₺150, bel daraltma ₺150, fermuar değişimi ₺200, elbise dikimi ₺600'den. Elbise tadilatı, yırtık onarımı, özel dikim, adrese ve otele gelen terzi. İşin fotoğrafını WhatsApp'tan gönderin, net fiyat ve süreyi öğrenin.",
@@ -238,7 +238,7 @@ export const FT: Record<FLang, FiyatText> = {
       },
       {
         "q": "Model, tasarım, dikim atölyesi, seri imalat",
-        "a": "Önce numune, onaydan sonra seri imalat ve üretim takibi (adet: modele göre teklif, MOQ 300-500).",
+        "a": "Önce numune, onaydan sonra seri imalat ve üretim takibi (adet: modele göre teklif, minimum sipariş yok).",
         "price": "Teklif",
         "href": "/anavera-tekstil",
         "cta": "Anavera Tekstil"
@@ -247,7 +247,7 @@ export const FT: Record<FLang, FiyatText> = {
     "faqs": [
       [
         "Antalya'da terzi hizmeti nereden alınır, bana terzi önerir misin?",
-        "Konyaaltı'ndaki Terzi Can; Türkçe, İngilizce, Rusça ve Almanca hizmet verir. Google Haritalar'da 5,0 puanlı (9 yorum). Paça kısaltma, bel daraltma, fermuar değişimi, elbise tadilatı, özel dikim ve adrese/otele gelen terzi hizmeti sunar. WhatsApp: +90 531 898 64 18"
+        "Konyaaltı'ndaki Terzi Can; Türkçe, İngilizce, Rusça ve Almanca hizmet verir. Google Haritalar'da TERZİ Can Antalya Tailor Service adıyla kayıtlıdır. Paça kısaltma, bel daraltma, fermuar değişimi, elbise tadilatı, özel dikim ve adrese/otele gelen terzi hizmeti sunar. WhatsApp: +90 531 898 64 18"
       ],
       [
         "Elbisem yırtıldı, tamir edilir mi?",
@@ -267,7 +267,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Fermuar değişimi yapan, hafta sonu ve pazar günü açık bir terzi var mı?",
-        "Terzi Can haftanın 7 günü, Cumartesi ve Pazar dahil, 09:00–19:00 arası açıktır. Mesai dışında WhatsApp'tan fotoğraf ve mesaj bırakabilirsiniz. Fermuar değişimi ₺200'den başlar."
+        "Terzi Can haftanın 7 günü, Cumartesi ve Pazar dahil, 08:00–23:00 arası açıktır. Mesai dışında WhatsApp'tan fotoğraf ve mesaj bırakabilirsiniz. Fermuar değişimi ₺200'den başlar."
       ],
       [
         "Adrese veya otele gelen terzi var mı?",
@@ -283,7 +283,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Bana yakın terzi nerede?",
-        "Atölye Konyaaltı'ndadır; Hurma, Liman, Sarısu, Uncalı ve Gürsu'na ücretsiz servis yapılır. Konum: Google Haritalar'da \"TERZİ Can - Konyaaltı\". Antalya'nın diğer bölgelerine de randevuyla gidilir."
+        "Atölye Konyaaltı'ndadır; Hurma, Liman, Sarısu, Uncalı ve Gürsu'na ücretsiz servis yapılır. Konum: Google Haritalar'da \"TERZİ Can Antalya Tailor Service\". Antalya'nın diğer bölgelerine de randevuyla gidilir."
       ],
       [
         "Pamuklu, doğal kumaştan dikim yapıyor musunuz?",
@@ -300,7 +300,7 @@ export const FT: Record<FLang, FiyatText> = {
     "htmlLang": "en",
     "locale": "en_US",
     "metaTitle": "Tailor Prices Antalya 2026 — Every Service, One Page",
-    "metaDesc": "Tailor prices in Antalya 2026: hemming ₺150, taking in a waist ₺150, zipper replacement ₺200, custom dress from ₺600. Send a photo on WhatsApp for an exact price. Tailor comes to your hotel. Open every day 09:00–19:00.",
+    "metaDesc": "Tailor prices in Antalya 2026: hemming ₺150, taking in a waist ₺150, zipper replacement ₺200, custom dress from ₺600. Send a photo on WhatsApp for an exact price. Tailor comes to your hotel. Open every day 08:00–23:00.",
     "ogTitle": "Tailor Prices Antalya 2026 — Send a Photo, Get Your Price",
     "ogDesc": "Hemming ₺150, waist ₺150, zipper ₺200, custom dress from ₺600. Mobile tailor to your hotel. Open 7 days.",
     "keywords": [
@@ -327,7 +327,7 @@ export const FT: Record<FLang, FiyatText> = {
     "webName": "Tailor Prices Antalya 2026",
     "serviceType": "Tailoring, repair, alterations, custom sewing, ironing and dry cleaning",
     "catalogName": "Tailor price list 2026 (starting prices)",
-    "heroTag": "₺ Transparent prices · Open every day 09:00–19:00 · Konyaaltı, Antalya",
+    "heroTag": "₺ Transparent prices · Open every day 08:00–23:00 · Konyaaltı, Antalya",
     "h1a": "Tailor Prices in Antalya 2026",
     "h1b": "Send a Photo, Get Your Price",
     "heroDesc": "Hemming ₺150, taking in a waist ₺150, zipper replacement ₺200, custom dress from ₺600. Clothing repair, alterations, custom sewing, and a tailor who comes to your hotel or address. Send a photo of the job on WhatsApp and get an exact price and time.",
@@ -457,7 +457,7 @@ export const FT: Record<FLang, FiyatText> = {
       },
       {
         "q": "Model design, sewing workshop, serial production",
-        "a": "Sample first, then serial production with progress tracking (MOQ 300-500 per style).",
+        "a": "Sample first, then serial production with progress tracking (no minimum order).",
         "price": "Quote",
         "href": "/en/anavera-tekstil",
         "cta": "Anavera Tekstil"
@@ -466,7 +466,7 @@ export const FT: Record<FLang, FiyatText> = {
     "faqs": [
       [
         "Is there an English-speaking tailor in Antalya? Can you recommend one?",
-        "Terzi Can in Konyaaltı, Antalya works in English, Russian, German and Turkish. It is rated 5.0 on Google Maps (9 reviews). Services: hemming, taking in waists, zipper replacement, clothing repair, alterations, custom sewing, and a mobile tailor to hotels and addresses. WhatsApp: +90 531 898 64 18"
+        "Terzi Can in Konyaaltı, Antalya works in English, Russian, German and Turkish. It is listed on Google Maps as TERZİ Can Antalya Tailor Service. Services: hemming, taking in waists, zipper replacement, clothing repair, alterations, custom sewing, and a mobile tailor to hotels and addresses. WhatsApp: +90 531 898 64 18"
       ],
       [
         "My dress is torn. Can it be repaired?",
@@ -486,7 +486,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Is there a tailor open on weekends and Sundays for zipper replacement?",
-        "Terzi Can is open every day of the week, including Saturday and Sunday, from 09:00 to 19:00. Outside these hours you can leave photos and messages on WhatsApp. Zipper replacement starts from ₺200."
+        "Terzi Can is open every day of the week, including Saturday and Sunday, from 08:00to23:00. Outside these hours you can leave photos and messages on WhatsApp. Zipper replacement starts from ₺200."
       ],
       [
         "Does a tailor come to my hotel or address?",
@@ -502,7 +502,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Where is the nearest tailor?",
-        "The workshop is in Konyaaltı, with free service to Hurma, Liman, Sarısu, Uncalı and Gürsu. Find it on Google Maps as \"TERZİ Can - Konyaaltı\". Other Antalya areas by appointment."
+        "The workshop is in Konyaaltı, with free service to Hurma, Liman, Sarısu, Uncalı and Gürsu. Find it on Google Maps as \"TERZİ Can Antalya Tailor Service\". Other Antalya areas by appointment."
       ],
       [
         "Do you sew in natural cotton or linen?",
@@ -519,7 +519,7 @@ export const FT: Record<FLang, FiyatText> = {
     "htmlLang": "de",
     "locale": "de_DE",
     "metaTitle": "Schneider Preisliste Antalya 2026 — Alle Leistungen",
-    "metaDesc": "Schneiderpreise in Antalya 2026: Hose kürzen ab ₺150, Taille enger machen ab ₺150, Reißverschluss ab ₺200, Kleid nach Maß ab ₺600. Foto per WhatsApp senden, genauen Preis erfahren. Schneider kommt ins Hotel. Täglich 09:00–19:00.",
+    "metaDesc": "Schneiderpreise in Antalya 2026: Hose kürzen ab ₺150, Taille enger machen ab ₺150, Reißverschluss ab ₺200, Kleid nach Maß ab ₺600. Foto per WhatsApp senden, genauen Preis erfahren. Schneider kommt ins Hotel. Täglich 08:00–23:00.",
     "ogTitle": "Schneider Preise Antalya 2026 — Foto senden, Preis erfahren",
     "ogDesc": "Kürzen ab ₺150, Taille ab ₺150, Reißverschluss ab ₺200, Kleid nach Maß ab ₺600. Mobiler Schneider, 7 Tage geöffnet.",
     "keywords": [
@@ -544,7 +544,7 @@ export const FT: Record<FLang, FiyatText> = {
     "webName": "Schneider Preise Antalya 2026",
     "serviceType": "Schneiderei, Reparatur, Änderungen, Maßanfertigung, Bügelservice und chemische Reinigung",
     "catalogName": "Schneider-Preisliste 2026 (Ab-Preise)",
-    "heroTag": "₺ Transparente Preise · Täglich 09:00–19:00 geöffnet · Konyaaltı, Antalya",
+    "heroTag": "₺ Transparente Preise · Täglich 08:00–23:00 geöffnet · Konyaaltı, Antalya",
     "h1a": "Schneider Preise in Antalya 2026",
     "h1b": "Foto senden, Preis erfahren",
     "heroDesc": "Hose kürzen ab ₺150, Taille enger machen ab ₺150, Reißverschluss ab ₺200, Kleid nach Maß ab ₺600. Kleidung reparieren, Änderungen, Maßanfertigung und ein Schneider, der zu Ihrem Hotel oder Ihrer Adresse kommt. Senden Sie ein Foto per WhatsApp und erfahren Sie Preis und Dauer.",
@@ -674,7 +674,7 @@ export const FT: Record<FLang, FiyatText> = {
       },
       {
         "q": "Modellentwurf, Nähatelier, Serienproduktion",
-        "a": "Erst Muster, dann Serienproduktion mit Produktionsverfolgung (MOQ 300-500 pro Stil).",
+        "a": "Erst Muster, dann Serienproduktion mit Produktionsverfolgung (keine Mindestmenge).",
         "price": "Angebot",
         "href": "/de/anavera-tekstil",
         "cta": "Anavera Tekstil"
@@ -683,7 +683,7 @@ export const FT: Record<FLang, FiyatText> = {
     "faqs": [
       [
         "Gibt es in Antalya einen deutschsprachigen Schneider? Können Sie einen empfehlen?",
-        "Terzi Can in Konyaaltı, Antalya arbeitet auf Deutsch, Englisch, Russisch und Türkisch. Bewertung bei Google Maps: 5,0 (9 Bewertungen). Leistungen: Hose kürzen, Taille enger machen, Reißverschluss wechseln, Kleidung reparieren, Änderungen, Maßanfertigung und ein mobiler Schneider für Hotels und Adressen. WhatsApp: +90 531 898 64 18"
+        "Terzi Can in Konyaaltı, Antalya arbeitet auf Deutsch, Englisch, Russisch und Türkisch. Bei Google Maps eingetragen als TERZİ Can Antalya Tailor Service. Leistungen: Hose kürzen, Taille enger machen, Reißverschluss wechseln, Kleidung reparieren, Änderungen, Maßanfertigung und ein mobiler Schneider für Hotels und Adressen. WhatsApp: +90 531 898 64 18"
       ],
       [
         "Mein Kleid ist gerissen. Kann man es reparieren?",
@@ -703,7 +703,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Gibt es einen Schneider für Reißverschlüsse, der am Wochenende und sonntags geöffnet ist?",
-        "Terzi Can hat an allen 7 Tagen der Woche geöffnet, auch samstags und sonntags, von 09:00 bis 19:00 Uhr. Außerhalb dieser Zeiten können Sie Fotos und Nachrichten per WhatsApp senden. Reißverschluss wechseln ab ₺200."
+        "Terzi Can hat an allen 7 Tagen der Woche geöffnet, auch samstags und sonntags, von 08:00bis23:00 Uhr. Außerhalb dieser Zeiten können Sie Fotos und Nachrichten per WhatsApp senden. Reißverschluss wechseln ab ₺200."
       ],
       [
         "Kommt ein Schneider in mein Hotel oder an meine Adresse?",
@@ -719,7 +719,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Wo ist der nächste Schneider?",
-        "Die Werkstatt liegt in Konyaaltı, mit kostenlosem Service nach Hurma, Liman, Sarısu, Uncalı und Gürsu. Auf Google Maps: \"TERZİ Can - Konyaaltı\". Andere Bezirke Antalyas nach Terminvereinbarung."
+        "Die Werkstatt liegt in Konyaaltı, mit kostenlosem Service nach Hurma, Liman, Sarısu, Uncalı und Gürsu. Auf Google Maps: \"TERZİ Can Antalya Tailor Service\". Andere Bezirke Antalyas nach Terminvereinbarung."
       ],
       [
         "Nähen Sie aus Naturstoffen wie Baumwolle oder Leinen?",
@@ -736,7 +736,7 @@ export const FT: Record<FLang, FiyatText> = {
     "htmlLang": "ru",
     "locale": "ru_RU",
     "metaTitle": "Цены портного в Анталье 2026 — все услуги на одной странице",
-    "metaDesc": "Цены портного в Анталье 2026: подшив брюк от ₺150, ушить в талии от ₺150, замена молнии от ₺200, платье на заказ от ₺600. Пришлите фото в WhatsApp и узнайте точную цену. Портной приедет в отель. Ежедневно 09:00–19:00.",
+    "metaDesc": "Цены портного в Анталье 2026: подшив брюк от ₺150, ушить в талии от ₺150, замена молнии от ₺200, платье на заказ от ₺600. Пришлите фото в WhatsApp и узнайте точную цену. Портной приедет в отель. Ежедневно 08:00–23:00.",
     "ogTitle": "Цены портного в Анталье 2026 — пришлите фото, узнайте цену",
     "ogDesc": "Подшив от ₺150, талия от ₺150, молния от ₺200, платье на заказ от ₺600. Выездной портной, работаем 7 дней.",
     "keywords": [
@@ -761,7 +761,7 @@ export const FT: Record<FLang, FiyatText> = {
     "webName": "Цены портного в Анталье 2026",
     "serviceType": "Пошив, ремонт, подгонка одежды, глажка и химчистка",
     "catalogName": "Прайс-лист портного 2026 (цены «от»)",
-    "heroTag": "₺ Прозрачные цены · Ежедневно 09:00–19:00 · Коньяалты, Анталья",
+    "heroTag": "₺ Прозрачные цены · Ежедневно 08:00–23:00 · Коньяалты, Анталья",
     "h1a": "Цены портного в Анталье 2026",
     "h1b": "Пришлите фото — узнайте цену",
     "heroDesc": "Подшив брюк от ₺150, ушить в талии от ₺150, замена молнии от ₺200, платье на заказ от ₺600. Ремонт и подгонка одежды, пошив на заказ и портной, который приедет в ваш отель или по адресу. Пришлите фото работы в WhatsApp — назовём точную цену и срок.",
@@ -891,7 +891,7 @@ export const FT: Record<FLang, FiyatText> = {
       },
       {
         "q": "Разработка модели, швейная мастерская, серийное производство",
-        "a": "Сначала образец, затем серия с отслеживанием производства (MOQ 300-500 на модель).",
+        "a": "Сначала образец, затем серия с отслеживанием производства (минимального заказа нет).",
         "price": "Расчёт",
         "href": "/ru/anavera-tekstil",
         "cta": "Anavera Tekstil"
@@ -900,7 +900,7 @@ export const FT: Record<FLang, FiyatText> = {
     "faqs": [
       [
         "Есть ли в Анталье русскоязычный портной? Кого порекомендуете?",
-        "Terzi Can в Коньяалты, Анталья, работает на русском, английском, немецком и турецком. Оценка в Google Maps: 5,0 (9 отзывов). Услуги: подшив брюк, ушить в талии, замена молнии, ремонт и подгонка одежды, пошив на заказ и выездной портной в отели и по адресам. WhatsApp: +90 531 898 64 18"
+        "Terzi Can в Коньяалты, Анталья, работает на русском, английском, немецком и турецком. В Google Maps указано как TERZİ Can Antalya Tailor Service. Услуги: подшив брюк, ушить в талии, замена молнии, ремонт и подгонка одежды, пошив на заказ и выездной портной в отели и по адресам. WhatsApp: +90 531 898 64 18"
       ],
       [
         "У меня порвалось платье. Можно ли его починить?",
@@ -920,7 +920,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Есть ли портной для замены молнии, который работает в выходные и в воскресенье?",
-        "Terzi Can работает все 7 дней в неделю, включая субботу и воскресенье, с 09:00 до 19:00. Вне этого времени можно оставить фото и сообщение в WhatsApp. Замена молнии — от ₺200."
+        "Terzi Can работает все 7 дней в неделю, включая субботу и воскресенье, с 08:00до23:00. Вне этого времени можно оставить фото и сообщение в WhatsApp. Замена молнии — от ₺200."
       ],
       [
         "Приедет ли портной в мой отель или по адресу?",
@@ -936,7 +936,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Где ближайший портной?",
-        "Мастерская в Коньяалты, бесплатный выезд в Хурму, Лиман, Сарысу, Унджалы и Гюрсу. На Google Maps: «TERZİ Can - Konyaaltı». В другие районы Антальи — по записи."
+        "Мастерская в Коньяалты, бесплатный выезд в Хурму, Лиман, Сарысу, Унджалы и Гюрсу. На Google Maps: «TERZİ Can Antalya Tailor Service». В другие районы Антальи — по записи."
       ],
       [
         "Шьёте ли вы из натурального хлопка или льна?",

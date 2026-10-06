@@ -54,7 +54,7 @@ const jsonLd = {
         postalCode: '07130',
         addressCountry: 'TR',
       },
-      geo: { '@type': 'GeoCoordinates', latitude: 36.8851, longitude: 30.6930 },
+      geo: { '@type': 'GeoCoordinates', latitude: 36.857466, longitude: 30.596987 },
       areaServed: ANTALYA_ILCELER,
       hasOfferCatalog: {
         '@type': 'OfferCatalog',

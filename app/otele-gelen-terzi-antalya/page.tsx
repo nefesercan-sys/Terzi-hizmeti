@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import ReviewsBlock from '@/components/ReviewsBlock';
+import { reviewSchema } from '@/lib/reviews';
 import Image from 'next/image';
 import { Inter, Syne } from 'next/font/google';
 
@@ -64,6 +66,7 @@ const jsonLd = {
   '@graph': [
     {
       '@type': ['ProfessionalService', 'LocalBusiness'],
+      ...reviewSchema(),
       '@id': `${SITE}#vip-business`,
       name: 'Terzi Can - VIP Mobile Tailor',
       alternateName: ['Otele Gelen Terzi', 'Mobile Tailor Antalya', 'Портной в отель Анталья', 'Mobiler Schneider Antalya'],
@@ -380,6 +383,7 @@ export default function MobileTailorHotelPage() {
           </div>
         </section>
 
+        <ReviewsBlock lang="tr" />
         <footer>
           <div>© {new Date().getFullYear()} Terzi Can · VIP Mobile Tailor Service · {PHONE}</div>
           <nav className="foot-links" aria-label="Alt bilgi bağlantıları">

@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import ReviewsBlock from '@/components/ReviewsBlock';
+import { reviewSchema } from '@/lib/reviews';
 import Image from 'next/image';
 import { Inter, Syne } from 'next/font/google';
 
@@ -74,6 +76,7 @@ const jsonLd = {
   '@graph': [
     {
       '@type': ['LocalBusiness', 'ClothingStore'],
+      ...reviewSchema(),
       additionalType: ['https://schema.org/SewingService', 'https://schema.org/DryCleaningService'],
       '@id': `${SITE}#business`,
       name: 'Terzi Can',
@@ -550,6 +553,7 @@ export default function KonyaaltiTailorServicePage() {
           </div>
         </section>
 
+        <ReviewsBlock lang="tr" />
         <footer>
           <div>© {new Date().getFullYear()} Terzi Can · Konyaaltı Tailor Service · {PHONE}</div>
           <nav className="foot-links" aria-label="Alt bilgi bağlantıları">

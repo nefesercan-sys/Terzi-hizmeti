@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import ReviewsBlock from '@/components/ReviewsBlock';
+import { reviewSchema } from '@/lib/reviews';
 
 const SITE     = 'https://terzihizmeti.com.tr';
 const PAGE_URL = `${SITE}/konyaalti-paca-kisaltma`;
@@ -35,6 +37,7 @@ const jsonLd = {
   '@graph': [
     {
       '@type': ['LocalBusiness', 'ClothingStore'],
+      ...reviewSchema(),
       additionalType: ['https://schema.org/SewingService', 'https://schema.org/DryCleaningService'],
       '@id': `${SITE}#business`,
       name: 'Terzi Can',
@@ -293,6 +296,7 @@ export default function PacaKisaltmaPage() {
           </div>
         </section>
 
+        <ReviewsBlock lang="tr" />
         <footer>
           <div>© {new Date().getFullYear()} Terzi Can · Paça Kısaltma Konyaaltı · {PHONE}</div>
           <nav className="foot-links" aria-label="Footer bağlantılar">

@@ -1,8 +1,6 @@
 import { MetadataRoute } from 'next'
 
 // terzihizmeti.com.tr — robots.txt
-// 2026-10-06: Google'ın tanımadığı "Host" yönergesi kaldırıldı (Search Console uyarısı);
-// ChatGPT arama botu OAI-SearchBot açıkça eklendi.
 export default function robots(): MetadataRoute.Robots {
   const commonDisallows = [
     '/api/',
@@ -21,12 +19,10 @@ export default function robots(): MetadataRoute.Robots {
         disallow: commonDisallows,
       },
       {
-        userAgent: 'Googlebot',
-        allow: '/',
-        disallow: commonDisallows,
-      },
-      {
         userAgent: [
+          'Googlebot',
+          'Bingbot',
+          'YandexBot',
           'Google-Extended',
           'GPTBot',
           'ChatGPT-User',
@@ -35,17 +31,14 @@ export default function robots(): MetadataRoute.Robots {
           'ClaudeBot',
           'Claude-SearchBot',
           'Applebot-Extended',
-          'Bingbot',
-          'YandexBot',
           'Amazonbot',
           'meta-externalagent',
           'DuckAssistBot',
         ],
         allow: '/',
+        disallow: commonDisallows,
       },
     ],
     sitemap: 'https://terzihizmeti.com.tr/sitemap.xml',
-    host: 'https://terzihizmeti.com.tr',
- 
   }
 }

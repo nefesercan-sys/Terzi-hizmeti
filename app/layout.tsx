@@ -23,7 +23,8 @@ export const metadata: Metadata = {
   },
   verification: {
     google: 'W2S_Gr49EgkgWG7xAWWMc5qPW6Cw3wEnOi6O6UC9zkQ',
-    yandex: 'e7b38dec995b9142',
+    // Yandex Webmaster: eski ve yeni doğrulama kodları birlikte (ikisi de geçerli kalsın)
+    yandex: ['e7b38dec995b9142', '90847d9fde4fea11'],
   },
   alternates: {
     canonical: SITE,

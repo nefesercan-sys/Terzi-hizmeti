@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import ReviewsBlock from '@/components/ReviewsBlock';
+import { reviewSchema } from '@/lib/reviews';
 
 const SITE     = 'https://terzihizmeti.com.tr';
 const PAGE_URL = `${SITE}/konyaalti-fermuar-tamiri`;
@@ -41,6 +43,7 @@ const jsonLd = {
   '@graph': [
     {
       '@type': ['LocalBusiness', 'ClothingStore'],
+      ...reviewSchema(),
       additionalType: ['https://schema.org/SewingService', 'https://schema.org/DryCleaningService'],
       '@id': `${SITE}#business`,
       name: 'Terzi Can',
@@ -304,6 +307,7 @@ export default function FermuarTamiriPage() {
           </div>
         </section>
 
+        <ReviewsBlock lang="tr" />
         <footer>
           <div>© {new Date().getFullYear()} Terzi Can · Fermuar Tamiri Konyaaltı · {PHONE}</div>
           <nav className="foot-links" aria-label="Footer bağlantılar">

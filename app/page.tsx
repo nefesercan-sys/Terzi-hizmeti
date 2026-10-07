@@ -87,8 +87,10 @@ export const metadata: Metadata = {
     'geo.position': '36.857466;30.596987', 'ICBM': '36.857466, 30.596987',
     'contact': PHONE,
   },
+  // Sayfa kendi 'verification' tanımladığında layout'taki tanımı tamamen ezer; bu yüzden ikisi de burada.
   verification: {
     google: 'W2S_Gr49EgkgWG7xAWWMc5qPW6Cw3wEnOi6O6UC9zkQ',
+    yandex: ['e7b38dec995b9142', '90847d9fde4fea11'],
   },
 };
 

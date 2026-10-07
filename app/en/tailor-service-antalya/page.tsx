@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import ReviewsBlock from '@/components/ReviewsBlock';
 import Image from 'next/image';
 
 const SITE      = 'https://terzihizmeti.com.tr';
@@ -313,6 +314,7 @@ export default function TailorServiceAntalyaPage() {
           </div>
         </section>
 
+        <ReviewsBlock lang="en" />
         <footer>
           <div>© {new Date().getFullYear()} Terzi Can · Antalya Tailor Service · {PHONE}</div>
           <nav className="foot-links" aria-label="Footer links">

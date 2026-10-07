@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import ReviewsBlock from '@/components/ReviewsBlock';
+import { reviewSchema } from '@/lib/reviews';
 
 // ─── CONSTANTS ────────────────────────────────────────────────────────────────
 const SITE      = 'https://terzihizmeti.com.tr';
@@ -113,6 +115,7 @@ const jsonLd = {
     },
     {
       '@type': ['LocalBusiness', 'ClothingStore'],
+      ...reviewSchema(),
       additionalType: ['https://schema.org/SewingService', 'https://schema.org/DryCleaningService'],
       '@id': `${SITE}#business`,
       name: BIZ,
@@ -628,6 +631,7 @@ export default function TerziHizmetiPage() {
         </section>
 
         {/* FOOTER */}
+        <ReviewsBlock lang="tr" />
         <footer>
           <div>© 2026 Terzi Can · Konyaaltı, Antalya · {PHONE}</div>
           <div style={{marginTop:4,fontSize:'.68rem',color:'rgba(255,255,255,.4)'}}>We speak Turkish, English, Russian & German</div>

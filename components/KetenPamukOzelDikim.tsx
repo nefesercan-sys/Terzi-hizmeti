@@ -108,7 +108,7 @@ const T: Record<Lang, any> = {
     wholesaleSteps: [
       ['1️⃣', 'Tasarım / Fotoğraf Gönderin', 'İstediğiniz modeli, çizimi veya referans fotoğrafı WhatsApp\'tan paylaşın.'],
       ['2️⃣', 'Numune Geliştirme', 'Kalıbını çıkarıp tek bir numune dikiyoruz — onayınız olmadan seri imalata geçmiyoruz.'],
-      ['3️⃣', 'Seri İmalat', 'Numune onaylandıktan sonra istediğiniz adette (MOQ 300-500 adetten başlar) üretime geçiyoruz.'],
+      ['3️⃣', 'Seri İmalat', 'Numune onaylandıktan sonra istediğiniz adette (minimum sipariş şartı yok) üretime geçiyoruz.'],
       ['4️⃣', 'Üretim Takibi & İhracat', 'Kesim/dikim/kalite kontrol aşamalarını fotoğraf-video ile paylaşıyoruz; yurt dışına ATR/EUR.1 evraklarıyla ihracat yapıyoruz.'],
     ] as [string, string, string][],
     wholesaleCtaBtn: 'Toptan Teklif İste — WhatsApp',
@@ -143,7 +143,7 @@ const T: Record<Lang, any> = {
     wholesaleSteps: [
       ['1️⃣', 'Send Your Design', 'Share the style, sketch, or reference photo you want on WhatsApp.'],
       ['2️⃣', 'Sample Development', 'We draft the pattern and sew a single sample — serial production starts only after your approval.'],
-      ['3️⃣', 'Serial Production', 'Once the sample is approved, we produce your required quantity (MOQ from 300-500 pcs).'],
+      ['3️⃣', 'Serial Production', 'Once the sample is approved, we produce your required quantity (no minimum order).'],
       ['4️⃣', 'Production Tracking & Export', 'We share cutting/sewing/QC updates by photo and video; export abroad with full ATR/EUR.1 documentation.'],
     ] as [string, string, string][],
     wholesaleCtaBtn: 'Request Wholesale Quote — WhatsApp',
@@ -178,7 +178,7 @@ const T: Record<Lang, any> = {
     wholesaleSteps: [
       ['1️⃣', 'Отправьте дизайн', 'Пришлите желаемую модель, эскиз или референс-фото в WhatsApp.'],
       ['2️⃣', 'Разработка образца', 'Строим лекало и шьём один образец — серийное производство начинается только после утверждения.'],
-      ['3️⃣', 'Серийное производство', 'После утверждения образца производим нужный объём (MOQ от 300-500 шт).'],
+      ['3️⃣', 'Серийное производство', 'После утверждения образца производим нужный объём (минимального заказа нет).'],
       ['4️⃣', 'Контроль производства и экспорт', 'Делимся фото/видео этапов раскроя, пошива и контроля качества; экспортируем с полным пакетом документов ATR/EUR.1.'],
     ] as [string, string, string][],
     wholesaleCtaBtn: 'Запросить оптовую цену — WhatsApp',
@@ -213,7 +213,7 @@ const T: Record<Lang, any> = {
     wholesaleSteps: [
       ['1️⃣', 'Design senden', 'Teilen Sie den gewünschten Stil, die Skizze oder ein Referenzfoto per WhatsApp mit.'],
       ['2️⃣', 'Musterentwicklung', 'Wir erstellen das Schnittmuster und nähen ein einzelnes Muster — die Serienproduktion beginnt erst nach Ihrer Freigabe.'],
-      ['3️⃣', 'Serienproduktion', 'Nach Freigabe des Musters fertigen wir die gewünschte Menge (MOQ ab 300-500 Stück).'],
+      ['3️⃣', 'Serienproduktion', 'Nach Freigabe des Musters fertigen wir die gewünschte Menge (keine Mindestmenge).'],
       ['4️⃣', 'Produktionsverfolgung & Export', 'Wir teilen Foto-/Video-Updates zu Zuschnitt/Nähen/QK; Export ins Ausland mit vollständiger ATR/EUR.1-Dokumentation.'],
     ] as [string, string, string][],
     wholesaleCtaBtn: 'Großhandelsangebot anfragen — WhatsApp',

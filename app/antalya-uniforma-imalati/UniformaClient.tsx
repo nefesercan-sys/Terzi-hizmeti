@@ -16,11 +16,12 @@ const PHONE         = '+90 531 898 64 18';
 const PHONE_E164    = '+905318986418';
 const LAST_MODIFIED = '2026-10-01';
 
-const PAGE_TITLE = 'Antalya Üniforma İmalatı & Kurumsal Kıyafet Dikimi — Terzi Can 2026';
+const PAGE_TITLE = 'Antalya Üniforma İmalatı & Kurumsal Kıyafet Dikimi';
 const PAGE_DESC  =
   'Antalya otel, restoran, hastane, okul ve güvenlik personeli üniforma üretimi. Özel tasarım, nakış & baskı logosu ve seri imalat hizmeti. ☎ ' + PHONE;
 
-const OG_IMAGE = `${HOME_URL}/og/terzi-can-uniforma.jpg`;
+// DÜZELTME: /og/terzi-can-uniforma.jpg dosyası yoktu (404). Var olan görsel kullanılıyor.
+const OG_IMAGE = `${HOME_URL}/terzi-can-hero.jpg`;
 
 const ANTALYA_ILCELER = [
   'Antalya','Konyaaltı','Muratpaşa','Kepez','Döşemealtı','Aksu',
@@ -165,7 +166,7 @@ const jsonLd = {
 // ── Metadata ──────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   metadataBase: new URL(HOME_URL),
-  title: PAGE_TITLE,
+  title: { absolute: PAGE_TITLE + ' | Terzi Can' },
   description: PAGE_DESC,
   keywords: [
     'Antalya üniforma imalatı','otel personeli kıyafeti Antalya','güvenlik üniforması Antalya',
@@ -195,7 +196,7 @@ export const metadata: Metadata = {
     siteName: 'Terzi Can',
     locale: 'tr_TR',
     type: 'website',
-    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: 'Antalya Üniforma İmalatı Terzi Can' }],
+    images: [{ url: OG_IMAGE, width: 1024, height: 1024, alt: 'Antalya Üniforma İmalatı Terzi Can' }],
   },
   twitter: {
     card: 'summary_large_image',

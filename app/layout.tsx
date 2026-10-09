@@ -26,9 +26,10 @@ export const metadata: Metadata = {
     // Yandex Webmaster: eski ve yeni doğrulama kodları birlikte (ikisi de geçerli kalsın)
     yandex: ['e7b38dec995b9142', '90847d9fde4fea11'],
   },
-  alternates: {
-    canonical: SITE,
-  },
+  // DÜZELTME: Buradaki genel `alternates.canonical: SITE` kaldırıldı. Kendi
+  // `alternates` tanımı olmayan her sayfa bu değeri miras alıp canonical'ını
+  // ANA SAYFAYA veriyordu (Google o sayfayı "ana sayfanın kopyası" sayar ve
+  // dizine almaz). Artık her sayfa kendi canonical'ını kendisi tanımlar.
 };
 
 export const viewport: Viewport = {

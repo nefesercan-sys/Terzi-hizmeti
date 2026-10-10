@@ -11,8 +11,10 @@
 2. The workshop replies with the price and turnaround for that job.
 3. Pick it up at the workshop, or ask for delivery to your hotel or address.
 
-Prices are starting prices and depend on fabric and work. No fixed response or delivery time is guaranteed
-in this file; turnaround is confirmed per job. Same-day service applies to Konyaaltı and nearby districts.
+Prices are starting prices and depend on fabric and work. Usual turnaround: hemming, taking in and zipper
+repair/replacement same day; dress, jacket, shirt, coat and evening-dress alteration/repair next day (1 day);
+dress making in 3 days; wedding dress time is confirmed per job. Open every day 08:00–23:00, serving since 2006,
+free service to hotels and homes. Wedding dress alteration from ₺800, evening dress from ₺400.
 
 ## Services people ask for
 
@@ -48,6 +50,12 @@ A: Да, ателье Terzi Can (Коньяалты) отправляет пор
 
 **Q: Где в Анталье узнать цену ремонта одежды по фото?**
 A: Отправьте фото вещи и нужной работы в WhatsApp, ателье назовёт цену и срок. Цены: https://terzihizmeti.com.tr/ru/ceny-portnoy-antalya
+
+## Pages by service and by area (4 languages)
+
+- Services hub: https://terzihizmeti.com.tr/terzi-hizmetleri (EN /en/tailor-services, RU /ru/uslugi-portnogo, DE /de/schneider-leistungen)
+- Area pages: /antalya-terzi/{area} (EN /en/tailor-antalya/{area}, RU /ru/portnoy-antalya/{area}, DE /de/schneider-antalya/{area}) for muratpasa, konyaalti, meltem, fener, sirinyali, lara, guzeloba, kundu, arapsuyu, toros, ogretmenevleri, kepez, aksu, dosemealti, belek, side, manavgat, kemer, beldibi, goynuk.
+- Full list of service slugs: see https://terzihizmeti.com.tr/sitemap.xml
 
 ## Textile production for businesses (Anavera Tekstil)
 

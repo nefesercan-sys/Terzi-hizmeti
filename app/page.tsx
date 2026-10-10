@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import ReviewsBlock from '@/components/ReviewsBlock';
 import { reviewSchema } from '@/lib/reviews';
-import { DISTRICTS, SERVICES, SERVICE_BASE, districtUrl, serviceUrl } from '@/lib/seo-data';
+import { DISTRICTS as SEO_DISTRICTS, SERVICES as SEO_SERVICES, SERVICE_BASE, districtUrl, serviceUrl } from '@/lib/seo-data';
 
 // ─── CONSTANTS ────────────────────────────────────────────────────────────────
 const SITE      = 'https://terzihizmeti.com.tr';
@@ -634,9 +634,9 @@ export default function TerziHizmetiPage() {
             </h2>
             <nav aria-label="Hizmetler ve bölgeler" style={{ fontSize: '.8rem', lineHeight: 2 }}>
               <a href={SERVICE_BASE.tr} style={{ color: '#C9A96E', fontWeight: 700, marginRight: '1rem' }}>Tüm hizmetler →</a>
-              {SERVICES.map((sv) => (<a key={sv.id} href={serviceUrl('tr', sv)} style={{ color: 'rgba(255,255,255,.6)', marginRight: '1rem', whiteSpace: 'nowrap' }}>{sv.name.tr}</a>))}
+              {SEO_SERVICES.map((sv) => (<a key={sv.id} href={serviceUrl('tr', sv)} style={{ color: 'rgba(255,255,255,.6)', marginRight: '1rem', whiteSpace: 'nowrap' }}>{sv.name.tr}</a>))}
               <br />
-              {DISTRICTS.map((d) => (<a key={d.slug} href={districtUrl('tr', d)} style={{ color: 'rgba(255,255,255,.6)', marginRight: '1rem', whiteSpace: 'nowrap' }}>{d.name.tr} terzi</a>))}
+              {SEO_DISTRICTS.map((d) => (<a key={d.slug} href={districtUrl('tr', d)} style={{ color: 'rgba(255,255,255,.6)', marginRight: '1rem', whiteSpace: 'nowrap' }}>{d.name.tr} terzi</a>))}
               <br />
               <a href="/en/tailor-services" hrefLang="en" style={{ color: 'rgba(255,255,255,.6)', marginRight: '1rem' }}>English: Tailor services</a>
               <a href="/ru/uslugi-portnogo" hrefLang="ru" style={{ color: 'rgba(255,255,255,.6)', marginRight: '1rem' }}>Русский: Услуги портного</a>

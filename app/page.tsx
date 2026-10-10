@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import ReviewsBlock from '@/components/ReviewsBlock';
 import { reviewSchema } from '@/lib/reviews';
+import { DISTRICTS, SERVICES, SERVICE_BASE, districtUrl, serviceUrl } from '@/lib/seo-data';
 
 // ─── CONSTANTS ────────────────────────────────────────────────────────────────
 const SITE      = 'https://terzihizmeti.com.tr';
@@ -107,11 +108,6 @@ const jsonLd = {
       url: SITE,
       inLanguage: ['tr', 'en', 'ru', 'de'],
       description: 'Professional tailor and alteration service in Konyaaltı, Antalya (Turkish, English, Russian, German).',
-      potentialAction: {
-        '@type': 'SearchAction',
-        target: { '@type': 'EntryPoint', urlTemplate: `${SITE}/?q={search_term_string}` },
-        'query-input': 'required name=search_term_string',
-      },
     },
     {
       '@type': ['LocalBusiness', 'ClothingStore'],
@@ -126,7 +122,7 @@ const jsonLd = {
         'Schneider Can Antalya', 'Änderungsschneiderei Konyaaltı',
       ],
       description:
-        'Professional tailor and clothing alteration workshop in Konyaaltı, Antalya since 2017. Services: pants hemming, zipper replacement, waist adjustment, dressmaking, wedding dress alterations, dry cleaning. Mobile tailor service to Hurma, Liman, Sarisu, Gursu, Uncali. We speak English, Russian, German, and Turkish.',
+        'Professional tailor and clothing alteration workshop in Konyaaltı, Antalya since 2006. Services: pants hemming, zipper replacement, waist adjustment, dressmaking, wedding dress alterations, dry cleaning. Mobile tailor service to Hurma, Liman, Sarisu, Gursu, Uncali. We speak English, Russian, German, and Turkish.',
       url: SITE,
       telephone: PHONE_TEL,
       priceRange: '₺₺',
@@ -172,7 +168,7 @@ const jsonLd = {
           { '@type': 'Offer', name: 'Zipper Replacement / Fermuar Değişimi / Замена молнии', price: '200', priceCurrency: 'TRY', priceValidUntil: '2026-12-31', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Zipper Repair & Replacement', description: 'Zipper replacement for jackets, pants, coats, bags.' } },
           { '@type': 'Offer', name: 'Waist & Dress Alterations / Bel Daraltma / Подгонка по фигуре', price: '150', priceCurrency: 'TRY', priceValidUntil: '2026-12-31', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Clothing Alterations', description: 'Resizing dresses, coats, suits, pants.' } },
           { '@type': 'Offer', name: 'Custom Dressmaking / Özel Elbise Dikimi / Индивидуальный пошив', price: '600', priceCurrency: 'TRY', priceValidUntil: '2026-12-31', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Custom Tailoring', description: 'Custom dresses, suits, shirts made to measure.' } },
-          { '@type': 'Offer', name: 'Wedding & Evening Dress Alterations / Gelinlik & Abiye / Ремонт свадебных платьев', price: '400', priceCurrency: 'TRY', priceValidUntil: '2026-12-31', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Wedding Dress Alterations', description: 'Precision fitting and repairs for wedding and evening dresses.' } },
+          { '@type': 'Offer', name: 'Wedding Dress Alterations / Gelinlik Tadilatı / Ремонт свадебных платьев', price: '800', priceCurrency: 'TRY', priceValidUntil: '2026-12-31', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Wedding Dress Alterations', description: 'Precision fitting and repairs for wedding and evening dresses.' } },
           { '@type': 'Offer', name: 'Dry Cleaning & Pressing / Kuru Temizleme & Ütü / Химчистка и глажка', price: '80', priceCurrency: 'TRY', priceValidUntil: '2026-12-31', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Dry Cleaning & Ironing', description: 'Steam ironing, dry cleaning with hotel pick-up.' } },
           { '@type': 'Offer', name: 'Mobile Tailor Service / Eve Gelen Terzi / Выездной портной', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Mobile Pickup & Delivery Tailor', description: 'Home pickup and delivery service in Konyaalti (Hurma, Liman, Sarisu free).' } },
         ],
@@ -238,11 +234,11 @@ const C = {
 const SERVICES = [
   { n:'01', title:'Paça Kısaltma', en:'Pants Hemming', ru:'Укоротить брюки', sub:'Pantolon · Etek · Kot / Pants · Skirts', desc:'Erkek ve bayan pantolon, kot, etek paça kısaltma — temiz, görünmez dikiş.', price:'₺150+', time:'Aynı gün / Same day', wa:WA_TR, img:'https://images.pexels.com/photos/6765056/pexels-photo-6765056.jpeg?auto=compress&cs=tinysrgb&w=800&h=533&fit=crop' },
   { n:'02', title:'Fermuar Değişimi', en:'Zipper Replacement', ru:'Замена молнии', sub:'Pantolon · Mont · Ceket · Çanta', desc:'Pantolon, mont, ceket, sweatshirt ve çanta fermuar değişimi, sıkışan fermuar tamiri.', price:'₺200+', time:'Aynı gün / Same day', wa:WA_TR, img:'https://images.pexels.com/photos/33952439/pexels-photo-33952439.jpeg?auto=compress&cs=tinysrgb&w=800&h=533&fit=crop' },
-  { n:'03', title:'Bel Daraltma & Tadilat', en:'Waist Alterations', ru:'Подгонка по фигуре', sub:'Elbise · Pantolon · Ceket', desc:'Elbise, pantolon ve ceketlerde bel daraltma, vücuda tam oturan ölçü ayarı.', price:'₺150+', time:'24 saat / 24 hrs', wa:WA_TR, img:'https://images.pexels.com/photos/18022030/pexels-photo-18022030.jpeg?auto=compress&cs=tinysrgb&w=800&h=533&fit=crop' },
-  { n:'04', title:'Özel Elbise Dikimi', en:'Custom Tailoring', ru:'Пошив на заказ', sub:'Kadın · Erkek · Çocuk / Women & Men', desc:'Kadın elbisesi, erkek takım elbise, gömlek — ölçünüze özel sıfırdan dikim.', price:'₺600+', time:'3–7 gün / days', wa:WA_TR, img:'https://images.pexels.com/photos/31112215/pexels-photo-31112215.jpeg?auto=compress&cs=tinysrgb&w=800&h=533&fit=crop' },
-  { n:'05', title:'Gelinlik & Abiye Tadilatı', en:'Wedding Dress Alterations', ru:'Ремонт свадебных платьев', sub:'Özel Gün Kıyafetleri / Evening Gowns', desc:'Özel gün kıyafetlerinde hassas daraltma, boy ayarı ve detaylı onarım.', price:'₺400+', time:'24–48 saat / hrs', wa:WA_TR, img:'https://images.pexels.com/photos/8459366/pexels-photo-8459366.jpeg?auto=compress&cs=tinysrgb&w=800&h=533&fit=crop' },
+  { n:'03', title:'Bel Daraltma & Tadilat', en:'Waist Alterations', ru:'Подгонка по фигуре', sub:'Elbise · Pantolon · Ceket', desc:'Elbise, pantolon ve ceketlerde bel daraltma, vücuda tam oturan ölçü ayarı.', price:'₺150+', time:'Aynı gün / Same day', wa:WA_TR, img:'https://images.pexels.com/photos/18022030/pexels-photo-18022030.jpeg?auto=compress&cs=tinysrgb&w=800&h=533&fit=crop' },
+  { n:'04', title:'Özel Elbise Dikimi', en:'Custom Tailoring', ru:'Пошив на заказ', sub:'Kadın · Erkek · Çocuk / Women & Men', desc:'Kadın elbisesi, erkek takım elbise, gömlek — ölçünüze özel sıfırdan dikim.', price:'₺600+', time:'3 gün / 3 days', wa:WA_TR, img:'https://images.pexels.com/photos/31112215/pexels-photo-31112215.jpeg?auto=compress&cs=tinysrgb&w=800&h=533&fit=crop' },
+  { n:'05', title:'Gelinlik & Abiye Tadilatı', en:'Wedding Dress Alterations', ru:'Ремонт свадебных платьев', sub:'Özel Gün Kıyafetleri / Evening Gowns', desc:'Özel gün kıyafetlerinde hassas daraltma, boy ayarı ve detaylı onarım.', price:'₺800+ (abiye ₺400+)', time:'1 gün / 1 day', wa:WA_TR, img:'https://images.pexels.com/photos/8459366/pexels-photo-8459366.jpeg?auto=compress&cs=tinysrgb&w=800&h=533&fit=crop' },
   { n:'06', title:'Kuru Temizleme & Ütü', en:'Dry Cleaning & Ironing', ru:'Химчистка и глажка', sub:'Profesyonel Bakım / Laundry', desc:'Profesyonel kuru temizleme, buharlı ütü ve pres hizmeti. Otellerden alım.', price:'₺80+', time:'2–48 saat / hrs', wa:WA_TR, img:'https://images.pexels.com/photos/5202797/pexels-photo-5202797.jpeg?auto=compress&cs=tinysrgb&w=800&h=533&fit=crop' },
-  { n:'07', title:'Eve Gelen Terzi', en:'Mobile Tailor Pickup', ru:'Выездной портной', sub:'Hurma · Liman · Sarısu Ücretsiz / Free Pickup', desc:'Araçlı terzi servisi: adresinizde ölçü alma, dikip 24 saatte teslim.', price:'Ücretsiz / Free', time:'24 saat / hrs', wa:WA_TR, img:'https://images.pexels.com/photos/6765658/pexels-photo-6765658.jpeg?auto=compress&cs=tinysrgb&w=800&h=533&fit=crop' },
+  { n:'07', title:'Eve Gelen Terzi', en:'Mobile Tailor Pickup', ru:'Выездной портной', sub:'Hurma · Liman · Sarısu Ücretsiz / Free Pickup', desc:'Araçlı terzi servisi: adresinizde ölçü alma, dikip 3 günde, tadilatları ise aynı gün veya ertesi gün teslim.', price:'Ücretsiz / Free', time:'24 saat / hrs', wa:WA_TR, img:'https://images.pexels.com/photos/6765658/pexels-photo-6765658.jpeg?auto=compress&cs=tinysrgb&w=800&h=533&fit=crop' },
   { n:'08', title:'Üniforma & Seri İmalat', en:'Uniform Manufacturing', ru:'Пошив униформы', sub:'Otel · Restoran · Okul / Hotel & Uniforms', desc:'Toplu üniforma üretimi, fason tekstil, seri imalat ve nakış hizmeti.', price:'Teklif Al', time:'Proje bazlı', wa:WA_TR, img:'https://images.pexels.com/photos/5378708/pexels-photo-5378708.jpeg?auto=compress&cs=tinysrgb&w=800&h=533&fit=crop' },
 ];
 
@@ -468,7 +464,7 @@ export default function TerziHizmetiPage() {
 
             <div className="hero-stats" aria-label="Stats">
               {([
-                ['2017\'den', 'Beri Hizmet', 'Konyaaltı merkez'],
+                ['2006\'dan', 'Beri Hizmet', 'Konyaaltı merkez'],
                 ['0–24s', 'Ekspres Teslim', 'Fast Turnaround'],
                 ['4 Dil', 'TR / EN / RU / DE', 'Çok dilli hizmet'],
                 ['%100', 'Şeffaf Fiyat', 'Best Quality'],
@@ -499,7 +495,7 @@ export default function TerziHizmetiPage() {
         {/* SUMMARY / INTRODUCTION */}
         <div style={{background:C.bg2,padding:'2.2rem 1.5rem',borderBottom:`1px solid rgba(44,74,62,.10)`}}>
           <p style={{maxWidth:920,margin:'0 auto',fontSize:'.85rem',color:C.muted,lineHeight:1.9,textAlign:'center'}}>
-            <strong style={{color:'#2C4A3E'}}>Terzi Can Antalya</strong> — Konyaaltı'da 2017'den bu yana faaliyet gösteren profesyonel terzi atölyesidir. Türkçe, İngilizce, Rusça ve Almanca konuşan ekibimizle hem yerli hem de yabancı misafirlerimize terzilik, kıyafet tamiri, elbise dikimi, gelinlik tadilatı ve kuru temizleme hizmeti sunuyoruz. Hurma, Liman, Sarısu, Gürsu ve Uncalı başta olmak üzere tüm Antalya'ya araçlı terzi servisi sağlıyoruz.
+            <strong style={{color:'#2C4A3E'}}>Terzi Can Antalya</strong> — Konyaaltı'da 2006'dan bu yana faaliyet gösteren profesyonel terzi atölyesidir. Türkçe, İngilizce, Rusça ve Almanca konuşan ekibimizle hem yerli hem de yabancı misafirlerimize terzilik, kıyafet tamiri, elbise dikimi, gelinlik tadilatı ve kuru temizleme hizmeti sunuyoruz. Hurma, Liman, Sarısu, Gürsu ve Uncalı başta olmak üzere tüm Antalya'ya araçlı terzi servisi sağlıyoruz.
           </p>
         </div>
 
@@ -631,6 +627,23 @@ export default function TerziHizmetiPage() {
         </section>
 
         {/* FOOTER */}
+        <section className="sec" aria-labelledby="seo-links-h" style={{ paddingTop: 0 }}>
+          <div className="ctr" style={{ maxWidth: 900 }}>
+            <h2 id="seo-links-h" style={{ fontSize: '.78rem', letterSpacing: '.12em', textTransform: 'uppercase', opacity: .55, marginBottom: '.9rem' }}>
+              Terzi hizmetleri ve Antalya bölgeleri
+            </h2>
+            <nav aria-label="Hizmetler ve bölgeler" style={{ fontSize: '.8rem', lineHeight: 2 }}>
+              <a href={SERVICE_BASE.tr} style={{ color: '#C9A96E', fontWeight: 700, marginRight: '1rem' }}>Tüm hizmetler →</a>
+              {SERVICES.map((sv) => (<a key={sv.id} href={serviceUrl('tr', sv)} style={{ color: 'rgba(255,255,255,.6)', marginRight: '1rem', whiteSpace: 'nowrap' }}>{sv.name.tr}</a>))}
+              <br />
+              {DISTRICTS.map((d) => (<a key={d.slug} href={districtUrl('tr', d)} style={{ color: 'rgba(255,255,255,.6)', marginRight: '1rem', whiteSpace: 'nowrap' }}>{d.name.tr} terzi</a>))}
+              <br />
+              <a href="/en/tailor-services" hrefLang="en" style={{ color: 'rgba(255,255,255,.6)', marginRight: '1rem' }}>English: Tailor services</a>
+              <a href="/ru/uslugi-portnogo" hrefLang="ru" style={{ color: 'rgba(255,255,255,.6)', marginRight: '1rem' }}>Русский: Услуги портного</a>
+              <a href="/de/schneider-leistungen" hrefLang="de" style={{ color: 'rgba(255,255,255,.6)', marginRight: '1rem' }}>Deutsch: Schneider-Leistungen</a>
+            </nav>
+          </div>
+        </section>
         <ReviewsBlock lang="tr" />
         <footer>
           <div>© 2026 Terzi Can · Konyaaltı, Antalya · {PHONE}</div>

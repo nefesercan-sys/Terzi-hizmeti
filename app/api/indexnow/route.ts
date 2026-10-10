@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { OTEL_BOLGELERI } from '@/lib/otel-bolgeleri';
+import { DISTRICTS, SERVICES, LANGS, SERVICE_BASE, districtUrl, serviceUrl } from '@/lib/seo-data';
 
 export const dynamic = 'force-dynamic';
 
@@ -60,7 +61,24 @@ const sabitSayfalar = [
   `${SITE}/blog/2026-yaz-sezonu-gelinlik-tadilat-rehberi`,
 ];
 
-const urlList = [...sabitSayfalar, ...otelSayfalari];
+// Bölge × hizmet SEO sayfaları (sitemap.ts ile aynı kaynak: lib/seo-data.ts)
+const seoSayfalari = [
+  ...LANGS.map((l) => `${SITE}${SERVICE_BASE[l]}`),
+  ...SERVICES.flatMap((s) => LANGS.map((l) => `${SITE}${serviceUrl(l, s)}`)),
+  ...DISTRICTS.flatMap((d) => LANGS.map((l) => `${SITE}${districtUrl(l, d)}`)),
+];
+
+const urlList = Array.from(new Set([...sabitSayfalar, ...otelSayfalari, ...seoSayfalari]));
+
+// Yetki: Vercel'de INDEXNOW_SECRET tanımlı olmalı. Şu iki yoldan biriyle gönder:
+//   Authorization: Bearer <INDEXNOW_SECRET>   veya   ?token=<INDEXNOW_SECRET>
+function yetkili(req: Request): boolean {
+  const secret = process.env.INDEXNOW_SECRET;
+  if (!secret) return false; // secret yoksa kimse tetikleyemez
+  const bearer = req.headers.get('authorization')?.replace(/^Bearer\s+/i, '');
+  const token = new URL(req.url).searchParams.get('token');
+  return bearer === secret || token === secret;
+}
 
 async function sendIndexNowPing() {
   return fetch('https://api.indexnow.org/indexnow', {
@@ -70,7 +88,10 @@ async function sendIndexNowPing() {
   });
 }
 
-export async function GET() {
+export async function GET(req: Request) {
+  if (!yetkili(req)) {
+    return NextResponse.json({ success: false, error: 'Yetkisiz veya INDEXNOW_SECRET tanımlı değil' }, { status: 401 });
+  }
   try {
     const response = await sendIndexNowPing();
 
@@ -97,6 +118,6 @@ export async function GET() {
   }
 }
 
-export async function POST() {
-  return GET();
+export async function POST(req: Request) {
+  return GET(req);
 }

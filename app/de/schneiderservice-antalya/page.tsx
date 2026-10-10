@@ -46,7 +46,7 @@ export const metadata: Metadata = {
 
 const SERVICES: { title: string; desc: string; rows: [string, string][] }[] = [
   { title: 'Änderungen', desc: 'Passform-Anpassungen, damit Kleidung genau sitzt.',
-    rows: [['Hose kürzen', 'ab ₺150'], ['Taille enger machen', 'ab ₺150'], ['Ärmel kürzen', 'ab ₺200'], ['Kleid / Jacke anpassen', 'ab ₺200'], ['Brautkleid und Abendkleid', 'ab ₺400']] },
+    rows: [['Hose kürzen', 'ab ₺150'], ['Taille enger machen', 'ab ₺150'], ['Ärmel kürzen', 'ab ₺200'], ['Kleid / Jacke anpassen', 'ab ₺200'], ['Brautkleid und Abendkleid', 'ab ₺800']] },
   { title: 'Reparatur', desc: 'Reißverschluss, Risse, Knöpfe und Futter.',
     rows: [['Reißverschluss (Hose)', 'ab ₺200'], ['Reißverschluss (Mantel)', 'ab ₺300'], ['Riss / Naht reparieren', 'ab ₺150'], ['Knopf, Haken', 'ab ₺60']] },
   { title: 'Maßanfertigung', desc: 'Kleidung nach Ihren Maßen, auch aus Leinen und Baumwolle.',
@@ -71,7 +71,7 @@ const FAQS: [string, string][] = [
   ['Ist der Besuch kostenlos?', 'In Konyaaltı, Muratpaşa, Kepez und Lara ist der Besuch kostenlos. Für weiter entfernte Bezirke klären wir die Einzelheiten vorab per WhatsApp.'],
   ['Wie bekomme ich einen Preis, ohne vorbeizukommen?', 'Senden Sie ein Foto des Kleidungsstücks und der gewünschten Arbeit per WhatsApp. Wir nennen Preis und Bearbeitungszeit. Preisliste: ' + PRICE_URL],
   ['Wie schnell ist eine Änderung fertig?', 'Viele Reparaturen und das Kürzen von Hosen sind am selben Tag oder innerhalb von 24 Stunden fertig. Die genaue Zeit hängt von Arbeit und Auslastung ab und wird per WhatsApp bestätigt.'],
-  ['Können Sie ein Brautkleid oder Abendkleid ändern?', 'Ja. Brautkleid- und Abendkleid-Änderungen gibt es ab ₺400, je nach Aufwand. Senden Sie am besten vorab Fotos.'],
+  ['Können Sie ein Brautkleid oder Abendkleid ändern?', 'Ja. Brautkleid- und Abendkleid-Änderungen gibt es ab ₺800, je nach Aufwand. Senden Sie am besten vorab Fotos.'],
   ['Haben Sie am Wochenende geöffnet?', 'Ja, die Werkstatt ist an sieben Tagen in der Woche geöffnet. Die aktuellen Zeiten stehen bei Google Maps.'],
 ];
 

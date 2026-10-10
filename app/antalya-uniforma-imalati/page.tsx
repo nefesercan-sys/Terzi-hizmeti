@@ -155,7 +155,7 @@ const jsonLd = {
           name: 'Üniforma imalatında minimum sipariş adedi var mı?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: `Terzi Can atölyemizde hem az adetli özel siparişler hem de yüksek adetli seri imalatlar için çözüm sunuyoruz. WhatsApp: ${PHONE}`,
+            text: `Minimum sipariş şartı koymuyoruz; az adetli özel siparişler ve yüksek adetli seri imalatlar proje bazında fiyatlandırılır. WhatsApp: ${PHONE}`,
           },
         },
       ],

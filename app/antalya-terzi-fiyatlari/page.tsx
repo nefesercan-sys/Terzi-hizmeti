@@ -58,7 +58,7 @@ const QUICK: { q: string; a: string; price: string; href: string; cta: string }[
   { q: 'Pantolonumun paçasını kısaltmak istiyorum', a: 'Kot ve kumaş pantolon paça kısaltma, çoğu zaman aynı gün.', price: '₺150\'den', href: '/konyaalti-paca-kisaltma', cta: 'Paça kısaltma' },
   { q: 'Fermuar değişimi', a: 'Pantolon, kot, etek, mont ve çanta fermuarı.', price: '₺200\'den', href: '/konyaalti-fermuar-tamiri', cta: 'Fermuar tamiri' },
   { q: 'Elbise diktirmek / kendime elbise dikmek', a: 'Ölçü, model ve kumaş seçimi, prova ve teslim. Fotoğrafını gönderin.', price: '₺600\'den', href: '#dikim', cta: 'Özel dikim' },
-  { q: 'Gelinlik ve abiye tadilatı', a: 'Hassas daraltma, boy ve askı ayarı; prova randevusu.', price: '₺400\'den', href: '/antalya-gelinlik-tadilati', cta: 'Gelinlik tadilatı' },
+  { q: 'Gelinlik ve abiye tadilatı', a: 'Hassas daraltma, boy ve askı ayarı; prova randevusu.', price: '₺800\'den', href: '/antalya-gelinlik-tadilati', cta: 'Gelinlik tadilatı' },
   { q: 'Adrese veya otele gelen terzi', a: 'Ölçüyü adresinizde alırız, işi atölyede yapar, geri teslim ederiz.', price: 'Konyaaltı, Muratpaşa, Kepez, Lara ücretsiz', href: '/otele-gelen-terzi-antalya', cta: 'Otele gelen terzi' },
   { q: 'Pamuklu, doğal kumaştan dikim', a: '%100 keten ve pamuktan özel dikim; toptan üretim de yapılır.', price: 'Fotoğrafa göre', href: '/keten-pamuk-ozel-dikim', cta: 'Keten & pamuk' },
   { q: 'Model, tasarım, dikim atölyesi, seri imalat', a: 'Önce numune, onaydan sonra seri imalat ve üretim takibi (adet: modele göre teklif, minimum sipariş yok).', price: 'Teklif', href: '/anavera-tekstil', cta: 'Anavera Tekstil' },
@@ -67,7 +67,7 @@ const QUICK: { q: string; a: string; price: string; href: string; cta: string }[
 // ── Fiyat tabloları (site genelindeki fiyatlarla aynı; başlangıç fiyatlarıdır) ──
 const PRICES: { icon: string; title: string; rows: [string, string][] }[] = [
   { icon: '🔧', title: 'Tamir', rows: [['Pantolon fermuarı değişimi', '₺200+'], ['Mont fermuarı değişimi', '₺300+'], ['Yırtık / dikiş sökülmesi onarımı', '₺150+'], ['Düğme, çıtçıt, kanca', '₺60+'], ['Astar değişimi', '₺300+']] },
-  { icon: '📏', title: 'Tadilat', rows: [['Paça kısaltma', '₺150+'], ['Bel daraltma', '₺150+'], ['Kol kısaltma', '₺200+'], ['Elbise / ceket tadilatı', '₺200+'], ['Gelinlik ve abiye tadilatı', '₺400+']] },
+  { icon: '📏', title: 'Tadilat', rows: [['Paça kısaltma', '₺150+'], ['Bel daraltma', '₺150+'], ['Kol kısaltma', '₺200+'], ['Elbise / ceket tadilatı', '₺200+'], ['Gelinlik ve abiye tadilatı', '₺800+']] },
   { icon: '✂️', title: 'Özel dikim', rows: [['Erkek gömlek', '₺350+'], ['Erkek pantolon', '₺400+'], ['Kadın elbise', '₺600+'], ['Abiye', '₺900+'], ['Çocuk giyim', '₺250+']] },
   { icon: '🧺', title: 'Ütü & kuru temizleme', rows: [['Ütü (adet)', '₺80+'], ['Kuru temizleme (elbise)', '₺300+'], ['Kuru temizleme (mont)', '₺500+'], ['Yıkama + ütü (kg)', '₺80+/kg']] },
 ];

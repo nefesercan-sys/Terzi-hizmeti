@@ -92,7 +92,7 @@ export default async function OtelBolgeEnPage({ params }: { params: Promise<{ re
           {
             '@type': 'Question',
             name: `How long do alterations take for hotel guests?`,
-            acceptedAnswer: { '@type': 'Answer', text: `Our expert tailors work their magic within 24 to 48 hours for guests in ${r.name}.` },
+            acceptedAnswer: { '@type': 'Answer', text: `Hemming, taking in and zipper repairs are usually done the same day; dress, jacket, shirt and coat alterations take 1 day; dress making takes 3 days — for guests in ${r.name}.` },
           },
         ],
       },

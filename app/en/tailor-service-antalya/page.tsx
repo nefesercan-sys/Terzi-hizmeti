@@ -78,7 +78,7 @@ const jsonLd = {
           { '@type': 'Offer', price: '150', priceCurrency: 'TRY', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Hemming' } },
           { '@type': 'Offer', price: '200', priceCurrency: 'TRY', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Zipper Replacement' } },
           { '@type': 'Offer', price: '150', priceCurrency: 'TRY', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Waist Taking In' } },
-          { '@type': 'Offer', price: '400', priceCurrency: 'TRY', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Wedding & Evening Dress Alterations' } },
+          { '@type': 'Offer', price: '800', priceCurrency: 'TRY', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Wedding & Evening Dress Alterations' } },
           { '@type': 'Offer', price: '80', priceCurrency: 'TRY', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Ironing' } },
           { '@type': 'Offer', price: '300', priceCurrency: 'TRY', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Dry Cleaning' } },
         ],
@@ -123,7 +123,7 @@ const REPAIR_CATEGORIES = [
   { icon: '🔧', title: 'Repair', keyword: 'clothing repair Antalya', desc: 'Zippers, tears, buttons — everyday fixes.',
     rows: [['Zipper Replacement (Trousers)', '₺200+'], ['Zipper Replacement (Coat)', '₺300+'], ['Tear / Seam Repair', '₺150+'], ['Button, Hook Repair', '₺60+'], ['Lining Replacement', '₺300+']] as [string, string][] },
   { icon: '📏', title: 'Alterations', keyword: 'hemming Antalya', desc: 'Precise fit adjustments to your body.',
-    rows: [['Hemming', '₺150+'], ['Waist Taking In', '₺150+'], ['Sleeve Shortening', '₺200+'], ['Dress / Jacket Resizing', '₺200+'], ['Wedding & Evening Dress', '₺400+']] as [string, string][] },
+    rows: [['Hemming', '₺150+'], ['Waist Taking In', '₺150+'], ['Sleeve Shortening', '₺200+'], ['Dress / Jacket Resizing', '₺200+'], ['Wedding & Evening Dress', '₺800+']] as [string, string][] },
   { icon: '🧺', title: 'Ironing & Dry Cleaning', keyword: 'ironing dry cleaning Antalya', desc: 'Professional steam ironing and dry cleaning.',
     rows: [['Ironing (per item)', '₺80+'], ['Dry Cleaning (Dress)', '₺300+'], ['Dry Cleaning (Coat)', '₺500+'], ['Laundry & Ironing (per kg)', '₺80+/kg']] as [string, string][] },
 ];

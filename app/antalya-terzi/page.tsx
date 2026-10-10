@@ -150,7 +150,7 @@ const jsonLd = {
         { '@type': 'Question', name: 'Konyaaltı Hurma, Liman, Sarısu mahallelerine terzi hizmeti var mı?', acceptedAnswer: { '@type': 'Answer', text: `Evet, atölyemiz bu mahallelere en yakın konumda. Hurma, Liman ve Sarısu'ya ücretsiz adrese gelen servis sağlıyoruz. ☎ ${PHONE}` } },
         { '@type': 'Question', name: 'Bay, bayan ve çocuk kıyafeti dikimi yapıyor musunuz?', acceptedAnswer: { '@type': 'Answer', text: 'Evet, erkek, kadın ve çocuk kıyafetlerinin tamamında özel ölçü dikim hizmeti veriyoruz.' } },
         { '@type': 'Question', name: 'Üniforma üretimi ve toplu sipariş alıyor musunuz?', acceptedAnswer: { '@type': 'Answer', text: 'Evet, otel, restoran, okul, güvenlik ve sağlık sektörü için üniforma tasarımı ve toplu üretimi yapıyoruz.' } },
-        { '@type': 'Question', name: 'Fason imalat için minimum sipariş adedi var mı?', acceptedAnswer: { '@type': 'Answer', text: "Fason imalat siparişleri proje bazında değerlendirilir. WhatsApp'tan detaylı bilgi alabilirsiniz." } },
+        { '@type': 'Question', name: 'Fason imalat için minimum sipariş adedi var mı?', acceptedAnswer: { '@type': 'Answer', text: "Minimum sipariş şartı koymuyoruz; numune, az adetli ve yüksek adetli fason imalat siparişleri proje bazında fiyatlandırılır. WhatsApp'tan detaylı bilgi alabilirsiniz." } },
       ],
     },
   ],

@@ -19,10 +19,9 @@ const nextConfig = {
   // trafik varsa (biri www.terzihizmeti.com.tr yazarsa) onu non-www'e
   // yönlendiriyoruz — yani yön TERSİNE ÇEVRİLDİ.
   //
-  // ⚠️ NOT: Yandex Webmaster doğrulaması (public/yandex_...html) www ile
-  // yapılmış olabilir. Bu redirect www→non-www yönünde olduğu için Yandex
-  // doğrulama dosyası her iki adreste de (www ve non-www) erişilebilir
-  // kalacak şekilde public/ klasöründe bırakıldı — silme.
+  // NOT: www isteği 301 ile non-www'ye yönlenir. Yandex doğrulaması non-www
+  // üzerinden yapılmalıdır; layout.tsx'teki meta doğrulama kodları yedek olarak durur.
+  // public/yandex_...html dosyasını silme.
   async redirects() {
     return [
       {
@@ -45,7 +44,8 @@ const nextConfig = {
           // bağlanmasını söyler, HTTP'ye düşürme (downgrade) saldırılarını
           // engeller. Google, güvenlik sinyali olarak HTTPS'i zaten dikkate
           // alıyor; HSTS bunu güçlendirir.
-          { key: 'Strict-Transport-Security', value: 'max-age=31536000; includeSubDomains; preload' },
+          // (preload kaldırıldı: hstspreload.org'a başvurmadan gereksiz.)
+          { key: 'Strict-Transport-Security', value: 'max-age=31536000; includeSubDomains' },
         ],
       },
       {

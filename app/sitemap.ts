@@ -1,8 +1,9 @@
 import type { MetadataRoute } from 'next';
 import { OTEL_BOLGELERI } from '@/lib/otel-bolgeleri';
+import { DISTRICTS, SERVICES, LANGS, SERVICE_BASE, districtUrl, serviceUrl, LAST_UPDATE, type Lang } from '@/lib/seo-data';
 
 const SITE = "https://terzihizmeti.com.tr";
-const NOW = new Date('2026-10-04');
+const NOW = new Date('2026-10-10');
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // OTEL_BOLGELERI verisini güvenli bir şekilde slug metin dizisine çeviriyoruz
@@ -65,5 +66,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE}/blog/2026-yaz-sezonu-gelinlik-tadilat-rehberi`, lastModified: NOW, changeFrequency: 'monthly', priority: 0.60 },
   ];
 
-  return [...sabitSayfalar, ...otelSayfalari];
+  // 🔎 7. BÖLGE × HİZMET SEO SAYFALARI (4 dil, hreflang karşılıklı)
+  const SEO_DATE = new Date(LAST_UPDATE);
+  const alt = (urlFor: (l: Lang) => string) => ({ languages: Object.fromEntries([...LANGS.map((l) => [l, `${SITE}${urlFor(l)}`]), ['x-default', `${SITE}${urlFor('tr')}`]]) });
+  const seoSayfalari: MetadataRoute.Sitemap = [
+    ...LANGS.map((l) => ({ url: `${SITE}${SERVICE_BASE[l]}`, lastModified: SEO_DATE, changeFrequency: 'weekly' as const, priority: 0.8, alternates: alt((x) => SERVICE_BASE[x]) })),
+    ...SERVICES.flatMap((s) => LANGS.map((l) => ({ url: `${SITE}${serviceUrl(l, s)}`, lastModified: SEO_DATE, changeFrequency: 'monthly' as const, priority: 0.78, alternates: alt((x) => serviceUrl(x, s)) }))),
+    ...DISTRICTS.flatMap((d) => LANGS.map((l) => ({ url: `${SITE}${districtUrl(l, d)}`, lastModified: SEO_DATE, changeFrequency: 'monthly' as const, priority: 0.76, alternates: alt((x) => districtUrl(x, d)) }))),
+  ];
+
+  return [...sabitSayfalar, ...otelSayfalari, ...seoSayfalari];
 }

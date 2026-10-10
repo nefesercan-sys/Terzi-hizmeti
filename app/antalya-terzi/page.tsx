@@ -84,7 +84,7 @@ const jsonLd = {
         'Terzi Can Antalya', 'Konyaaltı Terzi', 'Tailor Can Antalya',
         'Портной Кан Анталья', 'Schneider Can Antalya', 'Terzi Hizmeti Antalya', 'Dikiş Atölyesi Antalya',
       ],
-      description: "Antalya Konyaaltı'da 2017'den bu yana hizmet veren profesyonel terzi atölyesi. Paça kısaltma, fermuar değişimi, bel daraltma, özel dikim, gelinlik tadilatı, tekstil imalatı ve kuru temizleme. Hurma, Liman, Sarısu, Gürsu, Uncalı bölgelerine hizmet.",
+      description: "Antalya Konyaaltı'da 2006'dan bu yana hizmet veren profesyonel terzi atölyesi. Paça kısaltma, fermuar değişimi, bel daraltma, özel dikim, gelinlik tadilatı, tekstil imalatı ve kuru temizleme. Hurma, Liman, Sarısu, Gürsu, Uncalı bölgelerine hizmet.",
       url: SITE,
       telephone: PHONE_TEL,
       priceRange: '₺₺',
@@ -229,7 +229,7 @@ const REPAIR_CATEGORIES: Record<Lang, RepairCategory[]> = {
       rows: [['Fermuar Değişimi (Pantolon/Kot)', '₺200+'], ['Fermuar Değişimi (Mont/Ceket)', '₺300+'], ['Yırtık / Sökük Onarımı', '₺150+'], ['Düğme, Kopça, Fitil Tamiri', '₺60+'], ['Astar Değişimi', '₺300+']] },
     { icon: '📏', title: 'Tadilat Hizmetleri', keyword: 'paça kısaltma Antalya · bel daraltma Konyaaltı',
       desc: 'Kıyafetinizi vücudunuza tam oturtan hassas ölçü ayarları.',
-      rows: [['Paça Kısaltma (Pantolon/Kot/Etek)', '₺150+'], ['Bel Daraltma', '₺150+'], ['Kol Kısaltma', '₺200+'], ['Elbise / Ceket Daraltma', '₺200+'], ['Gelinlik & Abiye Tadilatı', '₺400+']] },
+      rows: [['Paça Kısaltma (Pantolon/Kot/Etek)', '₺150+'], ['Bel Daraltma', '₺150+'], ['Kol Kısaltma', '₺200+'], ['Elbise / Ceket Daraltma', '₺200+'], ['Gelinlik & Abiye Tadilatı', '₺800+']] },
     { icon: '🧺', title: 'Ütü & Kuru Temizleme', keyword: 'ütü hizmeti Antalya · kuru temizleme Konyaaltı',
       desc: 'Profesyonel buharlı ütü ve kuru temizleme. Otel ve adreslerden alım-teslimat.',
       rows: [['Ütü (adet)', '₺80+'], ['Kuru Temizleme (Elbise)', '₺300+'], ['Kuru Temizleme (Mont/Kaban)', '₺500+'], ['Çamaşır & Ütü (kg)', '₺80+/kg']] },
@@ -243,7 +243,7 @@ const REPAIR_CATEGORIES: Record<Lang, RepairCategory[]> = {
       rows: [['Zipper Replacement (Trousers/Jeans)', '₺200+'], ['Zipper Replacement (Coat/Jacket)', '₺300+'], ['Tear / Seam Repair', '₺150+'], ['Button, Hook, Snap Repair', '₺60+'], ['Lining Replacement', '₺300+']] },
     { icon: '📏', title: 'Alterations', keyword: 'hemming Antalya · waist taking in Konyaaltı',
       desc: 'Precise fit adjustments so your clothing sits exactly right on your body.',
-      rows: [['Hemming (Trousers/Jeans/Skirt)', '₺150+'], ['Waist Taking In', '₺150+'], ['Sleeve Shortening', '₺200+'], ['Dress / Jacket Taking In', '₺200+'], ['Wedding & Evening Dress Alterations', '₺400+']] },
+      rows: [['Hemming (Trousers/Jeans/Skirt)', '₺150+'], ['Waist Taking In', '₺150+'], ['Sleeve Shortening', '₺200+'], ['Dress / Jacket Taking In', '₺200+'], ['Wedding & Evening Dress Alterations', '₺800+']] },
     { icon: '🧺', title: 'Ironing & Dry Cleaning', keyword: 'ironing service Antalya · dry cleaning Konyaaltı',
       desc: 'Professional steam ironing and dry cleaning.',
       rows: [['Ironing (per item)', '₺80+'], ['Dry Cleaning (Dress)', '₺300+'], ['Dry Cleaning (Coat)', '₺500+'], ['Laundry & Ironing (per kg)', '₺80+/kg']] },
@@ -257,7 +257,7 @@ const REPAIR_CATEGORIES: Record<Lang, RepairCategory[]> = {
       rows: [['Замена молнии (брюки/джинсы)', '₺200+'], ['Замена молнии (пальто/куртка)', '₺300+'], ['Ремонт разрыва / шва', '₺150+'], ['Ремонт пуговиц, крючков, кнопок', '₺60+'], ['Замена подкладки', '₺300+']] },
     { icon: '📏', title: 'Подгонка одежды', keyword: 'укорачивание брюк Анталья · заужение талии Коньяалты',
       desc: 'Точная подгонка по фигуре — чтобы одежда сидела идеально.',
-      rows: [['Укорачивание (брюки/джинсы/юбка)', '₺150+'], ['Заужение талии', '₺150+'], ['Укорачивание рукавов', '₺200+'], ['Заужение платья / пиджака', '₺200+'], ['Подгонка свадебного/вечернего платья', '₺400+']] },
+      rows: [['Укорачивание (брюки/джинсы/юбка)', '₺150+'], ['Заужение талии', '₺150+'], ['Укорачивание рукавов', '₺200+'], ['Заужение платья / пиджака', '₺200+'], ['Подгонка свадебного/вечернего платья', '₺800+']] },
     { icon: '🧺', title: 'Глажка и химчистка', keyword: 'глажка Анталья · химчистка Коньяалты',
       desc: 'Профессиональная паровая глажка и химчистка.',
       rows: [['Глажка (за вещь)', '₺80+'], ['Химчистка (платье)', '₺300+'], ['Химчистка (пальто)', '₺500+'], ['Стирка и глажка (за кг)', '₺80+/кг']] },
@@ -271,7 +271,7 @@ const REPAIR_CATEGORIES: Record<Lang, RepairCategory[]> = {
       rows: [['Reißverschluss (Hose/Jeans)', '₺200+'], ['Reißverschluss (Jacke/Mantel)', '₺300+'], ['Riss / Naht reparieren', '₺150+'], ['Knopf, Haken reparieren', '₺60+'], ['Futterwechsel', '₺300+']] },
     { icon: '📏', title: 'Änderungsschneiderei', keyword: 'Hosen kürzen Antalya · Taille Konyaaltı',
       desc: 'Präzise Passformanpassungen, damit Ihre Kleidung genau richtig an Ihrem Körper sitzt.',
-      rows: [['Kürzen (Hose/Jeans/Rock)', '₺150+'], ['Taille enger machen', '₺150+'], ['Ärmel kürzen', '₺200+'], ['Kleid / Jacke enger machen', '₺200+'], ['Braut- & Abendkleid ändern', '₺400+']] },
+      rows: [['Kürzen (Hose/Jeans/Rock)', '₺150+'], ['Taille enger machen', '₺150+'], ['Ärmel kürzen', '₺200+'], ['Kleid / Jacke enger machen', '₺200+'], ['Braut- & Abendkleid ändern', '₺800+']] },
     { icon: '🧺', title: 'Bügeln & Reinigung', keyword: 'Bügelservice Antalya · Reinigung Konyaaltı',
       desc: 'Professionelles Dampfbügeln und chemische Reinigung. Abholung und Lieferung vom Hotel.',
       rows: [['Bügeln (pro Stück)', '₺80+'], ['Chemische Reinigung (Kleid)', '₺300+'], ['Chemische Reinigung (Mantel)', '₺500+'], ['Waschen & Bügeln (pro kg)', '₺80+/kg']] },
@@ -510,7 +510,7 @@ export default function KonyaaltiTailorServicePage() {
                   <div className="wk-icon" aria-hidden="true">💍</div>
                   <h3 className="wk-tr">Gelinlik Tadilatı Antalya</h3>
                   <span className="wk-en">Wedding Dress Alterations</span>
-                  <p className="wk-desc">Hassas daraltma, boy ayarı, korse onarımı — ₺400&apos;den.</p>
+                  <p className="wk-desc">Hassas daraltma, boy ayarı, korse onarımı — ₺800&apos;den.</p>
                   <span style={{ fontSize: '.76rem', color: '#C9A96E', fontWeight: 700 }}>Fiyatları Gör <span aria-hidden="true">→</span></span>
                 </a>
                 <a href="/antalya-uniforma-imalati" className="wk-card" style={{ display: 'block' }}>

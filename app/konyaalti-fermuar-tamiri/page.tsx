@@ -51,7 +51,7 @@ const jsonLd = {
         'Terzi Can Antalya', 'Konyaaltı Terzi', 'Tailor Can Antalya',
         'Портной Кан Анталья', 'Schneider Can Antalya', 'Terzi Hizmeti Antalya', 'Dikiş Atölyesi Antalya',
       ],
-      description: "Antalya Konyaaltı'da 2017'den bu yana hizmet veren profesyonel terzi atölyesi. Paça kısaltma, fermuar değişimi, bel daraltma, özel dikim, gelinlik tadilatı, tekstil imalatı ve kuru temizleme. Hurma, Liman, Sarısu, Gürsu, Uncalı bölgelerine hizmet.",
+      description: "Antalya Konyaaltı'da 2006'dan bu yana hizmet veren profesyonel terzi atölyesi. Paça kısaltma, fermuar değişimi, bel daraltma, özel dikim, gelinlik tadilatı, tekstil imalatı ve kuru temizleme. Hurma, Liman, Sarısu, Gürsu, Uncalı bölgelerine hizmet.",
       url: SITE,
       telephone: PHONE_TEL,
       priceRange: '₺₺',
@@ -300,7 +300,7 @@ export default function FermuarTamiriPage() {
 
         <section className="cta-final" aria-label="İletişime geç">
           <h2 className="cta-h ff">Fermuarınız Bozuldu mu?</h2>
-          <p className="cta-sub">Fotoğrafını gönderin, 30 dakikada fiyat alın, aynı gün teslim.</p>
+          <p className="cta-sub">Fotoğrafını gönderin, kısa sürede fiyat alın, aynı gün teslim.</p>
           <div className="cta-btns">
             <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-white">💬 WhatsApp'tan Yazın</a>
             <a href={MAPS} target="_blank" rel="noopener noreferrer" className="btn-outline-white">📍 Google Haritalar</a>

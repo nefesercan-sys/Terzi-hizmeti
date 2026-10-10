@@ -4,6 +4,7 @@
 // Yalnızca gerçekten var olan sayfalara link verir. Puan/yorum verisi içermez.
 // ============================================================
 import { OTEL_BOLGELERI } from '@/lib/otel-bolgeleri';
+import { DISTRICTS, SERVICES, DISTRICT_BASE, SERVICE_BASE, districtUrl, serviceUrl } from '@/lib/seo-data';
 
 export type Lang = 'tr' | 'en' | 'de' | 'ru';
 export type MapLink = { href: string; label: string };
@@ -57,6 +58,18 @@ function regionLinks(base: string, lang: Lang, label: (n: string) => string): Ma
   return OTEL_BOLGELERI.map((r) => ({ href: `${base}/${r.slug}`, label: label(regionName(r.slug, r.name, lang)) }));
 }
 
+const seoServiceLinks = (lang: Lang): MapLink[] => SERVICES.map((s) => ({ href: serviceUrl(lang, s), label: s.name[lang] }));
+const seoDistrictLinks = (lang: Lang): MapLink[] => DISTRICTS.map((d) => ({
+  href: districtUrl(lang, d),
+  label: { tr: `${d.name.tr} terzi`, en: `Tailor ${d.name.en}`, ru: `Портной ${d.name.ru}`, de: `Schneider ${d.name.de}` }[lang],
+}));
+const SEO_TITLES: Record<Lang, { svc: string; dist: string }> = {
+  tr: { svc: 'Terzi hizmetleri (paça, fermuar, tadilat, dikim)', dist: 'Antalya bölgelerine göre terzi' },
+  en: { svc: 'Tailor services (hemming, zippers, alterations, dress making)', dist: 'Tailor by area in Antalya' },
+  ru: { svc: 'Услуги портного (подшив, молнии, переделка, пошив)', dist: 'Портной по районам Антальи' },
+  de: { svc: 'Schneider-Leistungen (Kürzen, Reißverschluss, Änderungen, Maßanfertigung)', dist: 'Schneider nach Gebiet in Antalya' },
+};
+
 export function getLang(pathname: string): Lang | null {
   const p = norm(pathname);
   if (p === '/anavera-tekstil') return 'tr';
@@ -65,11 +78,27 @@ export function getLang(pathname: string): Lang | null {
   if (p.startsWith('/ru/')) return 'ru';
   if (TR_SERVICES.some((l) => l.href === p) || TR_MAHALLELER.some((l) => l.href === p)) return 'tr';
   if (p.startsWith(`${TR_BASE}/`) || p.startsWith('/blog/')) return 'tr';
+  if (p.startsWith(`${DISTRICT_BASE.tr}/`) || p === SERVICE_BASE.tr || p.startsWith(`${SERVICE_BASE.tr}/`)) return 'tr';
   return null;
 }
 
 // ── Sayfa sonu içerik haritası ───────────────────────────────────────────────
 export function getSiteMap(pathname: string): SiteMap | null {
+  const base = getBaseSiteMap(pathname);
+  if (!base) return null;
+  const p = norm(pathname);
+  const not = (l: MapLink) => l.href !== p;
+  return {
+    ...base,
+    sections: [
+      ...base.sections,
+      { title: SEO_TITLES[base.lang].svc, links: seoServiceLinks(base.lang).filter(not) },
+      { title: SEO_TITLES[base.lang].dist, links: seoDistrictLinks(base.lang).filter(not) },
+    ],
+  };
+}
+
+function getBaseSiteMap(pathname: string): SiteMap | null {
   const p = norm(pathname);
   const lang = getLang(p);
   if (!lang) return null;

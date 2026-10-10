@@ -2,14 +2,16 @@
 // işletme şeması zaten aynı yorumları lib/reviews.ts'ten alır (çift işaretleme olmasın).
 import { GOOGLE_REVIEWS, GOOGLE_REVIEW_URL, reviewStats } from '@/lib/reviews';
 
-type L = 'tr' | 'en';
+type L = 'tr' | 'en' | 'ru' | 'de';
 const T = {
   tr: { h: 'Müşteri Yorumları', on: "Google'da", rev: 'yorum', all: "Tüm yorumları Google'da gör" },
   en: { h: 'Customer Reviews', on: 'on Google', rev: 'reviews', all: 'See all reviews on Google' },
+  ru: { h: 'Отзывы клиентов', on: 'в Google', rev: 'отзывов', all: 'Все отзывы в Google' },
+  de: { h: 'Kundenbewertungen', on: 'bei Google', rev: 'Bewertungen', all: 'Alle Bewertungen bei Google ansehen' },
 } as const;
 
 export default function ReviewsBlock({ lang = 'tr' }: { lang?: L }) {
-  const t = T[lang];
+  const t = T[lang] ?? T.en;
   const { count, average } = reviewStats();
   const list = [...GOOGLE_REVIEWS].sort((a, b) => Number(b.lang === lang) - Number(a.lang === lang));
   return (

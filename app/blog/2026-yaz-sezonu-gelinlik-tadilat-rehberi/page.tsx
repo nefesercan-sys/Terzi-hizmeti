@@ -70,7 +70,7 @@ const jsonLd = {
         {
           '@type': 'Question',
           name: '2026 yılında gelinlik tadilatı fiyatları ne kadar?',
-          acceptedAnswer: { '@type': 'Answer', text: `Boy ayarı ₺400'den, bel daraltma ₺500'den, korse/kapama onarımı ₺600'den, abiye tadilatı ₺400'den başlıyor. Kesin fiyat kumaşa ve yapılacak işleme göre ilk provada netleşir. ☎ ${PHONE}` },
+          acceptedAnswer: { '@type': 'Answer', text: `Boy ayarı ₺800'den, bel daraltma ₺800'den, korse/kapama onarımı ₺800'den, abiye tadilatı ₺400'den başlıyor. Kesin fiyat kumaşa ve yapılacak işleme göre ilk provada netleşir. ☎ ${PHONE}` },
         },
         {
           '@type': 'Question',
@@ -152,8 +152,8 @@ export default function BlogPost() {
         <p>
           Atölyemizde yaz aylarında en çok talep edilen işlemler: bel daraltma, boy ayarı,
           korse/kapama onarımı ve terleme nedeniyle esneyen askı/omuz bölgelerinin
-          sıkılaştırılması. 2026 fiyat aralıkları: boy ayarı ₺400'den, bel daraltma ₺500'den,
-          korse/kapama onarımı ₺600'den, abiye tadilatı ₺400'den başlıyor. Kesin fiyat,
+          sıkılaştırılması. 2026 fiyat aralıkları: boy ayarı ₺800'den, bel daraltma ₺800'den,
+          korse/kapama onarımı ₺800'den, abiye tadilatı ₺400'den başlıyor. Kesin fiyat,
           kumaş türüne ve yapılacak işlemin kapsamına göre ilk provada netleşiyor. Detaylı
           bilgi ve tüm hizmetler için{' '}
           <a href="/antalya-gelinlik-tadilati" style={{ color: '#2C4A3E', fontWeight: 700 }}>

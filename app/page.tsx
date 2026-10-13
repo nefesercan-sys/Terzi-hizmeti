@@ -263,17 +263,16 @@ export default function TerziHizmetiPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      <div style={{ background: C.bg, color: C.text, fontFamily:"'Inter','Segoe UI',system-ui,sans-serif", lineHeight: 1.6, minHeight:'100vh' }}>
+      <div style={{ background: C.bg, color: C.text, fontFamily:"var(--font-inter),'Segoe UI',system-ui,sans-serif", lineHeight: 1.6, minHeight:'100vh' }}>
         <style>{`
-          @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Syne:wght@700;800&display=swap');
           *{box-sizing:border-box;margin:0;padding:0}
-          .ff{font-family:'Syne',sans-serif}
+          .ff{font-family:var(--font-syne),sans-serif}
           a{color:inherit;text-decoration:none}
           ::-webkit-scrollbar{width:3px}
           ::-webkit-scrollbar-thumb{background:#333}
 
           .nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:12px 20px;background:rgba(44,74,62,.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08)}
-          .nav-logo{font-family:'Syne',sans-serif;font-size:1rem;font-weight:800;color:#fff;letter-spacing:.04em;display:flex;align-items:center;gap:8px}
+          .nav-logo{font-family:var(--font-syne),sans-serif;font-size:1rem;font-weight:800;color:#fff;letter-spacing:.04em;display:flex;align-items:center;gap:8px}
           .nav-dot{width:8px;height:8px;border-radius:50%;background:#C9A96E}
           .nav-langs{display:flex;gap:6px;align-items:center}
           .lang-badge{font-size:.68rem;font-weight:700;color:rgba(255,255,255,.75);background:rgba(255,255,255,.1);padding:3px 8px;border-radius:3px;border:1px solid rgba(255,255,255,.15)}
@@ -285,7 +284,7 @@ export default function TerziHizmetiPage() {
           .hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(30,51,41,.88) 0%,rgba(30,51,41,.45) 45%,rgba(30,51,41,.1) 100%)}
           .hero-content{position:relative;z-index:2;max-width:920px;margin:0 auto;width:100%}
           .hero-tag{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(201,169,110,.5);color:#C9A96E;font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;padding:6px 14px;border-radius:2px;margin-bottom:1.5rem}
-          .hero h1{font-family:'Syne',sans-serif;font-size:clamp(2.6rem,8vw,5.5rem);font-weight:800;line-height:1.02;letter-spacing:-.02em;margin-bottom:1.2rem}
+          .hero h1{font-family:var(--font-syne),sans-serif;font-size:clamp(2.6rem,8vw,5.5rem);font-weight:800;line-height:1.02;letter-spacing:-.02em;margin-bottom:1.2rem}
           .hero h1 .accent{color:#C9A96E}
           .hero h1 .sub-line{display:block;font-size:clamp(1.5rem,4.5vw,3rem);color:rgba(255,255,255,.75);font-weight:600;margin-top:.4rem}
           .hero-desc{font-size:1.02rem;color:rgba(255,255,255,.72);max-width:620px;line-height:1.75;margin-bottom:2rem}
@@ -297,7 +296,7 @@ export default function TerziHizmetiPage() {
           .btn-secondary:hover{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.3)}
           
           .hero-stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(201,169,110,.25);padding-top:1.8rem;gap:1rem}
-          .stat-n{font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:800;color:#C9A96E;display:block;line-height:1}
+          .stat-n{font-family:var(--font-syne),sans-serif;font-size:1.6rem;font-weight:800;color:#C9A96E;display:block;line-height:1}
           .stat-l{font-size:.65rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.12em;margin-top:.3rem;display:block}
 
           /* YABANCI MÜŞTERİ KARTLARI (EN, RU, DE, TR) */
@@ -318,7 +317,7 @@ export default function TerziHizmetiPage() {
           .sec{padding:5rem 1.5rem}
           .ctr{max-width:980px;margin:0 auto}
           .eyebrow{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:#2C4A3E;font-weight:700;display:block;margin-bottom:.8rem}
-          .sec-h{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;line-height:1.1;margin-bottom:.6rem;color:#1A1A1A}
+          .sec-h{font-family:var(--font-syne),sans-serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;line-height:1.1;margin-bottom:.6rem;color:#1A1A1A}
           .sec-sub{font-size:.92rem;color:#6B7057;max-width:560px;line-height:1.75}
           .sec-head{margin-bottom:2.5rem}
 
@@ -328,13 +327,13 @@ export default function TerziHizmetiPage() {
           .svc-img-wrap{position:relative;width:100%;aspect-ratio:3/2;overflow:hidden;background:#E4DCCC}
           .svc-img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
           .svc-card:hover .svc-img{transform:scale(1.05)}
-          .svc-n-onimg{position:absolute;bottom:.6rem;left:.9rem;font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:800;color:rgba(255,255,255,.9);line-height:1;text-shadow:0 1px 6px rgba(0,0,0,.35);z-index:1}
+          .svc-n-onimg{position:absolute;bottom:.6rem;left:.9rem;font-family:var(--font-syne),sans-serif;font-size:1.6rem;font-weight:800;color:rgba(255,255,255,.9);line-height:1;text-shadow:0 1px 6px rgba(0,0,0,.35);z-index:1}
           .svc-body{padding:1.5rem 1.8rem 1.8rem}
           .svc-title{font-size:1.05rem;font-weight:700;color:#1A1A1A;margin-bottom:.2rem}
           .svc-sub{font-size:.7rem;color:#2C4A3E;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.7rem}
           .svc-desc{font-size:.83rem;color:#6B7057;line-height:1.65;margin-bottom:1.2rem}
           .svc-foot{display:flex;align-items:center;justify-content:space-between}
-          .svc-price{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:800;color:#2C4A3E}
+          .svc-price{font-family:var(--font-syne),sans-serif;font-size:1.1rem;font-weight:800;color:#2C4A3E}
           .svc-time{font-size:.68rem;color:#8FA88C;font-weight:600}
           .svc-btn{display:inline-block;font-size:.72rem;font-weight:700;color:#2C4A3E;border:1px solid rgba(44,74,62,.25);padding:.4rem 1rem;border-radius:2px;margin-top:.9rem;transition:all .2s}
           .svc-btn:hover{background:rgba(44,74,62,.08);border-color:#2C4A3E}
@@ -355,7 +354,7 @@ export default function TerziHizmetiPage() {
           .faq-a{font-size:.83rem;color:#6B7057;line-height:1.65}
 
           .cta-final{background:linear-gradient(135deg,#2C4A3E 0%,#1E3329 100%);color:#fff;padding:4rem 1.5rem;text-align:center}
-          .cta-h{font-family:'Syne',sans-serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;margin-bottom:.7rem}
+          .cta-h{font-family:var(--font-syne),sans-serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;margin-bottom:.7rem}
           .cta-sub{font-size:.95rem;color:rgba(255,255,255,.8);margin-bottom:2rem}
           .cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
           .btn-white{display:inline-flex;align-items:center;gap:10px;background:#C9A96E;color:#1E3329;font-weight:800;font-size:.9rem;padding:14px 24px;border-radius:4px}
@@ -398,7 +397,7 @@ export default function TerziHizmetiPage() {
         {/* HERO SECTION */}
         <section className="hero" id="main" aria-labelledby="hero-h">
           <div className="hero-bg" aria-hidden="true">
-            <img src="/terzi-can-hero.jpg" alt="" className="hero-bg-img" width={1024} height={1024} />
+            <img src="/terzi-can-hero.jpg" alt="" className="hero-bg-img" width={1024} height={1024} fetchPriority="high" decoding="async" />
             <div className="hero-overlay"/>
           </div>
 
@@ -570,7 +569,7 @@ export default function TerziHizmetiPage() {
                 ['04','Teslim Alın / Delivery','Kıyafetinizi ütülenmiş teslim alın / Pick up or home delivery.'],
               ] as [string,string,string][]).map(([n,t,d])=>(
                 <div key={n} style={{paddingTop:'1.5rem',borderTop:`2px solid ${n==='01'?'#C9A96E':'rgba(44,74,62,.12)'}`}}>
-                  <div style={{fontFamily:'Syne,sans-serif',fontSize:'2.5rem',fontWeight:800,color:'rgba(44,74,62,.12)',lineHeight:1,marginBottom:'.5rem'}}>{n}</div>
+                  <div style={{fontFamily:'var(--font-syne),sans-serif',fontSize:'2.5rem',fontWeight:800,color:'rgba(44,74,62,.12)',lineHeight:1,marginBottom:'.5rem'}}>{n}</div>
                   <h3 style={{fontWeight:700,fontSize:'.95rem',color:'#1A1A1A',marginBottom:'.5rem'}}>{t}</h3>
                   <p style={{fontSize:'.82rem',color:'#6B7057',lineHeight:1.65}}>{d}</p>
                 </div>

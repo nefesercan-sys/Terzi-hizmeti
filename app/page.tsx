@@ -397,7 +397,7 @@ export default function TerziHizmetiPage() {
         {/* HERO SECTION */}
         <section className="hero" id="main" aria-labelledby="hero-h">
           <div className="hero-bg" aria-hidden="true">
-            <img src="/terzi-can-hero.webp" alt="" className="hero-bg-img" width={1024} height={1024} fetchPriority="high" decoding="async" />
+            <img src="/terzi-can-hero.webp" srcSet="/terzi-can-hero-640.webp 640w, /terzi-can-hero.webp 1024w" sizes="100vw" alt="" className="hero-bg-img" width={1024} height={1024} fetchPriority="high" decoding="async" />
             <div className="hero-overlay"/>
           </div>
 

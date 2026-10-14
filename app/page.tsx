@@ -228,18 +228,18 @@ const C = {
   dark:  '#2C4A3E',
   gold:  '#C9A96E',
   text:  '#1A1A1A',
-  muted: '#6B7057',
+  muted: '#565C45',
 };
 
 const SERVICES = [
-  { n:'01', title:'Paça Kısaltma', en:'Pants Hemming', ru:'Укоротить брюки', sub:'Pantolon · Etek · Kot / Pants · Skirts', desc:'Erkek ve bayan pantolon, kot, etek paça kısaltma — temiz, görünmez dikiş.', price:'₺150+', time:'Aynı gün / Same day', wa:WA_TR, img:'https://images.pexels.com/photos/6765056/pexels-photo-6765056.jpeg?auto=compress&cs=tinysrgb&w=800&h=533&fit=crop' },
-  { n:'02', title:'Fermuar Değişimi', en:'Zipper Replacement', ru:'Замена молнии', sub:'Pantolon · Mont · Ceket · Çanta', desc:'Pantolon, mont, ceket, sweatshirt ve çanta fermuar değişimi, sıkışan fermuar tamiri.', price:'₺200+', time:'Aynı gün / Same day', wa:WA_TR, img:'https://images.pexels.com/photos/33952439/pexels-photo-33952439.jpeg?auto=compress&cs=tinysrgb&w=800&h=533&fit=crop' },
-  { n:'03', title:'Bel Daraltma & Tadilat', en:'Waist Alterations', ru:'Подгонка по фигуре', sub:'Elbise · Pantolon · Ceket', desc:'Elbise, pantolon ve ceketlerde bel daraltma, vücuda tam oturan ölçü ayarı.', price:'₺150+', time:'Aynı gün / Same day', wa:WA_TR, img:'https://images.pexels.com/photos/18022030/pexels-photo-18022030.jpeg?auto=compress&cs=tinysrgb&w=800&h=533&fit=crop' },
-  { n:'04', title:'Özel Elbise Dikimi', en:'Custom Tailoring', ru:'Пошив на заказ', sub:'Kadın · Erkek · Çocuk / Women & Men', desc:'Kadın elbisesi, erkek takım elbise, gömlek — ölçünüze özel sıfırdan dikim.', price:'₺600+', time:'3 gün / 3 days', wa:WA_TR, img:'https://images.pexels.com/photos/31112215/pexels-photo-31112215.jpeg?auto=compress&cs=tinysrgb&w=800&h=533&fit=crop' },
-  { n:'05', title:'Gelinlik & Abiye Tadilatı', en:'Wedding Dress Alterations', ru:'Ремонт свадебных платьев', sub:'Özel Gün Kıyafetleri / Evening Gowns', desc:'Özel gün kıyafetlerinde hassas daraltma, boy ayarı ve detaylı onarım.', price:'₺800+ (abiye ₺400+)', time:'1 gün / 1 day', wa:WA_TR, img:'https://images.pexels.com/photos/8459366/pexels-photo-8459366.jpeg?auto=compress&cs=tinysrgb&w=800&h=533&fit=crop' },
-  { n:'06', title:'Kuru Temizleme & Ütü', en:'Dry Cleaning & Ironing', ru:'Химчистка и глажка', sub:'Profesyonel Bakım / Laundry', desc:'Profesyonel kuru temizleme, buharlı ütü ve pres hizmeti. Otellerden alım.', price:'₺80+', time:'2–48 saat / hrs', wa:WA_TR, img:'https://images.pexels.com/photos/5202797/pexels-photo-5202797.jpeg?auto=compress&cs=tinysrgb&w=800&h=533&fit=crop' },
-  { n:'07', title:'Eve Gelen Terzi', en:'Mobile Tailor Pickup', ru:'Выездной портной', sub:'Hurma · Liman · Sarısu Ücretsiz / Free Pickup', desc:'Araçlı terzi servisi: adresinizde ölçü alma, dikip 3 günde, tadilatları ise aynı gün veya ertesi gün teslim.', price:'Ücretsiz / Free', time:'24 saat / hrs', wa:WA_TR, img:'https://images.pexels.com/photos/6765658/pexels-photo-6765658.jpeg?auto=compress&cs=tinysrgb&w=800&h=533&fit=crop' },
-  { n:'08', title:'Üniforma & Seri İmalat', en:'Uniform Manufacturing', ru:'Пошив униформы', sub:'Otel · Restoran · Okul / Hotel & Uniforms', desc:'Toplu üniforma üretimi, fason tekstil, seri imalat ve nakış hizmeti.', price:'Teklif Al', time:'Proje bazlı', wa:WA_TR, img:'https://images.pexels.com/photos/5378708/pexels-photo-5378708.jpeg?auto=compress&cs=tinysrgb&w=800&h=533&fit=crop' },
+  { n:'01', title:'Paça Kısaltma', en:'Pants Hemming', ru:'Укоротить брюки', sub:'Pantolon · Etek · Kot / Pants · Skirts', desc:'Erkek ve bayan pantolon, kot, etek paça kısaltma — temiz, görünmez dikiş.', price:'₺150+', time:'Aynı gün / Same day', wa:WA_TR, img:'https://images.pexels.com/photos/6765056/pexels-photo-6765056.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop' },
+  { n:'02', title:'Fermuar Değişimi', en:'Zipper Replacement', ru:'Замена молнии', sub:'Pantolon · Mont · Ceket · Çanta', desc:'Pantolon, mont, ceket, sweatshirt ve çanta fermuar değişimi, sıkışan fermuar tamiri.', price:'₺200+', time:'Aynı gün / Same day', wa:WA_TR, img:'https://images.pexels.com/photos/33952439/pexels-photo-33952439.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop' },
+  { n:'03', title:'Bel Daraltma & Tadilat', en:'Waist Alterations', ru:'Подгонка по фигуре', sub:'Elbise · Pantolon · Ceket', desc:'Elbise, pantolon ve ceketlerde bel daraltma, vücuda tam oturan ölçü ayarı.', price:'₺150+', time:'Aynı gün / Same day', wa:WA_TR, img:'https://images.pexels.com/photos/18022030/pexels-photo-18022030.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop' },
+  { n:'04', title:'Özel Elbise Dikimi', en:'Custom Tailoring', ru:'Пошив на заказ', sub:'Kadın · Erkek · Çocuk / Women & Men', desc:'Kadın elbisesi, erkek takım elbise, gömlek — ölçünüze özel sıfırdan dikim.', price:'₺600+', time:'3 gün / 3 days', wa:WA_TR, img:'https://images.pexels.com/photos/31112215/pexels-photo-31112215.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop' },
+  { n:'05', title:'Gelinlik & Abiye Tadilatı', en:'Wedding Dress Alterations', ru:'Ремонт свадебных платьев', sub:'Özel Gün Kıyafetleri / Evening Gowns', desc:'Özel gün kıyafetlerinde hassas daraltma, boy ayarı ve detaylı onarım.', price:'₺800+ (abiye ₺400+)', time:'1 gün / 1 day', wa:WA_TR, img:'https://images.pexels.com/photos/8459366/pexels-photo-8459366.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop' },
+  { n:'06', title:'Kuru Temizleme & Ütü', en:'Dry Cleaning & Ironing', ru:'Химчистка и глажка', sub:'Profesyonel Bakım / Laundry', desc:'Profesyonel kuru temizleme, buharlı ütü ve pres hizmeti. Otellerden alım.', price:'₺80+', time:'2–48 saat / hrs', wa:WA_TR, img:'https://images.pexels.com/photos/5202797/pexels-photo-5202797.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop' },
+  { n:'07', title:'Eve Gelen Terzi', en:'Mobile Tailor Pickup', ru:'Выездной портной', sub:'Hurma · Liman · Sarısu Ücretsiz / Free Pickup', desc:'Araçlı terzi servisi: adresinizde ölçü alma, dikip 3 günde, tadilatları ise aynı gün veya ertesi gün teslim.', price:'Ücretsiz / Free', time:'24 saat / hrs', wa:WA_TR, img:'https://images.pexels.com/photos/6765658/pexels-photo-6765658.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop' },
+  { n:'08', title:'Üniforma & Seri İmalat', en:'Uniform Manufacturing', ru:'Пошив униформы', sub:'Otel · Restoran · Okul / Hotel & Uniforms', desc:'Toplu üniforma üretimi, fason tekstil, seri imalat ve nakış hizmeti.', price:'Teklif Al', time:'Proje bazlı', wa:WA_TR, img:'https://images.pexels.com/photos/5378708/pexels-photo-5378708.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop' },
 ];
 
 const DISTRICTS = [
@@ -297,7 +297,7 @@ export default function TerziHizmetiPage() {
           
           .hero-stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(201,169,110,.25);padding-top:1.8rem;gap:1rem}
           .stat-n{font-family:var(--font-syne),sans-serif;font-size:1.6rem;font-weight:800;color:#C9A96E;display:block;line-height:1}
-          .stat-l{font-size:.65rem;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:.12em;margin-top:.3rem;display:block}
+          .stat-l{font-size:.65rem;color:rgba(255,255,255,.75);text-transform:uppercase;letter-spacing:.12em;margin-top:.3rem;display:block}
 
           /* YABANCI MÜŞTERİ KARTLARI (EN, RU, DE, TR) */
           .lang-cards-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-bottom:2.5rem}
@@ -318,7 +318,7 @@ export default function TerziHizmetiPage() {
           .ctr{max-width:980px;margin:0 auto}
           .eyebrow{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:#2C4A3E;font-weight:700;display:block;margin-bottom:.8rem}
           .sec-h{font-family:var(--font-syne),sans-serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;line-height:1.1;margin-bottom:.6rem;color:#1A1A1A}
-          .sec-sub{font-size:.92rem;color:#6B7057;max-width:560px;line-height:1.75}
+          .sec-sub{font-size:.92rem;color:#565C45;max-width:560px;line-height:1.75}
           .sec-head{margin-bottom:2.5rem}
 
           .svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1px;background:rgba(255,255,255,.05)}
@@ -331,10 +331,10 @@ export default function TerziHizmetiPage() {
           .svc-body{padding:1.5rem 1.8rem 1.8rem}
           .svc-title{font-size:1.05rem;font-weight:700;color:#1A1A1A;margin-bottom:.2rem}
           .svc-sub{font-size:.7rem;color:#2C4A3E;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.7rem}
-          .svc-desc{font-size:.83rem;color:#6B7057;line-height:1.65;margin-bottom:1.2rem}
+          .svc-desc{font-size:.83rem;color:#565C45;line-height:1.65;margin-bottom:1.2rem}
           .svc-foot{display:flex;align-items:center;justify-content:space-between}
           .svc-price{font-family:var(--font-syne),sans-serif;font-size:1.1rem;font-weight:800;color:#2C4A3E}
-          .svc-time{font-size:.68rem;color:#8FA88C;font-weight:600}
+          .svc-time{font-size:.68rem;color:#3F6B45;font-weight:600}
           .svc-btn{display:inline-block;font-size:.72rem;font-weight:700;color:#2C4A3E;border:1px solid rgba(44,74,62,.25);padding:.4rem 1rem;border-radius:2px;margin-top:.9rem;transition:all .2s}
           .svc-btn:hover{background:rgba(44,74,62,.08);border-color:#2C4A3E}
 
@@ -346,12 +346,12 @@ export default function TerziHizmetiPage() {
           .dist-card{background:#EDE6DA;border:1px solid rgba(255,255,255,.06);border-radius:4px;padding:12px 14px}
           .dist-card.free{border-color:rgba(74,222,128,.2);background:rgba(74,222,128,.04)}
           .dist-name{font-size:.88rem;font-weight:700;color:#1A1A1A;display:block}
-          .dist-tag{font-size:.62rem;color:#6B7057;text-transform:uppercase;letter-spacing:.08em;margin-top:.15rem;display:block}
+          .dist-tag{font-size:.62rem;color:#565C45;text-transform:uppercase;letter-spacing:.08em;margin-top:.15rem;display:block}
           .dist-tag.free-tag{color:#2C4A3E;font-weight:700}
 
           .faq-item{border-bottom:1px solid rgba(44,74,62,.1);padding:1.2rem 0}
           .faq-q{font-weight:700;font-size:.95rem;color:#1A1A1A;margin-bottom:.5rem}
-          .faq-a{font-size:.83rem;color:#6B7057;line-height:1.65}
+          .faq-a{font-size:.83rem;color:#565C45;line-height:1.65}
 
           .cta-final{background:linear-gradient(135deg,#2C4A3E 0%,#1E3329 100%);color:#fff;padding:4rem 1.5rem;text-align:center}
           .cta-h{font-family:var(--font-syne),sans-serif;font-size:clamp(1.8rem,4vw,2.8rem);font-weight:800;margin-bottom:.7rem}
@@ -365,7 +365,7 @@ export default function TerziHizmetiPage() {
           .fbtn-call{background:#2C4A3E;color:#fff}
           .fbtn-wa{background:#25D366;color:#fff}
 
-          footer{background:#1E3329;border-top:1px solid rgba(201,169,110,.15);padding:2rem 1.5rem;text-align:center;font-size:.74rem;color:rgba(255,255,255,.5)}
+          footer{background:#1E3329;border-top:1px solid rgba(201,169,110,.15);padding:2rem 1.5rem;text-align:center;font-size:.74rem;color:rgba(255,255,255,.75)}
           .foot-links{display:flex;justify-content:center;gap:1.2rem;flex-wrap:wrap;margin-top:.7rem}
           .foot-links a{color:rgba(255,255,255,.45)}
           .foot-links a:hover{color:#C9A96E}
@@ -395,7 +395,8 @@ export default function TerziHizmetiPage() {
         </nav>
 
         {/* HERO SECTION */}
-        <section className="hero" id="main" aria-labelledby="hero-h">
+        <main id="main">
+        <section className="hero" aria-labelledby="hero-h">
           <div className="hero-bg" aria-hidden="true">
             <img src="/terzi-can-hero-1024.jpg" srcSet="/terzi-can-hero-640.jpg 640w, /terzi-can-hero-1024.jpg 1024w" sizes="100vw" alt="" className="hero-bg-img" width={1024} height={1024} fetchPriority="high" decoding="async" />
             <div className="hero-overlay"/>
@@ -471,7 +472,7 @@ export default function TerziHizmetiPage() {
                 <div key={l}>
                   <span className="stat-n">{n}</span>
                   <span className="stat-l">{l}</span>
-                  <span style={{fontSize:'.65rem',color:'rgba(255,255,255,.35)',display:'block',marginTop:'.1rem'}}>{d}</span>
+                  <span style={{fontSize:'.65rem',color:'rgba(255,255,255,.65)',display:'block',marginTop:'.1rem'}}>{d}</span>
                 </div>
               ))}
             </div>
@@ -511,12 +512,12 @@ export default function TerziHizmetiPage() {
             {SERVICES.map(s=>(
               <div className="svc-card" key={s.n}>
                 <div className="svc-img-wrap">
-                  <img src={s.img} alt={`${s.title} — ${s.en} — ${s.ru} Terzi Can Antalya`} className="svc-img" loading="lazy" width={800} height={533} />
+                  <img src={s.img} alt={`${s.title} — ${s.en} — ${s.ru} Terzi Can Antalya`} className="svc-img" loading="lazy" width={600} height={400} />
                   <div className="svc-n svc-n-onimg">{s.n}</div>
                 </div>
                 <div className="svc-body">
                   <h3 className="svc-title">{s.title}</h3>
-                  <div style={{fontSize:'.72rem',color:'#C9A96E',fontWeight:700,marginBottom:'.2rem'}}>{s.en} · {s.ru}</div>
+                  <div style={{fontSize:'.72rem',color:'#7A5C1E',fontWeight:700,marginBottom:'.2rem'}}>{s.en} · {s.ru}</div>
                   <div className="svc-sub">{s.sub}</div>
                   <p className="svc-desc">{s.desc}</p>
                   <div className="svc-foot">
@@ -542,12 +543,12 @@ export default function TerziHizmetiPage() {
             </div>
             <div className="gallery-grid">
               {[
-                { img:'https://images.pexels.com/photos/6765056/pexels-photo-6765056.jpeg?auto=compress&cs=tinysrgb&w=700&h=467&fit=crop', alt:'Tailor taking measurements — Terzi Can Antalya Konyaaltı' },
-                { img:'https://images.pexels.com/photos/18022030/pexels-photo-18022030.jpeg?auto=compress&cs=tinysrgb&w=700&h=467&fit=crop', alt:'Tailor sewing dress — Terzi Can Konyaaltı Antalya' },
-                { img:'https://images.pexels.com/photos/31112215/pexels-photo-31112215.jpeg?auto=compress&cs=tinysrgb&w=700&h=467&fit=crop', alt:'Textile workshop — Terzi Can Antalya' },
+                { img:'https://images.pexels.com/photos/6765056/pexels-photo-6765056.jpeg?auto=compress&cs=tinysrgb&w=560&h=373&fit=crop', alt:'Tailor taking measurements — Terzi Can Antalya Konyaaltı' },
+                { img:'https://images.pexels.com/photos/18022030/pexels-photo-18022030.jpeg?auto=compress&cs=tinysrgb&w=560&h=373&fit=crop', alt:'Tailor sewing dress — Terzi Can Konyaaltı Antalya' },
+                { img:'https://images.pexels.com/photos/31112215/pexels-photo-31112215.jpeg?auto=compress&cs=tinysrgb&w=560&h=373&fit=crop', alt:'Textile workshop — Terzi Can Antalya' },
               ].map((g,i)=>(
                 <div className="gallery-item" key={i}>
-                  <img src={g.img} alt={g.alt} loading="lazy" width={700} height={467} />
+                  <img src={g.img} alt={g.alt} loading="lazy" width={560} height={373} />
                 </div>
               ))}
             </div>
@@ -571,7 +572,7 @@ export default function TerziHizmetiPage() {
                 <div key={n} style={{paddingTop:'1.5rem',borderTop:`2px solid ${n==='01'?'#C9A96E':'rgba(44,74,62,.12)'}`}}>
                   <div style={{fontFamily:'var(--font-syne),sans-serif',fontSize:'2.5rem',fontWeight:800,color:'rgba(44,74,62,.12)',lineHeight:1,marginBottom:'.5rem'}}>{n}</div>
                   <h3 style={{fontWeight:700,fontSize:'.95rem',color:'#1A1A1A',marginBottom:'.5rem'}}>{t}</h3>
-                  <p style={{fontSize:'.82rem',color:'#6B7057',lineHeight:1.65}}>{d}</p>
+                  <p style={{fontSize:'.82rem',color:'#565C45',lineHeight:1.65}}>{d}</p>
                 </div>
               ))}
             </div>
@@ -584,7 +585,7 @@ export default function TerziHizmetiPage() {
             <div className="sec-head">
               <span className="eyebrow">📍 HİZMET BÖLGELERİ / SERVICE AREAS</span>
               <h2 className="sec-h ff" id="dist-h">Konyaaltı & Antalya<br/>Terzi Servis Bölgeleri</h2>
-              <p className="sec-sub">Hurma, Sarısu ve Liman'a <strong style={{color:'#8FA88C'}}>ücretsiz</strong> adresten alım ve teslimat. Free pickup in Hurma, Liman, Sarisu!</p>
+              <p className="sec-sub">Hurma, Sarısu ve Liman'a <strong style={{color:'#3F6B45'}}>ücretsiz</strong> adresten alım ve teslimat. Free pickup in Hurma, Liman, Sarisu!</p>
             </div>
             <div className="dist-grid">
               {DISTRICTS.map(d=>(
@@ -628,25 +629,26 @@ export default function TerziHizmetiPage() {
         {/* FOOTER */}
         <section className="sec" aria-labelledby="seo-links-h" style={{ paddingTop: 0 }}>
           <div className="ctr" style={{ maxWidth: 900 }}>
-            <h2 id="seo-links-h" style={{ fontSize: '.78rem', letterSpacing: '.12em', textTransform: 'uppercase', opacity: .55, marginBottom: '.9rem' }}>
+            <h2 id="seo-links-h" style={{ fontSize: '.78rem', letterSpacing: '.12em', textTransform: 'uppercase', opacity: .85, marginBottom: '.9rem' }}>
               Terzi hizmetleri ve Antalya bölgeleri
             </h2>
             <nav aria-label="Hizmetler ve bölgeler" style={{ fontSize: '.8rem', lineHeight: 2 }}>
-              <a href={SERVICE_BASE.tr} style={{ color: '#C9A96E', fontWeight: 700, marginRight: '1rem' }}>Tüm hizmetler →</a>
-              {SEO_SERVICES.map((sv) => (<a key={sv.id} href={serviceUrl('tr', sv)} style={{ color: 'rgba(255,255,255,.6)', marginRight: '1rem', whiteSpace: 'nowrap' }}>{sv.name.tr}</a>))}
+              <a href={SERVICE_BASE.tr} style={{ color: '#7A5C1E', fontWeight: 700, marginRight: '1rem' }}>Tüm hizmetler →</a>
+              {SEO_SERVICES.map((sv) => (<a key={sv.id} href={serviceUrl('tr', sv)} style={{ color: '#4A4F3C', marginRight: '1rem', whiteSpace: 'nowrap' }}>{sv.name.tr}</a>))}
               <br />
-              {SEO_DISTRICTS.map((d) => (<a key={d.slug} href={districtUrl('tr', d)} style={{ color: 'rgba(255,255,255,.6)', marginRight: '1rem', whiteSpace: 'nowrap' }}>{d.name.tr} terzi</a>))}
+              {SEO_DISTRICTS.map((d) => (<a key={d.slug} href={districtUrl('tr', d)} style={{ color: '#4A4F3C', marginRight: '1rem', whiteSpace: 'nowrap' }}>{d.name.tr} terzi</a>))}
               <br />
-              <a href="/en/tailor-services" hrefLang="en" style={{ color: 'rgba(255,255,255,.6)', marginRight: '1rem' }}>English: Tailor services</a>
-              <a href="/ru/uslugi-portnogo" hrefLang="ru" style={{ color: 'rgba(255,255,255,.6)', marginRight: '1rem' }}>Русский: Услуги портного</a>
-              <a href="/de/schneider-leistungen" hrefLang="de" style={{ color: 'rgba(255,255,255,.6)', marginRight: '1rem' }}>Deutsch: Schneider-Leistungen</a>
+              <a href="/en/tailor-services" hrefLang="en" style={{ color: '#4A4F3C', marginRight: '1rem' }}>English: Tailor services</a>
+              <a href="/ru/uslugi-portnogo" hrefLang="ru" style={{ color: '#4A4F3C', marginRight: '1rem' }}>Русский: Услуги портного</a>
+              <a href="/de/schneider-leistungen" hrefLang="de" style={{ color: '#4A4F3C', marginRight: '1rem' }}>Deutsch: Schneider-Leistungen</a>
             </nav>
           </div>
         </section>
         <ReviewsBlock lang="tr" />
+        </main>
         <footer>
           <div>© 2026 Terzi Can · Konyaaltı, Antalya · {PHONE}</div>
-          <div style={{marginTop:4,fontSize:'.68rem',color:'rgba(255,255,255,.4)'}}>We speak Turkish, English, Russian & German</div>
+          <div style={{marginTop:4,fontSize:'.68rem',color:'rgba(255,255,255,.7)'}}>We speak Turkish, English, Russian & German</div>
           <nav className="foot-links" aria-label="District Pages">
             <a href="/antalya-terzi">Antalya Terzi (Tüm Bölgeler)</a>
             <a href="/hurma-terzi">Hurma Terzi</a>

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { preconnect } from 'react-dom';
 import ReviewsBlock from '@/components/ReviewsBlock';
 import { reviewSchema } from '@/lib/reviews';
 import { DISTRICTS as SEO_DISTRICTS, SERVICES as SEO_SERVICES, SERVICE_BASE, districtUrl, serviceUrl } from '@/lib/seo-data';
@@ -259,6 +260,7 @@ const FAQS = [
 ];
 
 export default function TerziHizmetiPage() {
+  preconnect('https://images.pexels.com');
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
@@ -509,10 +511,10 @@ export default function TerziHizmetiPage() {
             </div>
           </div>
           <div className="svc-grid">
-            {SERVICES.map(s=>(
+            {SERVICES.map((s,i)=>(
               <div className="svc-card" key={s.n}>
                 <div className="svc-img-wrap">
-                  <img src={s.img} alt={`${s.title} — ${s.en} — ${s.ru} Terzi Can Antalya`} className="svc-img" loading="lazy" width={600} height={400} />
+                  <img src={s.img} alt={`${s.title} — ${s.en} — ${s.ru} Terzi Can Antalya`} className="svc-img" loading={i===0?'eager':'lazy'} fetchPriority={i===0?'high':'auto'} decoding="async" width={600} height={400} />
                   <div className="svc-n svc-n-onimg">{s.n}</div>
                 </div>
                 <div className="svc-body">

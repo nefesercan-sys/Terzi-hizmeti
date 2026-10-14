@@ -311,7 +311,7 @@ export default function TerziHizmetiPage() {
           .ticker-wrap{background:#2C4A3E;padding:.55rem 0;overflow:hidden;white-space:nowrap}
           .ticker-inner{display:inline-flex;animation:ticker 35s linear infinite}
           .ticker-item{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;padding:0 2rem}
-          .ticker-dot{color:rgba(255,255,255,.4);margin:0 .5rem}
+          .ticker-dot{color:rgba(255,255,255,.7);margin:0 .5rem}
           @keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
           .sec{padding:5rem 1.5rem}
@@ -367,7 +367,7 @@ export default function TerziHizmetiPage() {
 
           footer{background:#1E3329;border-top:1px solid rgba(201,169,110,.15);padding:2rem 1.5rem;text-align:center;font-size:.74rem;color:rgba(255,255,255,.75)}
           .foot-links{display:flex;justify-content:center;gap:1.2rem;flex-wrap:wrap;margin-top:.7rem}
-          .foot-links a{color:rgba(255,255,255,.45)}
+          .foot-links a{color:rgba(255,255,255,.8)}
           .foot-links a:hover{color:#C9A96E}
         `}</style>
 

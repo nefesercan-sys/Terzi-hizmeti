@@ -61,7 +61,7 @@ export function HizliEylemBandi() {
           {primary.slogan}
         </span>
         <a href={href} target="_blank" rel="noopener noreferrer"
-          style={{ background: '#25D366', color: '#fff', fontWeight: 800, fontSize: '.85rem', padding: '.4rem 1rem', borderRadius: 8, textDecoration: 'none', whiteSpace: 'nowrap' }}>
+          style={{ background: '#0F7B3C', color: '#fff', fontWeight: 800, fontSize: '.85rem', padding: '.4rem 1rem', borderRadius: 8, textDecoration: 'none', whiteSpace: 'nowrap' }}>
           {primary.actionText}
         </a>
       </div>
@@ -92,7 +92,7 @@ export function HizliAkis() {
       </ol>
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '.6rem', marginTop: '1rem' }}>
         <a href={href} target="_blank" rel="noopener noreferrer"
-          style={{ background: '#25D366', color: '#fff', fontWeight: 800, padding: '.6rem 1.2rem', borderRadius: 8, textDecoration: 'none' }}>
+          style={{ background: '#0F7B3C', color: '#fff', fontWeight: 800, padding: '.6rem 1.2rem', borderRadius: 8, textDecoration: 'none' }}>
           {s.cta}
         </a>
         {extra.map((e) => (

@@ -363,7 +363,7 @@ export default function TerziHizmetiPage() {
           .float{position:fixed;bottom:20px;right:16px;z-index:99;display:flex;flex-direction:column;gap:10px}
           .fbtn{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.3rem;box-shadow:0 4px 14px rgba(0,0,0,.4)}
           .fbtn-call{background:#2C4A3E;color:#fff}
-          .fbtn-wa{background:#25D366;color:#fff}
+          .fbtn-wa{background:#0F7B3C;color:#fff}
 
           footer{background:#1E3329;border-top:1px solid rgba(201,169,110,.15);padding:2rem 1.5rem;text-align:center;font-size:.74rem;color:rgba(255,255,255,.75)}
           .foot-links{display:flex;justify-content:center;gap:1.2rem;flex-wrap:wrap;margin-top:.7rem}
@@ -570,7 +570,7 @@ export default function TerziHizmetiPage() {
                 ['04','Teslim Alın / Delivery','Kıyafetinizi ütülenmiş teslim alın / Pick up or home delivery.'],
               ] as [string,string,string][]).map(([n,t,d])=>(
                 <div key={n} style={{paddingTop:'1.5rem',borderTop:`2px solid ${n==='01'?'#C9A96E':'rgba(44,74,62,.12)'}`}}>
-                  <div style={{fontFamily:'var(--font-syne),sans-serif',fontSize:'2.5rem',fontWeight:800,color:'rgba(44,74,62,.12)',lineHeight:1,marginBottom:'.5rem'}}>{n}</div>
+                  <div style={{fontFamily:'var(--font-syne),sans-serif',fontSize:'2.5rem',fontWeight:800,color:'#6F7F73',lineHeight:1,marginBottom:'.5rem'}} aria-hidden="true">{n}</div>
                   <h3 style={{fontWeight:700,fontSize:'.95rem',color:'#1A1A1A',marginBottom:'.5rem'}}>{t}</h3>
                   <p style={{fontSize:'.82rem',color:'#565C45',lineHeight:1.65}}>{d}</p>
                 </div>
@@ -626,26 +626,26 @@ export default function TerziHizmetiPage() {
           </div>
         </section>
 
+        <ReviewsBlock lang="tr" />
+        </main>
         {/* FOOTER */}
-        <section className="sec" aria-labelledby="seo-links-h" style={{ paddingTop: 0 }}>
+        <section className="sec" aria-labelledby="seo-links-h" style={{ paddingTop: '2.5rem', paddingBottom: '1rem', background: '#1E3329', color: '#F5F1E8' }}>
           <div className="ctr" style={{ maxWidth: 900 }}>
-            <h2 id="seo-links-h" style={{ fontSize: '.78rem', letterSpacing: '.12em', textTransform: 'uppercase', opacity: .85, marginBottom: '.9rem' }}>
+            <h2 id="seo-links-h" style={{ fontSize: '.78rem', letterSpacing: '.12em', textTransform: 'uppercase', opacity: .9, marginBottom: '.9rem' }}>
               Terzi hizmetleri ve Antalya bölgeleri
             </h2>
             <nav aria-label="Hizmetler ve bölgeler" style={{ fontSize: '.8rem', lineHeight: 2 }}>
-              <a href={SERVICE_BASE.tr} style={{ color: '#7A5C1E', fontWeight: 700, marginRight: '1rem' }}>Tüm hizmetler →</a>
-              {SEO_SERVICES.map((sv) => (<a key={sv.id} href={serviceUrl('tr', sv)} style={{ color: '#4A4F3C', marginRight: '1rem', whiteSpace: 'nowrap' }}>{sv.name.tr}</a>))}
+              <a href={SERVICE_BASE.tr} style={{ color: '#C9A96E', fontWeight: 700, marginRight: '1rem' }}>Tüm hizmetler →</a>
+              {SEO_SERVICES.map((sv) => (<a key={sv.id} href={serviceUrl('tr', sv)} style={{ color: 'rgba(255,255,255,.82)', marginRight: '1rem', whiteSpace: 'nowrap' }}>{sv.name.tr}</a>))}
               <br />
-              {SEO_DISTRICTS.map((d) => (<a key={d.slug} href={districtUrl('tr', d)} style={{ color: '#4A4F3C', marginRight: '1rem', whiteSpace: 'nowrap' }}>{d.name.tr} terzi</a>))}
+              {SEO_DISTRICTS.map((d) => (<a key={d.slug} href={districtUrl('tr', d)} style={{ color: 'rgba(255,255,255,.82)', marginRight: '1rem', whiteSpace: 'nowrap' }}>{d.name.tr} terzi</a>))}
               <br />
-              <a href="/en/tailor-services" hrefLang="en" style={{ color: '#4A4F3C', marginRight: '1rem' }}>English: Tailor services</a>
-              <a href="/ru/uslugi-portnogo" hrefLang="ru" style={{ color: '#4A4F3C', marginRight: '1rem' }}>Русский: Услуги портного</a>
-              <a href="/de/schneider-leistungen" hrefLang="de" style={{ color: '#4A4F3C', marginRight: '1rem' }}>Deutsch: Schneider-Leistungen</a>
+              <a href="/en/tailor-services" hrefLang="en" style={{ color: 'rgba(255,255,255,.82)', marginRight: '1rem' }}>English: Tailor services</a>
+              <a href="/ru/uslugi-portnogo" hrefLang="ru" style={{ color: 'rgba(255,255,255,.82)', marginRight: '1rem' }}>Русский: Услуги портного</a>
+              <a href="/de/schneider-leistungen" hrefLang="de" style={{ color: 'rgba(255,255,255,.82)', marginRight: '1rem' }}>Deutsch: Schneider-Leistungen</a>
             </nav>
           </div>
         </section>
-        <ReviewsBlock lang="tr" />
-        </main>
         <footer>
           <div>© 2026 Terzi Can · Konyaaltı, Antalya · {PHONE}</div>
           <div style={{marginTop:4,fontSize:'.68rem',color:'rgba(255,255,255,.7)'}}>We speak Turkish, English, Russian & German</div>

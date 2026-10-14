@@ -22,14 +22,14 @@ export default function ReviewsBlock({ lang = 'tr' }: { lang?: L }) {
     >
       <h2 id="yorumlar-baslik" style={{ fontSize: 20, fontWeight: 800, marginBottom: 4 }}>{t.h}</h2>
       <p style={{ fontSize: 14, margin: '0 0 14px', opacity: 0.85 }}>
-        <span aria-hidden="true" style={{ color: '#f5a623' }}>★★★★★</span> {average} · {count} {t.rev} {t.on}
+        <span aria-hidden="true" style={{ color: '#9A5B00' }}>★★★★★</span> {average} · {count} {t.rev} {t.on}
       </p>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(260px,1fr))', gap: 12 }}>
         {list.map((r) => (
           <figure key={r.author + r.date} style={{ margin: 0, border: '1px solid rgba(128,128,128,.35)', borderRadius: 12, padding: 14 }}>
-            <div style={{ color: '#f5a623', fontSize: 14 }} aria-label={`${r.rating} / 5`}>{'★'.repeat(r.rating)}</div>
+            <div style={{ color: '#9A5B00', fontSize: 14 }} aria-label={`${r.rating} / 5`}>{'★'.repeat(r.rating)}</div>
             <blockquote style={{ margin: '8px 0', fontSize: 14, lineHeight: 1.6 }}>{r.text}</blockquote>
-            <figcaption style={{ fontSize: 12, opacity: 0.7 }}>{r.author} · {r.date}</figcaption>
+            <figcaption style={{ fontSize: 12, opacity: 0.85 }}>{r.author} · {r.date}</figcaption>
           </figure>
         ))}
       </div>

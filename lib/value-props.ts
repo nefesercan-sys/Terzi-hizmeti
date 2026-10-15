@@ -81,6 +81,18 @@ export const STEPS: Record<Lang, { heading: string; steps: { title: string; desc
 
 // Sayfaya özel hazır WhatsApp mesajı: o sayfadaki hizmete göre
 const PAGE_MSG: { match: RegExp; msg: Record<Lang, string> }[] = [
+  // Turist ekspres tadilat sayfaları (en: tourist-clothing-alterations, de: kleidung-aendern-urlaub, ru: podgonka-odezhdy-turistam)
+  { match: /tourist-clothing-alterations|kleidung-aendern-urlaub|podgonka-odezhdy-turistam/i, msg: {
+    tr: 'Merhaba, turistim; satın aldığım kıyafet için tadilat gerekiyor. Fotoğraf gönderiyorum, acil mi, fiyat nedir?',
+    en: 'Hello, I bought clothes in Antalya and need an alteration. I am sending a photo. Is it urgent? What is the price?',
+    de: 'Hallo, ich habe in Antalya Kleidung gekauft und brauche eine Änderung. Ich sende ein Foto. Ist es eilig? Was kostet es?',
+    ru: 'Здравствуйте, купил(а) одежду в Анталье, нужна подгонка. Отправляю фото. Это срочно? Сколько стоит?' } },
+  // Keten/pamuk özel dikim: ürün sayfalarında 'trousers/hose/bryuk' geçtiği için paça kısaltma kuralından ÖNCE gelmeli
+  { match: /keten|linen|leinen|lyon|lnyan/i, msg: {
+    tr: 'Merhaba, keten/pamuk özel dikim için bilgi almak istiyorum.',
+    en: 'Hello, I am visiting Antalya and would like something made in linen or cotton. Could you tell me the price and timing?',
+    de: 'Hallo, ich bin in Antalya und möchte etwas aus Leinen/Baumwolle nach Maß anfertigen lassen. Preis und Zeitplan?',
+    ru: 'Здравствуйте, я в Анталье и хочу заказать пошив из льна/хлопка. Подскажите цену и сроки?' } },
   { match: /paca|hemming|trouser|hose|bryuk|ukoroch/i, msg: {
     tr: 'Merhaba, paça kısaltma için fotoğraf gönderiyorum. Fiyat nedir?',
     en: 'Hello, I am sending a photo for trouser hemming. What is the price?',
@@ -102,11 +114,6 @@ const PAGE_MSG: { match: RegExp; msg: Record<Lang, string> }[] = [
     de: 'Hallo, ich möchte Informationen zur Uniformfertigung.',
     ru: 'Здравствуйте, хочу узнать о пошиве униформы.' } },
   { match: /otel|hotel|vyezdnoy/i, msg: VALUE_PROP_HOTEL() },
-  { match: /keten|linen|leinen|lyon/i, msg: {
-    tr: 'Merhaba, keten/pamuk özel dikim için bilgi almak istiyorum.',
-    en: 'Hello, I would like information about custom linen or cotton clothing.',
-    de: 'Hallo, ich möchte Informationen zu maßgeschneiderter Leinen-/Baumwollkleidung.',
-    ru: 'Здравствуйте, хочу узнать о пошиве из льна или хлопка.' } },
 ];
 
 function VALUE_PROP_HOTEL(): Record<Lang, string> {

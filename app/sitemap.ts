@@ -1,12 +1,13 @@
 import type { MetadataRoute } from 'next';
 import { OTEL_BOLGELERI } from '@/lib/otel-bolgeleri';
 import { DISTRICTS, SERVICES, LANGS, SERVICE_BASE, districtUrl, serviceUrl, LAST_UPDATE, type Lang } from '@/lib/seo-data';
+import { TLANGS, allNewPages, hubUrl, TR_HUB, TURIST_UPDATE } from '@/lib/turist-keten';
 
 const SITE = "https://terzihizmeti.com.tr";
 const NOW = new Date('2026-10-10');   // v36'da değişen sayfalar
 const OLD = new Date('2026-09-20');   // v36'da değişmeyen sayfalar (sahte güncelleme tarihi verme)
 // İçeriği değişen sayfalar (yorum bölümü eklenenler dahil) — yeni içerik eklenince buraya ekle
-const CHANGED = new Set(['', '/antalya-terzi', '/antalya-terzi-fiyatlari', '/antalya-gelinlik-tadilati', '/antalya-uniforma-imalati', '/en/tailor-service-antalya', '/de/schneiderservice-antalya', '/gursu-terzi', '/hurma-terzi', '/liman-terzi', '/sarisu-terzi', '/uncali-terzi', '/keten-pamuk-ozel-dikim', '/konyaalti-fermuar-tamiri', '/konyaalti-paca-kisaltma', '/otele-gelen-terzi-antalya', '/blog/2026-yaz-sezonu-gelinlik-tadilat-rehberi']);
+const CHANGED = new Set(['', '/antalya-terzi', '/antalya-terzi-fiyatlari', '/antalya-gelinlik-tadilati', '/antalya-uniforma-imalati', '/en/tailor-service-antalya', '/de/schneiderservice-antalya', '/gursu-terzi', '/hurma-terzi', '/liman-terzi', '/sarisu-terzi', '/uncali-terzi', '/keten-pamuk-ozel-dikim', '/en/linen-cotton-tailoring', '/de/leinen-baumwolle-schneiderei', '/ru/poshiv-lyon-hlopok', '/konyaalti-fermuar-tamiri', '/konyaalti-paca-kisaltma', '/otele-gelen-terzi-antalya', '/blog/2026-yaz-sezonu-gelinlik-tadilat-rehberi']);
 const lm = (path: string) => (CHANGED.has(path) ? NOW : OLD);
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -79,5 +80,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...DISTRICTS.flatMap((d) => LANGS.map((l) => ({ url: `${SITE}${districtUrl(l, d)}`, lastModified: SEO_DATE, changeFrequency: 'monthly' as const, priority: 0.76, alternates: alt((x) => districtUrl(x, d)) }))),
   ];
 
-  return [...sabitSayfalar, ...otelSayfalari, ...seoSayfalari];
+  // 🧵 8. TURİST KETEN & PAMUK ÖZEL DİKİM + EKSPRES TADİLAT (EN/DE/RU; hub'ın TR karşılığı da hreflang'a dahil)
+  const tAlt = (urlFor: (l: 'en' | 'de' | 'ru') => string) => ({
+    languages: Object.fromEntries([...TLANGS.map((l) => [l, `${SITE}${urlFor(l)}`]), ['x-default', `${SITE}${urlFor('en')}`]]),
+  });
+  const turistSayfalari: MetadataRoute.Sitemap = allNewPages().flatMap((pg) =>
+    TLANGS.map((l) => ({ url: `${SITE}${pg.urlFor(l)}`, lastModified: new Date(TURIST_UPDATE), changeFrequency: 'monthly' as const, priority: pg.id === 'express' ? 0.8 : 0.77, alternates: tAlt(pg.urlFor) })),
+  );
+  // Hub sayfaları sabitSayfalar'da zaten var; hreflang eşleşmesi için ayrıca alternates ile aşağıda güncellenir.
+  const hubAlt = { languages: { tr: `${SITE}${TR_HUB}`, ...Object.fromEntries(TLANGS.map((l) => [l, `${SITE}${hubUrl(l)}`])), 'x-default': `${SITE}${TR_HUB}` } };
+  sabitSayfalar.forEach((e) => {
+    if (e.url === `${SITE}${TR_HUB}` || TLANGS.some((l) => e.url === `${SITE}${hubUrl(l)}`)) {
+      e.alternates = hubAlt;
+      e.lastModified = new Date(TURIST_UPDATE);
+    }
+  });
+
+  return [...sabitSayfalar, ...otelSayfalari, ...seoSayfalari, ...turistSayfalari];
 }

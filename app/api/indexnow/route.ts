@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { OTEL_BOLGELERI } from '@/lib/otel-bolgeleri';
 import { DISTRICTS, SERVICES, LANGS, SERVICE_BASE, districtUrl, serviceUrl } from '@/lib/seo-data';
+import { TLANGS, allNewPages } from '@/lib/turist-keten';
 
 export const dynamic = 'force-dynamic';
 
@@ -68,7 +69,10 @@ const seoSayfalari = [
   ...DISTRICTS.flatMap((d) => LANGS.map((l) => `${SITE}${districtUrl(l, d)}`)),
 ];
 
-const urlList = Array.from(new Set([...sabitSayfalar, ...otelSayfalari, ...seoSayfalari]));
+// Turist keten & pamuk özel dikim ürün sayfaları ve ekspres tadilat (EN/DE/RU)
+const turistSayfalari = allNewPages().flatMap((pg) => TLANGS.map((l) => `${SITE}${pg.urlFor(l)}`));
+
+const urlList = Array.from(new Set([...sabitSayfalar, ...otelSayfalari, ...seoSayfalari, ...turistSayfalari]));
 
 // Yetki: Vercel'de INDEXNOW_SECRET tanımlı olmalı. Şu iki yoldan biriyle gönder:
 //   Authorization: Bearer <INDEXNOW_SECRET>   veya   ?token=<INDEXNOW_SECRET>

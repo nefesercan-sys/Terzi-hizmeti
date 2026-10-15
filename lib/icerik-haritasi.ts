@@ -5,6 +5,7 @@
 // ============================================================
 import { OTEL_BOLGELERI } from '@/lib/otel-bolgeleri';
 import { DISTRICTS, SERVICES, DISTRICT_BASE, SERVICE_BASE, districtUrl, serviceUrl } from '@/lib/seo-data';
+import { PRODUCT_IDS, LINK_NAMES, productUrl, expressUrl, hubUrl, type TLang } from '@/lib/turist-links';
 
 export type Lang = 'tr' | 'en' | 'de' | 'ru';
 export type MapLink = { href: string; label: string };
@@ -43,6 +44,18 @@ const OTHER_LANG_HUBS: MapLink[] = [
   { href: '/de/schneiderservice-antalya', label: 'Deutsch — Schneiderservice Antalya' },
   { href: '/ru/uslugi-portnogo-antalya', label: 'Русский — Услуги портного' },
 ];
+
+// Turist keten & pamuk özel dikim kümesi (EN/DE/RU): ürün sayfaları + ekspres tadilat
+const turistLinks = (lang: TLang): MapLink[] => [
+  { href: hubUrl(lang), label: LINK_NAMES.hub[lang] },
+  ...PRODUCT_IDS.map((p) => ({ href: productUrl(lang, p), label: LINK_NAMES.product[p][lang] })),
+  { href: expressUrl(lang), label: LINK_NAMES.express[lang] },
+];
+const TURIST_TITLES: Record<TLang, string> = {
+  en: 'Custom linen & cotton clothing and tourist alterations',
+  de: 'Leinen- & Baumwollkleidung nach Maß und Änderungen im Urlaub',
+  ru: 'Одежда из льна и хлопка на заказ и подгонка туристам',
+};
 
 const EN_BASE = '/en/hotel-tailor-antalya';
 const DE_BASE = '/de/schneider-service-hotel-antalya';
@@ -134,6 +147,7 @@ function getBaseSiteMap(pathname: string): SiteMap | null {
             { href: '/antalya-terzi', label: 'Antalya Terzi (Türkçe)' },
           ].filter(not),
         },
+        { title: TURIST_TITLES.en, links: turistLinks('en').filter(not) },
         { title: 'Hotel tailor by area', links: regionLinks(EN_BASE, 'en', (n) => `Hotel tailor ${n}`).filter(not) },
       ],
     };
@@ -155,6 +169,7 @@ function getBaseSiteMap(pathname: string): SiteMap | null {
             { href: '/antalya-terzi', label: 'Antalya Terzi (Türkçe)' },
           ].filter(not),
         },
+        { title: TURIST_TITLES.de, links: turistLinks('de').filter(not) },
         { title: 'Hotel-Schneider nach Region', links: regionLinks(DE_BASE, 'de', (n) => `Schneider ${n}`).filter(not) },
       ],
     };
@@ -175,6 +190,7 @@ function getBaseSiteMap(pathname: string): SiteMap | null {
           { href: '/antalya-terzi', label: 'Antalya Terzi (Türkçe)' },
         ].filter(not),
       },
+      { title: TURIST_TITLES.ru, links: turistLinks('ru').filter(not) },
       { title: 'Выездной портной по районам', links: regionLinks(RU_BASE, 'ru', (n) => `Портной ${n}`).filter(not) },
     ],
   };

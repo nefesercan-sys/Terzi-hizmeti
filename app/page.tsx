@@ -400,7 +400,10 @@ export default function TerziHizmetiPage() {
         <main id="main">
         <section className="hero" aria-labelledby="hero-h">
           <div className="hero-bg" aria-hidden="true">
-            <img src="/terzi-can-hero-1024.jpg" srcSet="/terzi-can-hero-640.jpg 640w, /terzi-can-hero-1024.jpg 1024w" sizes="100vw" alt="" className="hero-bg-img" width={1024} height={1024} fetchPriority="high" decoding="async" />
+            <picture>
+              <source type="image/webp" srcSet="/terzi-can-hero-640.webp 640w, /terzi-can-hero-1024.webp 1024w" sizes="100vw" />
+              <img src="/terzi-can-hero-1024.jpg" srcSet="/terzi-can-hero-640.jpg 640w, /terzi-can-hero-1024.jpg 1024w" sizes="100vw" alt="" className="hero-bg-img" width={1024} height={1024} fetchPriority="high" decoding="async" />
+            </picture>
             <div className="hero-overlay"/>
           </div>
 
@@ -674,6 +677,11 @@ export default function TerziHizmetiPage() {
             <a href="/en/tailor-service-antalya">English</a>
             <a href="/ru/uslugi-portnogo-antalya">Русский</a>
             <a href="/de/schneiderservice-antalya">Deutsch</a>
+          </nav>
+          <nav className="foot-links" aria-label="Linen & cotton custom tailoring">
+            <a href="/en/linen-cotton-tailoring" hrefLang="en">Linen &amp; Cotton Tailoring</a>
+            <a href="/de/leinen-baumwolle-schneiderei" hrefLang="de">Leinen &amp; Baumwolle nach Maß</a>
+            <a href="/ru/poshiv-lyon-hlopok" hrefLang="ru">Пошив из льна и хлопка</a>
           </nav>
           <nav className="foot-links" aria-label="Footer links">
             <a href={MAPS} target="_blank" rel="noopener noreferrer">Google Maps</a>

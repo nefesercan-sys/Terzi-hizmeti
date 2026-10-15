@@ -1,64 +1,8 @@
-import type { Metadata } from 'next';
-import KetenPamukOzelDikim, { KETEN_PAMUK_T } from '@/components/KetenPamukOzelDikim';
+import { TuristHub } from '@/components/TuristKeten';
+import { hubMetadata } from '@/lib/turist-keten';
 
-const SITE     = 'https://terzihizmeti.com.tr';
-const PAGE_URL = `${SITE}/de/leinen-baumwolle-schneiderei`;
-const TR_URL   = `${SITE}/keten-pamuk-ozel-dikim`;
-const EN_URL   = `${SITE}/en/linen-cotton-tailoring`;
-const RU_URL   = `${SITE}/ru/poshiv-lyon-hlopok`;
-const PHONE    = '+90 531 898 64 18';
-const OG       = `${SITE}/terzi-can-hero.jpg`;
-
-export const metadata: Metadata = {
-  metadataBase: new URL(SITE),
-  title: { absolute: "Leinen- & Baumwollkleidung nach Maß, Antalya + Großhandel" },
-  description: 'Maßschneiderei aus 100% natürlichem Leinen und Baumwolle für ausländische Gäste. Stil wählen, Maße senden, Lieferung ans Hotel. ☎ ' + PHONE,
-  keywords: [
-    'Leinen Maßschneiderei Antalya', 'Baumwolle Maßschneiderei Antalya', 'Hotelschneider Leinen',
-    'Naturstoff Schneider Antalya', 'Konyaaltı Leinen Schneider', 'Maßanfertigung Antalya',
-    'Leinen Baumwolle Großhandelshersteller Türkei', 'Leinen Baumwolle Export Türkei', 'Musterentwicklung Bekleidung Türkei', 'Serienproduktion Leinen Baumwolle',
-  ],
-  authors: [{ name: 'Terzi Can', url: SITE }],
-  robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
-  alternates: {
-    canonical: PAGE_URL,
-    languages: { 'tr': TR_URL, 'en': EN_URL, 'ru': RU_URL, 'de': PAGE_URL, 'x-default': TR_URL },
-  },
-  openGraph: {
-    title: 'Leinen & Baumwolle Maßschneiderei | Terzi Can',
-    description: '100% natürliches Leinen und Baumwolle, genau nach Ihren Maßen geschneidert. Lieferung ans Hotel.',
-    url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'de_DE', alternateLocale: ['tr_TR'], type: 'website',
-    images: [{ url: OG, width: 1024, height: 1024, alt: 'Leinen Baumwolle Maßschneiderei', type: 'image/png' }],
-  },
-  twitter: { card: 'summary_large_image', title: 'Leinen & Baumwolle Maßschneiderei', description: 'Maßanfertigung aus 100% Naturstoff, nach Ihren Maßen.', images: [OG] },
-  other: { 'geo.region': 'TR-07', 'geo.placename': 'Antalya', contact: PHONE },
-};
-
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@graph': [
-    { '@type': 'WebPage', '@id': `${PAGE_URL}#webpage`, url: PAGE_URL, name: metadata.title, inLanguage: 'de' },
-    {
-      '@type': 'Service', '@id': `${PAGE_URL}#service`,
-      name: 'Leinen & Baumwolle Maßschneiderei', serviceType: 'Custom Tailoring',
-      provider: { '@type': 'ClothingStore', name: 'Terzi Can', telephone: '+905318986418', url: `${SITE}/antalya-terzi` },
-      areaServed: { '@type': 'AdministrativeArea', name: 'Antalya' },
-      description: 'Maßschneiderei aus 100% natürlichem Leinen und Baumwolle, nach den eigenen Maßen des Gastes.',
-    },
-    {
-      '@type': 'FAQPage', '@id': `${PAGE_URL}#faq`,
-      mainEntity: KETEN_PAMUK_T.de.faq?.map(([q, a]: string[]) => ({
-        '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a },
-      })) || [],
-    },
-  ],
-};
+export const metadata = hubMetadata('de');
 
 export default function Page() {
-  return (
-    <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <KetenPamukOzelDikim lang="de" />
-    </>
-  );
+  return <TuristHub lang="de" />;
 }

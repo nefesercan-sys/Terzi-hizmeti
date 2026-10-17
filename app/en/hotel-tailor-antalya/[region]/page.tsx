@@ -21,21 +21,15 @@ export async function generateMetadata({ params }: { params: Promise<{ region: s
 
   const url = `${SITE}${BASE_PATH}/${r.slug}`;
   // Yeni VIP SEO Başlığı ve Açıklaması (Dinamik)
-  const title = `Hotel Tailor in ${r.name}, Antalya — Pickup & Alterations`;
-  const desc = `Need urgent clothing alterations during your holiday? Terzi Can provides professional tailoring, hemming, and repair services with VIP hotel pickup in ${r.name}. Contact us via WhatsApp!`;
+  const title = `Hotel Tailor in ${r.name}, Antalya | Pick-up & Delivery`;
+  const desc = `Staying in ${r.name}? We collect clothes from your hotel, alter them in Konyaaltı and bring them back. Open daily 08:00–23:00.`;
   const ogImage = `${SITE}/terzi-can-hero.jpg`;
 
   return {
     metadataBase: new URL(SITE),
     title: { absolute: title },
     description: desc,
-    keywords: [
-      `VIP tailor ${r.name}`, 
-      `hotel pickup tailor ${r.name}`, 
-      `${r.name} clothing alterations`, 
-      'mobile tailor Antalya', 
-      'resort tailor service'
-    ],
+    keywords: [`tailor near hotels in ${r.name}`, `${r.name} hotel tailor`, `clothing alterations ${r.name}`, `hemming ${r.name} Antalya`, `zipper repair ${r.name}`, 'holiday clothing alterations Antalya', 'hotel pick-up tailor Antalya'],
     alternates: {
       canonical: url,
       languages: {
@@ -46,7 +40,7 @@ export async function generateMetadata({ params }: { params: Promise<{ region: s
         'x-default': `${SITE}/otele-gelen-terzi-antalya/${r.slug}`,
       },
     },
-    openGraph: { title, description: desc, url, type: 'website', locale: 'en_US', siteName: 'Terzi Can Antalya', images: [{ url: ogImage, width: 1200, height: 630, alt: `VIP Tailor in ${r.name}` }] },
+    openGraph: { title, description: desc, url, type: 'website', locale: 'en_US', siteName: 'Terzi Can Antalya', images: [{ url: ogImage, width: 1200, height: 630, alt: `Hotel tailor in ${r.name}` }] },
     twitter: { card: 'summary_large_image', title, description: desc, images: [ogImage] },
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large' } },
   };
@@ -61,10 +55,10 @@ export default async function OtelBolgeEnPage({ params }: { params: Promise<{ re
   
   // İçerikte kullanılmak üzere hazırlanan VIP SEO Metinleri
   const seoContent = {
-    h1: `Premium Tailor Service for Hotel Guests in ${r.name}`,
-    h2: `Fast & Professional Alterations Without Leaving Your Resort`,
-    body1: `Enjoying your holiday in ${r.name} but need a quick wardrobe fix? Whether you bought a new dress that needs resizing, broke a zipper on your favorite jacket, or need emergency alterations for a special event, Terzi Can is here to help.`,
-    body2: `Based in Antalya, we specialize in high-quality garment alterations, repairs, and custom tailoring. We understand that your holiday time is precious. That is why we offer a VIP Mobile Tailor Service exclusively for guests staying in resorts and hotels across ${r.name}.`
+    h1: `Hotel Tailor in ${r.name} — We Collect, Fix and Bring It Back`,
+    h2: `Clothing alterations for holidaymakers, handled without a trip into town`,
+    body1: `A hem that is too long, a zipper that gave way, a dress that needs taking in before dinner? If you are staying in ${r.name}, send us a photo on WhatsApp and we will tell you what can be done and what it costs.`,
+    body2: `Our workshop is in Hurma, Konyaaltı, and it is open every day from 08:00 to 23:00. We collect the garment from your hotel, work on it in the workshop and deliver it back; pick-up and delivery to hotels is free. Hemming, taking in and zipper jobs are ready the same day.`
   };
 
   const jsonLd = {
@@ -73,7 +67,7 @@ export default async function OtelBolgeEnPage({ params }: { params: Promise<{ re
       {
         '@type': 'Service',
         '@id': `${url}#service`,
-        name: `VIP Hotel Tailor ${r.name} — Pickup & Delivery`,
+        name: `Hotel Tailor ${r.name} — Pick-up & Delivery`,
         serviceType: 'Clothing Alterations & Mobile Tailoring',
         provider: { '@type': 'ClothingStore', name: 'Terzi Can', telephone: PHONE_TEL, url: `${SITE}/antalya-terzi`, image: `${SITE}/terzi-can-hero.jpg`, priceRange: '$$' },
         areaServed: { '@type': 'Place', name: `${r.name}, Antalya` },
@@ -86,13 +80,13 @@ export default async function OtelBolgeEnPage({ params }: { params: Promise<{ re
         mainEntity: [
           {
             '@type': 'Question',
-            name: `How does the VIP pickup work in ${r.name}?`,
-            acceptedAnswer: { '@type': 'Answer', text: `Message us on WhatsApp with a photo of your garment. We will collect the item directly from your hotel reception in ${r.name} and deliver it back once altered.` },
+            name: `How do I get my clothes collected from a hotel in ${r.name}?`,
+            acceptedAnswer: { '@type': 'Answer', text: `Send a photo of the garment and your hotel name on WhatsApp. We arrange a collection time, take the garment to our workshop and bring it back to your hotel.` },
           },
           {
             '@type': 'Question',
-            name: `How long do alterations take for hotel guests?`,
-            acceptedAnswer: { '@type': 'Answer', text: `Hemming, taking in and zipper repairs are usually done the same day; dress, jacket, shirt and coat alterations take 1 day; dress making takes 3 days — for guests in ${r.name}.` },
+            name: `How soon will I get it back?`,
+            acceptedAnswer: { '@type': 'Answer', text: `Hemming, taking in and zipper repairs are usually done the same day; dress, jacket, shirt and coat alterations take 1 day; dress making takes 3 days.` },
           },
         ],
       },

@@ -108,16 +108,16 @@ function districtCopy(lang: Lang, d: District) {
   const loc = d.loc[lang];
   const kw = (lang === 'tr' ? [`${n} terzi`, `${n} terzi hizmeti`, ...d.alias.map((a) => `${a} terzi`)] : []);
   const title = {
-    tr: `${n} Terzi — Paça Kısaltma, Fermuar, Elbise Tamiri`,
-    en: `Tailor in ${n}, Antalya — Hemming, Zipper & Alterations`,
-    ru: `Портной ${n}, Анталья — подшив, молния, ремонт одежды`,
-    de: `Schneider ${n}, Antalya — Hose kürzen, Reißverschluss, Änderungen`,
+    tr: `${n} Terzi | Paça Kısaltma, Fermuar, Elbise Dikimi · Terzi Can`,
+    en: `Tailor in ${n}, Antalya | Hemming, Zippers, Dress Repairs · Terzi Can`,
+    ru: `Портной ${n}, Анталья | Подшив, молнии, ремонт платьев · Terzi Can`,
+    de: `Schneider ${n}, Antalya | Kürzen, Reißverschluss, Änderungen · Terzi Can`,
   }[lang];
   const desc = {
-    tr: `${loc} terzi mi arıyorsunuz? Paça kısaltma, bel daraltma, fermuar değişimi, elbise dikimi ve tamiri, gelinlik ₺800'den, abiye ₺400'den. Otele ve eve ücretsiz servis, her gün 08:00–23:00.`,
-    en: `Looking for a tailor ${loc}? Trouser hemming, waist alteration, zipper replacement, dress making and repair, wedding dress from ₺800. Free service to hotels and homes, open daily 08:00–23:00.`,
-    ru: `Нужен портной ${loc}? Подшив брюк, ушивание, замена молнии, пошив и ремонт платьев, свадебное платье от ₺800. Бесплатный выезд в отели и на дом, ежедневно 08:00–23:00.`,
-    de: `Schneider ${loc} gesucht? Hose kürzen, Taille enger machen, Reißverschluss wechseln, Kleider nähen und ändern, Brautkleid ab ₺800. Kostenloser Service zu Hotels und nach Hause, täglich 08:00–23:00.`,
+    tr: `${loc} terzi: paça kısaltma, bel daraltma, fermuar, elbise dikimi ve tamiri. Gelinlik ₺800'den, abiye ₺400'den. Hurma/Konyaaltı atölyesi, otele ve eve ücretsiz alım-teslim, her gün 08:00–23:00.`,
+    en: `Tailor ${loc}: hemming, waist alterations, zippers, dress making and repairs. Wedding gowns from ₺800, evening dresses from ₺400. Workshop in Hurma, Konyaaltı; free pick-up and delivery to hotels and homes, daily 08:00–23:00.`,
+    ru: `Портной ${loc}: подшив, ушивание, молнии, пошив и ремонт платьев. Свадебные платья от ₺800, вечерние — от ₺400. Мастерская в Хурме (Коньяалты); бесплатный забор и доставка в отели и на дом, ежедневно 08:00–23:00.`,
+    de: `Schneider ${loc}: Kürzen, Taille anpassen, Reißverschlüsse, Kleider nähen und reparieren. Brautkleider ab ₺800, Abendkleider ab ₺400. Werkstatt in Hurma, Konyaaltı; kostenlose Abholung und Lieferung zu Hotels und nach Hause, täglich 08:00–23:00.`,
   }[lang];
   return { n, loc, kw, title, desc };
 }
@@ -127,24 +127,24 @@ function districtAbout(lang: Lang, d: District): string {
   const loc = d.loc[lang];
   const t = {
     tr: {
-      central: `${loc} yaşayan ve çalışanlar kıyafetini atölyemize getirebilir ya da adresinden alınmasını isteyebilir. Atölyemiz Konyaaltı Hurma'dadır; ${n} ve çevresi için alım-teslim ücretsiz servistir.`,
-      resort: `${loc} otelde konaklayan misafirler için terzi servisimiz var. Valiz yetersiz kaldığında, bir kıyafet bozulduğunda ya da özel akşam için son dakika ayarı gerektiğinde otelinizden alıp teslim ediyoruz; Türkçe, İngilizce, Rusça ve Almanca anlaşabilirsiniz.`,
-      outer: `${loc} ev, işyeri ve konut siteleri için terzi alım-teslim servisi veriyoruz. Mesafe nedeniyle günü ve saati WhatsApp'tan birlikte planlıyoruz.`,
+      central: `${loc} yaşıyor ya da çalışıyorsanız kıyafetinizi Hurma'daki atölyemize getirebilir veya adresinizden aldırabilirsiniz. ${n} ve çevresinde alım-teslim ücretsizdir.`,
+      resort: `${loc} bir otelde kalıyorsanız terzi için dışarı çıkmanız gerekmez. Yırtılan, dar gelen ya da özel bir akşam için son dakika ayarı isteyen kıyafetinizi otelden alıp teslim ediyoruz. Türkçe, İngilizce, Rusça ve Almanca konuşuyoruz.`,
+      outer: `${loc} ev, ofis ve sitelere alım-teslim yapıyoruz. Mesafe uzun olduğu için gün ve saati WhatsApp'tan sizinle birlikte netleştiriyoruz.`,
     },
     en: {
-      central: `Residents and workers ${loc} can bring garments to our workshop or ask us to collect them from their address. We are based in Hurma, Konyaaltı; pick-up and delivery for ${n} and the surrounding area is free.`,
-      resort: `We offer a tailor service for guests staying at hotels ${loc}. If a garment tears, no longer fits or needs a last-minute adjustment for a special evening, we collect it from your hotel and bring it back; you can speak English, Turkish, Russian or German with us.`,
-      outer: `We offer pick-up and delivery for homes, offices and residential complexes ${loc}. Because of the distance we agree on the day and time with you on WhatsApp.`,
+      central: `If you live or work ${loc}, you can drop garments off at our Hurma workshop or have us collect them from your address. Pick-up and delivery in ${n} and nearby is free.`,
+      resort: `Staying at a hotel ${loc}? You do not need to go out for a tailor. If something tears, stops fitting or needs a last-minute fix for a special evening, we collect it from your hotel and bring it back. We speak English, Turkish, Russian and German.`,
+      outer: `We collect and deliver for homes, offices and residential complexes ${loc}. Since the distance is longer, we fix the day and time with you on WhatsApp.`,
     },
     ru: {
-      central: `Жители и работающие ${loc} могут принести вещи в мастерскую или попросить забрать их по адресу. Мастерская находится в Хурме (Коньяалты); забор и доставка по району ${n} бесплатны.`,
-      resort: `Для гостей отелей ${loc} у нас есть услуга портного. Порвалась вещь, перестала подходить по размеру или нужна срочная подгонка к вечеру — заберём из отеля и вернём; можно общаться на русском, английском, турецком и немецком.`,
-      outer: `Забираем и привозим вещи ${loc} — на дом, в офис или в жилой комплекс. Из-за расстояния день и время согласуем с вами в WhatsApp.`,
+      central: `Если вы живёте или работаете ${loc}, можно принести вещи в нашу мастерскую в Хурме или попросить забрать их по адресу. Забор и доставка в районе ${n} и рядом бесплатны.`,
+      resort: `Остановились в отеле ${loc}? Ехать к портному не нужно. Если вещь порвалась, перестала подходить по размеру или нужна срочная правка к вечеру, мы заберём её из отеля и вернём. Говорим по-русски, по-английски, по-турецки и по-немецки.`,
+      outer: `Забираем и доставляем вещи ${loc} — на дом, в офис или в жилой комплекс. Расстояние большое, поэтому день и время уточняем с вами в WhatsApp.`,
     },
     de: {
-      central: `Anwohner und Berufstätige ${loc} können Kleidung in unsere Werkstatt bringen oder von zu Hause abholen lassen. Wir sind in Hurma, Konyaaltı; Abholung und Lieferung für ${n} und Umgebung sind kostenlos.`,
-      resort: `Für Gäste, die in Hotels ${loc} wohnen, bieten wir einen Schneiderservice an. Reißt etwas, passt etwas nicht mehr oder braucht es kurzfristig eine Anpassung für einen besonderen Abend — wir holen es im Hotel ab und bringen es zurück; Sie können auf Deutsch, Englisch, Russisch oder Türkisch sprechen.`,
-      outer: `Wir holen und liefern Kleidung ${loc} für Wohnungen, Büros und Wohnanlagen. Wegen der Entfernung legen wir Tag und Uhrzeit per WhatsApp mit Ihnen fest.`,
+      central: `Wenn Sie ${loc} wohnen oder arbeiten, können Sie Kleidung in unserer Werkstatt in Hurma abgeben oder an Ihrer Adresse abholen lassen. Abholung und Lieferung in ${n} und Umgebung sind kostenlos.`,
+      resort: `Sie wohnen im Hotel ${loc}? Dann müssen Sie für den Schneider nicht aus dem Haus. Reißt etwas, passt nicht mehr oder braucht kurz vor einem besonderen Abend eine Anpassung, holen wir es im Hotel ab und bringen es zurück. Wir sprechen Deutsch, Englisch, Russisch und Türkisch.`,
+      outer: `Wir holen und liefern Kleidung ${loc} für Wohnungen, Büros und Wohnanlagen. Weil die Strecke länger ist, legen wir Tag und Uhrzeit per WhatsApp mit Ihnen fest.`,
     },
   }[lang];
   return t[d.kind];
@@ -156,32 +156,32 @@ function districtFaq(lang: Lang, d: District): [string, string][] {
   const by = (id: string) => SERVICES.find((s) => s.id === id)!;
   return {
     tr: [
-      [`${loc} terzi var mı, yakınımdaki terzi nerede?`, `Atölyemiz Konyaaltı Hurma Mahallesi'ndedir. ${n} için kıyafetinizi adresinizden veya otelinizden alıp teslim ediyoruz; otel ve eve servis ücretsizdir. Her gün 08:00–23:00 arası WhatsApp'tan ulaşabilirsiniz.`],
-      [`${loc} ${by('paca').q.tr} ve ${by('fermuar').q.tr} ne kadar sürer?`, 'Paça kısaltma, daraltma ve fermuar değişimi/tamiri aynı gün teslim edilir.'],
-      [`${loc} gelinlik ve abiye tadilatı kaç TL?`, "Gelinlik tadilatı ₺800'den, abiye tadilatı ₺400'den başlar; kesin fiyat fotoğraf ve işlem detayına göre söylenir. Abiye tadilatı ertesi gün teslim edilir."],
-      [`${loc} ${by('elbise-dikim').q.tr} kaç günde teslim edilir?`, 'Elbise dikimi 3 günde teslim edilir. Elbise, ceket, gömlek, mont ve abiye tadilat ya da tamiri 1 gün sonra teslim edilir.'],
-      [`${loc} yabancı turistler için terzi hizmeti var mı?`, 'Evet. Türkçe, İngilizce, Rusça ve Almanca hizmet veriyoruz; otel ve eve servis ücretsizdir. Fotoğrafı WhatsApp\'tan gönderip fiyat alabilirsiniz.'],
+      [`${loc} terzi nerede, en yakın atölye hangisi?`, `Atölyemiz Konyaaltı'nda, Hurma Mahallesi'nde. ${n} için kıyafeti adresinizden ya da otelinizden alıp geri getiriyoruz; otel ve eve servis ücretsiz. WhatsApp'tan her gün 08:00–23:00 yazabilirsiniz.`],
+      [`${loc} ${by('paca').q.tr} ve ${by('fermuar').q.tr} aynı gün biter mi?`, 'Evet, paça kısaltma, daraltma ve fermuar değişimi ya da tamiri aynı gün teslim edilir.'],
+      [`${loc} gelinlik ve abiye ayarı ne kadar tutar?`, "Gelinlik tadilatı ₺800'den, abiye tadilatı ₺400'den başlıyor. Kesin fiyat fotoğrafa ve işin kapsamına göre verilir; abiye ertesi gün hazır olur."],
+      [`${loc} ${by('elbise-dikim').q.tr} ne zaman teslim alınır?`, 'Elbise dikimi 3 günde hazır olur. Elbise, ceket, gömlek, mont ve abiye tadilatı ya da tamiri 1 gün sürer.'],
+      [`Turist olarak ${loc} terzi bulabilir miyim?`, "Evet. Türkçe, İngilizce, Rusça ve Almanca konuşuyoruz; otel ve eve servis ücretsiz. Kıyafetin fotoğrafını WhatsApp'tan gönderin, fiyatı hemen söyleyelim."],
     ],
     en: [
-      [`Is there a tailor ${loc}? Where is the nearest tailor?`, `Our workshop is in Hurma, Konyaaltı. For ${n} we collect garments from your address or hotel and bring them back; service to hotels and homes is free. Message us on WhatsApp daily 08:00–23:00.`],
-      [`How long do ${by('paca').q.en} and ${by('fermuar').q.en} take ${loc}?`, 'Trouser hemming, taking in and zipper replacement or repair are ready the same day.'],
-      [`How much does wedding or evening dress alteration cost ${loc}?`, 'Wedding dress alteration starts from ₺800 and evening dress alteration from ₺400; the exact price depends on a photo and the work needed. Evening dress alterations are ready the next day.'],
-      [`How many days does ${by('elbise-dikim').q.en} take ${loc}?`, 'Dress making is ready in 3 days. Alterations or repairs of dresses, jackets, shirts, coats and evening dresses are ready after 1 day.'],
-      [`Is there a tailor service for tourists ${loc}?`, 'Yes. We serve in English, Turkish, Russian and German, and service to hotels and homes is free. Send a photo on WhatsApp to get a price.'],
+      [`Where is the nearest tailor ${loc}?`, `Our workshop is in Hurma, Konyaaltı. For ${n} we pick garments up from your address or hotel and bring them back, free of charge for hotels and homes. You can reach us on WhatsApp every day from 08:00 to 23:00.`],
+      [`Can ${by('paca').q.en} and ${by('fermuar').q.en} be done in one day ${loc}?`, 'Yes. Hemming, taking in and zipper replacement or repair are returned the same day.'],
+      [`What does a wedding or evening dress alteration cost ${loc}?`, 'Wedding dress alterations start at ₺800 and evening dress alterations at ₺400. The exact price is set from a photo and the scope of work; evening dresses are ready the next day.'],
+      [`How soon is ${by('elbise-dikim').q.en} ready ${loc}?`, 'Dress making is ready in 3 days. Alterations and repairs of dresses, jackets, shirts, coats and evening dresses take 1 day.'],
+      [`Can tourists use a tailor ${loc}?`, 'Yes. We speak English, Turkish, Russian and German, and hotel and home service is free. Send a photo of the garment on WhatsApp and we will quote right away.'],
     ],
     ru: [
-      [`Есть ли портной ${loc}? Где ближайшее ателье?`, `Наша мастерская — в Хурме (Коньяалты). Для района ${n} забираем вещи с вашего адреса или из отеля и возвращаем; выезд в отели и на дом бесплатный. Пишите в WhatsApp ежедневно с 08:00 до 23:00.`],
-      [`Как быстро делают ${by('paca').q.ru} и ${by('fermuar').q.ru} ${loc}?`, 'Подшив и ушивание брюк, а также замена или ремонт молнии выполняются в тот же день.'],
-      [`Сколько стоит подгонка свадебного или вечернего платья ${loc}?`, 'Подгонка свадебного платья — от ₺800, вечернего — от ₺400; точную цену называем по фото и объёму работ. Вечерние платья готовы на следующий день.'],
-      [`За сколько дней делают ${by('elbise-dikim').q.ru} ${loc}?`, 'Пошив платья — 3 дня. Переделка или ремонт платья, пиджака, рубашки, куртки и вечернего платья — через 1 день.'],
-      [`Есть ли услуги портного для туристов ${loc}?`, 'Да. Мы говорим по-русски, по-английски, по-турецки и по-немецки; выезд в отели и на дом бесплатный. Пришлите фото в WhatsApp и узнайте цену.'],
+      [`Где ближайший портной ${loc}?`, `Мастерская находится в Хурме (Коньяалты). Для района ${n} забираем вещи с вашего адреса или из отеля и возвращаем, для отелей и дома это бесплатно. Пишите в WhatsApp каждый день с 08:00 до 23:00.`],
+      [`Сколько ждать: ${by('paca').q.ru} и ${by('fermuar').q.ru} ${loc}?`, 'Подшив, ушивание и замена или ремонт молнии возвращаем в тот же день.'],
+      [`Сколько стоит подгонка свадебного или вечернего платья ${loc}?`, 'Подгонка свадебного платья начинается от ₺800, вечернего — от ₺400. Точную цену называем по фото и объёму работ; вечерние платья готовы на следующий день.'],
+      [`Сколько дней занимает ${by('elbise-dikim').q.ru} ${loc}?`, 'Пошив платья занимает 3 дня. Переделка и ремонт платьев, пиджаков, рубашек, курток и вечерних платьев — 1 день.'],
+      [`Подходит ли ваш сервис туристам ${loc}?`, 'Да. Мы говорим по-русски, по-английски, по-турецки и по-немецки, выезд в отели и на дом бесплатный. Пришлите фото вещи в WhatsApp, и мы сразу назовём цену.'],
     ],
     de: [
-      [`Gibt es einen Schneider ${loc}? Wo ist der nächste Schneider?`, `Unsere Werkstatt liegt in Hurma, Konyaaltı. Für ${n} holen wir Kleidung an Ihrer Adresse oder im Hotel ab und bringen sie zurück; der Service zu Hotels und nach Hause ist kostenlos. WhatsApp täglich 08:00–23:00.`],
-      [`Wie lange dauern ${by('paca').q.de} und ${by('fermuar').q.de} ${loc}?`, 'Hosen kürzen, enger machen sowie Reißverschluss wechseln oder reparieren sind am selben Tag fertig.'],
-      [`Was kostet eine Brautkleid- oder Abendkleid-Änderung ${loc}?`, 'Brautkleid-Änderungen beginnen bei ₺800, Abendkleid-Änderungen bei ₺400; der genaue Preis richtet sich nach Foto und Aufwand. Abendkleider sind am nächsten Tag fertig.'],
-      [`Wie viele Tage dauert ${by('elbise-dikim').q.de} ${loc}?`, 'Ein Kleid nähen dauert 3 Tage. Änderungen oder Reparaturen von Kleidern, Sakkos, Hemden, Mänteln und Abendkleidern sind nach 1 Tag fertig.'],
-      [`Gibt es einen Schneiderservice für Touristen ${loc}?`, 'Ja. Wir sprechen Deutsch, Englisch, Russisch und Türkisch; der Service zu Hotels und nach Hause ist kostenlos. Foto per WhatsApp senden und Preis erfahren.'],
+      [`Wo finde ich einen Schneider ${loc}?`, `Unsere Werkstatt liegt in Hurma, Konyaaltı. Für ${n} holen wir Kleidung an Ihrer Adresse oder im Hotel ab und bringen sie zurück; für Hotels und Zuhause ist das kostenlos. Per WhatsApp erreichen Sie uns täglich von 08:00 bis 23:00.`],
+      [`Sind ${by('paca').q.de} und ${by('fermuar').q.de} ${loc} am selben Tag erledigt?`, 'Ja. Hose kürzen, enger machen und Reißverschluss wechseln oder reparieren sind am selben Tag fertig.'],
+      [`Was kostet es, ein Brautkleid oder Abendkleid ${loc} ändern zu lassen?`, 'Änderungen am Brautkleid starten bei ₺800, am Abendkleid bei ₺400. Der genaue Preis ergibt sich aus Foto und Aufwand; Abendkleider sind am nächsten Tag fertig.'],
+      [`Wann ist ${by('elbise-dikim').q.de} ${loc} fertig?`, 'Ein Kleid nähen dauert 3 Tage. Änderungen und Reparaturen an Kleidern, Sakkos, Hemden, Mänteln und Abendkleidern sind nach 1 Tag fertig.'],
+      [`Kann ich als Tourist ${loc} einen Schneider nutzen?`, 'Ja. Wir sprechen Deutsch, Englisch, Russisch und Türkisch; Hotel- und Heimservice sind kostenlos. Schicken Sie ein Foto per WhatsApp, den Preis nennen wir sofort.'],
     ],
   }[lang] as [string, string][];
 }
@@ -189,17 +189,17 @@ function districtFaq(lang: Lang, d: District): [string, string][] {
 function serviceCopy(lang: Lang, s: Service) {
   const nm = s.name[lang];
   const title = {
-    tr: `${nm} Antalya — Konyaaltı, Muratpaşa, Lara, Belek`,
-    en: `${nm} in Antalya — Konyaaltı, Lara, Belek, Kemer`,
-    ru: `${nm} в Анталье — Коньяалты, Лара, Белек, Кемер`,
-    de: `${nm} in Antalya — Konyaaltı, Lara, Belek, Kemer`,
+    tr: `${nm} Antalya | Konyaaltı, Muratpaşa, Lara, Belek · Terzi Can`,
+    en: `${nm} in Antalya | Konyaaltı, Lara, Belek, Kemer · Terzi Can`,
+    ru: `${nm} в Анталье | Коньяалты, Лара, Белек, Кемер · Terzi Can`,
+    de: `${nm} in Antalya | Konyaaltı, Lara, Belek, Kemer · Terzi Can`,
   }[lang];
   const price = priceOf(lang, s);
   const desc = {
-    tr: `${s.intro.tr.split('. ')[0]}. ${timeOf('tr', s)}.${price ? ' ' + price + '.' : ''} Konyaaltı, Muratpaşa, Lara, Belek, Side, Kemer — otel ve eve ücretsiz servis.`,
-    en: `${s.intro.en.split('. ')[0]}. ${timeOf('en', s)}.${price ? ' ' + price + '.' : ''} Konyaaltı, Lara, Belek, Side, Kemer — free service to hotels and homes.`,
-    ru: `${s.intro.ru.split('. ')[0]}. ${timeOf('ru', s)}.${price ? ' ' + price + '.' : ''} Коньяалты, Лара, Белек, Сиде, Кемер — бесплатный выезд в отели и на дом.`,
-    de: `${s.intro.de.split('. ')[0]}. ${timeOf('de', s)}.${price ? ' ' + price + '.' : ''} Konyaaltı, Lara, Belek, Side, Kemer — kostenloser Service zu Hotels und nach Hause.`,
+    tr: `${s.intro.tr.split('. ')[0]}. ${timeOf('tr', s)}.${price ? ' ' + price + '.' : ''} Konyaaltı, Muratpaşa, Lara, Belek, Side, Kemer bölgelerinde otel ve eve ücretsiz alım-teslim.`,
+    en: `${s.intro.en.split('. ')[0]}. ${timeOf('en', s)}.${price ? ' ' + price + '.' : ''} Free hotel and home pick-up in Konyaaltı, Lara, Belek, Side and Kemer.`,
+    ru: `${s.intro.ru.split('. ')[0]}. ${timeOf('ru', s)}.${price ? ' ' + price + '.' : ''} Бесплатный забор из отелей и с дома: Коньяалты, Лара, Белек, Сиде, Кемер.`,
+    de: `${s.intro.de.split('. ')[0]}. ${timeOf('de', s)}.${price ? ' ' + price + '.' : ''} Kostenlose Abholung im Hotel oder zu Hause in Konyaaltı, Lara, Belek, Side und Kemer.`,
   }[lang];
   return { nm, title, desc };
 }
@@ -210,24 +210,24 @@ function serviceFaq(lang: Lang, s: Service): [string, string][] {
   const time = timeOf(lang, s);
   return {
     tr: [
-      [`Antalya'da ${s.vars.tr[0]} nerede yapılır?`, `Terzi Can atölyesinde, Konyaaltı Hurma'da. ${s.intro.tr} Otel ve eve ücretsiz servis vardır, her gün 08:00–23:00 açığız.`],
-      [`${nm} ne kadar sürer ve kaç TL?`, `${time}.${price ? ' ' + price + '; kesin fiyat kumaşa ve işlem detayına göre söylenir.' : ' Fiyat için kıyafetin fotoğrafını WhatsApp\'tan gönderin.'}`],
-      [`${nm} için otelime veya evime gelir misiniz?`, 'Evet, otel ve eve alım-teslim servisimiz ücretsizdir. Konyaaltı, Muratpaşa, Lara, Güzeloba, Kundu, Belek, Side ve Kemer gibi bölgelerde hizmet veriyoruz.'],
+      [`Antalya'da ${s.vars.tr[0]} için nereye gidebilirim?`, `Konyaaltı Hurma'daki Terzi Can atölyesine. ${s.intro.tr} Otel ve eve servis ücretsiz, atölye her gün 08:00–23:00 açık.`],
+      [`${nm} kaç gün sürer, fiyatı nedir?`, `${time}.${price ? ' ' + price + '; net fiyat kumaşa ve işin kapsamına bağlı.' : " Fiyat için kıyafetin fotoğrafını WhatsApp'tan iletin."}`],
+      [`${nm} için otele ya da eve geliyor musunuz?`, 'Evet, otel ve eve alım-teslim ücretsiz. Konyaaltı, Muratpaşa, Lara, Güzeloba, Kundu, Belek, Side ve Kemer gibi bölgelere gidiyoruz.'],
     ],
     en: [
-      [`Where can I get ${s.vars.en[0]} in Antalya?`, `At the Terzi Can workshop in Hurma, Konyaaltı. ${s.intro.en} Free service to hotels and homes; open daily 08:00–23:00.`],
-      [`How long does ${nm.toLowerCase()} take and what does it cost?`, `${time}.${price ? ' ' + price + '; the exact price depends on the fabric and the work.' : ' Send a photo of the garment on WhatsApp for a price.'}`],
-      [`Can you come to my hotel or home for ${nm.toLowerCase()}?`, 'Yes, pick-up and delivery to hotels and homes is free. We serve areas such as Konyaaltı, Muratpaşa, Lara, Güzeloba, Kundu, Belek, Side and Kemer.'],
+      [`Where in Antalya can I get ${s.vars.en[0]} done?`, `At the Terzi Can workshop in Hurma, Konyaaltı. ${s.intro.en} Hotel and home service is free, and the workshop is open daily 08:00–23:00.`],
+      [`How many days does ${nm.toLowerCase()} take, and what is the price?`, `${time}.${price ? ' ' + price + '; the final price depends on the fabric and the scope of work.' : ' Send a photo of the garment on WhatsApp to get a price.'}`],
+      [`Do you come to my hotel or home for ${nm.toLowerCase()}?`, 'Yes, pick-up and delivery to hotels and homes is free. We cover Konyaaltı, Muratpaşa, Lara, Güzeloba, Kundu, Belek, Side and Kemer, among other areas.'],
     ],
     ru: [
-      [`Где в Анталье сделать: ${s.vars.ru[0]}?`, `В мастерской Terzi Can в Хурме (Коньяалты). ${s.intro.ru} Выезд в отели и на дом бесплатный; работаем ежедневно 08:00–23:00.`],
-      [`Сколько времени занимает «${nm}» и сколько это стоит?`, `${time}.${price ? ' ' + price + '; точная цена зависит от ткани и объёма работ.' : ' Пришлите фото вещи в WhatsApp — назовём цену.'}`],
-      [`Приедете ли вы в отель или домой: «${nm}»?`, 'Да, забор и доставка в отели и на дом бесплатны. Работаем в Коньяалты, Муратпаше, Ларе, Гюзельобе, Кунду, Белеке, Сиде и Кемере.'],
+      [`Куда в Анталье обратиться: ${s.vars.ru[0]}?`, `В мастерскую Terzi Can в Хурме (Коньяалты). ${s.intro.ru} Выезд в отели и на дом бесплатный, мастерская открыта ежедневно с 08:00 до 23:00.`],
+      [`Сколько дней занимает «${nm}» и какая цена?`, `${time}.${price ? ' ' + price + '; окончательная цена зависит от ткани и объёма работ.' : ' Пришлите фото вещи в WhatsApp, и мы назовём цену.'}`],
+      [`Забираете ли вы вещь из отеля или с дома для услуги «${nm}»?`, 'Да, забор и доставка в отели и на дом бесплатны. Работаем в Коньяалты, Муратпаше, Ларе, Гюзельобе, Кунду, Белеке, Сиде, Кемере и других районах.'],
     ],
     de: [
-      [`Wo kann ich in Antalya „${s.vars.de[0]}“ lassen?`, `In der Werkstatt von Terzi Can in Hurma, Konyaaltı. ${s.intro.de} Kostenloser Service zu Hotels und nach Hause; täglich 08:00–23:00 geöffnet.`],
-      [`Wie lange dauert „${nm}“ und was kostet es?`, `${time}.${price ? ' ' + price + '; der genaue Preis hängt vom Stoff und vom Aufwand ab.' : ' Foto des Kleidungsstücks per WhatsApp senden, dann nennen wir den Preis.'}`],
-      [`Kommen Sie für „${nm}“ ins Hotel oder nach Hause?`, 'Ja, Abholung und Lieferung zu Hotels und nach Hause sind kostenlos. Wir sind in Konyaaltı, Muratpaşa, Lara, Güzeloba, Kundu, Belek, Side und Kemer unterwegs.'],
+      [`Wo in Antalya bekomme ich „${s.vars.de[0]}“?`, `In der Werkstatt von Terzi Can in Hurma, Konyaaltı. ${s.intro.de} Hotel- und Heimservice sind kostenlos, die Werkstatt ist täglich von 08:00 bis 23:00 geöffnet.`],
+      [`Wie viele Tage braucht „${nm}“ und was kostet es?`, `${time}.${price ? ' ' + price + '; der endgültige Preis hängt von Stoff und Aufwand ab.' : ' Schicken Sie ein Foto des Kleidungsstücks per WhatsApp, dann nennen wir den Preis.'}`],
+      [`Holen Sie die Kleidung für „${nm}“ im Hotel oder zu Hause ab?`, 'Ja, Abholung und Lieferung zu Hotels und nach Hause sind kostenlos. Wir fahren unter anderem nach Konyaaltı, Muratpaşa, Lara, Güzeloba, Kundu, Belek, Side und Kemer.'],
     ],
   }[lang] as [string, string][];
 }
@@ -274,16 +274,16 @@ export function serviceMetadata(lang: Lang, s: Service): Metadata {
 
 export function hubMetadata(lang: Lang): Metadata {
   const title = {
-    tr: 'Terzi Hizmetleri Antalya — Paça, Fermuar, Elbise Dikimi, Tadilat',
-    en: 'Tailor Services in Antalya — Hemming, Zippers, Dress Making, Alterations',
-    ru: 'Услуги портного в Анталье — подшив, молнии, пошив и переделка',
-    de: 'Schneider-Leistungen in Antalya — Kürzen, Reißverschluss, Kleider, Änderungen',
+    tr: 'Terzi Hizmetleri Antalya | Paça, Fermuar, Elbise Dikimi, Tadilat · Terzi Can',
+    en: 'Tailor Services in Antalya | Hemming, Zippers, Dress Making, Alterations · Terzi Can',
+    ru: 'Услуги портного в Анталье | подшив, молнии, пошив, переделка · Terzi Can',
+    de: 'Schneider-Leistungen in Antalya | Kürzen, Reißverschluss, Kleider, Änderungen · Terzi Can',
   }[lang];
   const description = {
-    tr: 'Paça kısaltma, bel daraltma, fermuar değişimi, elbise dikimi, elbise-ceket-mont-gömlek tadilatı, gelinlik ve abiye. Konyaaltı, Muratpaşa, Lara, Belek, Side, Kemer ve çevresi; otel ve eve ücretsiz servis.',
-    en: 'Trouser hemming, waist alterations, zipper replacement, dress making, dress, jacket, coat and shirt alterations, wedding and evening gowns. Konyaaltı, Muratpaşa, Lara, Belek, Side, Kemer and more; free service to hotels and homes.',
-    ru: 'Подшив брюк, ушивание, замена молнии, пошив платьев, переделка платьев, пиджаков, курток и рубашек, свадебные и вечерние платья. Коньяалты, Муратпаша, Лара, Белек, Сиде, Кемер; бесплатный выезд в отели и на дом.',
-    de: 'Hose kürzen, Taille enger machen, Reißverschluss wechseln, Kleider nähen, Kleider, Sakkos, Mäntel und Hemden ändern, Braut- und Abendkleider. Konyaaltı, Muratpaşa, Lara, Belek, Side, Kemer; kostenloser Service zu Hotels und nach Hause.',
+    tr: 'Paça kısaltma, bel daraltma, fermuar, elbise dikimi, elbise/ceket/mont/gömlek tadilatı, gelinlik ve abiye ayarı. Konyaaltı, Muratpaşa, Lara, Belek, Side ve Kemer dahil bölgelerde otel ve eve ücretsiz alım-teslim.',
+    en: 'Hemming, waist alterations, zippers, dress making, alterations for dresses, jackets, coats and shirts, plus wedding and evening gowns. Free hotel and home pick-up and delivery across Konyaaltı, Muratpaşa, Lara, Belek, Side and Kemer.',
+    ru: 'Подшив, ушивание, молнии, пошив платьев, переделка платьев, пиджаков, курток и рубашек, а также свадебные и вечерние платья. Бесплатный забор и доставка в отели и на дом: Коньяалты, Муратпаша, Лара, Белек, Сиде, Кемер.',
+    de: 'Kürzen, Taille anpassen, Reißverschlüsse, Kleider nähen, Änderungen an Kleidern, Sakkos, Mänteln und Hemden sowie Braut- und Abendkleider. Kostenlose Abholung und Lieferung zu Hotels und nach Hause in Konyaaltı, Muratpaşa, Lara, Belek, Side und Kemer.',
   }[lang];
   const url = abs(SERVICE_BASE[lang]);
   return {

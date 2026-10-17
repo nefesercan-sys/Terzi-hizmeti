@@ -108,16 +108,16 @@ function districtCopy(lang: Lang, d: District) {
   const loc = d.loc[lang];
   const kw = (lang === 'tr' ? [`${n} terzi`, `${n} terzi hizmeti`, ...d.alias.map((a) => `${a} terzi`)] : []);
   const title = {
-    tr: `${n} Terzi | Paça Kısaltma, Fermuar, Elbise Dikimi · Terzi Can`,
-    en: `Tailor in ${n}, Antalya | Hemming, Zippers, Dress Repairs · Terzi Can`,
-    ru: `Портной ${n}, Анталья | Подшив, молнии, ремонт платьев · Terzi Can`,
-    de: `Schneider ${n}, Antalya | Kürzen, Reißverschluss, Änderungen · Terzi Can`,
+    tr: `${n} Terzi | Paça, Fermuar, Elbise Tamiri`,
+    en: `Tailor in ${n}, Antalya | Hemming & Zipper Repair`,
+    ru: `Портной ${n}, Анталья | Подшив и ремонт одежды`,
+    de: `Schneider ${n}, Antalya | Kürzen & Änderungen`,
   }[lang];
   const desc = {
-    tr: `${loc} terzi: paça kısaltma, bel daraltma, fermuar, elbise dikimi ve tamiri. Gelinlik ₺800'den, abiye ₺400'den. Hurma/Konyaaltı atölyesi, otele ve eve ücretsiz alım-teslim, her gün 08:00–23:00.`,
-    en: `Tailor ${loc}: hemming, waist alterations, zippers, dress making and repairs. Wedding gowns from ₺800, evening dresses from ₺400. Workshop in Hurma, Konyaaltı; free pick-up and delivery to hotels and homes, daily 08:00–23:00.`,
-    ru: `Портной ${loc}: подшив, ушивание, молнии, пошив и ремонт платьев. Свадебные платья от ₺800, вечерние — от ₺400. Мастерская в Хурме (Коньяалты); бесплатный забор и доставка в отели и на дом, ежедневно 08:00–23:00.`,
-    de: `Schneider ${loc}: Kürzen, Taille anpassen, Reißverschlüsse, Kleider nähen und reparieren. Brautkleider ab ₺800, Abendkleider ab ₺400. Werkstatt in Hurma, Konyaaltı; kostenlose Abholung und Lieferung zu Hotels und nach Hause, täglich 08:00–23:00.`,
+    tr: `${loc} terzi: paça, fermuar, elbise dikimi ve tamiri. Her gün 08:00–23:00, otel ve eve ücretsiz alım-teslim. Gelinlik ₺800'den, abiye ₺400'den.`,
+    en: `Tailor ${loc}: hemming, zippers, dress making and repairs. Open daily 08:00–23:00, free hotel and home pick-up. Wedding gowns from ₺800.`,
+    ru: `Портной ${loc}: подшив, молнии, пошив и ремонт платьев. Ежедневно 08:00–23:00, бесплатный забор из отелей и с дома. Свадебные платья от ₺800.`,
+    de: `Schneider ${loc}: Kürzen, Reißverschlüsse, Kleider nähen und reparieren. Täglich 08:00–23:00, kostenlose Abholung im Hotel. Brautkleider ab ₺800.`,
   }[lang];
   return { n, loc, kw, title, desc };
 }
@@ -189,18 +189,26 @@ function districtFaq(lang: Lang, d: District): [string, string][] {
 function serviceCopy(lang: Lang, s: Service) {
   const nm = s.name[lang];
   const title = {
-    tr: `${nm} Antalya | Konyaaltı, Muratpaşa, Lara, Belek · Terzi Can`,
-    en: `${nm} in Antalya | Konyaaltı, Lara, Belek, Kemer · Terzi Can`,
-    ru: `${nm} в Анталье | Коньяалты, Лара, Белек, Кемер · Terzi Can`,
-    de: `${nm} in Antalya | Konyaaltı, Lara, Belek, Kemer · Terzi Can`,
+    tr: `${nm} Antalya | Terzi Can`,
+    en: `${nm} in Antalya | Terzi Can`,
+    ru: `${nm} в Анталье | Terzi Can`,
+    de: `${nm} in Antalya | Terzi Can`,
   }[lang];
   const price = priceOf(lang, s);
-  const desc = {
-    tr: `${s.intro.tr.split('. ')[0]}. ${timeOf('tr', s)}.${price ? ' ' + price + '.' : ''} Konyaaltı, Muratpaşa, Lara, Belek, Side, Kemer bölgelerinde otel ve eve ücretsiz alım-teslim.`,
-    en: `${s.intro.en.split('. ')[0]}. ${timeOf('en', s)}.${price ? ' ' + price + '.' : ''} Free hotel and home pick-up in Konyaaltı, Lara, Belek, Side and Kemer.`,
-    ru: `${s.intro.ru.split('. ')[0]}. ${timeOf('ru', s)}.${price ? ' ' + price + '.' : ''} Бесплатный забор из отелей и с дома: Коньяалты, Лара, Белек, Сиде, Кемер.`,
-    de: `${s.intro.de.split('. ')[0]}. ${timeOf('de', s)}.${price ? ' ' + price + '.' : ''} Kostenlose Abholung im Hotel oder zu Hause in Konyaaltı, Lara, Belek, Side und Kemer.`,
+  const p = price ? ' ' + price + '.' : '';
+  const tails = {
+    tr: ['Otel ve eve ücretsiz alım-teslim, her gün 08:00–23:00. Konyaaltı atölyesi.', 'Otel ve eve ücretsiz alım-teslim, her gün 08:00–23:00.', 'Her gün 08:00–23:00.'],
+    en: ['Free hotel and home pick-up, open daily 08:00–23:00. Konyaaltı workshop.', 'Free hotel and home pick-up, open daily 08:00–23:00.', 'Open daily 08:00–23:00.'],
+    ru: ['Бесплатный забор из отелей и с дома, ежедневно 08:00–23:00. Мастерская в Коньяалты.', 'Бесплатный забор из отелей и с дома, ежедневно 08:00–23:00.', 'Ежедневно 08:00–23:00.'],
+    de: ['Kostenlose Abholung im Hotel oder zu Hause, täglich 08:00–23:00. Werkstatt in Konyaaltı.', 'Kostenlose Abholung im Hotel oder zu Hause, täglich 08:00–23:00.', 'Täglich 08:00–23:00.'],
   }[lang];
+  const head = `${nm}: ${timeOf(lang, s)}.`;
+  // Google yaklaşık 155-160 karakter gösterir: sığan en uzun varyantı seç, önemli bilgi (süre/saat) başta kalsın.
+  const candidates = [
+    ...tails.map((t) => `${head}${p} ${t}`),
+    ...tails.map((t) => `${head} ${t}`),
+  ];
+  const desc = candidates.find((c) => c.length <= 158) ?? candidates[candidates.length - 1];
   return { nm, title, desc };
 }
 
@@ -274,16 +282,16 @@ export function serviceMetadata(lang: Lang, s: Service): Metadata {
 
 export function hubMetadata(lang: Lang): Metadata {
   const title = {
-    tr: 'Terzi Hizmetleri Antalya | Paça, Fermuar, Elbise Dikimi, Tadilat · Terzi Can',
-    en: 'Tailor Services in Antalya | Hemming, Zippers, Dress Making, Alterations · Terzi Can',
-    ru: 'Услуги портного в Анталье | подшив, молнии, пошив, переделка · Terzi Can',
-    de: 'Schneider-Leistungen in Antalya | Kürzen, Reißverschluss, Kleider, Änderungen · Terzi Can',
+    tr: 'Terzi Hizmetleri Antalya | Paça, Fermuar, Tadilat, Dikim',
+    en: 'Tailor Services in Antalya | Hemming, Zippers, Alterations',
+    ru: 'Услуги портного в Анталье | подшив, молнии, переделка',
+    de: 'Schneider-Service Antalya | Kürzen, Reißverschluss, Änderung',
   }[lang];
   const description = {
-    tr: 'Paça kısaltma, bel daraltma, fermuar, elbise dikimi, elbise/ceket/mont/gömlek tadilatı, gelinlik ve abiye ayarı. Konyaaltı, Muratpaşa, Lara, Belek, Side ve Kemer dahil bölgelerde otel ve eve ücretsiz alım-teslim.',
-    en: 'Hemming, waist alterations, zippers, dress making, alterations for dresses, jackets, coats and shirts, plus wedding and evening gowns. Free hotel and home pick-up and delivery across Konyaaltı, Muratpaşa, Lara, Belek, Side and Kemer.',
-    ru: 'Подшив, ушивание, молнии, пошив платьев, переделка платьев, пиджаков, курток и рубашек, а также свадебные и вечерние платья. Бесплатный забор и доставка в отели и на дом: Коньяалты, Муратпаша, Лара, Белек, Сиде, Кемер.',
-    de: 'Kürzen, Taille anpassen, Reißverschlüsse, Kleider nähen, Änderungen an Kleidern, Sakkos, Mänteln und Hemden sowie Braut- und Abendkleider. Kostenlose Abholung und Lieferung zu Hotels und nach Hause in Konyaaltı, Muratpaşa, Lara, Belek, Side und Kemer.',
+    tr: 'Paça kısaltma, bel daraltma, fermuar, elbise dikimi ve tadilat. Otel ve eve ücretsiz alım-teslim, her gün 08:00–23:00. Konyaaltı, Lara, Belek, Kemer.',
+    en: 'Hemming, waist alterations, zippers, dress making and alterations. Free hotel and home pick-up, open daily 08:00–23:00. Konyaaltı, Lara, Belek, Kemer.',
+    ru: 'Подшив, ушивание, молнии, пошив и переделка одежды. Бесплатный забор из отелей, ежедневно 08:00–23:00. Коньяалты, Лара, Белек, Кемер.',
+    de: 'Kürzen, Taille anpassen, Reißverschlüsse, Kleider nähen und ändern. Kostenlose Hotelabholung, täglich 08:00–23:00. Konyaaltı, Lara, Belek, Kemer.',
   }[lang];
   const url = abs(SERVICE_BASE[lang]);
   return {

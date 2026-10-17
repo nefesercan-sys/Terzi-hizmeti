@@ -27,15 +27,15 @@ export async function generateMetadata({ params }: { params: Promise<{ region: s
   if (!r) return {};
 
   const url = `${SITE}${BASE_PATH}/${r.slug}`;
-  const title = `Schneider im Hotel ${r.name}, Antalya — Abholung & Änderung`;
-  const desc = `Schnelle Kleiderreparatur im Urlaub? Terzi Can bietet professionelle Änderungsschneiderei mit VIP-Abholung in den Hotels von ${r.name}. Kontaktieren Sie uns über WhatsApp!`;
+  const title = `Schneider im Hotel ${r.name}, Antalya | Abholung & Lieferung`;
+  const desc = `Urlaub in ${r.name}? Wir holen Kleidung im Hotel ab, ändern sie in Konyaaltı und bringen sie zurück. Täglich 08:00–23:00, kostenlose Lieferung.`;
   const ogImage = `${SITE}/terzi-can-hero.jpg`;
 
   return {
     metadataBase: new URL(SITE),
     title: { absolute: title },
     description: desc,
-    keywords: [`VIP Schneider ${r.name}`, `Änderungsschneiderei ${r.name}`, `Hotel Abholung Schneider ${r.name}`, 'Textilreparatur Antalya'],
+    keywords: [`Schneider Hotel ${r.name}`, `Änderungsschneiderei ${r.name}`, `Hose kürzen ${r.name}`, `Reißverschluss reparieren ${r.name}`, 'Schneider Antalya Urlaub', 'Kleidung ändern lassen Antalya Hotel'],
     alternates: {
       canonical: url,
       languages: {
@@ -61,10 +61,10 @@ export default async function OtelBolgeDePage({ params }: { params: Promise<{ re
   const url = `${SITE}${BASE_PATH}/${r.slug}`;
   
   const seoContent = {
-    h1: `Premium Änderungsschneiderei für Hotelgäste in ${r.name}`,
-    h2: `Schnelle und professionelle Textilreparatur – direkt ab Hotel`,
-    body1: `Sie genießen Ihren Urlaub in ${r.name}, aber das neu gekaufte Kleid ist zu lang oder der Reißverschluss Ihrer Lieblingsjacke ist kaputt? Terzi Can ist Ihre zuverlässige Schneiderei vor Ort.`,
-    body2: `Da Ihre Urlaubszeit kostbar ist, bieten wir einen exklusiven VIP-Abhol- und Lieferservice für Gäste in den Hotelregionen von ${r.name} an. Sie müssen Ihr Resort nicht verlassen!`
+    h1: `Schneider für Hotelgäste in ${r.name}: Abholung, Änderung, Rückgabe`,
+    h2: `Kleidung im Urlaub anpassen lassen – ohne Fahrt in die Stadt`,
+    body1: `Die Hose ist zu lang, der Reißverschluss defekt, das Kleid muss vor dem Abendessen enger? Wenn Sie in ${r.name} wohnen, schicken Sie uns ein Foto per WhatsApp – wir sagen Ihnen, was möglich ist und was es kostet.`,
+    body2: `Unsere Werkstatt liegt in Hurma, Konyaaltı, und ist täglich von 08:00 bis 23:00 geöffnet. Wir holen das Kleidungsstück im Hotel ab, arbeiten in der Werkstatt und bringen es zurück; Abholung und Lieferung zu Hotels sind kostenlos. Kürzen, Enger machen und Reißverschlussarbeiten sind am selben Tag fertig.`
   };
 
   const jsonLd = {
@@ -73,7 +73,7 @@ export default async function OtelBolgeDePage({ params }: { params: Promise<{ re
       {
         '@type': 'Service',
         '@id': `${url}#service`,
-        name: `VIP Hotel Schneider Service ${r.name}`,
+        name: `Schneider-Service mit Hotelabholung ${r.name}`,
         serviceType: 'Clothing Alterations & Mobile Tailoring',
         provider: { '@type': 'ClothingStore', name: 'Terzi Can', telephone: PHONE_TEL, url: `${SITE}/antalya-terzi`, image: `${SITE}/terzi-can-hero.jpg` },
         areaServed: { '@type': 'Place', name: `${r.name}, Antalya` },
@@ -86,13 +86,13 @@ export default async function OtelBolgeDePage({ params }: { params: Promise<{ re
         mainEntity: [
           {
             '@type': 'Question',
-            name: `Bieten Sie eine VIP-Abholung in ${r.name} an?`,
-            acceptedAnswer: { '@type': 'Answer', text: `Ja! Senden Sie uns ein Foto per WhatsApp. Wir holen das Kleidungsstück direkt an der Rezeption Ihres Hotels in ${r.name} ab.` },
+            name: `Wie wird meine Kleidung im Hotel in ${r.name} abgeholt?`,
+            acceptedAnswer: { '@type': 'Answer', text: `Senden Sie uns ein Foto des Kleidungsstücks und den Namen Ihres Hotels per WhatsApp. Wir vereinbaren eine Abholzeit, nehmen es mit in die Werkstatt und bringen es zurück ins Hotel.` },
           },
           {
             '@type': 'Question',
-            name: `Wie schnell ist die Bearbeitung?`,
-            acceptedAnswer: { '@type': 'Answer', text: `Unsere erfahrenen Schneider erledigen die Arbeit und liefern es in der Regel innerhalb von 24 bis 48 Stunden an Ihr Hotel in ${r.name} zurück.` },
+            name: `Wann bekomme ich die Kleidung zurück?`,
+            acceptedAnswer: { '@type': 'Answer', text: `Kürzen, Enger machen und Reißverschlussreparaturen sind in der Regel am selben Tag fertig; Änderungen an Kleidern, Sakkos, Hemden und Mänteln dauern 1 Tag; ein Kleid nähen dauert 3 Tage.` },
           },
         ],
       },

@@ -17,12 +17,12 @@ export async function generateMetadata({ params }: { params: Promise<{ region: s
   const r = bulOtelBolgesi(region);
   if (!r) return {};
   const url = `${SITE}${BASE_PATH}/${r.slug}`;
-  const title = `${r.name} Otel Terzisi — Otele Gelen Terzi Hizmeti`;
-  const desc = `${r.name} bölgesindeki otelinize terzi servisi. Dikim, tadilat, tamir, ütü ve kuru temizleme odanıza teslim. ${r.travelTime.tr}. Türkçe, İngilizce, Almanca, Rusça iletişim.`;
+  const title = `${r.name} Otel Terzisi | Otelden Alır, Teslim Ederiz`;
+  const desc = `${r.name} bölgesinde otelde mi kalıyorsunuz? Kıyafetinizi otelden alıp Konyaaltı'nda tadil ediyor, geri getiriyoruz. Her gün 08:00–23:00.`;
   return {
     metadataBase: new URL(SITE),
     title: { absolute: title }, description: desc,
-    keywords: [`${r.name} otel terzi`, `${r.name} terzi`, 'otele gelen terzi Antalya', `${r.name} fermuar tamiri`, `${r.name} ütü hizmeti`],
+    keywords: [`${r.name} otel terzi`, `${r.name} terzi`, 'otele gelen terzi Antalya', `${r.name} fermuar tamiri`, `${r.name} paça kısaltma`, `${r.name} otelde terzi`],
     alternates: {
       canonical: url,
       languages: {
@@ -52,6 +52,7 @@ export default async function OtelBolgeTrPage({ params }: { params: Promise<{ re
         areaServed: { '@type': 'Place', name: r.name }, url },
       { '@type': 'FAQPage', mainEntity: [
         { '@type': 'Question', name: `${r.name} bölgesindeki otelime terzi gelir mi?`, acceptedAnswer: { '@type': 'Answer', text: `Evet, Terzi Can'ın otele gelen terzisi ${r.name} bölgesindeki her otele ulaşabiliyor. Otel adınızı WhatsApp'tan iletin: +90 531 898 64 18.` } },
+        { '@type': 'Question', name: `${r.name} otel terzisi işi ne zaman teslim eder?`, acceptedAnswer: { '@type': 'Answer', text: `Paça kısaltma, daraltma ve fermuar işleri çoğunlukla aynı gün; elbise, ceket, gömlek ve mont tadilatı 1 gün; elbise dikimi 3 günde teslim edilir. Otele alım-teslim ücretsizdir.` } },
       ] },
     ],
   };

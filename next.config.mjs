@@ -22,7 +22,14 @@ const nextConfig = {
   // NOT: www isteği 301 ile non-www'ye yönlenir. Yandex doğrulaması non-www
   // üzerinden yapılmalıdır; layout.tsx'teki meta doğrulama kodları yedek olarak durur.
   // public/yandex_...html dosyasını silme.
+  // ── terzihizmeti.com (ikinci alan adı) ────────────────────────────────
+  // terzihizmeti.com ve www.terzihizmeti.com bu projeye bağlıdır ama içerik
+  // yayınlamaz: kısa yönlendirme adresleri + geri kalan her şey .com.tr'ye gider.
+  // Sıra önemli: önce kısa adresler, en sonda hepsini yakalayan kural.
+  // Kısa adresler geçici (307) yönlendirilir ki hedef sonra değiştirilebilsin.
   async redirects() {
+    const comHost = [{ type: 'host', value: '(www\\.)?terzihizmeti\\.com' }];
+    const kisa = (source, destination) => ({ source, has: comHost, destination, permanent: false });
     return [
       {
         source: '/:path*',
@@ -30,6 +37,15 @@ const nextConfig = {
         destination: 'https://terzihizmeti.com.tr/:path*',
         permanent: true,
       },
+      // Turist kısa adresleri (otel broşürü, QR kod, kartvizit için)
+      kisa('/en', 'https://terzihizmeti.com.tr/en/linen-cotton-tailoring'),
+      kisa('/de', 'https://terzihizmeti.com.tr/de/leinen-baumwolle-schneiderei'),
+      kisa('/ru', 'https://terzihizmeti.com.tr/ru/poshiv-lyon-hlopok'),
+      kisa('/en/fix', 'https://terzihizmeti.com.tr/en/tourist-clothing-alterations-antalya'),
+      kisa('/de/fix', 'https://terzihizmeti.com.tr/de/kleidung-aendern-urlaub-antalya'),
+      kisa('/ru/fix', 'https://terzihizmeti.com.tr/ru/podgonka-odezhdy-turistam-antalya'),
+      // Diğer her adres: aynı yolla .com.tr'ye kalıcı yönlendirme
+      { source: '/:path*', has: comHost, destination: 'https://terzihizmeti.com.tr/:path*', permanent: true },
     ];
   },
   async headers() {
@@ -52,15 +68,4 @@ const nextConfig = {
         // EKLENDİ: Next.js'in derlediği statik varlıklar (JS/CSS chunk'ları)
         // dosya adına hash içerir, yani içerik değişmeden asla aynı URL'de
         // farklı içerik gelmez — bu yüzden agresif, uzun süreli cache güvenlidir.
-        // Bu, tekrar eden ziyaretlerde sayfa yükleme hızını (Core Web Vitals)
-        // doğrudan iyileştirir.
-        source: '/_next/static/:path*',
-        headers: [
-          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
-        ],
-      },
-    ];
-  },
-};
-
-export default nextConfig;
+        // Bu, tekrar eden ziyaretlerde sayfa yükleme hızın

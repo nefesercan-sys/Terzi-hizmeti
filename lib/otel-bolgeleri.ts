@@ -26,10 +26,10 @@ export const OTEL_BOLGELERI: OtelBolgesi[] = [
       en: '~35–40 min from our Konyaaltı workshop', ru: '~35–40 мин от мастерской в Коньяалты', de: '~35–40 Min von unserer Werkstatt in Konyaaltı',
     },
     blurb: {
-      tr: 'Belek, Antalya\'nın golf ve 5 yıldızlı otel bölgesi — bölgenin en prestijli tesislerinden bazılarına ev sahipliği yapıyor.',
-      en: 'Belek is Antalya\'s golf and 5-star hotel district, home to some of the region\'s most exclusive resorts.',
-      ru: 'Белек — район гольф-курортов и 5-звёздочных отелей Антальи, один из самых престижных курортных районов региона.',
-      de: 'Belek ist der Golf- und 5-Sterne-Hotelbezirk von Antalya, mit einigen der exklusivsten Resorts der Region.',
+      tr: "Belek, Antalya'nın golf sahalarıyla ve 5 yıldızlı resort otelleriyle öne çıkan tatil bölgesi.",
+      en: "Belek is Antalya's holiday area known for its golf courses and 5-star resort hotels.",
+      ru: "Белек — курортная зона Антальи, известная гольф-полями и 5-звёздочными отелями.",
+      de: "Belek ist Antalyas Urlaubsgebiet, bekannt für Golfplätze und 5-Sterne-Resorts.",
     },
   },
   {
@@ -45,10 +45,10 @@ export const OTEL_BOLGELERI: OtelBolgesi[] = [
       en: '~10–15 min from our Konyaaltı workshop', ru: '~10–15 мин от мастерской в Коньяалты', de: '~10–15 Min von unserer Werkstatt in Konyaaltı',
     },
     blurb: {
-      tr: 'Lara, Antalya şehir merkezine en yakın büyük sahil-otel bölgesi — uzun bir kumsal şeridine sahip.',
-      en: 'Lara is Antalya\'s closest major beach-hotel district to the city centre, with a long sandy coastline.',
-      ru: 'Лара — ближайший к центру Антальи крупный пляжный отельный район с длинной песчаной береговой линией.',
-      de: 'Lara ist der stadtnächste große Strand-Hotelbezirk von Antalya mit einer langen Sandküste.',
+      tr: "Lara, şehir merkezine yakın, uzun kumsalı olan ve sahil boyunca otellerin sıralandığı bir bölge.",
+      en: "Lara lies close to the city centre, with a long sandy beach and hotels lined along the coast.",
+      ru: "Лара находится недалеко от центра города: длинный песчаный пляж и отели вдоль побережья.",
+      de: "Lara liegt nahe dem Stadtzentrum, mit langem Sandstrand und Hotels entlang der Küste.",
     },
   },
   {
@@ -63,10 +63,10 @@ export const OTEL_BOLGELERI: OtelBolgesi[] = [
       en: '~15–20 min from our Konyaaltı workshop', ru: '~15–20 мин от мастерской в Коньяалты', de: '~15–20 Min von unserer Werkstatt in Konyaaltı',
     },
     blurb: {
-      tr: 'Güzeloba, Lara bölgesinin bir parçası — Lara merkezinin hemen doğusunda, daha sakin bir sahil-otel bölgesi.',
-      en: 'Güzeloba, part of the greater Lara area, is a quieter beachfront hotel district just east of central Lara.',
-      ru: 'Гюзельоба, часть района Лара, — более тихий пляжный отельный район чуть восточнее центра Лары.',
-      de: 'Güzeloba, Teil des größeren Lara-Gebiets, ist ein ruhigerer Strand-Hotelbezirk östlich des Zentrums von Lara.',
+      tr: "Güzeloba, Lara'nın doğu yakasında, merkeze göre daha sakin, sahil boyunca uzanan bir otel bölgesi.",
+      en: "Güzeloba sits on the eastern side of Lara, a calmer stretch of beachfront hotels compared with the centre.",
+      ru: "Гюзельоба расположена в восточной части Лары — более спокойная полоса пляжных отелей по сравнению с центром.",
+      de: "Güzeloba liegt im Osten von Lara, eine ruhigere Strandhotel-Zone als das Zentrum.",
     },
   },
   {
@@ -82,10 +82,10 @@ export const OTEL_BOLGELERI: OtelBolgesi[] = [
       en: '~40–50 min from our Konyaaltı workshop', ru: '~40–50 мин от мастерской в Коньяалты', de: '~40–50 Min von unserer Werkstatt in Konyaaltı',
     },
     blurb: {
-      tr: 'Kemer, Toros Dağları ile denizin buluştuğu, marina ve tatil otelleriyle bilinen bir Antalya sahil kasabası.',
-      en: 'Kemer is a coastal Antalya town where the Taurus Mountains meet the sea, known for its marina and resort hotels.',
-      ru: 'Кемер — прибрежный город Антальи, где горы Тавр встречаются с морем, известный своей мариной и курортными отелями.',
-      de: 'Kemer ist eine Küstenstadt bei Antalya, wo das Taurus-Gebirge auf das Meer trifft, bekannt für seine Marina und Resort-Hotels.',
+      tr: "Kemer, Toros Dağları'nın denize inen eteklerinde kurulu; marinası ve resort otelleriyle bilinen bir sahil kasabası.",
+      en: "Kemer is a seaside town where the Taurus Mountains drop to the water, known for its marina and resort hotels.",
+      ru: "Кемер — приморский городок, где горы Тавр спускаются к морю; известен мариной и курортными отелями.",
+      de: "Kemer ist ein Küstenort, an dem das Taurusgebirge zum Meer abfällt, bekannt für Marina und Resorthotels.",
     },
   },
   {
@@ -100,10 +100,10 @@ export const OTEL_BOLGELERI: OtelBolgesi[] = [
       en: '~55–65 min from our Konyaaltı workshop', ru: '~55–65 мин от мастерской в Коньяалты', de: '~55–65 Min von unserer Werkstatt in Konyaaltı',
     },
     blurb: {
-      tr: 'Side, Manavgat yakınında, antik kalıntıları ve yoğun sahil-otel dokusuyla bilinen tarihi bir tatil kasabası.',
-      en: 'Side is a historic resort town with ancient ruins alongside a large concentration of beach hotels, near Manavgat.',
-      ru: 'Сиде — исторический курортный город с античными руинами и большой концентрацией пляжных отелей, рядом с Манавгатом.',
-      de: 'Side ist eine historische Kurstadt mit antiken Ruinen und einer großen Konzentration an Strandhotels, nahe Manavgat.',
+      tr: "Side, Manavgat'a yakın; antik kalıntılarının yanında çok sayıda sahil oteli bulunan tarihi bir tatil beldesi.",
+      en: "Side is a historic holiday town near Manavgat, with ancient ruins and many beach hotels side by side.",
+      ru: "Сиде — исторический курортный городок возле Манавгата: античные руины рядом со множеством пляжных отелей.",
+      de: "Side ist ein historischer Urlaubsort bei Manavgat, wo antike Ruinen und viele Strandhotels nebeneinander liegen.",
     },
   },
   {

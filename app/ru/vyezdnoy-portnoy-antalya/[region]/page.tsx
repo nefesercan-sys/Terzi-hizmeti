@@ -23,15 +23,15 @@ export async function generateMetadata({ params }: { params: Promise<{ region: s
   if (!r) return {};
 
   const url = `${SITE}${BASE_PATH}/${r.slug}`;
-  const title = `Портной в отель — ${r.name}, Анталья: подгонка и ремонт`;
-  const desc = `Срочный ремонт и подгонка одежды во время отпуска. Ателье Terzi Can предлагает профессиональные услуги портного с выездом в отели ${r.name}. Пишите в WhatsApp!`;
+  const title = `Портной в отель — ${r.name}, Анталья: забор и возврат`;
+  const desc = `Остановились в районе ${r.name}? Заберём вещи из отеля, подгоним в мастерской в Коньяалты и вернём. Ежедневно 08:00–23:00.`;
   const ogImage = `${SITE}/terzi-can-hero.jpg`;
 
   return {
     metadataBase: new URL(SITE),
     title: { absolute: title },
     description: desc,
-    keywords: [`VIP Ателье ${r.name}`, `выездной портной ${r.name}`, `ремонт одежды отель ${r.name}`, 'портной Анталия'],
+    keywords: [`портной в отель ${r.name}`, `выездной портной ${r.name}`, `подшить брюки ${r.name}`, `ремонт молнии ${r.name}`, 'портной Анталья отель', 'срочный ремонт одежды Анталья'],
     alternates: {
       canonical: url,
       languages: {
@@ -57,10 +57,10 @@ export default async function OtelBolgeRuPage({ params }: { params: Promise<{ re
   const url = `${SITE}${BASE_PATH}/${r.slug}`;
   
   const seoContent = {
-    h1: `Профессиональные услуги портного для гостей отелей в ${r.name}`,
-    h2: `Быстрый ремонт и подгонка одежды без выезда из отеля`,
-    body1: `Отдыхаете в ${r.name} и вам нужно срочно укоротить купленные брюки, подогнать вечернее платье по фигуре или починить сломанную молнию? Ателье Terzi Can решит эту проблему быстро и качественно.`,
-    body2: `Мы специализируемся на ремонте, подгонке и пошиве одежды любой сложности. Мы предлагаем VIP-услугу выездного портного для гостей, проживающих в отелях ${r.name}.`
+    h1: `Портной для гостей отелей района ${r.name}: заберём, подгоним, вернём`,
+    h2: `Подгонка и ремонт одежды в отпуске — без поездки в город`,
+    body1: `Брюки длинны, молния сломалась, платье нужно ушить к ужину? Если вы остановились в районе ${r.name}, пришлите фото в WhatsApp — скажем, что можно сделать и сколько это стоит.`,
+    body2: `Мастерская находится в Хурме (Коньяалты) и работает ежедневно с 08:00 до 23:00. Мы забираем вещь из вашего отеля, работаем в мастерской и возвращаем обратно; забор и доставка в отели бесплатны. Подшив, ушивание и молнии готовы в тот же день.`
   };
 
   const jsonLd = {
@@ -69,7 +69,7 @@ export default async function OtelBolgeRuPage({ params }: { params: Promise<{ re
       {
         '@type': 'Service',
         '@id': `${url}#service`,
-        name: `VIP Выездной Портной ${r.name}`,
+        name: `Портной с выездом в отель — ${r.name}`,
         serviceType: 'Clothing Alterations & Mobile Tailoring',
         provider: { '@type': 'ClothingStore', name: 'Terzi Can', telephone: PHONE_TEL, url: `${SITE}/antalya-terzi`, image: `${SITE}/terzi-can-hero.jpg` },
         areaServed: { '@type': 'Place', name: `${r.name}, Antalya` },
@@ -82,13 +82,13 @@ export default async function OtelBolgeRuPage({ params }: { params: Promise<{ re
         mainEntity: [
           {
             '@type': 'Question',
-            name: `Как работает забор одежды из отеля в ${r.name}?`,
-            acceptedAnswer: { '@type': 'Answer', text: `Напишите нам в WhatsApp. Наш курьер заберет вещь прямо с ресепшена вашего отеля в ${r.name} и вернет после ремонта.` },
+            name: `Как забрать вещь из отеля в районе ${r.name}?`,
+            acceptedAnswer: { '@type': 'Answer', text: `Пришлите в WhatsApp фото вещи и название отеля. Мы согласуем время, заберём вещь в мастерскую и вернём её в ваш отель.` },
           },
           {
             '@type': 'Question',
-            name: `Сколько времени занимает работа?`,
-            acceptedAnswer: { '@type': 'Answer', text: `Наши мастера выполнят заказ за 24–48 часов с бесплатной доставкой в ваш отель в ${r.name}.` },
+            name: `Когда я получу вещь обратно?`,
+            acceptedAnswer: { '@type': 'Answer', text: `Подшив, ушивание и ремонт молнии обычно делаем в тот же день; переделка платьев, пиджаков, рубашек и курток занимает 1 день; пошив платья — 3 дня.` },
           },
         ],
       },

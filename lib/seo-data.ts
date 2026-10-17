@@ -119,10 +119,10 @@ export const SERVICES: Service[] = [
     name: { tr: 'Pantolon Paça Kısaltma', en: 'Trouser Hemming', ru: 'Подшив брюк', de: 'Hosen kürzen' },
     q: { tr: 'paça kısaltma', en: 'trouser hemming', ru: 'подшив брюк', de: 'Hosen kürzen' },
     intro: {
-      tr: 'Kumaş pantolon, takım pantolonu ve etek paçasını boyunuza göre kısaltıyoruz. Ölçü sizin üzerinizde alınır, dikiş temiz ve düzgün biter.',
-      en: 'We shorten the hems of dress trousers, suit trousers and skirts to your exact length. The length is marked on you and the stitching is finished cleanly.',
-      ru: 'Укорачиваем низ классических брюк, брюк от костюма и юбок точно по вашему росту. Длину отмечаем прямо на вас, шов выполняем аккуратно.',
-      de: 'Wir kürzen Anzughosen, Stoffhosen und Röcke exakt auf Ihre Länge. Die Länge wird direkt am Körper abgesteckt und sauber genäht.',
+      tr: 'Pantolon, takım pantolonu ve etek paçası için boyu üzerinizde işaretleyip Konyaaltı atölyemizde kısaltıyoruz. İş çoğu zaman aynı gün biter; tatilde ya da yoğun bir haftada vaktiniz kısıtlıysa uygundur.',
+      en: 'Trousers, suit trousers or a skirt too long? We mark the length on you and hem it in our Konyaaltı workshop, often within the same day, which suits a holiday or a tight week.',
+      ru: 'Брюки, брюки от костюма или юбка длинноваты? Отмечаем длину на вас и подшиваем в нашей мастерской в Коньяалты, часто в тот же день — удобно в отпуске или в плотном графике.',
+      de: 'Hose, Anzughose oder Rock zu lang? Wir stecken die Länge an Ihnen ab und kürzen in unserer Werkstatt in Konyaaltı, oft noch am selben Tag – praktisch im Urlaub oder bei knapper Zeit.',
     },
     vars: {
       tr: ['pantolon paça kısaltma', 'paça kısaltma terzi', 'kumaş pantolon boy kısaltma', 'pantolon boyu kısaltma', 'paça tadilatı', 'yakınımdaki terzi paça kısaltma', 'aynı gün paça kısaltma'],
@@ -137,10 +137,10 @@ export const SERVICES: Service[] = [
     name: { tr: 'Kot Pantolon Daraltma ve Kısaltma', en: 'Jeans Hemming & Taking In', ru: 'Подшив и ушивание джинсов', de: 'Jeans kürzen und enger machen' },
     q: { tr: 'kot pantolon kısaltma', en: 'jeans hemming', ru: 'подшив джинсов', de: 'Jeans kürzen' },
     intro: {
-      tr: 'Kot pantolon paçası kısaltma ve daraltma işlemlerini kalın kot kumaşa uygun makine ve iplikle yapıyoruz. Paça boyu ve bacak genişliği ölçünüze göre ayarlanır.',
-      en: 'We hem and taper jeans with machines and thread suited to heavy denim. Leg length and leg width are adjusted to your measurements.',
-      ru: 'Подшиваем и сужаем джинсы на машине и нитками, подходящими для плотного денима. Длину и ширину штанин подгоняем по вашим меркам.',
-      de: 'Wir kürzen und verengen Jeans mit Maschinen und Garn, die für dicken Denim geeignet sind. Länge und Beinweite richten sich nach Ihren Maßen.',
+      tr: 'Kalın kot kumaşa uygun makine ve iplikle kot paçasını kısaltır, bacak genişliğini daraltırız. Paça boyu ve genişlik ölçünüze göre ayarlanır.',
+      en: 'Jeans too long or too wide? We shorten the hem and taper the legs using machines and thread built for heavy denim, adjusting length and width to your measurements.',
+      ru: 'Джинсы длинны или широки? Укорачиваем низ и сужаем штанины на машине и нитках для плотного денима, длину и ширину подгоняем по вашим меркам.',
+      de: 'Jeans zu lang oder zu weit? Wir kürzen den Saum und verengen die Beine mit Maschinen und Garn für dicken Denim, Länge und Weite richten sich nach Ihren Maßen.',
     },
     vars: {
       tr: ['kot pantolon paça kısaltma', 'kot pantolon daraltma', 'kot pantolon kısaltma', 'kot paçası kısaltma', 'jean paça kısaltma terzi', 'kot bel daraltma'],
@@ -155,10 +155,10 @@ export const SERVICES: Service[] = [
     name: { tr: 'Bel Daraltma ve Genişletme', en: 'Waist Taking-in & Letting-out', ru: 'Ушивание и расширение в талии', de: 'Taille enger und weiter machen' },
     q: { tr: 'bel daraltma', en: 'waist alteration', ru: 'ушивание в талии', de: 'Taille enger machen' },
     intro: {
-      tr: 'Pantolon, etek, elbise ve ceketin belini bedeninize göre daraltıyor veya genişletiyoruz. Prova ile ölçü birlikte belirlenir; kıyafet bedeninize oturur.',
-      en: 'We take in or let out the waist of trousers, skirts, dresses and jackets to fit your body. The fit is set together with you at a fitting.',
-      ru: 'Ушиваем или расширяем талию брюк, юбок, платьев и пиджаков по вашей фигуре. Посадку определяем вместе с вами на примерке.',
-      de: 'Wir machen die Taille von Hosen, Röcken, Kleidern und Sakkos enger oder weiter, passend zu Ihrer Figur. Die Passform legen wir gemeinsam bei der Anprobe fest.',
+      tr: 'Bel size büyük ya da dar geldiğinde pantolon, etek, elbise ve ceketin belini daraltır veya genişletiriz. Ölçüyü provada birlikte belirleriz.',
+      en: 'When the waist is too loose or too tight, we take in or let out trousers, skirts, dresses and jackets. We settle the size together with you at a fitting.',
+      ru: 'Если талия велика или мала, ушиваем или расширяем брюки, юбки, платья и пиджаки. Размер определяем вместе с вами на примерке.',
+      de: 'Sitzt die Taille zu locker oder zu eng, machen wir Hosen, Röcke, Kleider und Sakkos enger oder weiter. Das Maß legen wir gemeinsam bei der Anprobe fest.',
     },
     vars: {
       tr: ['bel daraltma', 'pantolon bel daraltma', 'elbise bel daraltma', 'bel genişletme terzi', 'beden küçültme terzi', 'kıyafet daraltma', 'etek bel daraltma'],
@@ -173,10 +173,10 @@ export const SERVICES: Service[] = [
     name: { tr: 'Fermuar Değişimi ve Tamiri', en: 'Zipper Repair & Replacement', ru: 'Замена и ремонт молнии', de: 'Reißverschluss wechseln und reparieren' },
     q: { tr: 'fermuar değişimi', en: 'zipper replacement', ru: 'замена молнии', de: 'Reißverschluss wechseln' },
     intro: {
-      tr: 'Pantolon, etek, elbise, mont, çanta ve ceket fermuarını değiştiriyor veya tamir ediyoruz. Kıyafetin kumaşına ve renge uygun fermuar seçilir.',
-      en: 'We replace or repair zippers on trousers, skirts, dresses, coats, jackets and bags. The zipper is matched to the fabric and colour of the garment.',
-      ru: 'Меняем и ремонтируем молнии на брюках, юбках, платьях, куртках, пальто и сумках. Молнию подбираем по ткани и цвету изделия.',
-      de: 'Wir wechseln oder reparieren Reißverschlüsse an Hosen, Röcken, Kleidern, Jacken, Mänteln und Taschen. Der Reißverschluss wird passend zu Stoff und Farbe gewählt.',
+      tr: 'Bozulan ya da takılan fermuarı pantolon, etek, elbise, mont, çanta ve ceketlerde tamir eder veya yenisiyle değiştiririz. Yeni fermuar kıyafetin rengine ve kumaş ağırlığına göre seçilir.',
+      en: 'A broken or stuck zipper on trousers, skirts, dresses, coats, jackets or bags is repaired or replaced. The new zipper is chosen to match the garment\'s colour and fabric weight.',
+      ru: 'Сломанную или заедающую молнию на брюках, юбках, платьях, куртках, пиджаках и сумках ремонтируем или меняем. Новую молнию подбираем под цвет и плотность ткани.',
+      de: 'Einen defekten oder klemmenden Reißverschluss an Hosen, Röcken, Kleidern, Jacken, Sakkos und Taschen reparieren oder ersetzen wir. Der neue passt zu Farbe und Stoffstärke.',
     },
     vars: {
       tr: ['fermuar değişimi', 'fermuar tamiri', 'fermuar değiştirme terzi', 'pantolon fermuar tamiri', 'mont fermuar değişimi', 'elbise fermuarı değişimi', 'çanta fermuar tamiri'],
@@ -191,10 +191,10 @@ export const SERVICES: Service[] = [
     name: { tr: 'Elbise Dikimi (Ölçüye Göre)', en: 'Custom Dress Making', ru: 'Пошив платьев на заказ', de: 'Kleid nach Maß nähen' },
     q: { tr: 'elbise dikimi', en: 'custom dress making', ru: 'пошив платья', de: 'Kleid nähen lassen' },
     intro: {
-      tr: 'Beden ölçünüze göre elbise dikimi yapıyoruz: günlük elbise, keten elbise, gece kıyafeti ve abiye. Model, kumaş ve ölçü birlikte belirlenir.',
-      en: 'We make dresses to your measurements: everyday dresses, linen dresses, evening wear and formal gowns. Style, fabric and size are decided together with you.',
-      ru: 'Шьём платья по вашим меркам: повседневные, льняные, вечерние и коктейльные. Модель, ткань и размер выбираем вместе с вами.',
-      de: 'Wir nähen Kleider nach Ihren Maßen: Alltagskleider, Leinenkleider, Abendmode und festliche Roben. Schnitt, Stoff und Größe legen wir gemeinsam fest.',
+      tr: 'Ölçünüze göre elbise dikiyoruz: günlük, keten, gece ve abiye modelleri. Keten ve pamuk gibi yazlık kumaşlarda model ve ölçüyü sizinle birlikte belirleriz.',
+      en: 'We sew dresses to your measurements: everyday, linen, evening and formal styles. For summer fabrics such as linen and cotton, the design and size are agreed with you.',
+      ru: 'Шьём платья по вашим меркам: повседневные, льняные, вечерние и нарядные. Для летних тканей, таких как лён и хлопок, фасон и размер согласуем с вами.',
+      de: 'Wir nähen Kleider nach Ihren Maßen: Alltags-, Leinen-, Abend- und festliche Modelle. Bei Sommerstoffen wie Leinen und Baumwolle legen wir Schnitt und Größe gemeinsam fest.',
     },
     extra: { href: '/keten-pamuk-ozel-dikim', label: { tr: 'Keten ve pamuk özel dikim', en: 'Linen & cotton tailoring', ru: 'Пошив из льна и хлопка', de: 'Leinen & Baumwolle Schneiderei' } },
     vars: {
@@ -210,10 +210,10 @@ export const SERVICES: Service[] = [
     name: { tr: 'Elbise Tamiri ve Tadilatı', en: 'Dress Repair & Alteration', ru: 'Ремонт и переделка платьев', de: 'Kleider ändern und reparieren' },
     q: { tr: 'elbise tamiri', en: 'dress alteration', ru: 'ремонт платья', de: 'Kleid ändern' },
     intro: {
-      tr: 'Elbise daraltma, kısaltma, askı ve kol ayarı, sökük dikimi ve onarım işlerini yapıyoruz. Gündelik elbiseden özel gün elbisesine kadar her kıyafet için ölçü provayla alınır.',
-      en: 'We take in, shorten and repair dresses, adjust straps and sleeves, and fix seams. Everything from everyday dresses to special-occasion outfits is fitted on you.',
-      ru: 'Ушиваем и укорачиваем платья, подгоняем бретели и рукава, исправляем швы и ремонтируем. От повседневных платьев до нарядных, с примеркой на вас.',
-      de: 'Wir machen Kleider enger, kürzen sie, passen Träger und Ärmel an und reparieren Nähte. Vom Alltagskleid bis zum festlichen Outfit wird alles anprobiert.',
+      tr: 'Elbiselerde daraltma, kısaltma, askı ve kol ayarı, sökük dikimi ve onarım yaparız. Günlük elbise de olsa özel gün elbisesi de olsa ölçü, üzerinizde provayla alınır.',
+      en: 'Dresses: we take in, shorten, adjust straps and sleeves, close open seams and repair damage, whether everyday or occasion wear, with measurements taken at a fitting.',
+      ru: 'Платья: ушиваем, укорачиваем, подгоняем бретели и рукава, зашиваем распоротые швы и чиним повреждения — будь то повседневное или праздничное, мерки снимаем на примерке.',
+      de: 'Kleider: Wir machen sie enger, kürzen, passen Träger und Ärmel an, schließen aufgegangene Nähte und reparieren Schäden – ob Alltags- oder Festkleid, gemessen wird bei der Anprobe.',
     },
     vars: {
       tr: ['elbise tamiri', 'elbise tadilatı', 'elbise daraltma', 'elbise kısaltma', 'elbise tamiri terzi', 'kıyafet tadilatı', 'her türlü kıyafet tadilatı'],
@@ -240,10 +240,10 @@ export const SERVICES: Service[] = [
       de: 'Abendkleid-Änderungen sind am nächsten Tag (1 Tag) fertig; beim Brautkleid hängt die Dauer vom Umfang ab und wird per WhatsApp geklärt.',
     },
     intro: {
-      tr: 'Gelinlik ve abiyede daraltma, boy ayarı, korse ve askı düzenlemesi gibi hassas işleri provalı olarak yapıyoruz. Otelde konaklayan gelinler ve davetliler için servis mümkündür.',
-      en: 'We handle delicate work on wedding and evening gowns — taking in, hem length, corset and strap adjustments — with fittings. Service to hotels is available for brides and guests staying in Antalya.',
-      ru: 'Выполняем деликатные работы на свадебных и вечерних платьях — ушивание, длина, корсет и бретели — с примерками. Для невест и гостей, остановившихся в отеле, возможен выезд.',
-      de: 'Wir führen empfindliche Arbeiten an Braut- und Abendkleidern aus — Enger machen, Saumlänge, Korsett und Träger — mit Anprobe. Für Bräute und Gäste im Hotel ist ein Service möglich.',
+      tr: 'Gelinlik ve abiyede daraltma, boy, korse ve askı ayarı gibi hassas işleri provalı yaparız. Antalya\'da otelde kalan gelin ve davetliler için otele servis imkânı vardır.',
+      en: 'Delicate work on wedding and evening gowns — taking in, length, corset and strap adjustment — is done with fittings. Hotel service is available for brides and guests staying in Antalya.',
+      ru: 'Деликатные работы со свадебными и вечерними платьями — ушивание, длина, корсет и бретели — выполняем с примерками. Для невест и гостей, остановившихся в отелях Анталии, возможен выезд в отель.',
+      de: 'Heikle Arbeiten an Brautkleid und Abendkleid – Enger machen, Länge, Korsett und Träger – erledigen wir mit Anprobe. Für Bräute und Gäste in Antalya-Hotels ist ein Hotelservice möglich.',
     },
     extra: { href: '/antalya-gelinlik-tadilati', label: { tr: 'Gelinlik tadilatı sayfası', en: 'Wedding dress page (Turkish)', ru: 'Страница о свадебных платьях (тур.)', de: 'Brautkleid-Seite (türkisch)' } },
     vars: {
@@ -259,10 +259,10 @@ export const SERVICES: Service[] = [
     name: { tr: 'Takım Elbise ve Ceket Tadilatı', en: 'Suit & Jacket Alteration', ru: 'Подгонка костюма и пиджака', de: 'Anzug und Sakko ändern' },
     q: { tr: 'takım elbise tadilatı', en: 'suit alteration', ru: 'подгонка костюма', de: 'Anzug ändern' },
     intro: {
-      tr: 'Takım elbise ve ceket daraltma, kısaltma, kol boyu ve omuz düzeltme işlerini yapıyoruz. Pantolon ve ceket birlikte ölçülür, bay ve bayan modeller için uygulanır.',
-      en: 'We take in and shorten suits and jackets and adjust sleeve length and shoulders. Jacket and trousers are fitted together, for men\'s and women\'s cuts.',
-      ru: 'Ушиваем и укорачиваем костюмы и пиджаки, подгоняем длину рукава и плечи. Пиджак и брюки примеряем вместе, для мужских и женских моделей.',
-      de: 'Wir machen Anzüge und Sakkos enger, kürzen sie und passen Ärmellänge und Schultern an. Sakko und Hose werden zusammen anprobiert, für Herren und Damen.',
+      tr: 'Takım elbise ve ceketlerde daraltma, kısaltma, kol boyu ve omuz düzeltmesi yaparız. Ceket ve pantolon birlikte provaya alınır; bay ve bayan kesimler için geçerlidir.',
+      en: 'Suits and jackets: we take in, shorten and correct sleeve length and shoulders. Jacket and trousers are fitted together, for men\'s and women\'s cuts.',
+      ru: 'Костюмы и пиджаки: ушиваем, укорачиваем, правим длину рукавов и плечи. Пиджак и брюки примеряем вместе, для мужских и женских фасонов.',
+      de: 'Anzüge und Sakkos: Wir machen sie enger, kürzen und korrigieren Ärmellänge und Schultern. Sakko und Hose werden zusammen anprobiert, für Herren- und Damenschnitte.',
     },
     vars: {
       tr: ['takım elbise tadilatı', 'ceket daraltma', 'ceket kısaltma', 'ceket kol kısaltma', 'takım elbise daraltma', 'blazer ceket tadilat', 'bay bayan ceket tadilatı'],
@@ -277,10 +277,10 @@ export const SERVICES: Service[] = [
     name: { tr: 'Mont ve Palto Tadilatı', en: 'Coat & Jacket Alteration', ru: 'Подгонка курток и пальто', de: 'Mantel und Jacke ändern' },
     q: { tr: 'mont tadilatı', en: 'coat alteration', ru: 'подгонка куртки', de: 'Mantel ändern' },
     intro: {
-      tr: 'Mont, kaban ve paltoda daraltma, kısaltma, kol ve fermuar işlerini yapıyoruz. Astarlı ve kalın kumaşlar için uygun makine ve iplik kullanılır.',
-      en: 'We take in and shorten coats and padded jackets and handle sleeve and zipper work. Suitable machines and thread are used for lined and thick fabrics.',
-      ru: 'Ушиваем и укорачиваем куртки и пальто, меняем рукава и молнии. Для подкладочных и плотных тканей используем подходящие машины и нитки.',
-      de: 'Wir machen Mäntel und Jacken enger, kürzen sie und erledigen Ärmel- und Reißverschlussarbeiten. Für gefütterte und dicke Stoffe nutzen wir passende Maschinen und Garne.',
+      tr: 'Mont, kaban ve paltoda daraltma, kısaltma, kol ve fermuar işleri yaparız. Astarlı ve kalın kumaşlar için bu işe uygun makine ve iplik kullanırız.',
+      en: 'Coats and padded jackets: we take in, shorten and handle sleeve and zipper work, using machines and thread suited to lined, thick fabrics.',
+      ru: 'Куртки, пальто и пуховики: ушиваем, укорачиваем, работаем с рукавами и молниями на машинах и нитках, подходящих для подкладки и плотных тканей.',
+      de: 'Mäntel und Steppjacken: Wir machen sie enger, kürzen und erledigen Ärmel- und Reißverschlussarbeiten mit Maschinen und Garn für gefütterte, dicke Stoffe.',
     },
     vars: {
       tr: ['mont tadilatı', 'mont daraltma', 'mont kısaltma', 'palto tadilatı', 'kaban daraltma', 'mont kol kısaltma', 'mont tamiri'],
@@ -295,10 +295,10 @@ export const SERVICES: Service[] = [
     name: { tr: 'Gömlek Daraltma ve Kısaltma', en: 'Shirt Alteration', ru: 'Подгонка рубашек', de: 'Hemd ändern' },
     q: { tr: 'gömlek daraltma', en: 'shirt alteration', ru: 'подгонка рубашки', de: 'Hemd enger machen' },
     intro: {
-      tr: 'Gömlekte yan daraltma, kol boyu ve etek boyu kısaltma işlemlerini yapıyoruz. Erkek ve kadın gömlekleri için ölçü deneme üzerinde alınır.',
-      en: 'We take in shirts at the sides and shorten sleeves and hems. Men\'s and women\'s shirts are measured on you.',
-      ru: 'Ушиваем рубашки по бокам, укорачиваем рукава и низ. Мужские и женские рубашки меряем на вас.',
-      de: 'Wir machen Hemden seitlich enger und kürzen Ärmel und Saum. Herren- und Damenhemden werden am Körper abgesteckt.',
+      tr: 'Gömleklerde yan daraltma, kol boyu ve etek boyu kısaltma yaparız. Erkek ve kadın gömleklerinde ölçü, gömlek üzerinizdeyken alınır.',
+      en: 'Shirts: side taking-in and shortening of sleeves and hems, for men\'s and women\'s shirts, measured while you wear them.',
+      ru: 'Рубашки: ушивание по бокам, укорочение рукавов и низа — мужские и женские, мерки снимаем, пока рубашка на вас.',
+      de: 'Hemden: seitliches Enger machen sowie Ärmel und Saum kürzen, für Herren- und Damenhemden, gemessen am getragenen Hemd.',
     },
     vars: {
       tr: ['gömlek daraltma', 'gömlek kısaltma', 'gömlek kol kısaltma', 'gömlek tadilatı', 'gömlek yan daraltma', 'gömlek boy kısaltma'],
@@ -313,10 +313,10 @@ export const SERVICES: Service[] = [
     name: { tr: 'Deri Ceket ve Deri Pantolon Tadilatı', en: 'Leather Jacket & Leather Trousers Alteration', ru: 'Ремонт и подгонка кожаной одежды', de: 'Lederjacke und Lederhose ändern' },
     q: { tr: 'deri ceket tadilatı', en: 'leather jacket alteration', ru: 'ремонт кожаной куртки', de: 'Lederjacke ändern' },
     intro: {
-      tr: 'Deri ceket ve deri pantolonda daraltma, kısaltma ve onarım için önce fotoğraf istiyoruz; deri cinsine göre yapılabilecek işlem ve fiyat net olarak söylenir.',
-      en: 'For leather jackets and leather trousers we ask for a photo first; the possible work and the price are confirmed once we know the type of leather.',
-      ru: 'Для кожаных курток и брюк сначала просим фото; возможные работы и цену называем после определения типа кожи.',
-      de: 'Bei Lederjacken und Lederhosen bitten wir zuerst um ein Foto; mögliche Arbeiten und Preis nennen wir, sobald die Lederart klar ist.',
+      tr: 'Deri ceket ve deri pantolonda daraltma, kısaltma ve onarımdan önce fotoğraf isteriz. Deri cinsi görüldükten sonra yapılabilecek işlem ve fiyat netleşir.',
+      en: 'For leather jackets and trousers we ask for a photo before any taking-in, shortening or repair; once we see the type of leather, the possible work and price are confirmed.',
+      ru: 'Для кожаных курток и брюк перед ушиванием, укорочением или ремонтом просим фото; когда видим тип кожи, уточняем возможные работы и цену.',
+      de: 'Bei Lederjacken und Lederhosen bitten wir vor Enger machen, Kürzen oder Reparatur um ein Foto; sobald wir die Lederart sehen, stehen mögliche Arbeiten und Preis fest.',
     },
     vars: {
       tr: ['deri ceket tadilatı', 'deri ceket daraltma', 'deri pantolon tadilatı', 'deri ceket kol kısaltma', 'deri ceket tamiri', 'deri mont terzi'],
@@ -331,10 +331,10 @@ export const SERVICES: Service[] = [
     name: { tr: 'Tişört ve Şort Tadilatı', en: 'T-shirt & Shorts Alteration', ru: 'Подгонка футболок и шортов', de: 'T-Shirt und Shorts ändern' },
     q: { tr: 'tişört şort tadilatı', en: 'shorts alteration', ru: 'подгонка шортов', de: 'Shorts ändern' },
     intro: {
-      tr: 'Tişört daraltma ve kısaltma, şort boy ve bel ayarı gibi küçük tadilatları yapıyoruz. Fotoğraf gönderin, işlemin fiyatını WhatsApp\'tan hemen söyleyelim.',
-      en: 'We do small alterations such as taking in or shortening T-shirts and adjusting shorts length and waist. Send a photo and we will quote on WhatsApp.',
-      ru: 'Выполняем небольшие переделки: ушиваем и укорачиваем футболки, подгоняем длину и пояс шортов. Пришлите фото — назовём цену в WhatsApp.',
-      de: 'Wir erledigen kleine Änderungen wie T-Shirts enger machen oder kürzen und Shorts in Länge und Bund anpassen. Foto senden, Preis per WhatsApp.',
+      tr: 'Tişört daraltma ve kısaltma, şort boyu ve bel ayarı gibi küçük işleri yaparız. Fotoğrafı WhatsApp\'tan gönderin, fiyatı oradan hemen bildirelim.',
+      en: 'Small jobs such as taking in or shortening T-shirts and adjusting shorts length and waist. Send a photo on WhatsApp and we will quote straight away.',
+      ru: 'Небольшие работы: ушить или укоротить футболку, подогнать длину и талию шорт. Пришлите фото в WhatsApp — сразу назовём цену.',
+      de: 'Kleine Arbeiten wie T-Shirts enger machen oder kürzen und Shorts in Länge und Bund anpassen. Schicken Sie ein Foto per WhatsApp, wir nennen sofort den Preis.',
     },
     vars: {
       tr: ['tişört daraltma', 'tişört kısaltma', 'şort kısaltma', 'şort bel daraltma', 'şort tadilatı', 'tişört tadilatı'],
@@ -349,10 +349,10 @@ export const SERVICES: Service[] = [
     name: { tr: 'Ölçüye Göre Beden Ayarlama', en: 'Fit Adjustment to Your Measurements', ru: 'Подгонка одежды по фигуре', de: 'Kleidung auf Ihre Maße anpassen' },
     q: { tr: 'beden ayarlama', en: 'size adjustment', ru: 'подгонка по фигуре', de: 'Kleidung anpassen' },
     intro: {
-      tr: 'Bay ve bayan kıyafetlerini beden ölçünüze göre ayarlıyoruz: daraltma, genişletme, kısaltma, uzatma, omuz ve kol düzeltme. Kaliteli işçilik, özenli dikiş ve zamanında teslim esastır.',
-      en: 'We fit men\'s and women\'s clothing to your measurements: taking in, letting out, shortening, lengthening, shoulders and sleeves. Careful workmanship, clean stitching and on-time delivery come first.',
-      ru: 'Подгоняем мужскую и женскую одежду по вашим меркам: ушивание, расширение, укорачивание, удлинение, плечи и рукава. Качественная работа, аккуратный шов и сдача в срок.',
-      de: 'Wir passen Herren- und Damenkleidung an Ihre Maße an: enger, weiter, kürzer, länger, Schultern und Ärmel. Sorgfältige Arbeit, saubere Nähte und pünktliche Lieferung stehen im Mittelpunkt.',
+      tr: 'Bay ve bayan kıyafetlerini ölçünüze göre ayarlarız: daraltma, genişletme, kısaltma, uzatma, omuz ve kol düzeltme. Dikişin temiz olmasına ve teslim gününe uymaya önem veririz.',
+      en: 'Men\'s and women\'s clothing is fitted to your measurements: taking in, letting out, shortening, lengthening, shoulder and sleeve correction. We care about clean stitching and sticking to the delivery day.',
+      ru: 'Мужскую и женскую одежду подгоняем по вашим меркам: ушивание, расширение, укорочение, удлинение, правка плеч и рукавов. Для нас важны аккуратный шов и соблюдение срока.',
+      de: 'Herren- und Damenkleidung passen wir Ihren Maßen an: enger und weiter machen, kürzen, verlängern, Schultern und Ärmel korrigieren. Uns sind saubere Nähte und der zugesagte Liefertermin wichtig.',
     },
     vars: {
       tr: ['beden ayarlama terzi', 'ölçüye göre kıyafet ayarlama', 'kıyafet daraltma kısaltma', 'bay bayan kıyafet tadilatı', 'terzi tadilat', 'dikiş tamir terzi', 'giysi tadilatı'],

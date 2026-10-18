@@ -15,15 +15,15 @@ const TODAY     = '2026-10-04';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Liman Mahallesi Terzi — Aynı Gün Tadilat ve Dikim" },
+  title: { absolute: "Liman Terzi · Paça ₺150, Fermuar ₺200 | Terzi Can" },
   description:
-    'Liman terzi Konyaaltı: paça kısaltma ₺150\'den, fermuar değişimi ₺200\'den, bel daraltma, elbise dikimi. Ücretsiz adrese servis.',
+    "Liman terzi: paça kısaltma ücreti ₺150'den, fermuar değişimi ₺200'den, fiyatlar 2026. Liman mahallesine adrese servis, her gün 08:00–23:00. ☎ " + PHONE,
   keywords: ['Liman terzi', 'Liman mahallesi terzi', 'Liman Konyaaltı terzi', 'Liman paça kısaltma', 'Liman fermuar tamiri', 'Liman bel daraltma', 'Liman elbise dikimi', 'Liman gelinlik tadilatı', 'Liman ütü hizmeti', 'Liman kuru temizleme', 'Liman terzi fiyatları 2026', 'Konyaaltı Liman dikiş atölyesi'],
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Liman Terzi Konyaaltı — Adrese Gelen Terzi',
-    description: 'Liman mahallesine terzi hizmeti. Paça, fermuar, bel daraltma, dikim, ütü. ₺150\'den. ☎ ' + PHONE,
+    title: 'Liman Terzi · Paça ₺150, Fermuar ₺200 | Terzi Can',
+    description: "Liman terzi: paça kısaltma ücreti ₺150'den, fermuar değişimi ₺200'den, fiyatlar 2026. Liman mahallesine adrese servis, her gün 08:00–23:00. ☎ " + PHONE,
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'tr_TR', type: 'website',
     images: [{ url: `${SITE}/terzi-can-hero.jpg`, width: 1024, height: 1024, alt: 'Liman Terzi Konyaaltı' }],
   },

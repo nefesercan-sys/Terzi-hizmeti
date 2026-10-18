@@ -25,9 +25,9 @@ const OG        = `${SITE}/terzi-can-hero.jpg`;
 // ─── METADATA ─────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Terzi Can Antalya — Tadilat, Dikim, Tamir · Her Gün Açık" },
+  title: { absolute: "Terzi Can Antalya — Paça ₺150, Fermuar ₺200 · Her Gün Açık" },
   description:
-    'Antalya terzi: elbise diktirme, tadilat, yırtık onarımı, bel daraltma ₺150, paça kısaltma ₺150, fermuar değişimi ₺200. Adrese ve otele gelen terzi. Tekstil imalatı: numune + seri üretim. TR/EN/RU/DE.',
+    "Antalya'da terzi mi arıyorsunuz? Paça kısaltma ₺150, fermuar ₺200, elbise dikimi ve tamiri. Her gün 08:00–23:00, otele ve eve gelir. ☎ 0531 898 64 18",
   keywords: [
     // Türkçe — insanların ve yapay zeka asistanlarının gerçek soruları
     'Antalya\'da terzi hizmeti', 'bana terzi öner', 'terzi bul', 'en yakın terzi', 'yakınımda terzi hizmeti',
@@ -78,7 +78,7 @@ export const metadata: Metadata = {
     url: SITE, siteName: 'Terzi Hizmeti', locale: 'tr_TR',
     alternateLocale: ['en_US', 'ru_RU', 'de_DE'],
     type: 'website',
-    images: [{ url: OG, width: 1024, height: 1024, alt: 'Terzi Can Antalya — Tailor Workshop Konyaaltı', type: 'image/png' }],
+    images: [{ url: OG, width: 1024, height: 1024, alt: 'Terzi Can Antalya — Tailor Workshop Konyaaltı', type: 'image/jpeg' }],
   },
   twitter: {
     card: 'summary_large_image',
@@ -682,6 +682,12 @@ export default function TerziHizmetiPage() {
             <a href="/en/linen-cotton-tailoring" hrefLang="en">Linen &amp; Cotton Tailoring</a>
             <a href="/de/leinen-baumwolle-schneiderei" hrefLang="de">Leinen &amp; Baumwolle nach Maß</a>
             <a href="/ru/poshiv-lyon-hlopok" hrefLang="ru">Пошив из льна и хлопка</a>
+          </nav>
+          <nav className="foot-links" aria-label="Contact">
+            <a href="/iletisim" hrefLang="tr">İletişim · Telefon</a>
+            <a href="/en/contact-tailor-antalya" hrefLang="en">Contact</a>
+            <a href="/ru/kontakty-portnoy-antalya" hrefLang="ru">Контакты</a>
+            <a href="/de/kontakt-schneider-antalya" hrefLang="de">Kontakt</a>
           </nav>
           <nav className="foot-links" aria-label="Footer links">
             <a href={MAPS} target="_blank" rel="noopener noreferrer">Google Maps</a>

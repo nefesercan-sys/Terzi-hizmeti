@@ -11,6 +11,7 @@ const nextConfig = {
   async redirects() {
     const comHost = [{ type: 'host', value: '(www\\.)?terzihizmeti\\.com' }];
     const kisa = (source, destination) => ({ source, has: comHost, destination, permanent: false });
+    const wa = (m) => `https://wa.me/905318986418?text=${encodeURIComponent(m)}`;
     return [
       {
         source: '/:path*',
@@ -24,6 +25,11 @@ const nextConfig = {
       kisa('/en/fix', 'https://terzihizmeti.com.tr/en/tourist-clothing-alterations-antalya'),
       kisa('/de/fix', 'https://terzihizmeti.com.tr/de/kleidung-aendern-urlaub-antalya'),
       kisa('/ru/fix', 'https://terzihizmeti.com.tr/ru/podgonka-odezhdy-turistam-antalya'),
+      // WhatsApp kisa adresleri (Google profili, Instagram, QR icin) - hazir mesajla acilir
+      kisa('/wa', wa('Merhaba, terzi hizmeti hakkında bilgi almak istiyorum.')),
+      kisa('/wa/en', wa('Hello, I would like information about your tailoring service in Antalya.')),
+      kisa('/wa/de', wa('Hallo, ich möchte Informationen zu Ihrem Schneiderservice in Antalya.')),
+      kisa('/wa/ru', wa('Здравствуйте, хочу узнать про ваши услуги портного в Анталье.')),
       { source: '/:path*', has: comHost, destination: 'https://terzihizmeti.com.tr/:path*', permanent: true },
     ];
   },

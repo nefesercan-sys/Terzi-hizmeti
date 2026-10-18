@@ -96,5 +96,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   });
 
-  return [...sabitSayfalar, ...otelSayfalari, ...seoSayfalari, ...turistSayfalari];
+  // 📞 9. İLETİŞİM SAYFALARI (4 dil, hreflang karşılıklı) — "terzi can telefon / iletişim / adres" aramaları
+  const CONTACT: Record<'tr' | 'en' | 'ru' | 'de', string> = {
+    tr: '/iletisim', en: '/en/contact-tailor-antalya', ru: '/ru/kontakty-portnoy-antalya', de: '/de/kontakt-schneider-antalya',
+  };
+  const contactAlt = { languages: { ...Object.fromEntries((Object.keys(CONTACT) as (keyof typeof CONTACT)[]).map((l) => [l, `${SITE}${CONTACT[l]}`])), 'x-default': `${SITE}${CONTACT.tr}` } };
+  const iletisimSayfalari: MetadataRoute.Sitemap = (Object.keys(CONTACT) as (keyof typeof CONTACT)[]).map((l) => ({
+    url: `${SITE}${CONTACT[l]}`, lastModified: new Date(LAST_UPDATE), changeFrequency: 'monthly' as const, priority: l === 'tr' ? 0.85 : 0.8, alternates: contactAlt,
+  }));
+
+  return [...sabitSayfalar, ...otelSayfalari, ...seoSayfalari, ...turistSayfalari, ...iletisimSayfalari];
 }

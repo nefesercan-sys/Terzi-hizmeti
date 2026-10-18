@@ -15,15 +15,15 @@ const TODAY     = '2026-10-04';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Gürsu Terzi Konyaaltı — Elbise Tadilatı ve Dikim" },
+  title: { absolute: "Gürsu Terzi · Paça ₺150, Fermuar ₺200 | Terzi Can" },
   description:
-    'Gürsu terzi Konyaaltı: paça kısaltma ₺150\'den, fermuar değişimi ₺200\'den, bel daraltma, elbise dikimi. Adrese servis mevcuttur.',
+    "Gürsu terzi: paça kısaltma ücreti ₺150'den, fermuar değişimi ₺200'den, fiyatlar 2026. Gürsu mahallesine adrese servis, her gün 08:00–23:00. ☎ " + PHONE,
   keywords: ['Gürsu terzi', 'Gürsu mahallesi terzi', 'Gürsu Konyaaltı terzi', 'Gürsu paça kısaltma', 'Gürsu fermuar tamiri', 'Gürsu bel daraltma', 'Gürsu elbise dikimi', 'Gürsu gelinlik tadilatı', 'Gürsu ütü hizmeti', 'Gürsu kuru temizleme', 'Gürsu terzi fiyatları 2026', 'Konyaaltı Gürsu dikiş atölyesi'],
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Gürsu Terzi Konyaaltı — Aynı Gün Tadilat',
-    description: 'Gürsu mahallesine terzi hizmeti. Paça, fermuar, bel daraltma, dikim, ütü. ₺150\'den. ☎ ' + PHONE,
+    title: 'Gürsu Terzi · Paça ₺150, Fermuar ₺200 | Terzi Can',
+    description: "Gürsu terzi: paça kısaltma ücreti ₺150'den, fermuar değişimi ₺200'den, fiyatlar 2026. Gürsu mahallesine adrese servis, her gün 08:00–23:00. ☎ " + PHONE,
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'tr_TR', type: 'website',
     images: [{ url: `${SITE}/terzi-can-hero.jpg`, width: 1024, height: 1024, alt: 'Gürsu Terzi Konyaaltı' }],
   },

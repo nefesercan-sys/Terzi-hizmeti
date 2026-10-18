@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Terzi Can Antalya — Paça ₺150, Fermuar ₺200 · Her Gün Açık" },
   description:
-    "Antalya'da terzi mi arıyorsunuz? Paça kısaltma ₺150, fermuar ₺200, elbise dikimi ve tamiri. Her gün 08:00–23:00, otele ve eve gelir. ☎ 0531 898 64 18",
+    "Konyaaltı Hurma, Liman, Uncalı, Gürsu'da en yakın terzi: paça ₺150, fermuar ₺200, elbise dikimi. Her gün 08:00–23:00. ☎ 0531 898 64 18",
   keywords: [
     // Türkçe — insanların ve yapay zeka asistanlarının gerçek soruları
     'Antalya\'da terzi hizmeti', 'bana terzi öner', 'terzi bul', 'en yakın terzi', 'yakınımda terzi hizmeti',

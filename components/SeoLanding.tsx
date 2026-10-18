@@ -102,23 +102,46 @@ const alternatesFor = (urlFor: (l: Lang) => string) => ({
   languages: { tr: urlFor('tr'), en: urlFor('en'), ru: urlFor('ru'), de: urlFor('de'), 'x-default': urlFor('tr') },
 });
 
+// ── Arama sorgusu odaklı başlık/açıklama yardımcıları ──────────────────────
+const capFirst = (lang: Lang, t: string) => (t ? t.charAt(0).toLocaleUpperCase(lang === 'tr' ? 'tr-TR' : lang) + t.slice(1) : t);
+const pickFit = (list: string[], max: number) => list.find((c) => c.length <= max) ?? list[list.length - 1];
+const priceShortOf = (lang: Lang, s: Service) =>
+  s.priceFrom ? (lang === 'tr' ? `₺${s.priceFrom}'den` : lang === 'en' ? `from ₺${s.priceFrom}` : lang === 'ru' ? `от ₺${s.priceFrom}` : `ab ₺${s.priceFrom}`) : '';
+const TIME_SHORT: Record<Lang, Record<'same' | 'next' | 'three' | 'none', string>> = {
+  tr: { same: 'Aynı Gün', next: 'Ertesi Gün', three: '3 Günde', none: 'Yakınınızda' },
+  en: { same: 'Same Day', next: 'Next Day', three: 'In 3 Days', none: 'Near You' },
+  ru: { same: 'В тот же день', next: 'За 1 день', three: 'За 3 дня', none: 'Рядом' },
+  de: { same: 'Am selben Tag', next: 'Am nächsten Tag', three: 'In 3 Tagen', none: 'In der Nähe' },
+};
+
 // ── Metin üreticileri ───────────────────────────────────────
 function districtCopy(lang: Lang, d: District) {
   const n = d.name[lang];
   const loc = d.loc[lang];
   const kw = (lang === 'tr' ? [`${n} terzi`, `${n} terzi hizmeti`, ...d.alias.map((a) => `${a} terzi`)] : []);
-  const title = {
-    tr: `${n} Terzi | Paça, Fermuar, Elbise Tamiri`,
-    en: `Tailor in ${n}, Antalya | Hemming & Zipper Repair`,
-    ru: `Портной ${n}, Анталья | Подшив и ремонт одежды`,
-    de: `Schneider ${n}, Antalya | Kürzen & Änderungen`,
+  const PH = `☎ ${PHONE}`;
+  const titles = {
+    tr: [`${n} Terzi · En Yakın Terzi, Paça, Fermuar | Terzi Can`, `${n} Terzi · Paça, Fermuar, Tadilat | Terzi Can`, `${n} Terzi | Paça, Fermuar, Elbise Tamiri`],
+    en: [`Tailor in ${n}, Antalya · Near Me · Hemming, Zippers`, `Tailor in ${n}, Antalya | Hemming & Zipper Repair`, `Tailor in ${n}, Antalya`],
+    ru: [`Портной ${n}, Анталья · рядом · подшив, молнии`, `Портной ${n}, Анталья | Подшив и ремонт одежды`, `Портной ${n}, Анталья`],
+    de: [`Schneider ${n}, Antalya · in der Nähe · Kürzen, Zipper`, `Schneider ${n}, Antalya | Kürzen & Änderungen`, `Schneider ${n}, Antalya`],
   }[lang];
-  const desc = {
-    tr: `${loc} terzi: paça, fermuar, elbise dikimi ve tamiri. Her gün 08:00–23:00, otel ve eve ücretsiz alım-teslim. Gelinlik ₺800'den, abiye ₺400'den.`,
-    en: `Tailor ${loc}: hemming, zippers, dress making and repairs. Open daily 08:00–23:00, free hotel and home pick-up. Wedding gowns from ₺800.`,
-    ru: `Портной ${loc}: подшив, молнии, пошив и ремонт платьев. Ежедневно 08:00–23:00, бесплатный забор из отелей и с дома. Свадебные платья от ₺800.`,
-    de: `Schneider ${loc}: Kürzen, Reißverschlüsse, Kleider nähen und reparieren. Täglich 08:00–23:00, kostenlose Abholung im Hotel. Brautkleider ab ₺800.`,
+  const title = pickFit(titles, 60);
+  const descs = {
+    tr: [`${loc} terzi arıyorsanız: Terzi Can Konyaaltı. Paça kısaltma ₺150'den, fermuar değişimi ₺200'den, elbise tamiri. Her gün 08:00–23:00. ${PH}`,
+         `${loc} terzi: paça ₺150'den, fermuar ₺200'den, elbise tamiri. Her gün 08:00–23:00, otel ve eve ücretsiz alım. ${PH}`,
+         `${loc} terzi ${PH}: paça, fermuar, elbise dikimi ve tamiri. Her gün 08:00–23:00.`],
+    en: [`Tailor ${loc}? Terzi Can, Konyaaltı: hemming from ₺150, zipper replacement from ₺200, dress repair. Open daily 08:00–23:00. ${PH}`,
+         `Tailor ${loc}: hemming from ₺150, zippers from ₺200, dress repair. Open daily 08:00–23:00, free hotel pick-up. ${PH}`,
+         `Tailor ${loc} ${PH}: hemming, zippers, dress repair. Open daily 08:00–23:00.`],
+    ru: [`Портной ${loc}? Terzi Can, Коньяалты: подшив от ₺150, замена молнии от ₺200, ремонт платьев. Ежедневно 08:00–23:00. ${PH}`,
+         `Портной ${loc}: подшив от ₺150, молния от ₺200, ремонт платьев. Ежедневно 08:00–23:00, забор из отелей бесплатно. ${PH}`,
+         `Портной ${loc} ${PH}: подшив, молнии, ремонт платьев. Ежедневно 08:00–23:00.`],
+    de: [`Schneider ${loc}? Terzi Can, Konyaaltı: Hose kürzen ab ₺150, Reißverschluss ab ₺200, Kleid ändern. Täglich 08:00–23:00. ${PH}`,
+         `Schneider ${loc}: Kürzen ab ₺150, Reißverschluss ab ₺200, Kleider ändern. Täglich 08:00–23:00, Hotelabholung gratis. ${PH}`,
+         `Schneider ${loc} ${PH}: Kürzen, Reißverschlüsse, Kleider ändern. Täglich 08:00–23:00.`],
   }[lang];
+  const desc = pickFit(descs, 158);
   return { n, loc, kw, title, desc };
 }
 
@@ -188,27 +211,42 @@ function districtFaq(lang: Lang, d: District): [string, string][] {
 
 function serviceCopy(lang: Lang, s: Service) {
   const nm = s.name[lang];
-  const title = {
-    tr: `${nm} Antalya | Terzi Can`,
-    en: `${nm} in Antalya | Terzi Can`,
-    ru: `${nm} в Анталье | Terzi Can`,
-    de: `${nm} in Antalya | Terzi Can`,
+  const q = s.q[lang];
+  const Q = capFirst(lang, q);
+  const ps = priceShortOf(lang, s);
+  const ts = TIME_SHORT[lang][s.time];
+  // Başlık: insanların yazdığı sorgu ifadesi + (varsa) fiyat + süre. SERP ~60 karakterde keser; sığan en zengin varyant seçilir.
+  const t1 = {
+    tr: [`${Q} Antalya ${ps} · ${ts} | Terzi Can`, `${Q} Antalya · ${ts} | Terzi Can`, `${Q} Antalya | Terzi Can`],
+    en: [`${Q} in Antalya ${ps} · ${ts} | Terzi Can`, `${Q} in Antalya · ${ts} | Terzi Can`, `${Q} in Antalya | Terzi Can`],
+    ru: [`${Q} в Анталье ${ps} · ${ts} | Terzi Can`, `${Q} в Анталье · ${ts} | Terzi Can`, `${Q} в Анталье | Terzi Can`],
+    de: [`${Q} in Antalya ${ps} · ${ts} | Terzi Can`, `${Q} in Antalya · ${ts} | Terzi Can`, `${Q} in Antalya | Terzi Can`],
   }[lang];
-  const price = priceOf(lang, s);
-  const p = price ? ' ' + price + '.' : '';
-  const tails = {
-    tr: ['Otel ve eve ücretsiz alım-teslim, her gün 08:00–23:00. Konyaaltı atölyesi.', 'Otel ve eve ücretsiz alım-teslim, her gün 08:00–23:00.', 'Her gün 08:00–23:00.'],
-    en: ['Free hotel and home pick-up, open daily 08:00–23:00. Konyaaltı workshop.', 'Free hotel and home pick-up, open daily 08:00–23:00.', 'Open daily 08:00–23:00.'],
-    ru: ['Бесплатный забор из отелей и с дома, ежедневно 08:00–23:00. Мастерская в Коньяалты.', 'Бесплатный забор из отелей и с дома, ежедневно 08:00–23:00.', 'Ежедневно 08:00–23:00.'],
-    de: ['Kostenlose Abholung im Hotel oder zu Hause, täglich 08:00–23:00. Werkstatt in Konyaaltı.', 'Kostenlose Abholung im Hotel oder zu Hause, täglich 08:00–23:00.', 'Täglich 08:00–23:00.'],
+  const title = pickFit(ps ? t1 : t1.slice(1), 60);
+  const price = priceShortOf(lang, s);
+  const tm0 = timeOf(lang, s).replace(/[.\s]+$/, '');
+  const tm = tm0.charAt(0).toLocaleLowerCase(lang === 'tr' ? 'tr-TR' : lang) + tm0.slice(1);
+  const v0 = capFirst(lang, s.vars[lang][0]);
+  // Açıklama: kullanıcının sorusunu aynen tekrar eden ilk cümle + cevap (süre, fiyat, saat, telefon).
+  const ask = {
+    tr: `${Q} için en yakın terzi mi arıyorsunuz?`,
+    en: `${Q} in Antalya?`,
+    ru: `${v0} в Анталье?`,
+    de: `${v0} in Antalya?`,
   }[lang];
-  const head = `${nm}: ${timeOf(lang, s)}.`;
-  // Google yaklaşık 155-160 karakter gösterir: sığan en uzun varyantı seç, önemli bilgi (süre/saat) başta kalsın.
+  const who = { tr: 'Terzi Can Konyaaltı:', en: 'Terzi Can in Konyaaltı:', ru: 'Terzi Can в Коньяалты:', de: 'Terzi Can in Konyaaltı:' }[lang];
+  const open = { tr: 'Her gün 08:00–23:00', en: 'Open daily 08:00–23:00', ru: 'Ежедневно 08:00–23:00', de: 'Täglich 08:00–23:00' }[lang];
+  const pick = { tr: 'otel ve eve ücretsiz alım', en: 'free hotel pick-up', ru: 'бесплатный забор из отелей', de: 'Hotelabholung gratis' }[lang];
+  const tel = `☎ ${PHONE}`;
+  const body = (withTime: boolean) => `${who} ${withTime ? tm : ''}${withTime && price ? ', ' : ''}${price}`.replace(/[\s,:]+$/, '');
   const candidates = [
-    ...tails.map((t) => `${head}${p} ${t}`),
-    ...tails.map((t) => `${head} ${t}`),
+    `${ask} ${body(true)}. ${open}, ${pick}. ${tel}`,
+    `${ask} ${body(true)}. ${open}. ${tel}`,
+    `${ask} ${body(false)}. ${open}, ${pick}. ${tel}`,
+    `${ask} ${body(false)}. ${open}. ${tel}`,
+    `${nm}. ${open}. ${tel}`,
   ];
-  const desc = candidates.find((c) => c.length <= 158) ?? candidates[candidates.length - 1];
+  const desc = pickFit(candidates, 158);
   return { nm, title, desc };
 }
 
@@ -282,16 +320,16 @@ export function serviceMetadata(lang: Lang, s: Service): Metadata {
 
 export function hubMetadata(lang: Lang): Metadata {
   const title = {
-    tr: 'Terzi Hizmetleri Antalya | Paça, Fermuar, Tadilat, Dikim',
-    en: 'Tailor Services in Antalya | Hemming, Zippers, Alterations',
-    ru: 'Услуги портного в Анталье | подшив, молнии, переделка',
-    de: 'Schneider-Service Antalya | Kürzen, Reißverschluss, Änderung',
+    tr: 'Terzi Hizmetleri Antalya · Paça ₺150, Fermuar ₺200',
+    en: 'Tailor Services & Prices Antalya · Hemming ₺150, Zipper ₺200',
+    ru: 'Услуги и цены портного в Анталье · подшив ₺150, молния ₺200',
+    de: 'Schneider Leistungen & Preise Antalya · Kürzen ab ₺150',
   }[lang];
   const description = {
-    tr: 'Paça kısaltma, bel daraltma, fermuar, elbise dikimi ve tadilat. Otel ve eve ücretsiz alım-teslim, her gün 08:00–23:00. Konyaaltı, Lara, Belek, Kemer.',
-    en: 'Hemming, waist alterations, zippers, dress making and alterations. Free hotel and home pick-up, open daily 08:00–23:00. Konyaaltı, Lara, Belek, Kemer.',
-    ru: 'Подшив, ушивание, молнии, пошив и переделка одежды. Бесплатный забор из отелей, ежедневно 08:00–23:00. Коньяалты, Лара, Белек, Кемер.',
-    de: 'Kürzen, Taille anpassen, Reißverschlüsse, Kleider nähen und ändern. Kostenlose Hotelabholung, täglich 08:00–23:00. Konyaaltı, Lara, Belek, Kemer.',
+    tr: `Paça kısaltma, bel daraltma, fermuar, elbise dikimi, tadilat. Her gün 08:00–23:00, otel ve eve ücretsiz alım. ☎ ${PHONE}`,
+    en: `Hemming, waist alterations, zippers, dress making. Open daily 08:00–23:00, free hotel and home pick-up. ☎ ${PHONE}`,
+    ru: `Подшив, ушивание, молнии, пошив и переделка. Ежедневно 08:00–23:00, бесплатный забор из отелей. ☎ ${PHONE}`,
+    de: `Kürzen, Taille anpassen, Reißverschlüsse, Kleider nähen. Täglich 08:00–23:00, Hotelabholung gratis. ☎ ${PHONE}`,
   }[lang];
   const url = abs(SERVICE_BASE[lang]);
   return {

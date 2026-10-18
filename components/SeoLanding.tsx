@@ -114,6 +114,15 @@ const TIME_SHORT: Record<Lang, Record<'same' | 'next' | 'three' | 'none', string
   de: { same: 'Am selben Tag', next: 'Am nächsten Tag', three: 'In 3 Tagen', none: 'In der Nähe' },
 };
 
+// ── Bölge önceliği: TR'de yerel mahalleler, yabancı dilde tatil bölgeleri öne ──
+const TR_PRI = ['konyaalti', 'ogretmenevleri'];
+const FG_PRI = ['side', 'kundu', 'belek', 'lara', 'konyaalti', 'kemer', 'beldibi'];
+function sortD(lang: Lang, list: District[]): District[] {
+  const pri = lang === 'tr' ? TR_PRI : FG_PRI;
+  const rank = (x: District) => { const i = pri.indexOf(x.slug); return i < 0 ? 999 : i; };
+  return [...list].sort((a, b) => rank(a) - rank(b));
+}
+
 // ── Metin üreticileri ───────────────────────────────────────
 function districtCopy(lang: Lang, d: District) {
   const n = d.name[lang];
@@ -126,7 +135,7 @@ function districtCopy(lang: Lang, d: District) {
     ru: [`Портной ${n}, Анталья · рядом · подшив, молнии`, `Портной ${n}, Анталья | Подшив и ремонт одежды`, `Портной ${n}, Анталья`],
     de: [`Schneider ${n}, Antalya · in der Nähe · Kürzen, Zipper`, `Schneider ${n}, Antalya | Kürzen & Änderungen`, `Schneider ${n}, Antalya`],
   }[lang];
-  const title = pickFit(titles, 60);
+  let title = pickFit(titles, 60);
   const descs = {
     tr: [`${loc} terzi arıyorsanız: Terzi Can Konyaaltı. Paça kısaltma ₺150'den, fermuar değişimi ₺200'den, elbise tamiri. Her gün 08:00–23:00. ${PH}`,
          `${loc} terzi: paça ₺150'den, fermuar ₺200'den, elbise tamiri. Her gün 08:00–23:00, otel ve eve ücretsiz alım. ${PH}`,
@@ -141,7 +150,22 @@ function districtCopy(lang: Lang, d: District) {
          `Schneider ${loc}: Kürzen ab ₺150, Reißverschluss ab ₺200, Kleider ändern. Täglich 08:00–23:00, Hotelabholung gratis. ${PH}`,
          `Schneider ${loc} ${PH}: Kürzen, Reißverschlüsse, Kleider ändern. Täglich 08:00–23:00.`],
   }[lang];
-  const desc = pickFit(descs, 158);
+  const priT: string[] = lang === 'tr'
+    ? (TR_PRI.includes(d.slug) ? (d.slug === 'konyaalti' ? [`Konyaaltı Terzi: Hurma, Uncalı, Liman, Gürsu | Terzi Can`, `Konyaaltı Terzi: Paça ₺150, Fermuar ₺200 | Terzi Can`] : [`${n} Terzi: Paça ₺150, Fermuar ₺200 | Terzi Can`, `${n} Terzi | Terzi Can`]) : [])
+    : (FG_PRI.includes(d.slug) ? ({
+      en: [`Tailor in ${n}: Hotel Pick-up, Hemming ₺150 | Terzi Can`, `Tailor in ${n}, Antalya · Hotel Pick-up | Terzi Can`],
+      ru: [`Портной ${n}: забор из отеля, подшив ₺150 | Terzi Can`, `Портной ${n}, Анталья · из отеля | Terzi Can`],
+      de: [`Schneider ${n}: Hotelabholung, Kürzen ab ₺150 | Terzi Can`, `Schneider ${n}, Antalya · Hotelabholung | Terzi Can`],
+    } as Record<string, string[]>)[lang] : []);
+  const priD: string[] = lang === 'tr'
+    ? (TR_PRI.includes(d.slug) ? (d.slug === 'konyaalti' ? [`Konyaaltı, Hurma, Liman, Uncalı, Gürsu ve Öğretmenevleri'nde terzi arıyorsanız: paça ₺150'den, fermuar ₺200'den. Her gün 08:00–23:00, adrese servis. ${PH}`, `Konyaaltı terzi: Hurma, Liman, Uncalı, Gürsu. Paça ₺150'den, fermuar ₺200'den. Her gün 08:00–23:00. ${PH}`] : [`${loc} terzi: paça kısaltma ücreti ₺150'den, fermuar değişimi ₺200'den. Otel ve eve ücretsiz servis, her gün 08:00–23:00. ${PH}`, `${loc} terzi: paça ₺150'den, fermuar ₺200'den. Her gün 08:00–23:00. ${PH}`]) : [])
+    : (FG_PRI.includes(d.slug) ? ({
+      en: [`Staying ${loc}? We collect from your hotel: hemming from ₺150, zippers from ₺200, dress repair. We speak English. Daily 08:00–23:00. ${PH}`, `Staying ${loc}? Hotel pick-up: hemming from ₺150, zippers from ₺200. Daily 08:00–23:00. ${PH}`],
+      ru: [`Отдыхаете ${loc}? Заберём вещи из отеля: подшив от ₺150, молния от ₺200, ремонт платьев. Говорим по-русски. Ежедневно 08:00–23:00. ${PH}`, `Отдыхаете ${loc}? Забор из отеля: подшив от ₺150, молния от ₺200. Ежедневно 08:00–23:00. ${PH}`],
+      de: [`Urlaub ${loc}? Wir holen im Hotel ab: Kürzen ab ₺150, Reißverschluss ab ₺200, Kleider ändern. Wir sprechen Deutsch. Täglich 08:00–23:00. ${PH}`, `Urlaub ${loc}? Hotelabholung: Kürzen ab ₺150, Reißverschluss ab ₺200. Täglich 08:00–23:00. ${PH}`],
+    } as Record<string, string[]>)[lang] : []);
+  if (priT.length) title = pickFit([...priT, ...titles], 60);
+  const desc = pickFit([...priD, ...descs], 158);
   return { n, loc, kw, title, desc };
 }
 
@@ -222,14 +246,15 @@ function serviceCopy(lang: Lang, s: Service) {
     ru: [`${Q} в Анталье ${ps} · ${ts} | Terzi Can`, `${Q} в Анталье · ${ts} | Terzi Can`, `${Q} в Анталье | Terzi Can`],
     de: [`${Q} in Antalya ${ps} · ${ts} | Terzi Can`, `${Q} in Antalya · ${ts} | Terzi Can`, `${Q} in Antalya | Terzi Can`],
   }[lang];
-  const title = pickFit(ps ? t1 : t1.slice(1), 60);
+  const trPrice = lang === 'tr' && ps ? [`${Q} fiyatları 2026 Antalya ${ps} | Terzi Can`, `${Q} fiyatları 2026 · ${ps} | Terzi Can`] : [];
+  const title = pickFit([...trPrice, ...(ps ? t1 : t1.slice(1))], 60);
   const price = priceShortOf(lang, s);
   const tm0 = timeOf(lang, s).replace(/[.\s]+$/, '');
   const tm = tm0.charAt(0).toLocaleLowerCase(lang === 'tr' ? 'tr-TR' : lang) + tm0.slice(1);
   const v0 = capFirst(lang, s.vars[lang][0]);
   // Açıklama: kullanıcının sorusunu aynen tekrar eden ilk cümle + cevap (süre, fiyat, saat, telefon).
   const ask = {
-    tr: `${Q} için en yakın terzi mi arıyorsunuz?`,
+    tr: price ? `${Q} ücreti ne kadar?` : `${Q} için en yakın terzi mi arıyorsunuz?`,
     en: `${Q} in Antalya?`,
     ru: `${v0} в Анталье?`,
     de: `${v0} in Antalya?`,
@@ -238,7 +263,8 @@ function serviceCopy(lang: Lang, s: Service) {
   const open = { tr: 'Her gün 08:00–23:00', en: 'Open daily 08:00–23:00', ru: 'Ежедневно 08:00–23:00', de: 'Täglich 08:00–23:00' }[lang];
   const pick = { tr: 'otel ve eve ücretsiz alım', en: 'free hotel pick-up', ru: 'бесплатный забор из отелей', de: 'Hotelabholung gratis' }[lang];
   const tel = `☎ ${PHONE}`;
-  const body = (withTime: boolean) => `${who} ${withTime ? tm : ''}${withTime && price ? ', ' : ''}${price}`.replace(/[\s,:]+$/, '');
+  const priceTxt = price ? (lang === 'tr' ? `2026 fiyatı ${price}` : price) : '';
+  const body = (withTime: boolean) => `${who} ${withTime ? tm : ''}${withTime && priceTxt ? ', ' : ''}${priceTxt}`.replace(/[\s,:]+$/, '');
   const candidates = [
     `${ask} ${body(true)}. ${open}, ${pick}. ${tel}`,
     `${ask} ${body(true)}. ${open}. ${tel}`,
@@ -326,10 +352,10 @@ export function hubMetadata(lang: Lang): Metadata {
     de: 'Schneider Leistungen & Preise Antalya · Kürzen ab ₺150',
   }[lang];
   const description = {
-    tr: `Paça kısaltma, bel daraltma, fermuar, elbise dikimi, tadilat. Her gün 08:00–23:00, otel ve eve ücretsiz alım. ☎ ${PHONE}`,
-    en: `Hemming, waist alterations, zippers, dress making. Open daily 08:00–23:00, free hotel and home pick-up. ☎ ${PHONE}`,
-    ru: `Подшив, ушивание, молнии, пошив и переделка. Ежедневно 08:00–23:00, бесплатный забор из отелей. ☎ ${PHONE}`,
-    de: `Kürzen, Taille anpassen, Reißverschlüsse, Kleider nähen. Täglich 08:00–23:00, Hotelabholung gratis. ☎ ${PHONE}`,
+    tr: `Konyaaltı Hurma, Liman, Uncalı, Gürsu, Öğretmenevleri terzi: paça, fermuar, bel daraltma, elbise dikimi. Her gün 08:00–23:00. ☎ ${PHONE}`,
+    en: `Hemming, zippers, dress making in Side, Kundu, Belek, Lara, Kemer, Beldibi. Free hotel pick-up, daily 08:00–23:00. ☎ ${PHONE}`,
+    ru: `Подшив, молнии, пошив: Сиде, Кунду, Белек, Лара, Кемер, Бельдиби. Забор из отелей, ежедневно 08:00–23:00. ☎ ${PHONE}`,
+    de: `Kürzen, Reißverschlüsse, Kleider nähen: Side, Kundu, Belek, Lara, Kemer, Beldibi. Hotelabholung, täglich 08:00–23:00. ☎ ${PHONE}`,
   }[lang];
   const url = abs(SERVICE_BASE[lang]);
   return {
@@ -646,7 +672,7 @@ export function ServicePage({ lang, s }: { lang: Lang; s: Service }) {
           <div className="ctr" style={{ maxWidth: 900 }}>
             <div className="sec-head"><h2 className="sec-h ff" id="areas-h">{u.districts}</h2></div>
             <div>
-              {DISTRICTS.map((d) => (<a key={d.slug} href={districtUrl(lang, d)} style={linkChip}>{query(lang, d, s)}</a>))}
+              {sortD(lang, DISTRICTS).map((d) => (<a key={d.slug} href={districtUrl(lang, d)} style={linkChip}>{query(lang, d, s)}</a>))}
               {MAHALLE_PAGES.map((m) => (<a key={m.href} href={m.href} style={linkChip}>{m.name[lang]}</a>))}
             </div>
           </div>
@@ -720,7 +746,7 @@ export function HubPage({ lang }: { lang: Lang }) {
           <div className="ctr" style={{ maxWidth: 900 }}>
             <div className="sec-head"><h2 className="sec-h ff" id="dist-h">{u.districts}</h2></div>
             <div>
-              {DISTRICTS.map((d) => (<a key={d.slug} href={districtUrl(lang, d)} style={linkChip}>{d.name[lang]}</a>))}
+              {sortD(lang, DISTRICTS).map((d) => (<a key={d.slug} href={districtUrl(lang, d)} style={linkChip}>{d.name[lang]}</a>))}
               {MAHALLE_PAGES.map((m) => (<a key={m.href} href={m.href} style={linkChip}>{m.name[lang]}</a>))}
             </div>
           </div>

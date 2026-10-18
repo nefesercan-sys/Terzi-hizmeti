@@ -15,9 +15,9 @@ const TODAY     = '2026-10-04';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Hurma Mahallesi Terzi — Yakınınızdaki Atölye" },
+  title: { absolute: "Hurma Terzi · Atölye Hurma'da, Paça ₺150 | Terzi Can" },
   description:
-    'Hurma terzi Konyaaltı: paça kısaltma ₺150\'den, fermuar değişimi ₺200\'den, bel daraltma, elbise dikimi. Ücretsiz adrese servis.',
+    "Hurma terzi atölyemiz Hurma Mahallesi'nde: paça kısaltma ücreti ₺150'den, fermuar değişimi ₺200'den, fiyatlar 2026. Her gün 08:00–23:00. ☎ " + PHONE,
   keywords: [
     'Hurma terzi', 'Hurma mahallesi terzi', 'Hurma Konyaaltı terzi',
     'Hurma paça kısaltma', 'Hurma fermuar tamiri', 'Hurma bel daraltma',
@@ -29,8 +29,8 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Hurma Terzi Konyaaltı — Aynı Gün Tadilat',
-    description: 'Hurma mahallesine özel terzi hizmeti. Paça, fermuar, bel daraltma, dikim, ütü. ₺150\'den. ☎ ' + PHONE,
+    title: 'Hurma Terzi · Atölye Hurma\'da, Paça ₺150 | Terzi Can',
+    description: "Hurma terzi atölyemiz Hurma Mahallesi'nde: paça kısaltma ücreti ₺150'den, fermuar değişimi ₺200'den, fiyatlar 2026. Her gün 08:00–23:00. ☎ " + PHONE,
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'tr_TR', type: 'website',
     images: [{ url: `${SITE}/terzi-can-hero.jpg`, width: 1024, height: 1024, alt: 'Hurma Terzi Konyaaltı' }],
   },

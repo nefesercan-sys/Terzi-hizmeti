@@ -12,6 +12,13 @@ This file lists the main pages of the site for AI assistants and answer engines.
 - [Услуги портного в Анталье (Russian)](https://terzihizmeti.com.tr/ru/uslugi-portnogo-antalya): Russian landing page
 - [Schneiderservice Antalya (German)](https://terzihizmeti.com.tr/de/schneiderservice-antalya): German landing page
 
+## Contact
+
+- [İletişim — phone, WhatsApp, address (Turkish)](https://terzihizmeti.com.tr/iletisim): +90 531 898 64 18, Hurma Mahallesi, Konyaaltı, open daily 08:00–23:00
+- [Contact tailor Antalya (English)](https://terzihizmeti.com.tr/en/contact-tailor-antalya): phone, WhatsApp, address and opening hours
+- [Контакты портного в Анталье (Russian)](https://terzihizmeti.com.tr/ru/kontakty-portnoy-antalya): телефон, WhatsApp, адрес и часы работы
+- [Schneider Antalya Kontakt (German)](https://terzihizmeti.com.tr/de/kontakt-schneider-antalya): Telefon, WhatsApp, Adresse und Öffnungszeiten
+
 ## Prices
 
 - [Antalya terzi fiyatları (Turkish)](https://terzihizmeti.com.tr/antalya-terzi-fiyatlari): price list and answers to common questions

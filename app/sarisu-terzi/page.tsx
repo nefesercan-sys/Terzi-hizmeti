@@ -15,15 +15,15 @@ const TODAY     = '2026-10-04';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Sarısu Terzi — Adrese Servis, Paça ve Fermuar" },
+  title: { absolute: "Sarısu Terzi · Paça ₺150, Fermuar ₺200 | Terzi Can" },
   description:
-    'Sarısu terzi Konyaaltı: paça kısaltma ₺150\'den, fermuar değişimi ₺200\'den, bel daraltma, elbise dikimi. Ücretsiz adrese servis.',
+    "Sarısu terzi: paça kısaltma ücreti ₺150'den, fermuar değişimi ₺200'den, fiyatlar 2026. Sarısu mahallesine adrese servis, her gün 08:00–23:00. ☎ " + PHONE,
   keywords: ['Sarısu terzi', 'Sarısu mahallesi terzi', 'Sarısu Konyaaltı terzi', 'Sarısu paça kısaltma', 'Sarısu fermuar tamiri', 'Sarısu bel daraltma', 'Sarısu elbise dikimi', 'Sarısu gelinlik tadilatı', 'Sarısu ütü hizmeti', 'Sarısu kuru temizleme', 'Sarısu terzi fiyatları 2026', 'Konyaaltı Sarısu dikiş atölyesi'],
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Sarısu Terzi Konyaaltı — Adrese Gelen Terzi',
-    description: 'Sarısu mahallesine terzi hizmeti. Paça, fermuar, bel daraltma, dikim, ütü. ₺150\'den. ☎ ' + PHONE,
+    title: 'Sarısu Terzi · Paça ₺150, Fermuar ₺200 | Terzi Can',
+    description: "Sarısu terzi: paça kısaltma ücreti ₺150'den, fermuar değişimi ₺200'den, fiyatlar 2026. Sarısu mahallesine adrese servis, her gün 08:00–23:00. ☎ " + PHONE,
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'tr_TR', type: 'website',
     images: [{ url: `${SITE}/terzi-can-hero.jpg`, width: 1024, height: 1024, alt: 'Sarısu Terzi Konyaaltı' }],
   },

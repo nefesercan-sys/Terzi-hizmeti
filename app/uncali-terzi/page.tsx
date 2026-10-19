@@ -17,13 +17,13 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Uncalı Terzi · Paça ₺150, Fermuar ₺200 | Terzi Can" },
   description:
-    "Uncalı terzi: paça kısaltma ücreti ₺150'den, fermuar değişimi ₺200'den, fiyatlar 2026. Uncalı mahallesine adrese servis, her gün 08:00–23:00. ☎ " + PHONE,
-  keywords: ['Uncalı terzi', 'Uncalı mahallesi terzi', 'Uncalı Konyaaltı terzi', 'Uncalı paça kısaltma', 'Uncalı fermuar tamiri', 'Uncalı bel daraltma', 'Uncalı elbise dikimi', 'Uncalı gelinlik tadilatı', 'Uncalı ütü hizmeti', 'Uncalı kuru temizleme', 'Uncalı terzi fiyatları 2026', 'Konyaaltı Uncalı dikiş atölyesi'],
+    "Uncalı terzi: tamir tadilat, söküğü dikme, paça ₺150'den, fermuar ₺200'den. Uncalı mahallesine adrese servis, her gün 08:00–23:00. ☎ " + PHONE,
+  keywords: ['Uncalı tamir tadilat', 'Uncalı söküğü dikme', 'Uncalı yırtık tamiri', 'Uncalı elbise tamiri', 'Uncalı terzi', 'Uncalı mahallesi terzi', 'Uncalı Konyaaltı terzi', 'Uncalı paça kısaltma', 'Uncalı fermuar tamiri', 'Uncalı bel daraltma', 'Uncalı elbise dikimi', 'Uncalı gelinlik tadilatı', 'Uncalı ütü hizmeti', 'Uncalı kuru temizleme', 'Uncalı terzi fiyatları 2026', 'Konyaaltı Uncalı dikiş atölyesi'],
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Uncalı Terzi · Paça ₺150, Fermuar ₺200 | Terzi Can',
-    description: "Uncalı terzi: paça kısaltma ücreti ₺150'den, fermuar değişimi ₺200'den, fiyatlar 2026. Uncalı mahallesine adrese servis, her gün 08:00–23:00. ☎ " + PHONE,
+    description: "Uncalı terzi: tamir tadilat, söküğü dikme, paça ₺150'den, fermuar ₺200'den. Uncalı mahallesine adrese servis, her gün 08:00–23:00. ☎ " + PHONE,
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'tr_TR', type: 'website',
     images: [{ url: `${SITE}/terzi-can-hero.jpg`, width: 1024, height: 1024, alt: 'Uncalı Terzi Konyaaltı' }],
   },

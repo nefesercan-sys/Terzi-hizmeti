@@ -347,16 +347,16 @@ export function serviceMetadata(lang: Lang, s: Service): Metadata {
 
 export function hubMetadata(lang: Lang): Metadata {
   const title = {
-    tr: 'Terzi Hizmetleri Antalya · Paça ₺150, Fermuar ₺200',
-    en: 'Tailor Services & Prices Antalya · Hemming ₺150, Zipper ₺200',
-    ru: 'Услуги и цены портного в Анталье · подшив ₺150, молния ₺200',
-    de: 'Schneider Leistungen & Preise Antalya · Kürzen ab ₺150',
+    tr: 'Tamir Tadilat Terzi Antalya · Paça ₺150, Fermuar ₺200',
+    en: 'Clothing Repair & Alterations Antalya · Hemming ₺150',
+    ru: 'Ремонт и подшив одежды в Анталье · подшив ₺150',
+    de: 'Kleidung ändern & reparieren Antalya · Kürzen ab ₺150',
   }[lang];
   const description = {
-    tr: `Konyaaltı Hurma, Liman, Uncalı, Gürsu, Öğretmenevleri terzi: paça, fermuar, bel daraltma, elbise dikimi. Her gün 08:00–23:00. ☎ ${PHONE}`,
-    en: `Hemming, zippers, dress making in Side, Kundu, Belek, Lara, Kemer, Beldibi. Free hotel pick-up, daily 08:00–23:00. ☎ ${PHONE}`,
-    ru: `Подшив, молнии, пошив: Сиде, Кунду, Белек, Лара, Кемер, Бельдиби. Забор из отелей, ежедневно 08:00–23:00. ☎ ${PHONE}`,
-    de: `Kürzen, Reißverschlüsse, Kleider nähen: Side, Kundu, Belek, Lara, Kemer, Beldibi. Hotelabholung, täglich 08:00–23:00. ☎ ${PHONE}`,
+    tr: `Bay bayan tamir tadilat: söküğü, yırtığı dikme, paça ve etek kısaltma, fermuar değişimi. Konyaaltı Hurma, Liman, Uncalı, Gürsu. ☎ ${PHONE}`,
+    en: `Clothing repair for men & women: torn seams, hemming, zipper replacement. Side, Kundu, Belek, Lara, Kemer. Free hotel pick-up. ☎ ${PHONE}`,
+    ru: `Ремонт одежды: зашить дырку, подшив, молнии, мужская и женская. Сиде, Кунду, Белек, Лара, Кемер. Забор из отелей. ☎ ${PHONE}`,
+    de: `Kleidung reparieren & ändern: Risse nähen, Kürzen, Reißverschluss. Side, Kundu, Belek, Lara, Kemer. Hotelabholung gratis. ☎ ${PHONE}`,
   }[lang];
   const url = abs(SERVICE_BASE[lang]);
   return {

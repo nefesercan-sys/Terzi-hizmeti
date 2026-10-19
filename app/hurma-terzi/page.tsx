@@ -17,9 +17,9 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Hurma Terzi · Atölye Hurma'da, Paça ₺150 | Terzi Can" },
   description:
-    "Hurma terzi atölyemiz Hurma Mahallesi'nde: paça kısaltma ücreti ₺150'den, fermuar değişimi ₺200'den, fiyatlar 2026. Her gün 08:00–23:00. ☎ " + PHONE,
+    "Hurma terzi atölyemiz Hurma Mahallesi'nde: tamir tadilat, söküğü dikme, paça ₺150'den, fermuar ₺200'den. Her gün 08:00–23:00. ☎ " + PHONE,
   keywords: [
-    'Hurma terzi', 'Hurma mahallesi terzi', 'Hurma Konyaaltı terzi',
+    'Hurma tamir tadilat', 'Hurma söküğü dikme', 'Hurma yırtık tamiri', 'Hurma elbise tamiri', 'Hurma terzi', 'Hurma mahallesi terzi', 'Hurma Konyaaltı terzi',
     'Hurma paça kısaltma', 'Hurma fermuar tamiri', 'Hurma bel daraltma',
     'Hurma elbise dikimi', 'Hurma gelinlik tadilatı', 'Hurma ütü hizmeti',
     'Hurma kuru temizleme', 'Hurma eve gelen terzi', 'Hurma adrese gelen terzi',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Hurma Terzi · Atölye Hurma\'da, Paça ₺150 | Terzi Can',
-    description: "Hurma terzi atölyemiz Hurma Mahallesi'nde: paça kısaltma ücreti ₺150'den, fermuar değişimi ₺200'den, fiyatlar 2026. Her gün 08:00–23:00. ☎ " + PHONE,
+    description: "Hurma terzi atölyemiz Hurma Mahallesi'nde: tamir tadilat, söküğü dikme, paça ₺150'den, fermuar ₺200'den. Her gün 08:00–23:00. ☎ " + PHONE,
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'tr_TR', type: 'website',
     images: [{ url: `${SITE}/terzi-can-hero.jpg`, width: 1024, height: 1024, alt: 'Hurma Terzi Konyaaltı' }],
   },

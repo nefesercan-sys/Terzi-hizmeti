@@ -117,6 +117,7 @@ const TIME_SHORT: Record<Lang, Record<'same' | 'next' | 'three' | 'none', string
 
 // ── Bölge önceliği: TR'de yerel mahalleler, yabancı dilde tatil bölgeleri öne ──
 const TR_PRI = ['konyaalti', 'ogretmenevleri'];
+const REPAIR_NEAR = ['konyaalti', 'ogretmenevleri', 'arapsuyu'];
 const FG_PRI = ['side', 'kundu', 'belek', 'lara', 'konyaalti', 'kemer', 'beldibi'];
 function sortD(lang: Lang, list: District[]): District[] {
   const pri = lang === 'tr' ? TR_PRI : FG_PRI;
@@ -137,6 +138,7 @@ function districtCopy(lang: Lang, d: District) {
     de: [`Schneider ${n}, Antalya · in der Nähe · Kürzen, Zipper`, `Schneider ${n}, Antalya | Kürzen & Änderungen`, `Schneider ${n}, Antalya`],
   }[lang];
   let title = pickFit(titles, 60);
+  let desc = '';
   const descs = {
     tr: [`${loc} terzi arıyorsanız: Terzi Can Konyaaltı. Paça kısaltma ₺150'den, fermuar değişimi ₺200'den, elbise tamiri. Her gün 08:00–23:00. ${PH}`,
          `${loc} terzi: paça ₺150'den, fermuar ₺200'den, elbise tamiri. Her gün 08:00–23:00, otel ve eve ücretsiz alım. ${PH}`,
@@ -161,12 +163,37 @@ function districtCopy(lang: Lang, d: District) {
   const priD: string[] = lang === 'tr'
     ? (TR_PRI.includes(d.slug) ? (d.slug === 'konyaalti' ? [`Konyaaltı, Hurma, Liman, Uncalı, Gürsu ve Öğretmenevleri'nde terzi arıyorsanız: paça ₺150'den, fermuar ₺200'den. Her gün 08:00–23:00, adrese servis. ${PH}`, `Konyaaltı terzi: Hurma, Liman, Uncalı, Gürsu. Paça ₺150'den, fermuar ₺200'den. Her gün 08:00–23:00. ${PH}`] : [`${loc} terzi: paça kısaltma ücreti ₺150'den, fermuar değişimi ₺200'den. Otel ve eve ücretsiz servis, her gün 08:00–23:00. ${PH}`, `${loc} terzi: paça ₺150'den, fermuar ₺200'den. Her gün 08:00–23:00. ${PH}`]) : [])
     : (FG_PRI.includes(d.slug) ? ({
-      en: [`Staying ${loc}? We collect from your hotel: hemming from ₺150, zippers from ₺200, dress repair. We speak English. Daily 08:00–23:00. ${PH}`, `Staying ${loc}? Hotel pick-up: hemming from ₺150, zippers from ₺200. Daily 08:00–23:00. ${PH}`],
-      ru: [`Отдыхаете ${loc}? Заберём вещи из отеля: подшив от ₺150, молния от ₺200, ремонт платьев. Говорим по-русски. Ежедневно 08:00–23:00. ${PH}`, `Отдыхаете ${loc}? Забор из отеля: подшив от ₺150, молния от ₺200. Ежедневно 08:00–23:00. ${PH}`],
-      de: [`Urlaub ${loc}? Wir holen im Hotel ab: Kürzen ab ₺150, Reißverschluss ab ₺200, Kleider ändern. Wir sprechen Deutsch. Täglich 08:00–23:00. ${PH}`, `Urlaub ${loc}? Hotelabholung: Kürzen ab ₺150, Reißverschluss ab ₺200. Täglich 08:00–23:00. ${PH}`],
+      en: [`Staying ${loc}? We collect from your hotel: hemming from ₺150, zippers from ₺200. We speak English. Daily 08:00–23:00. ${PH}`, `Staying ${loc}? Hotel pick-up: hemming from ₺150, zippers from ₺200. Daily 08:00–23:00. ${PH}`],
+      ru: [`Отдыхаете ${loc}? Заберём вещи из отеля: подшив от ₺150, молния от ₺200. Говорим по-русски. Ежедневно 08:00–23:00. ${PH}`, `Отдыхаете ${loc}? Забор из отеля: подшив от ₺150, молния от ₺200. Ежедневно 08:00–23:00. ${PH}`],
+      de: [`Urlaub ${loc}? Wir holen im Hotel ab: Kürzen ab ₺150, Reißverschluss ab ₺200. Wir sprechen Deutsch. Täglich 08:00–23:00. ${PH}`, `Urlaub ${loc}? Hotelabholung: Kürzen ab ₺150, Reißverschluss ab ₺200. Täglich 08:00–23:00. ${PH}`],
     } as Record<string, string[]>)[lang] : []);
   if (priT.length) title = pickFit([...priT, ...titles], 60);
-  const desc = pickFit([...priD, ...descs], 158);
+  desc = pickFit([...priD, ...descs], 158);
+  // Tamir-tadilat vurgusu yalnızca atölyeye yakın bölgelerde (Konyaaltı / Hurma çevresi); uzak bölgelerde öne çıkarılmaz.
+  const rep = REPAIR_NEAR.includes(d.slug);
+  if (rep) {
+    const repT = ({
+      tr: [`${n} Tamir Tadilat Terzi · Fermuar, Paça | Terzi Can`, `${n} Tamir Tadilat Terzi | Terzi Can`],
+      en: [`Clothing Repair in ${n}, Antalya · Hemming | Terzi Can`, `Clothing Repair in ${n}, Antalya | Terzi Can`],
+      ru: [`Ремонт одежды ${n}, Анталья · подшив | Terzi Can`, `Ремонт одежды ${n}, Анталья | Terzi Can`],
+      de: [`Kleidung reparieren ${n}, Antalya · Kürzen | Terzi Can`, `Kleidung reparieren ${n}, Antalya | Terzi Can`],
+    } as Record<string, string[]>)[lang];
+    const repD = ({
+      tr: [`${loc} tamir tadilat: söküğü, yırtığı dikme, paça ve etek kısaltma ₺150'den, fermuar değişimi ₺200'den, bay bayan. 08:00–23:00. ${PH}`],
+      en: [`Clothing repair ${loc}: torn seams, hemming from ₺150, zipper replacement from ₺200, men & women. Daily 08:00–23:00. ${PH}`],
+      ru: [`Ремонт одежды ${loc}: зашить дырку, подшив от ₺150, молния от ₺200, мужская и женская. Ежедневно 08:00–23:00. ${PH}`],
+      de: [`Kleidung reparieren ${loc}: Risse nähen, Kürzen ab ₺150, Reißverschluss ab ₺200, Damen & Herren. Täglich 08:00–23:00. ${PH}`],
+    } as Record<string, string[]>)[lang];
+    title = pickFit([...repT, ...titles], 60);
+    desc = pickFit([...repD, ...priD, ...descs], 158);
+    kw.push(...({
+      tr: [`${n} tamir tadilat`, `${n} söküğü dikme`, `${n} yırtık tamiri`, `${n} elbise tamiri`],
+      en: [`clothing repair ${n} Antalya`, `torn clothes repair ${n}`],
+      ru: [`ремонт одежды ${n} Анталья`],
+      de: [`Kleidung reparieren ${n} Antalya`],
+    } as Record<string, string[]>)[lang]);
+    return { n, loc, kw, title, desc };
+  }
   return { n, loc, kw, title, desc };
 }
 
@@ -354,9 +381,9 @@ export function hubMetadata(lang: Lang): Metadata {
   }[lang];
   const description = {
     tr: `Bay bayan tamir tadilat: söküğü, yırtığı dikme, paça ve etek kısaltma, fermuar değişimi. Konyaaltı Hurma, Liman, Uncalı, Gürsu. ☎ ${PHONE}`,
-    en: `Clothing repair for men & women: torn seams, hemming, zipper replacement. Side, Kundu, Belek, Lara, Kemer. Free hotel pick-up. ☎ ${PHONE}`,
-    ru: `Ремонт одежды: зашить дырку, подшив, молнии, мужская и женская. Сиде, Кунду, Белек, Лара, Кемер. Забор из отелей. ☎ ${PHONE}`,
-    de: `Kleidung reparieren & ändern: Risse nähen, Kürzen, Reißverschluss. Side, Kundu, Belek, Lara, Kemer. Hotelabholung gratis. ☎ ${PHONE}`,
+    en: `Clothing repair for men & women: torn seams, hemming, zipper replacement. Konyaaltı, Hurma, Liman, Arapsuyu. Free pick-up. ☎ ${PHONE}`,
+    ru: `Ремонт одежды: зашить дырку, подшив, молнии, мужская и женская. Коньяалты, Хурма, Лиман, Арапсую. Бесплатный забор. ☎ ${PHONE}`,
+    de: `Kleidung reparieren & ändern: Risse nähen, Kürzen, Reißverschluss. Konyaaltı, Hurma, Liman, Arapsuyu. Abholung gratis. ☎ ${PHONE}`,
   }[lang];
   const url = abs(SERVICE_BASE[lang]);
   return {

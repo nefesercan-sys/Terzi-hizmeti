@@ -208,7 +208,7 @@ export const SERVICES: Service[] = [
     id: 'elbise-tamir', icon: '🧵', time: 'next',
     slug: { tr: 'elbise-tamiri-tadilati', en: 'dress-repair-alteration', ru: 'remont-i-pereshiv-platya', de: 'kleid-aendern-reparieren' },
     name: { tr: 'Elbise Tamiri ve Tadilatı', en: 'Dress Repair & Alteration', ru: 'Ремонт и переделка платьев', de: 'Kleider ändern und reparieren' },
-    q: { tr: 'elbise tamiri', en: 'dress alteration', ru: 'ремонт платья', de: 'Kleid ändern' },
+    q: { tr: 'elbise tamiri ve tadilatı', en: 'clothing repair and alterations', ru: 'ремонт и переделка одежды', de: 'Kleidung ändern und reparieren' },
     intro: {
       tr: 'Elbiselerde daraltma, kısaltma, askı ve kol ayarı, sökük dikimi ve onarım yaparız. Günlük elbise de olsa özel gün elbisesi de olsa ölçü, üzerinizde provayla alınır.',
       en: 'Dresses: we take in, shorten, adjust straps and sleeves, close open seams and repair damage, whether everyday or occasion wear, with measurements taken at a fitting.',
@@ -216,10 +216,10 @@ export const SERVICES: Service[] = [
       de: 'Kleider: Wir machen sie enger, kürzen, passen Träger und Ärmel an, schließen aufgegangene Nähte und reparieren Schäden – ob Alltags- oder Festkleid, gemessen wird bei der Anprobe.',
     },
     vars: {
-      tr: ['elbise tamiri', 'elbise tadilatı', 'elbise daraltma', 'elbise kısaltma', 'elbise tamiri terzi', 'kıyafet tadilatı', 'her türlü kıyafet tadilatı'],
-      en: ['dress alteration', 'dress repair', 'dress tailor near me', 'shorten dress', 'take in dress', 'clothing alterations'],
-      ru: ['переделка платья', 'ремонт платья', 'ушить платье', 'укоротить платье', 'ателье по ремонту одежды', 'подгонка платья по фигуре'],
-      de: ['Kleid ändern', 'Kleid reparieren', 'Kleid kürzen', 'Kleid enger machen', 'Änderungsschneiderei Kleid', 'Kleidung ändern lassen'],
+      tr: ['tamir tadilat', 'söküğü dikme', 'yırtık tamiri', 'kıyafet tamiri', 'bay bayan tamir tadilat', 'elbise tamiri', 'elbise tadilatı', 'elbise daraltma', 'elbise kısaltma', 'elbise tamiri terzi', 'kıyafet tadilatı', 'her türlü kıyafet tadilatı'],
+      en: ['clothing repair', 'mend torn clothes', 'sewing repair men and women', 'dress alteration', 'dress repair', 'dress tailor near me', 'shorten dress', 'take in dress', 'clothing alterations'],
+      ru: ['ремонт и переделка одежды', 'зашить дырку на одежде', 'зашить порванную одежду', 'ремонт одежды мужской и женской', 'переделка платья', 'ремонт платья', 'ушить платье', 'укоротить платье', 'ателье по ремонту одежды', 'подгонка платья по фигуре'],
+      de: ['Kleidung ändern lassen', 'Kleidung reparieren', 'Riss nähen lassen', 'Loch flicken Schneider', 'Kleid ändern', 'Kleid reparieren', 'Kleid kürzen', 'Kleid enger machen', 'Änderungsschneiderei Kleid', 'Kleidung ändern lassen'],
     },
   },
   {

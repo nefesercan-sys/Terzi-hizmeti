@@ -97,8 +97,9 @@ function businessNode(lang: Lang) {
   };
 }
 
-const alternatesFor = (urlFor: (l: Lang) => string) => ({
-  canonical: urlFor('tr'),
+const alternatesFor = (lang: Lang, urlFor: (l: Lang) => string) => ({
+  // Her dil sayfası KENDİ adresini canonical gösterir (Türkçe sayfayı değil); dil karşılıkları hreflang ile bağlanır.
+  canonical: urlFor(lang),
   languages: { tr: urlFor('tr'), en: urlFor('en'), ru: urlFor('ru'), de: urlFor('de'), 'x-default': urlFor('tr') },
 });
 
@@ -319,7 +320,7 @@ export function districtMetadata(lang: Lang, d: District): Metadata {
     description: c.desc,
     keywords: Array.from(new Set(kw)),
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
-    alternates: alternatesFor((l) => abs(districtUrl(l, d))),
+    alternates: alternatesFor(lang, (l) => abs(districtUrl(l, d))),
     openGraph: {
       title: c.title, description: c.desc, url, siteName: 'Terzi Can', locale: OG_LOCALE[lang], type: 'website',
       images: [{ url: OG, width: 1024, height: 1024, alt: c.title }],
@@ -336,7 +337,7 @@ export function serviceMetadata(lang: Lang, s: Service): Metadata {
     description: c.desc,
     keywords: Array.from(new Set([...s.vars[lang], ...s.vars[lang].slice(0, 3).map((v) => `${v} Antalya`)])),
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
-    alternates: alternatesFor((l) => abs(serviceUrl(l, s))),
+    alternates: alternatesFor(lang, (l) => abs(serviceUrl(l, s))),
     openGraph: {
       title: c.title, description: c.desc, url, siteName: 'Terzi Can', locale: OG_LOCALE[lang], type: 'website',
       images: [{ url: OG, width: 1024, height: 1024, alt: c.title }],
@@ -363,7 +364,7 @@ export function hubMetadata(lang: Lang): Metadata {
     title: { absolute: title },
     description,
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
-    alternates: alternatesFor((l) => abs(SERVICE_BASE[l])),
+    alternates: alternatesFor(lang, (l) => abs(SERVICE_BASE[l])),
     openGraph: { title, description, url, siteName: 'Terzi Can', locale: OG_LOCALE[lang], type: 'website', images: [{ url: OG, width: 1024, height: 1024, alt: title }] },
   };
 }

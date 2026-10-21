@@ -60,7 +60,7 @@ const QUICK: { q: string; a: string; price: string; href: string; cta: string }[
   { q: 'Elbise diktirmek / kendime elbise dikmek', a: 'Ölçü, model ve kumaş seçimi, prova ve teslim. Fotoğrafını gönderin.', price: '₺600\'den', href: '#dikim', cta: 'Özel dikim' },
   { q: 'Gelinlik ve abiye tadilatı', a: 'Hassas daraltma, boy ve askı ayarı; prova randevusu.', price: '₺800\'den', href: '/antalya-gelinlik-tadilati', cta: 'Gelinlik tadilatı' },
   { q: 'Adrese veya otele gelen terzi', a: 'Ölçüyü adresinizde alırız, işi atölyede yapar, geri teslim ederiz.', price: 'Konyaaltı, Muratpaşa, Kepez, Lara ücretsiz', href: '/otele-gelen-terzi-antalya', cta: 'Otele gelen terzi' },
-  { q: 'Pamuklu, doğal kumaştan dikim', a: '%100 keten ve pamuktan özel dikim; toptan üretim de yapılır.', price: 'Fotoğrafa göre', href: '/keten-pamuk-ozel-dikim', cta: 'Keten & pamuk' },
+  { q: 'Pamuklu, doğal kumaştan dikim', a: '%100 keten ve pamuktan özel dikim ve seri üretim yapılır.', price: 'Fotoğrafa göre', href: '/keten-pamuk-ozel-dikim', cta: 'Keten & pamuk' },
   { q: 'Model, tasarım, dikim atölyesi, seri imalat', a: 'Önce numune, onaydan sonra seri imalat ve üretim takibi (adet: modele göre teklif, minimum sipariş yok).', price: 'Teklif', href: '/anavera-tekstil', cta: 'Anavera Tekstil' },
 ];
 
@@ -95,9 +95,9 @@ const FAQS: [string, string][] = [
   ['Bana yakın terzi nerede?',
    'Atölye Konyaaltı\'ndadır; Hurma, Liman, Sarısu, Uncalı ve Gürsu\'na ücretsiz servis yapılır. Konum: Google Haritalar\'da "TERZİ Can Antalya Tailor Service". Antalya\'nın diğer bölgelerine de randevuyla gidilir.'],
   ['Pamuklu, doğal kumaştan dikim yapıyor musunuz?',
-   'Evet. %100 keten ve pamuktan özel dikim yapılır; işletmeler için numune sonrası toptan üretim de mümkündür. Ayrıntı: /keten-pamuk-ozel-dikim'],
+   'Evet. %100 keten ve pamuktan özel dikim ve seri üretim yapılır; işletmeler için numune sonrası seri üretim mümkündür. Ayrıntı: /keten-pamuk-ozel-dikim'],
   ['Model, tasarım ve seri imalat (dikim imalat fiyatları) nasıl işliyor?',
-   'Tasarımınızı veya referans fotoğrafı gönderirsiniz; önce numune dikilir ve onaylanır, sonra seri imalata geçilir ve üretim takibi paylaşılır. Fiyat model, kumaş ve adede göre teklif edilir; minimum adet stil başına 300-500\'dür. Ayrıntı: /anavera-tekstil'],
+   'Tasarımınızı veya referans fotoğrafı gönderirsiniz; önce numune dikilir ve onaylanır, sonra seri imalata geçilir ve üretim takibi paylaşılır. Fiyat model, kumaş ve adede göre teklif edilir; minimum sipariş şartı yoktur. Ayrıntı: /anavera-tekstil'],
 ];
 
 const jsonLd = {

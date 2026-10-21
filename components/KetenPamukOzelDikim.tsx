@@ -102,16 +102,16 @@ const T: Record<Lang, any> = {
     ],
     finalCta: 'Kendi Modelinizi Diktirin', finalSub: 'Fotoğraf gönderin, WhatsApp\'tan fiyat teklifi alın.',
     waBtn: 'WhatsApp ile Başlayın',
-    wholesaleTag: '🏭 Toptan Üretim & İhracat',
+    wholesaleTag: '🏭 Özel Dikim & Seri Üretim, İhracat',
     wholesaleH: 'Tek Parça mı, Yoksa Seri İmalat mı?',
-    wholesaleDesc: 'Otel/mağaza zinciri, marka veya toptancıysanız — aynı keten ve pamuk kumaşlarla erkek, kadın ve çocuk giyiminde numune çalışması yapıp, onayınızın ardından seri imalata geçiyor, üretim takibini paylaşarak yerli ve yurt dışı (Avrupa, Rusya) müşterilere ihracat yapıyoruz.',
+    wholesaleDesc: 'Otel/mağaza zinciri, marka veya işletmeyseniz — aynı keten ve pamuk kumaşlarla erkek, kadın ve çocuk giyiminde numune çalışması yapıp, onayınızın ardından seri imalata geçiyor, üretim takibini paylaşarak yerli ve yurt dışı (Avrupa, Rusya) müşterilere ihracat yapıyoruz.',
     wholesaleSteps: [
       ['1️⃣', 'Tasarım / Fotoğraf Gönderin', 'İstediğiniz modeli, çizimi veya referans fotoğrafı WhatsApp\'tan paylaşın.'],
       ['2️⃣', 'Numune Geliştirme', 'Kalıbını çıkarıp tek bir numune dikiyoruz — onayınız olmadan seri imalata geçmiyoruz.'],
       ['3️⃣', 'Seri İmalat', 'Numune onaylandıktan sonra istediğiniz adette (minimum sipariş şartı yok) üretime geçiyoruz.'],
       ['4️⃣', 'Üretim Takibi & İhracat', 'Kesim/dikim/kalite kontrol aşamalarını fotoğraf-video ile paylaşıyoruz; yurt dışına ATR/EUR.1 evraklarıyla ihracat yapıyoruz.'],
     ] as [string, string, string][],
-    wholesaleCtaBtn: 'Toptan Teklif İste — WhatsApp',
+    wholesaleCtaBtn: 'Seri Üretim Teklifi İste — WhatsApp',
     wholesaleLinkText: 'Kurumsal üretim kataloğumuz için → Anavera Tekstil',
   },
   en: {
@@ -137,16 +137,16 @@ const T: Record<Lang, any> = {
     ],
     finalCta: 'Have Your Own Style Made', finalSub: 'Send a photo and get a price quote on WhatsApp.',
     waBtn: 'Start on WhatsApp',
-    wholesaleTag: '🏭 Wholesale Production & Export',
+    wholesaleTag: '🏭 Custom & Serial Production, Export',
     wholesaleH: 'One Piece, or Serial Production?',
-    wholesaleDesc: 'Hotel groups, retail chains, brands and wholesalers — we develop a sample in the same linen/cotton fabrics for menswear, womenswear or kidswear, then move to serial production after your approval, sharing production tracking and exporting to customers in Turkey and abroad (Europe, Russia).',
+    wholesaleDesc: 'Hotel groups, retail chains, brands and businesses — we develop a sample in the same linen/cotton fabrics for menswear, womenswear or kidswear, then move to serial production after your approval, sharing production tracking and exporting to customers in Turkey and abroad (Europe, Russia).',
     wholesaleSteps: [
       ['1️⃣', 'Send Your Design', 'Share the style, sketch, or reference photo you want on WhatsApp.'],
       ['2️⃣', 'Sample Development', 'We draft the pattern and sew a single sample — serial production starts only after your approval.'],
       ['3️⃣', 'Serial Production', 'Once the sample is approved, we produce your required quantity (no minimum order).'],
       ['4️⃣', 'Production Tracking & Export', 'We share cutting/sewing/QC updates by photo and video; export abroad with full ATR/EUR.1 documentation.'],
     ] as [string, string, string][],
-    wholesaleCtaBtn: 'Request Wholesale Quote — WhatsApp',
+    wholesaleCtaBtn: 'Request Serial Production Quote — WhatsApp',
     wholesaleLinkText: 'See our full manufacturing catalogue → Anavera Tekstil',
   },
   ru: {
@@ -172,16 +172,16 @@ const T: Record<Lang, any> = {
     ],
     finalCta: 'Сшить по своей модели', finalSub: 'Пришлите фото — получите цену в WhatsApp.',
     waBtn: 'Начать в WhatsApp',
-    wholesaleTag: '🏭 Оптовое производство и экспорт',
+    wholesaleTag: '🏭 Индивидуальный пошив и серийное производство, экспорт',
     wholesaleH: 'Одна вещь или серийное производство?',
-    wholesaleDesc: 'Отельные сети, магазины, бренды и оптовики — мы разрабатываем образец из тех же льняных и хлопковых тканей для мужской, женской или детской одежды, затем переходим к серийному производству после вашего утверждения, делимся контролем производства и экспортируем клиентам в Турции и за рубежом (Европа, Россия).',
+    wholesaleDesc: 'Отельные сети, магазины, бренды и компании — мы разрабатываем образец из тех же льняных и хлопковых тканей для мужской, женской или детской одежды, затем переходим к серийному производству после вашего утверждения, делимся контролем производства и экспортируем клиентам в Турции и за рубежом (Европа, Россия).',
     wholesaleSteps: [
       ['1️⃣', 'Отправьте дизайн', 'Пришлите желаемую модель, эскиз или референс-фото в WhatsApp.'],
       ['2️⃣', 'Разработка образца', 'Строим лекало и шьём один образец — серийное производство начинается только после утверждения.'],
       ['3️⃣', 'Серийное производство', 'После утверждения образца производим нужный объём (минимального заказа нет).'],
       ['4️⃣', 'Контроль производства и экспорт', 'Делимся фото/видео этапов раскроя, пошива и контроля качества; экспортируем с полным пакетом документов ATR/EUR.1.'],
     ] as [string, string, string][],
-    wholesaleCtaBtn: 'Запросить оптовую цену — WhatsApp',
+    wholesaleCtaBtn: 'Запросить цену на серию — WhatsApp',
     wholesaleLinkText: 'Полный каталог производства → Anavera Tekstil',
   },
   de: {
@@ -207,16 +207,16 @@ const T: Record<Lang, any> = {
     ],
     finalCta: 'Eigenen Stil schneidern lassen', finalSub: 'Foto senden und per WhatsApp ein Preisangebot erhalten.',
     waBtn: 'Mit WhatsApp beginnen',
-    wholesaleTag: '🏭 Großhandelsproduktion & Export',
+    wholesaleTag: '🏭 Sonder- & Serienproduktion, Export',
     wholesaleH: 'Einzelstück oder Serienproduktion?',
-    wholesaleDesc: 'Hotelgruppen, Handelsketten, Marken und Großhändler — wir entwickeln ein Muster aus denselben Leinen-/Baumwollstoffen für Herren-, Damen- oder Kinderbekleidung und gehen nach Ihrer Freigabe in die Serienproduktion, mit Produktionsverfolgung und Export an Kunden in der Türkei und im Ausland (Europa, Russland).',
+    wholesaleDesc: 'Hotelgruppen, Handelsketten, Marken und Unternehmen — wir entwickeln ein Muster aus denselben Leinen-/Baumwollstoffen für Herren-, Damen- oder Kinderbekleidung und gehen nach Ihrer Freigabe in die Serienproduktion, mit Produktionsverfolgung und Export an Kunden in der Türkei und im Ausland (Europa, Russland).',
     wholesaleSteps: [
       ['1️⃣', 'Design senden', 'Teilen Sie den gewünschten Stil, die Skizze oder ein Referenzfoto per WhatsApp mit.'],
       ['2️⃣', 'Musterentwicklung', 'Wir erstellen das Schnittmuster und nähen ein einzelnes Muster — die Serienproduktion beginnt erst nach Ihrer Freigabe.'],
       ['3️⃣', 'Serienproduktion', 'Nach Freigabe des Musters fertigen wir die gewünschte Menge (keine Mindestmenge).'],
       ['4️⃣', 'Produktionsverfolgung & Export', 'Wir teilen Foto-/Video-Updates zu Zuschnitt/Nähen/QK; Export ins Ausland mit vollständiger ATR/EUR.1-Dokumentation.'],
     ] as [string, string, string][],
-    wholesaleCtaBtn: 'Großhandelsangebot anfragen — WhatsApp',
+    wholesaleCtaBtn: 'Serienproduktion anfragen — WhatsApp',
     wholesaleLinkText: 'Unser vollständiger Produktionskatalog → Anavera Tekstil',
   },
 };
@@ -230,10 +230,10 @@ export default function KetenPamukOzelDikim({ lang = 'tr' }: { lang?: Lang }) {
     : lang === 'en' ? 'Hello, I would like to order custom linen/cotton tailoring. Style: '
     : 'Merhaba, keten/pamuk özel dikim sipariş etmek istiyorum. Model: ';
 
-  const wholesaleWaMsg = lang === 'ru' ? 'Здравствуйте, интересует оптовое производство одежды из льна/хлопка. Категория: '
-    : lang === 'de' ? 'Hallo, ich interessiere mich für die Großhandelsproduktion von Leinen-/Baumwollbekleidung. Kategorie: '
-    : lang === 'en' ? 'Hello, I am interested in wholesale linen/cotton clothing production. Category: '
-    : 'Merhaba, keten/pamuk toptan giyim üretimi ile ilgileniyorum. Kategori: ';
+  const wholesaleWaMsg = lang === 'ru' ? 'Здравствуйте, интересует индивидуальный пошив и серийное производство одежды из льна/хлопка. Категория: '
+    : lang === 'de' ? 'Hallo, ich interessiere mich für Sonder- und Serienproduktion von Leinen-/Baumwollbekleidung. Kategorie: '
+    : lang === 'en' ? 'Hello, I am interested in custom and serial linen/cotton clothing production. Category: '
+    : 'Merhaba, keten/pamuk giyimde özel dikim ve seri üretim ile ilgileniyorum. Kategori: ';
 
   const anaveraHref = lang === 'tr' ? '/anavera-tekstil' : `/${lang}/anavera-tekstil`;
 

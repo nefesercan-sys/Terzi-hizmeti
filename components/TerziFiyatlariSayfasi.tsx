@@ -231,7 +231,7 @@ export const FT: Record<FLang, FiyatText> = {
       },
       {
         "q": "Pamuklu, doğal kumaştan dikim",
-        "a": "%100 keten ve pamuktan özel dikim; toptan üretim de yapılır.",
+        "a": "%100 keten ve pamuktan özel dikim ve seri üretim yapılır.",
         "price": "Fotoğrafa göre",
         "href": "/keten-pamuk-ozel-dikim",
         "cta": "Keten & pamuk"
@@ -287,11 +287,11 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Pamuklu, doğal kumaştan dikim yapıyor musunuz?",
-        "Evet. %100 keten ve pamuktan özel dikim yapılır; işletmeler için numune sonrası toptan üretim de mümkündür. Ayrıntı: /keten-pamuk-ozel-dikim"
+        "Evet. %100 keten ve pamuktan özel dikim ve seri üretim yapılır; işletmeler için numune sonrası seri üretim mümkündür. Ayrıntı: /keten-pamuk-ozel-dikim"
       ],
       [
         "Model, tasarım ve seri imalat (dikim imalat fiyatları) nasıl işliyor?",
-        "Tasarımınızı veya referans fotoğrafı gönderirsiniz; önce numune dikilir ve onaylanır, sonra seri imalata geçilir ve üretim takibi paylaşılır. Fiyat model, kumaş ve adede göre teklif edilir; minimum adet stil başına 300-500'dür. Ayrıntı: /anavera-tekstil"
+        "Tasarımınızı veya referans fotoğrafı gönderirsiniz; önce numune dikilir ve onaylanır, sonra seri imalata geçilir ve üretim takibi paylaşılır. Fiyat model, kumaş ve adede göre teklif edilir; minimum sipariş şartı yoktur. Ayrıntı: /anavera-tekstil"
       ]
     ]
   },
@@ -450,7 +450,7 @@ export const FT: Record<FLang, FiyatText> = {
       },
       {
         "q": "Custom clothing in natural cotton or linen",
-        "a": "Custom sewing in 100% linen and cotton; wholesale production also available.",
+        "a": "Custom sewing and serial production in 100% linen and cotton.",
         "price": "Based on your photo",
         "href": "/en/linen-cotton-tailoring",
         "cta": "Linen & cotton"
@@ -506,11 +506,11 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Do you sew in natural cotton or linen?",
-        "Yes. Custom sewing in 100% linen and cotton; for businesses, wholesale production after a sample is also possible. Details: /en/linen-cotton-tailoring"
+        "Yes. Custom sewing and serial production in 100% linen and cotton; for businesses, serial production after a sample is possible. Details: /en/linen-cotton-tailoring"
       ],
       [
         "How do model design and serial production (production prices) work?",
-        "Send your design or a reference photo; a sample is sewn and approved first, then serial production starts and progress updates are shared. Prices are quoted per model, fabric and quantity; the minimum is 300-500 pieces per style. Details: /en/anavera-tekstil"
+        "Send your design or a reference photo; a sample is sewn and approved first, then serial production starts and progress updates are shared. Prices are quoted per model, fabric and quantity; there is no minimum order. Details: /en/anavera-tekstil"
       ]
     ]
   },
@@ -667,7 +667,7 @@ export const FT: Record<FLang, FiyatText> = {
       },
       {
         "q": "Maßanfertigung aus Naturstoff (Baumwolle, Leinen)",
-        "a": "Maßschneiderei aus 100% Leinen und Baumwolle; auch Großproduktion möglich.",
+        "a": "Maßschneiderei und Serienproduktion aus 100% Leinen und Baumwolle.",
         "price": "Nach Ihrem Foto",
         "href": "/de/leinen-baumwolle-schneiderei",
         "cta": "Leinen & Baumwolle"
@@ -723,11 +723,11 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Nähen Sie aus Naturstoffen wie Baumwolle oder Leinen?",
-        "Ja. Maßschneiderei aus 100% Leinen und Baumwolle; für Unternehmen ist nach einem Muster auch Großproduktion möglich. Details: /de/leinen-baumwolle-schneiderei"
+        "Ja. Maßschneiderei aus 100% Leinen und Baumwolle; für Unternehmen ist nach einem Muster auch Serienproduktion möglich. Details: /de/leinen-baumwolle-schneiderei"
       ],
       [
         "Wie funktionieren Modellentwurf und Serienproduktion (Produktionspreise)?",
-        "Senden Sie Ihr Design oder ein Referenzfoto; zuerst wird ein Muster genäht und freigegeben, dann startet die Serienproduktion mit Fortschrittsberichten. Preise werden je Modell, Stoff und Menge angeboten; die Mindestmenge liegt bei 300-500 Stück pro Stil. Details: /de/anavera-tekstil"
+        "Senden Sie Ihr Design oder ein Referenzfoto; zuerst wird ein Muster genäht und freigegeben, dann startet die Serienproduktion mit Fortschrittsberichten. Preise werden je Modell, Stoff und Menge angeboten; es gibt keine Mindestmenge. Details: /de/anavera-tekstil"
       ]
     ]
   },
@@ -884,7 +884,7 @@ export const FT: Record<FLang, FiyatText> = {
       },
       {
         "q": "Одежда на заказ из натурального хлопка или льна",
-        "a": "Пошив из 100% льна и хлопка; возможно и оптовое производство.",
+        "a": "Пошив на заказ и серийное производство из 100% льна и хлопка.",
         "price": "По вашему фото",
         "href": "/ru/poshiv-lyon-hlopok",
         "cta": "Лён и хлопок"
@@ -940,11 +940,11 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Шьёте ли вы из натурального хлопка или льна?",
-        "Да. Пошив на заказ из 100% льна и хлопка; для компаний после образца возможно и оптовое производство. Подробнее: /ru/poshiv-lyon-hlopok"
+        "Да. Пошив на заказ из 100% льна и хлопка; для компаний после образца возможно серийное производство. Подробнее: /ru/poshiv-lyon-hlopok"
       ],
       [
         "Как проходят разработка модели и серийное производство (цены на производство)?",
-        "Пришлите дизайн или референс-фото; сначала шьём и утверждаем образец, затем начинается серия с отчётами о ходе работ. Цена рассчитывается по модели, ткани и тиражу; минимум — 300-500 штук на модель. Подробнее: /ru/anavera-tekstil"
+        "Пришлите дизайн или референс-фото; сначала шьём и утверждаем образец, затем начинается серия с отчётами о ходе работ. Цена рассчитывается по модели, ткани и тиражу; минимального заказа нет. Подробнее: /ru/anavera-tekstil"
       ]
     ]
   }

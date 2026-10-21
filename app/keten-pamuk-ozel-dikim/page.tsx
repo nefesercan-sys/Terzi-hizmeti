@@ -13,9 +13,9 @@ const OG       = `${SITE}/terzi-can-hero.jpg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: 'Keten & Pamuk Özel Dikim Antalya · Ölçünü Gönder | Terzi Can' },
-  description: 'Antalya keten ve pamuk özel dikim: modelini seç, ölçünü WhatsApp\'tan gönder, otelinize veya adresinize teslim edelim. Toptan keten/pamuk üretimi de yapılır. ☎ ' + PHONE,
-  keywords: ['keten özel dikim antalya', 'pamuk özel dikim', 'keten elbise diktirmek', 'keten gömlek dikim', 'otelde özel dikim', 'keten pamuk toptan üretim'],
+  title: { absolute: 'Keten Pamuk Giyim · Özel Dikim, Seri Üretim | Terzi Can' },
+  description: 'Keten ve pamuk kumaştan özel dikim ve seri üretim: bay bayan, çocuk genel giyim. Ölçünü WhatsApp\'tan gönder, adrese teslim. ☎ ' + PHONE,
+  keywords: ['keten özel dikim antalya', 'pamuk özel dikim', 'keten elbise diktirmek', 'keten gömlek dikim', 'otelde özel dikim', 'keten pamuk seri üretim', 'keten giyim seri imalat', 'pamuk giyim seri imalat', 'keten genel giyim dikimi', 'özel ve seri keten üretimi', 'keten pamuk giyim imalatı antalya'],
   authors: [{ name: 'Terzi Can', url: SITE }],
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   alternates: {
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Keten & Pamuk Özel Dikim — Terzi Can Antalya',
-    description: '%100 doğal keten ve pamuk, ölçüne özel dikim. Otelinize veya adresinize teslim.',
+    description: '%100 doğal keten ve pamuk: özel dikim ve seri üretim, genel giyim. Adrese teslim.',
     url: PAGE_URL, siteName: 'Terzi Can', locale: 'tr_TR', alternateLocale: ['en_US', 'ru_RU', 'de_DE'], type: 'website',
     images: [{ url: OG, width: 1024, height: 1024, alt: 'Keten pamuk özel dikim — Terzi Can Antalya' }],
   },

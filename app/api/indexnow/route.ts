@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { OTEL_BOLGELERI } from '@/lib/otel-bolgeleri';
-import { DISTRICTS, SERVICES, LANGS, SERVICE_BASE, districtUrl, serviceUrl } from '@/lib/seo-data';
+import { DISTRICTS, SERVICES, LANGS, SERVICE_BASE, districtUrl, serviceUrl, isIndexable } from '@/lib/seo-data';
 import { TLANGS, allNewPages } from '@/lib/turist-keten';
 
 export const dynamic = 'force-dynamic';
@@ -66,7 +66,7 @@ const sabitSayfalar = [
 const seoSayfalari = [
   ...LANGS.map((l) => `${SITE}${SERVICE_BASE[l]}`),
   ...SERVICES.flatMap((s) => LANGS.map((l) => `${SITE}${serviceUrl(l, s)}`)),
-  ...DISTRICTS.flatMap((d) => LANGS.map((l) => `${SITE}${districtUrl(l, d)}`)),
+  ...DISTRICTS.flatMap((d) => LANGS.filter((l) => isIndexable(l, d.slug)).map((l) => `${SITE}${districtUrl(l, d)}`)),
 ];
 
 // Turist keten & pamuk özel dikim ürün sayfaları ve ekspres tadilat (EN/DE/RU)

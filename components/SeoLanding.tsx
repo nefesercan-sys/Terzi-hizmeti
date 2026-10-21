@@ -14,7 +14,9 @@ import {
   SERVICE_BASE, HUB_MAIN, HOTEL_BASE,
   abs, districtUrl, serviceUrl, query, timeOf, priceOf, TIME_TEXT,
   type Lang, type District, type Service,
+  isTrNear, isIndexable, TR_NEAR_SLUGS,
 } from '@/lib/seo-data';
+import { angleFor, angleTitles, angleDescs, angleKeywords } from '@/lib/seo-angles';
 
 const WA = (m: string) => `https://wa.me/${PHONE_TEL.replace('+', '')}?text=${encodeURIComponent(m)}`;
 const OG = `${SITE}/terzi-can-hero.jpg`;
@@ -97,7 +99,16 @@ function businessNode(lang: Lang) {
   };
 }
 
-const alternatesFor = (lang: Lang, urlFor: (l: Lang) => string) => ({
+const alternatesFor = (lang: Lang, urlFor: (l: Lang) => string, slug?: string) => {
+  // Uzak bölgenin Türkçe sayfası noindex olduğu için hreflang'a girmez; x-default İngilizce olur.
+  const trOk = !slug || isTrNear(slug);
+  const languages: Record<string, string> = {};
+  if (trOk) languages.tr = urlFor('tr');
+  languages.en = urlFor('en'); languages.ru = urlFor('ru'); languages.de = urlFor('de');
+  languages['x-default'] = urlFor(trOk ? 'tr' : 'en');
+  return { canonical: urlFor(lang), languages };
+};
+const _alternatesForOld = (lang: Lang, urlFor: (l: Lang) => string) => ({
   // Her dil sayfası KENDİ adresini canonical gösterir (Türkçe sayfayı değil); dil karşılıkları hreflang ile bağlanır.
   canonical: urlFor(lang),
   languages: { tr: urlFor('tr'), en: urlFor('en'), ru: urlFor('ru'), de: urlFor('de'), 'x-default': urlFor('tr') },
@@ -117,10 +128,10 @@ const TIME_SHORT: Record<Lang, Record<'same' | 'next' | 'three' | 'none', string
 
 // ── Bölge önceliği: TR'de yerel mahalleler, yabancı dilde tatil bölgeleri öne ──
 const TR_PRI = ['konyaalti', 'ogretmenevleri'];
-const REPAIR_NEAR = ['konyaalti', 'ogretmenevleri', 'arapsuyu'];
-const FG_PRI = ['side', 'kundu', 'belek', 'lara', 'konyaalti', 'kemer', 'beldibi'];
+const FG_PRI = ['konyaalti', 'muratpasa', 'side', 'aksu', 'kundu', 'belek', 'lara', 'kemer', 'beldibi'];
 function sortD(lang: Lang, list: District[]): District[] {
   const pri = lang === 'tr' ? TR_PRI : FG_PRI;
+  list = list.filter((x) => isIndexable(lang, x.slug)); // Türkçede uzak bölgeler listelenmez
   const rank = (x: District) => { const i = pri.indexOf(x.slug); return i < 0 ? 999 : i; };
   return [...list].sort((a, b) => rank(a) - rank(b));
 }
@@ -169,29 +180,17 @@ function districtCopy(lang: Lang, d: District) {
     } as Record<string, string[]>)[lang] : []);
   if (priT.length) title = pickFit([...priT, ...titles], 60);
   desc = pickFit([...priD, ...descs], 158);
-  // Tamir-tadilat vurgusu yalnızca atölyeye yakın bölgelerde (Konyaaltı / Hurma çevresi); uzak bölgelerde öne çıkarılmaz.
-  const rep = REPAIR_NEAR.includes(d.slug);
-  if (rep) {
-    const repT = ({
-      tr: [`${n} Tamir Tadilat Terzi · Fermuar, Paça | Terzi Can`, `${n} Tamir Tadilat Terzi | Terzi Can`],
-      en: [`Clothing Repair in ${n}, Antalya · Hemming | Terzi Can`, `Clothing Repair in ${n}, Antalya | Terzi Can`],
-      ru: [`Ремонт одежды ${n}, Анталья · подшив | Terzi Can`, `Ремонт одежды ${n}, Анталья | Terzi Can`],
-      de: [`Kleidung reparieren ${n}, Antalya · Kürzen | Terzi Can`, `Kleidung reparieren ${n}, Antalya | Terzi Can`],
-    } as Record<string, string[]>)[lang];
-    const repD = ({
-      tr: [`${loc} tamir tadilat: söküğü, yırtığı dikme, paça ve etek kısaltma ₺150'den, fermuar değişimi ₺200'den, bay bayan. 08:00–23:00. ${PH}`],
-      en: [`Clothing repair ${loc}: torn seams, hemming from ₺150, zipper replacement from ₺200, men & women. Daily 08:00–23:00. ${PH}`],
-      ru: [`Ремонт одежды ${loc}: зашить дырку, подшив от ₺150, молния от ₺200, мужская и женская. Ежедневно 08:00–23:00. ${PH}`],
-      de: [`Kleidung reparieren ${loc}: Risse nähen, Kürzen ab ₺150, Reißverschluss ab ₺200, Damen & Herren. Täglich 08:00–23:00. ${PH}`],
-    } as Record<string, string[]>)[lang];
-    title = pickFit([...repT, ...titles], 60);
-    desc = pickFit([...repD, ...priD, ...descs], 158);
-    kw.push(...({
-      tr: [`${n} tamir tadilat`, `${n} söküğü dikme`, `${n} yırtık tamiri`, `${n} elbise tamiri`],
-      en: [`clothing repair ${n} Antalya`, `torn clothes repair ${n}`],
-      ru: [`ремонт одежды ${n} Анталья`],
-      de: [`Kleidung reparieren ${n} Antalya`],
-    } as Record<string, string[]>)[lang]);
+  // Bölge sayfası "açısı": her bölge farklı bir arama niyetine ağırlık verir (dikim / tamir-tadilat / fermuar-paça /
+  // daraltma / keten-pamuk / üst giyim) → başlık, açıklama ve anahtar kelimeler sayfadan sayfaya farklı olur.
+  // Tamir-tadilat açısı: Türkçede yalnızca yakın bölgelerde, yabancı dillerde tüm bölgelerde çıkabilir (lib/seo-angles.ts).
+  {
+    const near = isTrNear(d.slug);
+    const a = angleFor(lang, d.slug, near, Math.max(0, TR_NEAR_SLUGS.indexOf(d.slug)));
+    const tail = ({ tr: `Haftanın 7 günü açık ${PH}`, en: `Open 7 days ${PH}`, ru: `Работаем 7 дней ${PH}`, de: `7 Tage geöffnet ${PH}` } as Record<string, string>)[lang];
+    const ctx = { lang, n, loc, free: near, tail };
+    title = pickFit([...angleTitles(lang, a, n), ...titles], 60);
+    desc = pickFit([...angleDescs(lang, a, ctx), ...priD, ...descs], 158);
+    kw.push(...angleKeywords(lang, a, n));
     return { n, loc, kw, title, desc };
   }
   return { n, loc, kw, title, desc };
@@ -289,7 +288,7 @@ function serviceCopy(lang: Lang, s: Service) {
   }[lang];
   const who = { tr: 'Terzi Can Konyaaltı:', en: 'Terzi Can in Konyaaltı:', ru: 'Terzi Can в Коньяалты:', de: 'Terzi Can in Konyaaltı:' }[lang];
   const open = { tr: 'Her gün 08:00–23:00', en: 'Open daily 08:00–23:00', ru: 'Ежедневно 08:00–23:00', de: 'Täglich 08:00–23:00' }[lang];
-  const pick = { tr: 'otel ve eve ücretsiz alım', en: 'free hotel pick-up', ru: 'бесплатный забор из отелей', de: 'Hotelabholung gratis' }[lang];
+  const pick = { tr: 'yakın bölgelere ücretsiz servis', en: 'free pick-up nearby', ru: 'бесплатный выезд рядом', de: 'Gratis-Abholung in der Nähe' }[lang];
   const tel = `☎ ${PHONE}`;
   const priceTxt = price ? (lang === 'tr' ? `2026 fiyatı ${price}` : price) : '';
   const body = (withTime: boolean) => `${who} ${withTime ? tm : ''}${withTime && priceTxt ? ', ' : ''}${priceTxt}`.replace(/[\s,:]+$/, '');
@@ -346,8 +345,11 @@ export function districtMetadata(lang: Lang, d: District): Metadata {
     title: { absolute: c.title },
     description: c.desc,
     keywords: Array.from(new Set(kw)),
-    robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
-    alternates: alternatesFor(lang, (l) => abs(districtUrl(l, d))),
+    // Türkçe + uzak bölge: dizine alınmasın, linkler takip edilsin.
+    robots: !isIndexable(lang, d.slug)
+      ? { index: false, follow: true }
+      : { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
+    alternates: alternatesFor(lang, (l) => abs(districtUrl(l, d)), d.slug),
     openGraph: {
       title: c.title, description: c.desc, url, siteName: 'Terzi Can', locale: OG_LOCALE[lang], type: 'website',
       images: [{ url: OG, width: 1024, height: 1024, alt: c.title }],
@@ -362,7 +364,17 @@ export function serviceMetadata(lang: Lang, s: Service): Metadata {
     metadataBase: new URL(SITE),
     title: { absolute: c.title },
     description: c.desc,
-    keywords: Array.from(new Set([...s.vars[lang], ...s.vars[lang].slice(0, 3).map((v) => `${v} Antalya`)])),
+    keywords: Array.from(new Set([
+      ...s.vars[lang],
+      ...s.vars[lang].slice(0, 3).map((v) => `${v} Antalya`),
+      // Aramada sık yazılan ek kalıplar: fiyat + bay/bayan + 7 gün açık (her hizmette o hizmetin kendi kelimesiyle)
+      ...({
+        tr: [`${s.vars.tr[0]} fiyatları 2026`, `${s.vars.tr[0]} bay bayan`, `${s.vars.tr[0]} haftanın 7 günü`, `${s.vars.tr[0]} Konyaaltı Hurma`],
+        en: [`${s.vars.en[0]} price Antalya`, `${s.vars.en[0]} men and women`, `${s.vars.en[0]} open 7 days`],
+        ru: [`${s.vars.ru[0]} цена Анталья`, `${s.vars.ru[0]} мужская и женская`, `${s.vars.ru[0]} 7 дней в неделю`],
+        de: [`${s.vars.de[0]} Preis Antalya`, `${s.vars.de[0]} Damen und Herren`, `${s.vars.de[0]} 7 Tage geöffnet`],
+      } as Record<string, string[]>)[lang],
+    ])),
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
     alternates: alternatesFor(lang, (l) => abs(serviceUrl(l, s))),
     openGraph: {
@@ -473,14 +485,14 @@ function Cta({ lang, waMsg, text }: { lang: Lang; waMsg: string; text: string })
 
 const linkChip: React.CSSProperties = { display: 'inline-block', padding: '.35rem .75rem', border: '1px solid rgba(201,169,110,.25)', borderRadius: 999, fontSize: '.78rem', color: 'rgba(255,255,255,.75)', margin: '0 .4rem .5rem 0' };
 
-function otherLangLinks(lang: Lang, urlFor: (l: Lang) => string) {
+function otherLangLinks(lang: Lang, urlFor: (l: Lang) => string, only?: (l: Lang) => boolean) {
   const names: Record<Lang, string> = { tr: 'Türkçe', en: 'English', ru: 'Русский', de: 'Deutsch' };
   return (
     <section className="sec" style={{ paddingTop: 0, paddingBottom: '1.5rem' }}>
       <div className="ctr" style={{ maxWidth: 720 }}>
         <h2 style={{ fontSize: '.78rem', letterSpacing: '.12em', textTransform: 'uppercase', opacity: .55, marginBottom: '.9rem' }}>{UI[lang].otherLang}</h2>
         <div>
-          {LANGS.filter((l) => l !== lang).map((l) => (
+          {LANGS.filter((l) => l !== lang && (!only || only(l))).map((l) => (
             <a key={l} href={urlFor(l)} hrefLang={l} lang={l} style={linkChip}>{names[l]}</a>
           ))}
         </div>
@@ -502,7 +514,7 @@ export function DistrictPage({ lang, d }: { lang: Lang; d: District }) {
     ru: `Здравствуйте, нужен портной ${c.loc}.`,
     de: `Hallo, ich brauche einen Schneider ${c.loc}.`,
   }[lang];
-  const nearby = DISTRICTS.filter((x) => x.slug !== d.slug && x.kind === d.kind).slice(0, 8);
+  const nearby = DISTRICTS.filter((x) => x.slug !== d.slug && x.kind === d.kind && isIndexable(lang, x.slug)).slice(0, 8);
   const hotel = d.hotelSlug && OTEL_BOLGELERI.some((r) => r.slug === d.hotelSlug) ? `${HOTEL_BASE[lang]}/${d.hotelSlug}` : null;
   // Aynı bölge için farklı yazılışlar: her bölge hizmet varyantlarının farklı bir dilimini gösterir
   const popular = SERVICES.map((s, i) => {
@@ -611,7 +623,7 @@ export function DistrictPage({ lang, d }: { lang: Lang; d: District }) {
             </div>
           </div>
         </section>
-        {otherLangLinks(lang, (l) => districtUrl(l, d))}
+        {otherLangLinks(lang, (l) => districtUrl(l, d), (l) => isIndexable(l, d.slug))}
         <ReviewsBlock lang={lang} />
       </Shell>
     </>

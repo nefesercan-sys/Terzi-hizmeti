@@ -13,7 +13,7 @@ const OG       = `${SITE}/terzi-can-hero.jpg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: 'Keten & Pamuk Özel Dikim Antalya — Model Seç, Ölçünü Gönder | Terzi Can' },
+  title: { absolute: 'Keten & Pamuk Özel Dikim Antalya · Ölçünü Gönder | Terzi Can' },
   description: 'Antalya keten ve pamuk özel dikim: modelini seç, ölçünü WhatsApp\'tan gönder, otelinize veya adresinize teslim edelim. Toptan keten/pamuk üretimi de yapılır. ☎ ' + PHONE,
   keywords: ['keten özel dikim antalya', 'pamuk özel dikim', 'keten elbise diktirmek', 'keten gömlek dikim', 'otelde özel dikim', 'keten pamuk toptan üretim'],
   authors: [{ name: 'Terzi Can', url: SITE }],

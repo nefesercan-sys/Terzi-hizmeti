@@ -18,7 +18,7 @@ const OG        = `${SITE}/terzi-can-hero.jpg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Tailor in Antalya: Repairs, Alterations, Custom · Open 7 Days" },
+  title: { absolute: "Tailor in Antalya: Repairs, Alterations, Custom | Terzi Can" },
   // SEO Optimizasyonu: Google'da kesilmemesi için ~150 karaktere optimize edildi
   description: 'Mobile tailor, repair, alterations, and ironing service across all Antalya districts. We visit your hotel in Belek, Lara, Kemer, and Side.',
   keywords: [

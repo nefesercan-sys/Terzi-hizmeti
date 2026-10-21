@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { preconnect } from 'react-dom';
 import ReviewsBlock from '@/components/ReviewsBlock';
 import { reviewSchema } from '@/lib/reviews';
-import { DISTRICTS as SEO_DISTRICTS, SERVICES as SEO_SERVICES, SERVICE_BASE, districtUrl, serviceUrl } from '@/lib/seo-data';
+import { DISTRICTS as SEO_DISTRICTS, SERVICES as SEO_SERVICES, SERVICE_BASE, districtUrl, serviceUrl, isTrNear } from '@/lib/seo-data';
 
 // ─── CONSTANTS ────────────────────────────────────────────────────────────────
 const SITE      = 'https://terzihizmeti.com.tr';
@@ -25,12 +25,12 @@ const OG        = `${SITE}/terzi-can-hero.jpg`;
 // ─── METADATA ─────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Terzi Can Antalya — Paça ₺150, Fermuar ₺200 · Her Gün Açık" },
+  title: { absolute: "Terzi Can Antalya — Tamir Tadilat, Paça ₺150, Fermuar ₺200" },
   description:
-    "Konyaaltı Hurma, Liman, Uncalı, Gürsu'da en yakın terzi: paça ₺150, fermuar ₺200, elbise dikimi. Her gün 08:00–23:00. ☎ 0531 898 64 18",
+    "Konyaaltı Hurma, Liman, Uncalı, Gürsu'da bay bayan tamir tadilat: söküğü dikme, paça ₺150, fermuar değişimi ₺200. Her gün 08:00–23:00. ☎ 0531 898 64 18",
   keywords: [
     // Türkçe — insanların ve yapay zeka asistanlarının gerçek soruları
-    'Antalya\'da terzi hizmeti', 'bana terzi öner', 'terzi bul', 'en yakın terzi', 'yakınımda terzi hizmeti',
+    'tamir tadilat Antalya', 'bay bayan tamir tadilat', 'söküğü dikme', 'yırtık tamiri', 'elbise tamiri ve tadilatı', 'kıyafet tamiri Antalya', 'etek kısaltma', 'Antalya\'da terzi hizmeti', 'bana terzi öner', 'terzi bul', 'en yakın terzi', 'yakınımda terzi hizmeti',
     'elbise diktirmek', 'kendime elbise diktirmek', 'elbise tadilatı', 'elbisem yırtıldı', 'yırtık onarımı',
     'elbisenin belini daraltmak', 'pantolon paçası kısaltma', 'fermuar değişimi yapan terzi',
     'hafta sonu açık terzi', 'adrese gelen terzi', 'otelde terzi hizmeti', 'Antalya terzi servisi',
@@ -643,7 +643,7 @@ export default function TerziHizmetiPage() {
               <a href={SERVICE_BASE.tr} style={{ color: '#C9A96E', fontWeight: 700, marginRight: '1rem' }}>Tüm hizmetler →</a>
               {SEO_SERVICES.map((sv) => (<a key={sv.id} href={serviceUrl('tr', sv)} style={{ color: 'rgba(255,255,255,.82)', marginRight: '1rem', whiteSpace: 'nowrap' }}>{sv.name.tr}</a>))}
               <br />
-              {SEO_DISTRICTS.map((d) => (<a key={d.slug} href={districtUrl('tr', d)} style={{ color: 'rgba(255,255,255,.82)', marginRight: '1rem', whiteSpace: 'nowrap' }}>{d.name.tr} terzi</a>))}
+              {SEO_DISTRICTS.filter((d) => isTrNear(d.slug)).map((d) => (<a key={d.slug} href={districtUrl('tr', d)} style={{ color: 'rgba(255,255,255,.82)', marginRight: '1rem', whiteSpace: 'nowrap' }}>{d.name.tr} terzi</a>))}
               <br />
               <a href="/en/tailor-services" hrefLang="en" style={{ color: 'rgba(255,255,255,.82)', marginRight: '1rem' }}>English: Tailor services</a>
               <a href="/ru/uslugi-portnogo" hrefLang="ru" style={{ color: 'rgba(255,255,255,.82)', marginRight: '1rem' }}>Русский: Услуги портного</a>

@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { OTEL_BOLGELERI } from '@/lib/otel-bolgeleri';
-import { DISTRICTS, SERVICES, LANGS, SERVICE_BASE, districtUrl, serviceUrl, LAST_UPDATE, type Lang } from '@/lib/seo-data';
+import { DISTRICTS, SERVICES, LANGS, SERVICE_BASE, districtUrl, serviceUrl, LAST_UPDATE, isIndexable, type Lang } from '@/lib/seo-data';
 import { TLANGS, allNewPages, hubUrl, TR_HUB, TURIST_UPDATE } from '@/lib/turist-keten';
 
 const SITE = "https://terzihizmeti.com.tr";
@@ -73,11 +73,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // 🔎 7. BÖLGE × HİZMET SEO SAYFALARI (4 dil, hreflang karşılıklı)
   const SEO_DATE = new Date(LAST_UPDATE);
-  const alt = (urlFor: (l: Lang) => string) => ({ languages: Object.fromEntries([...LANGS.map((l) => [l, `${SITE}${urlFor(l)}`]), ['x-default', `${SITE}${urlFor('tr')}`]]) });
+  const alt = (urlFor: (l: Lang) => string, ok: (l: Lang) => boolean = () => true) => {
+    const ls = LANGS.filter(ok);
+    return { languages: Object.fromEntries([...ls.map((l) => [l, `${SITE}${urlFor(l)}`]), ['x-default', `${SITE}${urlFor(ls.includes('tr') ? 'tr' : 'en')}`]]) };
+  };
   const seoSayfalari: MetadataRoute.Sitemap = [
     ...LANGS.map((l) => ({ url: `${SITE}${SERVICE_BASE[l]}`, lastModified: SEO_DATE, changeFrequency: 'weekly' as const, priority: 0.8, alternates: alt((x) => SERVICE_BASE[x]) })),
     ...SERVICES.flatMap((s) => LANGS.map((l) => ({ url: `${SITE}${serviceUrl(l, s)}`, lastModified: SEO_DATE, changeFrequency: 'monthly' as const, priority: 0.78, alternates: alt((x) => serviceUrl(x, s)) }))),
-    ...DISTRICTS.flatMap((d) => LANGS.map((l) => ({ url: `${SITE}${districtUrl(l, d)}`, lastModified: SEO_DATE, changeFrequency: 'monthly' as const, priority: 0.76, alternates: alt((x) => districtUrl(x, d)) }))),
+    ...DISTRICTS.flatMap((d) => LANGS.filter((l) => isIndexable(l, d.slug)).map((l) => ({ url: `${SITE}${districtUrl(l, d)}`, lastModified: SEO_DATE, changeFrequency: 'monthly' as const, priority: 0.76, alternates: alt((x) => districtUrl(x, d), (x) => isIndexable(x, d.slug)) }))),
   ];
 
   // 🧵 8. TURİST KETEN & PAMUK ÖZEL DİKİM + EKSPRES TADİLAT (EN/DE/RU; hub'ın TR karşılığı da hreflang'a dahil)

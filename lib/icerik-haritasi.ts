@@ -4,7 +4,7 @@
 // Yalnızca gerçekten var olan sayfalara link verir. Puan/yorum verisi içermez.
 // ============================================================
 import { OTEL_BOLGELERI } from '@/lib/otel-bolgeleri';
-import { DISTRICTS, SERVICES, DISTRICT_BASE, SERVICE_BASE, districtUrl, serviceUrl } from '@/lib/seo-data';
+import { DISTRICTS, SERVICES, DISTRICT_BASE, SERVICE_BASE, districtUrl, serviceUrl, isIndexable } from '@/lib/seo-data';
 import { PRODUCT_IDS, LINK_NAMES, productUrl, expressUrl, hubUrl, type TLang } from '@/lib/turist-links';
 
 export type Lang = 'tr' | 'en' | 'de' | 'ru';
@@ -72,7 +72,7 @@ function regionLinks(base: string, lang: Lang, label: (n: string) => string): Ma
 }
 
 const seoServiceLinks = (lang: Lang): MapLink[] => SERVICES.map((s) => ({ href: serviceUrl(lang, s), label: s.name[lang] }));
-const seoDistrictLinks = (lang: Lang): MapLink[] => DISTRICTS.map((d) => ({
+const seoDistrictLinks = (lang: Lang): MapLink[] => DISTRICTS.filter((d) => isIndexable(lang, d.slug)).map((d) => ({
   href: districtUrl(lang, d),
   label: { tr: `${d.name.tr} terzi`, en: `Tailor ${d.name.en}`, ru: `Портной ${d.name.ru}`, de: `Schneider ${d.name.de}` }[lang],
 }));

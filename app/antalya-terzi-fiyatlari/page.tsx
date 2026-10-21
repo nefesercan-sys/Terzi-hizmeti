@@ -18,9 +18,9 @@ const OG        = `${SITE}/terzi-can-hero.jpg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: 'Antalya Terzi Fiyat Listesi 2026 — Tüm Hizmetler Tek Sayfada',
+  title: 'Antalya Terzi Fiyat Listesi 2026 · Tüm Hizmetler',
   description:
-    'Antalya terzi fiyatları 2026: paça kısaltma ₺150, bel daraltma ₺150, fermuar değişimi ₺200, elbise dikimi ₺600\'den. Fotoğrafı WhatsApp\'tan gönderin, net fiyatı öğrenin. Adrese ve otele gelen terzi. Her gün 08:00–23:00.',
+    'Antalya terzi fiyatları 2026: paça kısaltma ₺150, fermuar değişimi ₺200, elbise dikimi ₺600\'den. Fotoğraf at, net fiyatı öğren. 08:00–23:00.',
   keywords: [
     'Antalya terzi', 'terzi fiyatları', 'terzi fiyat listesi 2026', 'Antalya terzi fiyatları',
     'elbise diktirmek', 'elbise tadilatı', 'elbisem yırtıldı', 'bel daraltma', 'paça kısaltma fiyatı',

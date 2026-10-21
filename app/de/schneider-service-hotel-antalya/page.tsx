@@ -7,8 +7,8 @@ const WA_DEF = `https://wa.me/905318986418?text=${encodeURIComponent('Hallo, ich
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: 'Schneider im Hotel Antalya — Mobiler Service in allen Hotelbezirken',
-  description: 'Mobiler Schneiderservice zu Hotels in den Ferienorten von Antalya: Belek, Lara, Güzeloba, Kemer, Side. Änderungsschneiderei, Reparatur, Bügelservice und chemische Reinigung — wir kommen zu Ihnen.',
+  title: 'Schneider im Hotel Antalya · Mobiler Service',
+  description: 'Mobiler Schneider zu Hotels in Belek, Lara, Güzeloba, Kemer, Side: Änderungen, Reparatur, Bügeln, Reinigung. Wir kommen zu Ihnen. ☎ +90 531 898 64 18',
   keywords: [
     'Schneider Hotel Antalya', 'mobiler Schneider Antalya', 'Änderungsschneiderei Hotel',
     'Schneider Belek Hotel', 'Schneider Lara Hotel', 'Schneider Kemer Hotel', 'Schneider Side Hotel',

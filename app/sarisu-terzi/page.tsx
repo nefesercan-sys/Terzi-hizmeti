@@ -15,15 +15,17 @@ const TODAY     = '2026-10-04';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Sarısu Terzi · Paça ₺150, Fermuar ₺200 | Terzi Can" },
+  title: { absolute: "Sarısu Terzi · Kot Paçası, Şort Kısaltma | Terzi Can" },
   description:
-    "Sarısu terzi: tamir tadilat, söküğü dikme, paça ₺150'den, fermuar ₺200'den. Sarısu mahallesine adrese servis, her gün 08:00–23:00. ☎ " + PHONE,
-  keywords: ['Sarısu tamir tadilat', 'Sarısu söküğü dikme', 'Sarısu yırtık tamiri', 'Sarısu elbise tamiri', 'Sarısu terzi', 'Sarısu mahallesi terzi', 'Sarısu Konyaaltı terzi', 'Sarısu paça kısaltma', 'Sarısu fermuar tamiri', 'Sarısu bel daraltma', 'Sarısu elbise dikimi', 'Sarısu gelinlik tadilatı', 'Sarısu ütü hizmeti', 'Sarısu kuru temizleme', 'Sarısu terzi fiyatları 2026', 'Konyaaltı Sarısu dikiş atölyesi'],
+    "Sarısu terzi: kot paçası, şort ve pantolon kısaltma ₺150'den, bel daraltma, fermuar, tamir tadilat. Adrese servis. Her gün 08:00–23:00. ☎ " + PHONE,
+  keywords: [
+    'Sarısu tamir tadilat', 'Sarısu söküğü dikme', 'Sarısu yırtık tamiri', 'Sarısu elbise tamiri', 'Sarısu terzi', 'Sarısu mahallesi terzi', 'Sarısu Konyaaltı terzi', 'Sarısu paça kısaltma', 'Sarısu fermuar tamiri', 'Sarısu bel daraltma', 'Sarısu elbise dikimi', 'Sarısu gelinlik tadilatı', 'Sarısu ütü hizmeti', 'Sarısu kuru temizleme', 'Sarısu terzi fiyatları 2026', 'Konyaaltı Sarısu dikiş atölyesi', 'Sarısu kot paçası kısaltma', 'Sarısu kot kısaltma', 'Sarısu kot daraltma', 'Sarısu şort kısaltma', 'Sarısu şort daraltma', 'Sarısu pantolon kısaltma', 'Sarısu pantolon daraltma', 'Sarısu etek kısaltma', 'Sarısu etek daraltma', 'Sarısu fermuar değişimi', 'Sarısu beden ayarlama', 'Sarısu ölçüye göre dikim', 'Sarısu özel dikim', 'Sarısu bay bayan terzi', 'Sarısu çocuk kıyafet tadilatı', 'Sarısu abiye tamiri', 'Sarısu ceket tadilatı', 'Sarısu mont kısaltma', 'Sarısu gömlek daraltma', 'Sarısu yakınımda terzi', 'Konyaaltı Sarısu terzi tamir tadilat', 'Sarısu bay bayan elbise tamiri',
+  ],
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Sarısu Terzi · Paça ₺150, Fermuar ₺200 | Terzi Can',
-    description: "Sarısu terzi: tamir tadilat, söküğü dikme, paça ₺150'den, fermuar ₺200'den. Sarısu mahallesine adrese servis, her gün 08:00–23:00. ☎ " + PHONE,
+    title: 'Sarısu Terzi · Kot Paçası, Şort Kısaltma | Terzi Can',
+    description: "Sarısu terzi: kot paçası, şort ve pantolon kısaltma ₺150'den, bel daraltma, fermuar, tamir tadilat. Adrese servis. Her gün 08:00–23:00. ☎ " + PHONE,
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'tr_TR', type: 'website',
     images: [{ url: `${SITE}/terzi-can-hero.jpg`, width: 1024, height: 1024, alt: 'Sarısu Terzi Konyaaltı' }],
   },

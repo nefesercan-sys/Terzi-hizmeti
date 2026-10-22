@@ -15,22 +15,17 @@ const TODAY     = '2026-10-04';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Hurma Terzi · Atölye Hurma'da, Paça ₺150 | Terzi Can" },
+  title: { absolute: "Hurma Terzi · Tamir, Tadilat, Özel Dikim | Terzi Can" },
   description:
-    "Hurma terzi atölyemiz Hurma Mahallesi'nde: tamir tadilat, söküğü dikme, paça ₺150'den, fermuar ₺200'den. Her gün 08:00–23:00. ☎ " + PHONE,
+    "Hurma terzi atölyemiz Hurma'da: tamir, tadilat, bay bayan özel dikim, ölçüye göre elbise, daraltma, kısaltma. Paça ₺150'den. 08:00–23:00. ☎ " + PHONE,
   keywords: [
-    'Hurma tamir tadilat', 'Hurma söküğü dikme', 'Hurma yırtık tamiri', 'Hurma elbise tamiri', 'Hurma terzi', 'Hurma mahallesi terzi', 'Hurma Konyaaltı terzi',
-    'Hurma paça kısaltma', 'Hurma fermuar tamiri', 'Hurma bel daraltma',
-    'Hurma elbise dikimi', 'Hurma gelinlik tadilatı', 'Hurma ütü hizmeti',
-    'Hurma kuru temizleme', 'Hurma eve gelen terzi', 'Hurma adrese gelen terzi',
-    'Hurma terzi fiyatları 2026', 'Konyaaltı Hurma dikiş atölyesi',
-    'Hurma sahil terzi', 'Hurma otel terzi hizmeti',
+    'Hurma tamir tadilat', 'Hurma söküğü dikme', 'Hurma yırtık tamiri', 'Hurma elbise tamiri', 'Hurma terzi', 'Hurma mahallesi terzi', 'Hurma Konyaaltı terzi', 'Hurma paça kısaltma', 'Hurma fermuar tamiri', 'Hurma bel daraltma', 'Hurma elbise dikimi', 'Hurma gelinlik tadilatı', 'Hurma ütü hizmeti', 'Hurma kuru temizleme', 'Hurma eve gelen terzi', 'Hurma adrese gelen terzi', 'Hurma terzi fiyatları 2026', 'Konyaaltı Hurma dikiş atölyesi', 'Hurma sahil terzi', 'Hurma otel terzi hizmeti', 'Hurma özel dikim', 'Hurma bay bayan elbise dikimi', 'Hurma ölçüye göre özel dikim', 'Hurma ölçüye göre elbise dikimi', 'Hurma beden ayarlama', 'Hurma beden ayarlaması', 'Hurma elbise daraltma', 'Hurma elbise kısaltma', 'Hurma pantolon daraltma', 'Hurma abiye tamiri', 'Hurma abiye tadilatı', 'Hurma kot paçası kısaltma', 'Hurma fermuar değişimi', 'Hurma ceket tadilatı', 'Hurma mont tamiri', 'Hurma gömlek daraltma', 'Hurma etek kısaltma', 'Hurma şort kısaltma', 'Hurma yakınımda terzi', 'Hurma atölye', 'Konyaaltı Hurma terzi tamir tadilat', 'Hurma bay bayan elbise tamiri',
   ],
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Hurma Terzi · Atölye Hurma\'da, Paça ₺150 | Terzi Can',
-    description: "Hurma terzi atölyemiz Hurma Mahallesi'nde: tamir tadilat, söküğü dikme, paça ₺150'den, fermuar ₺200'den. Her gün 08:00–23:00. ☎ " + PHONE,
+    title: 'Hurma Terzi · Tamir, Tadilat, Özel Dikim | Terzi Can',
+    description: "Hurma terzi atölyemiz Hurma'da: tamir, tadilat, bay bayan özel dikim, ölçüye göre elbise, daraltma, kısaltma. Paça ₺150'den. 08:00–23:00. ☎ " + PHONE,
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'tr_TR', type: 'website',
     images: [{ url: `${SITE}/terzi-can-hero.jpg`, width: 1024, height: 1024, alt: 'Hurma Terzi Konyaaltı' }],
   },

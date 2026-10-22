@@ -15,15 +15,17 @@ const TODAY     = '2026-10-04';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Liman Terzi · Paça ₺150, Fermuar ₺200 | Terzi Can" },
+  title: { absolute: "Liman Terzi · Paça, Fermuar, Beden Ayarı | Terzi Can" },
   description:
-    "Liman terzi: tamir tadilat, söküğü dikme, paça ₺150'den, fermuar ₺200'den. Liman mahallesine adrese servis, her gün 08:00–23:00. ☎ " + PHONE,
-  keywords: ['Liman tamir tadilat', 'Liman söküğü dikme', 'Liman yırtık tamiri', 'Liman elbise tamiri', 'Liman terzi', 'Liman mahallesi terzi', 'Liman Konyaaltı terzi', 'Liman paça kısaltma', 'Liman fermuar tamiri', 'Liman bel daraltma', 'Liman elbise dikimi', 'Liman gelinlik tadilatı', 'Liman ütü hizmeti', 'Liman kuru temizleme', 'Liman terzi fiyatları 2026', 'Konyaaltı Liman dikiş atölyesi'],
+    "Liman terzi: paça kısaltma ₺150'den, fermuar değişimi ₺200'den, beden ayarlama, bel daraltma, tamir tadilat. Adrese servis. 08:00–23:00. ☎ " + PHONE,
+  keywords: [
+    'Liman tamir tadilat', 'Liman söküğü dikme', 'Liman yırtık tamiri', 'Liman elbise tamiri', 'Liman terzi', 'Liman mahallesi terzi', 'Liman Konyaaltı terzi', 'Liman paça kısaltma', 'Liman fermuar tamiri', 'Liman bel daraltma', 'Liman elbise dikimi', 'Liman gelinlik tadilatı', 'Liman ütü hizmeti', 'Liman kuru temizleme', 'Liman terzi fiyatları 2026', 'Konyaaltı Liman dikiş atölyesi', 'Liman fermuar değişimi', 'Liman fermuar değiştirme', 'Liman beden ayarlama', 'Liman beden ayarlaması', 'Liman beden küçültme', 'Liman beden büyütme', 'Liman pantolon daraltma', 'Liman pantolon kısaltma', 'Liman kot paçası kısaltma', 'Liman abiye tamiri', 'Liman mont fermuar değişimi', 'Liman ceket tadilatı', 'Liman gömlek daraltma', 'Liman etek daraltma', 'Liman şort kısaltma', 'Liman özel dikim', 'Liman bayan elbise dikimi', 'Liman yakınımda terzi', 'Konyaaltı Liman terzi tamir tadilat', 'Liman bay bayan elbise tamiri',
+  ],
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Liman Terzi · Paça ₺150, Fermuar ₺200 | Terzi Can',
-    description: "Liman terzi: tamir tadilat, söküğü dikme, paça ₺150'den, fermuar ₺200'den. Liman mahallesine adrese servis, her gün 08:00–23:00. ☎ " + PHONE,
+    title: 'Liman Terzi · Paça, Fermuar, Beden Ayarı | Terzi Can',
+    description: "Liman terzi: paça kısaltma ₺150'den, fermuar değişimi ₺200'den, beden ayarlama, bel daraltma, tamir tadilat. Adrese servis. 08:00–23:00. ☎ " + PHONE,
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'tr_TR', type: 'website',
     images: [{ url: `${SITE}/terzi-can-hero.jpg`, width: 1024, height: 1024, alt: 'Liman Terzi Konyaaltı' }],
   },

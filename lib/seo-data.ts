@@ -24,6 +24,22 @@ export const LAST_UPDATE = '2026-10-17';
 // Bir bölgeyi Türkçede açmak/kapatmak için bu listeyi değiştirmek yeterli.
 export const TR_NEAR_SLUGS = ['konyaalti', 'muratpasa', 'meltem', 'fener', 'sirinyali', 'arapsuyu', 'toros', 'ogretmenevleri'];
 export const isTrNear = (slug: string): boolean => TR_NEAR_SLUGS.includes(slug);
+// ── Türkçe yakın bölge sayfaları için ek anahtar kelime katmanı ─────────────────────────────
+// Konyaaltı: sahil mahalleleri + günlük arama kalıpları. Diğer yakın bölgeler: dönüşümlü 6 terim (sayfalar birbirinin kopyası olmasın).
+// Uzak bölge adı geçmez. Yeni sayfa açılmaz; yalnızca mevcut sayfanın anahtar kelimelerine eklenir.
+const TR_TERMS = ['kot paçası kısaltma', 'şort kısaltma', 'pantolon daraltma', 'etek kısaltma', 'etek daraltma', 'elbise daraltma', 'elbise kısaltma',
+  'fermuar değişimi', 'beden ayarlama', 'ölçüye göre özel dikim', 'bay bayan elbise dikimi', 'abiye tamiri', 'abiye tadilatı', 'ceket tadilatı',
+  'mont tamiri', 'mont kısaltma', 'gömlek daraltma', 'bel daraltma', 'yakınımda terzi', 'tamir tadilat'];
+export function trExtraKeywords(slug: string, name: string): string[] {
+  if (slug === 'konyaalti') {
+    const places = ['Hurma', 'Liman', 'Uncalı', 'Sarısu', 'Gürsu', 'Altınkum', 'Uluç'];
+    const core = ['terzi', 'tamir tadilat', 'özel dikim', 'abiye tamiri', 'fermuar değişimi', 'paça kısaltma', 'bel daraltma', 'bay bayan elbise dikimi'];
+    return [...places.flatMap((p) => core.map((c) => `${p} ${c}`)), 'Konyaaltı sahil terzi', 'Konyaaltı ölçüye göre özel dikim', 'Konyaaltı beden ayarlama',
+      'Konyaaltı kot paçası kısaltma', 'Konyaaltı mont ceket gömlek tadilatı', 'Konyaaltı şort pantolon etek kısaltma'];
+  }
+  let h = 0; for (const ch of slug) h = (h * 31 + ch.charCodeAt(0)) >>> 0;
+  return [0, 3, 7, 11, 13, 17].map((k) => `${name} ${TR_TERMS[(h + k) % TR_TERMS.length]}`);
+}
 /** Bu dil + bölge sayfası aramaya açık mı? */
 export const isIndexable = (lang: Lang, slug: string): boolean => lang !== 'tr' || isTrNear(slug);
 

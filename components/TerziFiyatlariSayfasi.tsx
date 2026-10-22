@@ -444,7 +444,7 @@ export const FT: Record<FLang, FiyatText> = {
       {
         "q": "A tailor who comes to my hotel or address",
         "a": "We take measurements at your hotel or address, do the work in our workshop and deliver it back.",
-        "price": "Free in Konyaaltı, Muratpaşa, Kepez, Lara",
+        "price": "Free in Konyaaltı; other areas by distance",
         "href": "/en/hotel-tailor-antalya",
         "cta": "Hotel tailor"
       },
@@ -661,7 +661,7 @@ export const FT: Record<FLang, FiyatText> = {
       {
         "q": "Schneider, der ins Hotel oder an meine Adresse kommt",
         "a": "Wir nehmen Maß in Ihrem Hotel oder an Ihrer Adresse, arbeiten in der Werkstatt und liefern zurück.",
-        "price": "Kostenlos in Konyaaltı, Muratpaşa, Kepez, Lara",
+        "price": "Kostenlos in Konyaaltı; andere Gebiete nach Entfernung",
         "href": "/de/schneider-service-hotel-antalya",
         "cta": "Schneider im Hotel"
       },
@@ -878,7 +878,7 @@ export const FT: Record<FLang, FiyatText> = {
       {
         "q": "Портной, который приедет в отель или по адресу",
         "a": "Снимаем мерки в отеле или по адресу, работаем в мастерской и привозим обратно.",
-        "price": "Бесплатно: Коньяалты, Муратпаша, Кепез, Лара",
+        "price": "Бесплатно в Коньяалты; другие районы по расстоянию",
         "href": "/ru/vyezdnoy-portnoy-antalya",
         "cta": "Портной в отель"
       },

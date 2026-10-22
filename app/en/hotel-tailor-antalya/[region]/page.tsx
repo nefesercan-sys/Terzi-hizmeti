@@ -58,7 +58,7 @@ export default async function OtelBolgeEnPage({ params }: { params: Promise<{ re
     h1: `Hotel Tailor in ${r.name} — We Collect, Fix and Bring It Back`,
     h2: `Clothing alterations for holidaymakers, handled without a trip into town`,
     body1: `A hem that is too long, a zipper that gave way, a dress that needs taking in before dinner? If you are staying in ${r.name}, send us a photo on WhatsApp and we will tell you what can be done and what it costs.`,
-    body2: `Our workshop is in Hurma, Konyaaltı, and it is open every day from 08:00 to 23:00. We collect the garment from your hotel, work on it in the workshop and deliver it back; pick-up and delivery to hotels is free. Hemming, taking in and zipper jobs are ready the same day.`
+    body2: `Our workshop is in Hurma, Konyaaltı, and it is open every day from 08:00 to 23:00. We collect the garment from your hotel, work on it in the workshop and deliver it back; pick-up and delivery fee to hotels depends on the area. Hemming, taking in and zipper jobs are ready the same day.`
   };
 
   const jsonLd = {

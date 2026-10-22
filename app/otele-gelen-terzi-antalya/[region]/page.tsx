@@ -52,7 +52,7 @@ export default async function OtelBolgeTrPage({ params }: { params: Promise<{ re
         areaServed: { '@type': 'Place', name: r.name }, url },
       { '@type': 'FAQPage', mainEntity: [
         { '@type': 'Question', name: `${r.name} bölgesindeki otelime terzi gelir mi?`, acceptedAnswer: { '@type': 'Answer', text: `Evet, Terzi Can'ın otele gelen terzisi ${r.name} bölgesindeki her otele ulaşabiliyor. Otel adınızı WhatsApp'tan iletin: +90 531 898 64 18.` } },
-        { '@type': 'Question', name: `${r.name} otel terzisi işi ne zaman teslim eder?`, acceptedAnswer: { '@type': 'Answer', text: `Paça kısaltma, daraltma ve fermuar işleri çoğunlukla aynı gün; elbise, ceket, gömlek ve mont tadilatı 1 gün; elbise dikimi 3 günde teslim edilir. Otele alım-teslim ücretsizdir.` } },
+        { '@type': 'Question', name: `${r.name} otel terzisi işi ne zaman teslim eder?`, acceptedAnswer: { '@type': 'Answer', text: `Paça kısaltma, daraltma ve fermuar işleri çoğunlukla aynı gün; elbise, ceket, gömlek ve mont tadilatı 1 gün; elbise dikimi 3 günde teslim edilir. Otele alım-teslim Konyaaltı'nda ücretsizdir; diğer bölgelerde ücret mesafeye göre belirlenir.` } },
       ] },
     ],
   };

@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: { params: Promise<{ region: s
 
   const url = `${SITE}${BASE_PATH}/${r.slug}`;
   const title = `Schneider im Hotel ${r.name}, Antalya | Abholung & Lieferung`;
-  const desc = `Urlaub in ${r.name}? Wir holen Kleidung im Hotel ab, ändern sie in Konyaaltı und bringen sie zurück. Täglich 08:00–23:00, kostenlose Lieferung.`;
+  const desc = `Urlaub in ${r.name}? Wir holen Kleidung im Hotel ab, ändern sie in Konyaaltı und bringen sie zurück. Täglich 08:00–23:00, Lieferung je nach Gebiet.`;
   const ogImage = `${SITE}/terzi-can-hero.jpg`;
 
   return {
@@ -64,7 +64,7 @@ export default async function OtelBolgeDePage({ params }: { params: Promise<{ re
     h1: `Schneider für Hotelgäste in ${r.name}: Abholung, Änderung, Rückgabe`,
     h2: `Kleidung im Urlaub anpassen lassen – ohne Fahrt in die Stadt`,
     body1: `Die Hose ist zu lang, der Reißverschluss defekt, das Kleid muss vor dem Abendessen enger? Wenn Sie in ${r.name} wohnen, schicken Sie uns ein Foto per WhatsApp – wir sagen Ihnen, was möglich ist und was es kostet.`,
-    body2: `Unsere Werkstatt liegt in Hurma, Konyaaltı, und ist täglich von 08:00 bis 23:00 geöffnet. Wir holen das Kleidungsstück im Hotel ab, arbeiten in der Werkstatt und bringen es zurück; Abholung und Lieferung zu Hotels sind kostenlos. Kürzen, Enger machen und Reißverschlussarbeiten sind am selben Tag fertig.`
+    body2: `Unsere Werkstatt liegt in Hurma, Konyaaltı, und ist täglich von 08:00 bis 23:00 geöffnet. Wir holen das Kleidungsstück im Hotel ab, arbeiten in der Werkstatt und bringen es zurück; das Entgelt für Abholung und Lieferung zu Hotels richtet sich nach dem Gebiet. Kürzen, Enger machen und Reißverschlussarbeiten sind am selben Tag fertig.`
   };
 
   const jsonLd = {

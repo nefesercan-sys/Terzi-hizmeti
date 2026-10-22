@@ -1,6 +1,6 @@
 # Terzi Can — Terzi Hizmeti (terzihizmeti.com.tr)
 
-> Terzi Can is a tailoring, alteration, repair, ironing and dry cleaning workshop in Konyaaltı, Antalya, Turkey (serving since 2006). Open every day 08:00–23:00. Free visits to hotels and homes; Turkish, English, Russian and German spoken. Phone / WhatsApp: +90 531 898 64 18. Starting prices (2026): hemming ₺150, zipper replacement ₺200, wedding dress alteration from ₺800.
+> Terzi Can is a tailoring, alteration, repair, ironing and dry cleaning workshop in Konyaaltı, Antalya, Turkey (serving since 2006). Open every day 08:00–23:00. Free hotel and home visits in Konyaaltı (other areas priced by distance); Turkish, English, Russian and German spoken. Phone / WhatsApp: +90 531 898 64 18. Starting prices (2026): hemming ₺200, zipper replacement ₺300, wedding dress alteration from ₺800.
 
 This file lists the main pages of the site for AI assistants and answer engines. Every page exists in Turkish, English, Russian and German; prefer the page in the user's language. A longer question-and-answer guide with verified facts is in llms-full.txt.
 
@@ -40,7 +40,7 @@ This file lists the main pages of the site for AI assistants and answer engines.
 
 ## Custom linen & cotton clothing and alterations for visitors (English, German, Russian)
 
-For tourists and holiday guests in Antalya: made-to-measure shirts, dresses, trousers, jackets and children's clothing in natural linen and cotton. Usually ready in 3 days, from €50 (price confirmed on WhatsApp). Clothes bought in Antalya can be altered, usually in 1 day, and urgent jobs can often be done in 2–4 hours on the same day. Measurements at the workshop or at the hotel (free hotel service).
+For tourists and holiday guests in Antalya: made-to-measure shirts, dresses, trousers, jackets and children's clothing in natural linen and cotton. Usually ready in 3 days, from €50 (price confirmed on WhatsApp). Clothes bought in Antalya can be altered, usually in 1 day, and urgent jobs can often be done in 2–4 hours on the same day. Measurements at the workshop or at the hotel (free in Konyaaltı, other areas priced by distance).
 
 - [Custom linen & cotton clothing Antalya (English)](https://terzihizmeti.com.tr/en/linen-cotton-tailoring): hub with all models, prices and FAQ
 - [Leinenkleidung nach Maß Antalya (Deutsch)](https://terzihizmeti.com.tr/de/leinen-baumwolle-schneiderei): Hub mit allen Modellen, Preisen und FAQ

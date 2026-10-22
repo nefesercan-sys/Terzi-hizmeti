@@ -16,17 +16,18 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Paça Kısaltma Fiyatı 2026 Konyaaltı — Aynı Gün Teslim" },
   description:
-    'Konyaaltı\'da paça kısaltma hizmeti. Pantolon, kot, etek kısaltma — aynı gün teslim, ₺150\'den. Hurma, Liman, Sarısu bölgesine ücretsiz servis.',
+    'Paça kısaltma ücreti 2026 Konyaaltı: pantolon, kot, etek ₺200\'den, aynı gün teslim. Pantolon paçası kaç TL? Hurma, Liman, Sarısu\'ya ücretsiz servis.',
   keywords: [
     'paça kısaltma Konyaaltı', 'pantolon kısaltma Antalya', 'kot paça kısaltma',
     'etek kısaltma Antalya', 'paça kısaltma fiyatı 2026', 'aynı gün paça kısaltma',
     'pantolon boyu kısaltma Konyaaltı', 'hemming Antalya', 'подшить брюки Анталья',
+    'terzi paça kısaltma fiyatları 2026', 'paça kısaltma ücreti', 'pantolon paçası kaç tl', 'pantolon paça kısaltma ücreti 2026', 'paça kısaltma ne kadar',
   ],
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Paça Kısaltma Konyaaltı — Aynı Gün Teslim',
-    description: 'Pantolon, kot, etek kısaltma. ₺150\'den başlayan fiyatlar. ☎ ' + PHONE,
+    description: 'Pantolon, kot, etek kısaltma. ₺200\'den başlayan fiyatlar. ☎ ' + PHONE,
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'tr_TR', type: 'website',
     images: [{ url: `${SITE}/terzi-can-hero.jpg`, width: 1024, height: 1024, alt: 'Paça Kısaltma Konyaaltı' }],
   },
@@ -112,13 +113,13 @@ const jsonLd = {
       offers: {
         '@type': 'AggregateOffer',
         priceCurrency: 'TRY',
-        lowPrice: '150',
+        lowPrice: '200',
         highPrice: '220',
         offerCount: 3,
         offers: [
-          { '@type': 'Offer', name: 'Kumaş Pantolon Paçası', price: '150', priceCurrency: 'TRY', priceValidUntil: '2026-12-31' },
-          { '@type': 'Offer', name: 'Kot Paça Kısaltma', price: '180', priceCurrency: 'TRY', priceValidUntil: '2026-12-31' },
-          { '@type': 'Offer', name: 'Etek Kısaltma', price: '150', priceCurrency: 'TRY', priceValidUntil: '2026-12-31' },
+          { '@type': 'Offer', name: 'Kumaş Pantolon Paçası', price: '200', priceCurrency: 'TRY', priceValidUntil: '2026-12-31' },
+          { '@type': 'Offer', name: 'Kot Paça Kısaltma', price: '200', priceCurrency: 'TRY', priceValidUntil: '2026-12-31' },
+          { '@type': 'Offer', name: 'Etek Kısaltma', price: '200', priceCurrency: 'TRY', priceValidUntil: '2026-12-31' },
         ],
       },
     },
@@ -141,7 +142,7 @@ const jsonLd = {
       '@id': `${PAGE_URL}#faq`,
       mainEntity: [
         { '@type': 'Question', name: 'Paça kısaltma ne kadar sürer?', acceptedAnswer: { '@type': 'Answer', text: 'Standart paça kısaltma aynı gün içinde, genellikle 2-4 saat içinde tamamlanır.' } },
-        { '@type': 'Question', name: 'Paça kısaltma fiyatı ne kadar?', acceptedAnswer: { '@type': 'Answer', text: 'Kumaş pantolon ₺150\'den, kot pantolon ₺180\'den, etek kısaltma ₺150\'den başlar.' } },
+        { '@type': 'Question', name: 'Paça kısaltma fiyatı ne kadar?', acceptedAnswer: { '@type': 'Answer', text: 'Kumaş pantolon ₺200\'den, kot pantolon ₺200\'den, etek kısaltma ₺200\'den başlar.' } },
         { '@type': 'Question', name: 'Orijinal dikişi bozmadan kısaltma yapıyor musunuz?', acceptedAnswer: { '@type': 'Answer', text: 'Evet, görünmez dikiş tekniğiyle çalışıyoruz — orijinal paça görünümü korunur, özellikle kot pantolonlarda orijinal dikiş izi bile taklit edilebilir.' } },
         { '@type': 'Question', name: 'Prova gerekiyor mu?', acceptedAnswer: { '@type': 'Answer', text: 'En doğru sonuç için prova önerilir ama net ölçü verirseniz provasız da yapabiliriz. Adrese gelen servisimizle yerinde ölçü de alabiliriz.' } },
       ],
@@ -175,7 +176,7 @@ export default function PacaKisaltmaPage() {
             <span className="hero-tag">📏 Aynı Gün Paça Kısaltma · Konyaaltı</span>
             <h1 id="hero-h">
               Paça Kısaltma <span className="accent">Konyaaltı</span><br />
-              ₺150'den, Aynı Gün Teslim
+              ₺200'den, Aynı Gün Teslim
             </h1>
             <p className="hero-desc">
               Pantolon, kot, etek paça kısaltma — görünmez dikiş tekniğiyle,
@@ -205,8 +206,8 @@ export default function PacaKisaltmaPage() {
                 </div>
                 <p className="price-desc">Klasik kumaş pantolon, keten, gabardin.</p>
                 <table className="price-table"><tbody>
-                  <tr><td>Standart Paça Kısaltma</td><td>₺150+</td></tr>
-                  <tr><td>Orijinal Astar Korumalı</td><td>₺180+</td></tr>
+                  <tr><td>Standart Paça Kısaltma</td><td>₺200+</td></tr>
+                  <tr><td>Orijinal Astar Korumalı</td><td>₺200+</td></tr>
                 </tbody></table>
               </div>
               <div className="price-card">
@@ -216,7 +217,7 @@ export default function PacaKisaltmaPage() {
                 </div>
                 <p className="price-desc">Orijinal dikiş taklidi dahil kot paça kısaltma.</p>
                 <table className="price-table"><tbody>
-                  <tr><td>Standart Kot Paça</td><td>₺180+</td></tr>
+                  <tr><td>Standart Kot Paça</td><td>₺200+</td></tr>
                   <tr><td>Orijinal Dikiş Taklitli</td><td>₺220+</td></tr>
                 </tbody></table>
               </div>
@@ -227,7 +228,7 @@ export default function PacaKisaltmaPage() {
                 </div>
                 <p className="price-desc">Etek boyu ve elbise boyu kısaltma.</p>
                 <table className="price-table"><tbody>
-                  <tr><td>Etek Kısaltma</td><td>₺150+</td></tr>
+                  <tr><td>Etek Kısaltma</td><td>₺200+</td></tr>
                   <tr><td>Elbise Boyu Kısaltma</td><td>₺200+</td></tr>
                 </tbody></table>
               </div>
@@ -275,7 +276,7 @@ export default function PacaKisaltmaPage() {
             </div>
             {[
               ['Paça kısaltma ne kadar sürer?', 'Standart paça kısaltma aynı gün içinde, genellikle 2-4 saat içinde tamamlanır.'],
-              ['Paça kısaltma fiyatı ne kadar?', 'Kumaş pantolon ₺150\'den, kot pantolon ₺180\'den, etek kısaltma ₺150\'den başlar.'],
+              ['Paça kısaltma fiyatı ne kadar?', 'Kumaş pantolon ₺200\'den, kot pantolon ₺200\'den, etek kısaltma ₺200\'den başlar.'],
               ['Orijinal dikişi bozmadan kısaltma yapıyor musunuz?', 'Evet, görünmez dikiş tekniğiyle çalışıyoruz — orijinal paça görünümü korunur, kot pantolonlarda orijinal dikiş izi bile taklit edilebilir.'],
               ['Prova gerekiyor mu?', 'En doğru sonuç için prova önerilir ama net ölçü verirseniz provasız da yapabiliriz. Adrese gelen servisimizle yerinde ölçü de alabiliriz.'],
             ].map(([q, a]) => (

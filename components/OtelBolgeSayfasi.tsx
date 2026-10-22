@@ -32,8 +32,8 @@ const T: Record<Lang, any> = {
       { icon: '📏', tr: 'Alterations', en: 'Hemming, taking in', desc: 'Precise fit adjustments so clothing sits exactly right.', items: ['Hemming', 'Waist Taking In', 'Sleeve Shortening'] },
       { icon: '🧺', tr: 'Ironing & Dry Cleaning', en: 'Steam press, dry cleaning', desc: 'Professional steam ironing and dry cleaning, picked up and delivered.', items: ['Ironing', 'Dry Cleaning'] },
     ],
-    priceEyebrow: '₺ Transparent Prices', priceH: 'Prices', priceSub: 'The hotel visit is free — you only pay for the work.',
-    priceRows: [['Hotel Visit', 'FREE'], ['Hemming', '₺150+'], ['Zipper Replacement', '₺200+'], ['Dress / Suit Alteration', '₺200+'], ['Wedding Dress Alteration', '₺500+'], ['Ironing (per item)', '₺80+'], ['Dry Cleaning', '₺300+']],
+    priceEyebrow: '₺ Transparent Prices', priceH: 'Prices', priceSub: 'Hotel visit fee depends on the area (free in Konyaaltı) — plus the price of the work.',
+    priceRows: [['Hotel Visit', 'FREE'], ['Hemming', '₺200+'], ['Zipper Replacement', '₺300+'], ['Dress / Suit Alteration', '₺200+'], ['Wedding Dress Alteration', '₺800+'], ['Ironing (per item)', '₺80+'], ['Dry Cleaning', '₺300+']],
     procEyebrow: 'Process', procH: 'How It Works',
     steps: [
       ['01', 'Share Hotel & Room', `Send hotel name and room number to ${PHONE}`],
@@ -44,7 +44,7 @@ const T: Record<Lang, any> = {
     faqEyebrow: 'FAQ', faqH: 'Frequently Asked Questions',
     faq: (r: string) => [
       [`Do you come to all hotels in ${r}?`, `Yes! We visit every hotel in ${r} — share your hotel name and room number on WhatsApp.`],
-      ['Is the hotel visit free?', 'Yes, completely free — you only pay for the tailoring or repair work.'],
+      ['Is the hotel visit free?', 'Free in Konyaaltı. For other areas the visit fee is set by distance and confirmed on WhatsApp before we come; you then pay for the tailoring or repair work.'],
       ['How fast is the service?', 'Most repairs and hemming are completed within 24–48 hours.'],
       ['Do you speak English?', 'Yes, our team speaks English, Russian, German and Turkish.'],
     ],
@@ -67,8 +67,8 @@ const T: Record<Lang, any> = {
       { icon: '📏', tr: 'Подгонка', en: 'Укорачивание, заужение', desc: 'Точная подгонка по фигуре.', items: ['Укорачивание', 'Заужение талии', 'Укорачивание рукавов'] },
       { icon: '🧺', tr: 'Глажка и химчистка', en: 'Паровая глажка, химчистка', desc: 'Профессиональная глажка и химчистка с забором и доставкой.', items: ['Глажка', 'Химчистка'] },
     ],
-    priceEyebrow: '₺ Прозрачные цены', priceH: 'Цены', priceSub: 'Выезд в отель бесплатный — платите только за работу.',
-    priceRows: [['Выезд в отель', 'БЕСПЛАТНО'], ['Укорачивание', 'от ₺150'], ['Замена молнии', 'от ₺200'], ['Подгонка платья/костюма', 'от ₺200'], ['Подгонка свадебного платья', 'от ₺500'], ['Глажка (за вещь)', 'от ₺80'], ['Химчистка', 'от ₺300']],
+    priceEyebrow: '₺ Прозрачные цены', priceH: 'Цены', priceSub: 'Выезд в отель: в Коньяалты бесплатно, в другие районы — по расстоянию, плюс стоимость работы.',
+    priceRows: [['Выезд в отель', 'БЕСПЛАТНО'], ['Укорачивание', 'от ₺200'], ['Замена молнии', 'от ₺300'], ['Подгонка платья/костюма', 'от ₺200'], ['Подгонка свадебного платья', 'от ₺800'], ['Глажка (за вещь)', 'от ₺80'], ['Химчистка', 'от ₺300']],
     procEyebrow: 'Процесс', procH: 'Как мы работаем',
     steps: [
       ['01', 'Отель и номер', `Отправьте название отеля и номер комнаты на ${PHONE}`],
@@ -79,7 +79,7 @@ const T: Record<Lang, any> = {
     faqEyebrow: 'Вопросы', faqH: 'Часто задаваемые вопросы',
     faq: (r: string) => [
       [`Вы приезжаете во все отели ${r}?`, `Да! Мы приезжаем в каждый отель района ${r} — напишите название отеля и номер комнаты в WhatsApp.`],
-      ['Выезд в отель бесплатный?', 'Да, полностью бесплатный — вы платите только за саму работу.'],
+      ['Выезд в отель бесплатный?', 'В Коньяалты — бесплатно. В другие районы стоимость выезда зависит от расстояния и согласуется в WhatsApp заранее; затем вы платите за саму работу.'],
       ['Как быстро выполняется услуга?', 'Большинство работ выполняется за 24–48 часов.'],
       ['Вы говорите по-русски?', 'Да, наша команда говорит по-русски, английски, немецки и турецки.'],
     ],
@@ -102,8 +102,8 @@ const T: Record<Lang, any> = {
       { icon: '📏', tr: 'Änderungen', en: 'Kürzen, enger machen', desc: 'Präzise Passform-Anpassungen für perfekten Sitz.', items: ['Kürzen', 'Taille enger machen', 'Ärmel kürzen'] },
       { icon: '🧺', tr: 'Bügelservice & Reinigung', en: 'Dampfbügeln, Reinigung', desc: 'Professionelles Bügeln und chemische Reinigung mit Abholung und Lieferung.', items: ['Bügeln', 'Chemische Reinigung'] },
     ],
-    priceEyebrow: '₺ Transparente Preise', priceH: 'Preise', priceSub: 'Der Hotelbesuch ist kostenlos — Sie zahlen nur für die Arbeit.',
-    priceRows: [['Hotelbesuch', 'KOSTENLOS'], ['Kürzen', 'ab ₺150'], ['Reißverschluss ersetzen', 'ab ₺200'], ['Kleid-/Anzugänderung', 'ab ₺200'], ['Brautkleid ändern', 'ab ₺500'], ['Bügeln (pro Stück)', 'ab ₺80'], ['Chemische Reinigung', 'ab ₺300']],
+    priceEyebrow: '₺ Transparente Preise', priceH: 'Preise', priceSub: 'Hotelbesuch in Konyaaltı kostenlos, andere Gebiete je nach Entfernung — dazu der Preis der Arbeit.',
+    priceRows: [['Hotelbesuch', 'KOSTENLOS'], ['Kürzen', 'ab ₺200'], ['Reißverschluss ersetzen', 'ab ₺300'], ['Kleid-/Anzugänderung', 'ab ₺200'], ['Brautkleid ändern', 'ab ₺800'], ['Bügeln (pro Stück)', 'ab ₺80'], ['Chemische Reinigung', 'ab ₺300']],
     procEyebrow: 'Ablauf', procH: 'So funktioniert es',
     steps: [
       ['01', 'Hotel & Zimmer angeben', `Senden Sie Hotelname und Zimmernummer an ${PHONE}`],
@@ -114,7 +114,7 @@ const T: Record<Lang, any> = {
     faqEyebrow: 'FAQ', faqH: 'Häufig gestellte Fragen',
     faq: (r: string) => [
       [`Kommen Sie zu allen Hotels in ${r}?`, `Ja! Wir besuchen jedes Hotel in ${r} — teilen Sie Hotelname und Zimmernummer per WhatsApp mit.`],
-      ['Ist der Hotelbesuch kostenlos?', 'Ja, völlig kostenlos — Sie zahlen nur für die eigentliche Arbeit.'],
+      ['Ist der Hotelbesuch kostenlos?', 'In Konyaaltı ja. Für andere Gebiete richtet sich das Entgelt nach der Entfernung und wird vorab per WhatsApp bestätigt; dazu zahlen Sie die eigentliche Arbeit.'],
       ['Wie schnell ist der Service?', 'Die meisten Reparaturen werden innerhalb von 24–48 Stunden erledigt.'],
       ['Sprechen Sie Deutsch?', 'Ja, unser Team spricht Deutsch, Englisch, Russisch und Türkisch.'],
     ],
@@ -137,8 +137,8 @@ const T: Record<Lang, any> = {
       { icon: '📏', tr: 'Tadilat', en: 'Boy kısaltma, daraltma', desc: 'Kıyafetin tam oturması için hassas ölçü ayarı.', items: ['Boy Kısaltma', 'Bel Daraltma', 'Kol Kısaltma'] },
       { icon: '🧺', tr: 'Ütü & Kuru Temizleme', en: 'Buharlı ütü, kuru temizleme', desc: 'Profesyonel buharlı ütü ve kuru temizleme, alım-teslimatlı.', items: ['Ütü', 'Kuru Temizleme'] },
     ],
-    priceEyebrow: '₺ Şeffaf Fiyatlar', priceH: 'Fiyatlar', priceSub: 'Otel ziyareti ücretsiz — sadece yapılan iş için ödeme yaparsınız.',
-    priceRows: [['Otel Ziyareti', 'ÜCRETSİZ'], ['Boy Kısaltma', '₺150+'], ['Fermuar Değişimi', '₺200+'], ['Elbise / Takım Tadilatı', '₺200+'], ['Gelinlik Tadilatı', '₺500+'], ['Ütü (adet başı)', '₺80+'], ['Kuru Temizleme', '₺300+']],
+    priceEyebrow: '₺ Şeffaf Fiyatlar', priceH: 'Fiyatlar', priceSub: 'Otel ziyareti Konyaaltı\'nda ücretsiz, diğer bölgelerde mesafeye göre — yapılan iş ücreti ayrıca.',
+    priceRows: [['Otel Ziyareti', 'ÜCRETSİZ'], ['Boy Kısaltma', '₺200+'], ['Fermuar Değişimi', '₺300+'], ['Elbise / Takım Tadilatı', '₺200+'], ['Gelinlik Tadilatı', '₺800+'], ['Ütü (adet başı)', '₺80+'], ['Kuru Temizleme', '₺300+']],
     procEyebrow: 'Süreç', procH: 'Nasıl Çalışır',
     steps: [
       ['01', 'Otel & Oda Bilginizi Gönderin', `Otel adı ve oda numaranızı ${PHONE} numarasına iletin`],
@@ -149,7 +149,7 @@ const T: Record<Lang, any> = {
     faqEyebrow: 'SSS', faqH: 'Sık Sorulan Sorular',
     faq: (r: string) => [
       [`${r} bölgesindeki tüm otellere geliyor musunuz?`, `Evet! ${r} bölgesindeki her otele ulaşabiliyoruz — otel adınızı ve oda numaranızı WhatsApp'tan iletin.`],
-      ['Otel ziyareti ücretsiz mi?', 'Evet, tamamen ücretsiz — sadece dikim/tamir işi için ödeme yaparsınız.'],
+      ['Otel ziyareti ücretsiz mi?', 'Konyaaltı\'nda ücretsiz. Diğer bölgelerde servis ücreti mesafeye göre belirlenir ve gelmeden önce WhatsApp\'tan netleştirilir; ayrıca dikim/tamir işi için ödeme yaparsınız.'],
       ['Hizmet ne kadar sürede tamamlanır?', 'Çoğu tamir ve boy kısaltma işlemi 24–48 saat içinde tamamlanır.'],
       ['Türkçe dışında dil konuşuyor musunuz?', 'Evet, ekibimiz Türkçe, İngilizce, Almanca ve Rusça konuşabiliyor.'],
     ],

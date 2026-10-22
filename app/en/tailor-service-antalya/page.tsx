@@ -75,9 +75,9 @@ const jsonLd = {
       hasOfferCatalog: {
         '@type': 'OfferCatalog', name: 'Tailoring, Repair, Alterations and Ironing',
         itemListElement: [
-          { '@type': 'Offer', price: '150', priceCurrency: 'TRY', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Hemming' } },
-          { '@type': 'Offer', price: '200', priceCurrency: 'TRY', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Zipper Replacement' } },
-          { '@type': 'Offer', price: '150', priceCurrency: 'TRY', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Waist Taking In' } },
+          { '@type': 'Offer', price: '200', priceCurrency: 'TRY', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Hemming' } },
+          { '@type': 'Offer', price: '300', priceCurrency: 'TRY', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Zipper Replacement' } },
+          { '@type': 'Offer', price: '200', priceCurrency: 'TRY', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Waist Taking In' } },
           { '@type': 'Offer', price: '800', priceCurrency: 'TRY', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Wedding & Evening Dress Alterations' } },
           { '@type': 'Offer', price: '80', priceCurrency: 'TRY', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Ironing' } },
           { '@type': 'Offer', price: '300', priceCurrency: 'TRY', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Dry Cleaning' } },
@@ -99,9 +99,9 @@ const jsonLd = {
 
 const PRIORITY_DISTRICTS = [
   { name: 'Konyaaltı', tag: 'Workshop', note: 'Our workshop is here — same-day service' },
-  { name: 'Muratpaşa', tag: 'Free visit', note: 'Free mobile visit, same-day appointment' },
-  { name: 'Kepez', tag: 'Free visit', note: 'Free mobile visit' },
-  { name: 'Lara', tag: 'Free visit', note: 'Free mobile visit — all Lara hotels' },
+  { name: 'Muratpaşa', tag: 'By distance', note: 'Mobile visit, same-day appointment; fee by distance' },
+  { name: 'Kepez', tag: 'By distance', note: 'Mobile visit; fee by distance' },
+  { name: 'Lara', tag: 'By distance', note: 'Mobile visit to Lara hotels; fee by distance' },
   { name: 'Döşemealtı', tag: 'Nearby', note: 'Scheduled mobile visit' },
   { name: 'Aksu', tag: 'Nearby', note: 'Scheduled mobile visit' },
 ];
@@ -119,11 +119,11 @@ const SERVICES = [
 
 const REPAIR_CATEGORIES = [
   { icon: '✂️', title: 'Tailoring', keyword: 'custom tailoring Antalya', desc: 'Made-from-scratch garments to your exact measurements.',
-    rows: [["Men's Shirt", '₺350+'], ["Men's Trousers", '₺400+'], ["Women's Dress", '₺600+'], ['Evening Gown', '₺900+'], ["Children's Clothing", '₺250+']] as [string, string][] },
+    rows: [["Men's Shirt", '₺350+'], ["Men's Trousers", '₺400+'], ["Women's Dress", '₺800+'], ['Evening Gown', '₺900+'], ["Children's Clothing", '₺250+']] as [string, string][] },
   { icon: '🔧', title: 'Repair', keyword: 'clothing repair Antalya', desc: 'Zippers, tears, buttons — everyday fixes.',
-    rows: [['Zipper Replacement (Trousers)', '₺200+'], ['Zipper Replacement (Coat)', '₺300+'], ['Tear / Seam Repair', '₺150+'], ['Button, Hook Repair', '₺60+'], ['Lining Replacement', '₺300+']] as [string, string][] },
+    rows: [['Zipper Replacement (Trousers)', '₺300+'], ['Zipper Replacement (Coat)', '₺300+'], ['Tear / Seam Repair', '₺150+'], ['Button, Hook Repair', '₺60+'], ['Lining Replacement', '₺300+']] as [string, string][] },
   { icon: '📏', title: 'Alterations', keyword: 'hemming Antalya', desc: 'Precise fit adjustments to your body.',
-    rows: [['Hemming', '₺150+'], ['Waist Taking In', '₺150+'], ['Sleeve Shortening', '₺200+'], ['Dress / Jacket Resizing', '₺200+'], ['Wedding & Evening Dress', '₺800+']] as [string, string][] },
+    rows: [['Hemming', '₺200+'], ['Waist Taking In', '₺200+'], ['Sleeve Shortening', '₺200+'], ['Dress / Jacket Resizing', '₺200+'], ['Wedding & Evening Dress', '₺800+']] as [string, string][] },
   { icon: '🧺', title: 'Ironing & Dry Cleaning', keyword: 'ironing dry cleaning Antalya', desc: 'Professional steam ironing and dry cleaning.',
     rows: [['Ironing (per item)', '₺80+'], ['Dry Cleaning (Dress)', '₺300+'], ['Dry Cleaning (Coat)', '₺500+'], ['Laundry & Ironing (per kg)', '₺80+/kg']] as [string, string][] },
 ];
@@ -133,7 +133,7 @@ const FAQS: [string, string][] = [
   ['Is the mobile visit free?', 'Yes, completely free in Konyaaltı, Muratpaşa, Kepez and Lara. For farther districts we confirm details on WhatsApp first.'],
   ['Do you offer ironing and dry cleaning?', 'Yes — professional steam ironing and dry cleaning, with pickup and delivery to your hotel or address.'],
   ['Can I get same-day alterations before an event?', 'Yes, most repairs and hemming are completed the same day or within 24 hours.'],
-  ['Do you serve all Antalya districts?', 'Yes — Konyaaltı, Muratpaşa, Kepez, Lara and Döşemealtı with free visits; Belek, Kemer, Side, Alanya, Manavgat and all other districts by scheduled appointment.'],
+  ['Do you serve all Antalya districts?', 'Yes — free visits in Konyaaltı; Muratpaşa, Kepez, Lara, Döşemealtı, Belek, Kemer, Side, Alanya, Manavgat and all other districts by appointment, with the visit fee set by distance.'],
   ['Do you speak English?', 'Yes, our team speaks English, Russian, German and Turkish.'],
 ];
 
@@ -141,7 +141,7 @@ const PROCESS_STEPS: [string, string, string][] = [
   ['01', 'Share Your Location', 'Send your hotel name or address on WhatsApp.'],
   ['02', 'Measurement & Design', 'We take measurements at your address, or discuss design details.'],
   ['03', 'Tailoring / Repair', 'The work is completed at our Konyaaltı workshop.'],
-  ['04', 'Delivery', 'Free delivery to priority districts; scheduled delivery everywhere else in Antalya.'],
+  ['04', 'Delivery', 'Free delivery in Konyaaltı; scheduled delivery elsewhere in Antalya, priced by distance.'],
 ];
 
 export default function TailorServiceAntalyaPage() {
@@ -200,7 +200,7 @@ export default function TailorServiceAntalyaPage() {
               <div className="sec-head">
                 <span className="eyebrow">📍 Antalya Districts</span>
                 <h2 className="sec-h" id="nb-h">We Start From the District Closest to You</h2>
-                <p className="sec-sub">Free mobile visits in priority districts; scheduled visits everywhere else in Antalya.</p>
+                <p className="sec-sub">Free mobile visits in Konyaaltı; scheduled visits elsewhere in Antalya, priced by distance.</p>
               </div>
               <ul className="nb-grid" aria-label="Priority districts">
                 {PRIORITY_DISTRICTS.map((n) => (

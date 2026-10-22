@@ -223,13 +223,13 @@ const REPAIR_CATEGORIES: Record<Lang, RepairCategory[]> = {
   tr: [
     { icon: '✂️', title: 'Dikim Hizmetleri', keyword: 'terzi dikim Antalya · özel ölçü dikim Konyaaltı',
       desc: 'Sıfırdan kıyafet dikimi. Bay, bayan, çocuk — ölçünüze özel tasarım ve üretim.',
-      rows: [['Erkek Gömlek Dikimi', '₺350+'], ['Erkek Pantolon Dikimi', '₺400+'], ['Kadın Elbise Dikimi', '₺600+'], ['Abiye / Özel Gün Dikimi', '₺900+'], ['Çocuk Kıyafeti Dikimi', '₺250+']] },
+      rows: [['Erkek Gömlek Dikimi', '₺350+'], ['Erkek Pantolon Dikimi', '₺400+'], ['Kadın Elbise Dikimi', '₺800+'], ['Abiye / Özel Gün Dikimi', '₺900+'], ['Çocuk Kıyafeti Dikimi', '₺250+']] },
     { icon: '🔧', title: 'Tamir Hizmetleri', keyword: 'kıyafet tamiri Antalya · fermuar tamiri Konyaaltı',
       desc: 'Yırtık, sökük, fermuar, düğme — günlük giyimde en sık ihtiyaç duyulan onarımlar.',
-      rows: [['Fermuar Değişimi (Pantolon/Kot)', '₺200+'], ['Fermuar Değişimi (Mont/Ceket)', '₺300+'], ['Yırtık / Sökük Onarımı', '₺150+'], ['Düğme, Kopça, Fitil Tamiri', '₺60+'], ['Astar Değişimi', '₺300+']] },
+      rows: [['Fermuar Değişimi (Pantolon/Kot)', '₺300+'], ['Fermuar Değişimi (Mont/Ceket)', '₺300+'], ['Yırtık / Sökük Onarımı', '₺150+'], ['Düğme, Kopça, Fitil Tamiri', '₺60+'], ['Astar Değişimi', '₺300+']] },
     { icon: '📏', title: 'Tadilat Hizmetleri', keyword: 'paça kısaltma Antalya · bel daraltma Konyaaltı',
       desc: 'Kıyafetinizi vücudunuza tam oturtan hassas ölçü ayarları.',
-      rows: [['Paça Kısaltma (Pantolon/Kot/Etek)', '₺150+'], ['Bel Daraltma', '₺150+'], ['Kol Kısaltma', '₺200+'], ['Elbise / Ceket Daraltma', '₺200+'], ['Gelinlik & Abiye Tadilatı', '₺800+']] },
+      rows: [['Paça Kısaltma (Pantolon/Kot/Etek)', '₺200+'], ['Bel Daraltma', '₺200+'], ['Kol Kısaltma', '₺200+'], ['Elbise / Ceket Daraltma', '₺200+'], ['Gelinlik & Abiye Tadilatı', '₺800+']] },
     { icon: '🧺', title: 'Ütü & Kuru Temizleme', keyword: 'ütü hizmeti Antalya · kuru temizleme Konyaaltı',
       desc: 'Profesyonel buharlı ütü ve kuru temizleme. Otel ve adreslerden alım-teslimat.',
       rows: [['Ütü (adet)', '₺80+'], ['Kuru Temizleme (Elbise)', '₺300+'], ['Kuru Temizleme (Mont/Kaban)', '₺500+'], ['Çamaşır & Ütü (kg)', '₺80+/kg']] },
@@ -237,13 +237,13 @@ const REPAIR_CATEGORIES: Record<Lang, RepairCategory[]> = {
   en: [
     { icon: '✂️', title: 'Tailoring Services', keyword: 'tailor Antalya · custom-fit sewing Konyaaltı',
       desc: 'Made-from-scratch garments. Men, women, children — designed and sewn to your exact measurements.',
-      rows: [["Men's Shirt Tailoring", '₺350+'], ["Men's Trousers Tailoring", '₺400+'], ["Women's Dress Making", '₺600+'], ['Evening Gown / Special Occasion', '₺900+'], ["Children's Clothing", '₺250+']] },
+      rows: [["Men's Shirt Tailoring", '₺350+'], ["Men's Trousers Tailoring", '₺400+'], ["Women's Dress Making", '₺800+'], ['Evening Gown / Special Occasion', '₺900+'], ["Children's Clothing", '₺250+']] },
     { icon: '🔧', title: 'Repair Services', keyword: 'clothing repair Antalya · zipper repair Konyaaltı',
       desc: 'Tears, seams, zippers, buttons — the everyday fixes clothing needs most.',
-      rows: [['Zipper Replacement (Trousers/Jeans)', '₺200+'], ['Zipper Replacement (Coat/Jacket)', '₺300+'], ['Tear / Seam Repair', '₺150+'], ['Button, Hook, Snap Repair', '₺60+'], ['Lining Replacement', '₺300+']] },
+      rows: [['Zipper Replacement (Trousers/Jeans)', '₺300+'], ['Zipper Replacement (Coat/Jacket)', '₺300+'], ['Tear / Seam Repair', '₺150+'], ['Button, Hook, Snap Repair', '₺60+'], ['Lining Replacement', '₺300+']] },
     { icon: '📏', title: 'Alterations', keyword: 'hemming Antalya · waist taking in Konyaaltı',
       desc: 'Precise fit adjustments so your clothing sits exactly right on your body.',
-      rows: [['Hemming (Trousers/Jeans/Skirt)', '₺150+'], ['Waist Taking In', '₺150+'], ['Sleeve Shortening', '₺200+'], ['Dress / Jacket Taking In', '₺200+'], ['Wedding & Evening Dress Alterations', '₺800+']] },
+      rows: [['Hemming (Trousers/Jeans/Skirt)', '₺200+'], ['Waist Taking In', '₺200+'], ['Sleeve Shortening', '₺200+'], ['Dress / Jacket Taking In', '₺200+'], ['Wedding & Evening Dress Alterations', '₺800+']] },
     { icon: '🧺', title: 'Ironing & Dry Cleaning', keyword: 'ironing service Antalya · dry cleaning Konyaaltı',
       desc: 'Professional steam ironing and dry cleaning.',
       rows: [['Ironing (per item)', '₺80+'], ['Dry Cleaning (Dress)', '₺300+'], ['Dry Cleaning (Coat)', '₺500+'], ['Laundry & Ironing (per kg)', '₺80+/kg']] },
@@ -251,13 +251,13 @@ const REPAIR_CATEGORIES: Record<Lang, RepairCategory[]> = {
   ru: [
     { icon: '✂️', title: 'Пошив одежды', keyword: 'портной Анталья · пошив по меркам Коньяалты',
       desc: 'Пошив одежды с нуля. Мужская, женская, детская — по индивидуальным меркам.',
-      rows: [['Пошив мужской рубашки', '₺350+'], ['Пошив мужских брюк', '₺400+'], ['Пошив женского платья', '₺600+'], ['Вечернее / праздничное платье', '₺900+'], ['Пошив детской одежды', '₺250+']] },
+      rows: [['Пошив мужской рубашки', '₺350+'], ['Пошив мужских брюк', '₺400+'], ['Пошив женского платья', '₺800+'], ['Вечернее / праздничное платье', '₺900+'], ['Пошив детской одежды', '₺250+']] },
     { icon: '🔧', title: 'Ремонт одежды', keyword: 'ремонт одежды Анталья · ремонт молнии Коньяалты',
       desc: 'Разрывы, швы, молнии, пуговицы — самый частый ремонт повседневной одежды.',
-      rows: [['Замена молнии (брюки/джинсы)', '₺200+'], ['Замена молнии (пальто/куртка)', '₺300+'], ['Ремонт разрыва / шва', '₺150+'], ['Ремонт пуговиц, крючков, кнопок', '₺60+'], ['Замена подкладки', '₺300+']] },
+      rows: [['Замена молнии (брюки/джинсы)', '₺300+'], ['Замена молнии (пальто/куртка)', '₺300+'], ['Ремонт разрыва / шва', '₺150+'], ['Ремонт пуговиц, крючков, кнопок', '₺60+'], ['Замена подкладки', '₺300+']] },
     { icon: '📏', title: 'Подгонка одежды', keyword: 'укорачивание брюк Анталья · заужение талии Коньяалты',
       desc: 'Точная подгонка по фигуре — чтобы одежда сидела идеально.',
-      rows: [['Укорачивание (брюки/джинсы/юбка)', '₺150+'], ['Заужение талии', '₺150+'], ['Укорачивание рукавов', '₺200+'], ['Заужение платья / пиджака', '₺200+'], ['Подгонка свадебного/вечернего платья', '₺800+']] },
+      rows: [['Укорачивание (брюки/джинсы/юбка)', '₺200+'], ['Заужение талии', '₺200+'], ['Укорачивание рукавов', '₺200+'], ['Заужение платья / пиджака', '₺200+'], ['Подгонка свадебного/вечернего платья', '₺800+']] },
     { icon: '🧺', title: 'Глажка и химчистка', keyword: 'глажка Анталья · химчистка Коньяалты',
       desc: 'Профессиональная паровая глажка и химчистка.',
       rows: [['Глажка (за вещь)', '₺80+'], ['Химчистка (платье)', '₺300+'], ['Химчистка (пальто)', '₺500+'], ['Стирка и глажка (за кг)', '₺80+/кг']] },
@@ -265,13 +265,13 @@ const REPAIR_CATEGORIES: Record<Lang, RepairCategory[]> = {
   de: [
     { icon: '✂️', title: 'Schneiderdienste', keyword: 'Maßschneiderei Antalya · Konyaaltı',
       desc: 'Maßgeschneiderte Kleidung. Herren, Damen, Kinder — exakt nach Ihren Maßen entworfen und genäht.',
-      rows: [['Herrenhemd maßgeschneidert', '₺350+'], ['Herrenhose maßgeschneidert', '₺400+'], ['Damenkleid maßgeschneidert', '₺600+'], ['Abendkleid / Besonderer Anlass', '₺900+'], ['Kinderkleidung', '₺250+']] },
+      rows: [['Herrenhemd maßgeschneidert', '₺350+'], ['Herrenhose maßgeschneidert', '₺400+'], ['Damenkleid maßgeschneidert', '₺800+'], ['Abendkleid / Besonderer Anlass', '₺900+'], ['Kinderkleidung', '₺250+']] },
     { icon: '🔧', title: 'Reparaturdienste', keyword: 'Kleidungsreparatur Antalya · Reißverschluss Konyaaltı',
       desc: 'Risse, Nähte, Reißverschlüsse, Knöpfe — die alltäglichen Reparaturen, die Kleidung am meisten braucht.',
-      rows: [['Reißverschluss (Hose/Jeans)', '₺200+'], ['Reißverschluss (Jacke/Mantel)', '₺300+'], ['Riss / Naht reparieren', '₺150+'], ['Knopf, Haken reparieren', '₺60+'], ['Futterwechsel', '₺300+']] },
+      rows: [['Reißverschluss (Hose/Jeans)', '₺300+'], ['Reißverschluss (Jacke/Mantel)', '₺300+'], ['Riss / Naht reparieren', '₺150+'], ['Knopf, Haken reparieren', '₺60+'], ['Futterwechsel', '₺300+']] },
     { icon: '📏', title: 'Änderungsschneiderei', keyword: 'Hosen kürzen Antalya · Taille Konyaaltı',
       desc: 'Präzise Passformanpassungen, damit Ihre Kleidung genau richtig an Ihrem Körper sitzt.',
-      rows: [['Kürzen (Hose/Jeans/Rock)', '₺150+'], ['Taille enger machen', '₺150+'], ['Ärmel kürzen', '₺200+'], ['Kleid / Jacke enger machen', '₺200+'], ['Braut- & Abendkleid ändern', '₺800+']] },
+      rows: [['Kürzen (Hose/Jeans/Rock)', '₺200+'], ['Taille enger machen', '₺200+'], ['Ärmel kürzen', '₺200+'], ['Kleid / Jacke enger machen', '₺200+'], ['Braut- & Abendkleid ändern', '₺800+']] },
     { icon: '🧺', title: 'Bügeln & Reinigung', keyword: 'Bügelservice Antalya · Reinigung Konyaaltı',
       desc: 'Professionelles Dampfbügeln und chemische Reinigung. Abholung und Lieferung vom Hotel.',
       rows: [['Bügeln (pro Stück)', '₺80+'], ['Chemische Reinigung (Kleid)', '₺300+'], ['Chemische Reinigung (Mantel)', '₺500+'], ['Waschen & Bügeln (pro kg)', '₺80+/kg']] },
@@ -291,7 +291,7 @@ const PROCESS_STEPS: [string, string, string][] = [
   ['01', 'Mahallenizi Belirtin', "WhatsApp'tan bulunduğunuz mahalleyi ve ihtiyacınızı yazın."],
   ['02', 'Ölçü & Tasarım', 'Adresinizde ölçü alınır veya atölyede tasarım detayları belirlenir.'],
   ['03', 'Dikim / Üretim', 'Tekli dikim ya da toplu üniforma/fason üretimi atölyede tamamlanır.'],
-  ['04', 'Teslimat', 'Öncelikli mahallelere ücretsiz, diğer bölgelere randevulu teslim.'],
+  ['04', 'Teslimat', 'Konyaaltı\'nda ücretsiz, diğer bölgelere mesafeye göre randevulu teslim.'],
 ];
 
 export default function KonyaaltiTailorServicePage() {
@@ -496,14 +496,14 @@ export default function KonyaaltiTailorServicePage() {
                   <div className="wk-icon" aria-hidden="true">🔧</div>
                   <h3 className="wk-tr">Fermuar Tamiri Konyaaltı</h3>
                   <span className="wk-en">Zipper Repair</span>
-                  <p className="wk-desc">Pantolon, mont, ceket, çanta fermuarı — aynı gün teslim, ₺200&apos;den.</p>
+                  <p className="wk-desc">Pantolon, mont, ceket, çanta fermuarı — aynı gün teslim, ₺300&apos;den.</p>
                   <span style={{ fontSize: '.76rem', color: '#C9A96E', fontWeight: 700 }}>Fiyatları Gör <span aria-hidden="true">→</span></span>
                 </a>
                 <a href="/konyaalti-paca-kisaltma" className="wk-card" style={{ display: 'block' }}>
                   <div className="wk-icon" aria-hidden="true">📏</div>
                   <h3 className="wk-tr">Paça Kısaltma Konyaaltı</h3>
                   <span className="wk-en">Hemming</span>
-                  <p className="wk-desc">Pantolon, kot, etek kısaltma — aynı gün teslim, ₺150&apos;den.</p>
+                  <p className="wk-desc">Pantolon, kot, etek kısaltma — aynı gün teslim, ₺200&apos;den.</p>
                   <span style={{ fontSize: '.76rem', color: '#C9A96E', fontWeight: 700 }}>Fiyatları Gör <span aria-hidden="true">→</span></span>
                 </a>
                 <a href="/antalya-gelinlik-tadilati" className="wk-card" style={{ display: 'block' }}>

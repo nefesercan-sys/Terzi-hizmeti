@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: 'Antalya Terzi Fiyat Listesi 2026 · Tüm Hizmetler',
   description:
-    'Antalya terzi fiyatları 2026: paça kısaltma ₺150, fermuar değişimi ₺200, elbise dikimi ₺600\'den. Fotoğraf at, net fiyatı öğren. 08:00–23:00.',
+    'Antalya terzi fiyatları 2026: paça kısaltma ₺200, fermuar değişimi ₺300, elbise dikimi ₺800\'den. Fotoğraf at, net fiyatı öğren. 08:00–23:00.',
   keywords: [
     'Antalya terzi', 'terzi fiyatları', 'terzi fiyat listesi 2026', 'Antalya terzi fiyatları',
     'elbise diktirmek', 'elbise tadilatı', 'elbisem yırtıldı', 'bel daraltma', 'paça kısaltma fiyatı',
@@ -28,6 +28,8 @@ export const metadata: Metadata = {
     'bay bayan terzi', 'hafta sonu açık terzi', 'yakınımda terzi', 'en yakın terzi',
     'dikim imalat fiyatları', 'model tasarım dikim atölyesi', 'kaliteli dikiş imalat',
     'pamuklu doğal kumaş dikimi', 'Konyaaltı terzi',
+    'terzi paça kısaltma fiyatları 2026', 'paça kısaltma ücreti', 'pantolon paçası kaç tl', 'fermuar değişimi ne kadar',
+    'mont fermuarı değiştirme fiyatları', 'çanta fermuar tamiri fiyat', 'antalya özel dikim terzi',
   ],
   authors: [{ name: 'Terzi Can', url: SITE }],
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
@@ -43,32 +45,32 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Antalya Terzi Fiyat Listesi 2026 — Fotoğraf Gönderin, Fiyatı Öğrenin',
-    description: 'Paça ₺150, bel daraltma ₺150, fermuar ₺200, elbise dikimi ₺600\'den. Adrese ve otele gelen terzi.',
+    description: 'Paça ₺200, bel daraltma ₺200, fermuar ₺300, elbise dikimi ₺800\'den. Adrese ve otele gelen terzi.',
     url: PAGE_URL, siteName: 'Terzi Can', locale: 'tr_TR', type: 'website',
     images: [{ url: OG, width: 1024, height: 1024, alt: 'Antalya terzi fiyat listesi' }],
   },
-  twitter: { card: 'summary_large_image', title: 'Antalya Terzi Fiyat Listesi 2026 — Tüm Hizmetler', description: 'Paça ₺150 · Fermuar ₺200 · Bel daraltma ₺150.', images: [OG] },
+  twitter: { card: 'summary_large_image', title: 'Antalya Terzi Fiyat Listesi 2026 — Tüm Hizmetler', description: 'Paça ₺200 · Fermuar ₺300 · Bel daraltma ₺200.', images: [OG] },
   other: { 'geo.region': 'TR-07', 'geo.placename': 'Antalya' },
 };
 
 // ── Kişinin sorununa göre hızlı yol (sorgu → cevap → sayfa) ────────────────────
 const QUICK: { q: string; a: string; price: string; href: string; cta: string }[] = [
-  { q: 'Elbisem yırtıldı', a: 'Yırtık, dikiş sökülmesi ve kumaş onarımı yapılır.', price: '₺150\'den', href: '#fiyatlar', cta: 'Fiyat listesi' },
-  { q: 'Elbisenin belini daraltmak istiyorum', a: 'Bel ve beden daraltma, aynı gün veya 24 saat içinde.', price: '₺150\'den', href: '#fiyatlar', cta: 'Fiyat listesi' },
-  { q: 'Pantolonumun paçasını kısaltmak istiyorum', a: 'Kot ve kumaş pantolon paça kısaltma, çoğu zaman aynı gün.', price: '₺150\'den', href: '/konyaalti-paca-kisaltma', cta: 'Paça kısaltma' },
-  { q: 'Fermuar değişimi', a: 'Pantolon, kot, etek, mont ve çanta fermuarı.', price: '₺200\'den', href: '/konyaalti-fermuar-tamiri', cta: 'Fermuar tamiri' },
-  { q: 'Elbise diktirmek / kendime elbise dikmek', a: 'Ölçü, model ve kumaş seçimi, prova ve teslim. Fotoğrafını gönderin.', price: '₺600\'den', href: '#dikim', cta: 'Özel dikim' },
+  { q: 'Elbisem yırtıldı', a: 'Yırtık, dikiş sökülmesi ve kumaş onarımı yapılır.', price: '₺200\'den', href: '#fiyatlar', cta: 'Fiyat listesi' },
+  { q: 'Elbisenin belini daraltmak istiyorum', a: 'Bel ve beden daraltma, aynı gün veya 24 saat içinde.', price: '₺200\'den', href: '#fiyatlar', cta: 'Fiyat listesi' },
+  { q: 'Pantolonumun paçasını kısaltmak istiyorum', a: 'Kot ve kumaş pantolon paça kısaltma, çoğu zaman aynı gün.', price: '₺200\'den', href: '/konyaalti-paca-kisaltma', cta: 'Paça kısaltma' },
+  { q: 'Fermuar değişimi', a: 'Pantolon, kot, etek, mont ve çanta fermuarı.', price: '₺300\'den', href: '/konyaalti-fermuar-tamiri', cta: 'Fermuar tamiri' },
+  { q: 'Elbise diktirmek / kendime elbise dikmek', a: 'Ölçü, model ve kumaş seçimi, prova ve teslim. Fotoğrafını gönderin.', price: '₺800\'den', href: '#dikim', cta: 'Özel dikim' },
   { q: 'Gelinlik ve abiye tadilatı', a: 'Hassas daraltma, boy ve askı ayarı; prova randevusu.', price: '₺800\'den', href: '/antalya-gelinlik-tadilati', cta: 'Gelinlik tadilatı' },
-  { q: 'Adrese veya otele gelen terzi', a: 'Ölçüyü adresinizde alırız, işi atölyede yapar, geri teslim ederiz.', price: 'Konyaaltı, Muratpaşa, Kepez, Lara ücretsiz', href: '/otele-gelen-terzi-antalya', cta: 'Otele gelen terzi' },
+  { q: 'Adrese veya otele gelen terzi', a: 'Ölçüyü adresinizde alırız, işi atölyede yapar, geri teslim ederiz.', price: 'Konyaaltı ücretsiz, diğer bölgeler mesafeye göre', href: '/otele-gelen-terzi-antalya', cta: 'Otele gelen terzi' },
   { q: 'Pamuklu, doğal kumaştan dikim', a: '%100 keten ve pamuktan özel dikim ve seri üretim yapılır.', price: 'Fotoğrafa göre', href: '/keten-pamuk-ozel-dikim', cta: 'Keten & pamuk' },
   { q: 'Model, tasarım, dikim atölyesi, seri imalat', a: 'Önce numune, onaydan sonra seri imalat ve üretim takibi (adet: modele göre teklif, proje bazında netleşir).', price: 'Teklif', href: '/anavera-tekstil', cta: 'Anavera Tekstil' },
 ];
 
 // ── Fiyat tabloları (site genelindeki fiyatlarla aynı; başlangıç fiyatlarıdır) ──
 const PRICES: { icon: string; title: string; rows: [string, string][] }[] = [
-  { icon: '🔧', title: 'Tamir', rows: [['Pantolon fermuarı değişimi', '₺200+'], ['Mont fermuarı değişimi', '₺300+'], ['Yırtık / dikiş sökülmesi onarımı', '₺150+'], ['Düğme, çıtçıt, kanca', '₺60+'], ['Astar değişimi', '₺300+']] },
-  { icon: '📏', title: 'Tadilat', rows: [['Paça kısaltma', '₺150+'], ['Bel daraltma', '₺150+'], ['Kol kısaltma', '₺200+'], ['Elbise / ceket tadilatı', '₺200+'], ['Gelinlik ve abiye tadilatı', '₺800+']] },
-  { icon: '✂️', title: 'Özel dikim', rows: [['Erkek gömlek', '₺350+'], ['Erkek pantolon', '₺400+'], ['Kadın elbise', '₺600+'], ['Abiye', '₺900+'], ['Çocuk giyim', '₺250+']] },
+  { icon: '🔧', title: 'Tamir', rows: [['Pantolon fermuarı değişimi', '₺300+'], ['Mont fermuarı değişimi', '₺300+'], ['Yırtık / dikiş sökülmesi onarımı', '₺150+'], ['Düğme, çıtçıt, kanca', '₺60+'], ['Astar değişimi', '₺300+']] },
+  { icon: '📏', title: 'Tadilat', rows: [['Paça kısaltma', '₺200+'], ['Bel daraltma', '₺200+'], ['Kol kısaltma', '₺200+'], ['Elbise / ceket tadilatı', '₺200+'], ['Gelinlik ve abiye tadilatı', '₺800+']] },
+  { icon: '✂️', title: 'Özel dikim', rows: [['Erkek gömlek', '₺350+'], ['Erkek pantolon', '₺400+'], ['Kadın elbise', '₺800+'], ['Abiye', '₺900+'], ['Çocuk giyim', '₺250+']] },
   { icon: '🧺', title: 'Ütü & kuru temizleme', rows: [['Ütü (adet)', '₺80+'], ['Kuru temizleme (elbise)', '₺300+'], ['Kuru temizleme (mont)', '₺500+'], ['Yıkama + ütü (kg)', '₺80+/kg']] },
 ];
 
@@ -79,15 +81,15 @@ const FAQS: [string, string][] = [
   ['Elbisem yırtıldı, tamir edilir mi?',
    'Evet. Yırtık ve sökülen dikişler onarılır; başlangıç fiyatı ₺150\'dir. Yırtığın fotoğrafını WhatsApp\'tan gönderirseniz net fiyat ve süre söyleriz. Çoğu onarım aynı gün veya 24 saat içinde tamamlanır.'],
   ['Elbisemin belini daraltmak istiyorum, ne kadar tutar?',
-   'Bel ve beden daraltma ₺150\'den başlar. Kumaşa, astara ve modele göre değişir. Elbisenin fotoğrafını göndermeniz yeterli; provaya gelirseniz ölçü yerinde alınır.'],
+   'Bel ve beden daraltma ₺200\'den başlar. Kumaşa, astara ve modele göre değişir. Elbisenin fotoğrafını göndermeniz yeterli; provaya gelirseniz ölçü yerinde alınır.'],
   ['Pantolonumun paçasını kısaltmak istiyorum, ne kadar sürer?',
-   'Paça kısaltma ₺150\'den başlar; kot ve kumaş pantolonlarda çoğu zaman aynı gün teslim edilir. Ayrıntı: /konyaalti-paca-kisaltma'],
+   'Paça kısaltma ₺200\'den başlar; kot ve kumaş pantolonlarda çoğu zaman aynı gün teslim edilir. Ayrıntı: /konyaalti-paca-kisaltma'],
   ['Kendime elbise diktirmek istiyorum, nasıl ilerliyor?',
-   'Beğendiğiniz modelin fotoğrafını WhatsApp\'tan gönderirsiniz. Ölçü alınır, kumaş ve model netleşir, gerekirse prova yapılır, sonra teslim edilir. Kadın elbise dikimi ₺600\'den, abiye ₺900\'den başlar; fiyat kumaş ve işçiliğe göre netleşir.'],
+   'Beğendiğiniz modelin fotoğrafını WhatsApp\'tan gönderirsiniz. Ölçü alınır, kumaş ve model netleşir, gerekirse prova yapılır, sonra teslim edilir. Kadın elbise dikimi ₺800\'den, abiye ₺900\'den başlar; fiyat kumaş ve işçiliğe göre netleşir.'],
   ['Fermuar değişimi yapan, hafta sonu açık bir terzi var mı?',
-   'Terzi Can haftanın 7 günü, Cumartesi ve Pazar dahil, 08:00–23:00 arası açıktır. Mesai dışında WhatsApp\'tan fotoğraf ve mesaj bırakabilirsiniz. Fermuar değişimi ₺200\'den başlar.'],
+   'Terzi Can haftanın 7 günü, Cumartesi ve Pazar dahil, 08:00–23:00 arası açıktır. Mesai dışında WhatsApp\'tan fotoğraf ve mesaj bırakabilirsiniz. Fermuar değişimi ₺300\'den başlar.'],
   ['Adrese veya otele gelen terzi var mı?',
-   'Evet. Ölçü ve teslim adresinizde ya da otelinizde yapılır, iş atölyede tamamlanır. Konyaaltı, Muratpaşa, Kepez ve Lara\'da ziyaret ücretsizdir; diğer bölgeler randevuyla. Ayrıntı: /otele-gelen-terzi-antalya'],
+   'Evet. Ölçü ve teslim adresinizde ya da otelinizde yapılır, iş atölyede tamamlanır. Konyaaltı\'nda ziyaret ücretsizdir; diğer bölgelerde servis ücreti mesafeye göre belirlenir. Ayrıntı: /otele-gelen-terzi-antalya'],
   ['Terzi fiyatlarını nasıl öğrenirim?',
    'Yukarıdaki liste başlangıç fiyatlarıdır. İşin fotoğrafını WhatsApp\'tan gönderirseniz kumaşa ve işçiliğe göre net fiyat söylenir; teklif ücretsizdir.'],
   ['En hızlı ve uygun fiyatlı terzi hizmeti hangisi?',
@@ -161,7 +163,7 @@ export default function TerziFiyatlariPage() {
             <span className="hero-tag">₺ Şeffaf fiyat · Her gün 08:00–23:00 · Konyaaltı, Antalya</span>
             <h1 id="hero-h">Antalya Terzi Fiyatları 2026<br /><span className="accent">Fotoğrafı Gönderin, Fiyatı Öğrenin</span></h1>
             <p className="hero-desc" id="hero-desc">
-              Paça kısaltma ₺150, bel daraltma ₺150, fermuar değişimi ₺200, elbise dikimi ₺600&apos;den.
+              Paça kısaltma ₺200, bel daraltma ₺200, fermuar değişimi ₺300, elbise dikimi ₺800&apos;den.
               Elbise tadilatı, yırtık onarımı, özel dikim, adrese ve otele gelen terzi. İşin fotoğrafını
               WhatsApp&apos;tan gönderin, net fiyat ve süreyi öğrenin.
             </p>

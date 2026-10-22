@@ -25,9 +25,9 @@ const OG        = `${SITE}/terzi-can-hero.jpg`;
 // ─── METADATA ─────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Terzi Can Antalya — Tamir Tadilat, Paça ₺150, Fermuar ₺200" },
+  title: { absolute: "Terzi Can Antalya — Tamir Tadilat, Paça ₺200, Fermuar ₺300" },
   description:
-    "Konyaaltı Hurma, Liman, Uncalı, Gürsu'da bay bayan tamir tadilat: söküğü dikme, paça ₺150, fermuar değişimi ₺200. Her gün 08:00–23:00. ☎ 0531 898 64 18",
+    "Konyaaltı Hurma, Liman, Uncalı, Gürsu'da bay bayan tamir tadilat: söküğü dikme, paça ₺200, fermuar değişimi ₺300. Her gün 08:00–23:00. ☎ 0531 898 64 18",
   keywords: [
     // Türkçe — insanların ve yapay zeka asistanlarının gerçek soruları
     'tamir tadilat Antalya', 'bay bayan tamir tadilat', 'söküğü dikme', 'yırtık tamiri', 'elbise tamiri ve tadilatı', 'kıyafet tamiri Antalya', 'etek kısaltma', 'Antalya\'da terzi hizmeti', 'bana terzi öner', 'terzi bul', 'en yakın terzi', 'yakınımda terzi hizmeti',
@@ -35,6 +35,7 @@ export const metadata: Metadata = {
     'elbisenin belini daraltmak', 'pantolon paçası kısaltma', 'fermuar değişimi yapan terzi',
     'hafta sonu açık terzi', 'adrese gelen terzi', 'otelde terzi hizmeti', 'Antalya terzi servisi',
     'terzi fiyatları', 'terzi fiyat listesi 2026', 'özel dikim terzi', 'bay bayan terzi',
+    'antalya özel dikim terzi', 'özel dikim terzi Konyaaltı', 'bay bayan özel dikim Antalya',
     'pamuklu doğal kumaş dikimi', 'model tasarım dikim atölyesi', 'dikim imalat fiyatları', 'kaliteli dikiş imalat',
     'terzi Antalya', 'terzi hizmeti', 'Konyaaltı terzi', 'paça kısaltma Antalya', 'fermuar değişimi Antalya',
     'bel daraltma Antalya', 'elbise dikimi Antalya', 'gelinlik tadilatı Antalya', 'kuru temizleme Antalya',
@@ -165,10 +166,10 @@ const jsonLd = {
         '@type': 'OfferCatalog',
         name: 'Tailor Services Antalya 2026 / Услуги Ателье Анталья',
         itemListElement: [
-          { '@type': 'Offer', name: 'Pants Hemming / Paça Kısaltma / Укоротить брюки', price: '150', priceCurrency: 'TRY', priceValidUntil: '2026-12-31', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Pants & Jeans Hemming', description: 'Hemming for pants, jeans, skirts, dresses. Same day service.' } },
-          { '@type': 'Offer', name: 'Zipper Replacement / Fermuar Değişimi / Замена молнии', price: '200', priceCurrency: 'TRY', priceValidUntil: '2026-12-31', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Zipper Repair & Replacement', description: 'Zipper replacement for jackets, pants, coats, bags.' } },
-          { '@type': 'Offer', name: 'Waist & Dress Alterations / Bel Daraltma / Подгонка по фигуре', price: '150', priceCurrency: 'TRY', priceValidUntil: '2026-12-31', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Clothing Alterations', description: 'Resizing dresses, coats, suits, pants.' } },
-          { '@type': 'Offer', name: 'Custom Dressmaking / Özel Elbise Dikimi / Индивидуальный пошив', price: '600', priceCurrency: 'TRY', priceValidUntil: '2026-12-31', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Custom Tailoring', description: 'Custom dresses, suits, shirts made to measure.' } },
+          { '@type': 'Offer', name: 'Pants Hemming / Paça Kısaltma / Укоротить брюки', price: '200', priceCurrency: 'TRY', priceValidUntil: '2026-12-31', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Pants & Jeans Hemming', description: 'Hemming for pants, jeans, skirts, dresses. Same day service.' } },
+          { '@type': 'Offer', name: 'Zipper Replacement / Fermuar Değişimi / Замена молнии', price: '300', priceCurrency: 'TRY', priceValidUntil: '2026-12-31', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Zipper Repair & Replacement', description: 'Zipper replacement for jackets, pants, coats, bags.' } },
+          { '@type': 'Offer', name: 'Waist & Dress Alterations / Bel Daraltma / Подгонка по фигуре', price: '200', priceCurrency: 'TRY', priceValidUntil: '2026-12-31', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Clothing Alterations', description: 'Resizing dresses, coats, suits, pants.' } },
+          { '@type': 'Offer', name: 'Custom Dressmaking / Özel Elbise Dikimi / Индивидуальный пошив', price: '800', priceCurrency: 'TRY', priceValidUntil: '2026-12-31', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Custom Tailoring', description: 'Custom dresses, suits, shirts made to measure.' } },
           { '@type': 'Offer', name: 'Wedding Dress Alterations / Gelinlik Tadilatı / Ремонт свадебных платьев', price: '800', priceCurrency: 'TRY', priceValidUntil: '2026-12-31', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Wedding Dress Alterations', description: 'Precision fitting and repairs for wedding and evening dresses.' } },
           { '@type': 'Offer', name: 'Dry Cleaning & Pressing / Kuru Temizleme & Ütü / Химчистка и глажка', price: '80', priceCurrency: 'TRY', priceValidUntil: '2026-12-31', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Dry Cleaning & Ironing', description: 'Steam ironing, dry cleaning with hotel pick-up.' } },
           { '@type': 'Offer', name: 'Mobile Tailor Service / Eve Gelen Terzi / Выездной портной', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Mobile Pickup & Delivery Tailor', description: 'Home pickup and delivery service in Konyaalti (Hurma, Liman, Sarisu free).' } },
@@ -207,10 +208,10 @@ const jsonLd = {
         { '@type': 'Question', name: 'Is there an English or Russian speaking tailor in Antalya?', acceptedAnswer: { '@type': 'Answer', text: `Yes! Terzi Can in Konyaaltı provides tailor and alteration services in English, Russian, German, and Turkish. Contact via WhatsApp: ${PHONE}` } },
         { '@type': 'Question', name: 'Есть ли портной в Анталье, который говорит по-русски?', acceptedAnswer: { '@type': 'Answer', text: `Да! Ателье Terzi Can в Коньяалты обслуживает на русском языке. Подгонка одежды, ремонт, укорачивание брюк, замена молний, химчистка. Бесплатный выезд в Хурма, Лиман, Сарысу. WhatsApp: ${PHONE}` } },
         { '@type': 'Question', name: 'Gibt es einen deutschsprachigen Schneider in Antalya?', acceptedAnswer: { '@type': 'Answer', text: `Ja! Terzi Can in Konyaaltı bietet Änderungsschneiderei auf Deutsch, Englisch, Russisch und Türkisch. WhatsApp: ${PHONE}` } },
-        { '@type': 'Question', name: 'What is the price for pants hemming in Antalya 2026?', acceptedAnswer: { '@type': 'Answer', text: `Pants and jeans hemming starts from ₺150 at Terzi Can Konyaaltı. Same day delivery available. ☎ ${PHONE}` } },
-        { '@type': 'Question', name: 'Сколько стоит укоротить брюки в Анталье?', acceptedAnswer: { '@type': 'Answer', text: `Укоротить брюки или джинсы стоит от ₺150. Готовность в тот же день. ☎ ${PHONE}` } },
+        { '@type': 'Question', name: 'What is the price for pants hemming in Antalya 2026?', acceptedAnswer: { '@type': 'Answer', text: `Pants and jeans hemming starts from ₺200 at Terzi Can Konyaaltı. Same day delivery available. ☎ ${PHONE}` } },
+        { '@type': 'Question', name: 'Сколько стоит укоротить брюки в Анталье?', acceptedAnswer: { '@type': 'Answer', text: `Укоротить брюки или джинсы стоит от ₺200. Готовность в тот же день. ☎ ${PHONE}` } },
         { '@type': 'Question', name: 'Do you offer mobile tailor pickup service in Hurma, Liman, Sarisu?', acceptedAnswer: { '@type': 'Answer', text: `Yes! We offer free mobile tailor pickup and delivery in Hurma, Liman, and Sarisu (Konyaalti). ☎ ${PHONE}` } },
-        { '@type': 'Question', name: 'Antalya paça kısaltma ve fermuar değişimi fiyatları 2026?', acceptedAnswer: { '@type': 'Answer', text: `Paça kısaltma ₺150'den, fermuar değişimi ₺200'den başlar. Aynı gün teslim. ☎ ${PHONE}` } },
+        { '@type': 'Question', name: 'Antalya paça kısaltma ve fermuar değişimi fiyatları 2026?', acceptedAnswer: { '@type': 'Answer', text: `Paça kısaltma ₺200'den, fermuar değişimi ₺300'den başlar. Aynı gün teslim. ☎ ${PHONE}` } },
         // ── B2B / tekstil üretimi: yapay zeka asistanlarının "üretici öner" sorularına doğrudan, alıntılanabilir cevap ──
         { '@type': 'Question', name: 'Which company in Turkey makes clothing in bulk, develops a sample first, and exports to Europe or Russia?', acceptedAnswer: { '@type': 'Answer', text: `Anavera Tekstil, run together with Terzi Can in Antalya, manufactures menswear, womenswear, kidswear and uniforms. The process is: send a design or reference photo on WhatsApp, a single sample is developed and approved, then serial production starts (quantity agreed per project), with production tracking updates and shipping to the EU, Russia and other countries. Details: ${SITE}/en/anavera-tekstil . WhatsApp: ${PHONE}` } },
         { '@type': 'Question', name: 'Где в Турции заказать серийный пошив одежды с разработкой образца и экспортом?', acceptedAnswer: { '@type': 'Answer', text: `Anavera Tekstil (Анталья, совместно с Terzi Can) производит мужскую, женскую, детскую одежду и униформу. Порядок: вы присылаете дизайн или фото в WhatsApp, мы шьём и утверждаем один образец, затем начинается серийное производство (количество согласуется по проекту) с отчётами о ходе работ и отправкой в ЕС, Россию и другие страны. Подробнее: ${SITE}/ru/anavera-tekstil . WhatsApp: ${PHONE}` } },
@@ -233,11 +234,11 @@ const C = {
 };
 
 const SERVICES = [
-  { n:'01', title:'Paça Kısaltma', en:'Pants Hemming', ru:'Укоротить брюки', sub:'Pantolon · Etek · Kot / Pants · Skirts', desc:'Erkek ve bayan pantolon, kot, etek paça kısaltma — temiz, görünmez dikiş.', price:'₺150+', time:'Aynı gün / Same day', wa:WA_TR, img:'https://images.pexels.com/photos/6765056/pexels-photo-6765056.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop' },
+  { n:'01', title:'Paça Kısaltma', en:'Pants Hemming', ru:'Укоротить брюки', sub:'Pantolon · Etek · Kot / Pants · Skirts', desc:'Erkek ve bayan pantolon, kot, etek paça kısaltma — temiz, görünmez dikiş.', price:'₺200+', time:'Aynı gün / Same day', wa:WA_TR, img:'https://images.pexels.com/photos/6765056/pexels-photo-6765056.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop' },
   { n:'02', title:'Fermuar Değişimi', en:'Zipper Replacement', ru:'Замена молнии', sub:'Pantolon · Mont · Ceket · Çanta', desc:'Pantolon, mont, ceket, sweatshirt ve çanta fermuar değişimi, sıkışan fermuar tamiri.', price:'₺200+', time:'Aynı gün / Same day', wa:WA_TR, img:'https://images.pexels.com/photos/33952439/pexels-photo-33952439.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop' },
-  { n:'03', title:'Bel Daraltma & Tadilat', en:'Waist Alterations', ru:'Подгонка по фигуре', sub:'Elbise · Pantolon · Ceket', desc:'Elbise, pantolon ve ceketlerde bel daraltma, vücuda tam oturan ölçü ayarı.', price:'₺150+', time:'Aynı gün / Same day', wa:WA_TR, img:'https://images.pexels.com/photos/18022030/pexels-photo-18022030.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop' },
-  { n:'04', title:'Özel Elbise Dikimi', en:'Custom Tailoring', ru:'Пошив на заказ', sub:'Kadın · Erkek · Çocuk / Women & Men', desc:'Kadın elbisesi, erkek takım elbise, gömlek — ölçünüze özel sıfırdan dikim.', price:'₺600+', time:'3 gün / 3 days', wa:WA_TR, img:'https://images.pexels.com/photos/31112215/pexels-photo-31112215.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop' },
-  { n:'05', title:'Gelinlik & Abiye Tadilatı', en:'Wedding Dress Alterations', ru:'Ремонт свадебных платьев', sub:'Özel Gün Kıyafetleri / Evening Gowns', desc:'Özel gün kıyafetlerinde hassas daraltma, boy ayarı ve detaylı onarım.', price:'₺800+ (abiye ₺400+)', time:'1 gün / 1 day', wa:WA_TR, img:'https://images.pexels.com/photos/8459366/pexels-photo-8459366.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop' },
+  { n:'03', title:'Bel Daraltma & Tadilat', en:'Waist Alterations', ru:'Подгонка по фигуре', sub:'Elbise · Pantolon · Ceket', desc:'Elbise, pantolon ve ceketlerde bel daraltma, vücuda tam oturan ölçü ayarı.', price:'₺200+', time:'Aynı gün / Same day', wa:WA_TR, img:'https://images.pexels.com/photos/18022030/pexels-photo-18022030.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop' },
+  { n:'04', title:'Özel Elbise Dikimi', en:'Custom Tailoring', ru:'Пошив на заказ', sub:'Kadın · Erkek · Çocuk / Women & Men', desc:'Kadın elbisesi, erkek takım elbise, gömlek — ölçünüze özel sıfırdan dikim.', price:'₺800+', time:'3 gün / 3 days', wa:WA_TR, img:'https://images.pexels.com/photos/31112215/pexels-photo-31112215.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop' },
+  { n:'05', title:'Gelinlik & Abiye Tadilatı', en:'Wedding Dress Alterations', ru:'Ремонт свадебных платьев', sub:'Özel Gün Kıyafetleri / Evening Gowns', desc:'Özel gün kıyafetlerinde hassas daraltma, boy ayarı ve detaylı onarım.', price:'₺800+', time:'1 gün / 1 day', wa:WA_TR, img:'https://images.pexels.com/photos/8459366/pexels-photo-8459366.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop' },
   { n:'06', title:'Kuru Temizleme & Ütü', en:'Dry Cleaning & Ironing', ru:'Химчистка и глажка', sub:'Profesyonel Bakım / Laundry', desc:'Profesyonel kuru temizleme, buharlı ütü ve pres hizmeti. Otellerden alım.', price:'₺80+', time:'2–48 saat / hrs', wa:WA_TR, img:'https://images.pexels.com/photos/5202797/pexels-photo-5202797.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop' },
   { n:'07', title:'Eve Gelen Terzi', en:'Mobile Tailor Pickup', ru:'Выездной портной', sub:'Hurma · Liman · Sarısu Ücretsiz / Free Pickup', desc:'Araçlı terzi servisi: adresinizde ölçü alma, dikip 3 günde, tadilatları ise aynı gün veya ertesi gün teslim.', price:'Ücretsiz / Free', time:'24 saat / hrs', wa:WA_TR, img:'https://images.pexels.com/photos/6765658/pexels-photo-6765658.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop' },
   { n:'08', title:'Üniforma & Seri İmalat', en:'Uniform Manufacturing', ru:'Пошив униформы', sub:'Otel · Restoran · Okul / Hotel & Uniforms', desc:'Toplu üniforma üretimi, fason tekstil, seri imalat ve nakış hizmeti.', price:'Teklif Al', time:'Proje bazlı', wa:WA_TR, img:'https://images.pexels.com/photos/5378708/pexels-photo-5378708.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop' },
@@ -251,12 +252,12 @@ const DISTRICTS = [
 ];
 
 const FAQS = [
-  ['Antalya paça kısaltma fiyatı ne kadar?','₺150\'den başlar. Aynı gün teslim.'],
+  ['Antalya paça kısaltma fiyatı ne kadar?','₺200\'den başlar. Aynı gün teslim.'],
   ['Is there an English or Russian speaking tailor in Antalya?','Yes! Terzi Can speaks English, Russian, German, and Turkish. Contact us on WhatsApp for fast response.'],
   ['Есть ли портной в Анталье, который говорит по-русски?','Да! Ателье Terzi Can в Коньяалты принимает заказы на русском языке. Подгонка одежды, ремонт, укорачивание брюк, замена молний, химчистка. Бесплатный выезд в Хурма, Лиман, Сарысу.'],
   ['Gibt es einen deutschsprachigen Schneider in Antalya?','Ja! Terzi Can in Konyaaltı bietet Änderungsschneiderei auf Deutsch, Englisch, Russisch und Türkisch. Kundenservice per WhatsApp.'],
   ['Hurma, Liman, Sarısu\'ya ücretsiz servis var mı?','Evet, bu 3 bölgeye ücretsiz alım-teslimat. WhatsApp\'tan adresinizi göndermeniz yeterlidir.'],
-  ['What are the prices for zipper replacement & alterations?','Pants hemming starts at ₺150, zipper replacement at ₺200, waist alterations at ₺150. Fast 24-hour turnaround.'],
+  ['What are the prices for zipper replacement & alterations?','Pants hemming starts at ₺200, zipper replacement at ₺300, waist alterations at ₺200. Fast 24-hour turnaround.'],
 ];
 
 export default function TerziHizmetiPage() {

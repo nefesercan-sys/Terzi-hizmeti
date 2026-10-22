@@ -162,7 +162,7 @@ const VIP_CATEGORIES: Record<Lang, VipCategory[]> = {
       rows: [['Otel Servis Ücreti (Konyaaltı/Merkez)', '₺300+'], ['Otel Servis Ücreti (Lara/Kundu)', '₺500+'], ['Otel Servis Ücreti (Belek/Kemer)', 'Sorunuz']] },
     { icon: '✂️', title: 'Ekspres Tadilat', keyword: 'acil terzi Antalya',
       desc: 'Tatiliniz sırasında ihtiyaç duyduğunuz acil onarımlar.',
-      rows: [['Acil Paça Kısaltma', '₺250+'], ['Acil Yırtık Onarımı / Fermuar', '₺300+'], ['Abiye / Elbise Tadilatı', '₺600+']] },
+      rows: [['Acil Paça Kısaltma', '₺250+'], ['Acil Yırtık Onarımı / Fermuar', '₺300+'], ['Abiye / Elbise Tadilatı', '₺800+']] },
   ],
   en: [
     { icon: '🚗', title: 'Hotel Fitting & Delivery', keyword: 'Mobile tailor Antalya',
@@ -170,7 +170,7 @@ const VIP_CATEGORIES: Record<Lang, VipCategory[]> = {
       rows: [['Call-out Fee (Konyaalti/Center)', '₺300+'], ['Call-out Fee (Lara/Kundu)', '₺500+'], ['Call-out Fee (Belek/Kemer)', 'Ask price']] },
     { icon: '✂️', title: 'Express Alterations', keyword: 'urgent tailor Antalya',
       desc: 'Urgent repairs and alterations you need during your holiday.',
-      rows: [['Express Hemming', '₺250+'], ['Express Tear / Zipper Repair', '₺300+'], ['Evening Dress Alterations', '₺600+']] },
+      rows: [['Express Hemming', '₺250+'], ['Express Tear / Zipper Repair', '₺300+'], ['Evening Dress Alterations', '₺800+']] },
   ],
   ru: [
     { icon: '🚗', title: 'Выезд в отель и примерка', keyword: 'портной в отель Анталья',
@@ -178,7 +178,7 @@ const VIP_CATEGORIES: Record<Lang, VipCategory[]> = {
       rows: [['Выезд (Коньяалты/Центр)', '₺300+'], ['Выезд (Лара/Кунду)', '₺500+'], ['Выезд (Белек/Кемер)', 'По запросу']] },
     { icon: '✂️', title: 'Экспресс-ремонт', keyword: 'срочный портной Анталья',
       desc: 'Срочный ремонт и подгонка одежды во время вашего отдыха.',
-      rows: [['Срочное укорачивание', '₺250+'], ['Срочный ремонт / Молния', '₺300+'], ['Подгонка вечернего платья', '₺600+']] },
+      rows: [['Срочное укорачивание', '₺250+'], ['Срочный ремонт / Молния', '₺300+'], ['Подгонка вечернего платья', '₺800+']] },
   ],
   de: [
     { icon: '🚗', title: 'Anprobe & Lieferung im Hotel', keyword: 'mobiler Schneider Antalya',
@@ -186,7 +186,7 @@ const VIP_CATEGORIES: Record<Lang, VipCategory[]> = {
       rows: [['Anfahrtskosten (Konyaalti/Zentrum)', '₺300+'], ['Anfahrtskosten (Lara/Kundu)', '₺500+'], ['Anfahrtskosten (Belek/Kemer)', 'Auf Anfrage']] },
     { icon: '✂️', title: 'Express-Änderungen', keyword: 'Notfall-Schneider Antalya',
       desc: 'Dringende Reparaturen und Änderungen während Ihres Urlaubs.',
-      rows: [['Express-Kürzen', '₺250+'], ['Express-Riss / Reißverschluss', '₺300+'], ['Abendkleid-Änderungen', '₺600+']] },
+      rows: [['Express-Kürzen', '₺250+'], ['Express-Riss / Reißverschluss', '₺300+'], ['Abendkleid-Änderungen', '₺800+']] },
   ],
 };
 

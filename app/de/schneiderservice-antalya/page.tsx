@@ -46,11 +46,11 @@ export const metadata: Metadata = {
 
 const SERVICES: { title: string; desc: string; rows: [string, string][] }[] = [
   { title: 'Änderungen', desc: 'Passform-Anpassungen, damit Kleidung genau sitzt.',
-    rows: [['Hose kürzen', 'ab ₺150'], ['Taille enger machen', 'ab ₺150'], ['Ärmel kürzen', 'ab ₺200'], ['Kleid / Jacke anpassen', 'ab ₺200'], ['Brautkleid und Abendkleid', 'ab ₺800']] },
+    rows: [['Hose kürzen', 'ab ₺200'], ['Taille enger machen', 'ab ₺200'], ['Ärmel kürzen', 'ab ₺200'], ['Kleid / Jacke anpassen', 'ab ₺200'], ['Brautkleid und Abendkleid', 'ab ₺800']] },
   { title: 'Reparatur', desc: 'Reißverschluss, Risse, Knöpfe und Futter.',
-    rows: [['Reißverschluss (Hose)', 'ab ₺200'], ['Reißverschluss (Mantel)', 'ab ₺300'], ['Riss / Naht reparieren', 'ab ₺150'], ['Knopf, Haken', 'ab ₺60']] },
+    rows: [['Reißverschluss (Hose)', 'ab ₺300'], ['Reißverschluss (Mantel)', 'ab ₺300'], ['Riss / Naht reparieren', 'ab ₺150'], ['Knopf, Haken', 'ab ₺60']] },
   { title: 'Maßanfertigung', desc: 'Kleidung nach Ihren Maßen, auch aus Leinen und Baumwolle.',
-    rows: [['Herrenhemd', 'ab ₺350'], ['Herrenhose', 'ab ₺400'], ['Damenkleid', 'ab ₺600'], ['Abendkleid', 'ab ₺900'], ['Kinderkleidung', 'ab ₺250']] },
+    rows: [['Herrenhemd', 'ab ₺350'], ['Herrenhose', 'ab ₺400'], ['Damenkleid', 'ab ₺800'], ['Abendkleid', 'ab ₺900'], ['Kinderkleidung', 'ab ₺250']] },
   { title: 'Bügeln und Reinigung', desc: 'Dampfbügeln und chemische Reinigung.',
     rows: [['Bügeln (pro Stück)', 'ab ₺80'], ['Reinigung (Kleid)', 'ab ₺300'], ['Reinigung (Mantel)', 'ab ₺500']] },
 ];
@@ -68,7 +68,7 @@ const STEPS: [string, string][] = [
 const FAQS: [string, string][] = [
   ['Gibt es in Antalya einen Schneider, der Deutsch spricht?', 'Ja. Das Team von Terzi Can spricht Deutsch, Englisch, Russisch und Türkisch. Am einfachsten schreiben Sie uns per WhatsApp.'],
   ['Kommt der Schneider ins Hotel?', 'Ja. Wir besuchen Hotels, zum Beispiel in Belek, Lara, Kemer und Side. Senden Sie Hotelname und Standort per WhatsApp. Details zum Hotelservice: ' + HOTEL_URL],
-  ['Ist der Besuch kostenlos?', 'In Konyaaltı, Muratpaşa, Kepez und Lara ist der Besuch kostenlos. Für weiter entfernte Bezirke klären wir die Einzelheiten vorab per WhatsApp.'],
+  ['Ist der Besuch kostenlos?', 'In Konyaaltı ist der Besuch kostenlos; in anderen Bezirken richtet sich das Entgelt nach der Entfernung. Für weiter entfernte Bezirke klären wir die Einzelheiten vorab per WhatsApp.'],
   ['Wie bekomme ich einen Preis, ohne vorbeizukommen?', 'Senden Sie ein Foto des Kleidungsstücks und der gewünschten Arbeit per WhatsApp. Wir nennen Preis und Bearbeitungszeit. Preisliste: ' + PRICE_URL],
   ['Wie schnell ist eine Änderung fertig?', 'Viele Reparaturen und das Kürzen von Hosen sind am selben Tag oder innerhalb von 24 Stunden fertig. Die genaue Zeit hängt von Arbeit und Auslastung ab und wird per WhatsApp bestätigt.'],
   ['Können Sie ein Brautkleid oder Abendkleid ändern?', 'Ja. Brautkleid- und Abendkleid-Änderungen gibt es ab ₺800, je nach Aufwand. Senden Sie am besten vorab Fotos.'],

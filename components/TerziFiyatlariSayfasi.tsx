@@ -39,7 +39,7 @@ export const PRICE_ROWS: { icon: string; rows: string[] }[] = [
     "rows": [
       "₺350+",
       "₺400+",
-      "₺600+",
+      "₺800+",
       "₺900+",
       "₺250+"
     ]
@@ -77,9 +77,9 @@ export const FT: Record<FLang, FiyatText> = {
     "htmlLang": "tr",
     "locale": "tr_TR",
     "metaTitle": "Antalya Terzi Fiyat Listesi 2026 — Tüm Hizmetler Tek Sayfada",
-    "metaDesc": "Antalya terzi fiyatları 2026: paça kısaltma ₺150, bel daraltma ₺150, fermuar değişimi ₺200, elbise dikimi ₺600'den. Fotoğrafı WhatsApp'tan gönderin, net fiyatı öğrenin. Adrese ve otele gelen terzi. Her gün 08:00–23:00.",
+    "metaDesc": "Antalya terzi fiyatları 2026: paça kısaltma ₺200, bel daraltma ₺200, fermuar değişimi ₺300, elbise dikimi ₺800'den. Fotoğrafı WhatsApp'tan gönderin, net fiyatı öğrenin. Adrese ve otele gelen terzi. Her gün 08:00–23:00.",
     "ogTitle": "Antalya Terzi Fiyat Listesi 2026 — Fotoğraf Gönderin, Fiyatı Öğrenin",
-    "ogDesc": "Paça ₺150, bel daraltma ₺150, fermuar ₺200, elbise dikimi ₺600'den. Adrese ve otele gelen terzi.",
+    "ogDesc": "Paça ₺200, bel daraltma ₺200, fermuar ₺300, elbise dikimi ₺800'den. Adrese ve otele gelen terzi.",
     "keywords": [
       "Antalya terzi",
       "terzi fiyatları",
@@ -111,7 +111,7 @@ export const FT: Record<FLang, FiyatText> = {
     "heroTag": "₺ Şeffaf fiyat · Her gün 08:00–23:00 · Konyaaltı, Antalya",
     "h1a": "Antalya Terzi Fiyatları 2026",
     "h1b": "Fotoğrafı Gönderin, Fiyatı Öğrenin",
-    "heroDesc": "Paça kısaltma ₺150, bel daraltma ₺150, fermuar değişimi ₺200, elbise dikimi ₺600'den. Elbise tadilatı, yırtık onarımı, özel dikim, adrese ve otele gelen terzi. İşin fotoğrafını WhatsApp'tan gönderin, net fiyat ve süreyi öğrenin.",
+    "heroDesc": "Paça kısaltma ₺200, bel daraltma ₺200, fermuar değişimi ₺300, elbise dikimi ₺800'den. Elbise tadilatı, yırtık onarımı, özel dikim, adrese ve otele gelen terzi. İşin fotoğrafını WhatsApp'tan gönderin, net fiyat ve süreyi öğrenin.",
     "btnPhoto": "💬 Fotoğraf Gönderin →",
     "quickEyebrow": "Sorununuz ne?",
     "quickH": "İhtiyacınıza Göre Hızlı Cevap",
@@ -197,21 +197,21 @@ export const FT: Record<FLang, FiyatText> = {
       {
         "q": "Pantolonumun paçasını kısaltmak istiyorum",
         "a": "Kot ve kumaş pantolon paça kısaltma, çoğu zaman aynı gün.",
-        "price": "₺150'den",
+        "price": "₺200'den",
         "href": "/konyaalti-paca-kisaltma",
         "cta": "Paça kısaltma"
       },
       {
         "q": "Fermuar değişimi",
         "a": "Pantolon, kot, etek, mont ve çanta fermuarı.",
-        "price": "₺200'den",
+        "price": "₺300'den",
         "href": "/konyaalti-fermuar-tamiri",
         "cta": "Fermuar tamiri"
       },
       {
         "q": "Elbise diktirmek / kendime elbise dikmek",
         "a": "Ölçü, model ve kumaş seçimi, prova ve teslim. Fotoğrafını gönderin.",
-        "price": "₺600'den",
+        "price": "₺800'den",
         "href": "#dikim",
         "cta": "Özel dikim"
       },
@@ -225,7 +225,7 @@ export const FT: Record<FLang, FiyatText> = {
       {
         "q": "Adrese veya otele gelen terzi",
         "a": "Ölçüyü adresinizde alırız, işi atölyede yapar, geri teslim ederiz.",
-        "price": "Konyaaltı, Muratpaşa, Kepez, Lara ücretsiz",
+        "price": "Konyaaltı ücretsiz, diğer bölgeler mesafeye göre",
         "href": "/otele-gelen-terzi-antalya",
         "cta": "Otele gelen terzi"
       },
@@ -255,23 +255,23 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Elbisemin belini daraltmak istiyorum, ne kadar tutar?",
-        "Bel ve beden daraltma ₺150'den başlar. Kumaşa, astara ve modele göre değişir. Elbisenin fotoğrafını göndermeniz yeterli; provaya gelirseniz ölçü yerinde alınır."
+        "Bel ve beden daraltma ₺200'den başlar. Kumaşa, astara ve modele göre değişir. Elbisenin fotoğrafını göndermeniz yeterli; provaya gelirseniz ölçü yerinde alınır."
       ],
       [
         "Pantolonumun paçasını kısaltmak istiyorum, ne kadar sürer?",
-        "Paça kısaltma ₺150'den başlar; kot ve kumaş pantolonlarda çoğu zaman aynı gün teslim edilir. Ayrıntı: /konyaalti-paca-kisaltma"
+        "Paça kısaltma ₺200'den başlar; kot ve kumaş pantolonlarda çoğu zaman aynı gün teslim edilir. Ayrıntı: /konyaalti-paca-kisaltma"
       ],
       [
         "Kendime elbise diktirmek istiyorum, nasıl ilerliyor?",
-        "Beğendiğiniz modelin fotoğrafını WhatsApp'tan gönderirsiniz. Ölçü alınır, kumaş ve model netleşir, gerekirse prova yapılır, sonra teslim edilir. Kadın elbise dikimi ₺600'den, abiye ₺900'den başlar; fiyat kumaş ve işçiliğe göre netleşir."
+        "Beğendiğiniz modelin fotoğrafını WhatsApp'tan gönderirsiniz. Ölçü alınır, kumaş ve model netleşir, gerekirse prova yapılır, sonra teslim edilir. Kadın elbise dikimi ₺800'den, abiye ₺900'den başlar; fiyat kumaş ve işçiliğe göre netleşir."
       ],
       [
         "Fermuar değişimi yapan, hafta sonu ve pazar günü açık bir terzi var mı?",
-        "Terzi Can haftanın 7 günü, Cumartesi ve Pazar dahil, 08:00–23:00 arası açıktır. Mesai dışında WhatsApp'tan fotoğraf ve mesaj bırakabilirsiniz. Fermuar değişimi ₺200'den başlar."
+        "Terzi Can haftanın 7 günü, Cumartesi ve Pazar dahil, 08:00–23:00 arası açıktır. Mesai dışında WhatsApp'tan fotoğraf ve mesaj bırakabilirsiniz. Fermuar değişimi ₺300'den başlar."
       ],
       [
         "Adrese veya otele gelen terzi var mı?",
-        "Evet. Ölçü ve teslim adresinizde ya da otelinizde yapılır, iş atölyede tamamlanır. Konyaaltı, Muratpaşa, Kepez ve Lara'da ziyaret ücretsizdir; diğer bölgeler randevuyla. Ayrıntı: /otele-gelen-terzi-antalya"
+        "Evet. Ölçü ve teslim adresinizde ya da otelinizde yapılır, iş atölyede tamamlanır. Konyaaltı'nda ziyaret ücretsizdir; diğer bölgelerde servis ücreti mesafeye göre belirlenir. Ayrıntı: /otele-gelen-terzi-antalya"
       ],
       [
         "Terzi fiyatlarını nasıl öğrenirim?",
@@ -300,9 +300,9 @@ export const FT: Record<FLang, FiyatText> = {
     "htmlLang": "en",
     "locale": "en_US",
     "metaTitle": "Tailor Prices Antalya 2026 — Every Service, One Page",
-    "metaDesc": "Tailor prices in Antalya 2026: hemming ₺150, taking in a waist ₺150, zipper replacement ₺200, custom dress from ₺600. Send a photo on WhatsApp for an exact price. Tailor comes to your hotel. Open every day 08:00–23:00.",
+    "metaDesc": "Tailor prices in Antalya 2026: hemming ₺200, taking in a waist ₺200, zipper replacement ₺300, custom dress from ₺800. Send a photo on WhatsApp for an exact price. Tailor comes to your hotel. Open every day 08:00–23:00.",
     "ogTitle": "Tailor Prices Antalya 2026 — Send a Photo, Get Your Price",
-    "ogDesc": "Hemming ₺150, waist ₺150, zipper ₺200, custom dress from ₺600. Mobile tailor to your hotel. Open 7 days.",
+    "ogDesc": "Hemming ₺200, waist ₺200, zipper ₺300, custom dress from ₺800. Mobile tailor to your hotel. Open 7 days.",
     "keywords": [
       "tailor Antalya",
       "tailor prices Antalya",
@@ -330,7 +330,7 @@ export const FT: Record<FLang, FiyatText> = {
     "heroTag": "₺ Transparent prices · Open every day 08:00–23:00 · Konyaaltı, Antalya",
     "h1a": "Tailor Prices in Antalya 2026",
     "h1b": "Send a Photo, Get Your Price",
-    "heroDesc": "Hemming ₺150, taking in a waist ₺150, zipper replacement ₺200, custom dress from ₺600. Clothing repair, alterations, custom sewing, and a tailor who comes to your hotel or address. Send a photo of the job on WhatsApp and get an exact price and time.",
+    "heroDesc": "Hemming ₺200, taking in a waist ₺200, zipper replacement ₺300, custom dress from ₺800. Clothing repair, alterations, custom sewing, and a tailor who comes to your hotel or address. Send a photo of the job on WhatsApp and get an exact price and time.",
     "btnPhoto": "💬 Send a Photo →",
     "quickEyebrow": "What do you need?",
     "quickH": "Quick Answers for Your Situation",
@@ -416,7 +416,7 @@ export const FT: Record<FLang, FiyatText> = {
       {
         "q": "I want to shorten my trousers",
         "a": "Jeans and dress trousers, usually done the same day.",
-        "price": "from ₺150",
+        "price": "from ₺200",
         "href": "/en/tailor-service-antalya",
         "cta": "Tailor service"
       },
@@ -430,7 +430,7 @@ export const FT: Record<FLang, FiyatText> = {
       {
         "q": "I want a dress made for me",
         "a": "Measurements, model and fabric choice, fitting and delivery. Send a photo of the design.",
-        "price": "from ₺600",
+        "price": "from ₺800",
         "href": "#dikim",
         "cta": "Custom sewing"
       },
@@ -474,19 +474,19 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "I want to take in the waist of my dress. How much does it cost?",
-        "Waist and size reduction starts from ₺150 and depends on fabric, lining and model. Send a photo of the dress; if you visit for a fitting, measurements are taken on the spot."
+        "Waist and size reduction starts from ₺200 and depends on fabric, lining and model. Send a photo of the dress; if you visit for a fitting, measurements are taken on the spot."
       ],
       [
         "I want to shorten my trousers. How long does it take?",
-        "Hem shortening starts from ₺150; jeans and dress trousers are usually returned the same day."
+        "Hem shortening starts from ₺200; jeans and dress trousers are usually returned the same day."
       ],
       [
         "I want to have a dress made for me. How does it work?",
-        "Send a photo of the model you like on WhatsApp. Measurements are taken, fabric and model are confirmed, a fitting is done if needed, then it is delivered. Women's dresses start from ₺600 and evening gowns from ₺900; the final price depends on fabric and workmanship."
+        "Send a photo of the model you like on WhatsApp. Measurements are taken, fabric and model are confirmed, a fitting is done if needed, then it is delivered. Women's dresses start from ₺800 and evening gowns from ₺900; the final price depends on fabric and workmanship."
       ],
       [
         "Is there a tailor open on weekends and Sundays for zipper replacement?",
-        "Terzi Can is open every day of the week, including Saturday and Sunday, from 08:00to23:00. Outside these hours you can leave photos and messages on WhatsApp. Zipper replacement starts from ₺200."
+        "Terzi Can is open every day of the week, including Saturday and Sunday, from 08:00to23:00. Outside these hours you can leave photos and messages on WhatsApp. Zipper replacement starts from ₺300."
       ],
       [
         "Does a tailor come to my hotel or address?",
@@ -519,9 +519,9 @@ export const FT: Record<FLang, FiyatText> = {
     "htmlLang": "de",
     "locale": "de_DE",
     "metaTitle": "Schneider Preisliste Antalya 2026 — Alle Leistungen",
-    "metaDesc": "Schneiderpreise in Antalya 2026: Hose kürzen ab ₺150, Taille enger machen ab ₺150, Reißverschluss ab ₺200, Kleid nach Maß ab ₺600. Foto per WhatsApp senden, genauen Preis erfahren. Schneider kommt ins Hotel. Täglich 08:00–23:00.",
+    "metaDesc": "Schneiderpreise in Antalya 2026: Hose kürzen ab ₺200, Taille enger machen ab ₺200, Reißverschluss ab ₺300, Kleid nach Maß ab ₺800. Foto per WhatsApp senden, genauen Preis erfahren. Schneider kommt ins Hotel. Täglich 08:00–23:00.",
     "ogTitle": "Schneider Preise Antalya 2026 — Foto senden, Preis erfahren",
-    "ogDesc": "Kürzen ab ₺150, Taille ab ₺150, Reißverschluss ab ₺200, Kleid nach Maß ab ₺600. Mobiler Schneider, 7 Tage geöffnet.",
+    "ogDesc": "Kürzen ab ₺200, Taille ab ₺200, Reißverschluss ab ₺300, Kleid nach Maß ab ₺800. Mobiler Schneider, 7 Tage geöffnet.",
     "keywords": [
       "Schneider Antalya",
       "Schneider Preise Antalya",
@@ -547,7 +547,7 @@ export const FT: Record<FLang, FiyatText> = {
     "heroTag": "₺ Transparente Preise · Täglich 08:00–23:00 geöffnet · Konyaaltı, Antalya",
     "h1a": "Schneider Preise in Antalya 2026",
     "h1b": "Foto senden, Preis erfahren",
-    "heroDesc": "Hose kürzen ab ₺150, Taille enger machen ab ₺150, Reißverschluss ab ₺200, Kleid nach Maß ab ₺600. Kleidung reparieren, Änderungen, Maßanfertigung und ein Schneider, der zu Ihrem Hotel oder Ihrer Adresse kommt. Senden Sie ein Foto per WhatsApp und erfahren Sie Preis und Dauer.",
+    "heroDesc": "Hose kürzen ab ₺200, Taille enger machen ab ₺200, Reißverschluss ab ₺300, Kleid nach Maß ab ₺800. Kleidung reparieren, Änderungen, Maßanfertigung und ein Schneider, der zu Ihrem Hotel oder Ihrer Adresse kommt. Senden Sie ein Foto per WhatsApp und erfahren Sie Preis und Dauer.",
     "btnPhoto": "💬 Foto senden →",
     "quickEyebrow": "Was brauchen Sie?",
     "quickH": "Schnelle Antworten für Ihren Fall",
@@ -647,7 +647,7 @@ export const FT: Record<FLang, FiyatText> = {
       {
         "q": "Ich möchte ein Kleid nach Maß",
         "a": "Maßnehmen, Modell- und Stoffwahl, Anprobe und Lieferung. Senden Sie ein Foto des Modells.",
-        "price": "ab ₺600",
+        "price": "ab ₺800",
         "href": "#dikim",
         "cta": "Maßanfertigung"
       },
@@ -691,23 +691,23 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Ich möchte die Taille meines Kleides enger machen. Was kostet das?",
-        "Taillen- und Größenanpassung beginnt ab ₺150 und hängt von Stoff, Futter und Modell ab. Senden Sie ein Foto des Kleides; bei einer Anprobe wird vor Ort Maß genommen."
+        "Taillen- und Größenanpassung beginnt ab ₺200 und hängt von Stoff, Futter und Modell ab. Senden Sie ein Foto des Kleides; bei einer Anprobe wird vor Ort Maß genommen."
       ],
       [
         "Ich möchte meine Hose kürzen. Wie lange dauert das?",
-        "Kürzen beginnt ab ₺150; Jeans und Stoffhosen sind meist am selben Tag fertig."
+        "Kürzen beginnt ab ₺200; Jeans und Stoffhosen sind meist am selben Tag fertig."
       ],
       [
         "Ich möchte mir ein Kleid schneidern lassen. Wie läuft das ab?",
-        "Senden Sie per WhatsApp ein Foto des gewünschten Modells. Es wird Maß genommen, Stoff und Modell werden festgelegt, bei Bedarf gibt es eine Anprobe, dann folgt die Lieferung. Damenkleider ab ₺600, Abendkleider ab ₺900; der Endpreis hängt von Stoff und Aufwand ab."
+        "Senden Sie per WhatsApp ein Foto des gewünschten Modells. Es wird Maß genommen, Stoff und Modell werden festgelegt, bei Bedarf gibt es eine Anprobe, dann folgt die Lieferung. Damenkleider ab ₺800, Abendkleider ab ₺900; der Endpreis hängt von Stoff und Aufwand ab."
       ],
       [
         "Gibt es einen Schneider für Reißverschlüsse, der am Wochenende und sonntags geöffnet ist?",
-        "Terzi Can hat an allen 7 Tagen der Woche geöffnet, auch samstags und sonntags, von 08:00bis23:00 Uhr. Außerhalb dieser Zeiten können Sie Fotos und Nachrichten per WhatsApp senden. Reißverschluss wechseln ab ₺200."
+        "Terzi Can hat an allen 7 Tagen der Woche geöffnet, auch samstags und sonntags, von 08:00bis23:00 Uhr. Außerhalb dieser Zeiten können Sie Fotos und Nachrichten per WhatsApp senden. Reißverschluss wechseln ab ₺300."
       ],
       [
         "Kommt ein Schneider in mein Hotel oder an meine Adresse?",
-        "Ja. Maßnehmen und Lieferung erfolgen in Ihrem Hotel oder an Ihrer Adresse; die Arbeit wird in der Werkstatt erledigt. In Konyaaltı, Muratpaşa, Kepez und Lara ist der Besuch kostenlos; andere Bezirke nach Terminvereinbarung. Details: /de/schneider-service-hotel-antalya"
+        "Ja. Maßnehmen und Lieferung erfolgen in Ihrem Hotel oder an Ihrer Adresse; die Arbeit wird in der Werkstatt erledigt. In Konyaaltı ist der Besuch kostenlos; in anderen Bezirken richtet sich das Entgelt nach der Entfernung (nach Terminvereinbarung). Details: /de/schneider-service-hotel-antalya"
       ],
       [
         "Wie erfahre ich die Preise?",
@@ -736,9 +736,9 @@ export const FT: Record<FLang, FiyatText> = {
     "htmlLang": "ru",
     "locale": "ru_RU",
     "metaTitle": "Цены портного в Анталье 2026 — все услуги на одной странице",
-    "metaDesc": "Цены портного в Анталье 2026: подшив брюк от ₺150, ушить в талии от ₺150, замена молнии от ₺200, платье на заказ от ₺600. Пришлите фото в WhatsApp и узнайте точную цену. Портной приедет в отель. Ежедневно 08:00–23:00.",
+    "metaDesc": "Цены портного в Анталье 2026: подшив брюк от ₺200, ушить в талии от ₺200, замена молнии от ₺300, платье на заказ от ₺800. Пришлите фото в WhatsApp и узнайте точную цену. Портной приедет в отель. Ежедневно 08:00–23:00.",
     "ogTitle": "Цены портного в Анталье 2026 — пришлите фото, узнайте цену",
-    "ogDesc": "Подшив от ₺150, талия от ₺150, молния от ₺200, платье на заказ от ₺600. Выездной портной, работаем 7 дней.",
+    "ogDesc": "Подшив от ₺200, талия от ₺200, молния от ₺300, платье на заказ от ₺800. Выездной портной, работаем 7 дней.",
     "keywords": [
       "портной Анталья",
       "цены портного Анталья",
@@ -764,7 +764,7 @@ export const FT: Record<FLang, FiyatText> = {
     "heroTag": "₺ Прозрачные цены · Ежедневно 08:00–23:00 · Коньяалты, Анталья",
     "h1a": "Цены портного в Анталье 2026",
     "h1b": "Пришлите фото — узнайте цену",
-    "heroDesc": "Подшив брюк от ₺150, ушить в талии от ₺150, замена молнии от ₺200, платье на заказ от ₺600. Ремонт и подгонка одежды, пошив на заказ и портной, который приедет в ваш отель или по адресу. Пришлите фото работы в WhatsApp — назовём точную цену и срок.",
+    "heroDesc": "Подшив брюк от ₺200, ушить в талии от ₺200, замена молнии от ₺300, платье на заказ от ₺800. Ремонт и подгонка одежды, пошив на заказ и портной, который приедет в ваш отель или по адресу. Пришлите фото работы в WhatsApp — назовём точную цену и срок.",
     "btnPhoto": "💬 Отправить фото →",
     "quickEyebrow": "Что вам нужно?",
     "quickH": "Быстрые ответы по вашей задаче",
@@ -843,7 +843,7 @@ export const FT: Record<FLang, FiyatText> = {
       {
         "q": "Хочу ушить платье в талии",
         "a": "Уменьшение по талии и размеру, в тот же день или за 24 часа.",
-        "price": "от ₺150",
+        "price": "от ₺200",
         "href": "#fiyatlar",
         "cta": "Прайс-лист"
       },
@@ -864,7 +864,7 @@ export const FT: Record<FLang, FiyatText> = {
       {
         "q": "Хочу платье на заказ",
         "a": "Мерки, выбор модели и ткани, примерка и выдача. Пришлите фото модели.",
-        "price": "от ₺600",
+        "price": "от ₺800",
         "href": "#dikim",
         "cta": "Пошив на заказ"
       },
@@ -908,23 +908,23 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Хочу ушить платье в талии. Сколько это стоит?",
-        "Уменьшение по талии и размеру — от ₺150, зависит от ткани, подкладки и модели. Пришлите фото платья; если придёте на примерку, мерки снимем на месте."
+        "Уменьшение по талии и размеру — от ₺200, зависит от ткани, подкладки и модели. Пришлите фото платья; если придёте на примерку, мерки снимем на месте."
       ],
       [
         "Хочу укоротить брюки. Сколько времени это занимает?",
-        "Подшив — от ₺150; джинсы и классические брюки чаще всего готовы в тот же день."
+        "Подшив — от ₺200; джинсы и классические брюки чаще всего готовы в тот же день."
       ],
       [
         "Хочу платье на заказ. Как это происходит?",
-        "Пришлите в WhatsApp фото понравившейся модели. Снимаем мерки, согласуем ткань и модель, при необходимости делаем примерку, затем выдаём готовое. Женские платья — от ₺600, вечерние — от ₺900; итоговая цена зависит от ткани и работы."
+        "Пришлите в WhatsApp фото понравившейся модели. Снимаем мерки, согласуем ткань и модель, при необходимости делаем примерку, затем выдаём готовое. Женские платья — от ₺800, вечерние — от ₺900; итоговая цена зависит от ткани и работы."
       ],
       [
         "Есть ли портной для замены молнии, который работает в выходные и в воскресенье?",
-        "Terzi Can работает все 7 дней в неделю, включая субботу и воскресенье, с 08:00до23:00. Вне этого времени можно оставить фото и сообщение в WhatsApp. Замена молнии — от ₺200."
+        "Terzi Can работает все 7 дней в неделю, включая субботу и воскресенье, с 08:00до23:00. Вне этого времени можно оставить фото и сообщение в WhatsApp. Замена молнии — от ₺300."
       ],
       [
         "Приедет ли портной в мой отель или по адресу?",
-        "Да. Мерки и выдача — в вашем отеле или по адресу, работа выполняется в мастерской. В Коньяалты, Муратпаше, Кепезе и Ларе выезд бесплатный; другие районы — по записи. Подробнее: /ru/vyezdnoy-portnoy-antalya"
+        "Да. Мерки и выдача — в вашем отеле или по адресу, работа выполняется в мастерской. В Коньяалты выезд бесплатный; в другие районы — по записи, стоимость зависит от расстояния. Подробнее: /ru/vyezdnoy-portnoy-antalya"
       ],
       [
         "Как узнать цену?",

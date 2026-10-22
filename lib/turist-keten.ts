@@ -548,7 +548,7 @@ export const HUB_COPY: L3<HubCopy> = {
   en: {
     title: `Custom Linen Clothing Antalya — Made in 3 Days, from €${PRICE_FROM_EUR}`,
     desc: `Custom & serial linen and cotton clothing in Antalya: shirts, dresses, trousers, jackets, kids. Usually 3 days, from €${PRICE_FROM_EUR}. Terzi Can, Konyaaltı.`,
-    keywords: ['custom linen clothing Antalya', 'made to measure linen Antalya', 'tailor made clothes Antalya tourists', 'linen dress made to measure Antalya', 'linen shirt tailor Antalya', 'souvenir from Antalya clothing', 'bespoke linen clothing Turkey holiday', 'tailor Antalya 3 days', 'clothing alterations Antalya tourists', 'tailor Konyaaltı', 'natural fabric clothing Antalya', 'linen cotton tailor Antalya', 'serial production linen clothing Turkey', 'custom linen clothing production', 'linen clothing manufacturer Antalya'],
+    keywords: ['custom linen clothing Antalya', 'made to measure linen Antalya', 'tailor made clothes Antalya tourists', 'linen dress made to measure Antalya', 'linen shirt tailor Antalya', 'souvenir from Antalya clothing', 'bespoke linen clothing Turkey holiday', 'tailor Antalya 3 days', 'clothing alterations Antalya tourists', 'tailor Konyaaltı', 'natural fabric clothing Antalya', 'linen cotton tailor Antalya', 'serial production linen clothing Turkey', 'custom linen clothing production', 'linen clothing manufacturer Antalya', 'linen clothing manufacturer Turkey', 'custom linen clothing production Turkey', 'linen pattern making Turkey', 'contract sewing linen cotton clothing Turkey', 'private label linen clothing Turkey', 'linen clothing ship to Europe'],
     h1a: 'Custom Linen & Cotton Clothing', h1b: 'Made for you in Antalya — usually in 3 days',
     lead: `Terzi Can makes shirts, dresses, trousers, jackets and children's clothing to your measurements in natural linen and cotton. Your piece is usually ready in 3 days, with prices from €${PRICE_FROM_EUR}. It is a souvenir from Antalya you can actually wear — and if you bought clothes here that don't fit, we alter them in usually 1 day, and in urgent cases often within 2–4 hours.`,
     designH: 'Your idea, made to measure',
@@ -568,7 +568,7 @@ export const HUB_COPY: L3<HubCopy> = {
   de: {
     title: `Leinenkleidung nach Maß in Antalya — in 3 Tagen, ab ${PRICE_FROM_EUR} €`,
     desc: `Leinen- & Baumwollkleidung nach Maß und in Serie in Antalya: Hemden, Kleider, Hosen, Sakkos, Kinder. Meist 3 Tage, ab ${PRICE_FROM_EUR} €. Terzi Can, Konyaaltı.`,
-    keywords: ['Leinenkleidung nach Maß Antalya', 'Maßschneider Antalya Urlaub', 'Kleidung maßschneidern lassen Antalya', 'Leinenkleid Maßanfertigung Antalya', 'Leinenhemd Schneider Antalya', 'Souvenir Antalya Kleidung', 'Maßanfertigung Türkei Urlaub Leinen', 'Schneider Antalya 3 Tage', 'Kleidung ändern lassen Antalya Urlaub', 'Schneider Konyaaltı', 'Naturstoff Kleidung Antalya', 'Leinen Baumwolle Schneider Antalya', 'Leinenkleidung Serienproduktion Türkei', 'Leinenkleidung Hersteller Antalya', 'Leinenkleidung Sonderanfertigung Serie'],
+    keywords: ['Leinenkleidung nach Maß Antalya', 'Maßschneider Antalya Urlaub', 'Kleidung maßschneidern lassen Antalya', 'Leinenkleid Maßanfertigung Antalya', 'Leinenhemd Schneider Antalya', 'Souvenir Antalya Kleidung', 'Maßanfertigung Türkei Urlaub Leinen', 'Schneider Antalya 3 Tage', 'Kleidung ändern lassen Antalya Urlaub', 'Schneider Konyaaltı', 'Naturstoff Kleidung Antalya', 'Leinen Baumwolle Schneider Antalya', 'Leinenkleidung Serienproduktion Türkei', 'Leinenkleidung Hersteller Antalya', 'Leinenkleidung Sonderanfertigung Serie', 'Leinenkleidung Hersteller Türkei', 'Leinenbekleidung Produktion Türkei', 'Schnittmuster Leinenkleidung Türkei', 'Lohnfertigung Leinen Baumwolle Türkei', 'Private Label Leinenkleidung Türkei', 'Leinenkleidung Versand Europa'],
     h1a: 'Leinen- & Baumwollkleidung nach Maß', h1b: 'In Antalya für Sie gefertigt — in der Regel in 3 Tagen',
     lead: `Terzi Can fertigt Hemden, Kleider, Hosen, Sakkos und Kinderkleidung nach Ihren Maßen aus natürlichem Leinen und Baumwolle. Ihr Stück ist in der Regel in 3 Tagen fertig, Preise ab ${PRICE_FROM_EUR} €. Ein Souvenir aus Antalya, das Sie wirklich tragen — und wenn Sie hier gekaufte Kleidung ändern lassen möchten, erledigen wir das in der Regel in 1 Tag, in dringenden Fällen oft in 2–4 Stunden.`,
     designH: 'Ihre Idee, nach Maß gefertigt',
@@ -588,7 +588,7 @@ export const HUB_COPY: L3<HubCopy> = {
   ru: {
     title: `Пошив из льна в Анталье на заказ — за 3 дня, от ${PRICE_FROM_EUR} €`,
     desc: `Пошив одежды из льна и хлопка на заказ и серийно в Анталье: рубашки, платья, брюки, пиджаки, дети. Обычно 3 дня, от ${PRICE_FROM_EUR} €. Terzi Can.`,
-    keywords: ['пошив одежды из льна Анталья', 'индивидуальный пошив Анталья туристам', 'пошив на заказ Анталья за 3 дня', 'льняное платье на заказ Анталья', 'льняная рубашка на заказ Анталья', 'сувенир из Анталии одежда', 'ателье Анталья туристам', 'подгонка одежды Анталья срочно', 'портной Коньяалты', 'одежда из натуральных тканей Анталья', 'лён хлопок ателье Анталья', 'серийное производство одежды из льна Турция', 'производство льняной одежды Анталья', 'индивидуальный и серийный пошив лён'],
+    keywords: ['пошив одежды из льна Анталья', 'индивидуальный пошив Анталья туристам', 'пошив на заказ Анталья за 3 дня', 'льняное платье на заказ Анталья', 'льняная рубашка на заказ Анталья', 'сувенир из Анталии одежда', 'ателье Анталья туристам', 'подгонка одежды Анталья срочно', 'портной Коньяалты', 'одежда из натуральных тканей Анталья', 'лён хлопок ателье Анталья', 'серийное производство одежды из льна Турция', 'производство льняной одежды Анталья', 'индивидуальный и серийный пошив лён', 'производитель льняной одежды Турция', 'пошив льняной одежды серийно Турция', 'лекала льняная одежда Турция', 'контрактное производство лён хлопок Турция', 'одежда из льна под своей маркой Турция', 'льняная одежда доставка в Россию'],
     h1a: 'Одежда из льна и хлопка на заказ', h1b: 'Шьём для вас в Анталье — обычно за 3 дня',
     lead: `Terzi Can шьёт рубашки, платья, брюки, пиджаки и детскую одежду по вашим меркам из натурального льна и хлопка. Обычно изделие готово за 3 дня, цены от ${PRICE_FROM_EUR} €. Это сувенир из Антальи, который действительно можно носить. А если вы купили здесь вещи, которые не сидят, мы подгоним их обычно за 1 день, в срочных случаях часто за 2–4 часа.`,
     designH: 'Ваша идея — по вашим меркам',
@@ -802,6 +802,13 @@ export function hubJsonLd(lang: TLang) {
             '@type': 'Offer', itemOffered: { '@type': 'Service', name: PRODUCTS[p][lang].name, url: abs(productUrl(lang, p)) },
           })),
         },
+      },
+      {
+        '@type': 'Service', '@id': `${url}#production`, name: `${u.hubName}: serial & contract production`,
+        serviceType: 'Garment production (pattern making, samples, serial and contract production)',
+        provider: { '@id': `${SITE}#business` },
+        areaServed: [{ '@type': 'Place', name: 'Europe' }, { '@type': 'Country', name: 'Russia' }, { '@type': 'Country', name: 'Türkiye' }],
+        description: 'Linen and cotton clothing for men, women and kids: pattern making, samples, serial and contract production, shipped to Europe, Russia and other countries. Quantity and price per project.',
       },
       faqNode(url, c.faq),
     ],

@@ -61,7 +61,7 @@ export const translations: Record<AnaveraLang, Copy> = {
     highlights: [
       { title: 'Every Garment Model', desc: 'Menswear, womenswear, kidswear, workwear and uniforms, knit and woven.' },
       { title: 'Sample to Serial', desc: 'Design, pattern, fabric trial, approved sample, then serial production.' },
-      { title: 'No Minimum Order', desc: 'Samples, small runs and large orders are quoted per project.' },
+      { title: 'Quoted Per Project', desc: 'Samples, small runs and large orders are quoted per project.' },
       { title: 'On-Time Delivery', desc: 'Agreed schedule, regular progress updates and checks at each stage.' },
     ],
     whoSub: 'Who We Work With',
@@ -118,7 +118,7 @@ export const translations: Record<AnaveraLang, Copy> = {
     faqSub: 'Frequently Asked Questions',
     faqTitle: 'Production & Export Details',
     faq: [
-      { title: 'What is your minimum order quantity?', desc: 'We do not require a minimum order quantity. Samples, small runs and large orders are each quoted per project. Send your design or a reference photo on WhatsApp.' },
+      { title: 'What is your minimum order quantity?', desc: 'Quantities depend on the project. Samples, small runs and large orders are each quoted per project. Send your design or a reference photo on WhatsApp.' },
       { title: 'Can I start with only an idea, sketch or photo?', desc: 'Yes. We help prepare the technical details, pattern and fabric proposal, then make a trial sample for your approval.' },
       { title: 'Which stages do you cover?', desc: 'Model and design development, pattern making, fabric and trim sourcing, trial sample, approval, serial production, packing and export preparation.' },
       { title: 'How long does production take?', desc: 'It depends on the model, fabric and quantity. You receive a written schedule with the quote, covering sample, approval and serial production.' },
@@ -207,7 +207,7 @@ export const translations: Record<AnaveraLang, Copy> = {
     faqSub: 'Sık Sorulan Sorular',
     faqTitle: 'Üretim ve İhracat Detayları',
     faq: [
-      { title: 'Minimum sipariş adediniz nedir?', desc: 'Minimum sipariş şartı koymuyoruz. Numune, az adetli ve yüksek adetli siparişler proje bazında fiyatlandırılır. Tasarımınızı veya örnek fotoğrafı WhatsApp\'tan gönderin.' },
+      { title: 'Minimum sipariş adediniz nedir?', desc: 'Adet projeye göre belirlenir. Numune, az adetli ve yüksek adetli siparişler proje bazında fiyatlandırılır. Tasarımınızı veya örnek fotoğrafı WhatsApp\'tan gönderin.' },
       { title: 'Sadece fikir, çizim veya fotoğrafla başlayabilir miyim?', desc: 'Evet. Teknik detayların, kalıbın ve kumaş önerisinin hazırlanmasına yardımcı olur, onayınız için deneme numunesi dikeriz.' },
       { title: 'Hangi aşamaları üstleniyorsunuz?', desc: 'Model ve tasarım geliştirme, kalıp, kumaş ve aksesuar temini, deneme numunesi, onay, seri imalat, paketleme ve ihracat hazırlığı.' },
       { title: 'Üretim ne kadar sürer?', desc: 'Model, kumaş ve adede göre değişir. Tekliften birlikte numune, onay ve seri imalatı kapsayan yazılı bir takvim verilir.' },
@@ -239,7 +239,7 @@ export const translations: Record<AnaveraLang, Copy> = {
     highlights: [
       { title: 'Alle Bekleidungsmodelle', desc: 'Herren-, Damen-, Kinder- und Berufsbekleidung sowie Uniformen, Strick und Gewebe.' },
       { title: 'Vom Muster zur Serie', desc: 'Design, Schnitt, Stoffprobe, freigegebenes Muster, dann Serienfertigung.' },
-      { title: 'Keine Mindestmenge', desc: 'Muster, Kleinserien und Großaufträge werden projektbezogen kalkuliert.' },
+      { title: 'Projektbezogenes Angebot', desc: 'Muster, Kleinserien und Großaufträge werden projektbezogen kalkuliert.' },
       { title: 'Pünktliche Lieferung', desc: 'Vereinbarter Zeitplan, regelmäßige Updates und Kontrollen auf jeder Stufe.' },
     ],
     whoSub: 'Für wen wir produzieren',
@@ -328,7 +328,7 @@ export const translations: Record<AnaveraLang, Copy> = {
     highlights: [
       { title: 'Любые модели одежды', desc: 'Мужская, женская, детская одежда, спецодежда и униформа; трикотаж и ткани.' },
       { title: 'От образца к серии', desc: 'Дизайн, лекала, проба ткани, утверждённый образец, затем серия.' },
-      { title: 'Без минимального заказа', desc: 'Образцы, малые и крупные партии рассчитываются под проект.' },
+      { title: 'Цена под проект', desc: 'Образцы, малые и крупные партии рассчитываются под проект.' },
       { title: 'Поставка в срок', desc: 'Согласованный график, регулярные отчёты и контроль на каждом этапе.' },
     ],
     whoSub: 'С кем мы работаем',
@@ -385,7 +385,7 @@ export const translations: Record<AnaveraLang, Copy> = {
     faqSub: 'Частые вопросы',
     faqTitle: 'Производство и экспорт: подробности',
     faq: [
-      { title: 'Каков минимальный заказ?', desc: 'Минимального заказа нет. Образцы, малые и крупные партии рассчитываются под проект. Пришлите дизайн или фото-референс в WhatsApp.' },
+      { title: 'Каков минимальный заказ?', desc: 'Количество определяется проектом. Образцы, малые и крупные партии рассчитываются под проект. Пришлите дизайн или фото-референс в WhatsApp.' },
       { title: 'Можно начать только с идеи, эскиза или фото?', desc: 'Да. Мы поможем с техническими деталями, лекалами и подбором ткани, затем сошьём пробный образец на утверждение.' },
       { title: 'Какие этапы вы берёте на себя?', desc: 'Разработка модели и дизайна, лекала, закупка ткани и фурнитуры, пробный образец, утверждение, серийное производство, упаковка и подготовка к экспорту.' },
       { title: 'Сколько занимает производство?', desc: 'Зависит от модели, ткани и тиража. Вместе с предложением вы получите письменный график: образец, утверждение и серия.' },

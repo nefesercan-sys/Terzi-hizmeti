@@ -192,6 +192,10 @@ function districtCopy(lang: Lang, d: District) {
     const ctx = { lang, n, loc, free: near, tail };
     title = pickFit([...angleTitles(lang, a, n), ...titles], 60);
     desc = pickFit([...angleDescs(lang, a, ctx), ...priD, ...descs], 158);
+    if (lang === 'tr' && d.slug === 'konyaalti') {
+      const kd = `Konyaaltı, Hurma, Liman, Uncalı, Gürsu'da tamir tadilat, daraltma, kısaltma, fermuar, abiye, özel dikim. Paça ₺150'den. 08:00–23:00 ${PH}`;
+      if (kd.length <= 158) desc = kd;
+    }
     kw.push(...angleKeywords(lang, a, n));
     if (lang === 'tr' && near) kw.push(...trExtraKeywords(d.slug, n));
     return metaOverride({ n, loc, kw, title, desc });

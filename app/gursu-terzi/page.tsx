@@ -237,7 +237,7 @@ export default function GursuPage() {
               </div>
               <div className="howto-item">
                 <div className="howto-t">Fermuar Değişimi</div>
-                <div className="howto-d">Mont, ceket, pantolon fermuarı değişimi ve tamiri. ₺200'den.</div>
+                <div className="howto-d">Mont, ceket, pantolon fermuarı değişimi ve tamiri. ₺300'den.</div>
               </div>
               <div className="howto-item">
                 <div className="howto-t">Özel Dikim & Gelinlik Tadilatı</div>

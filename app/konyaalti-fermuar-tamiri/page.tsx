@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Fermuar Değişimi Fiyatı 2026 Konyaaltı — Aynı Gün Tamir" },
   description:
-    'Fermuar değişimi ne kadar? Konyaaltı: pantolon ₺200, mont ceket ₺300, çanta ₺250\'den. Aynı gün teslim. Hurma, Liman, Sarısu\'ya ücretsiz servis.',
+    'Fermuar değişimi ne kadar? Konyaaltı: pantolon ₺300, mont ceket ₺300, çanta ₺250\'den. Aynı gün teslim. Hurma, Liman, Sarısu\'ya ücretsiz servis.',
   keywords: [
     'fermuar tamiri Konyaaltı', 'fermuar değişimi Antalya', 'fermuar tamiri Antalya',
     'pantolon fermuarı değişimi', 'mont fermuarı tamiri', 'ceket fermuarı değişimi',
@@ -189,7 +189,7 @@ export default function FermuarTamiriPage() {
             </h1>
             <p className="hero-desc">
               Pantolon, kot, mont, ceket ve çanta fermuarı değişimi ve tamiri.
-              Hurma, Liman, Sarısu bölgesine ücretsiz servis. ₺200'den başlayan
+              Hurma, Liman, Sarısu bölgesine ücretsiz servis. ₺300'den başlayan
               şeffaf fiyatlarla, çoğu işlem aynı gün tamamlanır.
             </p>
             <div className="hero-btns">

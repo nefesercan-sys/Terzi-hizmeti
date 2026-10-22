@@ -409,7 +409,7 @@ export const FT: Record<FLang, FiyatText> = {
       {
         "q": "I want to take in the waist of my dress",
         "a": "Waist and size reduction, same day or within 24 hours.",
-        "price": "from ₺150",
+        "price": "from ₺200",
         "href": "#fiyatlar",
         "cta": "Price list"
       },
@@ -437,7 +437,7 @@ export const FT: Record<FLang, FiyatText> = {
       {
         "q": "Wedding and evening dress alterations",
         "a": "Careful taking-in, length and strap adjustment; fitting appointment.",
-        "price": "from ₺400",
+        "price": "from ₺800",
         "href": "/en/tailor-service-antalya",
         "cta": "Tailor service"
       },
@@ -626,14 +626,14 @@ export const FT: Record<FLang, FiyatText> = {
       {
         "q": "Ich möchte die Taille meines Kleides enger machen",
         "a": "Taillen- und Größenanpassung, am selben Tag oder innerhalb von 24 Stunden.",
-        "price": "ab ₺150",
+        "price": "ab ₺200",
         "href": "#fiyatlar",
         "cta": "Preisliste"
       },
       {
         "q": "Ich möchte meine Hose kürzen",
         "a": "Jeans und Stoffhosen, meist am selben Tag fertig.",
-        "price": "ab ₺150",
+        "price": "ab ₺200",
         "href": "/de/schneiderservice-antalya",
         "cta": "Schneiderservice"
       },
@@ -654,7 +654,7 @@ export const FT: Record<FLang, FiyatText> = {
       {
         "q": "Brautkleid und Abendkleid ändern",
         "a": "Vorsichtiges Enger machen, Länge und Träger anpassen; Anprobetermin.",
-        "price": "ab ₺400",
+        "price": "ab ₺800",
         "href": "/de/schneiderservice-antalya",
         "cta": "Schneiderservice"
       },
@@ -850,7 +850,7 @@ export const FT: Record<FLang, FiyatText> = {
       {
         "q": "Хочу укоротить брюки",
         "a": "Джинсы и классические брюки, чаще всего в тот же день.",
-        "price": "от ₺150",
+        "price": "от ₺200",
         "href": "/ru/uslugi-portnogo-antalya",
         "cta": "Услуги портного"
       },
@@ -871,7 +871,7 @@ export const FT: Record<FLang, FiyatText> = {
       {
         "q": "Подгонка свадебного и вечернего платья",
         "a": "Аккуратное уменьшение, длина и бретели; запись на примерку.",
-        "price": "от ₺400",
+        "price": "от ₺800",
         "href": "/ru/uslugi-portnogo-antalya",
         "cta": "Услуги портного"
       },

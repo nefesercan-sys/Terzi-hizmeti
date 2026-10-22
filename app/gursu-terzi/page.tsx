@@ -15,15 +15,17 @@ const TODAY     = '2026-10-04';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Gürsu Terzi · Paça ₺150, Fermuar ₺200 | Terzi Can" },
+  title: { absolute: "Gürsu Terzi · Pantolon, Ceket, Mont Tadilat | Terzi Can" },
   description:
-    "Gürsu terzi: tamir tadilat, söküğü dikme, paça ₺150'den, fermuar ₺200'den. Gürsu mahallesine adrese servis, her gün 08:00–23:00. ☎ " + PHONE,
-  keywords: ['Gürsu tamir tadilat', 'Gürsu söküğü dikme', 'Gürsu yırtık tamiri', 'Gürsu elbise tamiri', 'Gürsu terzi', 'Gürsu mahallesi terzi', 'Gürsu Konyaaltı terzi', 'Gürsu paça kısaltma', 'Gürsu fermuar tamiri', 'Gürsu bel daraltma', 'Gürsu elbise dikimi', 'Gürsu gelinlik tadilatı', 'Gürsu ütü hizmeti', 'Gürsu kuru temizleme', 'Gürsu terzi fiyatları 2026', 'Konyaaltı Gürsu dikiş atölyesi'],
+    "Gürsu terzi: pantolon, ceket, mont ve gömlek tadilatı, kısaltma, daraltma, fermuar değişimi. Paça ₺150'den, fermuar ₺200'den. 08:00–23:00. ☎ " + PHONE,
+  keywords: [
+    'Gürsu tamir tadilat', 'Gürsu söküğü dikme', 'Gürsu yırtık tamiri', 'Gürsu elbise tamiri', 'Gürsu terzi', 'Gürsu mahallesi terzi', 'Gürsu Konyaaltı terzi', 'Gürsu paça kısaltma', 'Gürsu fermuar tamiri', 'Gürsu bel daraltma', 'Gürsu elbise dikimi', 'Gürsu gelinlik tadilatı', 'Gürsu ütü hizmeti', 'Gürsu kuru temizleme', 'Gürsu terzi fiyatları 2026', 'Konyaaltı Gürsu dikiş atölyesi', 'Gürsu pantolon kısaltma', 'Gürsu pantolon daraltma', 'Gürsu kot paçası kısaltma', 'Gürsu şort kısaltma', 'Gürsu ceket tadilatı', 'Gürsu ceket daraltma', 'Gürsu mont kısaltma', 'Gürsu mont tamiri', 'Gürsu mont fermuar değişimi', 'Gürsu gömlek daraltma', 'Gürsu gömlek kısaltma', 'Gürsu etek kısaltma', 'Gürsu fermuar değişimi', 'Gürsu beden ayarlama', 'Gürsu erkek terzi', 'Gürsu bay bayan terzi', 'Gürsu ölçüye göre özel dikim', 'Gürsu özel dikim', 'Gürsu abiye tamiri', 'Gürsu yakınımda terzi', 'Konyaaltı Gürsu terzi tamir tadilat', 'Gürsu bay bayan elbise tamiri',
+  ],
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Gürsu Terzi · Paça ₺150, Fermuar ₺200 | Terzi Can',
-    description: "Gürsu terzi: tamir tadilat, söküğü dikme, paça ₺150'den, fermuar ₺200'den. Gürsu mahallesine adrese servis, her gün 08:00–23:00. ☎ " + PHONE,
+    title: 'Gürsu Terzi · Pantolon, Ceket, Mont Tadilat | Terzi Can',
+    description: "Gürsu terzi: pantolon, ceket, mont ve gömlek tadilatı, kısaltma, daraltma, fermuar değişimi. Paça ₺150'den, fermuar ₺200'den. 08:00–23:00. ☎ " + PHONE,
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'tr_TR', type: 'website',
     images: [{ url: `${SITE}/terzi-can-hero.jpg`, width: 1024, height: 1024, alt: 'Gürsu Terzi Konyaaltı' }],
   },

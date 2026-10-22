@@ -14,7 +14,7 @@ import {
   SERVICE_BASE, HUB_MAIN, HOTEL_BASE,
   abs, districtUrl, serviceUrl, query, timeOf, priceOf, TIME_TEXT,
   type Lang, type District, type Service,
-  isTrNear, isIndexable, TR_NEAR_SLUGS,
+  isTrNear, isIndexable, TR_NEAR_SLUGS, trExtraKeywords,
 } from '@/lib/seo-data';
 import { angleFor, angleTitles, angleDescs, angleKeywords } from '@/lib/seo-angles';
 import { fgNearDistrict, fgServiceMeta } from '@/lib/fg-meta';
@@ -193,6 +193,7 @@ function districtCopy(lang: Lang, d: District) {
     title = pickFit([...angleTitles(lang, a, n), ...titles], 60);
     desc = pickFit([...angleDescs(lang, a, ctx), ...priD, ...descs], 158);
     kw.push(...angleKeywords(lang, a, n));
+    if (lang === 'tr' && near) kw.push(...trExtraKeywords(d.slug, n));
     return metaOverride({ n, loc, kw, title, desc });
   }
   return metaOverride({ n, loc, kw, title, desc });

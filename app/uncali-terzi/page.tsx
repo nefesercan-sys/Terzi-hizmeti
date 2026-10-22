@@ -15,15 +15,17 @@ const TODAY     = '2026-10-04';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Uncalı Terzi · Paça ₺150, Fermuar ₺200 | Terzi Can" },
+  title: { absolute: "Uncalı Terzi · Abiye, Etek, Elbise Tadilat | Terzi Can" },
   description:
-    "Uncalı terzi: tamir tadilat, söküğü dikme, paça ₺150'den, fermuar ₺200'den. Uncalı mahallesine adrese servis, her gün 08:00–23:00. ☎ " + PHONE,
-  keywords: ['Uncalı tamir tadilat', 'Uncalı söküğü dikme', 'Uncalı yırtık tamiri', 'Uncalı elbise tamiri', 'Uncalı terzi', 'Uncalı mahallesi terzi', 'Uncalı Konyaaltı terzi', 'Uncalı paça kısaltma', 'Uncalı fermuar tamiri', 'Uncalı bel daraltma', 'Uncalı elbise dikimi', 'Uncalı gelinlik tadilatı', 'Uncalı ütü hizmeti', 'Uncalı kuru temizleme', 'Uncalı terzi fiyatları 2026', 'Konyaaltı Uncalı dikiş atölyesi'],
+    "Uncalı terzi: abiye tamiri ve tadilatı, etek ve elbise kısaltma, daraltma, özel dikim. Abiye ₺400'den, paça ₺150'den. Her gün 08:00–23:00. ☎ " + PHONE,
+  keywords: [
+    'Uncalı tamir tadilat', 'Uncalı söküğü dikme', 'Uncalı yırtık tamiri', 'Uncalı elbise tamiri', 'Uncalı terzi', 'Uncalı mahallesi terzi', 'Uncalı Konyaaltı terzi', 'Uncalı paça kısaltma', 'Uncalı fermuar tamiri', 'Uncalı bel daraltma', 'Uncalı elbise dikimi', 'Uncalı gelinlik tadilatı', 'Uncalı ütü hizmeti', 'Uncalı kuru temizleme', 'Uncalı terzi fiyatları 2026', 'Konyaaltı Uncalı dikiş atölyesi', 'Uncalı abiye tamiri', 'Uncalı abiye tadilatı', 'Uncalı abiye daraltma', 'Uncalı abiye kısaltma', 'Uncalı abiye fermuar değişimi', 'Uncalı abiye özel dikim', 'Uncalı elbise daraltma', 'Uncalı elbise kısaltma', 'Uncalı ölçüye göre özel dikim', 'Uncalı bayan elbise dikimi', 'Uncalı etek kısaltma', 'Uncalı etek daraltma', 'Uncalı beden ayarlama', 'Uncalı fermuar değişimi', 'Uncalı kot paçası kısaltma', 'Uncalı pantolon kısaltma', 'Uncalı şort kısaltma', 'Uncalı ceket tadilatı', 'Uncalı gömlek daraltma', 'Uncalı yakınımda terzi', 'Konyaaltı Uncalı terzi tamir tadilat', 'Uncalı bay bayan elbise tamiri',
+  ],
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Uncalı Terzi · Paça ₺150, Fermuar ₺200 | Terzi Can',
-    description: "Uncalı terzi: tamir tadilat, söküğü dikme, paça ₺150'den, fermuar ₺200'den. Uncalı mahallesine adrese servis, her gün 08:00–23:00. ☎ " + PHONE,
+    title: 'Uncalı Terzi · Abiye, Etek, Elbise Tadilat | Terzi Can',
+    description: "Uncalı terzi: abiye tamiri ve tadilatı, etek ve elbise kısaltma, daraltma, özel dikim. Abiye ₺400'den, paça ₺150'den. Her gün 08:00–23:00. ☎ " + PHONE,
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'tr_TR', type: 'website',
     images: [{ url: `${SITE}/terzi-can-hero.jpg`, width: 1024, height: 1024, alt: 'Uncalı Terzi Konyaaltı' }],
   },

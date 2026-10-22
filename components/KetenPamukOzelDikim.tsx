@@ -1,82 +1,58 @@
 
 
+import { IMG, ALT } from '@/lib/turist-keten';
+
 const PHONE = '+90 531 898 64 18';
 const WA_NUM = '905318986418';
 const WA = (m: string) => `https://wa.me/${WA_NUM}?text=${encodeURIComponent(m)}`;
 
 type Lang = 'tr' | 'en' | 'ru' | 'de';
 
-// ─── MODEL GALERİSİ — gerçek kumaş/stil referans görselleri (Unsplash) ───────
+// ─── MODEL GALERİSİ — Terzi Can'ın kendi stil örneği fotoğrafları (public/linen, lib/turist-keten.ts ile ortak) ───
 // Bunlar satılan hazır ürün değil, "bu tarz bir şey diktirmek istiyorum"
 // diyen misafirin gösterebileceği stil/model örnekleri.
 const MODELLER = [
   {
-    id: 'kadin-elbise',
-    img: 'https://images.unsplash.com/photo-1700317440740-627b8c533120?w=700&q=80',
+    id: 'maxi', k: 'maxi',
     baslik: { tr: 'Kadın Keten Maxi Elbise', en: "Women's Linen Maxi Dress", ru: 'Женское льняное макси-платье', de: 'Damen Leinen-Maxikleid' },
-    aciklama: {
-      tr: 'Geniş kesim, bağcıklı bel — sahil ve şehir için serin, doğal keten.',
-      en: 'Relaxed fit, tie waist — cool, natural linen for beach or city wear.',
-      ru: 'Свободный крой, пояс на завязках — прохладный натуральный лён для пляжа и города.',
-      de: 'Lockere Passform, Bindegürtel — kühles, natürliches Leinen für Strand und Stadt.',
-    },
+    aciklama: { tr: 'İşlemeli yakalı, uzun boy keten maxi elbise.', en: 'Linen maxi dress with an embroidered neckline.', ru: 'Льняное макси-платье с вышивкой у выреза.', de: 'Leinen-Maxikleid mit gesticktem Ausschnitt.' },
   },
   {
-    id: 'kadin-bluz',
-    img: 'https://images.unsplash.com/photo-1631186626171-d5010e20d347?w=700&q=80',
-    baslik: { tr: 'Kadın Pamuk Oversize Gömlek', en: "Women's Oversized Cotton Shirt", ru: 'Женская оверсайз рубашка из хлопка', de: 'Damen Oversize Baumwollhemd' },
-    aciklama: {
-      tr: '%100 organik pamuk, oversize kesim — gündelik ve iş için.',
-      en: '100% organic cotton, oversized cut — for everyday and work.',
-      ru: '100% органический хлопок, свободный крой — на каждый день и для работы.',
-      de: '100% Bio-Baumwolle, Oversize-Schnitt — für Alltag und Büro.',
-    },
+    id: 'slit', k: 'slit',
+    baslik: { tr: 'Yırtmaçlı Keten Maxi Elbise', en: 'Linen Maxi Dress with Side Slit', ru: 'Льняное макси-платье с разрезом', de: 'Leinen-Maxikleid mit Seitenschlitz' },
+    aciklama: { tr: 'Yandan yırtmaçlı, bej keten maxi elbise.', en: 'Beige linen maxi dress with a side slit.', ru: 'Бежевое льняное макси-платье с боковым разрезом.', de: 'Beiges Leinen-Maxikleid mit Seitenschlitz.' },
   },
   {
-    id: 'erkek-gomlek',
-    img: 'https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=700&q=80',
+    id: 'white', k: 'white',
+    baslik: { tr: 'İnce Askılı Keten Yazlık Elbise', en: 'Thin-Strap Linen Summer Dress', ru: 'Летнее льняное платье на тонких бретелях', de: 'Leinen-Sommerkleid mit dünnen Trägern' },
+    aciklama: { tr: 'Beyaz, ince askılı, yazlık keten elbise.', en: 'White linen summer dress with thin straps.', ru: 'Белое летнее льняное платье на тонких бретелях.', de: 'Weißes Leinen-Sommerkleid mit dünnen Trägern.' },
+  },
+  {
+    id: 'tea', k: 'tea',
     baslik: { tr: 'Erkek Keten Yazlık Gömlek', en: "Men's Linen Summer Shirt", ru: 'Мужская летняя льняная рубашка', de: 'Herren Leinen-Sommerhemd' },
-    aciklama: {
-      tr: 'Hafif dokulu, nefes alan keten — sıcak günlerde terletmez.',
-      en: 'Lightweight, breathable linen — stays cool on hot days.',
-      ru: 'Лёгкий, дышащий лён — не жарко даже в самые тёплые дни.',
-      de: 'Leichtes, atmungsaktives Leinen — bleibt auch an heißen Tagen kühl.',
-    },
+    aciklama: { tr: 'Açık mavi, rahat kesim keten gömlek.', en: 'Light-blue linen shirt in a relaxed fit.', ru: 'Голубая льняная рубашка свободного кроя.', de: 'Hellblaues Leinenhemd in lockerer Passform.' },
   },
   {
-    id: 'erkek-takim',
-    img: 'https://images.unsplash.com/photo-1517467069232-26eee2e331b1?w=700&q=80',
-    baslik: { tr: 'Erkek Keten-Pamuk Takım', en: "Men's Linen-Cotton Suit", ru: 'Мужской костюм лён-хлопок', de: 'Herren Leinen-Baumwoll-Anzug' },
-    aciklama: {
-      tr: 'Hafif blazer + pantolon — düğün ve özel günler için doğal şıklık.',
-      en: 'Light blazer + trousers — natural elegance for weddings and special days.',
-      ru: 'Лёгкий блейзер + брюки — естественная элегантность для свадеб и особых случаев.',
-      de: 'Leichtes Sakko + Hose — natürliche Eleganz für Hochzeiten und besondere Anlässe.',
-    },
+    id: 'castle', k: 'castle',
+    baslik: { tr: 'Erkek Keten Gömlek & Pantolon', en: "Men's Linen Shirt & Trousers", ru: 'Мужская льняная рубашка и брюки', de: 'Herren Leinenhemd & Hose' },
+    aciklama: { tr: 'Keten gömlek ve beyaz keten pantolon takımı.', en: 'Linen shirt with white linen trousers.', ru: 'Льняная рубашка и белые льняные брюки.', de: 'Leinenhemd mit weißer Leinenhose.' },
   },
   {
-    id: 'plaj-kaftan',
-    img: 'https://images.unsplash.com/photo-1581746989955-6b19860dc7de?w=700&q=80',
-    baslik: { tr: 'Plaj Kaftanı / Kimono', en: 'Beach Kaftan / Kimono', ru: 'Пляжное кафтан / кимоно', de: 'Strandkaftan / Kimono' },
-    aciklama: {
-      tr: 'Açık kesim keten kimono — plaj üstü veya akşam için hafif bir katman.',
-      en: 'Open-cut linen kimono — a light layer for the beach or evening.',
-      ru: 'Свободного кроя льняное кимоно — лёгкий слой для пляжа или вечера.',
-      de: 'Offen geschnittener Leinen-Kimono — leichte Schicht für Strand oder Abend.',
-    },
+    id: 'jacketKaleici', k: 'jacketKaleici',
+    baslik: { tr: 'Keten Ceket & Rahat Elbise', en: 'Linen Jacket & Relaxed Dress', ru: 'Льняной пиджак и свободное платье', de: 'Leinensakko & lockeres Kleid' },
+    aciklama: { tr: 'Yapısız keten ceket ve rahat kesim keten elbise.', en: 'Unstructured linen jacket and a relaxed linen dress.', ru: 'Льняной пиджак без жёсткой структуры и свободное льняное платье.', de: 'Unstrukturiertes Leinensakko und ein lockeres Leinenkleid.' },
   },
   {
-    id: 'kadin-pantolon',
-    img: 'https://images.unsplash.com/photo-1509631179647-0177331693ae?w=700&q=80',
-    baslik: { tr: 'Kadın Keten Wide-Leg Pantolon', en: "Women's Wide-Leg Linen Trousers", ru: 'Женские широкие льняные брюки', de: 'Damen Leinen-Weitbeinhose' },
-    aciklama: {
-      tr: 'Yüksek bel, bol paça — ofisten sahile her ortama uyar.',
-      en: 'High waist, wide leg — fits every setting, from office to beach.',
-      ru: 'Высокая посадка, широкие штанины — подходят от офиса до пляжа.',
-      de: 'Hohe Taille, weites Bein — passt vom Büro bis zum Strand.',
-    },
+    id: 'kidsGate', k: 'kidsGate',
+    baslik: { tr: 'Çocuk Keten Giyim', en: "Kids' Linen Clothing", ru: 'Детская льняная одежда', de: 'Kinder-Leinenkleidung' },
+    aciklama: { tr: 'Keten gömlek, elbise ve bahçıvan tulum.', en: 'Linen shirt, dress and dungarees.', ru: 'Льняная рубашка, платье и комбинезон.', de: 'Leinenhemd, Kleid und Latzhose.' },
   },
-];
+  {
+    id: 'kidsBench', k: 'kidsBench',
+    baslik: { tr: 'Çocuk Keten Gömlek & Şort', en: "Kids' Linen Shirt & Shorts", ru: 'Детская льняная рубашка и шорты', de: 'Kinder Leinenhemd & Shorts' },
+    aciklama: { tr: 'Hardal rengi keten gömlek ve şort.', en: 'Mustard linen shirt and shorts.', ru: 'Горчичная льняная рубашка и шорты.', de: 'Senffarbenes Leinenhemd und Shorts.' },
+  },
+] as const;
 
 const T: Record<Lang, any> = {
   tr: {
@@ -99,20 +75,29 @@ const T: Record<Lang, any> = {
       ['Dikim ne kadar sürüyor?', 'Genellikle 3 gün içinde hazır oluyor; model karmaşıklığına göre değişebilir, kesin gün WhatsApp\'ta netleşir.'],
       ['Otelime teslimat yapıyor musunuz?', 'Evet, Antalya genelindeki otellere teslim ediyoruz, ödeme teslimde alınır.'],
       ['Ölçümü nasıl vereceğim?', 'WhatsApp üzerinden ölçülerinizi paylaşırsınız, isterseniz görüntülü görüşmeyle de yardımcı oluruz.'],
+      ['Model ve kalıp çıkarıyor musunuz?', 'Evet. Fotoğraf, çizim veya örnek bir giysiden model ve kalıp hazırlıyor, önce numune dikiyoruz; onayınızdan sonra özel dikim ya da seri üretime geçiyoruz.'],
+      ['Yurt dışına gönderim yapıyor musunuz?', 'Evet, siparişleri Avrupa, Rusya ve diğer ülkelere gönderiyoruz. Süre ve fiyat siparişe göre WhatsApp\'ta netleşir.'],
+      ['Seri veya fason üretim yapıyor musunuz?', 'Evet. Keten ve pamukta bay, bayan ve çocuk giyimi için seri ve fason üretim yapıyoruz; adet ve fiyat proje bazında netleşir.'],
     ],
     finalCta: 'Kendi Modelinizi Diktirin', finalSub: 'Fotoğraf gönderin, WhatsApp\'tan fiyat teklifi alın.',
     waBtn: 'WhatsApp ile Başlayın',
     wholesaleTag: '🏭 Özel Dikim & Seri Üretim, İhracat',
     wholesaleH: 'Tek Parça mı, Yoksa Seri İmalat mı?',
-    wholesaleDesc: 'Otel/mağaza zinciri, marka veya işletmeyseniz — aynı keten ve pamuk kumaşlarla erkek, kadın ve çocuk giyiminde numune çalışması yapıp, onayınızın ardından seri imalata geçiyor, üretim takibini paylaşarak yerli ve yurt dışı (Avrupa, Rusya) müşterilere ihracat yapıyoruz.',
+    wholesaleDesc: 'Otel/mağaza zinciri, marka veya işletmeyseniz — aynı keten ve pamuk kumaşlarla erkek, kadın ve çocuk giyiminde model ve kalıp çıkarma, numune, fason ve seri üretim yapıyoruz; üretim takibini paylaşıyor, siparişleri Türkiye\'ye, Avrupa\'ya, Rusya\'ya ve diğer ülkelere gönderiyoruz.',
     wholesaleSteps: [
       ['1️⃣', 'Tasarım / Fotoğraf Gönderin', 'İstediğiniz modeli, çizimi veya referans fotoğrafı WhatsApp\'tan paylaşın.'],
       ['2️⃣', 'Numune Geliştirme', 'Kalıbını çıkarıp tek bir numune dikiyoruz — onayınız olmadan seri imalata geçmiyoruz.'],
-      ['3️⃣', 'Seri İmalat', 'Numune onaylandıktan sonra istediğiniz adette (minimum sipariş şartı yok) üretime geçiyoruz.'],
-      ['4️⃣', 'Üretim Takibi & İhracat', 'Kesim/dikim/kalite kontrol aşamalarını fotoğraf-video ile paylaşıyoruz; yurt dışına ATR/EUR.1 evraklarıyla ihracat yapıyoruz.'],
+      ['3️⃣', 'Seri İmalat', 'Numune onaylandıktan sonra istediğiniz adette (adet projeye göre netleşir) üretime geçiyoruz.'],
+      ['4️⃣', 'Üretim Takibi & İhracat', 'Kesim/dikim/kalite kontrol aşamalarını fotoğraf-video ile paylaşıyoruz; Avrupa, Rusya ve diğer ülkelere gönderim yapıyoruz.'],
     ] as [string, string, string][],
     wholesaleCtaBtn: 'Seri Üretim Teklifi İste — WhatsApp',
     wholesaleLinkText: 'Kurumsal üretim kataloğumuz için → Anavera Tekstil',
+    heroSeri: 'Seri & fason üretim →',
+    modelsH: 'Bay & Bayan Keten Pamuk Giyim Modelleri',
+    modelsSub: 'Keten ve pamuk kumaştan, ölçünüze göre özel dikim ya da seri üretim.',
+    modelGroups: [['Bay','Gömlek, pantolon, şort, ceket, takım'],['Bayan','Elbise, gömlek, pantolon, etek, ceket'],['Çocuk','Elbise, gömlek, şort']] as [string, string][],
+    prodCards: [['Özel Dikim','Tek parça: modelinizi ve ölçünüzü gönderin, keten veya pamukla dikelim.'],['Model & Kalıp Çıkarma','Fotoğraf, çizim veya örnek giysiden model ve kalıp hazırlıyoruz.'],['Numune & Seri Üretim','Önce numune, onaydan sonra seri üretim; üretim takibi paylaşılır.'],['Fason Üretim','Kendi modeliniz veya markanız için fason dikim; adet ve fiyat proje bazında netleşir.']] as [string, string][],
+    shipLine: 'Siparişler Avrupa, Rusya ve diğer ülkelere gönderilir. Süre ve fiyat WhatsApp\'ta netleşir.',
   },
   en: {
     tag: '🧵 Custom Tailoring · 100% Linen & Cotton',
@@ -134,20 +119,29 @@ const T: Record<Lang, any> = {
       ['How long does tailoring take?', 'Usually ready within 3 days, depending on the complexity of the style; the exact day is confirmed on WhatsApp.'],
       ['Do you deliver to my hotel?', 'Yes, we deliver to hotels across Antalya, payment on delivery.'],
       ['How do I give you my measurements?', 'You share them on WhatsApp — we can also help via a video call if needed.'],
+      ['Do you make styles and patterns?', 'Yes. We prepare the style and pattern from a photo, sketch or sample garment and sew a sample first; after your approval we move to custom tailoring or serial production.'],
+      ['Do you ship abroad?', 'Yes, we ship orders to Europe, Russia and other countries. Time and price are agreed on WhatsApp per order.'],
+      ['Do you do serial or contract production?', 'Yes. We do serial and contract production in linen and cotton for menswear, womenswear and kidswear; quantity and price are agreed per project.'],
     ],
     finalCta: 'Have Your Own Style Made', finalSub: 'Send a photo and get a price quote on WhatsApp.',
     waBtn: 'Start on WhatsApp',
     wholesaleTag: '🏭 Custom & Serial Production, Export',
     wholesaleH: 'One Piece, or Serial Production?',
-    wholesaleDesc: 'Hotel groups, retail chains, brands and businesses — we develop a sample in the same linen/cotton fabrics for menswear, womenswear or kidswear, then move to serial production after your approval, sharing production tracking and exporting to customers in Turkey and abroad (Europe, Russia).',
+    wholesaleDesc: 'Hotel groups, retail chains, brands and businesses — in the same linen and cotton fabrics we do style and pattern making, samples, contract and serial production for menswear, womenswear and kidswear, share production tracking, and ship orders to Turkey, Europe, Russia and other countries.',
     wholesaleSteps: [
       ['1️⃣', 'Send Your Design', 'Share the style, sketch, or reference photo you want on WhatsApp.'],
       ['2️⃣', 'Sample Development', 'We draft the pattern and sew a single sample — serial production starts only after your approval.'],
-      ['3️⃣', 'Serial Production', 'Once the sample is approved, we produce your required quantity (no minimum order).'],
-      ['4️⃣', 'Production Tracking & Export', 'We share cutting/sewing/QC updates by photo and video; export abroad with full ATR/EUR.1 documentation.'],
+      ['3️⃣', 'Serial Production', 'Once the sample is approved, we produce your required quantity (quantity agreed per project).'],
+      ['4️⃣', 'Production Tracking & Export', 'We share cutting/sewing/QC updates by photo and video; we ship abroad to Europe, Russia and other countries.'],
     ] as [string, string, string][],
     wholesaleCtaBtn: 'Request Serial Production Quote — WhatsApp',
     wholesaleLinkText: 'See our full manufacturing catalogue → Anavera Tekstil',
+    heroSeri: 'Serial & contract production →',
+    modelsH: 'Men\'s & Women\'s Linen and Cotton Clothing Models',
+    modelsSub: 'In linen or cotton, made to your measurements or produced in series.',
+    modelGroups: [['Men','Shirts, trousers, shorts, jackets, suits'],['Women','Dresses, shirts, trousers, skirts, jackets'],['Kids','Dresses, shirts, shorts']] as [string, string][],
+    prodCards: [['Custom Tailoring','One piece: send your style and measurements, we sew it in linen or cotton.'],['Style & Pattern Making','We prepare the style and pattern from a photo, sketch or sample garment.'],['Sample & Serial Production','Sample first, serial production after approval; production updates shared.'],['Contract Manufacturing','Contract sewing for your own design or brand; quantity and price agreed per project.']] as [string, string][],
+    shipLine: 'Orders are shipped to Europe, Russia and other countries. Time and price are agreed on WhatsApp.',
   },
   ru: {
     tag: '🧵 Пошив на заказ · 100% лён и хлопок',
@@ -169,20 +163,29 @@ const T: Record<Lang, any> = {
       ['Сколько времени занимает пошив?', 'Обычно готово за 3 дня, в зависимости от сложности модели; точный день подтверждаем в WhatsApp.'],
       ['Вы доставляете в отель?', 'Да, доставляем в отели по всей Анталье, оплата при получении.'],
       ['Как передать мерки?', 'Пришлите их в WhatsApp — при необходимости поможем и по видеосвязи.'],
+      ['Вы разрабатываете модели и лекала?', 'Да. Готовим модель и лекала по фото, эскизу или образцу одежды и сначала шьём образец; после вашего утверждения переходим к индивидуальному пошиву или серии.'],
+      ['Отправляете ли вы заказы за границу?', 'Да, отправляем заказы в Европу, Россию и другие страны. Срок и цена согласуются в WhatsApp по каждому заказу.'],
+      ['Вы делаете серийное или контрактное производство?', 'Да. Серийное и контрактное производство из льна и хлопка для мужской, женской и детской одежды; количество и цена — по проекту.'],
     ],
     finalCta: 'Сшить по своей модели', finalSub: 'Пришлите фото — получите цену в WhatsApp.',
     waBtn: 'Начать в WhatsApp',
     wholesaleTag: '🏭 Индивидуальный пошив и серийное производство, экспорт',
     wholesaleH: 'Одна вещь или серийное производство?',
-    wholesaleDesc: 'Отельные сети, магазины, бренды и компании — мы разрабатываем образец из тех же льняных и хлопковых тканей для мужской, женской или детской одежды, затем переходим к серийному производству после вашего утверждения, делимся контролем производства и экспортируем клиентам в Турции и за рубежом (Европа, Россия).',
+    wholesaleDesc: 'Отельные сети, магазины, бренды и компании — из тех же льняных и хлопковых тканей мы делаем модели и лекала, образцы, контрактное и серийное производство мужской, женской и детской одежды, делимся контролем производства и отправляем заказы в Турцию, Европу, Россию и другие страны.',
     wholesaleSteps: [
       ['1️⃣', 'Отправьте дизайн', 'Пришлите желаемую модель, эскиз или референс-фото в WhatsApp.'],
       ['2️⃣', 'Разработка образца', 'Строим лекало и шьём один образец — серийное производство начинается только после утверждения.'],
-      ['3️⃣', 'Серийное производство', 'После утверждения образца производим нужный объём (минимального заказа нет).'],
-      ['4️⃣', 'Контроль производства и экспорт', 'Делимся фото/видео этапов раскроя, пошива и контроля качества; экспортируем с полным пакетом документов ATR/EUR.1.'],
+      ['3️⃣', 'Серийное производство', 'После утверждения образца производим нужный объём (количество согласуется по проекту).'],
+      ['4️⃣', 'Контроль производства и экспорт', 'Делимся фото/видео этапов раскроя, пошива и контроля качества; отправляем заказы в Европу, Россию и другие страны.'],
     ] as [string, string, string][],
     wholesaleCtaBtn: 'Запросить цену на серию — WhatsApp',
     wholesaleLinkText: 'Полный каталог производства → Anavera Tekstil',
+    heroSeri: 'Серийное и контрактное производство →',
+    modelsH: 'Модели мужской и женской одежды из льна и хлопка',
+    modelsSub: 'Из льна или хлопка: пошив по вашим меркам или серийное производство.',
+    modelGroups: [['Мужская','Рубашки, брюки, шорты, пиджаки, костюмы'],['Женская','Платья, рубашки, брюки, юбки, пиджаки'],['Детская','Платья, рубашки, шорты']] as [string, string][],
+    prodCards: [['Индивидуальный пошив','Одна вещь: пришлите модель и мерки, сошьём из льна или хлопка.'],['Разработка модели и лекал','Готовим модель и лекала по фото, эскизу или образцу одежды.'],['Образец и серия','Сначала образец, после утверждения — серийное производство; отчёты о ходе работ.'],['Контрактное производство','Пошив по вашему дизайну или для вашего бренда; количество и цена — по проекту.']] as [string, string][],
+    shipLine: 'Заказы отправляем в Европу, Россию и другие страны. Срок и цену уточняем в WhatsApp.',
   },
   de: {
     tag: '🧵 Maßschneiderei · 100% Leinen & Baumwolle',
@@ -204,20 +207,29 @@ const T: Record<Lang, any> = {
       ['Wie lange dauert die Anfertigung?', 'In der Regel in 3 Tagen fertig, je nach Komplexität des Modells; der genaue Tag wird per WhatsApp bestätigt.'],
       ['Liefern Sie an mein Hotel?', 'Ja, wir liefern an Hotels in ganz Antalya, Zahlung bei Lieferung.'],
       ['Wie gebe ich meine Maße an?', 'Teilen Sie sie per WhatsApp mit — bei Bedarf helfen wir auch per Videoanruf.'],
+      ['Erstellen Sie Modelle und Schnittmuster?', 'Ja. Wir erstellen Modell und Schnittmuster nach Foto, Skizze oder Musterstück und nähen zuerst ein Muster; nach Ihrer Freigabe folgen Maßanfertigung oder Serie.'],
+      ['Versenden Sie ins Ausland?', 'Ja, wir versenden Bestellungen nach Europa, Russland und in weitere Länder. Zeit und Preis klären wir pro Bestellung per WhatsApp.'],
+      ['Machen Sie Serien- oder Lohnfertigung?', 'Ja. Serien- und Lohnfertigung aus Leinen und Baumwolle für Herren-, Damen- und Kinderbekleidung; Menge und Preis projektbezogen.'],
     ],
     finalCta: 'Eigenen Stil schneidern lassen', finalSub: 'Foto senden und per WhatsApp ein Preisangebot erhalten.',
     waBtn: 'Mit WhatsApp beginnen',
     wholesaleTag: '🏭 Sonder- & Serienproduktion, Export',
     wholesaleH: 'Einzelstück oder Serienproduktion?',
-    wholesaleDesc: 'Hotelgruppen, Handelsketten, Marken und Unternehmen — wir entwickeln ein Muster aus denselben Leinen-/Baumwollstoffen für Herren-, Damen- oder Kinderbekleidung und gehen nach Ihrer Freigabe in die Serienproduktion, mit Produktionsverfolgung und Export an Kunden in der Türkei und im Ausland (Europa, Russland).',
+    wholesaleDesc: 'Hotelgruppen, Handelsketten, Marken und Unternehmen — aus denselben Leinen- und Baumwollstoffen erstellen wir Modelle und Schnittmuster, Muster, Lohn- und Serienfertigung für Herren-, Damen- und Kinderbekleidung, teilen die Produktionsverfolgung und versenden in die Türkei, nach Europa, Russland und in weitere Länder.',
     wholesaleSteps: [
       ['1️⃣', 'Design senden', 'Teilen Sie den gewünschten Stil, die Skizze oder ein Referenzfoto per WhatsApp mit.'],
       ['2️⃣', 'Musterentwicklung', 'Wir erstellen das Schnittmuster und nähen ein einzelnes Muster — die Serienproduktion beginnt erst nach Ihrer Freigabe.'],
-      ['3️⃣', 'Serienproduktion', 'Nach Freigabe des Musters fertigen wir die gewünschte Menge (keine Mindestmenge).'],
-      ['4️⃣', 'Produktionsverfolgung & Export', 'Wir teilen Foto-/Video-Updates zu Zuschnitt/Nähen/QK; Export ins Ausland mit vollständiger ATR/EUR.1-Dokumentation.'],
+      ['3️⃣', 'Serienproduktion', 'Nach Freigabe des Musters fertigen wir die gewünschte Menge (Menge projektbezogen).'],
+      ['4️⃣', 'Produktionsverfolgung & Export', 'Wir teilen Foto-/Video-Updates zu Zuschnitt/Nähen/QK; Versand ins Ausland (Europa, Russland und weitere Länder).'],
     ] as [string, string, string][],
     wholesaleCtaBtn: 'Serienproduktion anfragen — WhatsApp',
     wholesaleLinkText: 'Unser vollständiger Produktionskatalog → Anavera Tekstil',
+    heroSeri: 'Serien- & Lohnfertigung →',
+    modelsH: 'Herren- & Damenmodelle aus Leinen und Baumwolle',
+    modelsSub: 'Aus Leinen oder Baumwolle, nach Ihren Maßen oder in Serie gefertigt.',
+    modelGroups: [['Herren','Hemden, Hosen, Shorts, Sakkos, Anzüge'],['Damen','Kleider, Hemden, Hosen, Röcke, Sakkos'],['Kinder','Kleider, Hemden, Shorts']] as [string, string][],
+    prodCards: [['Maßanfertigung','Einzelstück: Modell und Maße senden, wir nähen es aus Leinen oder Baumwolle.'],['Modell & Schnittmuster','Wir erstellen Modell und Schnittmuster nach Foto, Skizze oder Musterstück.'],['Muster & Serienfertigung','Erst ein Muster, nach Freigabe die Serie; Produktionsupdates inklusive.'],['Lohnfertigung','Lohnnähen für Ihr eigenes Design oder Ihre Marke; Menge und Preis projektbezogen.']] as [string, string][],
+    shipLine: 'Bestellungen werden nach Europa, Russland und in weitere Länder versendet. Zeit und Preis klären wir per WhatsApp.',
   },
 };
 
@@ -252,6 +264,7 @@ export default function KetenPamukOzelDikim({ lang = 'tr' }: { lang?: Lang }) {
             style={{ background: '#25d366', color: '#fff', padding: '1rem 2rem', fontWeight: 700, textDecoration: 'none', fontSize: '.88rem', borderRadius: 4, display: 'inline-block' }}>
             💬 {t.waBtn}
           </a>
+          <a href="#seri-uretim" style={{ color: '#D4B07A', fontSize: '.85rem', textDecoration: 'underline', marginLeft: '1.2rem', display: 'inline-block', marginTop: '.8rem' }}>{t.heroSeri}</a>
         </div>
       </section>
 
@@ -264,7 +277,7 @@ export default function KetenPamukOzelDikim({ lang = 'tr' }: { lang?: Lang }) {
             {MODELLER.map((m) => (
               <div key={m.id} style={{ background: '#fff', borderRadius: 6, overflow: 'hidden', border: '1px solid rgba(44,74,62,.12)' }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={m.img} alt={m.baslik[lang] || m.baslik['tr']} style={{ width: '100%', height: 240, objectFit: 'cover', display: 'block' }} loading="lazy" />
+                <img src={IMG[m.k].src} alt={lang === 'tr' ? `${m.baslik.tr} — model örneği` : ALT[m.k][lang]} width={IMG[m.k].w} height={IMG[m.k].h} style={{ width: '100%', height: 300, objectFit: 'cover', objectPosition: 'center 25%', display: 'block' }} loading="lazy" decoding="async" />
                 <div style={{ padding: '1.1rem' }}>
                   <h3 style={{ fontFamily: 'Georgia,serif', fontSize: '1rem', color: '#1C1814', marginBottom: '.4rem' }}>{m.baslik[lang]}</h3>
                   <p style={{ fontSize: '.8rem', color: '#7A6E62', lineHeight: 1.6, marginBottom: '.9rem' }}>{m.aciklama[lang]}</p>
@@ -294,11 +307,36 @@ export default function KetenPamukOzelDikim({ lang = 'tr' }: { lang?: Lang }) {
         </div>
       </section>
 
+      {/* MODELLER & ÜRETİM TÜRLERİ — bay/bayan/çocuk, özel dikim, model-kalıp, numune-seri, fason; gönderim Avrupa/Rusya/diğer ülkeler */}
+      <section style={{ padding: '3.5rem 1.5rem', background: '#fff' }}>
+        <div style={{ maxWidth: 1000, margin: '0 auto' }}>
+          <h2 style={{ fontFamily: 'Georgia,serif', fontSize: '1.6rem', color: '#1C1814', marginBottom: '.4rem', textAlign: 'center' }}>{t.modelsH}</h2>
+          <p style={{ color: '#7A6E62', fontSize: '.88rem', marginBottom: '2rem', textAlign: 'center' }}>{t.modelsSub}</p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(220px,1fr))', gap: '1rem', marginBottom: '1.6rem' }}>
+            {t.modelGroups.map(([g, items]: string[]) => (
+              <div key={g} style={{ border: '1px solid rgba(44,74,62,.2)', borderRadius: 8, padding: '1.1rem 1rem', background: '#FAF7F2' }}>
+                <h3 style={{ fontFamily: 'Georgia,serif', fontSize: '1rem', color: '#2C4A3E', marginBottom: '.3rem' }}>{g}</h3>
+                <div style={{ fontSize: '.8rem', color: '#7A6E62', lineHeight: 1.6 }}>{items}</div>
+              </div>
+            ))}
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(220px,1fr))', gap: '1rem', marginBottom: '1.4rem' }}>
+            {t.prodCards.map(([ti, d]: string[]) => (
+              <div key={ti} style={{ borderLeft: '3px solid #D4B07A', padding: '.4rem 1rem' }}>
+                <h3 style={{ fontFamily: 'Georgia,serif', fontSize: '.95rem', color: '#1C1814', marginBottom: '.25rem' }}>{ti}</h3>
+                <div style={{ fontSize: '.78rem', color: '#7A6E62', lineHeight: 1.6 }}>{d}</div>
+              </div>
+            ))}
+          </div>
+          <p style={{ textAlign: 'center', fontSize: '.85rem', color: '#2C4A3E', fontWeight: 600 }}>{t.shipLine}</p>
+        </div>
+      </section>
+
       {/* TOPTAN ÜRETİM & İHRACAT — SEO/AI: "seri imalat", "toptan üretim", "numune
           çalışması" aramalarını da bu sayfaya bağlıyor; bireysel özel dikim
           hizmetiyle aynı sayfada ama ayrı bir CTA ile sunuluyor, ve kurumsal
           kataloğun tamamı için Anavera Tekstil'e link veriyor. */}
-      <section style={{ background: '#1C1814', padding: '4rem 1.5rem' }}>
+      <section id="seri-uretim" style={{ background: '#1C1814', padding: '4rem 1.5rem' }}>
         <div style={{ maxWidth: 1000, margin: '0 auto' }}>
           <div style={{ fontSize: '.68rem', letterSpacing: '.25em', textTransform: 'uppercase', color: '#D4B07A', marginBottom: '.8rem', textAlign: 'center' }}>{t.wholesaleTag}</div>
           <h2 style={{ fontFamily: 'Georgia,serif', fontSize: '1.7rem', color: '#fff', marginBottom: '1rem', textAlign: 'center' }}>{t.wholesaleH}</h2>

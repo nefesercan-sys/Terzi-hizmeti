@@ -238,7 +238,7 @@ export const FT: Record<FLang, FiyatText> = {
       },
       {
         "q": "Model, tasarım, dikim atölyesi, seri imalat",
-        "a": "Önce numune, onaydan sonra seri imalat ve üretim takibi (adet: modele göre teklif, minimum sipariş yok).",
+        "a": "Önce numune, onaydan sonra seri imalat ve üretim takibi (adet: modele göre teklif, proje bazında netleşir).",
         "price": "Teklif",
         "href": "/anavera-tekstil",
         "cta": "Anavera Tekstil"
@@ -291,7 +291,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Model, tasarım ve seri imalat (dikim imalat fiyatları) nasıl işliyor?",
-        "Tasarımınızı veya referans fotoğrafı gönderirsiniz; önce numune dikilir ve onaylanır, sonra seri imalata geçilir ve üretim takibi paylaşılır. Fiyat model, kumaş ve adede göre teklif edilir; minimum sipariş şartı yoktur. Ayrıntı: /anavera-tekstil"
+        "Tasarımınızı veya referans fotoğrafı gönderirsiniz; önce numune dikilir ve onaylanır, sonra seri imalata geçilir ve üretim takibi paylaşılır. Fiyat model, kumaş ve adede göre teklif edilir; adet projeye göre WhatsApp'ta netleşir. Ayrıntı: /anavera-tekstil"
       ]
     ]
   },
@@ -457,7 +457,7 @@ export const FT: Record<FLang, FiyatText> = {
       },
       {
         "q": "Model design, sewing workshop, serial production",
-        "a": "Sample first, then serial production with progress tracking (no minimum order).",
+        "a": "Sample first, then serial production with progress tracking (quantity agreed per project).",
         "price": "Quote",
         "href": "/en/anavera-tekstil",
         "cta": "Anavera Tekstil"
@@ -510,7 +510,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "How do model design and serial production (production prices) work?",
-        "Send your design or a reference photo; a sample is sewn and approved first, then serial production starts and progress updates are shared. Prices are quoted per model, fabric and quantity; there is no minimum order. Details: /en/anavera-tekstil"
+        "Send your design or a reference photo; a sample is sewn and approved first, then serial production starts and progress updates are shared. Prices are quoted per model, fabric and quantity; quantity is agreed per project on WhatsApp. Details: /en/anavera-tekstil"
       ]
     ]
   },
@@ -674,7 +674,7 @@ export const FT: Record<FLang, FiyatText> = {
       },
       {
         "q": "Modellentwurf, Nähatelier, Serienproduktion",
-        "a": "Erst Muster, dann Serienproduktion mit Produktionsverfolgung (keine Mindestmenge).",
+        "a": "Erst Muster, dann Serienproduktion mit Produktionsverfolgung (Menge projektbezogen).",
         "price": "Angebot",
         "href": "/de/anavera-tekstil",
         "cta": "Anavera Tekstil"
@@ -727,7 +727,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Wie funktionieren Modellentwurf und Serienproduktion (Produktionspreise)?",
-        "Senden Sie Ihr Design oder ein Referenzfoto; zuerst wird ein Muster genäht und freigegeben, dann startet die Serienproduktion mit Fortschrittsberichten. Preise werden je Modell, Stoff und Menge angeboten; es gibt keine Mindestmenge. Details: /de/anavera-tekstil"
+        "Senden Sie Ihr Design oder ein Referenzfoto; zuerst wird ein Muster genäht und freigegeben, dann startet die Serienproduktion mit Fortschrittsberichten. Preise werden je Modell, Stoff und Menge angeboten; die Menge wird projektbezogen per WhatsApp abgestimmt. Details: /de/anavera-tekstil"
       ]
     ]
   },
@@ -891,7 +891,7 @@ export const FT: Record<FLang, FiyatText> = {
       },
       {
         "q": "Разработка модели, швейная мастерская, серийное производство",
-        "a": "Сначала образец, затем серия с отслеживанием производства (минимального заказа нет).",
+        "a": "Сначала образец, затем серия с отслеживанием производства (количество согласуется по проекту).",
         "price": "Расчёт",
         "href": "/ru/anavera-tekstil",
         "cta": "Anavera Tekstil"
@@ -944,7 +944,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Как проходят разработка модели и серийное производство (цены на производство)?",
-        "Пришлите дизайн или референс-фото; сначала шьём и утверждаем образец, затем начинается серия с отчётами о ходе работ. Цена рассчитывается по модели, ткани и тиражу; минимального заказа нет. Подробнее: /ru/anavera-tekstil"
+        "Пришлите дизайн или референс-фото; сначала шьём и утверждаем образец, затем начинается серия с отчётами о ходе работ. Цена рассчитывается по модели, ткани и тиражу; количество согласуется по проекту в WhatsApp. Подробнее: /ru/anavera-tekstil"
       ]
     ]
   }

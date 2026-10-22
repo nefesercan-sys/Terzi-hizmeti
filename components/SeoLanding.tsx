@@ -18,6 +18,7 @@ import {
 } from '@/lib/seo-data';
 import { angleFor, angleTitles, angleDescs, angleKeywords, unfreeDeep } from '@/lib/seo-angles';
 import { fgNearDistrict, fgServiceMeta } from '@/lib/fg-meta';
+import { trNearDistrict } from '@/lib/tr-meta';
 
 const WA = (m: string) => `https://wa.me/${PHONE_TEL.replace('+', '')}?text=${encodeURIComponent(m)}`;
 const OG = `${SITE}/terzi-can-hero.jpg`;
@@ -221,7 +222,7 @@ function _districtCopy(lang: Lang, d: District) {
   return metaOverride({ n, loc, kw, title, desc });
 
   function metaOverride(r: { n: string; loc: string; kw: string[]; title: string; desc: string }) {
-    const o = lang === 'tr' ? undefined : fgNearDistrict(lang, d.slug, n); // Türkçe sayfalar şablonda kalır; yalnızca EN/RU/DE elle yazılmış meta kullanır
+    const o = lang === 'tr' ? trNearDistrict(d.slug, n, r.loc, PHONE, 'Terzi Can') : fgNearDistrict(lang, d.slug, n); // elle yazılmış meta (TR yakın bölgeler + EN/RU/DE)
     if (!o) return r;
     return { n: r.n, loc: r.loc, kw: Array.from(new Set([...o.kw, ...r.kw])), title: o.title, desc: o.desc };
   }

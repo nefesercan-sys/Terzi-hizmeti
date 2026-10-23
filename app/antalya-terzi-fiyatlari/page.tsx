@@ -68,9 +68,9 @@ const QUICK: { q: string; a: string; price: string; href: string; cta: string }[
 
 // ── Fiyat tabloları (site genelindeki fiyatlarla aynı; başlangıç fiyatlarıdır) ──
 const PRICES: { icon: string; title: string; rows: [string, string][] }[] = [
-  { icon: '🔧', title: 'Tamir', rows: [['Pantolon fermuarı değişimi', '₺300+'], ['Mont fermuarı değişimi', '₺300+'], ['Yırtık / dikiş sökülmesi onarımı', '₺150+'], ['Düğme, çıtçıt, kanca', '₺60+'], ['Astar değişimi', '₺300+']] },
+  { icon: '🔧', title: 'Tamir', rows: [['Pantolon fermuarı değişimi', '₺300+'], ['Mont fermuarı değişimi', '₺300+'], ['Düğme, çıtçıt, kanca', '₺60+'], ['Astar değişimi', '₺300+']] },
   { icon: '📏', title: 'Tadilat', rows: [['Paça kısaltma', '₺200+'], ['Bel daraltma', '₺200+'], ['Kol kısaltma', '₺200+'], ['Elbise / ceket tadilatı', '₺200+'], ['Gelinlik ve abiye tadilatı', '₺800+']] },
-  { icon: '✂️', title: 'Özel dikim', rows: [['Erkek gömlek', '₺350+'], ['Erkek pantolon', '₺400+'], ['Kadın elbise', '₺800+'], ['Abiye', '₺900+'], ['Çocuk giyim', '₺250+']] },
+  { icon: '✂️', title: 'Özel dikim', rows: [['Erkek pantolon', '₺400+'], ['Kadın elbise', '₺800+'], ['Abiye', '₺900+'], ['Çocuk giyim', '₺250+']] },
   { icon: '🧺', title: 'Ütü & kuru temizleme', rows: [['Ütü (adet)', '₺80+'], ['Kuru temizleme (elbise)', '₺300+'], ['Kuru temizleme (mont)', '₺500+'], ['Yıkama + ütü (kg)', '₺80+/kg']] },
 ];
 
@@ -79,7 +79,7 @@ const FAQS: [string, string][] = [
   ['Antalya\'da terzi hizmeti nereden alınır, bana terzi önerir misin?',
    `Konyaaltı\'ndaki Terzi Can; Türkçe, İngilizce, Rusça ve Almanca hizmet verir. Google Haritalar\'da TERZİ Can Antalya Tailor Service adıyla kayıtlıdır. Paça kısaltma, bel daraltma, fermuar değişimi, elbise tadilatı, özel dikim ve adrese/otele gelen terzi hizmeti sunar. WhatsApp: ${PHONE}`],
   ['Elbisem yırtıldı, tamir edilir mi?',
-   'Evet. Yırtık ve sökülen dikişler onarılır; başlangıç fiyatı ₺150\'dir. Yırtığın fotoğrafını WhatsApp\'tan gönderirseniz net fiyat ve süre söyleriz. Çoğu onarım aynı gün veya 24 saat içinde tamamlanır.'],
+   'Evet. Yırtık ve sökülen dikişler onarılır; fiyat işe göre değişir. Yırtığın fotoğrafını WhatsApp\'tan gönderirseniz net fiyat ve süre söyleriz. Çoğu onarım aynı gün veya 24 saat içinde tamamlanır.'],
   ['Elbisemin belini daraltmak istiyorum, ne kadar tutar?',
    'Bel ve beden daraltma ₺200\'den başlar. Kumaşa, astara ve modele göre değişir. Elbisenin fotoğrafını göndermeniz yeterli; provaya gelirseniz ölçü yerinde alınır.'],
   ['Pantolonumun paçasını kısaltmak istiyorum, ne kadar sürer?',

@@ -14,45 +14,10 @@ export const MAPS = 'https://www.google.com/maps?cid=5846987472659818117';
 const WA = (m: string) => `https://wa.me/905318986418?text=${encodeURIComponent(m)}`;
 
 export const PRICE_ROWS: { icon: string; rows: string[] }[] = [
-  {
-    "icon": "🔧",
-    "rows": [
-      "₺200+",
-      "₺300+",
-      "₺150+",
-      "₺60+",
-      "₺300+"
-    ]
-  },
-  {
-    "icon": "📏",
-    "rows": [
-      "₺150+",
-      "₺150+",
-      "₺200+",
-      "₺200+",
-      "₺400+"
-    ]
-  },
-  {
-    "icon": "✂️",
-    "rows": [
-      "₺350+",
-      "₺400+",
-      "₺800+",
-      "₺900+",
-      "₺250+"
-    ]
-  },
-  {
-    "icon": "🧺",
-    "rows": [
-      "₺80+",
-      "₺300+",
-      "₺500+",
-      "₺80+/kg"
-    ]
-  }
+  { "icon": "🔧", "rows": ["₺300+", "₺300+", "₺60+", "₺300+"] },
+  { "icon": "📏", "rows": ["₺200+", "₺200+", "₺200+", "₺200+", "₺800+"] },
+  { "icon": "✂️", "rows": ["₺400+", "₺800+", "₺900+", "₺250+"] },
+  { "icon": "🧺", "rows": ["₺80+", "₺300+", "₺500+", "₺80+/kg"] }
 ];
 
 export interface QuickItem { q: string; a: string; price: string; href: string; cta: string }
@@ -154,7 +119,6 @@ export const FT: Record<FLang, FiyatText> = {
       [
         "Pantolon fermuarı değişimi",
         "Mont fermuarı değişimi",
-        "Yırtık / dikiş sökülmesi onarımı",
         "Düğme, çıtçıt, kanca",
         "Astar değişimi"
       ],
@@ -166,7 +130,6 @@ export const FT: Record<FLang, FiyatText> = {
         "Gelinlik ve abiye tadilatı"
       ],
       [
-        "Erkek gömlek",
         "Erkek pantolon",
         "Kadın elbise",
         "Abiye",
@@ -183,14 +146,14 @@ export const FT: Record<FLang, FiyatText> = {
       {
         "q": "Elbisem yırtıldı",
         "a": "Yırtık, dikiş sökülmesi ve kumaş onarımı yapılır.",
-        "price": "₺150'den",
+        "price": "Fotoğrafla",
         "href": "#fiyatlar",
         "cta": "Fiyat listesi"
       },
       {
         "q": "Elbisenin belini daraltmak istiyorum",
         "a": "Bel ve beden daraltma, aynı gün veya 24 saat içinde.",
-        "price": "₺150'den",
+        "price": "₺200'den",
         "href": "#fiyatlar",
         "cta": "Fiyat listesi"
       },
@@ -218,7 +181,7 @@ export const FT: Record<FLang, FiyatText> = {
       {
         "q": "Gelinlik ve abiye tadilatı",
         "a": "Hassas daraltma, boy ve askı ayarı; prova randevusu.",
-        "price": "₺400'den",
+        "price": "₺800'den",
         "href": "/antalya-gelinlik-tadilati",
         "cta": "Gelinlik tadilatı"
       },
@@ -251,7 +214,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Elbisem yırtıldı, tamir edilir mi?",
-        "Evet. Yırtık ve sökülen dikişler onarılır; başlangıç fiyatı ₺150'dir. Yırtığın fotoğrafını WhatsApp'tan gönderirseniz net fiyat ve süre söyleriz. Çoğu onarım aynı gün veya 24 saat içinde tamamlanır."
+        "Evet. Yırtık ve sökülen dikişler onarılır; fiyat işe göre değişir. Yırtığın fotoğrafını WhatsApp'tan gönderirseniz net fiyat ve süre söyleriz. Çoğu onarım aynı gün veya 24 saat içinde tamamlanır."
       ],
       [
         "Elbisemin belini daraltmak istiyorum, ne kadar tutar?",
@@ -373,7 +336,6 @@ export const FT: Record<FLang, FiyatText> = {
       [
         "Trouser zipper replacement",
         "Coat zipper replacement",
-        "Tear or open-seam repair",
         "Buttons, snaps, hooks",
         "Lining replacement"
       ],
@@ -385,7 +347,6 @@ export const FT: Record<FLang, FiyatText> = {
         "Wedding & evening dress alteration"
       ],
       [
-        "Men's shirt",
         "Men's trousers",
         "Women's dress",
         "Evening gown",
@@ -402,7 +363,7 @@ export const FT: Record<FLang, FiyatText> = {
       {
         "q": "My dress is torn",
         "a": "Tears, opened seams and fabric repair.",
-        "price": "from ₺150",
+        "price": "By photo",
         "href": "#fiyatlar",
         "cta": "Price list"
       },
@@ -470,7 +431,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "My dress is torn. Can it be repaired?",
-        "Yes. Tears and open seams are repaired; prices start from ₺150. Send a photo of the damage on WhatsApp for an exact price and time. Most repairs are done the same day or within 24 hours."
+        "Yes. Tears and open seams are repaired; the price depends on the damage. Send a photo of the damage on WhatsApp for an exact price and time. Most repairs are done the same day or within 24 hours."
       ],
       [
         "I want to take in the waist of my dress. How much does it cost?",
@@ -590,7 +551,6 @@ export const FT: Record<FLang, FiyatText> = {
       [
         "Reißverschluss Hose ersetzen",
         "Reißverschluss Mantel ersetzen",
-        "Riss- / Nahtreparatur",
         "Knopf, Druckknopf, Haken",
         "Futter ersetzen"
       ],
@@ -602,7 +562,6 @@ export const FT: Record<FLang, FiyatText> = {
         "Braut- & Abendkleid ändern"
       ],
       [
-        "Herrenhemd",
         "Herrenhose",
         "Damenkleid",
         "Abendkleid",
@@ -619,7 +578,7 @@ export const FT: Record<FLang, FiyatText> = {
       {
         "q": "Mein Kleid ist gerissen",
         "a": "Risse, geöffnete Nähte und Stoffreparatur.",
-        "price": "ab ₺150",
+        "price": "Per Foto",
         "href": "#fiyatlar",
         "cta": "Preisliste"
       },
@@ -687,7 +646,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Mein Kleid ist gerissen. Kann man es reparieren?",
-        "Ja. Risse und geöffnete Nähte werden repariert; Preise ab ₺150. Senden Sie ein Foto des Schadens per WhatsApp, dann nennen wir Preis und Dauer. Die meisten Reparaturen sind am selben Tag oder innerhalb von 24 Stunden fertig."
+        "Ja. Risse und geöffnete Nähte werden repariert; der Preis hängt vom Schaden ab. Senden Sie ein Foto des Schadens per WhatsApp, dann nennen wir Preis und Dauer. Die meisten Reparaturen sind am selben Tag oder innerhalb von 24 Stunden fertig."
       ],
       [
         "Ich möchte die Taille meines Kleides enger machen. Was kostet das?",
@@ -807,7 +766,6 @@ export const FT: Record<FLang, FiyatText> = {
       [
         "Замена молнии на брюках",
         "Замена молнии на куртке",
-        "Ремонт разрыва / шва",
         "Пуговицы, кнопки, крючки",
         "Замена подкладки"
       ],
@@ -819,7 +777,6 @@ export const FT: Record<FLang, FiyatText> = {
         "Подгонка свадебного и вечернего платья"
       ],
       [
-        "Мужская рубашка",
         "Мужские брюки",
         "Женское платье",
         "Вечернее платье",
@@ -836,7 +793,7 @@ export const FT: Record<FLang, FiyatText> = {
       {
         "q": "У меня порвалось платье",
         "a": "Ремонт разрывов, распоротых швов и ткани.",
-        "price": "от ₺150",
+        "price": "По фото",
         "href": "#fiyatlar",
         "cta": "Прайс-лист"
       },
@@ -904,7 +861,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "У меня порвалось платье. Можно ли его починить?",
-        "Да. Разрывы и распоротые швы чиним; цены от ₺150. Пришлите фото повреждения в WhatsApp — назовём точную цену и срок. Большинство ремонтов делаем в тот же день или за 24 часа."
+        "Да. Разрывы и распоротые швы чиним; цена зависит от повреждения. Пришлите фото повреждения в WhatsApp — назовём точную цену и срок. Большинство ремонтов делаем в тот же день или за 24 часа."
       ],
       [
         "Хочу ушить платье в талии. Сколько это стоит?",

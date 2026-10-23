@@ -48,9 +48,9 @@ const SERVICES: { title: string; desc: string; rows: [string, string][] }[] = [
   { title: 'Änderungen', desc: 'Passform-Anpassungen, damit Kleidung genau sitzt.',
     rows: [['Hose kürzen', 'ab ₺200'], ['Taille enger machen', 'ab ₺200'], ['Ärmel kürzen', 'ab ₺200'], ['Kleid / Jacke anpassen', 'ab ₺200'], ['Brautkleid und Abendkleid', 'ab ₺800']] },
   { title: 'Reparatur', desc: 'Reißverschluss, Risse, Knöpfe und Futter.',
-    rows: [['Reißverschluss (Hose)', 'ab ₺300'], ['Reißverschluss (Mantel)', 'ab ₺300'], ['Riss / Naht reparieren', 'ab ₺150'], ['Knopf, Haken', 'ab ₺60']] },
+    rows: [['Reißverschluss (Hose)', 'ab ₺300'], ['Reißverschluss (Mantel)', 'ab ₺300'], ['Knopf, Haken', 'ab ₺60']] },
   { title: 'Maßanfertigung', desc: 'Kleidung nach Ihren Maßen, auch aus Leinen und Baumwolle.',
-    rows: [['Herrenhemd', 'ab ₺350'], ['Herrenhose', 'ab ₺400'], ['Damenkleid', 'ab ₺800'], ['Abendkleid', 'ab ₺900'], ['Kinderkleidung', 'ab ₺250']] },
+    rows: [['Herrenhose', 'ab ₺400'], ['Damenkleid', 'ab ₺800'], ['Abendkleid', 'ab ₺900'], ['Kinderkleidung', 'ab ₺250']] },
   { title: 'Bügeln und Reinigung', desc: 'Dampfbügeln und chemische Reinigung.',
     rows: [['Bügeln (pro Stück)', 'ab ₺80'], ['Reinigung (Kleid)', 'ab ₺300'], ['Reinigung (Mantel)', 'ab ₺500']] },
 ];

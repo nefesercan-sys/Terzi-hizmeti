@@ -129,7 +129,7 @@ const jsonLd = {
       name: 'Konyaaltı\'da Paça Kısaltma Nasıl Yaptırılır?',
       description: 'Pantolon veya etek paça kısaltma için adım adım süreç.',
       totalTime: 'PT1H',
-      estimatedCost: { '@type': 'MonetaryAmount', currency: 'TRY', value: '150-220' },
+      estimatedCost: { '@type': 'MonetaryAmount', currency: 'TRY', value: '200' },
       step: [
         { '@type': 'HowToStep', name: 'İstediğiniz Boyu Belirtin', text: 'WhatsApp\'tan pantolon/etek fotoğrafını ve kısaltmak istediğiniz miktarı belirtin.' },
         { '@type': 'HowToStep', name: 'Ölçü Kontrolü', text: 'Mümkünse atölyede prova ile en doğru boy belirlenir; adrese gelen servis de mevcuttur.' },

@@ -129,9 +129,9 @@ const SERVICES = [
 
 const REPAIR_CATEGORIES = [
   { icon: '✂️', title: 'Tailoring', keyword: 'custom tailoring Antalya', desc: 'Made-from-scratch garments to your exact measurements.',
-    rows: [["Men's Shirt", '₺350+'], ["Men's Trousers", '₺400+'], ["Women's Dress", '₺800+'], ['Evening Gown', '₺900+'], ["Children's Clothing", '₺250+']] as [string, string][] },
+    rows: [["Men's Trousers", '₺400+'], ["Women's Dress", '₺800+'], ['Evening Gown', '₺900+'], ["Children's Clothing", '₺250+']] as [string, string][] },
   { icon: '🔧', title: 'Repair', keyword: 'clothing repair Antalya', desc: 'Zippers, tears, buttons — everyday fixes.',
-    rows: [['Zipper Replacement (Trousers)', '₺300+'], ['Zipper Replacement (Coat)', '₺300+'], ['Tear / Seam Repair', '₺150+'], ['Button, Hook Repair', '₺60+'], ['Lining Replacement', '₺300+']] as [string, string][] },
+    rows: [['Zipper Replacement (Trousers)', '₺300+'], ['Zipper Replacement (Coat)', '₺300+'], ['Button, Hook Repair', '₺60+'], ['Lining Replacement', '₺300+']] as [string, string][] },
   { icon: '📏', title: 'Alterations', keyword: 'hemming Antalya', desc: 'Precise fit adjustments to your body.',
     rows: [['Hemming', '₺200+'], ['Waist Taking In', '₺200+'], ['Sleeve Shortening', '₺200+'], ['Dress / Jacket Resizing', '₺200+'], ['Wedding & Evening Dress', '₺800+']] as [string, string][] },
   { icon: '🧺', title: 'Ironing & Dry Cleaning', keyword: 'ironing dry cleaning Antalya', desc: 'Professional steam ironing and dry cleaning.',

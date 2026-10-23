@@ -55,8 +55,8 @@ const SERVICES: { title: string; desc: string; rows: [string, string][] }[] = [
     rows: [['Bügeln (pro Stück)', 'ab ₺80'], ['Reinigung (Kleid)', 'ab ₺300'], ['Reinigung (Mantel)', 'ab ₺500']] },
 ];
 
-const FREE_DISTRICTS = ['Konyaaltı', 'Muratpaşa', 'Kepez', 'Lara'];
-const OTHER_DISTRICTS = ['Belek', 'Kemer', 'Side', 'Serik', 'Manavgat', 'Alanya', 'Döşemealtı', 'Aksu'];
+const FREE_DISTRICTS = ['Konyaaltı'];
+const OTHER_DISTRICTS = ['Muratpaşa', 'Kepez', 'Lara', 'Belek', 'Kemer', 'Side', 'Serik', 'Manavgat', 'Alanya', 'Döşemealtı', 'Aksu'];
 
 const STEPS: [string, string][] = [
   ['Foto senden', 'Senden Sie per WhatsApp ein Foto des Kleidungsstücks und der gewünschten Arbeit.'],
@@ -72,6 +72,10 @@ const FAQS: [string, string][] = [
   ['Wie bekomme ich einen Preis, ohne vorbeizukommen?', 'Senden Sie ein Foto des Kleidungsstücks und der gewünschten Arbeit per WhatsApp. Wir nennen Preis und Bearbeitungszeit. Preisliste: ' + PRICE_URL],
   ['Wie schnell ist eine Änderung fertig?', 'Viele Reparaturen und das Kürzen von Hosen sind am selben Tag oder innerhalb von 24 Stunden fertig. Die genaue Zeit hängt von Arbeit und Auslastung ab und wird per WhatsApp bestätigt.'],
   ['Können Sie ein Brautkleid oder Abendkleid ändern?', 'Ja. Brautkleid- und Abendkleid-Änderungen gibt es ab ₺800, je nach Aufwand. Senden Sie am besten vorab Fotos.'],
+  ['Wo kann ich in Antalya in meiner Nähe eine Hose kürzen lassen?', 'Bei Terzi Can in Hurma, Konyaaltı, täglich von 08:00 bis 23:00 geöffnet. Hosen und Jeans kürzen ab ₺200, meist am selben Tag oder innerhalb von 24 Stunden. WhatsApp: ' + PHONE],
+  ['Was kostet Kürzen und Reißverschluss wechseln in Antalya?', 'Kürzen ab ₺200, Taille enger machen ab ₺200, Reißverschluss wechseln ab ₺300, Brautkleid ändern ab ₺800 (Preise 2026). Den genauen Preis nennen wir nach einem Foto per WhatsApp.'],
+  ['Ändern Sie auch Jacken, Mäntel, Hemden, Röcke und Shorts?', 'Ja. Wir ändern und reparieren Jacken, Mäntel, Hemden, Röcke, Shorts, Kleider und Hosen für Damen und Herren. Senden Sie ein Foto per WhatsApp, wir nennen Preis und Dauer.'],
+  ['Ich bin nur wenige Tage im Hotel. Reicht die Zeit?', 'Ja. Kürzen und Reparaturen sind meist am selben Tag oder innerhalb von 24 Stunden fertig. Wir holen die Kleidung im Hotel ab und bringen sie zurück (in Konyaaltı kostenlos, sonst nach Entfernung).'],
   ['Haben Sie am Wochenende geöffnet?', 'Ja, die Werkstatt ist an sieben Tagen in der Woche geöffnet. Die aktuellen Zeiten stehen bei Google Maps.'],
 ];
 

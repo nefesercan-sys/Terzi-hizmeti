@@ -17,8 +17,8 @@ export async function generateMetadata({ params }: { params: Promise<{ region: s
   const r = bulOtelBolgesi(region);
   if (!r) return {};
   const url = `${SITE}${BASE_PATH}/${r.slug}`;
-  const title = `${r.name} Otel Terzisi | Otelden Alır, Teslim Ederiz`;
-  const desc = `${r.name} bölgesinde otelde mi kalıyorsunuz? Kıyafetinizi otelden alıp Konyaaltı'nda tadil ediyor, geri getiriyoruz. Her gün 08:00–23:00.`;
+  const title = `${r.name} Otel Terzisi · Paça ₺200'den, Otelden Alır`;
+  const desc = `${r.name} otelinde mi kalıyorsunuz? Paça ₺200'den, fermuar ₺300'den; otelden alıp tadil edip getiriyoruz. Servis ücreti mesafeye göre. 08:00–23:00.`;
   return {
     metadataBase: new URL(SITE),
     title: { absolute: title }, description: desc,

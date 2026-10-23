@@ -14,9 +14,9 @@ const TODAY     = '2026-10-04';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Paça Kısaltma Fiyatı 2026 Konyaaltı — Aynı Gün Teslim" },
+  title: { absolute: "Paça Kısaltma ₺200 · Aynı Gün Teslim · Konyaaltı Terzi" },
   description:
-    'Paça kısaltma ücreti 2026 Konyaaltı: pantolon, kot, etek ₺200\'den, aynı gün teslim. Pantolon paçası kaç TL? Hurma, Liman, Sarısu\'ya ücretsiz servis.',
+    "Pantolon, kot, etek paça kısaltma ₺200'den, çoğu iş aynı gün teslim. Hurma, Liman, Sarısu'ya ücretsiz servis. Her gün 08:00–23:00. ☎ " + PHONE,
   keywords: [
     'paça kısaltma Konyaaltı', 'pantolon kısaltma Antalya', 'kot paça kısaltma',
     'etek kısaltma Antalya', 'paça kısaltma fiyatı 2026', 'aynı gün paça kısaltma',

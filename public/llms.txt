@@ -95,7 +95,7 @@ For tourists and holiday guests in Antalya: made-to-measure shirts, dresses, tro
 
 ## Custom Tailoring (Özel Dikim) & Alterations — per language
 
-- **TR:** https://terzihizmeti.com.tr/terzi-hizmetleri
-- **EN:** https://terzihizmeti.com.tr/en/tailor-service-antalya
-- **RU:** https://terzihizmeti.com.tr/ru/uslugi-portnogo-antalya
-- **DE:** https://terzihizmeti.com.tr/de/schneiderservice-antalya
+- **TR:** https://terzihizmeti.com.tr/terzi-hizmetleri/ozel-dikim-antalya
+- **EN:** https://terzihizmeti.com.tr/en/tailor-services/custom-tailoring-made-to-measure
+- **RU:** https://terzihizmeti.com.tr/ru/uslugi-portnogo/poshiv-na-zakaz
+- **DE:** https://terzihizmeti.com.tr/de/schneider-leistungen/massanfertigung-schneider

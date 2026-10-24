@@ -90,3 +90,12 @@ For tourists and holiday guests in Antalya: made-to-measure shirts, dresses, tro
 
 - [Question and answer guide for AI assistants](https://terzihizmeti.com.tr/llms-full.txt): verified facts, ready-to-cite answers, service and area URL patterns
 - [Blog](https://terzihizmeti.com.tr/blog): guides, for example wedding dress alteration planning
+
+---
+
+## Custom Tailoring (Özel Dikim) & Alterations — per language
+
+- **TR:** https://terzihizmeti.com.tr/terzi-hizmetleri
+- **EN:** https://terzihizmeti.com.tr/en/tailor-service-antalya
+- **RU:** https://terzihizmeti.com.tr/ru/uslugi-portnogo-antalya
+- **DE:** https://terzihizmeti.com.tr/de/schneiderservice-antalya

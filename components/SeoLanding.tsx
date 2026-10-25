@@ -16,7 +16,7 @@ import {
   type Lang, type District, type Service,
   isTrNear, isIndexable, TR_NEAR_SLUGS, trExtraKeywords, isFreeService,
 } from '@/lib/seo-data';
-import { angleFor, angleTitles, angleDescs, angleKeywords, unfreeDeep } from '@/lib/seo-angles';
+import { angleFor, angleTitles, angleDescs, angleKeywords, unfreeDeep, unfree } from '@/lib/seo-angles';
 import { fgNearDistrict, fgServiceMeta } from '@/lib/fg-meta';
 import { trNearDistrict } from '@/lib/tr-meta';
 
@@ -217,9 +217,9 @@ function _districtCopy(lang: Lang, d: District) {
         `${n} şort kısaltma`, `${n} mont tamiri`, `${n} ceket daraltma`, `${n} ceket kısaltma`, `${n} elbise dikimi`, `${n} elbise daraltma`,
         `${n} abiye tamiri`, `${n} özel dikim`, `${n} bana yakın terzi`);
     }
-    return metaOverride({ n, loc, kw, title, desc });
+    return metaOverride({ n, loc, kw, title, desc: isFreeService(d.slug) ? desc : unfree(lang, desc) });
   }
-  return metaOverride({ n, loc, kw, title, desc });
+  return metaOverride({ n, loc, kw, title, desc: isFreeService(d.slug) ? desc : unfree(lang, desc) });
 
   function metaOverride(r: { n: string; loc: string; kw: string[]; title: string; desc: string }) {
     const o = lang === 'tr' ? trNearDistrict(d.slug, n, r.loc, PHONE, 'Terzi Can') : fgNearDistrict(lang, d.slug, n); // elle yazılmış meta (TR yakın bölgeler + EN/RU/DE)
@@ -459,7 +459,7 @@ export function hubMetadata(lang: Lang): Metadata {
   }[lang];
   const description = {
     tr: `Bay bayan tamir tadilat: söküğü, yırtığı dikme, paça ve etek kısaltma, fermuar değişimi. Konyaaltı Hurma, Liman, Uncalı, Gürsu. ☎ ${PHONE}`,
-    en: `Clothing repair for men & women: torn seams, hemming, zipper replacement. Konyaaltı, Hurma, Liman, Arapsuyu. Free pick-up. ☎ ${PHONE}`,
+    en: `Clothing repair for men & women: torn seams, hemming, zipper replacement. Konyaaltı, Hurma, Liman, Arapsuyu. Pick-up arranged on WhatsApp. ☎ ${PHONE}`,
     ru: `Ремонт одежды: зашить дырку, подшив, молнии, мужская и женская. Коньяалты, Хурма, Лиман, Арапсую. Бесплатный забор. ☎ ${PHONE}`,
     de: `Kleidung reparieren & ändern: Risse nähen, Kürzen, Reißverschluss. Konyaaltı, Hurma, Liman, Arapsuyu. Abholung gratis. ☎ ${PHONE}`,
   }[lang];

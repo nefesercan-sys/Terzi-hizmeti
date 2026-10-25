@@ -5,6 +5,7 @@ import './globals.css';
 import LangSetter from './LangSetter';
 import IcerikHaritasi from '@/components/IcerikHaritasi';
 import { HizliEylemBandi, HizliAkis } from '@/components/HizliEylem';
+import RuTelegramButton from '@/components/RuTelegramButton';
 
 const inter = Inter({ subsets: ['latin'], weight: ['400', '500', '600', '700', '800', '900'], variable: '--font-inter', display: 'swap' });
 const syne = Syne({ subsets: ['latin'], weight: ['700', '800'], variable: '--font-syne', display: 'swap' });
@@ -54,6 +55,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <LangSetter />
         <HizliEylemBandi />
         {children}
+        <RuTelegramButton />
         <HizliAkis />
         <IcerikHaritasi />
         <Analytics />

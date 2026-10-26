@@ -152,7 +152,7 @@ export const FT: Record<FLang, FiyatText> = {
       },
       {
         "q": "Elbisenin belini daraltmak istiyorum",
-        "a": "Bel ve beden daraltma, aynı gün veya 24 saat içinde.",
+        "a": "Bel ve beden daraltma, aynı gün veya 1–2 gün içinde.",
         "price": "₺200'den",
         "href": "#fiyatlar",
         "cta": "Fiyat listesi"
@@ -214,7 +214,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Elbisem yırtıldı, tamir edilir mi?",
-        "Evet. Yırtık ve sökülen dikişler onarılır; fiyat işe göre değişir. Yırtığın fotoğrafını WhatsApp'tan gönderirseniz net fiyat ve süre söyleriz. Çoğu onarım aynı gün veya 24 saat içinde tamamlanır."
+        "Evet. Yırtık ve sökülen dikişler onarılır; fiyat işe göre değişir. Yırtığın fotoğrafını WhatsApp'tan gönderirseniz net fiyat ve süre söyleriz. Çoğu onarım aynı gün veya 1–2 gün içinde tamamlanır."
       ],
       [
         "Elbisemin belini daraltmak istiyorum, ne kadar tutar?",
@@ -369,7 +369,7 @@ export const FT: Record<FLang, FiyatText> = {
       },
       {
         "q": "I want to take in the waist of my dress",
-        "a": "Waist and size reduction, same day or within 24 hours.",
+        "a": "Waist and size reduction, same day or usually within 1–2 days.",
         "price": "from ₺200",
         "href": "#fiyatlar",
         "cta": "Price list"
@@ -431,7 +431,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "My dress is torn. Can it be repaired?",
-        "Yes. Tears and open seams are repaired; the price depends on the damage. Send a photo of the damage on WhatsApp for an exact price and time. Most repairs are done the same day or within 24 hours."
+        "Yes. Tears and open seams are repaired; the price depends on the damage. Send a photo of the damage on WhatsApp for an exact price and time. Most repairs are done the same day or usually within 1–2 days."
       ],
       [
         "I want to take in the waist of my dress. How much does it cost?",
@@ -584,7 +584,7 @@ export const FT: Record<FLang, FiyatText> = {
       },
       {
         "q": "Ich möchte die Taille meines Kleides enger machen",
-        "a": "Taillen- und Größenanpassung, am selben Tag oder innerhalb von 24 Stunden.",
+        "a": "Taillen- und Größenanpassung, am selben Tag oder in der Regel innerhalb von 1–2 Tagen.",
         "price": "ab ₺200",
         "href": "#fiyatlar",
         "cta": "Preisliste"
@@ -646,7 +646,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Mein Kleid ist gerissen. Kann man es reparieren?",
-        "Ja. Risse und geöffnete Nähte werden repariert; der Preis hängt vom Schaden ab. Senden Sie ein Foto des Schadens per WhatsApp, dann nennen wir Preis und Dauer. Die meisten Reparaturen sind am selben Tag oder innerhalb von 24 Stunden fertig."
+        "Ja. Risse und geöffnete Nähte werden repariert; der Preis hängt vom Schaden ab. Senden Sie ein Foto des Schadens per WhatsApp, dann nennen wir Preis und Dauer. Die meisten Reparaturen sind am selben Tag oder innerhalb von in der Regel 1–2 Tagen fertig."
       ],
       [
         "Ich möchte die Taille meines Kleides enger machen. Was kostet das?",
@@ -799,7 +799,7 @@ export const FT: Record<FLang, FiyatText> = {
       },
       {
         "q": "Хочу ушить платье в талии",
-        "a": "Уменьшение по талии и размеру, в тот же день или за 24 часа.",
+        "a": "Уменьшение по талии и размеру, в тот же день или обычно за 1–2 дня.",
         "price": "от ₺200",
         "href": "#fiyatlar",
         "cta": "Прайс-лист"
@@ -861,7 +861,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "У меня порвалось платье. Можно ли его починить?",
-        "Да. Разрывы и распоротые швы чиним; цена зависит от повреждения. Пришлите фото повреждения в WhatsApp — назовём точную цену и срок. Большинство ремонтов делаем в тот же день или за 24 часа."
+        "Да. Разрывы и распоротые швы чиним; цена зависит от повреждения. Пришлите фото повреждения в WhatsApp — назовём точную цену и срок. Большинство ремонтов делаем в тот же день или обычно за 1–2 дня."
       ],
       [
         "Хочу ушить платье в талии. Сколько это стоит?",

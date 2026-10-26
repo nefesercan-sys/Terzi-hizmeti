@@ -1,6 +1,6 @@
 // lib/value-props.ts
 // Slogan, rozet ve hazır WhatsApp mesajlarının TEK kaynağı (4 dil).
-// Kural: burada gerçek olmayan hiçbir vaat yok (7/24, "2 dakikada fiyat", "24 saatte teslim"
+// Kural: burada gerçek olmayan hiçbir vaat yok (7/24, "2 dakikada fiyat", "1–2 günde teslim"
 // gibi süre garantileri çıkarıldı). Bir vaadi doğru yapabiliyorsan buraya yazabilirsin.
 
 export type Lang = 'tr' | 'en' | 'de' | 'ru';

@@ -4,16 +4,16 @@ import { DistrictPage, districtMetadata } from '@/components/SeoLanding';
 
 export const dynamicParams = false;
 export function generateStaticParams() {
-  return DISTRICTS.map((d) => ({ bolge: d.slug }));
+  return DISTRICTS.filter((d) => !d.trHref).map((d) => ({ bolge: d.slug }));
 }
 export async function generateMetadata({ params }: { params: Promise<{ bolge: string }> }) {
   const { bolge } = await params;
   const d = findDistrict(bolge);
-  return d ? districtMetadata('tr', d) : {};
+  return d && !d.trHref ? districtMetadata('tr', d) : {};
 }
 export default async function Page({ params }: { params: Promise<{ bolge: string }> }) {
   const { bolge } = await params;
   const d = findDistrict(bolge);
-  if (!d) notFound();
+  if (!d || d.trHref) notFound();
   return <DistrictPage lang="tr" d={d} />;
 }

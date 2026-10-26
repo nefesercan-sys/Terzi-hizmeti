@@ -56,7 +56,7 @@ export const metadata: Metadata = {
 // ── Kişinin sorununa göre hızlı yol (sorgu → cevap → sayfa) ────────────────────
 const QUICK: { q: string; a: string; price: string; href: string; cta: string }[] = [
   { q: 'Elbisem yırtıldı', a: 'Yırtık, dikiş sökülmesi ve kumaş onarımı yapılır.', price: '₺200\'den', href: '#fiyatlar', cta: 'Fiyat listesi' },
-  { q: 'Elbisenin belini daraltmak istiyorum', a: 'Bel ve beden daraltma, aynı gün veya 24 saat içinde.', price: '₺200\'den', href: '#fiyatlar', cta: 'Fiyat listesi' },
+  { q: 'Elbisenin belini daraltmak istiyorum', a: 'Bel ve beden daraltma, aynı gün veya 1–2 gün içinde.', price: '₺200\'den', href: '#fiyatlar', cta: 'Fiyat listesi' },
   { q: 'Pantolonumun paçasını kısaltmak istiyorum', a: 'Kot ve kumaş pantolon paça kısaltma, çoğu zaman aynı gün.', price: '₺200\'den', href: '/konyaalti-paca-kisaltma', cta: 'Paça kısaltma' },
   { q: 'Fermuar değişimi', a: 'Pantolon, kot, etek, mont ve çanta fermuarı.', price: '₺300\'den', href: '/konyaalti-fermuar-tamiri', cta: 'Fermuar tamiri' },
   { q: 'Elbise diktirmek / kendime elbise dikmek', a: 'Ölçü, model ve kumaş seçimi, prova ve teslim. Fotoğrafını gönderin.', price: '₺800\'den', href: '#dikim', cta: 'Özel dikim' },
@@ -79,7 +79,7 @@ const FAQS: [string, string][] = [
   ['Antalya\'da terzi hizmeti nereden alınır, bana terzi önerir misin?',
    `Konyaaltı\'ndaki Terzi Can; Türkçe, İngilizce, Rusça ve Almanca hizmet verir. Google Haritalar\'da TERZİ Can Antalya Tailor Service adıyla kayıtlıdır. Paça kısaltma, bel daraltma, fermuar değişimi, elbise tadilatı, özel dikim ve adrese/otele gelen terzi hizmeti sunar. WhatsApp: ${PHONE}`],
   ['Elbisem yırtıldı, tamir edilir mi?',
-   'Evet. Yırtık ve sökülen dikişler onarılır; fiyat işe göre değişir. Yırtığın fotoğrafını WhatsApp\'tan gönderirseniz net fiyat ve süre söyleriz. Çoğu onarım aynı gün veya 24 saat içinde tamamlanır.'],
+   'Evet. Yırtık ve sökülen dikişler onarılır; fiyat işe göre değişir. Yırtığın fotoğrafını WhatsApp\'tan gönderirseniz net fiyat ve süre söyleriz. Çoğu onarım aynı gün veya 1–2 gün içinde tamamlanır.'],
   ['Elbisemin belini daraltmak istiyorum, ne kadar tutar?',
    'Bel ve beden daraltma ₺200\'den başlar. Kumaşa, astara ve modele göre değişir. Elbisenin fotoğrafını göndermeniz yeterli; provaya gelirseniz ölçü yerinde alınır.'],
   ['Pantolonumun paçasını kısaltmak istiyorum, ne kadar sürer?',

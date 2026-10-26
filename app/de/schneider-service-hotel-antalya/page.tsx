@@ -60,7 +60,7 @@ const jsonLd = {
       mainEntity: [
         { '@type': 'Question', name: 'Wie funktioniert der mobile Schneiderservice im Hotel?', acceptedAnswer: { '@type': 'Answer', text: 'Sie teilen uns Hotelname, Zimmernummer und einen passenden Zeitpunkt per WhatsApp mit. Unser Schneider kommt zu Ihnen, nimmt Maß oder holt das Kleidungsstück ab, und liefert es fertig repariert oder geändert zurück.' } },
         { '@type': 'Question', name: 'In welche Hotelbezirke kommen Sie?', acceptedAnswer: { '@type': 'Answer', text: 'Wir bedienen Belek, Lara, Güzeloba, Kemer und Side sowie auf Anfrage weitere Bezirke Antalyas.' } },
-        { '@type': 'Question', name: 'Wie lange dauert eine Änderung oder Reparatur?', acceptedAnswer: { '@type': 'Answer', text: 'Die meisten Änderungen und Reparaturen sind innerhalb von 24 Stunden fertig. Für Hochzeits- oder Abendkleider empfehlen wir, uns möglichst früh zu kontaktieren.' } },
+        { '@type': 'Question', name: 'Wie lange dauert eine Änderung oder Reparatur?', acceptedAnswer: { '@type': 'Answer', text: 'Die meisten Änderungen und Reparaturen sind innerhalb von in der Regel 1–2 Tagen fertig. Für Hochzeits- oder Abendkleider empfehlen wir, uns möglichst früh zu kontaktieren.' } },
         { '@type': 'Question', name: 'Welche Sprachen sprechen Sie?', acceptedAnswer: { '@type': 'Answer', text: 'Unser Team spricht Deutsch, Englisch, Russisch und Türkisch.' } },
       ],
     },
@@ -174,7 +174,7 @@ export default function OtelBolgeleriDeHub() {
               <div className="howto-item"><div className="howto-t">1. Nachricht senden</div><div className="howto-d">Hotelname, Zimmernummer und Anliegen per WhatsApp mitteilen.</div></div>
               <div className="howto-item"><div className="howto-t">2. Termin vereinbaren</div><div className="howto-d">Wir bestätigen einen passenden Zeitpunkt, meist noch am selben Tag.</div></div>
               <div className="howto-item"><div className="howto-t">3. Vor-Ort-Service</div><div className="howto-d">Unser Schneider kommt zu Ihnen, nimmt Maß oder holt das Kleidungsstück ab.</div></div>
-              <div className="howto-item"><div className="howto-t">4. Lieferung ins Hotel</div><div className="howto-d">Fertiges Stück wird innerhalb von 24 Stunden zurückgebracht.</div></div>
+              <div className="howto-item"><div className="howto-t">4. Lieferung ins Hotel</div><div className="howto-d">Fertiges Stück wird in der Regel innerhalb von 1–2 Tagen zurückgebracht.</div></div>
             </div>
           </div>
         </section>
@@ -189,7 +189,7 @@ export default function OtelBolgeleriDeHub() {
             {[
               ['Wie funktioniert der mobile Schneiderservice im Hotel?', 'Sie teilen uns Hotelname, Zimmernummer und einen passenden Zeitpunkt per WhatsApp mit. Unser Schneider kommt zu Ihnen, nimmt Maß oder holt das Kleidungsstück ab, und liefert es fertig repariert oder geändert zurück.'],
               ['In welche Hotelbezirke kommen Sie?', 'Wir bedienen Belek, Lara, Güzeloba, Kemer und Side sowie auf Anfrage weitere Bezirke Antalyas.'],
-              ['Wie lange dauert eine Änderung oder Reparatur?', 'Die meisten Änderungen und Reparaturen sind innerhalb von 24 Stunden fertig. Für Hochzeits- oder Abendkleider empfehlen wir, uns möglichst früh zu kontaktieren.'],
+              ['Wie lange dauert eine Änderung oder Reparatur?', 'Die meisten Änderungen und Reparaturen sind innerhalb von in der Regel 1–2 Tagen fertig. Für Hochzeits- oder Abendkleider empfehlen wir, uns möglichst früh zu kontaktieren.'],
               ['Welche Sprachen sprechen Sie?', 'Unser Team spricht Deutsch, Englisch, Russisch und Türkisch.'],
             ].map(([q, a]) => (
               <div key={q} className="faq-item">

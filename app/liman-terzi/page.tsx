@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import ReviewsBlock from '@/components/ReviewsBlock';
 import { reviewSchema } from '@/lib/reviews';
 import Image from 'next/image';
+import { DISTRICT_BASE } from '@/lib/seo-data';
 
 const SITE      = 'https://terzihizmeti.com.tr';
 const PAGE_URL  = `${SITE}/liman-terzi`;
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
     "Liman terzi: paça kısaltma ₺200, fermuar değişimi ₺300, bel daraltma, tamir tadilat. Liman'a ücretsiz servis. Her gün 08:00–23:00. ☎ " + PHONE,
   keywords: Array.from(new Set(['Liman tamir tadilat', 'Liman söküğü dikme', 'Liman yırtık tamiri', 'Liman elbise tamiri', 'Liman terzi', 'Liman mahallesi terzi', 'Liman Konyaaltı terzi', 'Liman paça kısaltma', 'Liman fermuar tamiri', 'Liman bel daraltma', 'Liman elbise dikimi', 'Liman gelinlik tadilatı', 'Liman ütü hizmeti', 'Liman kuru temizleme', 'Liman terzi fiyatları 2026', 'Konyaaltı Liman dikiş atölyesi', 'Liman fermuar değişimi', 'Liman fermuar değiştirme', 'Liman beden ayarlama', 'Liman beden ayarlaması', 'Liman beden küçültme', 'Liman beden büyütme', 'Liman pantolon daraltma', 'Liman pantolon kısaltma', 'Liman kot paçası kısaltma', 'Liman abiye tamiri', 'Liman mont fermuar değişimi', 'Liman ceket tadilatı', 'Liman gömlek daraltma', 'Liman etek daraltma', 'Liman şort kısaltma', 'Liman özel dikim', 'Liman bayan elbise dikimi', 'Liman yakınımda terzi', 'Konyaaltı Liman terzi tamir tadilat', 'Liman bay bayan elbise tamiri', 'Liman terzi', 'Liman bay bayan terzi', 'Liman dikim', 'Liman tamir tadilat', 'Liman elbise tamiri', 'Liman elbise tadilatı', 'Liman fermuar değişimi', 'Liman fermuar tamiri', 'Liman boy kısaltma', 'Liman bel daraltma', 'Liman etek boyu kısaltma', 'Liman pantolon boyu kısaltma', 'Liman paça kısaltma', 'Liman kot paçası kısaltma', 'Liman beden ölçüsüne göre elbise tadilatı', 'Liman mont tamiri', 'Liman ceket daraltma', 'Liman gömlek daraltma', 'Liman şort kısaltma', 'Liman pantolon daraltma', 'Liman etek daraltma', 'Liman elbise daraltma', 'Liman elbise dikimi'])) ,
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
-  alternates: { canonical: PAGE_URL },
+  alternates: { canonical: PAGE_URL, languages: { tr: PAGE_URL, en: `${SITE}${DISTRICT_BASE.en}/liman`, ru: `${SITE}${DISTRICT_BASE.ru}/liman`, de: `${SITE}${DISTRICT_BASE.de}/liman`, 'x-default': PAGE_URL } },
   openGraph: {
     title: 'Liman Terzi · Paça, Fermuar, Beden Ayarı | Terzi Can',
     description: "Liman terzi: paça kısaltma ₺200'den, fermuar değişimi ₺300'den, beden ayarlama, bel daraltma, tamir tadilat. Adrese servis. 08:00–23:00. ☎ " + PHONE,
@@ -114,12 +115,12 @@ const jsonLd = {
         highPrice: '600',
         offerCount: 6,
         offers: [
-          { '@type': 'Offer', name: 'Paça Kısaltma', price: '200', priceCurrency: 'TRY', priceValidUntil: '2026-12-31' },
-          { '@type': 'Offer', name: 'Fermuar Değişimi', price: '300', priceCurrency: 'TRY', priceValidUntil: '2026-12-31' },
-          { '@type': 'Offer', name: 'Bel Daraltma', price: '200', priceCurrency: 'TRY', priceValidUntil: '2026-12-31' },
-          { '@type': 'Offer', name: 'Elbise Dikimi', price: '800', priceCurrency: 'TRY', priceValidUntil: '2026-12-31' },
-          { '@type': 'Offer', name: 'Gelinlik Tadilatı', price: '800', priceCurrency: 'TRY', priceValidUntil: '2026-12-31' },
-          { '@type': 'Offer', name: 'Ütü Hizmeti', price: '80', priceCurrency: 'TRY', priceValidUntil: '2026-12-31' },
+          { '@type': 'Offer', name: 'Paça Kısaltma', price: '200', priceCurrency: 'TRY', priceValidUntil: '2027-12-31' },
+          { '@type': 'Offer', name: 'Fermuar Değişimi', price: '300', priceCurrency: 'TRY', priceValidUntil: '2027-12-31' },
+          { '@type': 'Offer', name: 'Bel Daraltma', price: '200', priceCurrency: 'TRY', priceValidUntil: '2027-12-31' },
+          { '@type': 'Offer', name: 'Elbise Dikimi', price: '800', priceCurrency: 'TRY', priceValidUntil: '2027-12-31' },
+          { '@type': 'Offer', name: 'Gelinlik Tadilatı', price: '800', priceCurrency: 'TRY', priceValidUntil: '2027-12-31' },
+          { '@type': 'Offer', name: 'Ütü Hizmeti', price: '80', priceCurrency: 'TRY', priceValidUntil: '2027-12-31' },
         ],
       },
     },
@@ -171,7 +172,7 @@ export default function LimanPage() {
             <span className="hero-tag">📍 Liman Mahallesi · Konyaaltı · Ücretsiz Servis</span>
             <h1 id="hero-h">
               Liman <span className="accent">Terzi</span><br />
-              Dikim, Tamir, Tadilat, Ütü
+              Paça Kısaltma, Bel Daraltma, Fermuar Değişimi
             </h1>
             <p className="hero-desc">
               Liman mahallesine terzi hizmeti. Paça kısaltma, fermuar değişimi,

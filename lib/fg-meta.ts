@@ -22,8 +22,8 @@ const FG_DISTRICT: Record<string, Row> = {
     de: { t: "Schneider Muratpaşa: Abend- & Brautkleid ändern | Terzi Can", d: "Abendkleid und Brautkleid ändern in Muratpaşa: Abend- und Brautkleid ab ₺800. Mit Anprobe, Abholung per WhatsApp vereinbar. ☎ +90 531 898 64 18", kw: ["Schneider Muratpaşa", "Abendkleid ändern Muratpaşa", "Brautkleid ändern Antalya"] },
   },
   "meltem": {
-    en: { t: "Meltem Tailor: Suit, Jacket & Trouser Alteration | Terzi Can", d: "Suit, jacket and trouser alterations in Meltem for men and women: sleeves, hems, waist, shoulders. Pick-up arranged on WhatsApp. ☎ +90 531 898 64 18", kw: ["tailor Meltem", "suit alteration Meltem", "jacket alteration Antalya", "trouser hemming Meltem"] },
-    ru: { t: "Портной Мельтем: костюм, пиджак, брюки | Terzi Can", d: "Подгонка костюмов, пиджаков и брюк в Мельтеме, мужских и женских: рукава, длина, талия, плечи. Забор — через WhatsApp. ☎ +90 531 898 64 18", kw: ["портной Мельтем", "подгонка костюма Мельтем", "подгонка пиджака Анталья", "подшив брюк Мельтем"] },
+    en: { t: "Meltem Tailor: Suit, Jacket & Trouser Alteration | Terzi Can", d: "Suit, jacket and trouser alterations in Meltem for men and women: sleeves, hems, waist, shoulders. Free pick-up and delivery. ☎ +90 531 898 64 18", kw: ["tailor Meltem", "suit alteration Meltem", "jacket alteration Antalya", "trouser hemming Meltem"] },
+    ru: { t: "Портной Мельтем: костюм, пиджак, брюки | Terzi Can", d: "Подгонка костюмов, пиджаков и брюк в Мельтеме, мужских и женских: рукава, длина, талия, плечи. Забор бесплатно. ☎ +90 531 898 64 18", kw: ["портной Мельтем", "подгонка костюма Мельтем", "подгонка пиджака Анталья", "подшив брюк Мельтем"] },
     de: { t: "Schneider Meltem: Anzug, Sakko, Hose ändern | Terzi Can", d: "Anzug, Sakko und Hose ändern in Meltem, für Herren und Damen: Ärmel, Saum, Taille, Schultern. Anprobe am Körper, Abholung gratis. ☎ +90 531 898 64 18", kw: ["Schneider Meltem", "Anzug ändern Meltem", "Sakko ändern Antalya", "Hose kürzen Meltem"] },
   },
   "fener": {
@@ -34,7 +34,7 @@ const FG_DISTRICT: Record<string, Row> = {
   "sirinyali": {
     en: { t: "Şirinyalı Tailor: Made-to-Measure Linen Dresses | Terzi Can", d: "Custom dressmaking in Şirinyalı from ₺800: linen and cotton dresses, shirts and outfits for women and men. Pick-up arranged on WhatsApp. ☎ +90 531 898 64 18", kw: ["tailor Şirinyalı", "made to measure dress Antalya", "linen dress tailor Şirinyalı", "custom clothing men women Antalya"] },
     ru: { t: "Ширинъялы: пошив льняных платьев по меркам | Terzi Can", d: "Пошив на заказ в Ширинъялы от ₺800: платья, рубашки и наряды из льна и хлопка, женские и мужские, по вашим меркам и выбранной модели. ☎ +90 531 898 64 18", kw: ["пошив платья по меркам Ширинъялы", "льняное платье на заказ Анталья", "пошив одежды на заказ Анталья"] },
-    de: { t: "Şirinyalı: Leinenkleider nach Maß nähen lassen | Terzi Can", d: "Maßanfertigung in Şirinyalı ab ₺800: Kleider, Hemden und Outfits aus Leinen und Baumwolle für Damen und Herren. Abholung gratis. ☎ +90 531 898 64 18", kw: ["Kleid nach Maß Şirinyalı", "Leinenkleid nähen lassen Antalya", "Maßschneiderei Antalya Damen Herren"] },
+    de: { t: "Şirinyalı: Leinenkleider nach Maß nähen lassen | Terzi Can", d: "Maßanfertigung in Şirinyalı ab ₺800: Kleider, Hemden und Outfits aus Leinen und Baumwolle für Damen und Herren. Abholung per WhatsApp. ☎ +90 531 898 64 18", kw: ["Kleid nach Maß Şirinyalı", "Leinenkleid nähen lassen Antalya", "Maßschneiderei Antalya Damen Herren"] },
   },
   "arapsuyu": {
     en: { t: "Arapsuyu Tailor: Men's & Women's Repairs, Jeans | Terzi Can", d: "Men's and women's clothing repairs in Arapsuyu: jeans hemming, trouser taking in, dress repair, open seams. Pick-up arranged on WhatsApp. ☎ +90 531 898 64 18", kw: ["tailor Arapsuyu", "jeans hemming Arapsuyu", "clothing repair Arapsuyu", "dress alteration Arapsuyu"] },
@@ -44,7 +44,7 @@ const FG_DISTRICT: Record<string, Row> = {
   "toros": {
     en: { t: "Toros Tailor Near Me: Same-Day Trouser Hemming | Terzi Can", d: "Looking for a tailor near Toros? Trouser, skirt and jeans hemming from ₺200, usually ready the same day. Pick-up arranged on WhatsApp. ☎ +90 531 898 64 18", kw: ["tailor near me Toros", "trouser hemming near me", "same day hemming Antalya", "tailor open now Antalya"] },
     ru: { t: "Портной рядом, Торос: подшив брюк в тот же день | Terzi Can", d: "Ищете портного рядом в районе Торос? Подшив брюк, юбок и джинсов от ₺200, обычно в тот же день. Ежедневно 08:00–23:00, забор через WhatsApp. ☎ +90 531 898 64 18", kw: ["портной рядом Торос", "подшить брюки рядом", "подшив в тот же день Анталья"] },
-    de: { t: "Toros: Schneider in der Nähe, Hose am selben Tag | Terzi Can", d: "Schneider in der Nähe von Toros: Hosen, Röcke und Jeans kürzen ab ₺200, meist am selben Tag. Täglich 08:00–23:00, Abholung gratis. ☎ +90 531 898 64 18", kw: ["Schneider in der Nähe Toros", "Hose kürzen in der Nähe", "Hose kürzen am selben Tag Antalya"] },
+    de: { t: "Toros: Schneider in der Nähe, Hose am selben Tag | Terzi Can", d: "Schneider in der Nähe von Toros: Hosen, Röcke und Jeans kürzen ab ₺200, meist am selben Tag. Abholung per WhatsApp. ☎ +90 531 898 64 18", kw: ["Schneider in der Nähe Toros", "Hose kürzen in der Nähe", "Hose kürzen am selben Tag Antalya"] },
   },
   "ogretmenevleri": {
     en: { t: "Öğretmenevleri Tailor: Coat, Leather, Zipper Fix | Terzi Can", d: "Coat, jacket and leather jacket alterations in Öğretmenevleri: shorten, take in, replace zippers from ₺300. Pick-up arranged on WhatsApp. ☎ +90 531 898 64 18", kw: ["tailor Öğretmenevleri", "coat alteration Antalya", "leather jacket repair Antalya", "zipper replacement Öğretmenevleri"] },
@@ -64,12 +64,12 @@ const FG_DISTRICT: Record<string, Row> = {
   "lara": {
     en: { t: "Lara Tailor: Evening Dress & Hemming Fixes | Terzi Can", d: "Staying in Lara? Evening dress fitting, hemming, quick repairs and custom linen sewing for men and women. Hotel pick-up via WhatsApp. ☎ +90 531 898 64 18", kw: ["tailor Lara", "tailor Lara Antalya", "evening dress alteration Lara", "hotel tailor Lara", "custom linen dress Lara", "clothing repair Lara", "hemming Lara hotel"] },
     ru: { t: "Портной Лара: вечернее платье и подшив | Terzi Can", d: "Отдыхаете в Ларе? Подгонка вечерних платьев, подшив, быстрый ремонт и пошив из льна для мужчин и женщин. Забор — через WhatsApp. ☎ +90 531 898 64 18", kw: ["портной Лара", "ателье Лара Анталья", "подгонка вечернего платья Лара", "портной в отель Лара", "пошив льняного платья Лара", "ремонт одежды Лара"] },
-    de: { t: "Schneider Lara: Abendkleid & Saum ändern | Terzi Can", d: "Urlaub in Lara? Abendkleid anpassen, Saum kürzen, Reparaturen und Leinen nach Maß für Damen und Herren. Hotelabholung gratis. ☎ +90 531 898 64 18", kw: ["Schneider Lara", "Änderungsschneiderei Lara", "Abendkleid ändern Lara", "Hotel Schneider Lara", "Leinenkleid nach Maß Lara", "Kleidung reparieren Lara"] },
+    de: { t: "Schneider Lara: Abendkleid & Saum ändern | Terzi Can", d: "Urlaub in Lara? Abendkleid anpassen, Saum kürzen, Reparaturen und Leinen nach Maß für Damen und Herren. Hotelabholung per WhatsApp. ☎ +90 531 898 64 18", kw: ["Schneider Lara", "Änderungsschneiderei Lara", "Abendkleid ändern Lara", "Hotel Schneider Lara", "Leinenkleid nach Maß Lara", "Kleidung reparieren Lara"] },
   },
   "kundu": {
     en: { t: "Kundu Tailor: Zipper & Torn Clothes Repair | Terzi Can", d: "Broken zipper or torn seam in Kundu? Fast repairs and alterations, plus custom cotton and linen outfits. Hotel pick-up via WhatsApp. ☎ +90 531 898 64 18", kw: ["tailor Kundu", "zipper repair Kundu", "torn clothes repair Kundu", "hotel tailor Kundu", "clothing alterations Kundu", "custom cotton outfit Kundu"] },
     ru: { t: "Портной Кунду: молния и порванная одежда | Terzi Can", d: "Сломалась молния или порвался шов в Кунду? Быстрый ремонт и подгонка, пошив из хлопка и льна. Забор — через WhatsApp. ☎ +90 531 898 64 18", kw: ["портной Кунду", "замена молнии Кунду", "ремонт порванной одежды Кунду", "портной в отель Кунду", "подгонка одежды Кунду"] },
-    de: { t: "Schneider Kundu: Reißverschluss & Risse flicken | Terzi Can", d: "Reißverschluss kaputt oder Naht offen in Kundu? Schnelle Reparaturen, dazu Outfits nach Maß aus Leinen. Abholung gratis. ☎ +90 531 898 64 18", kw: ["Schneider Kundu", "Reißverschluss reparieren Kundu", "Riss in Kleidung flicken Kundu", "Hotel Schneider Kundu", "Kleidung ändern Kundu"] },
+    de: { t: "Schneider Kundu: Reißverschluss & Risse flicken | Terzi Can", d: "Reißverschluss kaputt oder Naht offen in Kundu? Schnelle Reparaturen, dazu Outfits nach Maß aus Leinen. Abholung per WhatsApp. ☎ +90 531 898 64 18", kw: ["Schneider Kundu", "Reißverschluss reparieren Kundu", "Riss in Kleidung flicken Kundu", "Hotel Schneider Kundu", "Kleidung ändern Kundu"] },
   },
   "belek": {
     en: { t: "Belek Tailor: Custom Linen Shirts & Suits | Terzi Can", d: "Custom linen and cotton shirts, trousers, suits and dresses in Belek for men and women. Alterations and repairs too. ☎ +90 531 898 64 18", kw: ["tailor Belek", "custom linen shirt Belek", "made to measure suit Belek", "linen dress tailor Belek", "hotel tailor Belek", "clothing alterations Belek"] },
@@ -85,6 +85,46 @@ const FG_DISTRICT: Record<string, Row> = {
     en: { t: "Beldibi Tailor: Beach Linen Dresses & Repairs | Terzi Can", d: "Beach linen dresses and shirts made to measure in Beldibi, plus hemming, zipper replacement and torn clothes repair for men and women. ☎ +90 531 898 64 18", kw: ["tailor Beldibi", "beach linen dress Beldibi", "custom linen clothing Beldibi", "zipper replacement Beldibi", "torn clothes repair Beldibi", "hotel tailor Beldibi"] },
     ru: { t: "Портной Бельдиби: пляжные платья и ремонт | Terzi Can", d: "Пляжные льняные платья и рубашки на заказ в Бельдиби, плюс подшив, замена молнии и ремонт порванной одежды, мужской и женской. ☎ +90 531 898 64 18", kw: ["портной Бельдиби", "пляжное платье на заказ Бельдиби", "льняная одежда на заказ Бельдиби", "замена молнии Бельдиби", "ремонт одежды Бельдиби"] },
     de: { t: "Schneider Beldibi: Strandkleider & Reparaturen | Terzi Can", d: "Strandkleider und Hemden aus Leinen nach Maß in Beldibi, dazu Saum kürzen, Reißverschluss wechseln und Risse flicken für Damen und Herren. ☎ +90 531 898 64 18", kw: ["Schneider Beldibi", "Strandkleid nach Maß Beldibi", "Leinenkleidung Beldibi", "Reißverschluss wechseln Beldibi", "Kleidung reparieren Beldibi"] },
+  },
+  "hurma": {
+    en: { t: "Hurma Tailor: Workshop in Hurma, Konyaaltı | Terzi Can", d: "Tailor workshop in Hurma, Konyaaltı: hemming from ₺200, zippers from ₺300, dress repair. Free pick-up and delivery. Daily 08:00–23:00. ☎ +90 531 898 64 18", kw: ["tailor Hurma", "Hurma clothing alterations", "Hurma hemming Antalya"] },
+    ru: { t: "Портной в Хурме: мастерская в Коньяалты | Terzi Can", d: "Мастерская портного в Хурме, Коньяалты: подшив от ₺200, молния от ₺300, ремонт платьев. Забор и доставка бесплатно. 08:00–23:00. ☎ +90 531 898 64 18", kw: ["портной Хурма", "ремонт одежды Хурма", "подшив брюк Хурма"] },
+    de: { t: "Schneider Hurma: Werkstatt in Konyaaltı | Terzi Can", d: "Schneiderwerkstatt in Hurma, Konyaaltı: Kürzen ab ₺200, Reißverschluss ab ₺300, Kleider ändern. Abholung und Lieferung gratis. ☎ +90 531 898 64 18", kw: ["Schneider Hurma", "Kleidung ändern Hurma", "Hose kürzen Hurma"] },
+  },
+  "liman": {
+    en: { t: "Liman Tailor: Hemming, Zippers, Alterations | Terzi Can", d: "Tailor in Liman, Konyaaltı: trouser hemming from ₺200, zipper replacement from ₺300, taking in, shortening. Free pick-up and delivery. ☎ +90 531 898 64 18", kw: ["tailor Liman", "Liman clothing alterations", "Liman hemming Antalya"] },
+    ru: { t: "Портной в Лимане: подшив, молнии, подгонка | Terzi Can", d: "Портной в Лимане, Коньяалты: подшив брюк от ₺200, замена молнии от ₺300, ушить, укоротить. Забор и доставка бесплатно. ☎ +90 531 898 64 18", kw: ["портной Лиман", "ремонт одежды Лиман", "подшив брюк Лиман"] },
+    de: { t: "Schneider Liman: Kürzen, Reißverschluss, Ändern | Terzi Can", d: "Schneider in Liman, Konyaaltı: Hosen kürzen ab ₺200, Reißverschluss ab ₺300, enger und kürzer machen. Abholung und Lieferung gratis. ☎ +90 531 898 64 18", kw: ["Schneider Liman", "Kleidung ändern Liman", "Hose kürzen Liman"] },
+  },
+  "gursu": {
+    en: { t: "Gürsu Tailor: Trousers, Jackets, Coats | Terzi Can", d: "Tailor in Gürsu, Konyaaltı: trouser, jacket and coat alterations, hemming from ₺200, zippers from ₺300. Free pick-up and delivery. ☎ +90 531 898 64 18", kw: ["tailor Gürsu", "Gürsu clothing alterations", "Gürsu hemming Antalya"] },
+    ru: { t: "Портной в Гюрсу: брюки, пиджаки, пальто | Terzi Can", d: "Портной в Гюрсу, Коньяалты: подгонка брюк, пиджаков и пальто, подшив от ₺200, молния от ₺300. Забор и доставка бесплатно. ☎ +90 531 898 64 18", kw: ["портной Гюрсу", "ремонт одежды Гюрсу", "подшив брюк Гюрсу"] },
+    de: { t: "Schneider Gürsu: Hose, Sakko, Mantel ändern | Terzi Can", d: "Schneider in Gürsu, Konyaaltı: Hosen, Sakkos und Mäntel ändern, Kürzen ab ₺200, Reißverschluss ab ₺300. Abholung und Lieferung gratis. ☎ +90 531 898 64 18", kw: ["Schneider Gürsu", "Kleidung ändern Gürsu", "Hose kürzen Gürsu"] },
+  },
+  "uncali": {
+    en: { t: "Uncalı Tailor: Evening Dress & Dress Repair | Terzi Can", d: "Tailor in Uncalı, Konyaaltı: evening dress and dress alteration from ₺800, hemming from ₺200, skirts, custom sewing. Free pick-up. ☎ +90 531 898 64 18", kw: ["tailor Uncalı", "Uncalı clothing alterations", "Uncalı hemming Antalya"] },
+    ru: { t: "Портной в Унджалы: вечерние платья, ремонт | Terzi Can", d: "Портной в Унджалы, Коньяалты: подгонка вечерних платьев от ₺800, подшив от ₺200, юбки, пошив на заказ. Забор бесплатно. ☎ +90 531 898 64 18", kw: ["портной Унджалы", "ремонт одежды Унджалы", "подшив брюк Унджалы"] },
+    de: { t: "Schneider Uncalı: Abendkleid & Kleider ändern | Terzi Can", d: "Schneider in Uncalı, Konyaaltı: Abendkleid ändern ab ₺800, Kürzen ab ₺200, Röcke, Maßanfertigung. Abholung gratis. ☎ +90 531 898 64 18", kw: ["Schneider Uncalı", "Kleidung ändern Uncalı", "Hose kürzen Uncalı"] },
+  },
+  "sarisu": {
+    en: { t: "Sarısu Tailor: Shorts, Jeans, Beach Clothes | Terzi Can", d: "Tailor in Sarısu, Konyaaltı: jeans, shorts and trouser hemming from ₺200, zippers from ₺300, taking in the waist. Free pick-up. ☎ +90 531 898 64 18", kw: ["tailor Sarısu", "Sarısu clothing alterations", "Sarısu hemming Antalya"] },
+    ru: { t: "Портной в Сарысу: джинсы, шорты, подшив | Terzi Can", d: "Портной в Сарысу, Коньяалты: подшив джинсов, шорт и брюк от ₺200, молния от ₺300, ушить в талии. Забор бесплатно. ☎ +90 531 898 64 18", kw: ["портной Сарысу", "ремонт одежды Сарысу", "подшив брюк Сарысу"] },
+    de: { t: "Schneider Sarısu: Jeans, Shorts kürzen | Terzi Can", d: "Schneider in Sarısu, Konyaaltı: Jeans, Shorts und Hosen kürzen ab ₺200, Reißverschluss ab ₺300, Taille enger. Abholung gratis. ☎ +90 531 898 64 18", kw: ["Schneider Sarısu", "Kleidung ändern Sarısu", "Hose kürzen Sarısu"] },
+  },
+  "uluc": {
+    en: { t: "Uluç Tailor: Trousers, Skirts, Dresses | Terzi Can", d: "Tailor in Uluç, Konyaaltı: take in and shorten trousers, skirts and dresses, hemming from ₺200, custom sewing. Free pick-up. ☎ +90 531 898 64 18", kw: ["tailor Uluç", "Uluç clothing alterations", "Uluç hemming Antalya"] },
+    ru: { t: "Портной в Улуче: брюки, юбки, платья | Terzi Can", d: "Портной в Улуче, Коньяалты: ушить и укоротить брюки, юбки, платья, подшив от ₺200, пошив на заказ. Забор бесплатно. ☎ +90 531 898 64 18", kw: ["портной Улуч", "ремонт одежды Улуч", "подшив брюк Улуч"] },
+    de: { t: "Schneider Uluç: Hose, Rock, Kleid ändern | Terzi Can", d: "Schneider in Uluç, Konyaaltı: Hosen, Röcke und Kleider enger und kürzer machen, Kürzen ab ₺200, Maßanfertigung. Abholung gratis. ☎ +90 531 898 64 18", kw: ["Schneider Uluç", "Kleidung ändern Uluç", "Hose kürzen Uluç"] },
+  },
+  "siteler": {
+    en: { t: "Siteler Tailor: Evening Dress & Alterations | Terzi Can", d: "Tailor in Siteler, Antalya: evening dress and dress alteration from ₺800, zippers from ₺300, shortening. Free pick-up and delivery. ☎ +90 531 898 64 18", kw: ["tailor Siteler", "Siteler clothing alterations", "Siteler hemming Antalya"] },
+    ru: { t: "Портной в Ситлере: вечерние платья, подгонка | Terzi Can", d: "Портной в Ситлере, Анталья: подгонка вечерних платьев от ₺800, замена молнии от ₺300, подшив. Забор и доставка бесплатно. ☎ +90 531 898 64 18", kw: ["портной Ситлер", "ремонт одежды Ситлер", "подшив брюк Ситлер"] },
+    de: { t: "Schneider Siteler: Abendkleid & Änderungen | Terzi Can", d: "Schneider in Siteler, Antalya: Abendkleid ändern ab ₺800, Reißverschluss ab ₺300, Kürzen. Abholung und Lieferung gratis. ☎ +90 531 898 64 18", kw: ["Schneider Siteler", "Kleidung ändern Siteler", "Hose kürzen Siteler"] },
+  },
+  "altinkum": {
+    en: { t: "Altınkum Tailor: Holiday Clothes Repair | Terzi Can", d: "Tailor in Altınkum, Antalya: holiday clothes, dresses, shorts and trousers repaired and hemmed from ₺200. Free pick-up and delivery. ☎ +90 531 898 64 18", kw: ["tailor Altınkum", "Altınkum clothing alterations", "Altınkum hemming Antalya"] },
+    ru: { t: "Портной в Алтынкуме: ремонт отпускной одежды | Terzi Can", d: "Портной в Алтынкуме, Анталья: ремонт и подшив отпускной одежды, платьев, шорт и брюк от ₺200. Забор и доставка бесплатно. ☎ +90 531 898 64 18", kw: ["портной Алтынкум", "ремонт одежды Алтынкум", "подшив брюк Алтынкум"] },
+    de: { t: "Schneider Altınkum: Urlaubskleidung reparieren | Terzi Can", d: "Schneider in Altınkum, Antalya: Urlaubskleidung, Kleider, Shorts und Hosen reparieren und kürzen ab ₺200. Abholung gratis. ☎ +90 531 898 64 18", kw: ["Schneider Altınkum", "Kleidung ändern Altınkum", "Hose kürzen Altınkum"] },
   },
 };
 

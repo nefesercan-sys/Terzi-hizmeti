@@ -125,9 +125,9 @@ const jsonLd = {
         highPrice: '350',
         offerCount: 3,
         offers: [
-          { '@type': 'Offer', name: 'Pantolon / Kot Fermuarı', price: '300', priceCurrency: 'TRY', priceValidUntil: '2026-12-31' },
-          { '@type': 'Offer', name: 'Mont / Ceket Fermuarı', price: '300', priceCurrency: 'TRY', priceValidUntil: '2026-12-31' },
-          { '@type': 'Offer', name: 'Çanta Fermuarı', price: '300', priceCurrency: 'TRY', priceValidUntil: '2026-12-31' },
+          { '@type': 'Offer', name: 'Pantolon / Kot Fermuarı', price: '300', priceCurrency: 'TRY', priceValidUntil: '2027-12-31' },
+          { '@type': 'Offer', name: 'Mont / Ceket Fermuarı', price: '300', priceCurrency: 'TRY', priceValidUntil: '2027-12-31' },
+          { '@type': 'Offer', name: 'Çanta Fermuarı', price: '300', priceCurrency: 'TRY', priceValidUntil: '2027-12-31' },
         ],
       },
     },

@@ -117,9 +117,9 @@ const jsonLd = {
         highPrice: '220',
         offerCount: 3,
         offers: [
-          { '@type': 'Offer', name: 'Kumaş Pantolon Paçası', price: '200', priceCurrency: 'TRY', priceValidUntil: '2026-12-31' },
-          { '@type': 'Offer', name: 'Kot Paça Kısaltma', price: '200', priceCurrency: 'TRY', priceValidUntil: '2026-12-31' },
-          { '@type': 'Offer', name: 'Etek Kısaltma', price: '200', priceCurrency: 'TRY', priceValidUntil: '2026-12-31' },
+          { '@type': 'Offer', name: 'Kumaş Pantolon Paçası', price: '200', priceCurrency: 'TRY', priceValidUntil: '2027-12-31' },
+          { '@type': 'Offer', name: 'Kot Paça Kısaltma', price: '200', priceCurrency: 'TRY', priceValidUntil: '2027-12-31' },
+          { '@type': 'Offer', name: 'Etek Kısaltma', price: '200', priceCurrency: 'TRY', priceValidUntil: '2027-12-31' },
         ],
       },
     },

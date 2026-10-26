@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import ReviewsBlock from '@/components/ReviewsBlock';
 import { reviewSchema } from '@/lib/reviews';
 import Image from 'next/image';
+import { DISTRICT_BASE } from '@/lib/seo-data';
 
 const SITE      = 'https://terzihizmeti.com.tr';
 const PAGE_URL  = `${SITE}/sarisu-terzi`;
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
     "Sarısu terzi: kot paçası, şort, pantolon kısaltma ₺200, fermuar ₺300, bel daraltma. Sarısu'ya ücretsiz servis. Her gün 08:00–23:00. ☎ " + PHONE,
   keywords: Array.from(new Set(['Sarısu tamir tadilat', 'Sarısu söküğü dikme', 'Sarısu yırtık tamiri', 'Sarısu elbise tamiri', 'Sarısu terzi', 'Sarısu mahallesi terzi', 'Sarısu Konyaaltı terzi', 'Sarısu paça kısaltma', 'Sarısu fermuar tamiri', 'Sarısu bel daraltma', 'Sarısu elbise dikimi', 'Sarısu gelinlik tadilatı', 'Sarısu ütü hizmeti', 'Sarısu kuru temizleme', 'Sarısu terzi fiyatları 2026', 'Konyaaltı Sarısu dikiş atölyesi', 'Sarısu kot paçası kısaltma', 'Sarısu kot kısaltma', 'Sarısu kot daraltma', 'Sarısu şort kısaltma', 'Sarısu şort daraltma', 'Sarısu pantolon kısaltma', 'Sarısu pantolon daraltma', 'Sarısu etek kısaltma', 'Sarısu etek daraltma', 'Sarısu fermuar değişimi', 'Sarısu beden ayarlama', 'Sarısu ölçüye göre dikim', 'Sarısu özel dikim', 'Sarısu bay bayan terzi', 'Sarısu çocuk kıyafet tadilatı', 'Sarısu abiye tamiri', 'Sarısu ceket tadilatı', 'Sarısu mont kısaltma', 'Sarısu gömlek daraltma', 'Sarısu yakınımda terzi', 'Konyaaltı Sarısu terzi tamir tadilat', 'Sarısu bay bayan elbise tamiri', 'Sarısu terzi', 'Sarısu bay bayan terzi', 'Sarısu dikim', 'Sarısu tamir tadilat', 'Sarısu elbise tamiri', 'Sarısu elbise tadilatı', 'Sarısu fermuar değişimi', 'Sarısu fermuar tamiri', 'Sarısu boy kısaltma', 'Sarısu bel daraltma', 'Sarısu etek boyu kısaltma', 'Sarısu pantolon boyu kısaltma', 'Sarısu paça kısaltma', 'Sarısu kot paçası kısaltma', 'Sarısu beden ölçüsüne göre elbise tadilatı', 'Sarısu mont tamiri', 'Sarısu ceket daraltma', 'Sarısu gömlek daraltma', 'Sarısu şort kısaltma', 'Sarısu pantolon daraltma', 'Sarısu etek daraltma', 'Sarısu elbise daraltma', 'Sarısu elbise dikimi'])) ,
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
-  alternates: { canonical: PAGE_URL },
+  alternates: { canonical: PAGE_URL, languages: { tr: PAGE_URL, en: `${SITE}${DISTRICT_BASE.en}/sarisu`, ru: `${SITE}${DISTRICT_BASE.ru}/sarisu`, de: `${SITE}${DISTRICT_BASE.de}/sarisu`, 'x-default': PAGE_URL } },
   openGraph: {
     title: 'Sarısu Terzi · Kot Paçası, Şort Kısaltma | Terzi Can',
     description: "Sarısu terzi: kot paçası, şort ve pantolon kısaltma ₺200'den, bel daraltma, fermuar, tamir tadilat. Adrese servis. Her gün 08:00–23:00. ☎ " + PHONE,
@@ -114,12 +115,12 @@ const jsonLd = {
         highPrice: '600',
         offerCount: 6,
         offers: [
-          { '@type': 'Offer', name: 'Paça Kısaltma', price: '200', priceCurrency: 'TRY', priceValidUntil: '2026-12-31' },
-          { '@type': 'Offer', name: 'Fermuar Değişimi', price: '300', priceCurrency: 'TRY', priceValidUntil: '2026-12-31' },
-          { '@type': 'Offer', name: 'Bel Daraltma', price: '200', priceCurrency: 'TRY', priceValidUntil: '2026-12-31' },
-          { '@type': 'Offer', name: 'Elbise Dikimi', price: '800', priceCurrency: 'TRY', priceValidUntil: '2026-12-31' },
-          { '@type': 'Offer', name: 'Gelinlik & Abiye Tadilatı', price: '800', priceCurrency: 'TRY', priceValidUntil: '2026-12-31' },
-          { '@type': 'Offer', name: 'Ütü Hizmeti', price: '80', priceCurrency: 'TRY', priceValidUntil: '2026-12-31' },
+          { '@type': 'Offer', name: 'Paça Kısaltma', price: '200', priceCurrency: 'TRY', priceValidUntil: '2027-12-31' },
+          { '@type': 'Offer', name: 'Fermuar Değişimi', price: '300', priceCurrency: 'TRY', priceValidUntil: '2027-12-31' },
+          { '@type': 'Offer', name: 'Bel Daraltma', price: '200', priceCurrency: 'TRY', priceValidUntil: '2027-12-31' },
+          { '@type': 'Offer', name: 'Elbise Dikimi', price: '800', priceCurrency: 'TRY', priceValidUntil: '2027-12-31' },
+          { '@type': 'Offer', name: 'Gelinlik & Abiye Tadilatı', price: '800', priceCurrency: 'TRY', priceValidUntil: '2027-12-31' },
+          { '@type': 'Offer', name: 'Ütü Hizmeti', price: '80', priceCurrency: 'TRY', priceValidUntil: '2027-12-31' },
         ],
       },
     },
@@ -171,7 +172,7 @@ export default function SarisuPage() {
             <span className="hero-tag">📍 Sarısu Mahallesi · Konyaaltı · Ücretsiz Servis</span>
             <h1 id="hero-h">
               Sarısu <span className="accent">Terzi</span><br />
-              Dikim, Tamir, Tadilat, Ütü
+              Paça Kısaltma, Bel Daraltma, Fermuar Değişimi
             </h1>
             <p className="hero-desc">
               Sarısu mahallesine terzi hizmeti. Paça kısaltma, fermuar değişimi,

@@ -147,7 +147,7 @@ const jsonLd = {
       '@type': 'FAQPage',
       '@id': `${PAGE_URL}#faq`,
       mainEntity: [
-        { '@type': 'Question', name: 'Konyaaltı Hurma, Liman, Sarısu mahallelerine terzi hizmeti var mı?', acceptedAnswer: { '@type': 'Answer', text: `Evet, atölyemiz bu mahallelere en yakın konumda. Hurma, Liman ve Sarısu'ya ücretsiz adrese gelen servis sağlıyoruz. ☎ ${PHONE}` } },
+        { '@type': 'Question', name: 'Hurma, Sarısu, Liman, Uncalı, Altınkum, Öğretmenevleri, Siteler, Arapsuyu ve Gürsu\'ya terzi servisi var mı?', acceptedAnswer: { '@type': 'Answer', text: `Evet, atölyemiz bu mahallelere en yakın konumda. Hurma, Sarısu, Liman, Uncalı, Altınkum, Öğretmenevleri, Siteler, Arapsuyu ve Gürsu'ya ücretsiz adrese gelen servis sağlıyoruz. ☎ ${PHONE}` } },
         { '@type': 'Question', name: 'Bay, bayan ve çocuk kıyafeti dikimi yapıyor musunuz?', acceptedAnswer: { '@type': 'Answer', text: 'Evet, erkek, kadın ve çocuk kıyafetlerinin tamamında özel ölçü dikim hizmeti veriyoruz.' } },
         { '@type': 'Question', name: 'Üniforma üretimi ve toplu sipariş alıyor musunuz?', acceptedAnswer: { '@type': 'Answer', text: 'Evet, otel, restoran, okul, güvenlik ve sağlık sektörü için üniforma tasarımı ve toplu üretimi yapıyoruz.' } },
         { '@type': 'Question', name: 'Fason imalat için minimum sipariş adedi var mı?', acceptedAnswer: { '@type': 'Answer', text: "Adet projeye göre belirlenir; numune, az adetli ve yüksek adetli fason imalat siparişleri proje bazında fiyatlandırılır. WhatsApp'tan detaylı bilgi alabilirsiniz." } },
@@ -167,9 +167,12 @@ const NEIGHBORHOODS: Neighborhood[] = [
   { name: 'Hurma', tag: 'Öncelikli', note: 'Atölyeye en yakın — ücretsiz adrese servis', priority: true },
   { name: 'Liman', tag: 'Öncelikli', note: 'Ücretsiz adrese servis, aynı gün randevu', priority: true },
   { name: 'Sarısu', tag: 'Öncelikli', note: 'Ücretsiz adrese servis', priority: true },
-  { name: 'Uncalı', tag: 'Yakın', note: 'Randevulu adrese gelen servis', priority: false },
-  { name: 'Gürsu', tag: 'Yakın', note: 'Randevulu adrese gelen servis', priority: false },
-  { name: 'Öğretmenevleri', tag: 'Yakın', note: 'Randevulu adrese gelen servis', priority: false },
+  { name: 'Uncalı', tag: 'Yakın', note: 'Ücretsiz adrese servis', priority: false },
+  { name: 'Gürsu', tag: 'Yakın', note: 'Ücretsiz adrese servis', priority: false },
+  { name: 'Öğretmenevleri', tag: 'Yakın', note: 'Ücretsiz adrese servis', priority: false },
+  { name: 'Altınkum', tag: 'Yakın', note: 'Ücretsiz adrese servis', priority: false },
+  { name: 'Siteler', tag: 'Yakın', note: 'Ücretsiz adrese servis', priority: false },
+  { name: 'Arapsuyu', tag: 'Yakın', note: 'Ücretsiz adrese servis', priority: false },
   { name: 'Ahatlı', tag: 'Yakın', note: 'Randevulu adrese gelen servis', priority: false },
   { name: 'Toros', tag: 'Yakın', note: 'Randevulu adrese gelen servis', priority: false },
 ];
@@ -279,7 +282,7 @@ const REPAIR_CATEGORIES: Record<Lang, RepairCategory[]> = {
 };
 
 const FAQS: [string, string][] = [
-  ['Hurma, Liman, Sarısu mahallelerine ücretsiz servis var mı?', 'Evet, atölyemize en yakın bu üç mahalleye ücretsiz adrese gelen terzi servisi sağlıyoruz.'],
+  ['Hangi mahallelere ücretsiz servis var?', 'Hurma, Sarısu, Liman, Uncalı, Altınkum, Öğretmenevleri, Siteler, Arapsuyu ve Gürsu\'ya ücretsiz adrese servis veriyoruz. Diğer bölgelerde servis, mesafeye göre WhatsApp\'ta netleşir.'],
   ["Uncalı, Gürsu, Öğretmenevleri, Ahatlı, Toros'a hizmet var mı?", 'Evet, bu mahallelere randevulu adrese gelen servis veriyoruz.'],
   ['Bay, bayan, çocuk kıyafeti dikiyor musunuz?', 'Evet, erkek, kadın ve çocuk kıyafetlerinde özel ölçü dikim hizmeti sunuyoruz.'],
   ['Üniforma üretimi ve toplu sipariş alıyor musunuz?', 'Evet, otel, okul, restoran ve kurumlar için üniforma tasarımı ve toplu üretim yapıyoruz.'],
@@ -291,7 +294,7 @@ const PROCESS_STEPS: [string, string, string][] = [
   ['01', 'Mahallenizi Belirtin', "WhatsApp'tan bulunduğunuz mahalleyi ve ihtiyacınızı yazın."],
   ['02', 'Ölçü & Tasarım', 'Adresinizde ölçü alınır veya atölyede tasarım detayları belirlenir.'],
   ['03', 'Dikim / Üretim', 'Tekli dikim ya da toplu üniforma/fason üretimi atölyede tamamlanır.'],
-  ['04', 'Teslimat', 'Konyaaltı\'nda ücretsiz, diğer bölgelere mesafeye göre randevulu teslim.'],
+  ['04', 'Teslimat', 'Yakın mahallelerde ücretsiz, diğer bölgelere mesafeye göre randevulu teslim.'],
 ];
 
 export default function KonyaaltiTailorServicePage() {

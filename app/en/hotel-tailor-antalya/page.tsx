@@ -60,7 +60,7 @@ const jsonLd = {
       mainEntity: [
         { '@type': 'Question', name: 'How does the mobile hotel tailor service work?', acceptedAnswer: { '@type': 'Answer', text: 'Share your hotel name, room number and a convenient time on WhatsApp. Our tailor comes to you, takes measurements or collects the item, and returns it repaired or altered.' } },
         { '@type': 'Question', name: 'Which hotel districts do you cover?', acceptedAnswer: { '@type': 'Answer', text: 'We serve Belek, Lara, Güzeloba, Kemer and Side, and other Antalya districts on request.' } },
-        { '@type': 'Question', name: 'How long does an alteration or repair take?', acceptedAnswer: { '@type': 'Answer', text: 'Most alterations and repairs are completed within 24 hours. For wedding or evening dresses, we recommend contacting us as early as possible.' } },
+        { '@type': 'Question', name: 'How long does an alteration or repair take?', acceptedAnswer: { '@type': 'Answer', text: 'Most alterations and repairs are completed usually within 1–2 days. For wedding or evening dresses, we recommend contacting us as early as possible.' } },
         { '@type': 'Question', name: 'What languages do you speak?', acceptedAnswer: { '@type': 'Answer', text: 'Our team speaks English, German, Russian and Turkish.' } },
       ],
     },
@@ -169,7 +169,7 @@ export default function OtelBolgeleriEnHub() {
               <div className="howto-item"><div className="howto-t">1. Send a Message</div><div className="howto-d">Share your hotel name, room number and request on WhatsApp.</div></div>
               <div className="howto-item"><div className="howto-t">2. Confirm a Time</div><div className="howto-d">We confirm a convenient time, usually the same day.</div></div>
               <div className="howto-item"><div className="howto-t">3. On-Site Service</div><div className="howto-d">Our tailor comes to you, takes measurements or collects the item.</div></div>
-              <div className="howto-item"><div className="howto-t">4. Delivered to Your Hotel</div><div className="howto-d">The finished item is returned within 24 hours.</div></div>
+              <div className="howto-item"><div className="howto-t">4. Delivered to Your Hotel</div><div className="howto-d">The finished item is returned usually within 1–2 days.</div></div>
             </div>
           </div>
         </section>
@@ -183,7 +183,7 @@ export default function OtelBolgeleriEnHub() {
             {[
               ['How does the mobile hotel tailor service work?', 'Share your hotel name, room number and a convenient time on WhatsApp. Our tailor comes to you, takes measurements or collects the item, and returns it repaired or altered.'],
               ['Which hotel districts do you cover?', 'We serve Belek, Lara, Güzeloba, Kemer and Side, and other Antalya districts on request.'],
-              ['How long does an alteration or repair take?', 'Most alterations and repairs are completed within 24 hours. For wedding or evening dresses, we recommend contacting us as early as possible.'],
+              ['How long does an alteration or repair take?', 'Most alterations and repairs are completed usually within 1–2 days. For wedding or evening dresses, we recommend contacting us as early as possible.'],
               ['What languages do you speak?', 'Our team speaks English, German, Russian and Turkish.'],
             ].map(([q, a]) => (
               <div key={q} className="faq-item">

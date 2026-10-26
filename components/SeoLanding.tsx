@@ -129,7 +129,7 @@ const TIME_SHORT: Record<Lang, Record<'same' | 'next' | 'three' | 'none', string
 };
 
 // ── Bölge önceliği: TR'de yerel mahalleler, yabancı dilde tatil bölgeleri öne ──
-const TR_PRI = ['konyaalti', 'ogretmenevleri'];
+const TR_PRI = ['konyaalti', 'hurma', 'liman', 'gursu', 'uluc', 'altinkum', 'ogretmenevleri', 'arapsuyu', 'siteler', 'uncali', 'sarisu', 'meltem'];
 const FG_PRI = ['konyaalti', 'muratpasa', 'side', 'aksu', 'kundu', 'belek', 'lara', 'kemer', 'beldibi'];
 function sortD(lang: Lang, list: District[]): District[] {
   const pri = lang === 'tr' ? TR_PRI : FG_PRI;
@@ -223,8 +223,8 @@ function _districtCopy(lang: Lang, d: District) {
 
   function metaOverride(r: { n: string; loc: string; kw: string[]; title: string; desc: string }) {
     const o = lang === 'tr' ? trNearDistrict(d.slug, n, r.loc, PHONE, 'Terzi Can') : fgNearDistrict(lang, d.slug, n); // elle yazılmış meta (TR yakın bölgeler + EN/RU/DE)
-    if (!o) return r;
-    return { n: r.n, loc: r.loc, kw: Array.from(new Set([...o.kw, ...r.kw])), title: o.title, desc: o.desc };
+    if (!o) return { ...r, title: pickFit(({ tr: [`${n} Terzi · Elbise Dikimi, Tamiri, Tadilatı | Antalya`, `${n} Terzi: Elbise Dikimi, Tamir, Tadilat | Antalya`, `${n} Terzi · Dikim, Tamir, Tadilat | Antalya`, `${n} Terzi | Antalya`], en: [`Tailor ${n}, Antalya: Dressmaking, Repairs, Alterations`, `Tailor ${n} Antalya · Dress Making & Alterations`, `Tailor ${n}, Antalya · Repairs, Alterations`, `Tailor in ${n}, Antalya`], ru: [`Портной ${n}, Анталья: пошив, ремонт, переделка одежды`, `Портной ${n}: пошив, ремонт, переделка`, `Портной ${n}, Анталья`], de: [`Schneider ${n}, Antalya: Nähen, Reparatur, Änderung`, `Schneider ${n}: Kleider nähen, ändern`, `Schneider ${n}, Antalya`] } as Record<string, string[]>)[lang], 60) };
+    return { n: r.n, loc: r.loc, kw: Array.from(new Set([...o.kw, ...r.kw])), title: pickFit(({ tr: [`${n} Terzi · Elbise Dikimi, Tamiri, Tadilatı | Antalya`, `${n} Terzi: Elbise Dikimi, Tamir, Tadilat | Antalya`, `${n} Terzi · Dikim, Tamir, Tadilat | Antalya`, `${n} Terzi | Antalya`], en: [`Tailor ${n}, Antalya: Dressmaking, Repairs, Alterations`, `Tailor ${n} Antalya · Dress Making & Alterations`, `Tailor ${n}, Antalya · Repairs, Alterations`, `Tailor in ${n}, Antalya`], ru: [`Портной ${n}, Анталья: пошив, ремонт, переделка одежды`, `Портной ${n}: пошив, ремонт, переделка`, `Портной ${n}, Анталья`], de: [`Schneider ${n}, Antalya: Nähen, Reparatur, Änderung`, `Schneider ${n}: Kleider nähen, ändern`, `Schneider ${n}, Antalya`] } as Record<string, string[]>)[lang], 60), desc: o.desc };
   }
 }
 
@@ -624,10 +624,10 @@ export function DistrictPage({ lang, d }: { lang: Lang; d: District }) {
   };
 
   const h1 = {
-    tr: (<>{d.name.tr} <span className="accent">Terzi</span><br />Dikim, Tamir, Tadilat, Fermuar</>),
-    en: (<>Tailor in <span className="accent">{d.name.en}</span><br />Alterations, Repairs &amp; Dress Making</>),
-    ru: (<>Портной <span className="accent">{d.name.ru}</span><br />Подгонка, ремонт, пошив</>),
-    de: (<>Schneider <span className="accent">{d.name.de}</span><br />Änderungen, Reparatur &amp; Maßanfertigung</>),
+    tr: (<>{d.name.tr} <span className="accent">Terzi</span><br />Paça Kısaltma, Bel Daraltma, Fermuar Değişimi</>),
+    en: (<>Tailor in <span className="accent">{d.name.en}</span><br />Hemming, Waist Taking-in, Zipper Replacement</>),
+    ru: (<>Портной <span className="accent">{d.name.ru}</span><br />Подшив брюк, ушивание в талии, замена молнии</>),
+    de: (<>Schneider <span className="accent">{d.name.de}</span><br />Hose kürzen, Taille enger, Reißverschluss wechseln</>),
   }[lang];
 
   return (

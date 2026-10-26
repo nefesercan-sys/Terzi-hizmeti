@@ -13,18 +13,18 @@ const PHONE     = '+90 531 898 64 18';
 const PHONE_TEL = '+905318986418';
 const WA_NUM    = '905318986418';
 const WA        = (m: string) => `https://wa.me/${WA_NUM}?text=${encodeURIComponent(m)}`;
-const WA_DEF    = WA('Hello, I need a VIP mobile tailor service for my hotel. / Merhaba, otelime terzi servisi istiyorum.');
+const WA_DEF    = WA('Hello, I need a mobile tailor service for my hotel. / Merhaba, otelime terzi servisi istiyorum.');
 const MAPS      = 'https://www.google.com/maps?cid=5846987472659818117';
-const BIZ       = 'TERZİ Can - VIP Mobile Tailor';
+const BIZ       = 'TERZİ Can - Mobile Tailor';
 const TODAY     = '2026-10-04';
 const OG        = `${SITE}/terzi-can-hero.jpg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Otelde Terzi Hizmeti: Belek, Lara, Kemer, Side — Otele Gelir" },
-  description: "Antalya'da otellere ve adresinize gelen VIP terzi hizmeti. Belek, Lara, Kundu, Kemer bölgelerinde ölçü alma, ekspres tadilat ve teslimat. ☎ " + PHONE,
+  description: "Antalya'da otellere ve adresinize gelen Premium terzi hizmeti. Belek, Lara, Kundu, Kemer bölgelerinde ölçü alma, ekspres tadilat ve teslimat. ☎ " + PHONE,
   keywords: [
-    'otele gelen terzi Antalya', 'VIP tailor Antalya', 'mobile tailor Belek',
+    'otele gelen terzi Antalya', 'Premium tailor Antalya', 'mobile tailor Belek',
     'Lara otel terzi', 'Kemer terzi', 'Kundu terzi', 'Belek tailor service',
     'портной с выездом в отель Анталья', 'mobiler Schneider Antalya',
     'otel terzisi', 'ekspres terzi Antalya', 'adrese gelen terzi', 'otelde terzi hizmeti', 'Antalya terzi servisi', 'evime gelen terzi'
@@ -47,11 +47,11 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'VIP Mobile Tailor Service to Hotels in Antalya',
+    title: 'Mobile Tailor Service to Hotels in Antalya',
     description: 'Express tailoring service directly to your hotel room or lobby. Serving Belek, Lara, Kundu, and Kemer. ☎ ' + PHONE,
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'tr_TR',
     alternateLocale: ['en_US', 'ru_RU', 'de_DE'], type: 'website',
-    images: [{ url: OG, width: 1024, height: 1024, alt: 'VIP Mobile Tailor Antalya', type: 'image/jpeg' }],
+    images: [{ url: OG, width: 1024, height: 1024, alt: 'Mobile Tailor Antalya', type: 'image/jpeg' }],
   },
   twitter: {
     card: 'summary_large_image',
@@ -68,7 +68,7 @@ const jsonLd = {
       '@type': ['ProfessionalService', 'LocalBusiness'],
       ...reviewSchema(),
       '@id': `${SITE}#vip-business`,
-      name: 'Terzi Can - VIP Mobile Tailor',
+      name: 'Terzi Can - Mobile Tailor',
       alternateName: ['Otele Gelen Terzi', 'Mobile Tailor Antalya', 'Портной в отель Анталья', 'Mobiler Schneider Antalya'],
       description: "Belek, Lara, Kundu, Kemer otellerine ekspres terzi ve kuru temizleme hizmeti. Lobi veya odada ölçü alımı.",
       url: SITE,
@@ -102,7 +102,7 @@ const jsonLd = {
       '@type': 'WebPage',
       '@id': `${PAGE_URL}#webpage`,
       url: PAGE_URL,
-      name: 'Otele Gelen Terzi — VIP Mobile Tailor',
+      name: 'Otele Gelen Terzi — Mobile Tailor',
       inLanguage: 'tr',
       isPartOf: { '@id': `${SITE}#website` },
     },
@@ -125,7 +125,7 @@ interface HotelRegion {
 }
 
 const HOTEL_REGIONS: HotelRegion[] = [
-  { name: 'Belek & Kadriye', tag: 'VIP Servis', desc: 'Maxx Royal, Regnum Carya, Rixos ve diğer tüm resort oteller.' },
+  { name: 'Belek & Kadriye', tag: 'Otel Servisi', desc: 'Maxx Royal, Regnum Carya, Rixos ve diğer tüm resort oteller.' },
   { name: 'Lara & Kundu', tag: 'Hızlı Servis', desc: 'Titanic, Concorde, Delphin ve Kundu oteller bölgesi.' },
   { name: 'Kemer Beli', tag: 'Randevulu', desc: 'Göynük, Beldibi, Tekirova, Kiriş otelleri.' },
   { name: 'Konyaaltı & Şehir Merkezi', tag: 'Öncelikli', desc: 'Şehir içi tüm oteller, Su Hotel, Rixos Downtown vb.' },
@@ -155,14 +155,14 @@ interface VipCategory {
   rows: [string, string][];
 }
 
-const VIP_CATEGORIES: Record<Lang, VipCategory[]> = {
+const Premium_CATEGORIES: Record<Lang, VipCategory[]> = {
   tr: [
-    { icon: '🚗', title: 'Otelde Ölçü & Teslimat', keyword: 'VIP terzi servisi Antalya',
+    { icon: '🚗', title: 'Otelde Ölçü & Teslimat', keyword: 'otele gelen terzi servisi Antalya',
       desc: 'Adresinizde veya otel lobisinde ölçü alma ve provaya gelme hizmeti.',
       rows: [['Otel Servis Ücreti (Konyaaltı/Merkez)', '₺300+'], ['Otel Servis Ücreti (Lara/Kundu)', '₺500+'], ['Otel Servis Ücreti (Belek/Kemer)', 'Sorunuz']] },
     { icon: '✂️', title: 'Ekspres Tadilat', keyword: 'acil terzi Antalya',
       desc: 'Tatiliniz sırasında ihtiyaç duyduğunuz acil onarımlar.',
-      rows: [['Acil Paça Kısaltma', '₺250+'], ['Acil Yırtık Onarımı / Fermuar', '₺300+'], ['Abiye / Elbise Tadilatı', '₺800+']] },
+      rows: [['Acil Paça Kısaltma', '₺200+'], ['Acil Yırtık Onarımı / Fermuar', '₺300+'], ['Abiye / Elbise Tadilatı', '₺800+']] },
   ],
   en: [
     { icon: '🚗', title: 'Hotel Fitting & Delivery', keyword: 'Mobile tailor Antalya',
@@ -170,7 +170,7 @@ const VIP_CATEGORIES: Record<Lang, VipCategory[]> = {
       rows: [['Call-out Fee (Konyaalti/Center)', '₺300+'], ['Call-out Fee (Lara/Kundu)', '₺500+'], ['Call-out Fee (Belek/Kemer)', 'Ask price']] },
     { icon: '✂️', title: 'Express Alterations', keyword: 'urgent tailor Antalya',
       desc: 'Urgent repairs and alterations you need during your holiday.',
-      rows: [['Express Hemming', '₺250+'], ['Express Tear / Zipper Repair', '₺300+'], ['Evening Dress Alterations', '₺800+']] },
+      rows: [['Express Hemming', '₺200+'], ['Express Tear / Zipper Repair', '₺300+'], ['Evening Dress Alterations', '₺800+']] },
   ],
   ru: [
     { icon: '🚗', title: 'Выезд в отель и примерка', keyword: 'портной в отель Анталья',
@@ -178,7 +178,7 @@ const VIP_CATEGORIES: Record<Lang, VipCategory[]> = {
       rows: [['Выезд (Коньяалты/Центр)', '₺300+'], ['Выезд (Лара/Кунду)', '₺500+'], ['Выезд (Белек/Кемер)', 'По запросу']] },
     { icon: '✂️', title: 'Экспресс-ремонт', keyword: 'срочный портной Анталья',
       desc: 'Срочный ремонт и подгонка одежды во время вашего отдыха.',
-      rows: [['Срочное укорачивание', '₺250+'], ['Срочный ремонт / Молния', '₺300+'], ['Подгонка вечернего платья', '₺800+']] },
+      rows: [['Срочное укорачивание', '₺200+'], ['Срочный ремонт / Молния', '₺300+'], ['Подгонка вечернего платья', '₺800+']] },
   ],
   de: [
     { icon: '🚗', title: 'Anprobe & Lieferung im Hotel', keyword: 'mobiler Schneider Antalya',
@@ -186,14 +186,14 @@ const VIP_CATEGORIES: Record<Lang, VipCategory[]> = {
       rows: [['Anfahrtskosten (Konyaalti/Zentrum)', '₺300+'], ['Anfahrtskosten (Lara/Kundu)', '₺500+'], ['Anfahrtskosten (Belek/Kemer)', 'Auf Anfrage']] },
     { icon: '✂️', title: 'Express-Änderungen', keyword: 'Notfall-Schneider Antalya',
       desc: 'Dringende Reparaturen und Änderungen während Ihres Urlaubs.',
-      rows: [['Express-Kürzen', '₺250+'], ['Express-Riss / Reißverschluss', '₺300+'], ['Abendkleid-Änderungen', '₺800+']] },
+      rows: [['Express-Kürzen', '₺200+'], ['Express-Riss / Reißverschluss', '₺300+'], ['Abendkleid-Änderungen', '₺800+']] },
   ],
 };
 
 const PROCESS_STEPS: [string, string, string][] = [
   ['01', 'Otel & Oda Bilgisi İletin', "WhatsApp üzerinden otel adınızı, konumunuzu ve yapılacak işlemi (görsel ile) gönderin."],
-  ['02', 'Lobi Veya Odada Ölçü', 'VIP servis aracımızla belirlediğiniz saatte otelinize gelip profesyonel ölçü alıyoruz.'],
-  ['03', 'Ekspres İşlem', 'Kıyafetiniz merkez atölyemize getirilir ve öncelikli (VIP) olarak işleme alınır.'],
+  ['02', 'Lobi Veya Odada Ölçü', 'servis aracımızla belirlediğiniz saatte otelinize gelip profesyonel ölçü alıyoruz.'],
+  ['03', 'Ekspres İşlem', 'Kıyafetiniz merkez atölyemize getirilir ve öncelikli olarak işleme alınır.'],
   ['04', 'Otele Teslimat', 'Hazırlanan kıyafetleriniz özel kılıfında otel resepsiyonuna veya size teslim edilir.'],
 ];
 
@@ -217,10 +217,10 @@ export default function MobileTailorHotelPage() {
         {/* HERO SECTION */}
         <header className="hero">
           <div className="hero-bg" aria-hidden="true">
-            {/* VIP/Otel hizmetini yansıtacak bir görsel ismi kullanıldı */}
+            {/* Premium/Otel hizmetini yansıtacak bir görsel ismi kullanıldı */}
             <Image
               src="/terzi-can-hero.jpg"
-              alt="Terzi Can — Antalya otellerine gelen VIP mobil terzi hizmeti"
+              alt="Terzi Can — Antalya otellerine gelen mobil terzi hizmeti"
               fill
               priority
               fetchPriority="high"
@@ -230,14 +230,14 @@ export default function MobileTailorHotelPage() {
             <div className="hero-overlay" />
           </div>
           <div className="hero-content">
-            <span className="hero-tag">🌟 VIP Tailor Service for Hotels</span>
+            <span className="hero-tag">🌟 Mobile Tailor Service for Hotels</span>
             <span className="hero-eng">Belek · Lara · Kundu · Kemer</span>
             <h1 id="hero-h">
-              Otelinize Gelen <span className="accent">VIP Terzi</span><br />
+              Otelinize Gelen <span className="accent">Mobil Terzi</span><br />
               ve Tadilat Servisi
             </h1>
             <p className="hero-desc" id="hero-desc">
-              Tatiliniz yarım kalmasın. Belek, Lara, Kundu ve Kemer otellerine VIP mobil terzi aracımızla gelerek ölçü alıyor, ekspres tadilat ve kuru temizleme sonrası kıyafetlerinizi tekrar otelinize teslim ediyoruz. (We speak English & Russian)
+              Tatiliniz yarım kalmasın. Belek, Lara, Kundu ve Kemer otellerine mobil terzi aracımızla gelerek ölçü alıyor, ekspres tadilat ve kuru temizleme sonrası kıyafetlerinizi tekrar otelinize teslim ediyoruz. (We speak English & Russian)
             </p>
             <div className="hero-btns">
               <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ background: '#C9A96E', color: '#111' }}>
@@ -253,7 +253,7 @@ export default function MobileTailorHotelPage() {
         <main id="main-content">
           <div className="seo-intro-wrap">
             <p className="seo-intro" id="seo-intro">
-              <strong style={{ color: '#C9A96E' }}>VIP Mobile Tailor Antalya</strong> — Özellikle Belek golf otelleri, Lara-Kundu sahil otelleri ve Kemer tatil köylerindeki misafirler için sunduğumuz ayrıcalıklı <strong style={{ color: '#C9A96E' }}>Otele Gelen Terzi</strong> hizmetidir. Abiye daraltma, paça kısaltma, smokin ölçüsü alma gibi acil terzi ihtiyaçlarınızda, otelinizin lobisine veya odanıza gelerek işlemleri hızla başlatıyoruz.
+              <strong style={{ color: '#C9A96E' }}>Mobile Tailor Antalya</strong> — Özellikle Belek golf otelleri, Lara-Kundu sahil otelleri ve Kemer tatil köylerindeki misafirler için sunduğumuz ayrıcalıklı <strong style={{ color: '#C9A96E' }}>Otele Gelen Terzi</strong> hizmetidir. Abiye daraltma, paça kısaltma, smokin ölçüsü alma gibi acil terzi ihtiyaçlarınızda, otelinizin lobisine veya odanıza gelerek işlemleri hızla başlatıyoruz.
             </p>
           </div>
 
@@ -286,7 +286,7 @@ export default function MobileTailorHotelPage() {
                 <span className="eyebrow">Süreç · Process · Процесс</span>
                 <h2 className="sec-h" id="proc-h">Otel Terzisi Nasıl Çalışır?</h2>
               </div>
-              <ol className="step-grid" aria-label="VIP hizmet süreci">
+              <ol className="step-grid" aria-label="hizmet süreci">
                 {PROCESS_STEPS.map((step: [string, string, string]) => (
                   <li key={step[0]}>
                     <span className="step-n" aria-hidden="true" style={{ color: '#C9A96E' }}>{step[0]}</span>
@@ -302,7 +302,7 @@ export default function MobileTailorHotelPage() {
           <section className="sec" id="fiyatlar" aria-labelledby="price-h">
             <div className="ctr">
               <div className="sec-head">
-                <span className="eyebrow">₺ VIP Hizmet Fiyatları · VIP Pricing</span>
+                <span className="eyebrow">₺ Hizmet Fiyatları · Pricing</span>
                 <h2 className="sec-h" id="price-h">Otel Servisi ve Ekspres Tadilat</h2>
                 <p className="sec-sub">Hizmet fiyatları, otelinizin mesafesine ve işlemin aciliyetine göre belirlenir.</p>
               </div>
@@ -315,7 +315,7 @@ export default function MobileTailorHotelPage() {
                     <span style={{ flex: 1, height: 1, background: 'rgba(201,169,110,.15)' }} aria-hidden="true" />
                   </h3>
                   <div className="price-grid">
-                    {VIP_CATEGORIES[lang].map((cat: VipCategory) => (
+                    {Premium_CATEGORIES[lang].map((cat: VipCategory) => (
                       <article className="price-card" key={cat.title}>
                         <div className="price-head">
                           <span className="price-icon" aria-hidden="true">{cat.icon}</span>
@@ -385,7 +385,7 @@ export default function MobileTailorHotelPage() {
 
         <ReviewsBlock lang="tr" />
         <footer>
-          <div>© {new Date().getFullYear()} Terzi Can · VIP Mobile Tailor Service · {PHONE}</div>
+          <div>© {new Date().getFullYear()} Terzi Can · Mobile Tailor Service · {PHONE}</div>
           <nav className="foot-links" aria-label="Alt bilgi bağlantıları">
             <a href="/">Ana Sayfa</a>
             <a href="/antalya-terzi">Konyaaltı Terzi Atölyesi</a>
@@ -395,7 +395,7 @@ export default function MobileTailorHotelPage() {
             <a href="https://swaphubs.com/terzi">SwapHubs Profilimiz</a>
           </nav>
           <p style={{ marginTop: '1rem', fontSize: '.68rem', color: 'rgba(255,255,255,.45)', lineHeight: 1.8 }}>
-            VIP Mobile Tailor Antalya — Belek, Lara, Kundu, Kemer, Göynük, Beldibi ve şehir içi otellere özel terzi servisi. 
+            Mobile Tailor Antalya — Belek, Lara, Kundu, Kemer, Göynük, Beldibi ve şehir içi otellere özel terzi servisi. 
             Otele gelen terzi, ekspres tadilat, takım elbise daraltma, abiye onarımı ve kişiye özel dikim hizmetleri. {PHONE}
           </p>
         </footer>

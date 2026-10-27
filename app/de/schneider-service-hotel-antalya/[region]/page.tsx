@@ -19,7 +19,7 @@ export async function generateStaticParams() {
 // ediyordu — bu yüzden `region` her zaman undefined geliyor, `bulOtelBolgesi`
 // null dönüyor, generateMetadata BOŞ metadata üretiyor (title/canonical/hreflang
 // yok) ve sayfa notFound() çağırarak 404 veriyordu. Bu, 11 otel bölgesi
-// sayfasının (Belek, Lara, Kemer, Alanya, Side, vb.) hiçbirinin indekslenmemesinin
+// sayfasının (Belek, Lara, Kemer, Side, vb.) hiçbirinin indekslenmemesinin
 // doğrudan sebebiydi. TR/EN eşdeğerleri zaten doğru (Promise<{region}>) kullanıyordu.
 export async function generateMetadata({ params }: { params: Promise<{ region: string }> }): Promise<Metadata> {
   const { region } = await params;

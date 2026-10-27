@@ -20,13 +20,13 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Tailor in Antalya: Repairs, Alterations, Custom | Terzi Can" },
   // SEO Optimizasyonu: Google'da kesilmemesi için ~150 karaktere optimize edildi
-  description: 'Mobile tailor, repair, alterations, and ironing service across all Antalya districts. We visit your hotel in Belek, Lara, Kemer, and Side.',
+  description: 'Mobile tailor, repair, alterations, and ironing service across Konyaaltı and nearby districts. We visit your hotel in Belek, Lara, Kemer, and Side.',
   keywords: [
     'tailor prices Antalya', 'tailor open Sunday Antalya', 'tailor open weekend Antalya', 'my dress is torn Antalya', 'take in waist dress Antalya',
     'tailor service Antalya', 'mobile tailor Antalya', 'hotel tailor Antalya',
     'English speaking tailor Antalya', 'clothing repair Antalya', 'alterations Antalya',
     'hemming Antalya', 'ironing service Antalya', 'dry cleaning Antalya',
-    'Belek hotel tailor', 'Lara hotel tailor', 'Kemer hotel tailor', 'Alanya hotel tailor',
+    'Belek hotel tailor', 'Lara hotel tailor', 'Kemer hotel tailor',
     'Side hotel tailor', 'Konyaaltı tailor', 'wedding dress alteration Antalya',
     'suit tailoring Antalya', 'zipper repair Antalya',
   ],
@@ -38,11 +38,11 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Tailor Service Antalya · Mobile Tailor to Your Hotel',
-    description: 'Tailoring, repair, alterations and ironing across all Antalya districts. We come to you.',
+    description: 'Tailoring, repair, alterations and ironing across Konyaaltı and nearby districts. We come to you.',
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'en_US', alternateLocale: ['tr_TR'], type: 'website',
     images: [{ url: OG, width: 1024, height: 1024, alt: 'Tailor Service Antalya', type: 'image/png' }],
   },
-  twitter: { card: 'summary_large_image', title: 'Tailor Service Antalya — Mobile Tailor', description: 'We come to your hotel across all Antalya districts.', images: [OG] },
+  twitter: { card: 'summary_large_image', title: 'Tailor Service Antalya — Mobile Tailor', description: 'We come to your hotel across Konyaaltı and nearby districts.', images: [OG] },
   other: { 'geo.region': 'TR-07', 'geo.placename': 'Antalya', contact: PHONE },
 };
 
@@ -61,7 +61,7 @@ const jsonLd = {
     {
       '@type': 'WebPage', '@id': `${PAGE_URL}#webpage`, url: PAGE_URL,
       name: 'Tailor Service Antalya — Mobile Tailor, Repair, Alterations, Ironing',
-      description: 'Mobile tailor service across all Antalya districts, hotels and addresses.',
+      description: 'Mobile tailor service across Konyaaltı and nearby districts, hotels and addresses.',
       inLanguage: 'en', dateModified: LAST_MOD,
       breadcrumb: { '@id': `${PAGE_URL}#breadcrumb` },
       speakable: { '@type': 'SpeakableSpecification', cssSelector: ['#hero-desc', '#seo-intro', '#faq'] },
@@ -79,8 +79,7 @@ const jsonLd = {
       provider: { '@type': 'ClothingStore', name: 'Terzi Can', telephone: PHONE_TEL, url: SITE },
       areaServed: [
         'Konyaaltı', 'Muratpaşa', 'Kepez', 'Lara', 'Döşemealtı', 'Aksu', 'Belek', 'Kemer',
-        'Serik', 'Manavgat', 'Side', 'Alanya', 'Gazipaşa', 'Kaş', 'Kalkan', 'Finike', 'Kumluca', 'Elmalı', 'Korkuteli',
-      ].map((n) => ({ '@type': 'Place', name: n })),
+        'Serik', 'Side', ].map((n) => ({ '@type': 'Place', name: n })),
       hasOfferCatalog: {
         '@type': 'OfferCatalog', name: 'Tailoring, Repair, Alterations and Ironing',
         itemListElement: [
@@ -96,7 +95,7 @@ const jsonLd = {
     {
       '@type': 'FAQPage', '@id': `${PAGE_URL}#faq`,
       mainEntity: [
-        { '@type': 'Question', name: 'Do you come to hotels in Belek, Lara and Kemer?', acceptedAnswer: { '@type': 'Answer', text: `Yes! Our mobile tailor comes to all hotels in Belek, Lara, Kemer, Alanya and Side. Share your hotel name on WhatsApp. WhatsApp: ${PHONE}` } },
+        { '@type': 'Question', name: 'Do you come to hotels in Belek, Lara and Kemer?', acceptedAnswer: { '@type': 'Answer', text: `Yes! Our mobile tailor comes to all hotels in Belek, Lara, Kemer and Side. Share your hotel name on WhatsApp. WhatsApp: ${PHONE}` } },
         { '@type': 'Question', name: 'Is the mobile visit free?', acceptedAnswer: { '@type': 'Answer', text: 'The visit is free in Konyaaltı. In other districts the visit fee depends on the distance and is confirmed on WhatsApp beforehand.' } },
         { '@type': 'Question', name: 'Do you offer ironing and dry cleaning too?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, professional steam ironing and dry cleaning, with pickup and delivery to your hotel or address.' } },
         { '@type': 'Question', name: 'Can I get same-day alterations?', acceptedAnswer: { '@type': 'Answer', text: `Yes, most repairs and hemming are completed the same day or usually within 1–2 days. WhatsApp: ${PHONE}` } },
@@ -116,7 +115,7 @@ const PRIORITY_DISTRICTS = [
   { name: 'Aksu', tag: 'Nearby', note: 'Scheduled mobile visit' },
 ];
 
-const OTHER_DISTRICTS = ['Belek', 'Kemer', 'Serik', 'Manavgat', 'Side', 'Alanya', 'Gazipaşa', 'Kaş', 'Kalkan', 'Finike', 'Kumluca', 'Elmalı', 'Korkuteli'];
+const OTHER_DISTRICTS = ['Belek', 'Kemer', 'Serik', 'Side'];
 
 const SERVICES = [
   { icon: '👔', tr: "Men's Tailoring", en: 'Shirts, trousers, jackets, suits', desc: 'Custom-fit garments made from scratch, to your exact measurements.', items: ['Shirt', 'Trousers', 'Jacket', 'Suit', 'Groom Suit'] },
@@ -139,11 +138,11 @@ const REPAIR_CATEGORIES = [
 ];
 
 const FAQS: [string, string][] = [
-  ['Do you come to hotels in Belek, Lara and Kemer?', 'Yes! Our mobile tailor visits all hotels in Belek, Lara, Kemer, Alanya and Side. Just share your hotel name on WhatsApp.'],
+  ['Do you come to hotels in Belek, Lara and Kemer?', 'Yes! Our mobile tailor visits all hotels in Belek, Lara, Kemer and Side. Just share your hotel name on WhatsApp.'],
   ['Is the mobile visit free?', 'Free in Konyaaltı. In other districts the visit fee depends on the distance; we confirm it on WhatsApp first.'],
   ['Do you offer ironing and dry cleaning?', 'Yes — professional steam ironing and dry cleaning, with pickup and delivery to your hotel or address.'],
   ['Can I get same-day alterations before an event?', 'Yes, most repairs and hemming are completed the same day or usually within 1–2 days.'],
-  ['Do you serve all Antalya districts?', 'Yes — free visits in Konyaaltı; Muratpaşa, Kepez, Lara, Döşemealtı, Belek, Kemer, Side, Alanya, Manavgat and all other districts by appointment, with the visit fee set by distance.'],
+  ['Do you serve Konyaaltı and nearby districts?', 'Yes — free visits in Konyaaltı; Muratpaşa, Kepez, Lara, Döşemealtı, Belek, Kemer, Side and nearby districts by appointment, with the visit fee set by distance.'],
   ['Do you speak English?', 'Yes, our team speaks English, Russian, German and Turkish.'],
   ...EXTRA_FAQS,
 ];
@@ -177,14 +176,13 @@ export default function TailorServiceAntalyaPage() {
             <div className="hero-overlay" />
           </div>
           <div className="hero-content">
-            <span className="hero-tag">📍 All Antalya Districts · Hotel & Address Visits</span>
+            <span className="hero-tag">📍 Konyaaltı & Nearby Districts · Hotel & Address Visits</span>
             <span className="hero-eng">Antalya Tailor Service</span>
             <h1 id="hero-h">
               Tailor, Repair & Alterations<br /><span className="accent">Delivered to Your Hotel</span>
             </h1>
             <p className="hero-desc" id="hero-desc">
-              From our Konyaaltı workshop, Terzi Can serves every district of Antalya — Belek, Lara, Kemer,
-              Alanya, Side and beyond. Tailoring, repair, alterations, ironing and dry cleaning, with a mobile
+              From our Konyaaltı workshop, Terzi Can serves Konyaaltı and nearby districts of Antalya — Belek, Lara, Kemer, Side and beyond. Tailoring, repair, alterations, ironing and dry cleaning, with a mobile
               tailor who comes to your hotel or address.
             </p>
             <div className="hero-btns">
@@ -201,7 +199,7 @@ export default function TailorServiceAntalyaPage() {
             <p className="seo-intro" id="seo-intro">
               <strong style={{ color: '#C9A96E' }}>Antalya Tailor Service</strong> — Terzi Can serves all
               districts of Antalya with tailoring, repair, alterations, ironing and dry cleaning. Our mobile
-              tailor visits hotels and addresses in Belek, Lara, Kemer, Alanya, Side, Manavgat and every other
+              tailor visits hotels and addresses in Belek, Lara, Kemer, Side and every other
               district, in addition to our Konyaaltı workshop.
             </p>
           </div>
@@ -317,7 +315,7 @@ export default function TailorServiceAntalyaPage() {
         </main>
 
         <section className="cta-final" aria-label="Contact us">
-          <h2 className="cta-h">Tailor Service in Every District<br />of Antalya — We Come to You</h2>
+          <h2 className="cta-h">Tailor Service in Nearby District<br />of Antalya — We Come to You</h2>
           <p className="cta-sub">Hotel or home address, tailoring or repair — just tell us your location.</p>
           <div className="cta-btns">
             <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-white"><span aria-hidden="true">💬</span> Message on WhatsApp</a>
@@ -347,8 +345,8 @@ export default function TailorServiceAntalyaPage() {
             <a href="/en/anavera-tekstil">B2B Clothing Manufacturer (Anavera Tekstil)</a>
           </nav>
           <p style={{ marginTop: '1rem', fontSize: '.68rem', color: 'rgba(255,255,255,.45)', lineHeight: 1.8 }}>
-            Antalya Tailor Service — tailoring, repair, alterations and ironing across all Antalya districts:
-            Konyaaltı, Muratpaşa, Kepez, Lara, Belek, Kemer, Side, Alanya, Manavgat and more. Mobile tailor to
+            Antalya Tailor Service — tailoring, repair, alterations and ironing across Konyaaltı and nearby districts:
+            Konyaaltı, Muratpaşa, Kepez, Lara, Belek, Kemer, Side and more. Mobile tailor to
             your hotel or address. {PHONE}
           </p>
         </footer>

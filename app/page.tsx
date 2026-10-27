@@ -150,8 +150,7 @@ const jsonLd = {
       areaServed: [
         'Liman, Konyaaltı', 'Hurma, Konyaaltı', 'Sarısu, Konyaaltı',
         'Gürsu, Konyaaltı', 'Uncalı, Konyaaltı', 'Konyaaltı', 'Muratpaşa', 'Kepez', 'Antalya',
-        'Lara', 'Güzeloba', 'Belek', 'Kemer', 'Side', 'Alanya',
-      ].map(n => ({ '@type': 'Place', name: n })),
+        'Lara', 'Güzeloba', 'Belek', 'Kemer', 'Side', ].map(n => ({ '@type': 'Place', name: n })),
       contactPoint: [
         {
           '@type': 'ContactPoint',
@@ -501,7 +500,7 @@ export default function TerziHizmetiPage() {
         {/* SUMMARY / INTRODUCTION */}
         <div style={{background:C.bg2,padding:'2.2rem 1.5rem',borderBottom:`1px solid rgba(44,74,62,.10)`}}>
           <p style={{maxWidth:920,margin:'0 auto',fontSize:'.85rem',color:C.muted,lineHeight:1.9,textAlign:'center'}}>
-            <strong style={{color:'#2C4A3E'}}>Terzi Can Antalya</strong> — Konyaaltı'da 2006'dan bu yana faaliyet gösteren profesyonel terzi atölyesidir. Türkçe, İngilizce, Rusça ve Almanca konuşan ekibimizle hem yerli hem de yabancı misafirlerimize terzilik, kıyafet tamiri, elbise dikimi, gelinlik tadilatı ve kuru temizleme hizmeti sunuyoruz. Hurma, Liman, Sarısu, Gürsu ve Uncalı başta olmak üzere tüm Antalya'ya araçlı terzi servisi sağlıyoruz.
+            <strong style={{color:'#2C4A3E'}}>Terzi Can Antalya</strong> — Konyaaltı'da 2006'dan bu yana faaliyet gösteren profesyonel terzi atölyesidir. Türkçe, İngilizce, Rusça ve Almanca konuşan ekibimizle hem yerli hem de yabancı misafirlerimize terzilik, kıyafet tamiri, elbise dikimi, gelinlik tadilatı ve kuru temizleme hizmeti sunuyoruz. Hurma, Liman, Sarısu, Gürsu ve Uncalı başta olmak üzere Konyaaltı ve çevresi'ya araçlı terzi servisi sağlıyoruz.
           </p>
         </div>
 

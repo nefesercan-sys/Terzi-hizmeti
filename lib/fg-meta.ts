@@ -43,7 +43,7 @@ const FG_DISTRICT: Record<string, Row> = {
   },
   "toros": {
     en: { t: "Toros Tailor Near Me: Same-Day Trouser Hemming | Terzi Can", d: "Looking for a tailor near Toros? Trouser, skirt and jeans hemming from ₺200, usually ready the same day. Pick-up arranged on WhatsApp. ☎ +90 531 898 64 18", kw: ["tailor near me Toros", "trouser hemming near me", "same day hemming Antalya", "tailor open now Antalya"] },
-    ru: { t: "Портной рядом, Торос: подшив брюк в тот же день | Terzi Can", d: "Ищете портного рядом в районе Торос? Подшив брюк, юбок и джинсов от ₺200, обычно в тот же день. Ежедневно 08:00–23:00, забор через WhatsApp. ☎ +90 531 898 64 18", kw: ["портной рядом Торос", "подшить брюки рядом", "подшив в тот же день Анталья"] },
+    ru: { t: "Портной рядом, Торос: подшив брюк в тот же день | Terzi Can", d: "Портной рядом в районе Торос. Подшив брюк, юбок и джинсов от ₺200, обычно в тот же день. Ежедневно 08:00–23:00, WhatsApp. ☎ +90 531 898 64 18", kw: ["портной рядом Торос", "подшить брюки рядом", "подшив в тот же день Анталья"] },
     de: { t: "Toros: Schneider in der Nähe, Hose am selben Tag | Terzi Can", d: "Schneider in der Nähe von Toros: Hosen, Röcke und Jeans kürzen ab ₺200, meist am selben Tag. Abholung per WhatsApp. ☎ +90 531 898 64 18", kw: ["Schneider in der Nähe Toros", "Hose kürzen in der Nähe", "Hose kürzen am selben Tag Antalya"] },
   },
   "ogretmenevleri": {

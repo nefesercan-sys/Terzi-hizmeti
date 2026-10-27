@@ -56,7 +56,7 @@ const SERVICES: { title: string; desc: string; rows: [string, string][] }[] = [
 ];
 
 const FREE_DISTRICTS = ['Konyaaltı'];
-const OTHER_DISTRICTS = ['Muratpaşa', 'Kepez', 'Lara', 'Belek', 'Kemer', 'Side', 'Serik', 'Manavgat', 'Alanya', 'Döşemealtı', 'Aksu'];
+const OTHER_DISTRICTS = ['Muratpaşa', 'Kepez', 'Lara', 'Belek', 'Kemer', 'Side', 'Serik', 'Döşemealtı', 'Aksu'];
 
 const STEPS: [string, string][] = [
   ['Foto senden', 'Senden Sie per WhatsApp ein Foto des Kleidungsstücks und der gewünschten Arbeit.'],

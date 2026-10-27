@@ -73,7 +73,7 @@ const T: Record<Lang, any> = {
       ['Hazır model mi seçmem lazım, kendi tasarımımı da diktirebilir miyim?', 'Hayır, hazır modelle sınırlı değilsiniz — kendi fotoğrafınızı veya fikrinizi WhatsApp\'tan gönderebilirsiniz, ona göre dikeriz.'],
       ['Kumaşı siz mi seçiyorsunuz, ben mi?', 'Siz seçersiniz — %100 keten veya %100 pamuk arasından, WhatsApp\'ta görüşürken karar veriyoruz.'],
       ['Dikim ne kadar sürüyor?', 'Genellikle 3 gün içinde hazır oluyor; model karmaşıklığına göre değişebilir, kesin gün WhatsApp\'ta netleşir.'],
-      ['Otelime teslimat yapıyor musunuz?', 'Evet, Antalya genelindeki otellere teslim ediyoruz, ödeme teslimde alınır.'],
+      ['Otelime teslimat yapıyor musunuz?', 'Evet, Belek, Lara, Kemer ve Side otellerine teslim ediyoruz, ödeme teslimde alınır.'],
       ['Ölçümü nasıl vereceğim?', 'WhatsApp üzerinden ölçülerinizi paylaşırsınız, isterseniz görüntülü görüşmeyle de yardımcı oluruz.'],
       ['Model ve kalıp çıkarıyor musunuz?', 'Evet. Fotoğraf, çizim veya örnek bir giysiden model ve kalıp hazırlıyor, önce numune dikiyoruz; onayınızdan sonra özel dikim ya da seri üretime geçiyoruz.'],
       ['Yurt dışına gönderim yapıyor musunuz?', 'Evet, siparişleri Avrupa, Rusya ve diğer ülkelere gönderiyoruz. Süre ve fiyat siparişe göre WhatsApp\'ta netleşir.'],

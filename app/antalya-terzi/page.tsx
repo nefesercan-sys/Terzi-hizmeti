@@ -109,8 +109,7 @@ const jsonLd = {
       }],
       areaServed: [
         'Liman, Konyaaltı', 'Hurma, Konyaaltı', 'Sarısu, Konyaaltı', 'Gürsu, Konyaaltı', 'Uncalı, Konyaaltı',
-        'Konyaaltı', 'Muratpaşa', 'Kepez', 'Antalya', 'Lara', 'Belek', 'Kemer', 'Alanya', 'Manavgat',
-      ].map((n) => ({ '@type': 'Place', name: n })),
+        'Konyaaltı', 'Muratpaşa', 'Kepez', 'Antalya', 'Lara', 'Belek', 'Kemer', ].map((n) => ({ '@type': 'Place', name: n })),
       contactPoint: [{
         '@type': 'ContactPoint',
         telephone: PHONE_TEL,
@@ -178,7 +177,7 @@ const NEIGHBORHOODS: Neighborhood[] = [
 ];
 
 const OTHER_DISTRICTS: string[] = [
-  'Muratpaşa', 'Kepez', 'Döşemealtı', 'Aksu', 'Lara', 'Güzeloba', 'Serik', 'Belek', 'Kemer', 'Alanya', 'Manavgat', 'Side',
+  'Muratpaşa', 'Kepez', 'Döşemealtı', 'Aksu', 'Lara', 'Güzeloba', 'Serik', 'Belek', 'Kemer', 'Side',
 ];
 
 interface WorkshopService {
@@ -287,7 +286,7 @@ const FAQS: [string, string][] = [
   ['Bay, bayan, çocuk kıyafeti dikiyor musunuz?', 'Evet, erkek, kadın ve çocuk kıyafetlerinde özel ölçü dikim hizmeti sunuyoruz.'],
   ['Üniforma üretimi ve toplu sipariş alıyor musunuz?', 'Evet, otel, okul, restoran ve kurumlar için üniforma tasarımı ve toplu üretim yapıyoruz.'],
   ['Fason imalat yapıyor musunuz?', 'Evet, markalar ve işletmeler için numune dikimi, kalıp çıkarma ve seri üretim hizmeti veriyoruz.'],
-  ['Diğer Antalya ilçelerine hizmet var mı?', "Evet, Muratpaşa, Kepez, Lara, Alanya, Manavgat dahil tüm Antalya'ya kargo veya randevulu servisle ulaşıyoruz."],
+  ['Diğer Antalya ilçelerine hizmet var mı?', "Evet, Muratpaşa, Kepez, Lara dahil yakın bölgelere kargo veya randevulu servisle ulaşıyoruz."],
 ];
 
 const PROCESS_STEPS: [string, string, string][] = [
@@ -338,7 +337,7 @@ export default function KonyaaltiTailorServicePage() {
               Hurma, Liman, Sarısu, Uncalı, Gürsu, Öğretmenevleri, Ahatlı ve Toros
               mahallelerine en yakın atölyemizden — bay, bayan ve çocuk kıyafet dikimi,
               üniforma üretimi, fason imalat ve özel tasarım hizmeti. Antalya&apos;nın
-              tüm ilçelerine de ulaşıyoruz.
+              yakın ilçelerine de ulaşıyoruz.
             </p>
             <div className="hero-btns">
               <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-primary">
@@ -357,8 +356,7 @@ export default function KonyaaltiTailorServicePage() {
               <strong style={{ color: '#C9A96E' }}>Konyaaltı Tailor Service</strong> — Hurma, Liman, Sarısu,
               Uncalı, Gürsu, Öğretmenevleri, Ahatlı ve Toros mahallelerine hizmet veren terzi ve
               dikiş atölyesi. Bay kıyafet dikimi, bayan kıyafet dikimi, çocuk kıyafeti, üniforma
-              üretimi, fason imalat ve kişiye özel tasarım. Antalya&apos;nın Muratpaşa, Kepez, Lara,
-              Alanya, Manavgat dahil tüm ilçelerine terzi hizmeti sağlıyoruz.
+              üretimi, fason imalat ve kişiye özel tasarım. Antalya&apos;nın Muratpaşa, Kepez, Lara dahil yakın ilçelerine terzi hizmeti sağlıyoruz.
             </p>
           </div>
 

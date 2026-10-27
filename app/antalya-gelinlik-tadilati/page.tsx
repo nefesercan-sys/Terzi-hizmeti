@@ -70,8 +70,7 @@ const jsonLd = {
       }],
       areaServed: [
         'Liman, Konyaaltı', 'Hurma, Konyaaltı', 'Sarısu, Konyaaltı', 'Gürsu, Konyaaltı', 'Uncalı, Konyaaltı',
-        'Konyaaltı', 'Muratpaşa', 'Kepez', 'Antalya', 'Lara', 'Belek', 'Kemer', 'Alanya', 'Manavgat',
-      ].map((n) => ({ '@type': 'Place', name: n })),
+        'Konyaaltı', 'Muratpaşa', 'Kepez', 'Antalya', 'Lara', 'Belek', 'Kemer', ].map((n) => ({ '@type': 'Place', name: n })),
       contactPoint: [{
         '@type': 'ContactPoint',
         telephone: PHONE_TEL,

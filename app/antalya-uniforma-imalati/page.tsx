@@ -25,8 +25,7 @@ const OG_IMAGE = `${HOME_URL}/terzi-can-hero.jpg`;
 
 const ANTALYA_ILCELER = [
   'Antalya','Konyaaltı','Muratpaşa','Kepez','Döşemealtı','Aksu',
-  'Lara','Belek','Kemer','Alanya','Manavgat','Side','Serik',
-  'Kaş','Kalkan','Finike','Kumluca','Gazipaşa','Mahmutlar',
+  'Lara','Belek','Kemer','Side','Serik',
   'Kundu','Boğazkent','Kadriye','Beldibi','Göynük','Tekirova',
 ].map(name => ({ '@type': 'City', name }));
 
@@ -44,7 +43,7 @@ const jsonLd = {
         'Konyaaltı Terzi Can',
       ],
       description:
-        'Antalya genelinde otel, restoran, hastane, okul ve güvenlik firmaları için profesyonel üniforma üretimi ve özel tasarım dikiş atölyesi.',
+        'Konyaaltı ve çevresinde otel, restoran, hastane, okul ve güvenlik firmaları için profesyonel üniforma üretimi ve özel tasarım dikiş atölyesi.',
       url: HOME_URL,
       telephone: PHONE_E164,
       priceRange: '$$',
@@ -216,7 +215,7 @@ export default function UniformaImalatiPage() {
       <main className="container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold mb-4">Antalya Üniforma İmalatı & Kurumsal Kıyafet Dikimi</h1>
         <p className="text-lg text-gray-700 leading-relaxed mb-6">
-          Terzi Can olarak Antalya genelindeki oteller, restoranlar, hastaneler, okullar ve güvenlik şirketleri için yüksek kaliteli kumaşlar ve özelleştirilebilir tasarımlarla profesyonel üniforma imalatı hizmeti sunuyoruz.
+          Terzi Can olarak Konyaaltı ve çevresindeki oteller, restoranlar, hastaneler, okullar ve güvenlik şirketleri için yüksek kaliteli kumaşlar ve özelleştirilebilir tasarımlarla profesyonel üniforma imalatı hizmeti sunuyoruz.
         </p>
       <ReviewsBlock lang="tr" />
       </main>

@@ -314,14 +314,15 @@ function serviceCopy(lang: Lang, s: Service) {
     de: [`${Q} in Antalya ${ps} · ${ts} | Terzi Can`, `${Q} in Antalya · ${ts} | Terzi Can`, `${Q} in Antalya | Terzi Can`],
   }[lang];
   const trPrice = lang === 'tr' && ps ? [`${Q} fiyatları 2026 Antalya ${ps} | Terzi Can`, `${Q} fiyatları 2026 · ${ps} | Terzi Can`] : [];
-  const title = pickFit([...trPrice, ...(ps ? t1 : t1.slice(1))], 60);
+  const trNoPrice = lang === 'tr' && !ps ? [`${Q} Antalya · Fotoğrafla Net Fiyat | Terzi Can`, `${Q} Antalya · Fotoğrafla Fiyat | Terzi Can`, `${Q} Antalya · Fiyat | Terzi Can`] : [];
+  const title = pickFit([...trPrice, ...trNoPrice, ...(ps ? t1 : t1.slice(1))], 60);
   const price = priceShortOf(lang, s);
   const tm0 = timeOf(lang, s).replace(/[.\s]+$/, '');
   const tm = tm0.charAt(0).toLocaleLowerCase(lang === 'tr' ? 'tr-TR' : lang) + tm0.slice(1);
   const v0 = capFirst(lang, s.vars[lang][0]);
   // Açıklama: kullanıcının sorusunu aynen tekrar eden ilk cümle + cevap (süre, fiyat, saat, telefon).
   const ask = {
-    tr: price ? `${Q} ücreti ne kadar?` : `${Q} için en yakın terzi mi arıyorsunuz?`,
+    tr: price ? `${Q} ücreti ne kadar?` : `${Q} fiyatı: fotoğrafı WhatsApp'tan gönderin, net fiyatı öğrenin.`,
     en: `${Q} in Antalya?`,
     ru: `${v0} в Анталье?`,
     de: `${v0} in Antalya?`,

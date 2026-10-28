@@ -1,7 +1,7 @@
 // terzihizmeti.com.tr — Ek turist dilleri için kısa tanıtım sayfası (veri: lib/intl.ts). Sunucu bileşeni, stil inline.
 import Link from 'next/link';
 import { PHONE, PHONE_TEL, MAPS, SITE } from '@/lib/seo-data';
-import { ILANGS, INTL, ZONES, iUrl, type ILang } from '@/lib/intl';
+import { ILANGS, INTL, NB, ZONES, iUrl, type ILang } from '@/lib/intl';
 import { waLink, businessNode, OG_DEFAULT } from '@/lib/turist-keten';
 
 const C = { green: '#2C4A3E', gold: '#D4B07A', cream: '#FAF7F2', sand: '#F2EDE4', ink: '#1C1814', muted: '#6B5F53', line: 'rgba(44,74,62,.15)' };
@@ -62,12 +62,16 @@ export default function IntlLanding({ lang }: { lang: ILang }) {
         <ul style={{ margin: 0, paddingInlineStart: '1.2rem' }}>{c.services.map((s) => <li key={s} style={{ marginBottom: '.4rem' }}>{s}</li>)}</ul>
       </Block>
 
-      <Block><H2>{c.hotelTitle}</H2>
+      <Block><H2>{NB[lang].title}</H2>
+        <p style={{ margin: 0 }}>{NB[lang].text}</p>
+      </Block>
+
+      <Block bg={C.sand}><H2>{c.hotelTitle}</H2>
         <p style={{ margin: '0 0 1rem' }}>{c.hotelText}</p>
         <p style={{ margin: 0, color: C.muted, fontSize: '.92rem' }}><strong>{c.zonesLabel}:</strong> {ZONES.join(' · ')}</p>
       </Block>
 
-      <Block bg={C.sand}><H2>{c.faqTitle}</H2>
+      <Block><H2>{c.faqTitle}</H2>
         {c.faq.map(([q, a]) => (
           <div key={q} style={{ marginBottom: '1.1rem' }}>
             <h3 style={{ fontSize: '1.02rem', color: C.ink, margin: '0 0 .25rem' }}>{q}</h3>

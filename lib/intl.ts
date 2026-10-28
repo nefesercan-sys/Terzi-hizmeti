@@ -30,8 +30,8 @@ export const ZONES = ['Belek', 'Lara', 'Güzeloba', 'Side', 'Kemer'];
 export const INTL: Record<ILang, ICopy> = {
   es: {
     locale: 'es_ES', name: 'Español', dir: 'ltr', hreflang: 'es',
-    title: 'Sastre en Antalya para turistas: arreglos de ropa y confección a medida | Terzi Can',
-    desc: 'Sastrería en Konyaaltı, Antalya, abierta todos los días de 08:00 a 23:00. Arreglos de ropa, cremalleras, vestidos y confección a medida. Pida precio por WhatsApp con una foto.',
+    title: 'Sastre en Antalya: arreglos y ropa a medida | Terzi Can',
+    desc: 'Sastrería en Konyaaltı, abierta de 08:00 a 23:00. Dobladillos, cremalleras, vestidos y ropa a medida. Recogida gratis en Hurma, Liman y barrios cercanos.',
     keywords: ['sastre Antalya', 'arreglos de ropa Antalya', 'sastrería Konyaaltı', 'sastre para turistas Antalya', 'costurera Antalya hotel'],
     tag: 'Terzi Can · Antalya, Konyaaltı',
     h1: 'Sastre en Antalya para turistas',
@@ -56,8 +56,8 @@ export const INTL: Record<ILang, ICopy> = {
   },
   fr: {
     locale: 'fr_FR', name: 'Français', dir: 'ltr', hreflang: 'fr',
-    title: 'Tailleur à Antalya pour touristes : retouches et sur-mesure | Terzi Can',
-    desc: 'Atelier de couture à Konyaaltı, Antalya, ouvert tous les jours de 08h00 à 23h00. Retouches, fermetures éclair, robes et sur-mesure. Demandez un prix sur WhatsApp avec une photo.',
+    title: 'Tailleur à Antalya : retouches et sur-mesure | Terzi Can',
+    desc: 'Atelier à Konyaaltı, ouvert de 8h à 23h. Ourlets, fermetures, robes, sur-mesure. Prise en charge gratuite à Hurma, Liman et alentours. Prix par WhatsApp.',
     keywords: ['tailleur Antalya', 'retouches vêtements Antalya', 'couturier Konyaaltı', 'tailleur touristes Antalya', 'retouche hôtel Antalya'],
     tag: 'Terzi Can · Antalya, Konyaaltı',
     h1: 'Tailleur à Antalya pour touristes',
@@ -82,8 +82,8 @@ export const INTL: Record<ILang, ICopy> = {
   },
   pl: {
     locale: 'pl_PL', name: 'Polski', dir: 'ltr', hreflang: 'pl',
-    title: 'Krawiec w Antalyi dla turystów: przeróbki i szycie na miarę | Terzi Can',
-    desc: 'Pracownia krawiecka w Konyaaltı w Antalyi, otwarta codziennie 08:00–23:00. Przeróbki ubrań, zamki, suknie i szycie na miarę. Cenę podamy na WhatsAppie po zdjęciu.',
+    title: 'Krawiec w Antalyi: przeróbki i szycie na miarę | Terzi Can',
+    desc: 'Krawiec w Konyaaltı, czynny 08:00–23:00. Skracanie, zamki, sukienki, szycie na miarę. Bezpłatny odbiór w Hurma, Liman i okolicy. Cena przez WhatsApp.',
     keywords: ['krawiec Antalya', 'przeróbki krawieckie Antalya', 'krawiec Konyaaltı', 'krawiec dla turystów Antalya', 'przeróbki ubrań hotel Antalya'],
     tag: 'Terzi Can · Antalya, Konyaaltı',
     h1: 'Krawiec w Antalyi dla turystów',
@@ -108,8 +108,8 @@ export const INTL: Record<ILang, ICopy> = {
   },
   uk: {
     locale: 'uk_UA', name: 'Українська', dir: 'ltr', hreflang: 'uk',
-    title: 'Кравець в Анталії для туристів: підгонка одягу та пошиття | Terzi Can',
-    desc: 'Ательє в Коньяалти, Анталія, щодня 08:00–23:00. Підгонка одягу, блискавки, сукні та пошиття за мірками. Ціну назвемо у WhatsApp за фото.',
+    title: 'Кравець в Анталії: підгонка та пошиття | Terzi Can',
+    desc: 'Ательє в Коньяалти, щодня 08:00–23:00. Підгонка, блискавки, сукні, пошиття на замовлення. Безкоштовний забір у Hurma, Liman та поруч. Ціна у WhatsApp.',
     keywords: ['кравець Анталія', 'підгонка одягу Анталія', 'ательє Коньяалти', 'кравець для туристів Анталія', 'ремонт одягу готель Анталія'],
     tag: 'Terzi Can · Анталія, Коньяалти',
     h1: 'Кравець в Анталії для туристів',
@@ -134,8 +134,8 @@ export const INTL: Record<ILang, ICopy> = {
   },
   nl: {
     locale: 'nl_NL', name: 'Nederlands', dir: 'ltr', hreflang: 'nl',
-    title: 'Kleermaker in Antalya voor toeristen: kledingaanpassingen en maatwerk | Terzi Can',
-    desc: 'Kleermakerij in Konyaaltı, Antalya, elke dag open van 08:00 tot 23:00. Kleding vermaken, ritsen, jurken en maatwerk. Vraag de prijs via WhatsApp met een foto.',
+    title: 'Kleermaker in Antalya: vermaken en maatwerk | Terzi Can',
+    desc: 'Kleermaker in Konyaaltı, dagelijks 08:00–23:00. Zomen, ritsen, jurken, maatwerk. Gratis ophalen in Hurma, Liman en buurten. Prijs via WhatsApp met foto.',
     keywords: ['kleermaker Antalya', 'kleding vermaken Antalya', 'kleermaker Konyaaltı', 'kleermaker voor toeristen Antalya', 'kleding laten vermaken hotel Antalya'],
     tag: 'Terzi Can · Antalya, Konyaaltı',
     h1: 'Kleermaker in Antalya voor toeristen',
@@ -184,4 +184,15 @@ export const INTL: Record<ILang, ICopy> = {
     contactTitle: 'التواصل', call: 'اتصل', addressLabel: 'العنوان', address: 'Hurma Mahallesi, 07130 Konyaaltı, Antalya', mapLabel: 'افتح في خرائط Google',
     otherLangs: 'لغات أخرى',
   },
+};
+
+
+/** Ücretsiz alım-teslim mahalleleri (işletme sahibinin onayladığı liste, Ekim 2026) — her dilde mahalle adlarıyla görünür. */
+export const NB: Record<ILang, { title: string; text: string }> = {
+  es: { title: 'Recogida y entrega gratis en estos barrios', text: 'Sin coste de servicio en Hurma, Liman, Sarısu, Gürsu, Uluç, Uncalı, Meltem, Siteler, Öğretmenevleri, Altınkum y Arapsuyu. Todos los días de 08:00 a 23:00: acortar y ajustar pantalones, vaqueros, faldas, abrigos y chaquetas, cambiar y reparar cremalleras, arreglos de vestidos de fiesta y de novia, y confección a medida.' },
+  fr: { title: 'Prise en charge et livraison gratuites dans ces quartiers', text: 'Service gratuit à Hurma, Liman, Sarısu, Gürsu, Uluç, Uncalı, Meltem, Siteler, Öğretmenevleri, Altınkum et Arapsuyu. Tous les jours de 08h00 à 23h00 : ourlets et ajustements de pantalons, jeans, jupes, manteaux et vestes, changement et réparation de fermetures éclair, retouches de robes de soirée et de mariée, sur-mesure.' },
+  pl: { title: 'Bezpłatny odbiór i dowóz w tych dzielnicach', text: 'Bez opłaty za dojazd: Hurma, Liman, Sarısu, Gürsu, Uluç, Uncalı, Meltem, Siteler, Öğretmenevleri, Altınkum i Arapsuyu. Codziennie 08:00–23:00: skracanie i zwężanie spodni, jeansów, spódnic, płaszczy i kurtek, wymiana i naprawa zamków, przeróbki sukienek wieczorowych i ślubnych, szycie na miarę.' },
+  uk: { title: 'Безкоштовний забір і доставка в цих районах', text: 'Без плати за виїзд: Hurma, Liman, Sarısu, Gürsu, Uluç, Uncalı, Meltem, Siteler, Öğretmenevleri, Altınkum та Arapsuyu. Щодня 08:00–23:00: вкорочення і звуження штанів, джинсів, спідниць, пальт і курток, заміна та ремонт блискавок, підгонка вечірніх і весільних суконь, пошиття на замовлення.' },
+  nl: { title: 'Gratis ophalen en terugbrengen in deze wijken', text: 'Geen servicekosten in Hurma, Liman, Sarısu, Gürsu, Uluç, Uncalı, Meltem, Siteler, Öğretmenevleri, Altınkum en Arapsuyu. Dagelijks 08:00–23:00: broeken, jeans, rokken, jassen en jasjes korter of nauwer maken, ritsen vervangen en repareren, avond- en bruidsjurken aanpassen en maatwerk.' },
+  ar: { title: 'استلام وتسليم مجاني في هذه الأحياء', text: 'بدون رسوم خدمة في: Hurma, Liman, Sarısu, Gürsu, Uluç, Uncalı, Meltem, Siteler, Öğretmenevleri, Altınkum, Arapsuyu. يوميًا من 08:00 إلى 23:00: تقصير وتضييق البناطيل والجينز والتنانير والمعاطف والجاكيتات، تغيير وإصلاح السحابات، تعديل فساتين السهرة والزفاف، والتفصيل حسب المقاس.' },
 };

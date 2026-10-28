@@ -17,7 +17,12 @@ export default function LangSetter() {
     if (pathname?.startsWith('/de')) lang = 'de';
     else if (pathname?.startsWith('/en')) lang = 'en';
     else if (pathname?.startsWith('/ru')) lang = 'ru';
+    else {
+      const m = pathname?.match(/^\/(es|fr|pl|uk|nl|ar)(\/|$)/);
+      if (m) lang = m[1];
+    }
     document.documentElement.lang = lang;
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
   }, [pathname]);
 
   return null;

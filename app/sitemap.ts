@@ -108,5 +108,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${SITE}${CONTACT[l]}`, lastModified: new Date(LAST_UPDATE), changeFrequency: 'monthly' as const, priority: l === 'tr' ? 0.85 : 0.8, alternates: contactAlt,
   }));
 
-  return [...sabitSayfalar, ...otelSayfalari, ...seoSayfalari, ...turistSayfalari, ...iletisimSayfalari];
+  // Aynı URL birden fazla bölümde üretilebilir; ilk kayıt (sabit sayfalar) korunur.
+  const gorulen = new Set<string>();
+  return [...sabitSayfalar, ...otelSayfalari, ...seoSayfalari, ...turistSayfalari, ...iletisimSayfalari].filter((e) => {
+    if (gorulen.has(e.url)) return false;
+    gorulen.add(e.url);
+    return true;
+  });
 }

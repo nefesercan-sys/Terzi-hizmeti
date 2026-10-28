@@ -10,7 +10,7 @@
 import Link from 'next/link';
 import { PHONE, SERVICES, serviceUrl, HOTEL_BASE } from '@/lib/seo-data';
 import {
-  ALT, EXPRESS_COPY, HUB_COPY, HUB_GALLERY, IMG, PRICE_FROM_EUR, PRICES_PAGE, ANAVERA, PRODUCTS, PRODUCT_IDS, PRODUCT_IMGS, UI,
+  ALT, EXPRESS_COPY, HUB_COPY, HUB_GALLERY, IMG, PRICES_PAGE, ANAVERA, PRODUCTS, PRODUCT_IDS, PRODUCT_IMGS, UI,
   expressJsonLd, expressUrl, hubJsonLd, hubUrl, productJsonLd, productUrl, waLink,
   type ImgKey, type ProductId, type TLang,
 } from '@/lib/turist-keten';
@@ -341,4 +341,3 @@ export function TuristExpress({ lang }: { lang: TLang }) {
   );
 }
 
-export { PRICE_FROM_EUR };

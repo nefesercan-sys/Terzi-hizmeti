@@ -10,7 +10,7 @@
 //
 // Kurallar (sitenin diğer dosyalarıyla aynı):
 //  - Sadece işletme sahibinin verdiği bilgiler: 2006'dan beri, her gün 08:00–23:00, otel/eve ücretsiz servis,
-//    özel dikim genellikle 3 gün, başlangıç fiyatı 50 €, tadilat genellikle 1 gün, acilde çoğunlukla 2–4 saat.
+//    özel dikim genellikle 3 gün, tadilat genellikle 1 gün, acilde çoğunlukla 2–4 saat.
 //  - Süre sözleri "genellikle/usually" ile yazılır; kesin gün/saat WhatsApp'ta netleşir (kesin garanti YOK).
 //  - Görseller örnek/stil görselidir (müşteri fotoğrafı gibi sunulmaz) — sayfada bu not yer alır.
 // ============================================================
@@ -31,7 +31,6 @@ export {
 type L3<T = string> = Record<TLang, T>;
 
 export const OG_DEFAULT = `${SITE}/linen/og-linen-tailor-antalya.jpg`;
-export const PRICE_FROM_EUR = 50;
 export const TURIST_UPDATE = '2026-10-15'; // bu kümenin son içerik güncellemesi (sitemap + dateModified)
 
 // ── Görseller (public/linen/*) ──────────────────────────────

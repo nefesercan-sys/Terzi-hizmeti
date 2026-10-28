@@ -6,6 +6,13 @@ import { TLANGS, allNewPages } from '@/lib/turist-keten';
 export const dynamic = 'force-dynamic';
 
 const HOST = 'terzihizmeti.com.tr';
+import { timingSafeEqual } from 'crypto';
+function esit(a: string | null | undefined, b: string): boolean {
+  if (!a) return false;
+  const x = Buffer.from(a), y = Buffer.from(b);
+  return x.length === y.length && timingSafeEqual(x, y);
+}
+
 const KEY = '61a8b3c9d2f44e5fa8b29c9b1424ef2d';
 const KEY_LOCATION = `https://${HOST}/${KEY}.txt`;
 const SITE = `https://${HOST}`;
@@ -81,7 +88,7 @@ function yetkili(req: Request): boolean {
   if (!secret) return false; // secret yoksa kimse tetikleyemez
   const bearer = req.headers.get('authorization')?.replace(/^Bearer\s+/i, '');
   const token = new URL(req.url).searchParams.get('token');
-  return bearer === secret || token === secret;
+  return esit(bearer, secret) || esit(token, secret);
 }
 
 async function sendIndexNowPing() {

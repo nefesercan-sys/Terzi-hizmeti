@@ -677,6 +677,12 @@ export default function TerziHizmetiPage() {
             <a href="/en/tailor-service-antalya">English</a>
             <a href="/ru/uslugi-portnogo-antalya">Русский</a>
             <a href="/de/schneiderservice-antalya">Deutsch</a>
+            <a href="/es">Español</a>
+            <a href="/fr">Français</a>
+            <a href="/pl">Polski</a>
+            <a href="/uk">Українська</a>
+            <a href="/nl">Nederlands</a>
+            <a href="/ar">العربية</a>
           </nav>
           <nav className="foot-links" aria-label="Linen & cotton custom tailoring">
             <a href="/en/linen-cotton-tailoring" hrefLang="en">Linen &amp; Cotton Tailoring</a>

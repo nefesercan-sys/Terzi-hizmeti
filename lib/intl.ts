@@ -185,3 +185,14 @@ export const INTL: Record<ILang, ICopy> = {
     otherLangs: 'لغات أخرى',
   },
 };
+
+
+/** Ücretsiz alım-teslim mahalleleri (işletme sahibinin onayladığı liste, Ekim 2026) — her dilde mahalle adlarıyla görünür. */
+export const NB: Record<ILang, { title: string; text: string }> = {
+  es: { title: 'Recogida y entrega gratis en estos barrios', text: 'Sin coste de servicio en Hurma, Liman, Sarısu, Gürsu, Uluç, Uncalı, Meltem, Siteler, Öğretmenevleri, Altınkum y Arapsuyu. Todos los días de 08:00 a 23:00: acortar y ajustar pantalones, vaqueros, faldas, abrigos y chaquetas, cambiar y reparar cremalleras, arreglos de vestidos de fiesta y de novia, y confección a medida.' },
+  fr: { title: 'Prise en charge et livraison gratuites dans ces quartiers', text: 'Service gratuit à Hurma, Liman, Sarısu, Gürsu, Uluç, Uncalı, Meltem, Siteler, Öğretmenevleri, Altınkum et Arapsuyu. Tous les jours de 08h00 à 23h00 : ourlets et ajustements de pantalons, jeans, jupes, manteaux et vestes, changement et réparation de fermetures éclair, retouches de robes de soirée et de mariée, sur-mesure.' },
+  pl: { title: 'Bezpłatny odbiór i dowóz w tych dzielnicach', text: 'Bez opłaty za dojazd: Hurma, Liman, Sarısu, Gürsu, Uluç, Uncalı, Meltem, Siteler, Öğretmenevleri, Altınkum i Arapsuyu. Codziennie 08:00–23:00: skracanie i zwężanie spodni, jeansów, spódnic, płaszczy i kurtek, wymiana i naprawa zamków, przeróbki sukienek wieczorowych i ślubnych, szycie na miarę.' },
+  uk: { title: 'Безкоштовний забір і доставка в цих районах', text: 'Без плати за виїзд: Hurma, Liman, Sarısu, Gürsu, Uluç, Uncalı, Meltem, Siteler, Öğretmenevleri, Altınkum та Arapsuyu. Щодня 08:00–23:00: вкорочення і звуження штанів, джинсів, спідниць, пальт і курток, заміна та ремонт блискавок, підгонка вечірніх і весільних суконь, пошиття на замовлення.' },
+  nl: { title: 'Gratis ophalen en terugbrengen in deze wijken', text: 'Geen servicekosten in Hurma, Liman, Sarısu, Gürsu, Uluç, Uncalı, Meltem, Siteler, Öğretmenevleri, Altınkum en Arapsuyu. Dagelijks 08:00–23:00: broeken, jeans, rokken, jassen en jasjes korter of nauwer maken, ritsen vervangen en repareren, avond- en bruidsjurken aanpassen en maatwerk.' },
+  ar: { title: 'استلام وتسليم مجاني في هذه الأحياء', text: 'بدون رسوم خدمة في: Hurma, Liman, Sarısu, Gürsu, Uluç, Uncalı, Meltem, Siteler, Öğretmenevleri, Altınkum, Arapsuyu. يوميًا من 08:00 إلى 23:00: تقصير وتضييق البناطيل والجينز والتنانير والمعاطف والجاكيتات، تغيير وإصلاح السحابات، تعديل فساتين السهرة والزفاف، والتفصيل حسب المقاس.' },
+};

@@ -44,6 +44,16 @@ const RELATED: Record<'tr' | 'en' | 'de' | 'ru', { title: string; links: { href:
   },
 };
 
+// Yeni turist dili sayfalarına site içi bağlantı (arama botları gezerek bulsun). Kısa liste, istemci paketini şişirmemek için burada.
+const INTL_LINKS: { href: string; lang: string; label: string }[] = [
+  { href: '/es', lang: 'es', label: 'Español' },
+  { href: '/fr', lang: 'fr', label: 'Français' },
+  { href: '/pl', lang: 'pl', label: 'Polski' },
+  { href: '/uk', lang: 'uk', label: 'Українська' },
+  { href: '/nl', lang: 'nl', label: 'Nederlands' },
+  { href: '/ar', lang: 'ar', label: 'العربية' },
+];
+
 export default function IcerikHaritasi() {
   const pathname = usePathname() || '/';
   const map = getSiteMap(pathname);
@@ -120,6 +130,26 @@ export default function IcerikHaritasi() {
               >
                 {l.label}
               </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+
+      <nav aria-label="Languages" style={{ marginBottom: '1rem' }}>
+        <div style={{ fontSize: '.72rem', textTransform: 'uppercase', letterSpacing: '.08em', opacity: 0.65, marginBottom: '.4rem' }}>
+          Languages
+        </div>
+        <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexWrap: 'wrap', gap: '.45rem' }}>
+          {INTL_LINKS.map((l) => (
+            <li key={l.href}>
+              <Link
+                href={l.href}
+                hrefLang={l.lang}
+                lang={l.lang}
+                style={{ display: 'inline-block', padding: '.3rem .75rem', border: '1px solid rgba(128,128,128,.3)', borderRadius: 999, color: 'inherit', textDecoration: 'none' }}
+              >
+                {l.label}
+              </Link>
             </li>
           ))}
         </ul>

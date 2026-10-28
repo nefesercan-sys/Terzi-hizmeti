@@ -30,8 +30,8 @@ export const ZONES = ['Belek', 'Lara', 'Güzeloba', 'Side', 'Kemer'];
 export const INTL: Record<ILang, ICopy> = {
   es: {
     locale: 'es_ES', name: 'Español', dir: 'ltr', hreflang: 'es',
-    title: 'Sastre en Antalya para turistas: arreglos de ropa y confección a medida | Terzi Can',
-    desc: 'Sastrería en Konyaaltı, Antalya, abierta todos los días de 08:00 a 23:00. Arreglos de ropa, cremalleras, vestidos y confección a medida. Pida precio por WhatsApp con una foto.',
+    title: 'Sastre en Antalya para turistas | Terzi Can',
+    desc: 'Sastrería en Konyaaltı, Antalya, abierta de 08:00 a 23:00. Arreglos, cremalleras y confección a medida. Precio por WhatsApp con una foto.',
     keywords: ['sastre Antalya', 'arreglos de ropa Antalya', 'sastrería Konyaaltı', 'sastre para turistas Antalya', 'costurera Antalya hotel'],
     tag: 'Terzi Can · Antalya, Konyaaltı',
     h1: 'Sastre en Antalya para turistas',
@@ -56,8 +56,8 @@ export const INTL: Record<ILang, ICopy> = {
   },
   fr: {
     locale: 'fr_FR', name: 'Français', dir: 'ltr', hreflang: 'fr',
-    title: 'Tailleur à Antalya pour touristes : retouches et sur-mesure | Terzi Can',
-    desc: 'Atelier de couture à Konyaaltı, Antalya, ouvert tous les jours de 08h00 à 23h00. Retouches, fermetures éclair, robes et sur-mesure. Demandez un prix sur WhatsApp avec une photo.',
+    title: 'Tailleur à Antalya pour touristes | Terzi Can',
+    desc: 'Atelier de couture à Konyaaltı, Antalya, ouvert de 8h à 23h. Retouches, fermetures éclair, sur-mesure. Prix sur WhatsApp avec une photo.',
     keywords: ['tailleur Antalya', 'retouches vêtements Antalya', 'couturier Konyaaltı', 'tailleur touristes Antalya', 'retouche hôtel Antalya'],
     tag: 'Terzi Can · Antalya, Konyaaltı',
     h1: 'Tailleur à Antalya pour touristes',
@@ -82,8 +82,8 @@ export const INTL: Record<ILang, ICopy> = {
   },
   pl: {
     locale: 'pl_PL', name: 'Polski', dir: 'ltr', hreflang: 'pl',
-    title: 'Krawiec w Antalyi dla turystów: przeróbki i szycie na miarę | Terzi Can',
-    desc: 'Pracownia krawiecka w Konyaaltı w Antalyi, otwarta codziennie 08:00–23:00. Przeróbki ubrań, zamki, suknie i szycie na miarę. Cenę podamy na WhatsAppie po zdjęciu.',
+    title: 'Krawiec w Antalyi dla turystów | Terzi Can',
+    desc: 'Krawiec w Konyaaltı, Antalya, czynny codziennie 08:00–23:00. Przeróbki, zamki, szycie na miarę. Cena na WhatsApp po zdjęciu.',
     keywords: ['krawiec Antalya', 'przeróbki krawieckie Antalya', 'krawiec Konyaaltı', 'krawiec dla turystów Antalya', 'przeróbki ubrań hotel Antalya'],
     tag: 'Terzi Can · Antalya, Konyaaltı',
     h1: 'Krawiec w Antalyi dla turystów',
@@ -108,7 +108,7 @@ export const INTL: Record<ILang, ICopy> = {
   },
   uk: {
     locale: 'uk_UA', name: 'Українська', dir: 'ltr', hreflang: 'uk',
-    title: 'Кравець в Анталії для туристів: підгонка одягу та пошиття | Terzi Can',
+    title: 'Кравець в Анталії для туристів | Terzi Can',
     desc: 'Ательє в Коньяалти, Анталія, щодня 08:00–23:00. Підгонка одягу, блискавки, сукні та пошиття за мірками. Ціну назвемо у WhatsApp за фото.',
     keywords: ['кравець Анталія', 'підгонка одягу Анталія', 'ательє Коньяалти', 'кравець для туристів Анталія', 'ремонт одягу готель Анталія'],
     tag: 'Terzi Can · Анталія, Коньяалти',
@@ -134,7 +134,7 @@ export const INTL: Record<ILang, ICopy> = {
   },
   nl: {
     locale: 'nl_NL', name: 'Nederlands', dir: 'ltr', hreflang: 'nl',
-    title: 'Kleermaker in Antalya voor toeristen: kledingaanpassingen en maatwerk | Terzi Can',
+    title: 'Kleermaker in Antalya voor toeristen | Terzi Can',
     desc: 'Kleermakerij in Konyaaltı, Antalya, elke dag open van 08:00 tot 23:00. Kleding vermaken, ritsen, jurken en maatwerk. Vraag de prijs via WhatsApp met een foto.',
     keywords: ['kleermaker Antalya', 'kleding vermaken Antalya', 'kleermaker Konyaaltı', 'kleermaker voor toeristen Antalya', 'kleding laten vermaken hotel Antalya'],
     tag: 'Terzi Can · Antalya, Konyaaltı',

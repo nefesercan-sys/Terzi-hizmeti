@@ -168,7 +168,7 @@ export default function PacaKisaltmaPage() {
 
         <section className="hero" aria-labelledby="hero-h">
           <div className="hero-bg" aria-hidden="true">
-            <img src="/terzi-can-hero.jpg" alt="" className="hero-bg-img" width={1024} height={1024} />
+            <picture><source type="image/webp" srcSet="/terzi-can-hero-640.webp 640w, /terzi-can-hero-1024.webp 1024w" sizes="100vw" /><img src="/terzi-can-hero.jpg" alt="" className="hero-bg-img" width={1024} height={1024} fetchPriority="high" decoding="async" /></picture>
             <div className="hero-overlay" />
           </div>
           <div className="hero-content">

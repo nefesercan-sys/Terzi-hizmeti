@@ -4,6 +4,7 @@
 // Almanca "genel terzi" sayfası fiilen yoktu. Artık EN/RU karşılıklarına denk, kendi
 // içeriği ve kendi canonical'ı olan gerçek bir Almanca ana hizmet sayfası.
 import type { Metadata } from 'next';
+import { INTL_ALT } from '@/lib/intl';
 
 const SITE      = 'https://terzihizmeti.com.tr';
 const PAGE_URL  = `${SITE}/de/schneiderservice-antalya`;
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
   ],
   alternates: {
     canonical: PAGE_URL,
-    languages: { tr: TR_URL, en: EN_URL, ru: RU_URL, de: PAGE_URL, 'x-default': TR_URL },
+    languages: { tr: TR_URL, en: EN_URL, ru: RU_URL, de: PAGE_URL, ...INTL_ALT, 'x-default': TR_URL },
   },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   openGraph: {

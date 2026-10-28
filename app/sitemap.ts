@@ -110,7 +110,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   // Ek turist dilleri (ES/FR/PL/UK/NL/AR): tek tanıtım sayfası, kendi aralarında hreflang.
-  const intlAlt = { languages: Object.fromEntries(ILANGS.map((l) => [INTL[l].hreflang, `${SITE}${iUrl(l)}`])) };
+  const intlAlt = { languages: { tr: `${SITE}/antalya-terzi`, en: `${SITE}/en/tailor-service-antalya`, ru: `${SITE}/ru/uslugi-portnogo-antalya`, de: `${SITE}/de/schneiderservice-antalya`, ...Object.fromEntries(ILANGS.map((l) => [INTL[l].hreflang, `${SITE}${iUrl(l)}`])), 'x-default': `${SITE}/antalya-terzi` } };
   const intlSayfalari: MetadataRoute.Sitemap = ILANGS.map((l) => ({
     url: `${SITE}${iUrl(l)}`, lastModified: new Date(LAST_UPDATE), changeFrequency: 'monthly' as const, priority: 0.7, alternates: intlAlt,
   }));

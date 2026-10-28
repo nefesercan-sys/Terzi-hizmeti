@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { INTL_ALT } from '@/lib/intl';
 import ReviewsBlock from '@/components/ReviewsBlock';
 import Image from 'next/image';
 
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   alternates: {
     canonical: PAGE_URL,
-    languages: { 'tr': TR_URL, 'en': PAGE_URL, 'ru': RU_URL, 'de': DE_URL, 'x-default': TR_URL },
+    languages: { 'tr': TR_URL, 'en': PAGE_URL, 'ru': RU_URL, 'de': DE_URL, ...INTL_ALT, 'x-default': TR_URL },
   },
   openGraph: {
     title: 'Tailor Service Antalya · Mobile Tailor to Your Hotel',

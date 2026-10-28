@@ -9,6 +9,8 @@
 export type ILang = 'es' | 'fr' | 'pl' | 'uk' | 'nl' | 'ar';
 export const ILANGS: ILang[] = ['es', 'fr', 'pl', 'uk', 'nl', 'ar'];
 export const iUrl = (l: ILang) => `/${l}`;
+/** Mevcut TR/EN/RU/DE açılış sayfalarının hreflang'ına eklenen yeni dil karşılıkları (karşılıklı bağ). */
+export const INTL_ALT: Record<string, string> = Object.fromEntries(ILANGS.map((l) => [l, `https://terzihizmeti.com.tr/${l}`]));
 export const isILang = (l: string): l is ILang => (ILANGS as string[]).includes(l);
 
 export type ICopy = {

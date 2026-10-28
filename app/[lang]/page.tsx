@@ -24,7 +24,11 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
     alternates: {
       canonical: url,
-      languages: { ...Object.fromEntries(ILANGS.map((l) => [INTL[l].hreflang, `${SITE}${iUrl(l)}`])), 'x-default': `${SITE}/en/tailor-service-antalya` },
+      languages: {
+        tr: `${SITE}/antalya-terzi`, en: `${SITE}/en/tailor-service-antalya`, ru: `${SITE}/ru/uslugi-portnogo-antalya`, de: `${SITE}/de/schneiderservice-antalya`,
+        ...Object.fromEntries(ILANGS.map((l) => [INTL[l].hreflang, `${SITE}${iUrl(l)}`])),
+        'x-default': `${SITE}/antalya-terzi`,
+      },
     },
     openGraph: { title: c.title, description: c.desc, url, siteName: 'Terzi Can', locale: c.locale, type: 'website', images: [{ url: OG_DEFAULT, width: 1200, height: 630, alt: c.h1 }] },
     twitter: { card: 'summary_large_image', title: c.title, description: c.desc, images: [OG_DEFAULT] },

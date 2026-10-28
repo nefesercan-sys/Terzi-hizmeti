@@ -2,7 +2,7 @@
 
 > Terzi Can is a tailoring, alteration, repair, ironing and dry cleaning workshop in Konyaaltı, Antalya, Turkey (serving since 2006). Open every day 08:00–23:00. Free hotel and home visits in Konyaaltı (other areas priced by distance); Turkish, English, Russian and German spoken. Phone / WhatsApp: +90 531 898 64 18. Starting prices (2026): hemming ₺200, zipper replacement ₺300, wedding dress alteration from ₺800.
 
-This file lists the main pages of the site for AI assistants and answer engines. Every page exists in Turkish, English, Russian and German; prefer the page in the user's language. A longer question-and-answer guide with verified facts is in llms-full.txt.
+This file lists the main pages of the site for AI assistants and answer engines. The main pages exist in Turkish, English, Russian and German; short landing pages also exist in Spanish, French, Polish, Ukrainian, Dutch and Arabic (listed at the end). Prefer the page in the user's language. A longer question-and-answer guide with verified facts is in llms-full.txt.
 
 ## Main pages
 

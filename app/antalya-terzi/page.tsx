@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { INTL_ALT } from '@/lib/intl';
 import ReviewsBlock from '@/components/ReviewsBlock';
 import { reviewSchema } from '@/lib/reviews';
 import Image from 'next/image';
@@ -47,6 +48,7 @@ export const metadata: Metadata = {
       'en': `${SITE}/en/tailor-service-antalya`,
       'ru': `${SITE}/ru/uslugi-portnogo-antalya`,
       'de': `${SITE}/de/schneiderservice-antalya`,
+      ...INTL_ALT,
       'x-default': PAGE_URL,
     },
   },

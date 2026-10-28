@@ -263,7 +263,7 @@ export const FT: Record<FLang, FiyatText> = {
     "htmlLang": "en",
     "locale": "en_US",
     "metaTitle": "Tailor Prices Antalya 2026 — Every Service, One Page",
-    "metaDesc": "Tailor prices in Antalya 2026: hemming ₺200, taking in a waist ₺200, zipper replacement ₺300, custom dress from ₺800. Send a photo on WhatsApp for an exact price. Tailor comes to your hotel. Open every day 08:00–23:00.",
+    "metaDesc": "Antalya tailor prices 2026: hemming ₺200, waist ₺200, zipper ₺300, custom dress from ₺800. Send a photo on WhatsApp for the price. Open daily 08:00–23:00.",
     "ogTitle": "Tailor Prices Antalya 2026 — Send a Photo, Get Your Price",
     "ogDesc": "Hemming ₺200, waist ₺200, zipper ₺300, custom dress from ₺800. Mobile tailor to your hotel. Open 7 days.",
     "keywords": [
@@ -480,7 +480,7 @@ export const FT: Record<FLang, FiyatText> = {
     "htmlLang": "de",
     "locale": "de_DE",
     "metaTitle": "Schneider Preisliste Antalya 2026 — Alle Leistungen",
-    "metaDesc": "Schneiderpreise in Antalya 2026: Hose kürzen ab ₺200, Taille enger machen ab ₺200, Reißverschluss ab ₺300, Kleid nach Maß ab ₺800. Foto per WhatsApp senden, genauen Preis erfahren. Schneider kommt ins Hotel. Täglich 08:00–23:00.",
+    "metaDesc": "Schneiderpreise Antalya 2026: Kürzen ab ₺200, Taille ab ₺200, Reißverschluss ab ₺300, Kleid nach Maß ab ₺800. Foto per WhatsApp. Täglich 08:00–23:00.",
     "ogTitle": "Schneider Preise Antalya 2026 — Foto senden, Preis erfahren",
     "ogDesc": "Kürzen ab ₺200, Taille ab ₺200, Reißverschluss ab ₺300, Kleid nach Maß ab ₺800. Mobiler Schneider, 7 Tage geöffnet.",
     "keywords": [
@@ -695,7 +695,7 @@ export const FT: Record<FLang, FiyatText> = {
     "htmlLang": "ru",
     "locale": "ru_RU",
     "metaTitle": "Цены портного в Анталье 2026 — все услуги на одной странице",
-    "metaDesc": "Цены портного в Анталье 2026: подшив брюк от ₺200, ушить в талии от ₺200, замена молнии от ₺300, платье на заказ от ₺800. Пришлите фото в WhatsApp и узнайте точную цену. Портной приедет в отель. Ежедневно 08:00–23:00.",
+    "metaDesc": "Цены портного в Анталье 2026: подшив от ₺200, талия от ₺200, молния от ₺300, платье на заказ от ₺800. Пришлите фото в WhatsApp. Ежедневно 08:00–23:00.",
     "ogTitle": "Цены портного в Анталье 2026 — пришлите фото, узнайте цену",
     "ogDesc": "Подшив от ₺200, талия от ₺200, молния от ₺300, платье на заказ от ₺800. Выездной портной, работаем 7 дней.",
     "keywords": [

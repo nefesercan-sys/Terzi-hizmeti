@@ -16,7 +16,7 @@ const PHONE         = '+90 531 898 64 18';
 const PHONE_E164    = '+905318986418';
 const LAST_MODIFIED = '2026-10-01';
 
-const PAGE_TITLE = 'Antalya Üniforma İmalatı & Kurumsal Kıyafet Dikimi';
+const PAGE_TITLE = 'Antalya Üniforma İmalatı ve Kurumsal Kıyafet';
 const PAGE_DESC  =
   'Antalya otel, restoran, hastane, okul ve güvenlik personeli üniforma üretimi. Özel tasarım, nakış & baskı logosu ve seri imalat hizmeti. ☎ ' + PHONE;
 

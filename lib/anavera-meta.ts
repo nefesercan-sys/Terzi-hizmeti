@@ -10,19 +10,19 @@ type Copy = { title: string; description: string; ogLocale: string; keywords: st
 const COPY: Record<AnaveraLang, Copy> = {
   en: {
     title: 'Clothing Manufacturer in Turkey: Sample to Export | Anavera',
-    description: 'Custom garment production in Turkey: design, pattern, trial sample, serial production and export. For startups to large buyers, quoted per project. Get a quote.',
+    description: 'Custom garment production in Turkey: design, pattern, sample, serial production and export. From startups to large buyers. Get a quote.',
     ogLocale: 'en_US',
     keywords: ['clothing manufacturer Turkey', 'garment manufacturer Turkey', 'private label clothing manufacturer Turkey', 'custom clothing production Turkey', 'apparel sourcing Turkey', 'sample to production garment', 'OEM garment manufacturer Turkey', 'small batch clothing manufacturer Turkey', 'uniform manufacturer Turkey', 'textile sourcing from Turkey', 'fashion startup manufacturer Turkey', 'clothing export Turkey'],
   },
   de: {
     title: 'Bekleidungshersteller Türkei: Muster bis Export | Anavera',
-    description: 'Bekleidungsproduktion in der Türkei: Design, Schnittmuster, Probemuster, Serienfertigung und Export. Von Gründern bis Großkunden, Angebot je Projekt. Jetzt anfragen.',
+    description: 'Bekleidungsproduktion in der Türkei: Design, Schnittmuster, Muster, Serienfertigung und Export. Von Gründern bis Großkunden. Jetzt anfragen.',
     ogLocale: 'de_DE',
     keywords: ['Bekleidungshersteller Türkei', 'Textilhersteller Türkei', 'Private Label Bekleidung Türkei', 'Bekleidung produzieren lassen Türkei', 'Musterfertigung Bekleidung', 'Serienfertigung Bekleidung Türkei', 'Kleinserie Bekleidung Hersteller', 'Berufsbekleidung Hersteller Türkei', 'Textilien aus der Türkei beziehen', 'Start-up Mode Hersteller Türkei', 'Lohnfertigung Bekleidung Türkei'],
   },
   ru: {
-    title: 'Производство одежды в Турции: от образца до экспорта | Anavera',
-    description: 'Пошив одежды в Турции: дизайн, лекала, пробный образец, серийное производство и экспорт. От стартапов до крупных заказчиков, цена под проект. Запросите расчёт.',
+    title: 'Производство одежды в Турции: образец и экспорт | Anavera',
+    description: 'Пошив одежды в Турции: дизайн, лекала, образец, серийное производство и экспорт. От стартапов до крупных заказчиков. Запросите расчёт.',
     ogLocale: 'ru_RU',
     keywords: ['производитель одежды Турция', 'пошив одежды в Турции', 'швейная фабрика Турция', 'пошив под частной маркой Турция', 'заказать пошив одежды в Турции', 'производство одежды малыми партиями Турция', 'разработка образцов одежды', 'серийное производство одежды Турция', 'производитель униформы Турция', 'закупка текстиля в Турции', 'производство одежды для стартапа'],
   },

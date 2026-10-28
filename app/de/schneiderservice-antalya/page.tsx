@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: 'Schneider in Antalya: Änderungen, Reparatur, Maßanfertigung' },
   description:
-    'Änderungsschneiderei in Antalya (Konyaaltı): Hose kürzen, Reißverschluss, Brautkleid, Maßanfertigung. Wir kommen ins Hotel. Deutsch gesprochen, täglich geöffnet.',
+    'Änderungsschneiderei in Antalya (Konyaaltı): Hose kürzen, Reißverschluss, Brautkleid, Maßanfertigung. Hotelservice, Deutsch, täglich offen.',
   keywords: [
     'Schneider Antalya', 'Änderungsschneiderei Antalya', 'Schneider Antalya Deutsch', 'Hose kürzen Antalya',
     'Reißverschluss Reparatur Antalya', 'Brautkleid ändern Antalya', 'Maßanfertigung Antalya',

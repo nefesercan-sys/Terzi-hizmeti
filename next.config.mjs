@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   poweredByHeader: false,
+  // Birden çok kök düzen (dil başına <html lang>) için gerekli 404 mekanizması
+  experimental: { globalNotFound: true },
   images: {
     remotePatterns: [
       { protocol: 'https', hostname: 'maps.googleapis.com' },

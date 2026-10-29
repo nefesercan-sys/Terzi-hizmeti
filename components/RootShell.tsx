@@ -1,8 +1,8 @@
 import type { Metadata, Viewport } from 'next';
+import type { ReactNode } from 'react';
 import { Analytics } from '@vercel/analytics/next';
 import { Inter, Syne } from 'next/font/google';
-import './globals.css';
-import LangSetter from './LangSetter';
+import '@/app/globals.css';
 import IcerikHaritasi from '@/components/IcerikHaritasi';
 import { HizliEylemBandi, HizliAkis } from '@/components/HizliEylem';
 import RuTelegramButton from '@/components/RuTelegramButton';
@@ -12,7 +12,7 @@ const syne = Syne({ subsets: ['latin'], weight: ['700', '800'], variable: '--fon
 
 const SITE = 'https://terzihizmeti.com.tr';
 
-export const metadata: Metadata = {
+export const rootMetadata: Metadata = {
   metadataBase: new URL(SITE),
   title: {
     default: 'Terzi Can — Antalya Konyaaltı Terzi Hizmeti',
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   // (Kök layout'ta canonical VERİLMEZ: her sayfa kendi canonical'ını verir; aksi halde sayfalar ana sayfaya işaret ederdi.)
 };
 
-export const viewport: Viewport = {
+export const rootViewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
   themeColor: '#2C4A3E',
@@ -48,11 +48,14 @@ export const viewport: Viewport = {
 // (NAP) doğru okumasını riske atıyordu. Global şema buradan tamamen
 // kaldırıldı — her rota kendi doğru JSON-LD'sini kendi basıyor (blog
 // sayfaları için de ayrıca eklendi, bkz. app/blog/**/page.tsx).
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export const fontClasses = `${inter.variable} ${syne.variable}`;
+
+// Her dil grubunun kendi kök düzeni vardır; <html lang> ve dir sunucuda, ilk HTML'de doğru basılır
+// (botlar ve JavaScript çalıştırmayan yapay zeka tarayıcıları için). Kök düzenlerin ortak gövdesi burada.
+export default function RootShell({ lang, dir = 'ltr', children }: { lang: string; dir?: 'ltr' | 'rtl'; children: ReactNode }) {
   return (
-    <html lang="tr" className={`${inter.variable} ${syne.variable}`}>
+    <html lang={lang} dir={dir} className={fontClasses}>
       <body>
-        <LangSetter />
         <HizliEylemBandi />
         {children}
         <RuTelegramButton />

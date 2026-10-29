@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import '@/app/globals.css';
 
 const PHONE = '+90 531 898 64 18';
 const WA = 'https://wa.me/905318986418?text=' + encodeURIComponent('Merhaba, aradığım sayfayı bulamadım, yardımcı olur musunuz?');
@@ -8,8 +9,10 @@ export const metadata: Metadata = {
   robots: { index: false, follow: true },
 };
 
-export default function NotFound() {
+export default function GlobalNotFound() {
   return (
+    <html lang="tr">
+      <body>
     <main
       style={{
         minHeight: '70vh',
@@ -47,5 +50,7 @@ export default function NotFound() {
         <a href="/blog" style={{ color: 'inherit' }}>Blog</a>
       </nav>
     </main>
+      </body>
+    </html>
   );
 }

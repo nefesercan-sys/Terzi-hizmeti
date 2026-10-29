@@ -4,6 +4,7 @@
 // Almanca "genel terzi" sayfası fiilen yoktu. Artık EN/RU karşılıklarına denk, kendi
 // içeriği ve kendi canonical'ı olan gerçek bir Almanca ana hizmet sayfası.
 import type { Metadata } from 'next';
+import FabricsOrderBlock from '@/components/FabricsOrderBlock';
 import ReviewsBlock from '@/components/ReviewsBlock';
 import { businessNode } from '@/lib/turist-keten';
 import { INTL_ALT } from '@/lib/intl';
@@ -91,7 +92,7 @@ const jsonLd = {
     },
     {
       '@type': 'Service', '@id': `${PAGE_URL}#service`, serviceType: 'Änderungsschneiderei, Reparatur und Maßanfertigung',
-      provider: { '@id': `${SITE}#business` }, areaServed: { '@type': 'City', name: 'Antalya' }, availableLanguage: ['de', 'en', 'ru', 'tr'],
+      provider: { '@id': `${SITE}#business` }, areaServed: { '@type': 'City', name: 'Antalya' }, availableLanguage: ['de', 'en', 'ru', 'tr', 'pl', 'uk', 'nl', 'fr', 'es', 'ar'],
       hasOfferCatalog: {
         '@type': 'OfferCatalog', name: 'Schneiderleistungen in Antalya',
         itemListElement: SERVICES.map((s) => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name: s.title, description: s.desc } })),
@@ -207,6 +208,7 @@ export default function SchneiderserviceAntalya() {
         </section>
       </main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@graph': [businessNode('de')] }) }} />
+      <FabricsOrderBlock lang="de" />
       <ReviewsBlock lang="de" />
     </>
   );

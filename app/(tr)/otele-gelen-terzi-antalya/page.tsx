@@ -94,9 +94,9 @@ const jsonLd = {
         telephone: PHONE_TEL,
         contactType: 'customer service',
         areaServed: 'TR',
-        availableLanguage: ['Turkish', 'English', 'Russian', 'German'],
+        availableLanguage: ['Turkish', 'English', 'Russian', 'German', 'Polish', 'Ukrainian', 'Dutch', 'French', 'Spanish', 'Arabic'],
       }],
-      knowsLanguage: ['tr', 'en', 'ru', 'de'],
+      knowsLanguage: ['tr', 'en', 'ru', 'de', 'pl', 'uk', 'nl', 'fr', 'es', 'ar'],
     },
     {
       '@type': 'WebPage',

@@ -81,7 +81,7 @@ export function buildAnaveraJsonLd(lang: AnaveraLang) {
         address: { '@type': 'PostalAddress', addressLocality: 'Antalya', addressRegion: 'Antalya', addressCountry: 'TR' },
         areaServed: ['Turkey', 'European Union', 'Germany', 'United Kingdom', 'Russia'],
         parentOrganization: { '@id': `${SITE}#business` },
-        knowsLanguage: ['en', 'de', 'ru', 'tr'],
+        knowsLanguage: ['en', 'de', 'ru', 'tr', 'pl', 'uk', 'nl', 'fr', 'es', 'ar'],
         hasOfferCatalog: {
           '@type': 'OfferCatalog',
           name: t.catTitle,
@@ -96,7 +96,7 @@ export function buildAnaveraJsonLd(lang: AnaveraLang) {
           telephone: PHONE_E,
           contactType: 'sales',
           areaServed: ['TR', 'EU', 'DE', 'RU', 'GB'],
-          availableLanguage: ['English', 'German', 'Russian', 'Turkish'],
+          availableLanguage: ['English', 'German', 'Russian', 'Turkish', 'Polish', 'Ukrainian', 'Dutch', 'French', 'Spanish', 'Arabic'],
         },
       },
       {

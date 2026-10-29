@@ -156,7 +156,7 @@ const jsonLd = {
           '@type': 'ContactPoint',
           telephone: PHONE_TEL,
           contactType: 'customer service',
-          availableLanguage: ['Turkish', 'English', 'Russian', 'German'],
+          availableLanguage: ['Turkish', 'English', 'Russian', 'German', 'Polish', 'Ukrainian', 'Dutch', 'French', 'Spanish', 'Arabic'],
           areaServed: 'TR',
         }
       ],
@@ -174,7 +174,7 @@ const jsonLd = {
           { '@type': 'Offer', name: 'Mobile Tailor Service / Eve Gelen Terzi / Выездной портной', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Mobile Pickup & Delivery Tailor', description: 'Home pickup and delivery service in Konyaalti (Hurma, Liman, Sarisu free).' } },
         ],
       },
-      knowsLanguage: ['tr', 'en', 'ru', 'de'],
+      knowsLanguage: ['tr', 'en', 'ru', 'de', 'pl', 'uk', 'nl', 'fr', 'es', 'ar'],
     },
     {
       '@type': 'WebPage',

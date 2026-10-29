@@ -76,10 +76,10 @@ const jsonLd = {
         telephone: PHONE_TEL,
         contactType: 'customer service',
         areaServed: 'TR',
-        availableLanguage: ['Turkish', 'English', 'Russian', 'German'],
+        availableLanguage: ['Turkish', 'English', 'Russian', 'German', 'Polish', 'Ukrainian', 'Dutch', 'French', 'Spanish', 'Arabic'],
       }],
       sameAs: [MAPS, `https://wa.me/${WA_NUM}`, 'https://swaphubs.com/terzi'],
-      knowsLanguage: ['tr', 'en', 'ru', 'de'],
+      knowsLanguage: ['tr', 'en', 'ru', 'de', 'pl', 'uk', 'nl', 'fr', 'es', 'ar'],
     },
     {
       '@type': 'WebPage',

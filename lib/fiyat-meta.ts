@@ -57,7 +57,7 @@ export function buildFiyatJsonLd(lang: FLang) {
             dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
             opens: '08:00', closes: '23:00',
           }],
-          availableLanguage: ['tr', 'en', 'ru', 'de'],
+          availableLanguage: ['tr', 'en', 'ru', 'de', 'pl', 'uk', 'nl', 'fr', 'es', 'ar'],
         },
         areaServed: ['Konyaaltı', 'Muratpaşa', 'Kepez', 'Lara', 'Antalya'].map((n) => ({ '@type': 'Place', name: n })),
         hasOfferCatalog: {

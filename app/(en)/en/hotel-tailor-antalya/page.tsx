@@ -53,7 +53,7 @@ const jsonLd = {
         },
         geo: { '@type': 'GeoCoordinates', latitude: 36.857466, longitude: 30.596987 } },
       areaServed: OTEL_BOLGELERI.map((r) => ({ '@type': 'Place', name: r.name })),
-      availableLanguage: ['en', 'de', 'ru', 'tr'],
+      availableLanguage: ['en', 'de', 'ru', 'tr', 'pl', 'uk', 'nl', 'fr', 'es', 'ar'],
     },
     {
       '@type': 'FAQPage',

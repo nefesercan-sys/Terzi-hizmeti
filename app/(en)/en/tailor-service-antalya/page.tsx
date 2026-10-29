@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { businessNode } from '@/lib/turist-keten';
 import { INTL_ALT } from '@/lib/intl';
+import FabricsOrderBlock from '@/components/FabricsOrderBlock';
 import ReviewsBlock from '@/components/ReviewsBlock';
 import Image from 'next/image';
 
@@ -325,6 +326,7 @@ export default function TailorServiceAntalyaPage() {
           </div>
         </section>
 
+        <FabricsOrderBlock lang="en" />
         <ReviewsBlock lang="en" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@graph': [businessNode('en')] }) }} />
         <footer>

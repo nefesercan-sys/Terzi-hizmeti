@@ -7,6 +7,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import ReviewsBlock from '@/components/ReviewsBlock';
+import { AREA_NOTES, AREA_NOTE_UI } from '@/lib/district-facts';
 import { reviewSchema } from '@/lib/reviews';
 import { OTEL_BOLGELERI } from '@/lib/otel-bolgeleri';
 import {
@@ -677,6 +678,16 @@ export function DistrictPage({ lang, d }: { lang: Lang; d: District }) {
             {hotel && (<p style={{ marginTop: '1.2rem', fontSize: '.84rem' }}><a href={hotel} style={{ color: '#C9A96E', fontWeight: 700 }}>{u.hotelLink} →</a></p>)}
           </div>
         </section>
+
+        {AREA_NOTES[d.slug] && isFreeService(d.slug) && (
+          <section className="sec" aria-labelledby="area-h">
+            <div className="ctr" style={{ maxWidth: 820 }}>
+              <div className="sec-head"><h2 className="sec-h ff" id="area-h">{AREA_NOTE_UI[lang].h(d.name[lang])}</h2></div>
+              <p style={{ fontSize: '.92rem', lineHeight: 1.8, margin: '.5rem 0' }}><strong>{AREA_NOTE_UI[lang].where}:</strong> {AREA_NOTES[d.slug].where[lang]}</p>
+              <p style={{ fontSize: '.92rem', lineHeight: 1.8, margin: '.5rem 0' }}><strong>{AREA_NOTE_UI[lang].jobs}:</strong> {AREA_NOTES[d.slug].jobs[lang]}</p>
+            </div>
+          </section>
+        )}
 
         <Faq lang={lang} items={faq} />
         <Cta lang={lang} waMsg={waMsg} text={u.photoPrice} />

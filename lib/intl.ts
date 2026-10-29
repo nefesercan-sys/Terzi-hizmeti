@@ -196,3 +196,13 @@ export const NB: Record<ILang, { title: string; text: string }> = {
   nl: { title: 'Gratis ophalen en terugbrengen in deze wijken', text: 'Geen servicekosten in Hurma, Liman, Sarısu, Gürsu, Uluç, Uncalı, Meltem, Siteler, Öğretmenevleri, Altınkum en Arapsuyu. Dagelijks 08:00–23:00: broeken, jeans, rokken, jassen en jasjes korter of nauwer maken, ritsen vervangen en repareren, avond- en bruidsjurken aanpassen en maatwerk.' },
   ar: { title: 'استلام وتسليم مجاني في هذه الأحياء', text: 'بدون رسوم خدمة في: Hurma, Liman, Sarısu, Gürsu, Uluç, Uncalı, Meltem, Siteler, Öğretmenevleri, Altınkum, Arapsuyu. يوميًا من 08:00 إلى 23:00: تقصير وتضييق البناطيل والجينز والتنانير والمعاطف والجاكيتات، تغيير وإصلاح السحابات، تعديل فساتين السهرة والزفاف، والتفصيل حسب المقاس.' },
 };
+
+// İlçe/mahalle bağlantısı (Konyaaltı ve Muratpaşa) — 6 yeni dil
+export const NB_DISTRICT: Record<ILang, { title: string; text: string }> = {
+  es: { title: 'Barrios por distrito', text: 'Distrito de Konyaaltı: Hurma (donde está el taller), Liman, Sarısu, Gürsu, Uluç, Uncalı, Siteler, Öğretmenevleri, Altınkum, Arapsuyu. Distrito de Muratpaşa: Meltem.' },
+  fr: { title: 'Quartiers par district', text: "District de Konyaaltı : Hurma (où se trouve l'atelier), Liman, Sarısu, Gürsu, Uluç, Uncalı, Siteler, Öğretmenevleri, Altınkum, Arapsuyu. District de Muratpaşa : Meltem." },
+  pl: { title: 'Osiedla według dystryktu', text: 'Dystrykt Konyaaltı: Hurma (tu jest pracownia), Liman, Sarısu, Gürsu, Uluç, Uncalı, Siteler, Öğretmenevleri, Altınkum, Arapsuyu. Dystrykt Muratpaşa: Meltem.' },
+  uk: { title: 'Мікрорайони за районами', text: 'Район Коньяалти: Hurma (тут ательє), Liman, Sarısu, Gürsu, Uluç, Uncalı, Siteler, Öğretmenevleri, Altınkum, Arapsuyu. Район Муратпаша: Meltem.' },
+  nl: { title: 'Wijken per district', text: 'District Konyaaltı: Hurma (hier staat het atelier), Liman, Sarısu, Gürsu, Uluç, Uncalı, Siteler, Öğretmenevleri, Altınkum, Arapsuyu. District Muratpaşa: Meltem.' },
+  ar: { title: 'الأحياء حسب المنطقة', text: 'منطقة Konyaaltı: Hurma (حيث الورشة)، Liman, Sarısu, Gürsu, Uluç, Uncalı, Siteler, Öğretmenevleri, Altınkum, Arapsuyu. منطقة Muratpaşa: Meltem.' },
+};

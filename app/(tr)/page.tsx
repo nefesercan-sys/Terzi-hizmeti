@@ -470,8 +470,8 @@ export default function TerziHizmetiPage() {
             <div className="hero-stats" aria-label="Stats">
               {([
                 ['2006\'dan', 'Beri Hizmet', 'Konyaaltı merkez'],
-                ['0–24s', 'Ekspres Teslim', 'Fast Turnaround'],
-                ['4 Dil', 'TR / EN / RU / DE', 'Çok dilli hizmet'],
+                ['Aynı Gün', 'Paça · Bel · Fermuar', 'Same-day hemming'],
+                ['10 Dil', 'TR EN RU DE ES FR PL UK NL AR', 'Çok dilli hizmet'],
                 ['%100', 'Şeffaf Fiyat', 'Best Quality'],
               ] as [string,string,string][]).map(([n,l,d])=>(
                 <div key={l}>

@@ -1,7 +1,7 @@
 // terzihizmeti.com.tr — Ek turist dilleri için kısa tanıtım sayfası (veri: lib/intl.ts). Sunucu bileşeni, stil inline.
 import Link from 'next/link';
 import { PHONE, PHONE_TEL, MAPS, SITE } from '@/lib/seo-data';
-import { ILANGS, INTL, NB, ZONES, iUrl, type ILang } from '@/lib/intl';
+import { ILANGS, INTL, NB, NB_DISTRICT, ZONES, iUrl, type ILang } from '@/lib/intl';
 import { SVC, svcUrl } from '@/lib/intl-services';
 import { ZCOPY, ZONE_SLUGS, zoneData, zoneUrl } from '@/lib/intl-zones';
 import { waLink, businessNode, OG_DEFAULT } from '@/lib/turist-keten';
@@ -66,6 +66,8 @@ export default function IntlLanding({ lang }: { lang: ILang }) {
 
       <Block><H2>{NB[lang].title}</H2>
         <p style={{ margin: 0 }}>{NB[lang].text}</p>
+        <h3 style={{ fontSize: '1rem', margin: '1rem 0 .3rem' }}>{NB_DISTRICT[lang].title}</h3>
+        <p style={{ margin: 0 }}>{NB_DISTRICT[lang].text}</p>
       </Block>
 
       <Block bg={C.sand}><H2>{c.hotelTitle}</H2>

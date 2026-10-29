@@ -34,23 +34,23 @@ export const AREA_NOTES: Record<string, AreaNote> = {
     ['Keten ve pamuk özel dikim, elbise ve pantolon kısaltma-daraltma. Alım-teslim ücretsiz.', 'Linen and cotton made-to-measure, dress and trouser shortening and taking in. Collection and delivery are free.', 'Пошив из льна и хлопка по меркам, укорачивание и ушивание платьев и брюк. Забор и доставка бесплатны.', 'Maßanfertigung aus Leinen und Baumwolle, Kleider und Hosen kürzen und enger machen. Abholung und Lieferung sind kostenlos.'],
   ),
   uluc: n(
-    ['Uluç, atölyemizin bulunduğu Konyaaltı çevresinde hizmet verdiğimiz yakın bölgelerden biri.', 'Uluç is one of the nearby areas around Konyaaltı that we serve.', 'Улуч — один из ближайших районов вокруг Коньяалты, которые мы обслуживаем.', 'Uluç ist eines der nahen Gebiete rund um Konyaaltı, die wir bedienen.'],
+    ['Uluç, Konyaaltı ilçesine bağlı bir mahalle.', 'Uluç is a neighbourhood of Konyaaltı district.', 'Улуч — квартал района Коньяалты.', 'Uluç ist ein Viertel im Bezirk Konyaaltı.'],
     ['Tamir, tadilat, paça ve fermuar işleri; mont, ceket ve etek kısaltma-daraltma. Alım-teslim ücretsiz.', 'Repairs, alterations, hems and zippers; shortening and taking in coats, jackets and skirts. Collection and delivery are free.', 'Ремонт, подгонка, подшив и молнии; укорачивание и ушивание курток, пальто и юбок. Забор и доставка бесплатны.', 'Reparaturen, Änderungen, Säume und Reißverschlüsse; Mäntel, Jacken und Röcke kürzen und enger machen. Abholung und Lieferung sind kostenlos.'],
   ),
   meltem: n(
-    ['Meltem, Muratpaşa\'ya bağlı, sahile yakın yerleşik bir mahalle.', 'Meltem is a residential neighbourhood of Muratpaşa, close to the coast.', 'Мельтем — жилой квартал района Муратпаша недалеко от побережья.', 'Meltem ist ein Wohnviertel in Muratpaşa, nahe der Küste.'],
+    ['Meltem, Muratpaşa ilçesine bağlı, sahile yakın yerleşik bir mahalle.', 'Meltem is a residential neighbourhood of Muratpaşa, close to the coast.', 'Мельтем — жилой квартал района Муратпаша недалеко от побережья.', 'Meltem ist ein Wohnviertel in Muratpaşa, nahe der Küste.'],
     ['Takım elbise, ceket ve pantolon: kol, boy, bel ve omuz ayarı. Alım-teslim ücretsiz.', 'Suits, jackets and trousers: sleeve, length, waist and shoulder adjustments. Collection and delivery are free.', 'Костюмы, пиджаки и брюки: рукава, длина, талия и плечи. Забор и доставка бесплатны.', 'Anzüge, Sakkos und Hosen: Ärmel, Länge, Taille und Schultern. Abholung und Lieferung sind kostenlos.'],
   ),
   siteler: n(
-    ['Siteler, atölyemize yakın, hizmet verdiğimiz mahallelerden biri.', 'Siteler is one of the neighbourhoods near our workshop that we serve.', 'Ситлер — один из районов рядом с мастерской, которые мы обслуживаем.', 'Siteler ist eines der Viertel in der Nähe unserer Werkstatt, die wir bedienen.'],
+    ['Siteler, Konyaaltı ilçesine bağlı bir mahalle.', 'Siteler is a neighbourhood of Konyaaltı district.', 'Ситлер — квартал района Коньяалты.', 'Siteler ist ein Viertel im Bezirk Konyaaltı.'],
     ['Abiye ve elbise tadilatı, fermuar değişimi, paça kısaltma. Alım-teslim ücretsiz.', 'Evening dress and dress alterations, zipper replacement, hemming. Collection and delivery are free.', 'Подгонка вечерних платьев и платьев, замена молнии, подшив. Забор и доставка бесплатны.', 'Abend- und Kleideränderungen, Reißverschluss wechseln, Säume kürzen. Abholung und Lieferung sind kostenlos.'],
   ),
   ogretmenevleri: n(
-    ['Öğretmenevleri, atölyemize yakın, hizmet verdiğimiz mahallelerden biri.', 'Öğretmenevleri is one of the neighbourhoods near our workshop that we serve.', 'Огретменевлери — один из районов рядом с мастерской, которые мы обслуживаем.', 'Öğretmenevleri ist eines der Viertel in der Nähe unserer Werkstatt, die wir bedienen.'],
+    ['Öğretmenevleri, Konyaaltı ilçesine bağlı bir mahalle.', 'Öğretmenevleri is a neighbourhood of Konyaaltı district.', 'Огретменевлери — квартал района Коньяалты.', 'Öğretmenevleri ist ein Viertel im Bezirk Konyaaltı.'],
     ['Mont, ceket ve deri ceket tadilatı, fermuar değişimi (₺300\'den). Alım-teslim ücretsiz.', 'Coat, jacket and leather jacket alterations, zipper replacement (from ₺300). Collection and delivery are free.', 'Подгонка пальто, курток и кожаных курток, замена молнии (от ₺300). Забор и доставка бесплатны.', 'Mantel-, Jacken- und Lederjackenänderungen, Reißverschluss wechseln (ab ₺300). Abholung und Lieferung sind kostenlos.'],
   ),
   altinkum: n(
-    ['Altınkum, Konyaaltı çevresinde hizmet verdiğimiz yakın bölgelerden biri.', 'Altınkum is one of the nearby areas around Konyaaltı that we serve.', 'Алтынкум — один из ближайших районов вокруг Коньяалты, которые мы обслуживаем.', 'Altınkum ist eines der nahen Gebiete rund um Konyaaltı, die wir bedienen.'],
+    ['Altınkum, Konyaaltı ilçesine bağlı bir mahalle.', 'Altınkum is a neighbourhood of Konyaaltı district.', 'Алтынкум — квартал района Коньяалты.', 'Altınkum ist ein Viertel im Bezirk Konyaaltı.'],
     ['Kot ve şort kısaltma, bel daraltma, yazlık giysi tadilatı. Alım-teslim ücretsiz.', 'Jeans and shorts hemming, waist alterations, summer clothing alterations. Collection and delivery are free.', 'Подшив джинсов и шорт, ушивание талии, подгонка летней одежды. Забор и доставка бесплатны.', 'Jeans und Shorts kürzen, Taille enger machen, Sommerkleidung ändern. Abholung und Lieferung sind kostenlos.'],
   ),
   arapsuyu: n(

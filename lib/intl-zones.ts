@@ -8,7 +8,7 @@
 import { OTEL_BOLGELERI } from '@/lib/otel-bolgeleri';
 import { ILANGS, type ILang } from '@/lib/intl';
 
-export const ZONE_SLUGS = ['belek', 'lara', 'guzeloba', 'side', 'kemer', 'konyaalti'] as const;
+export const ZONE_SLUGS = ['belek', 'lara', 'guzeloba', 'side', 'kemer', 'konyaalti', 'kundu', 'muratpasa'] as const;
 export type ZoneSlug = (typeof ZONE_SLUGS)[number];
 export const isZone = (s: string): s is ZoneSlug => (ZONE_SLUGS as readonly string[]).includes(s);
 
@@ -24,12 +24,12 @@ export const zoneAlt = (z: string): Record<string, string> =>
   isZone(z) ? Object.fromEntries(ILANGS.map((l) => [l, `https://terzihizmeti.com.tr${zoneUrl(l, z)}`])) : {};
 
 const NAMES: Record<ILang, Record<ZoneSlug, string>> = {
-  es: { belek: 'Belek', lara: 'Lara', guzeloba: 'Güzeloba', side: 'Side', kemer: 'Kemer', konyaalti: 'Konyaaltı' },
-  fr: { belek: 'Belek', lara: 'Lara', guzeloba: 'Güzeloba', side: 'Side', kemer: 'Kemer', konyaalti: 'Konyaaltı' },
-  pl: { belek: 'Belek', lara: 'Lara', guzeloba: 'Güzeloba', side: 'Side', kemer: 'Kemer', konyaalti: 'Konyaaltı' },
-  nl: { belek: 'Belek', lara: 'Lara', guzeloba: 'Güzeloba', side: 'Side', kemer: 'Kemer', konyaalti: 'Konyaaltı' },
-  uk: { belek: 'Белек', lara: 'Лара', guzeloba: 'Гюзельоба', side: 'Сіде', kemer: 'Кемер', konyaalti: 'Коньяалти' },
-  ar: { belek: 'بيليك', lara: 'لارا', guzeloba: 'غوزيلوبا', side: 'سيدي', kemer: 'كيمر', konyaalti: 'كونيالتي' },
+  es: { belek: 'Belek', lara: 'Lara', guzeloba: 'Güzeloba', side: 'Side', kemer: 'Kemer', konyaalti: 'Konyaaltı', kundu: 'Kundu', muratpasa: 'Muratpaşa' },
+  fr: { belek: 'Belek', lara: 'Lara', guzeloba: 'Güzeloba', side: 'Side', kemer: 'Kemer', konyaalti: 'Konyaaltı', kundu: 'Kundu', muratpasa: 'Muratpaşa' },
+  pl: { belek: 'Belek', lara: 'Lara', guzeloba: 'Güzeloba', side: 'Side', kemer: 'Kemer', konyaalti: 'Konyaaltı', kundu: 'Kundu', muratpasa: 'Muratpaşa' },
+  nl: { belek: 'Belek', lara: 'Lara', guzeloba: 'Güzeloba', side: 'Side', kemer: 'Kemer', konyaalti: 'Konyaaltı', kundu: 'Kundu', muratpasa: 'Muratpaşa' },
+  uk: { belek: 'Белек', lara: 'Лара', guzeloba: 'Гюзельоба', side: 'Сіде', kemer: 'Кемер', konyaalti: 'Коньяалти', kundu: 'Кунду', muratpasa: 'Муратпаша' },
+  ar: { belek: 'بيليك', lara: 'لارا', guzeloba: 'غوزيلوبا', side: 'سيدي', kemer: 'كيمر', konyaalti: 'كونيالتي', kundu: 'كوندو', muratpasa: 'موراتباشا' },
 };
 
 const BLURB: Record<ILang, Record<ZoneSlug, string>> = {
@@ -38,48 +38,60 @@ const BLURB: Record<ILang, Record<ZoneSlug, string>> = {
     lara: 'Lara está cerca del centro de la ciudad, con una larga playa de arena y hoteles alineados a lo largo de la costa.',
     guzeloba: 'Güzeloba está en el lado este de Lara: un tramo de hoteles frente al mar más tranquilo que el centro.',
     side: 'Side es un pueblo vacacional histórico cerca de Manavgat, con ruinas antiguas y muchos hoteles de playa uno junto a otro.',
-    kemer: 'Kemer es una localidad costera donde los montes Tauro caen hacia el mar, conocida por su puerto deportivo y sus resorts.',
+    kemer: 'Kemer es una localidad costera donde los montes Tauro caen hacia el mar, conocida por su puerto deportivo y sus resorts. El distrito incluye también Beldibi, Göynük y Çamyuva.',
     konyaalti: 'Konyaaltı, donde está nuestro propio taller, reúne hoteles y apartahoteles a lo largo de siete kilómetros de costa.',
+    kundu: 'Kundu (Aksu), justo al este de Lara, es una zona hotelera con numerosos resorts de cinco estrellas todo incluido.',
+    muratpasa: 'Muratpaşa es el distrito central de Antalya: abarca Kaleiçi, los hoteles del centro, el barrio de Meltem y parte de la zona de Lara. En Meltem la recogida y la entrega son gratuitas.',
   },
   fr: {
     belek: 'Belek est la zone de vacances d\'Antalya connue pour ses terrains de golf et ses complexes hôteliers 5 étoiles.',
     lara: 'Lara est proche du centre-ville, avec une longue plage de sable et des hôtels alignés le long de la côte.',
     guzeloba: 'Güzeloba se trouve du côté est de Lara : une portion d\'hôtels en bord de mer plus calme que le centre.',
     side: 'Side est une station balnéaire historique près de Manavgat, où des ruines antiques côtoient de nombreux hôtels de plage.',
-    kemer: 'Kemer est une ville côtière où les monts Taurus plongent dans la mer, connue pour sa marina et ses complexes hôteliers.',
+    kemer: 'Kemer est une ville côtière où les monts Taurus plongent dans la mer, connue pour sa marina et ses complexes hôteliers. Le district comprend aussi Beldibi, Göynük et Çamyuva.',
     konyaalti: 'Konyaaltı, où se trouve notre atelier, accueille hôtels et appart-hôtels le long de sept kilomètres de côte.',
+    kundu: 'Kundu (Aksu), juste à l\'est de Lara, est une zone hôtelière avec de nombreux resorts cinq étoiles tout compris.',
+    muratpasa: 'Muratpaşa est le district central d\'Antalya : il comprend Kaleiçi, les hôtels du centre, le quartier de Meltem et une partie de Lara. À Meltem, la collecte et la livraison sont gratuites.',
   },
   pl: {
     belek: 'Belek to wakacyjny rejon Antalyi znany z pól golfowych i pięciogwiazdkowych kompleksów hotelowych.',
     lara: 'Lara leży blisko centrum miasta, z długą piaszczystą plażą i hotelami ułożonymi wzdłuż wybrzeża.',
     guzeloba: 'Güzeloba leży po wschodniej stronie Lary: spokojniejszy niż centrum pas hoteli nad morzem.',
     side: 'Side to historyczna miejscowość wypoczynkowa niedaleko Manavgat, gdzie starożytne ruiny sąsiadują z wieloma hotelami plażowymi.',
-    kemer: 'Kemer to nadmorskie miasteczko, w którym góry Taurus opadają do morza, znane z mariny i kompleksów hotelowych.',
+    kemer: 'Kemer to nadmorskie miasteczko, w którym góry Taurus opadają do morza, znane z mariny i kompleksów hotelowych. W skład rejonu wchodzą też Beldibi, Göynük i Çamyuva.',
     konyaalti: 'Konyaaltı, gdzie mieści się nasza pracownia, to hotele i aparthotele ułożone wzdłuż siedmiu kilometrów wybrzeża.',
+    kundu: 'Kundu (Aksu), tuż na wschód od Lary, to strefa hotelowa z wieloma pięciogwiazdkowymi kompleksami all inclusive.',
+    muratpasa: 'Muratpaşa to centralny dystrykt Antalyi: obejmuje Kaleiçi, hotele w centrum, osiedle Meltem i część rejonu Lara. W Meltem odbiór i dowóz są bezpłatne.',
   },
   uk: {
     belek: 'Белек це курортна зона Анталії, відома гольф-полями та 5-зірковими готелями.',
     lara: 'Лара розташована поруч із центром міста: довгий піщаний пляж і готелі вздовж узбережжя.',
     guzeloba: 'Гюзельоба лежить у східній частині Лари: тихіша, ніж центр, смуга готелів біля моря.',
     side: 'Сіде це історичне курортне містечко поблизу Манавгата, де античні руїни сусідять із багатьма пляжними готелями.',
-    kemer: 'Кемер це приморське містечко, де гори Тавр спускаються до моря, відоме мариною та курортними готелями.',
+    kemer: 'Кемер це приморське містечко, де гори Тавр спускаються до моря, відоме мариною та курортними готелями. До району також належать Бельдібі, Гейнюк і Чамюва.',
     konyaalti: 'Коньяалти, де розташоване наше ательє, це готелі й апарт-готелі вздовж семи кілометрів узбережжя.',
+    kundu: 'Кунду (Аксу), одразу на схід від Лари, — готельна зона з численними п\'ятизірковими курортами «все включено».',
+    muratpasa: 'Муратпаша — центральний район Анталії: до нього входять Калеїчі, готелі в центрі, мікрорайон Мельтем і частина Лари. У Мельтемі забір і доставка безкоштовні.',
   },
   nl: {
     belek: 'Belek is het vakantiegebied van Antalya, bekend om zijn golfbanen en 5-sterrenresorts.',
     lara: 'Lara ligt dicht bij het stadscentrum, met een lang zandstrand en hotels langs de kust.',
     guzeloba: 'Güzeloba ligt aan de oostkant van Lara: een rustiger strook strandhotels dan het centrum.',
     side: 'Side is een historisch vakantiestadje bij Manavgat, waar oude ruïnes en veel strandhotels naast elkaar liggen.',
-    kemer: 'Kemer is een kustplaats waar het Taurusgebergte tot aan het water afdaalt, bekend om zijn jachthaven en resorts.',
+    kemer: 'Kemer is een kustplaats waar het Taurusgebergte tot aan het water afdaalt, bekend om zijn jachthaven en resorts. Ook Beldibi, Göynük en Çamyuva horen bij het district.',
     konyaalti: 'Konyaaltı, waar ons eigen atelier staat, telt hotels en aparthotels langs zeven kilometer kustlijn.',
+    kundu: 'Kundu (Aksu), net ten oosten van Lara, is een hotelzone met veel vijfsterrenresorts met all-inclusive.',
+    muratpasa: 'Muratpaşa is het centrale district van Antalya: Kaleiçi, hotels in het centrum, de wijk Meltem en een deel van Lara. In Meltem is ophalen en terugbrengen gratis.',
   },
   ar: {
     belek: 'بيليك منطقة عطلات في أنطاليا تُعرف بملاعب الغولف ومنتجعاتها من فئة 5 نجوم.',
     lara: 'تقع لارا قرب وسط المدينة، وفيها شاطئ رملي طويل وفنادق متراصّة على امتداد الساحل.',
     guzeloba: 'تقع غوزيلوبا في الجانب الشرقي من لارا، وهي شريط من فنادق الواجهة البحرية أكثر هدوءاً من الوسط.',
     side: 'سيدي بلدة سياحية تاريخية قرب مانافغات، حيث تجاور الآثار القديمة كثيراً من فنادق الشاطئ.',
-    kemer: 'كيمر بلدة ساحلية تنحدر فيها جبال طوروس نحو البحر، وتُعرف بمرساها السياحي ومنتجعاتها.',
+    kemer: 'كيمر بلدة ساحلية تنحدر فيها جبال طوروس نحو البحر، وتُعرف بمرساها السياحي ومنتجعاتها. ويضم القضاء أيضًا بلديبي وغوينوك وتشاميوفا.',
     konyaalti: 'كونيالتي، حيث تقع ورشتنا، تضم فنادق وشققاً فندقية على امتداد سبعة كيلومترات من الساحل.',
+    kundu: 'كوندو (أكسو)، شرق لارا مباشرة، منطقة فنادق تضم منتجعات خمس نجوم عديدة بنظام الشامل.',
+    muratpasa: 'موراتباشا هي منطقة وسط أنطاليا وتشمل كاليتشي وفنادق المركز وحي ملتم وجزءًا من منطقة لارا. في حي ملتم الاستلام والتسليم مجاني.',
   },
 };
 

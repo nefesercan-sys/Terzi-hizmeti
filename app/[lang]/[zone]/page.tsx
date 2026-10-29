@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: P): Promise<Metadata> {
   if (!isILang(lang)) return {};
   if (isSvcSlug(lang, slug)) {
     const c = SVC[lang]; const url = `${SITE}${svcUrl(lang)}`;
-    const title = c.title.length + 11 <= 60 ? `${c.title} | Terzi Can` : c.title;
+    const title = c.title.length + 12 <= 60 ? `${c.title} | Terzi Can` : c.title;
     return {
       metadataBase: new URL(SITE), title: { absolute: title }, description: c.desc,
       robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: P): Promise<Metadata> {
   const z = zoneData(lang, zone);
   const zc = ZCOPY[lang];
   const base = zc.title(z.name);
-  const title = base.length + 11 <= 60 ? `${base} | Terzi Can` : base;
+  const title = base.length + 12 <= 60 ? `${base} | Terzi Can` : base;
   const description = zc.desc(z.name);
   const url = `${SITE}${zoneUrl(lang, zone)}`;
   const tr = `${SITE}/otele-gelen-terzi-antalya/${zone}`;

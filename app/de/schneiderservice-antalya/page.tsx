@@ -4,6 +4,8 @@
 // Almanca "genel terzi" sayfası fiilen yoktu. Artık EN/RU karşılıklarına denk, kendi
 // içeriği ve kendi canonical'ı olan gerçek bir Almanca ana hizmet sayfası.
 import type { Metadata } from 'next';
+import ReviewsBlock from '@/components/ReviewsBlock';
+import { businessNode } from '@/lib/turist-keten';
 import { INTL_ALT } from '@/lib/intl';
 
 const SITE      = 'https://terzihizmeti.com.tr';
@@ -204,6 +206,8 @@ export default function SchneiderserviceAntalya() {
           </p>
         </section>
       </main>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@graph': [businessNode('de')] }) }} />
+      <ReviewsBlock lang="de" />
     </>
   );
 }

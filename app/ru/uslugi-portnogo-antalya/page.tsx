@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import ReviewsBlock from '@/components/ReviewsBlock';
+import { businessNode } from '@/lib/turist-keten';
 import { INTL_ALT } from '@/lib/intl';
 import Image from 'next/image';
 
@@ -317,6 +319,8 @@ export default function UslugiPortnogoAntalyaPage() {
           </div>
         </section>
 
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@graph': [businessNode('ru')] }) }} />
+      <ReviewsBlock lang="ru" />
         <footer>
           <div>© {new Date().getFullYear()} Terzi Can · Портной Анталья · {PHONE}</div>
           <nav className="foot-links" aria-label="Ссылки в подвале">

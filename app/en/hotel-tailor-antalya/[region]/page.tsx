@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import { zoneAlt } from '@/lib/intl-zones';
 import { OTEL_BOLGELERI, bulOtelBolgesi } from '@/lib/otel-bolgeleri';
 import OtelBolgeSayfasi from '@/components/OtelBolgeSayfasi';
 
@@ -37,6 +38,7 @@ export async function generateMetadata({ params }: { params: Promise<{ region: s
         'en': url,
         'ru': `${SITE}/ru/vyezdnoy-portnoy-antalya/${r.slug}`,
         'de': `${SITE}/de/schneider-service-hotel-antalya/${r.slug}`,
+        ...zoneAlt(r.slug),
         'x-default': `${SITE}/otele-gelen-terzi-antalya/${r.slug}`,
       },
     },

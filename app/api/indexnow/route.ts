@@ -3,6 +3,7 @@ import { OTEL_BOLGELERI } from '@/lib/otel-bolgeleri';
 import { DISTRICTS, SERVICES, LANGS, SERVICE_BASE, districtUrl, serviceUrl, isIndexable } from '@/lib/seo-data';
 import { TLANGS, allNewPages } from '@/lib/turist-keten';
 import { ILANGS, iUrl } from '@/lib/intl';
+import { ZONE_SLUGS, zoneUrl } from '@/lib/intl-zones';
 
 export const dynamic = 'force-dynamic';
 
@@ -80,7 +81,10 @@ const seoSayfalari = [
 // Turist keten & pamuk özel dikim ürün sayfaları ve ekspres tadilat (EN/DE/RU)
 const turistSayfalari = allNewPages().flatMap((pg) => TLANGS.map((l) => `${SITE}${pg.urlFor(l)}`));
 
-const intlSayfalari = ILANGS.map((l) => `${SITE}${iUrl(l)}`);
+const intlSayfalari = [
+  ...ILANGS.map((l) => `${SITE}${iUrl(l)}`),
+  ...ZONE_SLUGS.flatMap((z) => ILANGS.map((l) => `${SITE}${zoneUrl(l, z)}`)),
+];
 const urlList = Array.from(new Set([...sabitSayfalar, ...otelSayfalari, ...seoSayfalari, ...turistSayfalari, ...intlSayfalari]));
 
 // Yetki: Vercel'de INDEXNOW_SECRET tanımlı olmalı. Şu iki yoldan biriyle gönder:

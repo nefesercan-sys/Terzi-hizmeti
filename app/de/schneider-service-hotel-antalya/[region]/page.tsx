@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import { zoneAlt } from '@/lib/intl-zones';
 import { OTEL_BOLGELERI, bulOtelBolgesi } from '@/lib/otel-bolgeleri';
 import OtelBolgeSayfasi from '@/components/OtelBolgeSayfasi';
 
@@ -43,6 +44,7 @@ export async function generateMetadata({ params }: { params: Promise<{ region: s
         'en': `${SITE}/en/hotel-tailor-antalya/${r.slug}`,
         'ru': `${SITE}/ru/vyezdnoy-portnoy-antalya/${r.slug}`,
         'de': url,
+        ...zoneAlt(r.slug),
         'x-default': `${SITE}/otele-gelen-terzi-antalya/${r.slug}`,
       },
     },

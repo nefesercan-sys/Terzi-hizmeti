@@ -3,6 +3,7 @@ import { OTEL_BOLGELERI } from '@/lib/otel-bolgeleri';
 import { DISTRICTS, SERVICES, LANGS, SERVICE_BASE, districtUrl, serviceUrl, LAST_UPDATE, isIndexable, type Lang } from '@/lib/seo-data';
 import { TLANGS, allNewPages, hubUrl, TR_HUB, TURIST_UPDATE } from '@/lib/turist-keten';
 import { ILANGS, INTL, iUrl } from '@/lib/intl';
+import { ZONE_SLUGS, zoneUrl } from '@/lib/intl-zones';
 
 const SITE = "https://terzihizmeti.com.tr";
 const NOW = new Date('2026-10-27');   // v36'da değişen sayfalar
@@ -115,9 +116,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${SITE}${iUrl(l)}`, lastModified: new Date(LAST_UPDATE), changeFrequency: 'monthly' as const, priority: 0.7, alternates: intlAlt,
   }));
 
+  // Otel bölgesi derinlik sayfaları (6 dil × 6 bölge): bölge başına TR/EN/RU/DE karşılıklarıyla hreflang
+  const zoneSayfalari: MetadataRoute.Sitemap = ZONE_SLUGS.flatMap((z) => {
+    const alt = { languages: {
+      tr: `${SITE}/otele-gelen-terzi-antalya/${z}`, en: `${SITE}/en/hotel-tailor-antalya/${z}`, ru: `${SITE}/ru/vyezdnoy-portnoy-antalya/${z}`, de: `${SITE}/de/schneider-service-hotel-antalya/${z}`,
+      ...Object.fromEntries(ILANGS.map((x) => [INTL[x].hreflang, `${SITE}${zoneUrl(x, z)}`])), 'x-default': `${SITE}/otele-gelen-terzi-antalya/${z}`,
+    } };
+    return ILANGS.map((l) => ({ url: `${SITE}${zoneUrl(l, z)}`, lastModified: new Date(LAST_UPDATE), changeFrequency: 'monthly' as const, priority: 0.65, alternates: alt }));
+  });
+
   // Aynı URL birden fazla bölümde üretilebilir; ilk kayıt (sabit sayfalar) korunur.
   const gorulen = new Set<string>();
-  return [...sabitSayfalar, ...otelSayfalari, ...seoSayfalari, ...turistSayfalari, ...iletisimSayfalari, ...intlSayfalari].filter((e) => {
+  return [...sabitSayfalar, ...otelSayfalari, ...seoSayfalari, ...turistSayfalari, ...iletisimSayfalari, ...intlSayfalari, ...zoneSayfalari].filter((e) => {
     if (gorulen.has(e.url)) return false;
     gorulen.add(e.url);
     return true;

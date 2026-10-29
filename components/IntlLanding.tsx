@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import { PHONE, PHONE_TEL, MAPS, SITE } from '@/lib/seo-data';
 import { ILANGS, INTL, NB, ZONES, iUrl, type ILang } from '@/lib/intl';
+import { ZCOPY, ZONE_SLUGS, zoneData, zoneUrl } from '@/lib/intl-zones';
 import { waLink, businessNode, OG_DEFAULT } from '@/lib/turist-keten';
 
 const C = { green: '#2C4A3E', gold: '#D4B07A', cream: '#FAF7F2', sand: '#F2EDE4', ink: '#1C1814', muted: '#6B5F53', line: 'rgba(44,74,62,.15)' };
@@ -69,6 +70,14 @@ export default function IntlLanding({ lang }: { lang: ILang }) {
       <Block bg={C.sand}><H2>{c.hotelTitle}</H2>
         <p style={{ margin: '0 0 1rem' }}>{c.hotelText}</p>
         <p style={{ margin: 0, color: C.muted, fontSize: '.92rem' }}><strong>{c.zonesLabel}:</strong> {ZONES.join(' · ')}</p>
+      </Block>
+
+      <Block><H2>{ZCOPY[lang].zonesLabel}</H2>
+        <p style={{ margin: 0 }}>
+          {ZONE_SLUGS.map((z, i) => (
+            <span key={z}>{i > 0 && ' · '}<Link href={zoneUrl(lang, z)} style={{ color: C.green }}>{zoneData(lang, z).name}</Link></span>
+          ))}
+        </p>
       </Block>
 
       <Block><H2>{c.faqTitle}</H2>

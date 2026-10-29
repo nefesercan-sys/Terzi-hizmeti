@@ -4,6 +4,7 @@ import { DISTRICTS, SERVICES, LANGS, SERVICE_BASE, districtUrl, serviceUrl, LAST
 import { TLANGS, allNewPages, hubUrl, TR_HUB, TURIST_UPDATE } from '@/lib/turist-keten';
 import { ILANGS, INTL, iUrl } from '@/lib/intl';
 import { ZONE_SLUGS, zoneUrl } from '@/lib/intl-zones';
+import { svcUrl } from '@/lib/intl-services';
 
 const SITE = "https://terzihizmeti.com.tr";
 const NOW = new Date('2026-10-27');   // v36'da değişen sayfalar
@@ -125,9 +126,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     return ILANGS.map((l) => ({ url: `${SITE}${zoneUrl(l, z)}`, lastModified: new Date(LAST_UPDATE), changeFrequency: 'monthly' as const, priority: 0.65, alternates: alt }));
   });
 
+  // Hizmetler ve kumaşlar sayfası (6 dil, kendi hreflang kümesi)
+  const svcAlt = { languages: Object.fromEntries(ILANGS.map((x) => [INTL[x].hreflang, `${SITE}${svcUrl(x)}`])) };
+  const svcSayfalari: MetadataRoute.Sitemap = ILANGS.map((l) => ({ url: `${SITE}${svcUrl(l)}`, lastModified: new Date(LAST_UPDATE), changeFrequency: 'monthly' as const, priority: 0.75, alternates: svcAlt }));
+
   // Aynı URL birden fazla bölümde üretilebilir; ilk kayıt (sabit sayfalar) korunur.
   const gorulen = new Set<string>();
-  return [...sabitSayfalar, ...otelSayfalari, ...seoSayfalari, ...turistSayfalari, ...iletisimSayfalari, ...intlSayfalari, ...zoneSayfalari].filter((e) => {
+  return [...sabitSayfalar, ...otelSayfalari, ...seoSayfalari, ...turistSayfalari, ...iletisimSayfalari, ...intlSayfalari, ...zoneSayfalari, ...svcSayfalari].filter((e) => {
     if (gorulen.has(e.url)) return false;
     gorulen.add(e.url);
     return true;

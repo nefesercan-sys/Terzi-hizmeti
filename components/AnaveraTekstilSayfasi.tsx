@@ -118,7 +118,7 @@ export const translations: Record<AnaveraLang, Copy> = {
     faqSub: 'Frequently Asked Questions',
     faqTitle: 'Production & Export Details',
     faq: [
-      { title: 'What is your minimum order quantity?', desc: 'Quantities depend on the project. Samples, small runs and large orders are each quoted per project. Send your design or a reference photo on WhatsApp.' },
+      { title: 'What is your minimum order quantity?', desc: 'We have no minimum order quantity. Samples, small runs and large orders are each quoted per project. Send your design or a reference photo on WhatsApp.' },
       { title: 'Can I start with only an idea, sketch or photo?', desc: 'Yes. We help prepare the technical details, pattern and fabric proposal, then make a trial sample for your approval.' },
       { title: 'Which stages do you cover?', desc: 'Model and design development, pattern making, fabric and trim sourcing, trial sample, approval, serial production, packing and export preparation.' },
       { title: 'How long does production take?', desc: 'It depends on the model, fabric and quantity. You receive a written schedule with the quote, covering sample, approval and serial production.' },
@@ -207,7 +207,7 @@ export const translations: Record<AnaveraLang, Copy> = {
     faqSub: 'Sık Sorulan Sorular',
     faqTitle: 'Üretim ve İhracat Detayları',
     faq: [
-      { title: 'Minimum sipariş adediniz nedir?', desc: 'Adet projeye göre belirlenir. Numune, az adetli ve yüksek adetli siparişler proje bazında fiyatlandırılır. Tasarımınızı veya örnek fotoğrafı WhatsApp\'tan gönderin.' },
+      { title: 'Minimum sipariş adediniz nedir?', desc: 'Minimum sipariş adedi uygulamıyoruz. Numune, az adetli ve yüksek adetli siparişler proje bazında fiyatlandırılır. Tasarımınızı veya örnek fotoğrafı WhatsApp\'tan gönderin.' },
       { title: 'Sadece fikir, çizim veya fotoğrafla başlayabilir miyim?', desc: 'Evet. Teknik detayların, kalıbın ve kumaş önerisinin hazırlanmasına yardımcı olur, onayınız için deneme numunesi dikeriz.' },
       { title: 'Hangi aşamaları üstleniyorsunuz?', desc: 'Model ve tasarım geliştirme, kalıp, kumaş ve aksesuar temini, deneme numunesi, onay, seri imalat, paketleme ve ihracat hazırlığı.' },
       { title: 'Üretim ne kadar sürer?', desc: 'Model, kumaş ve adede göre değişir. Tekliften birlikte numune, onay ve seri imalatı kapsayan yazılı bir takvim verilir.' },
@@ -385,7 +385,7 @@ export const translations: Record<AnaveraLang, Copy> = {
     faqSub: 'Частые вопросы',
     faqTitle: 'Производство и экспорт: подробности',
     faq: [
-      { title: 'Каков минимальный заказ?', desc: 'Количество определяется проектом. Образцы, малые и крупные партии рассчитываются под проект. Пришлите дизайн или фото-референс в WhatsApp.' },
+      { title: 'Каков минимальный заказ?', desc: 'Минимального заказа у нас нет. Образцы, малые и крупные партии рассчитываются под проект. Пришлите дизайн или фото-референс в WhatsApp.' },
       { title: 'Можно начать только с идеи, эскиза или фото?', desc: 'Да. Мы поможем с техническими деталями, лекалами и подбором ткани, затем сошьём пробный образец на утверждение.' },
       { title: 'Какие этапы вы берёте на себя?', desc: 'Разработка модели и дизайна, лекала, закупка ткани и фурнитуры, пробный образец, утверждение, серийное производство, упаковка и подготовка к экспорту.' },
       { title: 'Сколько занимает производство?', desc: 'Зависит от модели, ткани и тиража. Вместе с предложением вы получите письменный график: образец, утверждение и серия.' },

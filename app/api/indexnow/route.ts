@@ -4,6 +4,7 @@ import { DISTRICTS, SERVICES, LANGS, SERVICE_BASE, districtUrl, serviceUrl, isIn
 import { TLANGS, allNewPages } from '@/lib/turist-keten';
 import { ILANGS, iUrl } from '@/lib/intl';
 import { ZONE_SLUGS, zoneUrl } from '@/lib/intl-zones';
+import { svcUrl } from '@/lib/intl-services';
 
 export const dynamic = 'force-dynamic';
 
@@ -83,6 +84,7 @@ const turistSayfalari = allNewPages().flatMap((pg) => TLANGS.map((l) => `${SITE}
 
 const intlSayfalari = [
   ...ILANGS.map((l) => `${SITE}${iUrl(l)}`),
+  ...ILANGS.map((l) => `${SITE}${svcUrl(l)}`),
   ...ZONE_SLUGS.flatMap((z) => ILANGS.map((l) => `${SITE}${zoneUrl(l, z)}`)),
 ];
 const urlList = Array.from(new Set([...sabitSayfalar, ...otelSayfalari, ...seoSayfalari, ...turistSayfalari, ...intlSayfalari]));

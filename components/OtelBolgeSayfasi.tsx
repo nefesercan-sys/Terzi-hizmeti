@@ -151,7 +151,7 @@ const T: Record<Lang, any> = {
       [`${r} bölgesindeki tüm otellere geliyor musunuz?`, `Evet! ${r} bölgesindeki her otele ulaşabiliyoruz — otel adınızı ve oda numaranızı WhatsApp'tan iletin.`],
       ['Otel ziyareti ücretsiz mi?', 'Konyaaltı\'nda ücretsiz. Diğer bölgelerde servis ücreti mesafeye göre belirlenir ve gelmeden önce WhatsApp\'tan netleştirilir; ayrıca dikim/tamir işi için ödeme yaparsınız.'],
       ['Hizmet ne kadar sürede tamamlanır?', 'Çoğu tamir ve boy kısaltma işlemi 24–48 saat içinde tamamlanır.'],
-      ['Türkçe dışında dil konuşuyor musunuz?', 'Evet — WhatsApp'tan kendi dilinizde yazın, size aynı dilde yanıt veriyoruz.'],
+      ['Türkçe dışında dil konuşuyor musunuz?', 'Evet — WhatsApp\'tan kendi dilinizde yazın, size aynı dilde yanıt veriyoruz.'],
     ],
     ctaH: (r: string) => <>{r} Bölgesinde Otele Gelen Terzi<br />Size Geliyoruz</>, ctaSub: 'Otel adınızı gönderin — 30 dakikada randevunuz netleşsin.',
     waBtn: 'WhatsApp\'tan Yazın', mapsBtn: 'Google Haritalar',

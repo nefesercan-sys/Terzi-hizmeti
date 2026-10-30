@@ -141,7 +141,7 @@ interface LangLabel {
 }
 
 const LANG_LABELS: Record<Lang, LangLabel> = {
-  tr: { name: 'Türkçe', flag: '🇹🇷', note: 'Konyaaltı ve Meltem'de alım-teslim ücretsizdir; diğer bölgeler için WhatsApp'tan sorun.' },
+  tr: { name: 'Türkçe', flag: '🇹🇷', note: 'Konyaaltı ve Meltem\'de alım-teslim ücretsizdir; diğer bölgeler için WhatsApp\'tan sorun.' },
   en: { name: 'English', flag: '🇬🇧', note: 'Pick-up and delivery is free in Konyaaltı and Meltem; ask on WhatsApp for other areas.' },
   ru: { name: 'Русский', flag: '🇷🇺', note: 'Забор и доставка бесплатны в Коньяалты и Мелтеме; для других районов уточняйте в WhatsApp.' },
   de: { name: 'Deutsch', flag: '🇩🇪', note: 'Abholung und Lieferung sind in Konyaaltı und Meltem kostenlos; für andere Gebiete bitte per WhatsApp anfragen.' },

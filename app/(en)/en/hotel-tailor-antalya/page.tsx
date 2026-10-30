@@ -42,7 +42,7 @@ const jsonLd = {
       name: 'Mobile Tailor Service in Antalya Hotel Districts',
       serviceType: 'Alterations, repairs, ironing, dry cleaning — mobile hotel service',
       provider: { '@type': 'LocalBusiness', name: 'Terzi Can', telephone: '+905318986418', url: `${SITE}/antalya-terzi`,
-        hasMap: 'https://www.google.com/maps?cid=5846987472659818117',
+        hasMap: 'https://www.google.com/maps?cid=6436895271281342624',
         address: {
           '@type': 'PostalAddress',
           streetAddress: 'Hurma Mahallesi',
@@ -61,7 +61,7 @@ const jsonLd = {
         { '@type': 'Question', name: 'How does the mobile hotel tailor service work?', acceptedAnswer: { '@type': 'Answer', text: 'Share your hotel name, room number and a convenient time on WhatsApp. Our tailor comes to you, takes measurements or collects the item, and returns it repaired or altered.' } },
         { '@type': 'Question', name: 'Which hotel districts do you cover?', acceptedAnswer: { '@type': 'Answer', text: 'We serve Belek, Lara, Güzeloba, Kemer and Side, and other Antalya districts on request.' } },
         { '@type': 'Question', name: 'How long does an alteration or repair take?', acceptedAnswer: { '@type': 'Answer', text: 'Most alterations and repairs are completed usually within 1–2 days. For wedding or evening dresses, we recommend contacting us as early as possible.' } },
-        { '@type': 'Question', name: 'What languages do you speak?', acceptedAnswer: { '@type': 'Answer', text: 'Our team speaks English, German, Russian and Turkish.' } },
+        { '@type': 'Question', name: 'What languages do you speak?', acceptedAnswer: { '@type': 'Answer', text: 'Write to us on WhatsApp in your own language and we will reply.' } },
       ],
     },
   ],
@@ -116,7 +116,7 @@ export default function OtelBolgeleriEnHub() {
                 that needs dry cleaning — on holiday, there's rarely time to find a tailor yourself.
                 Terzi Can comes directly to your hotel in Belek, Lara, Güzeloba, Kemer or Side: we take
                 measurements, repair, collect and return your garment — all without you having to leave
-                the hotel. Our team speaks English, German, Russian and Turkish, so communication is
+                the hotel. Write to us on WhatsApp in your own language, so communication is
                 straightforward.
               </p>
             </div>
@@ -184,7 +184,7 @@ export default function OtelBolgeleriEnHub() {
               ['How does the mobile hotel tailor service work?', 'Share your hotel name, room number and a convenient time on WhatsApp. Our tailor comes to you, takes measurements or collects the item, and returns it repaired or altered.'],
               ['Which hotel districts do you cover?', 'We serve Belek, Lara, Güzeloba, Kemer and Side, and other Antalya districts on request.'],
               ['How long does an alteration or repair take?', 'Most alterations and repairs are completed usually within 1–2 days. For wedding or evening dresses, we recommend contacting us as early as possible.'],
-              ['What languages do you speak?', 'Our team speaks English, German, Russian and Turkish.'],
+              ['What languages do you speak?', 'Write to us on WhatsApp in your own language and we will reply.'],
             ].map(([q, a]) => (
               <div key={q} className="faq-item">
                 <div className="faq-q">{q}</div>

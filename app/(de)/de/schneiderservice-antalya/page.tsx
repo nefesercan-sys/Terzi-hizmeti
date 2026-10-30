@@ -21,7 +21,7 @@ const PHONE_TEL = '+905318986418';
 const WA        = (m: string) => `https://wa.me/905318986418?text=${encodeURIComponent(m)}`;
 const WA_DEF    = WA('Hallo, ich möchte ein Foto meines Kleidungsstücks senden und einen Preis erfahren.');
 const WA_HOTEL  = WA('Hallo, ich möchte einen Schneider in mein Hotel in Antalya bestellen. Hotelname und Standort sende ich Ihnen.');
-const MAPS      = 'https://www.google.com/maps?cid=5846987472659818117';
+const MAPS      = 'https://www.google.com/maps?cid=6436895271281342624';
 const LAST_MOD  = '2026-10-04';
 const OG        = `${SITE}/terzi-can-hero.jpg`;
 
@@ -70,7 +70,7 @@ const STEPS: [string, string][] = [
 ];
 
 const FAQS: [string, string][] = [
-  ['Gibt es in Antalya einen Schneider, der Deutsch spricht?', 'Ja. Das Team von Terzi Can spricht Deutsch, Englisch, Russisch und Türkisch. Am einfachsten schreiben Sie uns per WhatsApp.'],
+  ['Gibt es in Antalya einen Schneider, der Deutsch spricht?', 'Ja. Am einfachsten schreiben Sie uns per WhatsApp.'],
   ['Kommt der Schneider ins Hotel?', 'Ja. Wir besuchen Hotels, zum Beispiel in Belek, Lara, Kemer und Side. Senden Sie Hotelname und Standort per WhatsApp. Details zum Hotelservice: ' + HOTEL_URL],
   ['Ist der Besuch kostenlos?', 'In Konyaaltı ist der Besuch kostenlos; in anderen Bezirken richtet sich das Entgelt nach der Entfernung. Für weiter entfernte Bezirke klären wir die Einzelheiten vorab per WhatsApp.'],
   ['Wie bekomme ich einen Preis, ohne vorbeizukommen?', 'Senden Sie ein Foto des Kleidungsstücks und der gewünschten Arbeit per WhatsApp. Wir nennen Preis und Bearbeitungszeit. Preisliste: ' + PRICE_URL],
@@ -132,7 +132,7 @@ export default function SchneiderserviceAntalya() {
             </h1>
             <p id="hero-desc" style={{ maxWidth: 720, margin: '0 auto 1.6rem', lineHeight: 1.7, fontSize: '1.05rem', opacity: .92 }}>
               Terzi Can ist eine Änderungsschneiderei in Hurma, Konyaaltı. Wir kürzen Hosen, wechseln Reißverschlüsse, ändern Brautkleider und
-              fertigen nach Maß. Auf Wunsch kommen wir ins Hotel oder holen Ihre Kleidung ab. Wir sprechen Deutsch, Englisch, Russisch und Türkisch.
+              fertigen nach Maß. Auf Wunsch kommen wir ins Hotel oder holen Ihre Kleidung ab. Schreiben Sie uns per WhatsApp in Ihrer Sprache.
             </p>
             <div style={{ display: 'flex', gap: '.7rem', justifyContent: 'center', flexWrap: 'wrap' }}>
               <a href={WA_DEF} target="_blank" rel="noopener noreferrer" style={btn}>Foto senden, Preis erfahren</a>

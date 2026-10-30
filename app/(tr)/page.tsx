@@ -17,7 +17,7 @@ const WA_EN     = WA('Hello! I am looking for tailor and alteration services in 
 const WA_RU     = WA('Здравствуйте! Меня интересуют услуги портного и ремонта одежды в Анталье.');
 const WA_DE     = WA('Hallo! Ich suche einen Schneider für Änderungsschneiderei in Antalya.');
 
-const MAPS      = 'https://www.google.com/maps?cid=5846987472659818117';
+const MAPS      = 'https://www.google.com/maps?cid=6436895271281342624';
 const BIZ       = 'TERZİ Can Antalya Tailor Service';
 const TODAY     = '2026-10-04';
 const OG        = `${SITE}/terzi-can-hero.jpg`;
@@ -124,7 +124,7 @@ const jsonLd = {
         'Schneider Can Antalya', 'Änderungsschneiderei Konyaaltı',
       ],
       description:
-        'Professional tailor and clothing alteration workshop in Konyaaltı, Antalya since 2006. Services: pants hemming, zipper replacement, waist adjustment, dressmaking, wedding dress alterations, dry cleaning. Mobile tailor service to Hurma, Liman, Sarisu, Gursu, Uncali. We speak English, Russian, German, and Turkish.',
+        'Professional tailor and clothing alteration workshop in Konyaaltı, Antalya since 2006. Services: pants hemming, zipper replacement, waist adjustment, dressmaking, wedding dress alterations, dry cleaning. Mobile tailor service to Hurma, Liman, Sarisu, Gursu, Uncali. message us on WhatsApp in your language.',
       url: SITE,
       telephone: PHONE_TEL,
       priceRange: '₺₺',
@@ -205,7 +205,7 @@ const jsonLd = {
       '@id': `${SITE}#faq`,
       mainEntity: [
         { '@type': 'Question', name: 'Is there an English or Russian speaking tailor in Antalya?', acceptedAnswer: { '@type': 'Answer', text: `Yes! Terzi Can in Konyaaltı provides tailor and alteration services in English, Russian, German, and Turkish. Contact via WhatsApp: ${PHONE}` } },
-        { '@type': 'Question', name: 'Есть ли портной в Анталье, который говорит по-русски?', acceptedAnswer: { '@type': 'Answer', text: `Да! Ателье Terzi Can в Коньяалты обслуживает на русском языке. Подгонка одежды, ремонт, укорачивание брюк, замена молний, химчистка. Бесплатный выезд в Хурма, Лиман, Сарысу. WhatsApp: ${PHONE}` } },
+        { '@type': 'Question', name: 'Есть ли портной в Анталье, который говорит по-русски?', acceptedAnswer: { '@type': 'Answer', text: `Да! Напишите в WhatsApp на русском — ателье Terzi Can в Коньяалты ответит. Подгонка одежды, ремонт, укорачивание брюк, замена молний, химчистка. Бесплатный выезд в Хурма, Лиман, Сарысу. WhatsApp: ${PHONE}` } },
         { '@type': 'Question', name: 'Gibt es einen deutschsprachigen Schneider in Antalya?', acceptedAnswer: { '@type': 'Answer', text: `Ja! Terzi Can in Konyaaltı bietet Änderungsschneiderei auf Deutsch, Englisch, Russisch und Türkisch. WhatsApp: ${PHONE}` } },
         { '@type': 'Question', name: 'What is the price for pants hemming in Antalya 2026?', acceptedAnswer: { '@type': 'Answer', text: `Pants and jeans hemming starts from ₺200 at Terzi Can Konyaaltı. Same day delivery available. ☎ ${PHONE}` } },
         { '@type': 'Question', name: 'Сколько стоит укоротить брюки в Анталье?', acceptedAnswer: { '@type': 'Answer', text: `Укоротить брюки или джинсы стоит от ₺200. Готовность в тот же день. ☎ ${PHONE}` } },
@@ -253,7 +253,7 @@ const DISTRICTS = [
 const FAQS = [
   ['Antalya paça kısaltma fiyatı ne kadar?','₺200\'den başlar. Aynı gün teslim.'],
   ['Is there an English or Russian speaking tailor in Antalya?','Yes! Terzi Can speaks English, Russian, German, and Turkish. Contact us on WhatsApp for fast response.'],
-  ['Есть ли портной в Анталье, который говорит по-русски?','Да! Ателье Terzi Can в Коньяалты принимает заказы на русском языке. Подгонка одежды, ремонт, укорачивание брюк, замена молний, химчистка. Бесплатный выезд в Хурма, Лиман, Сарысу.'],
+  ['Есть ли портной в Анталье, который говорит по-русски?','Да! Напишите в WhatsApp на русском — ателье Terzi Can в Коньяалты ответит. Подгонка одежды, ремонт, укорачивание брюк, замена молний, химчистка. Бесплатный выезд в Хурма, Лиман, Сарысу.'],
   ['Gibt es einen deutschsprachigen Schneider in Antalya?','Ja! Terzi Can in Konyaaltı bietet Änderungsschneiderei auf Deutsch, Englisch, Russisch und Türkisch. Kundenservice per WhatsApp.'],
   ['Hurma, Liman, Sarısu\'ya ücretsiz servis var mı?','Evet, bu 3 bölgeye ücretsiz alım-teslimat. WhatsApp\'tan adresinizi göndermeniz yeterlidir.'],
   ['What are the prices for zipper replacement & alterations?','Pants hemming starts at ₺200, zipper replacement at ₺300, waist alterations at ₺200. Fast 24-hour turnaround.'],
@@ -500,7 +500,7 @@ export default function TerziHizmetiPage() {
         {/* SUMMARY / INTRODUCTION */}
         <div style={{background:C.bg2,padding:'2.2rem 1.5rem',borderBottom:`1px solid rgba(44,74,62,.10)`}}>
           <p style={{maxWidth:920,margin:'0 auto',fontSize:'.85rem',color:C.muted,lineHeight:1.9,textAlign:'center'}}>
-            <strong style={{color:'#2C4A3E'}}>Terzi Can Antalya</strong> — Konyaaltı'da 2006'dan bu yana faaliyet gösteren profesyonel terzi atölyesidir. Türkçe, İngilizce, Rusça ve Almanca konuşan ekibimizle hem yerli hem de yabancı misafirlerimize terzilik, kıyafet tamiri, elbise dikimi, gelinlik tadilatı ve kuru temizleme hizmeti sunuyoruz. Hurma, Liman, Sarısu, Gürsu ve Uncalı başta olmak üzere Konyaaltı ve çevresi'ya araçlı terzi servisi sağlıyoruz.
+            <strong style={{color:'#2C4A3E'}}>Terzi Can Antalya</strong> — Konyaaltı'da 2006'dan bu yana faaliyet gösteren profesyonel terzi atölyesidir. WhatsApp'tan kendi dilinde yazışabildiğimiz ekibimizle hem yerli hem de yabancı misafirlerimize terzilik, kıyafet tamiri, elbise dikimi, gelinlik tadilatı ve kuru temizleme hizmeti sunuyoruz. Hurma, Liman, Sarısu, Gürsu ve Uncalı başta olmak üzere Konyaaltı ve çevresi'ya araçlı terzi servisi sağlıyoruz.
           </p>
         </div>
 
@@ -653,7 +653,7 @@ export default function TerziHizmetiPage() {
         </section>
         <footer>
           <div>© 2026 Terzi Can · Konyaaltı, Antalya · {PHONE}</div>
-          <div style={{marginTop:4,fontSize:'.68rem',color:'rgba(255,255,255,.7)'}}>We speak Turkish, English, Russian & German</div>
+          <div style={{marginTop:4,fontSize:'.68rem',color:'rgba(255,255,255,.7)'}}>message us on WhatsApp in your language & German</div>
           <nav className="foot-links" aria-label="District Pages">
             <a href="/antalya-terzi">Antalya Terzi (Tüm Bölgeler)</a>
             <a href="/hurma-terzi">Hurma Terzi</a>

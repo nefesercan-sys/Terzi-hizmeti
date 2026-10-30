@@ -16,7 +16,7 @@ const PHONE_TEL = '+905318986418';
 const WA_NUM    = '905318986418';
 const WA        = (m: string) => `https://wa.me/${WA_NUM}?text=${encodeURIComponent(m)}`;
 const WA_DEF    = WA('Merhaba, terzi ve tekstil atölyesi hizmetleriniz hakkında bilgi almak istiyorum.');
-const MAPS      = 'https://www.google.com/maps?cid=5846987472659818117';
+const MAPS      = 'https://www.google.com/maps?cid=6436895271281342624';
 const BIZ       = 'TERZİ Can Antalya Tailor Service';
 const TODAY     = '2026-10-04';
 const OG        = `${SITE}/terzi-can-hero.jpg`;

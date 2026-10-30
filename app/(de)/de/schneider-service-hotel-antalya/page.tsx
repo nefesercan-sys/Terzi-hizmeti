@@ -42,7 +42,7 @@ const jsonLd = {
       name: 'Mobiler Schneiderservice in Antalyas Hotelbezirken',
       serviceType: 'Änderungsschneiderei, Reparatur, Bügelservice, chemische Reinigung — mobiler Hotelservice',
       provider: { '@type': 'LocalBusiness', name: 'Terzi Can', telephone: '+905318986418', url: `${SITE}/antalya-terzi`,
-        hasMap: 'https://www.google.com/maps?cid=5846987472659818117',
+        hasMap: 'https://www.google.com/maps?cid=6436895271281342624',
         address: {
           '@type': 'PostalAddress',
           streetAddress: 'Hurma Mahallesi',
@@ -61,7 +61,7 @@ const jsonLd = {
         { '@type': 'Question', name: 'Wie funktioniert der mobile Schneiderservice im Hotel?', acceptedAnswer: { '@type': 'Answer', text: 'Sie teilen uns Hotelname, Zimmernummer und einen passenden Zeitpunkt per WhatsApp mit. Unser Schneider kommt zu Ihnen, nimmt Maß oder holt das Kleidungsstück ab, und liefert es fertig repariert oder geändert zurück.' } },
         { '@type': 'Question', name: 'In welche Hotelbezirke kommen Sie?', acceptedAnswer: { '@type': 'Answer', text: 'Wir bedienen Belek, Lara, Güzeloba, Kemer und Side sowie auf Anfrage weitere Bezirke Antalyas.' } },
         { '@type': 'Question', name: 'Wie lange dauert eine Änderung oder Reparatur?', acceptedAnswer: { '@type': 'Answer', text: 'Die meisten Änderungen und Reparaturen sind innerhalb von in der Regel 1–2 Tagen fertig. Für Hochzeits- oder Abendkleider empfehlen wir, uns möglichst früh zu kontaktieren.' } },
-        { '@type': 'Question', name: 'Welche Sprachen sprechen Sie?', acceptedAnswer: { '@type': 'Answer', text: 'Unser Team spricht Deutsch, Englisch, Russisch und Türkisch.' } },
+        { '@type': 'Question', name: 'Welche Sprachen sprechen Sie?', acceptedAnswer: { '@type': 'Answer', text: 'Schreiben Sie uns per WhatsApp in Ihrer Sprache, wir antworten.' } },
       ],
     },
   ],
@@ -118,8 +118,8 @@ export default function OtelBolgeleriDeHub() {
                 braucht, oder ein Anzug, der eine chemische Reinigung nötig hat — im Urlaub bleibt
                 selten Zeit, selbst eine Änderungsschneiderei zu finden. Terzi Can kommt direkt zu
                 Ihrem Hotel in Belek, Lara, Güzeloba, Kemer oder Side: Maßnehmen, Reparieren, Abholen
-                und Zurückbringen — alles ohne dass Sie Ihr Hotel verlassen müssen. Unser Team spricht
-                Deutsch, Englisch, Russisch und Türkisch, sodass die Kommunikation unkompliziert ist.
+                und Zurückbringen — alles ohne dass Sie Ihr Hotel verlassen müssen. Schreiben Sie uns
+                per WhatsApp in Ihrer Sprache, die Verständigung ist unkompliziert.
               </p>
             </div>
           </div>
@@ -190,7 +190,7 @@ export default function OtelBolgeleriDeHub() {
               ['Wie funktioniert der mobile Schneiderservice im Hotel?', 'Sie teilen uns Hotelname, Zimmernummer und einen passenden Zeitpunkt per WhatsApp mit. Unser Schneider kommt zu Ihnen, nimmt Maß oder holt das Kleidungsstück ab, und liefert es fertig repariert oder geändert zurück.'],
               ['In welche Hotelbezirke kommen Sie?', 'Wir bedienen Belek, Lara, Güzeloba, Kemer und Side sowie auf Anfrage weitere Bezirke Antalyas.'],
               ['Wie lange dauert eine Änderung oder Reparatur?', 'Die meisten Änderungen und Reparaturen sind innerhalb von in der Regel 1–2 Tagen fertig. Für Hochzeits- oder Abendkleider empfehlen wir, uns möglichst früh zu kontaktieren.'],
-              ['Welche Sprachen sprechen Sie?', 'Unser Team spricht Deutsch, Englisch, Russisch und Türkisch.'],
+              ['Welche Sprachen sprechen Sie?', 'Schreiben Sie uns per WhatsApp in Ihrer Sprache, wir antworten.'],
             ].map(([q, a]) => (
               <div key={q} className="faq-item">
                 <div className="faq-q">{q}</div>

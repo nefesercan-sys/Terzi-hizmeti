@@ -208,7 +208,7 @@ const T = {
       ['Wie erfahre ich den Preis?', 'Schicken Sie ein Foto des Kleidungsstücks per WhatsApp. Ab-Preise: Hose kürzen ab ₺200, Reißverschluss ersetzen ab ₺300, Abendkleid ändern ab ₺800, Brautkleid ändern ab ₺800.'],
       ['Holen Sie im Hotel oder zu Hause ab?', 'Ja, in Konyaaltı holen wir kostenlos im Hotel oder zu Hause ab und liefern zurück. Für weiter entfernte Gebiete wird die Abholung per WhatsApp geplant.'],
       ['Wo ist Ihre Werkstatt?', 'Hurma Mahallesi, 07130 Konyaaltı / Antalya. Die Route finden Sie bei Google Maps.'],
-      ['Welche Sprachen sprechen Sie?', 'Deutsch, Englisch, Türkisch und Russisch.'],
+      ['Welche Sprachen sprechen Sie?', 'Schreiben Sie uns per WhatsApp in Ihrer Sprache.'],
     ] as [string, string][],
     moreH: 'Weitere Seiten',
     more: { prices: 'Schneider-Preise', services: 'Alle Schneider-Leistungen', hotel: 'Schneider-Service im Hotel', home: 'Startseite' },

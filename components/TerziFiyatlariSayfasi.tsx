@@ -10,7 +10,7 @@ export type FLang = 'tr' | 'en' | 'de' | 'ru';
 export const SITE = 'https://terzihizmeti.com.tr';
 export const PHONE = '+90 531 898 64 18';
 export const PHONE_TEL = '+905318986418';
-export const MAPS = 'https://www.google.com/maps?cid=5846987472659818117';
+export const MAPS = 'https://www.google.com/maps?cid=6436895271281342624';
 const WA = (m: string) => `https://wa.me/905318986418?text=${encodeURIComponent(m)}`;
 
 export const PRICE_ROWS: { icon: string; rows: string[] }[] = [

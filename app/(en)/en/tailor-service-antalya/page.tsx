@@ -15,7 +15,7 @@ const PHONE_TEL = '+905318986418';
 const WA_NUM    = '905318986418';
 const WA        = (m: string) => `https://wa.me/${WA_NUM}?text=${encodeURIComponent(m)}`;
 const WA_DEF    = WA('Hello, I would like a mobile tailor to come to my hotel/address. My location: ');
-const MAPS      = 'https://www.google.com/maps?cid=5846987472659818117';
+const MAPS      = 'https://www.google.com/maps?cid=6436895271281342624';
 const LAST_MOD  = '2024-08-25'; // Statik tarih (Hydration hatasını önler)
 const OG        = `${SITE}/terzi-can-hero.jpg`;
 
@@ -102,7 +102,7 @@ const jsonLd = {
         { '@type': 'Question', name: 'Is the mobile visit free?', acceptedAnswer: { '@type': 'Answer', text: 'The visit is free in Konyaaltı. In other districts the visit fee depends on the distance and is confirmed on WhatsApp beforehand.' } },
         { '@type': 'Question', name: 'Do you offer ironing and dry cleaning too?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, professional steam ironing and dry cleaning, with pickup and delivery to your hotel or address.' } },
         { '@type': 'Question', name: 'Can I get same-day alterations?', acceptedAnswer: { '@type': 'Answer', text: `Yes, most repairs and hemming are completed the same day or usually within 1–2 days. WhatsApp: ${PHONE}` } },
-        { '@type': 'Question', name: 'Do you speak English?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, our team speaks English, Russian, German and Turkish.' } },
+        { '@type': 'Question', name: 'Do you speak English?', acceptedAnswer: { '@type': 'Answer', text: 'Yes — write to us on WhatsApp in your own language and we will reply.' } },
         ...EXTRA_FAQS.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
       ],
     },
@@ -146,7 +146,7 @@ const FAQS: [string, string][] = [
   ['Do you offer ironing and dry cleaning?', 'Yes — professional steam ironing and dry cleaning, with pickup and delivery to your hotel or address.'],
   ['Can I get same-day alterations before an event?', 'Yes, most repairs and hemming are completed the same day or usually within 1–2 days.'],
   ['Do you serve Konyaaltı and nearby districts?', 'Yes — free visits in Konyaaltı; Muratpaşa, Kepez, Lara, Döşemealtı, Belek, Kemer, Side and nearby districts by appointment, with the visit fee set by distance.'],
-  ['Do you speak English?', 'Yes, our team speaks English, Russian, German and Turkish.'],
+  ['Do you speak English?', 'Yes — write to us on WhatsApp in your own language and we will reply.'],
   ...EXTRA_FAQS,
 ];
 

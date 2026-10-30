@@ -14,7 +14,7 @@ const PHONE_TEL = '+905318986418';
 const WA_NUM    = '905318986418';
 const WA        = (m: string) => `https://wa.me/${WA_NUM}?text=${encodeURIComponent(m)}`;
 const WA_DEF    = WA('Hello, I need a mobile tailor service for my hotel. / Merhaba, otelime terzi servisi istiyorum.');
-const MAPS      = 'https://www.google.com/maps?cid=5846987472659818117';
+const MAPS      = 'https://www.google.com/maps?cid=6436895271281342624';
 const BIZ       = 'TERZİ Can - Mobile Tailor';
 const TODAY     = '2026-10-04';
 const OG        = `${SITE}/terzi-can-hero.jpg`;
@@ -141,10 +141,10 @@ interface LangLabel {
 }
 
 const LANG_LABELS: Record<Lang, LangLabel> = {
-  tr: { name: 'Türkçe', flag: '🇹🇷', note: 'Otel servis ücreti mesafeye göre değişebilir. KDV dahildir.' },
-  en: { name: 'English', flag: '🇬🇧', note: 'Hotel service fee may vary by distance. VAT included.' },
-  ru: { name: 'Русский', flag: '🇷🇺', note: 'Стоимость выезда зависит от расстояния. НДС включён.' },
-  de: { name: 'Deutsch', flag: '🇩🇪', note: 'Die Anfahrtskosten können je nach Entfernung variieren. Inkl. MwSt.' },
+  tr: { name: 'Türkçe', flag: '🇹🇷', note: 'Konyaaltı ve Meltem'de alım-teslim ücretsizdir; diğer bölgeler için WhatsApp'tan sorun.' },
+  en: { name: 'English', flag: '🇬🇧', note: 'Pick-up and delivery is free in Konyaaltı and Meltem; ask on WhatsApp for other areas.' },
+  ru: { name: 'Русский', flag: '🇷🇺', note: 'Забор и доставка бесплатны в Коньяалты и Мелтеме; для других районов уточняйте в WhatsApp.' },
+  de: { name: 'Deutsch', flag: '🇩🇪', note: 'Abholung und Lieferung sind in Konyaaltı und Meltem kostenlos; für andere Gebiete bitte per WhatsApp anfragen.' },
 };
 
 interface VipCategory {
@@ -159,7 +159,7 @@ const Premium_CATEGORIES: Record<Lang, VipCategory[]> = {
   tr: [
     { icon: '🚗', title: 'Otelde Ölçü & Teslimat', keyword: 'otele gelen terzi servisi Antalya',
       desc: 'Adresinizde veya otel lobisinde ölçü alma ve provaya gelme hizmeti.',
-      rows: [['Otel Servis Ücreti (Konyaaltı/Merkez)', '₺300+'], ['Otel Servis Ücreti (Lara/Kundu)', '₺500+'], ['Otel Servis Ücreti (Belek/Kemer)', 'Sorunuz']] },
+      rows: [['Alım-teslim (Konyaaltı, Meltem)', 'Ücretsiz'], ['Alım-teslim (Lara/Kundu)', 'WhatsApp\'tan sorun'], ['Alım-teslim (Belek/Kemer)', 'WhatsApp\'tan sorun']] },
     { icon: '✂️', title: 'Ekspres Tadilat', keyword: 'acil terzi Antalya',
       desc: 'Tatiliniz sırasında ihtiyaç duyduğunuz acil onarımlar.',
       rows: [['Acil Paça Kısaltma', '₺200+'], ['Acil Yırtık Onarımı / Fermuar', '₺300+'], ['Abiye / Elbise Tadilatı', '₺800+']] },
@@ -167,7 +167,7 @@ const Premium_CATEGORIES: Record<Lang, VipCategory[]> = {
   en: [
     { icon: '🚗', title: 'Hotel Fitting & Delivery', keyword: 'Mobile tailor Antalya',
       desc: 'We come to your hotel lobby or room for fitting and measurements.',
-      rows: [['Call-out Fee (Konyaalti/Center)', '₺300+'], ['Call-out Fee (Lara/Kundu)', '₺500+'], ['Call-out Fee (Belek/Kemer)', 'Ask price']] },
+      rows: [['Pick-up & delivery (Konyaalti, Meltem)', 'Free'], ['Pick-up & delivery (Lara/Kundu)', 'Ask on WhatsApp'], ['Pick-up & delivery (Belek/Kemer)', 'Ask on WhatsApp']] },
     { icon: '✂️', title: 'Express Alterations', keyword: 'urgent tailor Antalya',
       desc: 'Urgent repairs and alterations you need during your holiday.',
       rows: [['Express Hemming', '₺200+'], ['Express Tear / Zipper Repair', '₺300+'], ['Evening Dress Alterations', '₺800+']] },
@@ -175,7 +175,7 @@ const Premium_CATEGORIES: Record<Lang, VipCategory[]> = {
   ru: [
     { icon: '🚗', title: 'Выезд в отель и примерка', keyword: 'портной в отель Анталья',
       desc: 'Выезд в лобби отеля для снятия мерок и примерки.',
-      rows: [['Выезд (Коньяалты/Центр)', '₺300+'], ['Выезд (Лара/Кунду)', '₺500+'], ['Выезд (Белек/Кемер)', 'По запросу']] },
+      rows: [['Забор и доставка (Коньяалты, Мелтем)', 'Бесплатно'], ['Забор и доставка (Лара/Кунду)', 'Уточните в WhatsApp'], ['Забор и доставка (Белек/Кемер)', 'Уточните в WhatsApp']] },
     { icon: '✂️', title: 'Экспресс-ремонт', keyword: 'срочный портной Анталья',
       desc: 'Срочный ремонт и подгонка одежды во время вашего отдыха.',
       rows: [['Срочное укорачивание', '₺200+'], ['Срочный ремонт / Молния', '₺300+'], ['Подгонка вечернего платья', '₺800+']] },
@@ -183,7 +183,7 @@ const Premium_CATEGORIES: Record<Lang, VipCategory[]> = {
   de: [
     { icon: '🚗', title: 'Anprobe & Lieferung im Hotel', keyword: 'mobiler Schneider Antalya',
       desc: 'Wir kommen in die Lobby oder aufs Zimmer Ihres Hotels für Maße und Anproben.',
-      rows: [['Anfahrtskosten (Konyaalti/Zentrum)', '₺300+'], ['Anfahrtskosten (Lara/Kundu)', '₺500+'], ['Anfahrtskosten (Belek/Kemer)', 'Auf Anfrage']] },
+      rows: [['Abholung & Lieferung (Konyaalti, Meltem)', 'Kostenlos'], ['Abholung & Lieferung (Lara/Kundu)', 'Per WhatsApp anfragen'], ['Abholung & Lieferung (Belek/Kemer)', 'Per WhatsApp anfragen']] },
     { icon: '✂️', title: 'Express-Änderungen', keyword: 'Notfall-Schneider Antalya',
       desc: 'Dringende Reparaturen und Änderungen während Ihres Urlaubs.',
       rows: [['Express-Kürzen', '₺200+'], ['Express-Riss / Reißverschluss', '₺300+'], ['Abendkleid-Änderungen', '₺800+']] },
@@ -237,7 +237,7 @@ export default function MobileTailorHotelPage() {
               ve Tadilat Servisi
             </h1>
             <p className="hero-desc" id="hero-desc">
-              Tatiliniz yarım kalmasın. Belek, Lara, Kundu ve Kemer otellerine mobil terzi aracımızla gelerek ölçü alıyor, ekspres tadilat ve kuru temizleme sonrası kıyafetlerinizi tekrar otelinize teslim ediyoruz. (We speak English & Russian)
+              Tatiliniz yarım kalmasın. Belek, Lara, Kundu ve Kemer otellerine mobil terzi aracımızla gelerek ölçü alıyor, ekspres tadilat ve kuru temizleme sonrası kıyafetlerinizi tekrar otelinize teslim ediyoruz. (message us on WhatsApp in your language & Russian)
             </p>
             <div className="hero-btns">
               <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ background: '#C9A96E', color: '#111' }}>
@@ -352,7 +352,7 @@ export default function MobileTailorHotelPage() {
               </div>
               <details className="faq-item">
                 <summary className="faq-q">Do you speak English or Russian?</summary>
-                <p className="faq-a">Yes, we provide our tailoring and booking services in English, Russian, and German. You can safely communicate with us via WhatsApp.</p>
+                <p className="faq-a">Yes — write to us on WhatsApp in English, Russian or German and we will reply.</p>
               </details>
               <details className="faq-item">
                 <summary className="faq-q">Otelin içine girebiliyor musunuz? Lobide ölçü alınır mı?</summary>

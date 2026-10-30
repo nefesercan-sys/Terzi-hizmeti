@@ -181,9 +181,9 @@ function _districtCopy(lang: Lang, d: District) {
   const priD: string[] = lang === 'tr'
     ? (TR_PRI.includes(d.slug) ? (d.slug === 'konyaalti' ? [`Konyaaltı, Hurma, Liman, Uncalı, Gürsu ve Öğretmenevleri'nde terzi arıyorsanız: paça ₺200'den, fermuar ₺300'den. Her gün 08:00–23:00, adrese servis. ${PH}`, `Konyaaltı terzi: Hurma, Liman, Uncalı, Gürsu. Paça ₺200'den, fermuar ₺300'den. Her gün 08:00–23:00. ${PH}`] : [`${loc} terzi: paça kısaltma ücreti ₺200'den, fermuar değişimi ₺300'den. Otel ve eve ücretsiz servis, her gün 08:00–23:00. ${PH}`, `${loc} terzi: paça ₺200'den, fermuar ₺300'den. Her gün 08:00–23:00. ${PH}`]) : [])
     : (FG_PRI.includes(d.slug) ? ({
-      en: [`Staying ${loc}? We collect from your hotel: hemming from ₺200, zippers from ₺300. We speak English. Daily 08:00–23:00. ${PH}`, `Staying ${loc}? Hotel pick-up: hemming from ₺200, zippers from ₺300. Daily 08:00–23:00. ${PH}`],
+      en: [`Staying ${loc}? We collect from your hotel: hemming from ₺200, zippers from ₺300. message us on WhatsApp in your language. Daily 08:00–23:00. ${PH}`, `Staying ${loc}? Hotel pick-up: hemming from ₺200, zippers from ₺300. Daily 08:00–23:00. ${PH}`],
       ru: [`Отдыхаете ${loc}? Заберём вещи из отеля: подшив от ₺200, молния от ₺300. Говорим по-русски. Ежедневно 08:00–23:00. ${PH}`, `Отдыхаете ${loc}? Забор из отеля: подшив от ₺200, молния от ₺300. Ежедневно 08:00–23:00. ${PH}`],
-      de: [`Urlaub ${loc}? Wir holen im Hotel ab: Kürzen ab ₺200, Reißverschluss ab ₺300. Wir sprechen Deutsch. Täglich 08:00–23:00. ${PH}`, `Urlaub ${loc}? Hotelabholung: Kürzen ab ₺200, Reißverschluss ab ₺300. Täglich 08:00–23:00. ${PH}`],
+      de: [`Urlaub ${loc}? Wir holen im Hotel ab: Kürzen ab ₺200, Reißverschluss ab ₺300. schreiben Sie uns per WhatsApp. Täglich 08:00–23:00. ${PH}`, `Urlaub ${loc}? Hotelabholung: Kürzen ab ₺200, Reißverschluss ab ₺300. Täglich 08:00–23:00. ${PH}`],
     } as Record<string, string[]>)[lang] : []);
   if (priT.length) title = pickFit([...priT, ...titles], 60);
   desc = pickFit([...priD, ...descs], 158);
@@ -239,12 +239,12 @@ function _districtAbout(lang: Lang, d: District): string {
   const t = {
     tr: {
       central: `${loc} yaşıyor ya da çalışıyorsanız kıyafetinizi Hurma'daki atölyemize getirebilir veya adresinizden aldırabilirsiniz. ${n} ve çevresinde alım-teslim ücretsizdir.`,
-      resort: `${loc} bir otelde kalıyorsanız terzi için dışarı çıkmanız gerekmez. Yırtılan, dar gelen ya da özel bir akşam için son dakika ayarı isteyen kıyafetinizi otelden alıp teslim ediyoruz. Türkçe, İngilizce, Rusça ve Almanca konuşuyoruz.`,
+      resort: `${loc} bir otelde kalıyorsanız terzi için dışarı çıkmanız gerekmez. Yırtılan, dar gelen ya da özel bir akşam için son dakika ayarı isteyen kıyafetinizi otelden alıp teslim ediyoruz. WhatsApp'tan kendi dilinizde yazabilirsiniz.`,
       outer: `${loc} ev, ofis ve sitelere alım-teslim yapıyoruz. Mesafe uzun olduğu için gün ve saati WhatsApp'tan sizinle birlikte netleştiriyoruz.`,
     },
     en: {
       central: `If you live or work ${loc}, you can drop garments off at our Hurma workshop or have us collect them from your address. Pick-up and delivery in ${n} and nearby is free.`,
-      resort: `Staying at a hotel ${loc}? You do not need to go out for a tailor. If something tears, stops fitting or needs a last-minute fix for a special evening, we collect it from your hotel and bring it back. We speak English, Turkish, Russian and German.`,
+      resort: `Staying at a hotel ${loc}? You do not need to go out for a tailor. If something tears, stops fitting or needs a last-minute fix for a special evening, we collect it from your hotel and bring it back. message us on WhatsApp in your language.`,
       outer: `We collect and deliver for homes, offices and residential complexes ${loc}. Since the distance is longer, we fix the day and time with you on WhatsApp.`,
     },
     ru: {
@@ -254,7 +254,7 @@ function _districtAbout(lang: Lang, d: District): string {
     },
     de: {
       central: `Wenn Sie ${loc} wohnen oder arbeiten, können Sie Kleidung in unserer Werkstatt in Hurma abgeben oder an Ihrer Adresse abholen lassen. Abholung und Lieferung in ${n} und Umgebung sind kostenlos.`,
-      resort: `Sie wohnen im Hotel ${loc}? Dann müssen Sie für den Schneider nicht aus dem Haus. Reißt etwas, passt nicht mehr oder braucht kurz vor einem besonderen Abend eine Anpassung, holen wir es im Hotel ab und bringen es zurück. Wir sprechen Deutsch, Englisch, Russisch und Türkisch.`,
+      resort: `Sie wohnen im Hotel ${loc}? Dann müssen Sie für den Schneider nicht aus dem Haus. Reißt etwas, passt nicht mehr oder braucht kurz vor einem besonderen Abend eine Anpassung, holen wir es im Hotel ab und bringen es zurück. Schreiben Sie uns per WhatsApp in Ihrer Sprache.`,
       outer: `Wir holen und liefern Kleidung ${loc} für Wohnungen, Büros und Wohnanlagen. Weil die Strecke länger ist, legen wir Tag und Uhrzeit per WhatsApp mit Ihnen fest.`,
     },
   }[lang];
@@ -275,28 +275,28 @@ function _districtFaq(lang: Lang, d: District): [string, string][] {
       [`${loc} ${by('paca').q.tr} ve ${by('fermuar').q.tr} aynı gün biter mi?`, 'Evet, paça kısaltma, daraltma ve fermuar değişimi ya da tamiri aynı gün teslim edilir.'],
       [`${loc} gelinlik ve abiye ayarı ne kadar tutar?`, "Gelinlik ve abiye tadilatı ₺800'den başlıyor. Kesin fiyat fotoğrafa ve işin kapsamına göre verilir; abiye ertesi gün hazır olur."],
       [`${loc} ${by('elbise-dikim').q.tr} ne zaman teslim alınır?`, 'Elbise dikimi 3 günde hazır olur. Elbise, ceket, gömlek, mont ve abiye tadilatı ya da tamiri 1 gün sürer.'],
-      [`Turist olarak ${loc} terzi bulabilir miyim?`, "Evet. Türkçe, İngilizce, Rusça ve Almanca konuşuyoruz; otel ve eve servis ücretsiz. Kıyafetin fotoğrafını WhatsApp'tan gönderin, fiyatı hemen söyleyelim."],
+      [`Turist olarak ${loc} terzi bulabilir miyim?`, "Evet. WhatsApp'tan kendi dilinizde yazabilirsiniz; otel ve eve servis ücretsiz. Kıyafetin fotoğrafını WhatsApp'tan gönderin, fiyatı hemen söyleyelim."],
     ],
     en: [
       [`Where is the nearest tailor ${loc}?`, `Our workshop is in Hurma, Konyaaltı. For ${n} we pick garments up from your address or hotel and bring them back, free of charge for hotels and homes. You can reach us on WhatsApp every day from 08:00 to 23:00.`],
       [`Can ${by('paca').q.en} and ${by('fermuar').q.en} be done in one day ${loc}?`, 'Yes. Hemming, taking in and zipper replacement or repair are returned the same day.'],
       [`What does a wedding or evening dress alteration cost ${loc}?`, 'Wedding dress alterations start at ₺800 and evening dress alterations at ₺800. The exact price is set from a photo and the scope of work; evening dresses are ready the next day.'],
       [`How soon is ${by('elbise-dikim').q.en} ready ${loc}?`, 'Dress making is ready in 3 days. Alterations and repairs of dresses, jackets, shirts, coats and evening dresses take 1 day.'],
-      [`Can tourists use a tailor ${loc}?`, 'Yes. We speak English, Turkish, Russian and German, and hotel and home service is free. Send a photo of the garment on WhatsApp and we will quote right away.'],
+      [`Can tourists use a tailor ${loc}?`, 'Yes. message us on WhatsApp in your language, and hotel and home service is free. Send a photo of the garment on WhatsApp and we will quote right away.'],
     ],
     ru: [
       [`Где ближайший портной ${loc}?`, `Мастерская находится в Хурме (Коньяалты). Для района ${n} забираем вещи с вашего адреса или из отеля и возвращаем, для отелей и дома это бесплатно. Пишите в WhatsApp каждый день с 08:00 до 23:00.`],
       [`Сколько ждать: ${by('paca').q.ru} и ${by('fermuar').q.ru} ${loc}?`, 'Подшив, ушивание и замена или ремонт молнии возвращаем в тот же день.'],
       [`Сколько стоит подгонка свадебного или вечернего платья ${loc}?`, 'Подгонка свадебного и вечернего платья начинается от ₺800. Точную цену называем по фото и объёму работ; вечерние платья готовы на следующий день.'],
       [`Сколько дней занимает ${by('elbise-dikim').q.ru} ${loc}?`, 'Пошив платья занимает 3 дня. Переделка и ремонт платьев, пиджаков, рубашек, курток и вечерних платьев — 1 день.'],
-      [`Подходит ли ваш сервис туристам ${loc}?`, 'Да. Мы говорим по-русски, по-английски, по-турецки и по-немецки, выезд в отели и на дом бесплатный. Пришлите фото вещи в WhatsApp, и мы сразу назовём цену.'],
+      [`Подходит ли ваш сервис туристам ${loc}?`, 'Да. Напишите нам в WhatsApp на своём языке, выезд в отели и на дом бесплатный. Пришлите фото вещи в WhatsApp, и мы сразу назовём цену.'],
     ],
     de: [
       [`Wo finde ich einen Schneider ${loc}?`, `Unsere Werkstatt liegt in Hurma, Konyaaltı. Für ${n} holen wir Kleidung an Ihrer Adresse oder im Hotel ab und bringen sie zurück; für Hotels und Zuhause ist das kostenlos. Per WhatsApp erreichen Sie uns täglich von 08:00 bis 23:00.`],
       [`Sind ${by('paca').q.de} und ${by('fermuar').q.de} ${loc} am selben Tag erledigt?`, 'Ja. Hose kürzen, enger machen und Reißverschluss wechseln oder reparieren sind am selben Tag fertig.'],
       [`Was kostet es, ein Brautkleid oder Abendkleid ${loc} ändern zu lassen?`, 'Änderungen am Brautkleid starten bei ₺800, am Abendkleid bei ₺800. Der genaue Preis ergibt sich aus Foto und Aufwand; Abendkleider sind am nächsten Tag fertig.'],
       [`Wann ist ${by('elbise-dikim').q.de} ${loc} fertig?`, 'Ein Kleid nähen dauert 3 Tage. Änderungen und Reparaturen an Kleidern, Sakkos, Hemden, Mänteln und Abendkleidern sind nach 1 Tag fertig.'],
-      [`Kann ich als Tourist ${loc} einen Schneider nutzen?`, 'Ja. Wir sprechen Deutsch, Englisch, Russisch und Türkisch; Hotel- und Heimservice sind kostenlos. Schicken Sie ein Foto per WhatsApp, den Preis nennen wir sofort.'],
+      [`Kann ich als Tourist ${loc} einen Schneider nutzen?`, 'Ja. Schreiben Sie uns per WhatsApp in Ihrer Sprache; Hotel- und Heimservice sind kostenlos. Schicken Sie ein Foto per WhatsApp, den Preis nennen wir sofort.'],
     ],
   }[lang] as [string, string][];
 }

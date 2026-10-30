@@ -6,7 +6,7 @@ import OtelBolgeSayfasi from '@/components/OtelBolgeSayfasi';
 
 const SITE = 'https://terzihizmeti.com.tr';
 const PHONE_TEL = '+905318986418';
-const MAPS = 'https://www.google.com/maps?cid=5846987472659818117';
+const MAPS = 'https://www.google.com/maps?cid=6436895271281342624';
 const BASE_PATH = '/de/schneider-service-hotel-antalya';
 
 export const dynamicParams = false;

@@ -68,7 +68,7 @@ support and consulting. Quantity and price are agreed per project.
 ## Facts to verify before relying on them
 
 Opening hours, price levels and service areas can change. The live pages and the Google Maps listing
-(https://www.google.com/maps?cid=5846987472659818117) are the current source.
+(https://www.google.com/maps?cid=6436895271281342624) are the current source.
 
 ---
 
@@ -232,7 +232,7 @@ A: Evet, Anavera Tekstil. https://terzihizmeti.com.tr/anavera-tekstil
 ## Verifiable Trust Signals
 
 - Google Maps listing: "TERZİ Can Antalya Tailor Service", rated 5.0 on Google from 4 reviews (October 2026; reviewers mention hotel pick-up and delivery, sewing quality and on-time delivery):
-  https://www.google.com/maps?cid=5846987472659818117
+  https://www.google.com/maps?cid=6436895271281342624
 - Opening hours: every day of the week including Saturday and Sunday, 08:00-23:00 (Antalya time)
 - Direct contact: WhatsApp / phone +90 531 898 64 18 (the same number appears on every page)
 - Limits, stated honestly: same-day service applies to Konyaaltı and nearby districts; Kaş and other

@@ -200,7 +200,7 @@ export default function OtelBolgeleriEnHub() {
               <span className="eyebrow">🧵 New</span>
               <h2 className="sec-h ff" id="linen-h">Linen & Cotton Custom Tailoring</h2>
               <p className="sec-sub">
-                Want to dress this way while you're here? Have something custom-made in 100% natural
+                Want to dress this way while you're here? Have something custom-made in natural
                 linen or cotton, to your exact measurements — browse the styles, order on WhatsApp.
               </p>
             </div>

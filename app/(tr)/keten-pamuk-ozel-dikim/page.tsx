@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Keten & Pamuk Giyim: Özel Dikim, Kalıp, Seri Üretim — Terzi Can',
-    description: '%100 doğal keten ve pamuk: bay, bayan, çocuk modelleri; özel dikim, model ve kalıp, seri ve fason üretim; Avrupa ve Rusya\'ya gönderim.',
+    description: 'doğal keten ve pamuk: bay, bayan, çocuk modelleri; özel dikim, model ve kalıp, seri ve fason üretim; Avrupa ve Rusya\'ya gönderim.',
     url: PAGE_URL, siteName: 'Terzi Can', locale: 'tr_TR', alternateLocale: ['en_US', 'ru_RU', 'de_DE'], type: 'website',
     images: [{ url: OG, width: 1024, height: 1024, alt: 'Keten pamuk özel dikim — Terzi Can Antalya' }],
   },
@@ -43,7 +43,7 @@ const jsonLd = {
       name: 'Keten & Pamuk Özel Dikim', serviceType: 'Özel dikim',
       provider: { '@id': `${SITE}#business` },
       areaServed: { '@type': 'AdministrativeArea', name: 'Antalya' },
-      description: '%100 doğal keten ve pamuk kumaşlarla ölçüye özel dikim; otele ve adrese teslim.',
+      description: 'doğal keten ve pamuk kumaşlarla ölçüye özel dikim; otele ve adrese teslim.',
     },
     {
       '@type': 'Service', '@id': `${PAGE_URL}#production`,

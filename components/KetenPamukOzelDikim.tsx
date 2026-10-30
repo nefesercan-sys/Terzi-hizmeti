@@ -58,7 +58,7 @@ const T: Record<Lang, any> = {
   tr: {
     tag: '🧵 Özel Dikim · %100 Keten & Pamuk',
     h1a: 'Keten & Pamuk', h1b: 'Özel Dikim Modelleri',
-    heroDesc: 'Aşağıdaki modellerden birini beğenin ya da kendi fikrinizi getirin — %100 doğal keten veya pamuktan, tam sizin ölçünüze göre dikelim. Antalya Konyaaltı atölyemizde; bay bayan, tek veya seri adet, otelinize teslim ya da yurt içi ve yurt dışı gönderim.',
+    heroDesc: 'Aşağıdaki modellerden birini beğenin ya da kendi fikrinizi getirin — doğal keten veya pamuktan, tam sizin ölçünüze göre dikelim. Antalya Konyaaltı atölyemizde; bay bayan, tek veya seri adet, otelinize teslim ya da yurt içi ve yurt dışı gönderim.',
     galleryH: 'Model Örnekleri', gallerySub: 'Beğendiğiniz modeli WhatsApp\'tan gönderin, ölçünüzü alalım.',
     ctaBtn: 'Bu Modeli İste — WhatsApp',
     howH: 'Nasıl Çalışır?',
@@ -102,7 +102,7 @@ const T: Record<Lang, any> = {
   en: {
     tag: '🧵 Custom Tailoring · 100% Linen & Cotton',
     h1a: 'Linen & Cotton', h1b: 'Custom Tailoring Models',
-    heroDesc: 'Pick a style below or bring your own idea — we\'ll tailor it in 100% natural linen or cotton, made exactly to your measurements. Made in our Konyaaltı, Antalya workshop for men and women, single piece or serial, delivered to your hotel or shipped across Turkey and abroad.',
+    heroDesc: 'Pick a style below or bring your own idea — we\'ll tailor it in natural linen or cotton, made exactly to your measurements. Made in our Konyaaltı, Antalya workshop for men and women, single piece or serial, delivered to your hotel or shipped across Turkey and abroad.',
     galleryH: 'Style Examples', gallerySub: 'Send the style you like on WhatsApp and we\'ll take your measurements.',
     ctaBtn: 'Request This Style — WhatsApp',
     howH: 'How It Works',
@@ -146,7 +146,7 @@ const T: Record<Lang, any> = {
   ru: {
     tag: '🧵 Пошив на заказ · 100% лён и хлопок',
     h1a: 'Лён и хлопок', h1b: 'Модели на заказ',
-    heroDesc: 'Выберите модель ниже или предложите свою идею — сошьём из 100% натурального льна или хлопка точно по вашим меркам. Мастерская в Коньяалты, Анталья: мужская и женская одежда, одна вещь или серия, доставка в отель или по Турции и за рубеж.',
+    heroDesc: 'Выберите модель ниже или предложите свою идею — сошьём из натурального льна или хлопка точно по вашим меркам. Мастерская в Коньяалты, Анталья: мужская и женская одежда, одна вещь или серия, доставка в отель или по Турции и за рубеж.',
     galleryH: 'Примеры моделей', gallerySub: 'Отправьте понравившуюся модель в WhatsApp — снимем мерки.',
     ctaBtn: 'Заказать эту модель — WhatsApp',
     howH: 'Как это работает',
@@ -190,7 +190,7 @@ const T: Record<Lang, any> = {
   de: {
     tag: '🧵 Maßschneiderei · 100% Leinen & Baumwolle',
     h1a: 'Leinen & Baumwolle', h1b: 'Modelle nach Maß',
-    heroDesc: 'Wählen Sie unten einen Stil oder bringen Sie Ihre eigene Idee mit — wir schneidern aus 100% natürlichem Leinen oder Baumwolle, genau nach Ihren Maßen. Gefertigt in unserer Werkstatt in Konyaaltı für Damen und Herren, Einzelstück oder Serie, geliefert ans Hotel oder versendet in der Türkei und ins Ausland.',
+    heroDesc: 'Wählen Sie unten einen Stil oder bringen Sie Ihre eigene Idee mit — wir schneidern aus natürlichem Leinen oder Baumwolle, genau nach Ihren Maßen. Gefertigt in unserer Werkstatt in Konyaaltı für Damen und Herren, Einzelstück oder Serie, geliefert ans Hotel oder versendet in der Türkei und ins Ausland.',
     galleryH: 'Stilbeispiele', gallerySub: 'Senden Sie den gewünschten Stil per WhatsApp — wir nehmen Maß.',
     ctaBtn: 'Diesen Stil anfragen — WhatsApp',
     howH: 'So funktioniert es',

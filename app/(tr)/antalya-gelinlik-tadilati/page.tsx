@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import ReviewsBlock from '@/components/ReviewsBlock';
-import { reviewSchema } from '@/lib/reviews';
+import { businessNode } from '@/lib/business';
+import { fitKeywords } from '@/lib/meta-fit';
 
 const SITE     = 'https://terzihizmeti.com.tr';
 const PAGE_URL = `${SITE}/antalya-gelinlik-tadilati`;
@@ -14,14 +15,14 @@ const TODAY     = '2026-10-04';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Gelinlik & Abiye Tadilatı Antalya — Aynı Gün Prova" },
+  title: { absolute: "Gelinlik & Abiye Tadilatı Antalya — Prova ile" },
   description:
     'Antalya\'da gelinlik ve abiye tadilatı. Hassas daraltma, boy ayarı, detaylı onarım. ₺800\'den, randevulu ve özenli hizmet. Konyaaltı merkezli atölye.',
-  keywords: [
+  keywords: fitKeywords([
     'gelinlik tadilatı Antalya', 'abiye tadilatı Antalya', 'gelinlik daraltma Antalya',
     'gelinlik boy ayarı Konyaaltı', 'düğün kıyafeti tadilatı', 'nişanlık tadilatı Antalya',
     'wedding dress alterations Antalya', 'подгонка свадебного платья Анталья',
-  ],
+  ]),
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   alternates: { canonical: PAGE_URL },
   openGraph: {
@@ -35,52 +36,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
-    {
-      '@type': ['LocalBusiness', 'ClothingStore'],
-      ...reviewSchema(),
-      additionalType: ['https://schema.org/SewingService', 'https://schema.org/DryCleaningService'],
-      '@id': `${SITE}#business`,
-      name: 'Terzi Can',
-      alternateName: [
-        'Terzi Can Antalya', 'Konyaaltı Terzi', 'Tailor Can Antalya',
-        'Портной Кан Анталья', 'Schneider Can Antalya', 'Terzi Hizmeti Antalya', 'Dikiş Atölyesi Antalya',
-      ],
-      description: "Antalya Konyaaltı'da 2006'dan bu yana hizmet veren profesyonel terzi atölyesi. Paça kısaltma, fermuar değişimi, bel daraltma, özel dikim, gelinlik tadilatı, tekstil imalatı ve kuru temizleme. Hurma, Liman, Sarısu, Gürsu, Uncalı bölgelerine hizmet.",
-      url: SITE,
-      telephone: PHONE_TEL,
-      priceRange: '₺₺',
-      currenciesAccepted: 'TRY, EUR, USD, RUB',
-      paymentAccepted: 'Cash, Credit Card',
-      image: `${SITE}/terzi-can-hero.jpg`,
-      logo: `${SITE}/terzi-can-hero.jpg`,
-      hasMap: MAPS,
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: 'Hurma Mahallesi',
-        addressLocality: 'Konyaaltı',
-        addressRegion: 'Antalya',
-        postalCode: '07130',
-        addressCountry: 'TR',
-      },
-      geo: { '@type': 'GeoCoordinates', latitude: 36.857466, longitude: 30.596987 },
-      openingHoursSpecification: [{
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-        opens: '08:00', closes: '23:00',
-      }],
-      areaServed: [
-        'Liman, Konyaaltı', 'Hurma, Konyaaltı', 'Sarısu, Konyaaltı', 'Gürsu, Konyaaltı', 'Uncalı, Konyaaltı',
-        'Konyaaltı', 'Muratpaşa', 'Kepez', 'Antalya', 'Lara', 'Belek', 'Kemer', ].map((n) => ({ '@type': 'Place', name: n })),
-      contactPoint: [{
-        '@type': 'ContactPoint',
-        telephone: PHONE_TEL,
-        contactType: 'customer service',
-        areaServed: 'TR',
-        availableLanguage: ['Turkish', 'English', 'Russian', 'German', 'Polish', 'Ukrainian', 'Dutch', 'French', 'Spanish', 'Arabic'],
-      }],
-      sameAs: [MAPS, `https://wa.me/${WA_NUM}`, 'https://swaphubs.com/terzi'],
-      knowsLanguage: ['tr', 'en', 'ru', 'de', 'pl', 'uk', 'nl', 'fr', 'es', 'ar'],
-    },
+    businessNode(),
     {
       '@type': 'WebPage',
       '@id': `${PAGE_URL}#webpage`,
@@ -140,7 +96,7 @@ const jsonLd = {
       '@type': 'FAQPage',
       '@id': `${PAGE_URL}#faq`,
       mainEntity: [
-        { '@type': 'Question', name: 'Gelinlik tadilatı ne kadar sürede tamamlanır?', acceptedAnswer: { '@type': 'Answer', text: 'Basit boy ayarı 24-48 saat, kapsamlı bel daraltma ve korse onarımı 3-5 gün sürebilir. Düğün tarihine göre öncelikli randevu ayarlanır.' } },
+        { '@type': 'Question', name: 'Gelinlik tadilatı ne kadar sürede tamamlanır?', acceptedAnswer: { '@type': 'Answer', text: 'Basit boy ayarı normal tadilat gibi ertesi gün teslim edilir; kapsamlı bel daraltma ve korse onarımında süre işin kapsamına göre WhatsApp\'ta netleşir. Düğün tarihine göre öncelikli randevu ayarlanır.' } },
         { '@type': 'Question', name: 'Gelinlik tadilatı fiyatı ne kadar?', acceptedAnswer: { '@type': 'Answer', text: 'Boy ayarı ₺800\'den, bel daraltma ₺800\'den, korse/kapama onarımı ₺800\'den başlar. Abiye tadilatı ₺800\'den başlar.' } },
         { '@type': 'Question', name: 'Dantel ve tül kumaşlarla çalışıyor musunuz?', acceptedAnswer: { '@type': 'Answer', text: 'Evet, dantel, tül, saten, organze gibi hassas gelinlik kumaşlarında uzman işçiliğimiz var. Desen bütünlüğü bozulmadan tadilat yapılır.' } },
         { '@type': 'Question', name: 'Son dakika gelinlik tadilatı yapıyor musunuz?', acceptedAnswer: { '@type': 'Answer', text: 'Düğününüze az kaldıysa bize hemen ulaşın, ekspres randevu için elimizden geleni yaparız. Erken randevu her zaman önerilir.' } },
@@ -276,7 +232,7 @@ export default function GelinlikTadilatiPage() {
               <h2 className="sec-h ff" id="faq-h">Gelinlik Tadilatı Hakkında Sık Sorulan Sorular</h2>
             </div>
             {[
-              ['Gelinlik tadilatı ne kadar sürede tamamlanır?', 'Basit boy ayarı 24-48 saat, kapsamlı bel daraltma ve korse onarımı 3-5 gün sürebilir. Düğün tarihine göre öncelikli randevu ayarlanır.'],
+              ['Gelinlik tadilatı ne kadar sürede tamamlanır?', 'Basit boy ayarı normal tadilat gibi ertesi gün teslim edilir; kapsamlı bel daraltma ve korse onarımında süre işin kapsamına göre WhatsApp\'ta netleşir. Düğün tarihine göre öncelikli randevu ayarlanır.'],
               ['Gelinlik tadilatı fiyatı ne kadar?', 'Boy ayarı ₺800\'den, bel daraltma ₺800\'den, korse/kapama onarımı ₺800\'den başlar. Abiye tadilatı ₺800\'den başlar.'],
               ['Dantel ve tül kumaşlarla çalışıyor musunuz?', 'Evet, dantel, tül, saten, organze gibi hassas gelinlik kumaşlarında uzman işçiliğimiz var. Desen bütünlüğü bozulmadan tadilat yapılır.'],
               ['Son dakika gelinlik tadilatı yapıyor musunuz?', 'Düğününüze az kaldıysa bize hemen ulaşın, ekspres randevu için elimizden geleni yaparız. Erken randevu her zaman önerilir.'],

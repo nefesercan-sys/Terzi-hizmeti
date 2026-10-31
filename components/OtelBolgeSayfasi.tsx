@@ -1,6 +1,13 @@
 import Image from 'next/image';
+import { PRICE_ROWS } from '@/components/TerziFiyatlariSayfasi';
 import Link from 'next/link';
 import type { OtelBolgesi } from '@/lib/otel-bolgeleri';
+import { regionAnswer, regionFaq } from '@/lib/otel-copy';
+import { areaIntro, areaNeeds, NEEDS_H, pickVariant } from '@/lib/area-profiles';
+import { findDistrict } from '@/lib/seo-data';
+
+// Fiyatlar tek kaynaktan (fiyat sayfası bileşeni)
+const P = { hem: PRICE_ROWS[1].rows[0], zip: PRICE_ROWS[0].rows[0], alter: PRICE_ROWS[1].rows[3], wedding: PRICE_ROWS[1].rows[4], iron: PRICE_ROWS[3].rows[0], dry: PRICE_ROWS[3].rows[1] };
 
 const PHONE = '+90 531 898 64 18';
 const PHONE_TEL = '+905318986418';
@@ -8,19 +15,12 @@ const WA_NUM = '905318986418';
 
 type Lang = 'tr' | 'en' | 'ru' | 'de';
 
-// VIP SEO Metinleri için Tip Tanımlaması
-export interface SeoContent {
-  h1: string;
-  h2: string;
-  body1: string;
-  body2: string;
-}
-
 const T: Record<Lang, any> = {
   en: {
+    noPartner: 'We do not work for or represent any hotel; the region name only tells you where we can come.',
     homeLabel: '← Home', tag: (r: string) => `📍 ${r} Hotel Zone · Mobile Tailor`,
     h1: (r: string) => <>Hotel Tailor<br /><span className="accent">{r}</span></>,
-    heroDesc: (r: string, blurb: string) => `${blurb} Terzi Can's mobile tailor comes directly to your hotel in ${r} — measurement, tailoring, alterations, ironing and dry cleaning delivered back to your room.`,
+    heroDesc: (_r: string, answer: string) => answer,
     waShare: 'Share Hotel Name', callLabel: PHONE,
     aboutH: (r: string) => `About ${r}`, travelLabel: 'Travel time:',
     hotelsH: (r: string) => `Hotels in the ${r} Area`, hotelsSub: 'We can reach you at any hotel in this district — just share your hotel name on WhatsApp and we\'ll confirm.',
@@ -32,30 +32,31 @@ const T: Record<Lang, any> = {
       { icon: '📏', tr: 'Alterations', en: 'Hemming, taking in', desc: 'Precise fit adjustments so clothing sits exactly right.', items: ['Hemming', 'Waist Taking In', 'Sleeve Shortening'] },
       { icon: '🧺', tr: 'Ironing & Dry Cleaning', en: 'Steam press, dry cleaning', desc: 'Professional steam ironing and dry cleaning, picked up and delivered.', items: ['Ironing', 'Dry Cleaning'] },
     ],
-    priceEyebrow: '₺ Transparent Prices', priceH: 'Prices', priceSub: 'Hotel visit fee depends on the area (free in Konyaaltı) — plus the price of the work.',
-    priceRows: [['Hotel Visit', 'FREE'], ['Hemming', '₺200+'], ['Zipper Replacement', '₺300+'], ['Dress / Suit Alteration', '₺200+'], ['Wedding Dress Alteration', '₺800+'], ['Ironing (per item)', '₺80+'], ['Dry Cleaning', '₺300+']],
+    priceEyebrow: '₺ Prices', priceH: 'Prices', priceSub: 'Hotel pick-up and delivery is free — you only pay for the work.',
+    priceRows: [['Hotel Visit', 'FREE'], ['Hemming', (P.hem)], ['Zipper Replacement', (P.zip)], ['Dress / Suit Alteration', (P.alter)], ['Wedding Dress Alteration', (P.wedding)], ['Ironing (per item)', (P.iron)], ['Dry Cleaning', (P.dry)]],
     procEyebrow: 'Process', procH: 'How It Works',
     steps: [
       ['01', 'Share Hotel & Room', `Send hotel name and room number to ${PHONE}`],
-      ['02', 'Booking Within 30 Min', 'We confirm a convenient time'],
+      ['02', 'Time Confirmed on WhatsApp', 'We confirm a convenient time'],
       ['03', 'On-Site Measurement', 'Tailor visits, measures and collects the garment'],
-      ['04', '24–48h Delivery', 'Finished garment delivered back to your room'],
+      ['04', 'Next-Day Delivery', 'Finished garment delivered back to your room'],
     ],
     faqEyebrow: 'FAQ', faqH: 'Frequently Asked Questions',
     faq: (r: string) => [
       [`Do you come to all hotels in ${r}?`, `Yes! We visit every hotel in ${r} — share your hotel name and room number on WhatsApp.`],
-      ['Is the hotel visit free?', 'Free in Konyaaltı. For other areas the visit fee is set by distance and confirmed on WhatsApp before we come; you then pay for the tailoring or repair work.'],
-      ['How fast is the service?', 'Most repairs and hemming are completed within 24–48 hours.'],
+      ['Is the hotel visit free?', 'Hotel pick-up and delivery is free in every area we serve; we confirm the time on WhatsApp before we come; you then pay for the tailoring or repair work.'],
+      ['How fast is the service?', 'Standard repairs and hemming are ready the next day; urgent jobs take 1–2 hours.'],
       ['Do you speak English?', 'Yes — write to us on WhatsApp in your own language and we will reply.'],
     ],
-    ctaH: (r: string) => <>Hotel Tailor in {r}<br />We Come to You</>, ctaSub: 'Share your hotel name — booked within 30 minutes.',
+    ctaH: (r: string) => <>Hotel Tailor in {r}<br />We Come to You</>, ctaSub: 'Share your hotel name — time confirmed on WhatsApp.',
     waBtn: 'Message on WhatsApp', mapsBtn: 'Google Maps',
     footTitle: 'Related', related: [] as [string, string][],
   },
   ru: {
+    noPartner: 'Мы не представляем ни один отель; название района лишь показывает, куда мы можем приехать.',
     homeLabel: '← Главная', tag: (r: string) => `📍 Отельная зона ${r} · Выездной портной`,
     h1: (r: string) => <>Портной в отеле<br /><span className="accent">{r}</span></>,
-    heroDesc: (r: string, blurb: string) => `${blurb} Выездной портной Terzi Can приедет прямо в ваш отель в районе ${r} — снятие мерок, пошив, подгонка, глажка и химчистка с доставкой в номер.`,
+    heroDesc: (_r: string, answer: string) => answer,
     waShare: 'Отправить название отеля', callLabel: PHONE,
     aboutH: (r: string) => `О районе ${r}`, travelLabel: 'Время в пути:',
     hotelsH: (r: string) => `Отели в районе ${r}`, hotelsSub: 'Мы можем приехать в любой отель этого района — просто напишите название отеля в WhatsApp, и мы подтвердим.',
@@ -67,30 +68,31 @@ const T: Record<Lang, any> = {
       { icon: '📏', tr: 'Подгонка', en: 'Укорачивание, заужение', desc: 'Точная подгонка по фигуре.', items: ['Укорачивание', 'Заужение талии', 'Укорачивание рукавов'] },
       { icon: '🧺', tr: 'Глажка и химчистка', en: 'Паровая глажка, химчистка', desc: 'Профессиональная глажка и химчистка с забором и доставкой.', items: ['Глажка', 'Химчистка'] },
     ],
-    priceEyebrow: '₺ Прозрачные цены', priceH: 'Цены', priceSub: 'Выезд в отель: в Коньяалты бесплатно, в другие районы — по расстоянию, плюс стоимость работы.',
-    priceRows: [['Выезд в отель', 'БЕСПЛАТНО'], ['Укорачивание', 'от ₺200'], ['Замена молнии', 'от ₺300'], ['Подгонка платья/костюма', 'от ₺200'], ['Подгонка свадебного платья', 'от ₺800'], ['Глажка (за вещь)', 'от ₺80'], ['Химчистка', 'от ₺300']],
+    priceEyebrow: '₺ Цены', priceH: 'Цены', priceSub: 'Забор и доставка в отель бесплатны — вы платите только за работу.',
+    priceRows: [['Выезд в отель', 'БЕСПЛАТНО'], ['Укорачивание', ('от ' + P.hem.replace('+', ''))], ['Замена молнии', ('от ' + P.zip.replace('+', ''))], ['Подгонка платья/костюма', ('от ' + P.alter.replace('+', ''))], ['Подгонка свадебного платья', ('от ' + P.wedding.replace('+', ''))], ['Глажка (за вещь)', ('от ' + P.iron.replace('+', ''))], ['Химчистка', ('от ' + P.dry.replace('+', ''))]],
     procEyebrow: 'Процесс', procH: 'Как мы работаем',
     steps: [
       ['01', 'Отель и номер', `Отправьте название отеля и номер комнаты на ${PHONE}`],
-      ['02', 'Запись за 30 минут', 'Мы согласуем удобное время'],
+      ['02', 'Время — в WhatsApp', 'Мы согласуем удобное время'],
       ['03', 'Снятие мерок на месте', 'Портной приезжает, снимает мерки и забирает вещь'],
-      ['04', 'Доставка за 24–48ч', 'Готовая вещь доставляется обратно в номер'],
+      ['04', 'Готово на следующий день', 'Готовая вещь доставляется обратно в номер'],
     ],
     faqEyebrow: 'Вопросы', faqH: 'Часто задаваемые вопросы',
     faq: (r: string) => [
       [`Вы приезжаете во все отели ${r}?`, `Да! Мы приезжаем в каждый отель района ${r} — напишите название отеля и номер комнаты в WhatsApp.`],
       ['Выезд в отель бесплатный?', 'В Коньяалты — бесплатно. В другие районы стоимость выезда зависит от расстояния и согласуется в WhatsApp заранее; затем вы платите за саму работу.'],
-      ['Как быстро выполняется услуга?', 'Большинство работ выполняется за 24–48 часов.'],
+      ['Как быстро выполняется услуга?', 'Обычные работы готовы на следующий день, срочные — за 1–2 часа.'],
       ['Вы говорите по-русски?', 'Да — напишите нам в WhatsApp на своём языке, и мы ответим.'],
     ],
-    ctaH: (r: string) => <>Портной в отеле {r}<br />Мы приедем к вам</>, ctaSub: 'Отправьте название отеля — запись за 30 минут.',
+    ctaH: (r: string) => <>Портной в отеле {r}<br />Мы приедем к вам</>, ctaSub: 'Отправьте название отеля — время согласуем в WhatsApp.',
     waBtn: 'Написать в WhatsApp', mapsBtn: 'Google Maps',
     footTitle: 'Похожие', related: [] as [string, string][],
   },
   de: {
+    noPartner: 'Wir arbeiten nicht für ein bestimmtes Hotel; der Gebietsname zeigt nur, wohin wir kommen können.',
     homeLabel: '← Startseite', tag: (r: string) => `📍 Hotelzone ${r} · Mobiler Schneider`,
     h1: (r: string) => <>Schneider im Hotel<br /><span className="accent">{r}</span></>,
-    heroDesc: (r: string, blurb: string) => `${blurb} Der mobile Schneider von Terzi Can kommt direkt zu Ihrem Hotel in ${r} — Maßnehmen, Schneidern, Änderungen, Bügeln und chemische Reinigung, geliefert auf Ihr Zimmer.`,
+    heroDesc: (_r: string, answer: string) => answer,
     waShare: 'Hotelnamen senden', callLabel: PHONE,
     aboutH: (r: string) => `Über ${r}`, travelLabel: 'Anfahrtszeit:',
     hotelsH: (r: string) => `Hotels im Gebiet ${r}`, hotelsSub: 'Wir erreichen Sie in jedem Hotel dieses Bezirks — teilen Sie einfach Ihren Hotelnamen per WhatsApp mit, wir bestätigen den Termin.',
@@ -102,30 +104,31 @@ const T: Record<Lang, any> = {
       { icon: '📏', tr: 'Änderungen', en: 'Kürzen, enger machen', desc: 'Präzise Passform-Anpassungen für perfekten Sitz.', items: ['Kürzen', 'Taille enger machen', 'Ärmel kürzen'] },
       { icon: '🧺', tr: 'Bügelservice & Reinigung', en: 'Dampfbügeln, Reinigung', desc: 'Professionelles Bügeln und chemische Reinigung mit Abholung und Lieferung.', items: ['Bügeln', 'Chemische Reinigung'] },
     ],
-    priceEyebrow: '₺ Transparente Preise', priceH: 'Preise', priceSub: 'Hotelbesuch in Konyaaltı kostenlos, andere Gebiete je nach Entfernung — dazu der Preis der Arbeit.',
-    priceRows: [['Hotelbesuch', 'KOSTENLOS'], ['Kürzen', 'ab ₺200'], ['Reißverschluss ersetzen', 'ab ₺300'], ['Kleid-/Anzugänderung', 'ab ₺200'], ['Brautkleid ändern', 'ab ₺800'], ['Bügeln (pro Stück)', 'ab ₺80'], ['Chemische Reinigung', 'ab ₺300']],
+    priceEyebrow: '₺ Preise', priceH: 'Preise', priceSub: 'Abholung und Lieferung im Hotel sind kostenlos — Sie zahlen nur die Arbeit.',
+    priceRows: [['Hotelbesuch', 'KOSTENLOS'], ['Kürzen', ('ab ' + P.hem.replace('+', ''))], ['Reißverschluss ersetzen', ('ab ' + P.zip.replace('+', ''))], ['Kleid-/Anzugänderung', ('ab ' + P.alter.replace('+', ''))], ['Brautkleid ändern', ('ab ' + P.wedding.replace('+', ''))], ['Bügeln (pro Stück)', ('ab ' + P.iron.replace('+', ''))], ['Chemische Reinigung', ('ab ' + P.dry.replace('+', ''))]],
     procEyebrow: 'Ablauf', procH: 'So funktioniert es',
     steps: [
       ['01', 'Hotel & Zimmer angeben', `Senden Sie Hotelname und Zimmernummer an ${PHONE}`],
-      ['02', 'Termin in 30 Min', 'Wir bestätigen eine passende Zeit'],
+      ['02', 'Zeit per WhatsApp', 'Wir bestätigen eine passende Zeit'],
       ['03', 'Maßnehmen vor Ort', 'Schneider kommt, nimmt Maß und das Kleidungsstück mit'],
-      ['04', 'Lieferung in 24–48 Std', 'Fertiges Kleidungsstück wird zurück auf Ihr Zimmer geliefert'],
+      ['04', 'Am nächsten Tag fertig', 'Fertiges Kleidungsstück wird zurück auf Ihr Zimmer geliefert'],
     ],
     faqEyebrow: 'FAQ', faqH: 'Häufig gestellte Fragen',
     faq: (r: string) => [
       [`Kommen Sie zu allen Hotels in ${r}?`, `Ja! Wir besuchen jedes Hotel in ${r} — teilen Sie Hotelname und Zimmernummer per WhatsApp mit.`],
       ['Ist der Hotelbesuch kostenlos?', 'In Konyaaltı ja. Für andere Gebiete richtet sich das Entgelt nach der Entfernung und wird vorab per WhatsApp bestätigt; dazu zahlen Sie die eigentliche Arbeit.'],
-      ['Wie schnell ist der Service?', 'Die meisten Reparaturen werden innerhalb von 24–48 Stunden erledigt.'],
+      ['Wie schnell ist der Service?', 'Normale Reparaturen sind am nächsten Tag fertig, eilige in 1–2 Stunden.'],
       ['Sprechen Sie Deutsch?', 'Ja — schreiben Sie uns per WhatsApp in Ihrer Sprache, wir antworten.'],
     ],
-    ctaH: (r: string) => <>Schneider im Hotel {r}<br />Wir kommen zu Ihnen</>, ctaSub: 'Hotelnamen senden — Termin in 30 Minuten.',
+    ctaH: (r: string) => <>Schneider im Hotel {r}<br />Wir kommen zu Ihnen</>, ctaSub: 'Hotelnamen senden — Zeit per WhatsApp klären.',
     waBtn: 'Auf WhatsApp schreiben', mapsBtn: 'Google Maps',
     footTitle: 'Ähnlich', related: [] as [string, string][],
   },
   tr: {
+    noPartner: 'Belirli bir otelle ortaklığımız yoktur; bölge adı yalnızca hizmet verdiğimiz yeri gösterir.',
     homeLabel: '← Ana Sayfa', tag: (r: string) => `📍 ${r} Otel Bölgesi · Otele Gelen Terzi`,
     h1: (r: string) => <>Otele Gelen Terzi<br /><span className="accent">{r}</span></>,
-    heroDesc: (r: string, blurb: string) => `${blurb} Terzi Can'ın otele gelen terzisi ${r} bölgesindeki otelinize gelir — ölçü alma, dikim, tadilat, ütü ve kuru temizleme işleminizi tamamlayıp odanıza teslim eder.`,
+    heroDesc: (_r: string, answer: string) => answer,
     waShare: 'Otel Adını Gönderin', callLabel: PHONE,
     aboutH: (r: string) => `${r} Hakkında`, travelLabel: 'Ulaşım süresi:',
     hotelsH: (r: string) => `${r} Bölgesindeki Oteller`, hotelsSub: 'Bu bölgedeki her otele ulaşabiliyoruz — otel adınızı WhatsApp\'tan iletin, size dönelim.',
@@ -137,35 +140,39 @@ const T: Record<Lang, any> = {
       { icon: '📏', tr: 'Tadilat', en: 'Boy kısaltma, daraltma', desc: 'Kıyafetin tam oturması için hassas ölçü ayarı.', items: ['Boy Kısaltma', 'Bel Daraltma', 'Kol Kısaltma'] },
       { icon: '🧺', tr: 'Ütü & Kuru Temizleme', en: 'Buharlı ütü, kuru temizleme', desc: 'Profesyonel buharlı ütü ve kuru temizleme, alım-teslimatlı.', items: ['Ütü', 'Kuru Temizleme'] },
     ],
-    priceEyebrow: '₺ Şeffaf Fiyatlar', priceH: 'Fiyatlar', priceSub: 'Otel ziyareti Konyaaltı\'nda ücretsiz, diğer bölgelerde mesafeye göre — yapılan iş ücreti ayrıca.',
-    priceRows: [['Otel Ziyareti', 'ÜCRETSİZ'], ['Boy Kısaltma', '₺200+'], ['Fermuar Değişimi', '₺300+'], ['Elbise / Takım Tadilatı', '₺200+'], ['Gelinlik Tadilatı', '₺800+'], ['Ütü (adet başı)', '₺80+'], ['Kuru Temizleme', '₺300+']],
+    priceEyebrow: '₺ Fiyatlar', priceH: 'Fiyatlar', priceSub: 'Otele alım-teslim ücretsiz — yalnızca yapılan iş ücretlendirilir.',
+    priceRows: [['Otel Ziyareti', 'ÜCRETSİZ'], ['Boy Kısaltma', (P.hem)], ['Fermuar Değişimi', (P.zip)], ['Elbise / Takım Tadilatı', (P.alter)], ['Gelinlik Tadilatı', (P.wedding)], ['Ütü (adet başı)', (P.iron)], ['Kuru Temizleme', (P.dry)]],
     procEyebrow: 'Süreç', procH: 'Nasıl Çalışır',
     steps: [
       ['01', 'Otel & Oda Bilginizi Gönderin', `Otel adı ve oda numaranızı ${PHONE} numarasına iletin`],
-      ['02', '30 Dakikada Randevu', 'Size uygun bir saat belirleyip onaylıyoruz'],
+      ['02', 'WhatsApp\'tan Randevu', 'Size uygun bir saat belirleyip onaylıyoruz'],
       ['03', 'Yerinde Ölçü Alma', 'Terzimiz gelir, ölçü alır ve kıyafeti teslim alır'],
-      ['04', '24–48 Saatte Teslim', 'Tamamlanan kıyafet odanıza geri teslim edilir'],
+      ['04', 'Ertesi Gün Teslim', 'Tamamlanan kıyafet odanıza geri teslim edilir'],
     ],
     faqEyebrow: 'SSS', faqH: 'Sık Sorulan Sorular',
     faq: (r: string) => [
-      [`${r} bölgesindeki tüm otellere geliyor musunuz?`, `Evet! ${r} bölgesindeki her otele ulaşabiliyoruz — otel adınızı ve oda numaranızı WhatsApp'tan iletin.`],
-      ['Otel ziyareti ücretsiz mi?', 'Konyaaltı\'nda ücretsiz. Diğer bölgelerde servis ücreti mesafeye göre belirlenir ve gelmeden önce WhatsApp\'tan netleştirilir; ayrıca dikim/tamir işi için ödeme yaparsınız.'],
-      ['Hizmet ne kadar sürede tamamlanır?', 'Çoğu tamir ve boy kısaltma işlemi 24–48 saat içinde tamamlanır.'],
+      [`${r} bölgesindeki tüm otellere geliyor musunuz?`, `Evet! ${r} bölgesindeki her otele ulaşabiliyoruz — otel adınızı ve oda numaranızı WhatsApp\'tan iletin.`],
+      ['Otel ziyareti ücretsiz mi?', 'Otele alım-teslim hizmet verilen tüm bölgelerde ücretsizdir; gelmeden önce saat WhatsApp\'tan netleştirilir; ayrıca dikim/tamir işi için ödeme yaparsınız.'],
+      ['Hizmet ne kadar sürede tamamlanır?', 'Normal tamir ve boy kısaltma ertesi gün, acil işler 1–2 saatte teslim edilir.'],
       ['Türkçe dışında dil konuşuyor musunuz?', 'Evet — WhatsApp\'tan kendi dilinizde yazın, size aynı dilde yanıt veriyoruz.'],
     ],
-    ctaH: (r: string) => <>{r} Bölgesinde Otele Gelen Terzi<br />Size Geliyoruz</>, ctaSub: 'Otel adınızı gönderin — 30 dakikada randevunuz netleşsin.',
+    ctaH: (r: string) => <>{r} Bölgesinde Otele Gelen Terzi<br />Size Geliyoruz</>, ctaSub: 'Otel adınızı gönderin — randevunuz WhatsApp\'tan netleşsin.',
     waBtn: 'WhatsApp\'tan Yazın', mapsBtn: 'Google Haritalar',
     footTitle: 'İlgili', related: [] as [string, string][],
   },
 };
 
-export default function OtelBolgeSayfasi({ lang, region, allRegions, basePath, maps, seoContent }: {
+function pickSome<T>(arr: T[], slug: string, n: number, salt: string): T[] {
+  const start = pickVariant(slug, arr.length, salt);
+  return Array.from({ length: Math.min(n, arr.length) }, (_, i) => arr[(start + i) % arr.length]);
+}
+
+export default function OtelBolgeSayfasi({ lang, region, allRegions, basePath, maps }: {
   lang: Lang; 
   region: OtelBolgesi; 
   allRegions: OtelBolgesi[]; 
   basePath: string; 
   maps: string;
-  seoContent?: SeoContent; 
 }) {
   const t = T[lang] || T['en'];
   
@@ -179,7 +186,7 @@ export default function OtelBolgeSayfasi({ lang, region, allRegions, basePath, m
 
   return (
     <div style={{ background: '#1E3329', color: '#F5F1E8', fontFamily: 'var(--font-inter), system-ui, sans-serif', lineHeight: 1.6, minHeight: '100vh' }}>
-      <a href="#main-content" className="skip-link">Skip to content</a>
+      <a href="#main-content" className="skip-link">{lang === 'ru' ? 'Перейти к содержанию' : lang === 'de' ? 'Zum Inhalt springen' : lang === 'tr' ? 'İçeriğe geç' : 'Skip to content'}</a>
 
       <nav className="nav" aria-label="Main navigation">
         <div className="nav-logo"><span className="nav-dot" aria-hidden="true" />TERZİ CAN</div>
@@ -189,7 +196,7 @@ export default function OtelBolgeSayfasi({ lang, region, allRegions, basePath, m
 
       <header className="hero">
         <div className="hero-bg" aria-hidden="true">
-          <Image src="/terzi-can-hero.jpg" alt={`Terzi Can — ${region.name} otel bölgesine gelen mobil terzi hizmeti`} fill priority fetchPriority="high" sizes="100vw"
+          <Image src="/terzi-can-hero.jpg" alt={`Terzi Can — ${region.name}`} fill priority fetchPriority="high" sizes="100vw"
             style={{ objectFit: 'cover', objectPosition: 'center 15%', filter: 'brightness(.32) saturate(.75)' }} />
           <div className="hero-overlay" />
         </div>
@@ -197,7 +204,7 @@ export default function OtelBolgeSayfasi({ lang, region, allRegions, basePath, m
           <span className="hero-tag">{t.tag(region.name)}</span>
           <span className="hero-eng">Terzi Can</span>
           <h1 id="hero-h">{t.h1(region.name)}</h1>
-          <p className="hero-desc" id="hero-desc">{t.heroDesc(region.name, region.blurb[lang])}</p>
+          <p className="hero-desc" id="hero-desc">{t.heroDesc(region.name, regionAnswer(lang, region.slug, region.name))}</p>
           <div className="hero-btns">
             <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-primary"><span aria-hidden="true">💬</span> {t.waShare} <span aria-hidden="true">→</span></a>
             <a href={`tel:${PHONE_TEL}`} className="btn-secondary"><span aria-hidden="true">📞</span> {t.callLabel}</a>
@@ -207,43 +214,16 @@ export default function OtelBolgeSayfasi({ lang, region, allRegions, basePath, m
 
       <main id="main-content">
         
-        {/* VIP SEO ve Hakkında Bölümü (Eğer seoContent gönderilmişse zengin SEO metni gösterilir) */}
         <section className="sec" aria-labelledby="about-h">
           <div className="ctr" style={{ maxWidth: 760 }}>
-            <h2 className="sec-h" id="about-h">
-              {seoContent ? seoContent.h1 : t.aboutH(region.name)}
-            </h2>
-            
-            {seoContent && (
-              <h3 style={{ color: '#C9A96E', marginBottom: '1.2rem', fontSize: '1.25rem', fontWeight: 600 }}>
-                {seoContent.h2}
-              </h3>
-            )}
-            
-            <p className="sec-sub" style={{ marginBottom: seoContent ? '1rem' : '.6rem' }}>
-              {seoContent ? seoContent.body1 : region.blurb[lang]}
-            </p>
-            
-            {seoContent && (
-              <p className="sec-sub" style={{ marginBottom: '1.5rem' }}>
-                {seoContent.body2}
-              </p>
-            )}
-
-            <p style={{ fontSize: '.85rem', color: '#C9A96E', fontWeight: 700 }}>🚗 {t.travelLabel} {region.travelTime[lang]}</p>
-          </div>
-        </section>
-
-        <section className="sec" style={{ background: 'rgba(0,0,0,.12)' }} aria-labelledby="hotels-h">
-          <div className="ctr">
-            <div className="sec-head">
-              <h2 className="sec-h" id="hotels-h">{t.hotelsH(region.name)}</h2>
-              <p className="sec-sub">{t.hotelsSub}</p>
-            </div>
-            <ul className="other-districts" aria-label="Hotels">
-              {region.hotels.map((h: string) => (<li key={h} className="od-chip">{h}</li>))}
+            <h2 className="sec-h" id="about-h">{t.aboutH(region.name)}</h2>
+            <p className="sec-sub" style={{ marginBottom: '.8rem' }}>{region.blurb[lang]}</p>
+            <p className="sec-sub" style={{ marginBottom: '1rem' }}>{areaIntro(lang, region.slug, region.name, { name: (s, l) => findDistrict(s)?.name[l] })}</p>
+            <h3 style={{ color: '#C9A96E', margin: '1rem 0 .4rem', fontSize: '1.05rem', fontWeight: 600 }}>{NEEDS_H[lang](region.name)}</h3>
+            <ul style={{ fontSize: '.92rem', lineHeight: 1.8, paddingLeft: '1.2rem' }}>
+              {areaNeeds(lang, region.slug).map((x) => (<li key={x}>{x}</li>))}
             </ul>
-            <p style={{ fontSize: '.8rem', color: 'rgba(255,255,255,.5)', marginTop: '1rem', fontStyle: 'italic' }}>{t.otherHotelsNote}</p>
+            <p className="sec-sub" style={{ marginTop: '.8rem', fontSize: '.85rem' }}>{t.noPartner}</p>
           </div>
         </section>
 
@@ -255,7 +235,7 @@ export default function OtelBolgeSayfasi({ lang, region, allRegions, basePath, m
               <p className="sec-sub">{t.servicesSub}</p>
             </div>
             <div className="wk-grid">
-              {t.services.map((s: any) => (
+              {pickSome(t.services, region.slug, 2, 'svc').map((s: any) => (
                 <article className="wk-card" key={s.tr}>
                   <div className="wk-icon" aria-hidden="true">{s.icon}</div>
                   <h3 className="wk-tr">{s.tr}</h3>
@@ -279,7 +259,7 @@ export default function OtelBolgeSayfasi({ lang, region, allRegions, basePath, m
               <caption className="visually-hidden">{t.priceH}</caption>
               <thead><tr><th scope="col" className="visually-hidden">Service</th><th scope="col" className="visually-hidden">Price</th></tr></thead>
               <tbody>
-                {t.priceRows.map((row: string[]) => (<tr key={row[0]}><td>{row[0]}</td><td style={{ color: row[1].match(/FREE|БЕСПЛАТНО|KOSTENLOS|ÜCRETSİZ/) ? '#22c55e' : undefined, fontWeight: 600 }}>{row[1]}</td></tr>))}
+                {[t.priceRows[0], ...pickSome(t.priceRows.slice(1), region.slug, 4, 'price')].map((row: string[]) => (<tr key={row[0]}><td>{row[0]}</td><td style={{ color: row[1].match(/FREE|БЕСПЛАТНО|KOSTENLOS|ÜCRETSİZ/) ? '#22c55e' : undefined, fontWeight: 600 }}>{row[1]}</td></tr>))}
               </tbody>
             </table>
           </div>
@@ -297,7 +277,7 @@ export default function OtelBolgeSayfasi({ lang, region, allRegions, basePath, m
         <section className="sec" style={{ background: 'rgba(0,0,0,.12)' }} aria-labelledby="faq-h">
           <div className="ctr" style={{ maxWidth: 740 }}>
             <div className="sec-head"><span className="eyebrow">{t.faqEyebrow}</span><h2 className="sec-h" id="faq-h">{t.faqH}</h2></div>
-            {t.faq(region.name).map((item: string[]) => (
+            {regionFaq(lang, region.slug, region.name).map((item: string[]) => (
               <details key={item[0]} className="faq-item"><summary className="faq-q">{item[0]}</summary><p className="faq-a">{item[1]}</p></details>
             ))}
           </div>

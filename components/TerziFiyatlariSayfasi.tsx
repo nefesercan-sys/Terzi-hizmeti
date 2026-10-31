@@ -152,14 +152,14 @@ export const FT: Record<FLang, FiyatText> = {
       },
       {
         "q": "Elbisenin belini daraltmak istiyorum",
-        "a": "Bel ve beden daraltma, aynı gün veya 1–2 gün içinde.",
+        "a": "Bel ve beden daraltma, normal işte ertesi gün.",
         "price": "₺200'den",
         "href": "#fiyatlar",
         "cta": "Fiyat listesi"
       },
       {
         "q": "Pantolonumun paçasını kısaltmak istiyorum",
-        "a": "Kot ve kumaş pantolon paça kısaltma, çoğu zaman aynı gün.",
+        "a": "Kot ve kumaş pantolon paça kısaltma, normal işte ertesi gün; acilde 1–2 saat.",
         "price": "₺200'den",
         "href": "/konyaalti-paca-kisaltma",
         "cta": "Paça kısaltma"
@@ -188,13 +188,13 @@ export const FT: Record<FLang, FiyatText> = {
       {
         "q": "Adrese veya otele gelen terzi",
         "a": "Ölçüyü adresinizde alırız, işi atölyede yapar, geri teslim ederiz.",
-        "price": "Konyaaltı ücretsiz, diğer bölgeler mesafeye göre",
+        "price": "Otellere ücretsiz; ev adresi WhatsApp'tan",
         "href": "/otele-gelen-terzi-antalya",
         "cta": "Otele gelen terzi"
       },
       {
         "q": "Pamuklu, doğal kumaştan dikim",
-        "a": "%100 keten ve pamuktan özel dikim ve seri üretim yapılır.",
+        "a": "Keten ve pamuktan özel dikim ve seri üretim yapılır.",
         "price": "Fotoğrafa göre",
         "href": "/keten-pamuk-ozel-dikim",
         "cta": "Keten & pamuk"
@@ -214,7 +214,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Elbisem yırtıldı, tamir edilir mi?",
-        "Evet. Yırtık ve sökülen dikişler onarılır; fiyat işe göre değişir. Yırtığın fotoğrafını WhatsApp'tan gönderirseniz net fiyat ve süre söyleriz. Çoğu onarım aynı gün veya 1–2 gün içinde tamamlanır."
+        "Evet. Yırtık ve sökülen dikişler onarılır; fiyat işe göre değişir. Yırtığın fotoğrafını WhatsApp'tan gönderirseniz net fiyat ve süre söyleriz. Normal onarım ertesi gün, acil onarım 1–2 saatte teslim edilir."
       ],
       [
         "Elbisemin belini daraltmak istiyorum, ne kadar tutar?",
@@ -222,7 +222,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Pantolonumun paçasını kısaltmak istiyorum, ne kadar sürer?",
-        "Paça kısaltma ₺200'den başlar; kot ve kumaş pantolonlarda çoğu zaman aynı gün teslim edilir. Ayrıntı: /konyaalti-paca-kisaltma"
+        "Paça kısaltma ₺200'den başlar; kot ve kumaş pantolonlarda normal işte ertesi gün, acilde 1–2 saatte teslim edilir. Ayrıntı: /konyaalti-paca-kisaltma"
       ],
       [
         "Kendime elbise diktirmek istiyorum, nasıl ilerliyor?",
@@ -234,15 +234,15 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Adrese veya otele gelen terzi var mı?",
-        "Evet. Ölçü ve teslim adresinizde ya da otelinizde yapılır, iş atölyede tamamlanır. Konyaaltı'nda ziyaret ücretsizdir; diğer bölgelerde servis ücreti mesafeye göre belirlenir. Ayrıntı: /otele-gelen-terzi-antalya"
+        "Evet. Ölçü ve teslim adresinizde ya da otelinizde yapılır, iş atölyede tamamlanır. Otellere ziyaret hizmet verilen tüm bölgelerde ücretsizdir; ev adreslerinde ücretsiz servis Konyaaltı ve yakın mahallelerde geçerlidir, diğer bölgeler WhatsApp'tan sorulur. Ayrıntı: /otele-gelen-terzi-antalya"
       ],
       [
         "Terzi fiyatlarını nasıl öğrenirim?",
         "Yukarıdaki liste başlangıç fiyatlarıdır. İşin fotoğrafını WhatsApp'tan gönderirseniz kumaşa ve işçiliğe göre net fiyat söylenir; teklif ücretsizdir."
       ],
       [
-        "En hızlı ve uygun fiyatlı terzi hizmeti hangisi?",
-        "Fiyatlarımız yukarıda açıkça yayınlanır. Paça kısaltma, fermuar değişimi gibi küçük işler çoğunlukla aynı gün teslim edilir. En uygun ve en hızlı seçeneği görmek için işin fotoğrafını gönderip net fiyat ve süre almanızı öneririz."
+        "Terzi hizmetinde süre ve fiyat nasıl belirlenir?",
+        "Başlangıç fiyatlarımız yukarıda yayınlanır. Paça kısaltma, fermuar değişimi gibi küçük işler normal şartlarda ertesi gün, acil olanlar 1–2 saatte teslim edilir. Fotoğrafı gönderip net fiyat ve süre almanızı öneririz."
       ],
       [
         "Bana yakın terzi nerede?",
@@ -250,7 +250,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Pamuklu, doğal kumaştan dikim yapıyor musunuz?",
-        "Evet. %100 keten ve pamuktan özel dikim ve seri üretim yapılır; işletmeler için numune sonrası seri üretim mümkündür. Ayrıntı: /keten-pamuk-ozel-dikim"
+        "Evet. Keten ve pamuktan özel dikim ve seri üretim yapılır; işletmeler için numune sonrası seri üretim mümkündür. Ayrıntı: /keten-pamuk-ozel-dikim"
       ],
       [
         "Model, tasarım ve seri imalat (dikim imalat fiyatları) nasıl işliyor?",
@@ -290,7 +290,7 @@ export const FT: Record<FLang, FiyatText> = {
     "webName": "Tailor Prices Antalya 2026",
     "serviceType": "Tailoring, repair, alterations, custom sewing, ironing and dry cleaning",
     "catalogName": "Tailor price list 2026 (starting prices)",
-    "heroTag": "₺ Transparent prices · Open every day 08:00–23:00 · Konyaaltı, Antalya",
+    "heroTag": "₺ Prices · Open every day 08:00–23:00 · Konyaaltı, Antalya",
     "h1a": "Tailor Prices in Antalya 2026",
     "h1b": "Send a Photo, Get Your Price",
     "heroDesc": "Hemming ₺200, taking in a waist ₺200, zipper replacement ₺300, custom dress from ₺800. Clothing repair, alterations, custom sewing, and a tailor who comes to your hotel or address. Send a photo of the job on WhatsApp and get an exact price and time.",
@@ -369,14 +369,14 @@ export const FT: Record<FLang, FiyatText> = {
       },
       {
         "q": "I want to take in the waist of my dress",
-        "a": "Waist and size reduction, same day or usually within 1–2 days.",
+        "a": "Waist and size reduction, the next day (urgent jobs 1–2 hours).",
         "price": "from ₺200",
         "href": "#fiyatlar",
         "cta": "Price list"
       },
       {
         "q": "I want to shorten my trousers",
-        "a": "Jeans and dress trousers, usually done the same day.",
+        "a": "Jeans and dress trousers, ready the next day.",
         "price": "from ₺200",
         "href": "/en/tailor-service-antalya",
         "cta": "Tailor service"
@@ -405,13 +405,13 @@ export const FT: Record<FLang, FiyatText> = {
       {
         "q": "A tailor who comes to my hotel or address",
         "a": "We take measurements at your hotel or address, do the work in our workshop and deliver it back.",
-        "price": "Free in Konyaaltı; other areas by distance",
+        "price": "Free in Konyaaltı; other areas on request",
         "href": "/en/hotel-tailor-antalya",
         "cta": "Hotel tailor"
       },
       {
         "q": "Custom clothing in natural cotton or linen",
-        "a": "Custom sewing and serial production in 100% linen and cotton.",
+        "a": "Custom sewing and serial production in linen and cotton.",
         "price": "Based on your photo",
         "href": "/en/linen-cotton-tailoring",
         "cta": "Linen & cotton"
@@ -431,7 +431,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "My dress is torn. Can it be repaired?",
-        "Yes. Tears and open seams are repaired; the price depends on the damage. Send a photo of the damage on WhatsApp for an exact price and time. Most repairs are done the same day or usually within 1–2 days."
+        "Yes. Tears and open seams are repaired; the price depends on the damage. Send a photo of the damage on WhatsApp for an exact price and time. Most repairs are done the the next day (urgent jobs 1–2 hours)."
       ],
       [
         "I want to take in the waist of my dress. How much does it cost?",
@@ -439,7 +439,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "I want to shorten my trousers. How long does it take?",
-        "Hem shortening starts from ₺200; jeans and dress trousers are usually returned the same day."
+        "Hem shortening starts from ₺200; jeans and dress trousers are returned the next day (urgent jobs 1–2 hours)."
       ],
       [
         "I want to have a dress made for me. How does it work?",
@@ -451,7 +451,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Does a tailor come to my hotel or address?",
-        "Yes. Measurements and delivery are done at your hotel or address; the work is completed in the workshop. Visits are free in Konyaaltı, Muratpaşa, Kepez and Lara; other areas by appointment. Details: /en/hotel-tailor-antalya"
+        "Yes. Measurements and delivery are done at your hotel or address; the work is completed in the workshop. Hotel visits are free in every area we serve; home addresses are free in Konyaaltı and nearby neighbourhoods, other areas by appointment. Details: /en/hotel-tailor-antalya"
       ],
       [
         "How do I find out the price?",
@@ -459,7 +459,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Which tailor is fastest and most affordable?",
-        "Our prices are published openly above. Small jobs like hemming and zipper replacement are mostly delivered the same day. To see the fastest and most affordable option for your job, send a photo and ask for the exact price and time."
+        "Our prices are published openly above. Small jobs like hemming and zipper replacement are delivered the next day (urgent jobs 1–2 hours). To see the fastest and most affordable option for your job, send a photo and ask for the exact price and time."
       ],
       [
         "Where is the nearest tailor?",
@@ -467,7 +467,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Do you sew in natural cotton or linen?",
-        "Yes. Custom sewing and serial production in 100% linen and cotton; for businesses, serial production after a sample is possible. Details: /en/linen-cotton-tailoring"
+        "Yes. Custom sewing and serial production in linen and cotton; for businesses, serial production after a sample is possible. Details: /en/linen-cotton-tailoring"
       ],
       [
         "How do model design and serial production (production prices) work?",
@@ -505,7 +505,7 @@ export const FT: Record<FLang, FiyatText> = {
     "webName": "Schneider Preise Antalya 2026",
     "serviceType": "Schneiderei, Reparatur, Änderungen, Maßanfertigung, Bügelservice und chemische Reinigung",
     "catalogName": "Schneider-Preisliste 2026 (Ab-Preise)",
-    "heroTag": "₺ Transparente Preise · Täglich 08:00–23:00 geöffnet · Konyaaltı, Antalya",
+    "heroTag": "₺ Preise · Täglich 08:00–23:00 geöffnet · Konyaaltı, Antalya",
     "h1a": "Schneider Preise in Antalya 2026",
     "h1b": "Foto senden, Preis erfahren",
     "heroDesc": "Hose kürzen ab ₺200, Taille enger machen ab ₺200, Reißverschluss ab ₺300, Kleid nach Maß ab ₺800. Kleidung reparieren, Änderungen, Maßanfertigung und ein Schneider, der zu Ihrem Hotel oder Ihrer Adresse kommt. Senden Sie ein Foto per WhatsApp und erfahren Sie Preis und Dauer.",
@@ -584,14 +584,14 @@ export const FT: Record<FLang, FiyatText> = {
       },
       {
         "q": "Ich möchte die Taille meines Kleides enger machen",
-        "a": "Taillen- und Größenanpassung, am selben Tag oder in der Regel innerhalb von 1–2 Tagen.",
+        "a": "Taillen- und Größenanpassung, am nächsten Tag, eilig in 1–2 Stunden.",
         "price": "ab ₺200",
         "href": "#fiyatlar",
         "cta": "Preisliste"
       },
       {
         "q": "Ich möchte meine Hose kürzen",
-        "a": "Jeans und Stoffhosen, meist am selben Tag fertig.",
+        "a": "Jeans und Stoffhosen, am nächsten Tag fertig (eilig in 1–2 Stunden).",
         "price": "ab ₺200",
         "href": "/de/schneiderservice-antalya",
         "cta": "Schneiderservice"
@@ -620,13 +620,13 @@ export const FT: Record<FLang, FiyatText> = {
       {
         "q": "Schneider, der ins Hotel oder an meine Adresse kommt",
         "a": "Wir nehmen Maß in Ihrem Hotel oder an Ihrer Adresse, arbeiten in der Werkstatt und liefern zurück.",
-        "price": "Kostenlos in Konyaaltı; andere Gebiete nach Entfernung",
+        "price": "Kostenlos in Konyaaltı; Wohnadressen andernorts per WhatsApp",
         "href": "/de/schneider-service-hotel-antalya",
         "cta": "Schneider im Hotel"
       },
       {
         "q": "Maßanfertigung aus Naturstoff (Baumwolle, Leinen)",
-        "a": "Maßschneiderei und Serienproduktion aus 100% Leinen und Baumwolle.",
+        "a": "Maßschneiderei und Serienproduktion aus Leinen und Baumwolle.",
         "price": "Nach Ihrem Foto",
         "href": "/de/leinen-baumwolle-schneiderei",
         "cta": "Leinen & Baumwolle"
@@ -646,7 +646,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Mein Kleid ist gerissen. Kann man es reparieren?",
-        "Ja. Risse und geöffnete Nähte werden repariert; der Preis hängt vom Schaden ab. Senden Sie ein Foto des Schadens per WhatsApp, dann nennen wir Preis und Dauer. Die meisten Reparaturen sind am selben Tag oder innerhalb von in der Regel 1–2 Tagen fertig."
+        "Ja. Risse und geöffnete Nähte werden repariert; der Preis hängt vom Schaden ab. Senden Sie ein Foto des Schadens per WhatsApp, dann nennen wir Preis und Dauer. Die meisten Reparaturen sind am nächsten Tag fertig, eilige in 1–2 Stunden."
       ],
       [
         "Ich möchte die Taille meines Kleides enger machen. Was kostet das?",
@@ -654,7 +654,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Ich möchte meine Hose kürzen. Wie lange dauert das?",
-        "Kürzen beginnt ab ₺200; Jeans und Stoffhosen sind meist am selben Tag fertig."
+        "Kürzen beginnt ab ₺200; Jeans und Stoffhosen sind am nächsten Tag fertig (eilig in 1–2 Stunden)."
       ],
       [
         "Ich möchte mir ein Kleid schneidern lassen. Wie läuft das ab?",
@@ -674,7 +674,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Welcher Schneider ist am schnellsten und günstigsten?",
-        "Unsere Preise sind oben offen veröffentlicht. Kleine Arbeiten wie Kürzen und Reißverschluss wechseln sind meist am selben Tag fertig. Um die schnellste und günstigste Lösung für Ihre Arbeit zu sehen, senden Sie ein Foto und fragen Sie nach Preis und Dauer."
+        "Unsere Preise sind oben offen veröffentlicht. Kleine Arbeiten wie Kürzen und Reißverschluss wechseln sind am nächsten Tag fertig (eilig in 1–2 Stunden). Um die schnellste und günstigste Lösung für Ihre Arbeit zu sehen, senden Sie ein Foto und fragen Sie nach Preis und Dauer."
       ],
       [
         "Wo ist der nächste Schneider?",
@@ -682,7 +682,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Nähen Sie aus Naturstoffen wie Baumwolle oder Leinen?",
-        "Ja. Maßschneiderei aus 100% Leinen und Baumwolle; für Unternehmen ist nach einem Muster auch Serienproduktion möglich. Details: /de/leinen-baumwolle-schneiderei"
+        "Ja. Maßschneiderei aus Leinen und Baumwolle; für Unternehmen ist nach einem Muster auch Serienproduktion möglich. Details: /de/leinen-baumwolle-schneiderei"
       ],
       [
         "Wie funktionieren Modellentwurf und Serienproduktion (Produktionspreise)?",
@@ -720,7 +720,7 @@ export const FT: Record<FLang, FiyatText> = {
     "webName": "Цены портного в Анталье 2026",
     "serviceType": "Пошив, ремонт, подгонка одежды, глажка и химчистка",
     "catalogName": "Прайс-лист портного 2026 (цены «от»)",
-    "heroTag": "₺ Прозрачные цены · Ежедневно 08:00–23:00 · Коньяалты, Анталья",
+    "heroTag": "₺ Цены · Ежедневно 08:00–23:00 · Коньяалты, Анталья",
     "h1a": "Цены портного в Анталье 2026",
     "h1b": "Пришлите фото — узнайте цену",
     "heroDesc": "Подшив брюк от ₺200, ушить в талии от ₺200, замена молнии от ₺300, платье на заказ от ₺800. Ремонт и подгонка одежды, пошив на заказ и портной, который приедет в ваш отель или по адресу. Пришлите фото работы в WhatsApp — назовём точную цену и срок.",
@@ -799,14 +799,14 @@ export const FT: Record<FLang, FiyatText> = {
       },
       {
         "q": "Хочу ушить платье в талии",
-        "a": "Уменьшение по талии и размеру, в тот же день или обычно за 1–2 дня.",
+        "a": "Уменьшение по талии и размеру, на следующий день, срочно — за 1–2 часа.",
         "price": "от ₺200",
         "href": "#fiyatlar",
         "cta": "Прайс-лист"
       },
       {
         "q": "Хочу укоротить брюки",
-        "a": "Джинсы и классические брюки, чаще всего в тот же день.",
+        "a": "Джинсы и классические брюки, чаще всего на следующий день.",
         "price": "от ₺200",
         "href": "/ru/uslugi-portnogo-antalya",
         "cta": "Услуги портного"
@@ -835,13 +835,13 @@ export const FT: Record<FLang, FiyatText> = {
       {
         "q": "Портной, который приедет в отель или по адресу",
         "a": "Снимаем мерки в отеле или по адресу, работаем в мастерской и привозим обратно.",
-        "price": "Бесплатно в Коньяалты; другие районы по расстоянию",
+        "price": "Бесплатно в Коньяалты; домашние адреса в других районах — через WhatsApp",
         "href": "/ru/vyezdnoy-portnoy-antalya",
         "cta": "Портной в отель"
       },
       {
         "q": "Одежда на заказ из натурального хлопка или льна",
-        "a": "Пошив на заказ и серийное производство из 100% льна и хлопка.",
+        "a": "Пошив на заказ и серийное производство из льна и хлопка.",
         "price": "По вашему фото",
         "href": "/ru/poshiv-lyon-hlopok",
         "cta": "Лён и хлопок"
@@ -861,7 +861,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "У меня порвалось платье. Можно ли его починить?",
-        "Да. Разрывы и распоротые швы чиним; цена зависит от повреждения. Пришлите фото повреждения в WhatsApp — назовём точную цену и срок. Большинство ремонтов делаем в тот же день или обычно за 1–2 дня."
+        "Да. Разрывы и распоротые швы чиним; цена зависит от повреждения. Пришлите фото повреждения в WhatsApp — назовём точную цену и срок. Большинство ремонтов делаем на следующий день, срочно — за 1–2 часа."
       ],
       [
         "Хочу ушить платье в талии. Сколько это стоит?",
@@ -869,7 +869,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Хочу укоротить брюки. Сколько времени это занимает?",
-        "Подшив — от ₺200; джинсы и классические брюки чаще всего готовы в тот же день."
+        "Подшив — от ₺200; джинсы и классические брюки чаще всего готовы на следующий день."
       ],
       [
         "Хочу платье на заказ. Как это происходит?",
@@ -889,7 +889,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Какой портной самый быстрый и недорогой?",
-        "Наши цены открыто указаны выше. Небольшие работы — подшив, замена молнии — чаще всего готовы в тот же день. Чтобы увидеть самый быстрый и выгодный вариант для вашей работы, пришлите фото и спросите точную цену и срок."
+        "Наши цены открыто указаны выше. Небольшие работы — подшив, замена молнии — чаще всего готовы на следующий день. Чтобы увидеть самый быстрый и выгодный вариант для вашей работы, пришлите фото и спросите точную цену и срок."
       ],
       [
         "Где ближайший портной?",
@@ -897,7 +897,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Шьёте ли вы из натурального хлопка или льна?",
-        "Да. Пошив на заказ из 100% льна и хлопка; для компаний после образца возможно серийное производство. Подробнее: /ru/poshiv-lyon-hlopok"
+        "Да. Пошив на заказ из льна и хлопка; для компаний после образца возможно серийное производство. Подробнее: /ru/poshiv-lyon-hlopok"
       ],
       [
         "Как проходят разработка модели и серийное производство (цены на производство)?",

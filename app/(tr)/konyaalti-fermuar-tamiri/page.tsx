@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import ReviewsBlock from '@/components/ReviewsBlock';
-import { reviewSchema } from '@/lib/reviews';
+import { businessNode } from '@/lib/business';
+import { fitKeywords } from '@/lib/meta-fit';
 
 const SITE     = 'https://terzihizmeti.com.tr';
 const PAGE_URL = `${SITE}/konyaalti-fermuar-tamiri`;
@@ -19,22 +20,22 @@ const TODAY     = '2026-10-04';
 // sayfaları genel sayfalara göre daha hızlı ve yüksek sıralar.
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Fermuar Değişimi ₺300 · Aynı Gün Teslim · Konyaaltı" },
+  title: { absolute: "Fermuar Değişimi ₺300 · Ertesi Gün · Konyaaltı" },
   description:
-    "Pantolon, mont, ceket ve çanta fermuarı ₺300'den. Çoğu iş aynı gün teslim. Hurma, Liman, Sarısu'ya ücretsiz servis. ☎ " + PHONE,
-  keywords: [
+    "Pantolon, mont, ceket ve çanta fermuarı ₺300'den. Normal iş ertesi gün, acil 1–2 saat. Hurma, Liman, Sarısu'ya ücretsiz servis. ☎ " + PHONE,
+  keywords: fitKeywords([
     'fermuar tamiri Konyaaltı', 'fermuar değişimi Antalya', 'fermuar tamiri Antalya',
     'pantolon fermuarı değişimi', 'mont fermuarı tamiri', 'ceket fermuarı değişimi',
     'çanta fermuarı tamiri', 'sıkışan fermuar tamiri Antalya', 'fermuar ustası Konyaaltı',
-    'aynı gün fermuar değişimi', 'zipper repair Antalya', 'ремонт молнии Анталья',
+    'acil fermuar değişimi', 'zipper repair Antalya', 'ремонт молнии Анталья',
     'fermuar değişimi ne kadar', 'terzi fermuar değişimi fiyatları', 'mont fermuarı değiştirme fiyatları',
     'çanta fermuar tamiri fiyat', 'fermuar değişimi fiyatları 2026',
-  ],
+  ]),
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Fermuar Tamiri Konyaaltı — Aynı Gün Değişim',
-    description: 'Pantolon, mont, ceket, çanta fermuarı. Aynı gün teslim. ☎ ' + PHONE,
+    title: 'Fermuar Tamiri Konyaaltı — Ertesi Gün Değişim',
+    description: 'Pantolon, mont, ceket, çanta fermuarı. Normal tadilat ertesi gün, acil 1–2 saat. ☎ ' + PHONE,
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'tr_TR', type: 'website',
     images: [{ url: `${SITE}/terzi-can-hero.jpg`, width: 1024, height: 1024, alt: 'Fermuar Tamiri Konyaaltı' }],
   },
@@ -43,57 +44,12 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
-    {
-      '@type': ['LocalBusiness', 'ClothingStore'],
-      ...reviewSchema(),
-      additionalType: ['https://schema.org/SewingService', 'https://schema.org/DryCleaningService'],
-      '@id': `${SITE}#business`,
-      name: 'Terzi Can',
-      alternateName: [
-        'Terzi Can Antalya', 'Konyaaltı Terzi', 'Tailor Can Antalya',
-        'Портной Кан Анталья', 'Schneider Can Antalya', 'Terzi Hizmeti Antalya', 'Dikiş Atölyesi Antalya',
-      ],
-      description: "Antalya Konyaaltı'da 2006'dan bu yana hizmet veren profesyonel terzi atölyesi. Paça kısaltma, fermuar değişimi, bel daraltma, özel dikim, gelinlik tadilatı, tekstil imalatı ve kuru temizleme. Hurma, Liman, Sarısu, Gürsu, Uncalı bölgelerine hizmet.",
-      url: SITE,
-      telephone: PHONE_TEL,
-      priceRange: '₺₺',
-      currenciesAccepted: 'TRY, EUR, USD, RUB',
-      paymentAccepted: 'Cash, Credit Card',
-      image: `${SITE}/terzi-can-hero.jpg`,
-      logo: `${SITE}/terzi-can-hero.jpg`,
-      hasMap: MAPS,
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: 'Hurma Mahallesi',
-        addressLocality: 'Konyaaltı',
-        addressRegion: 'Antalya',
-        postalCode: '07130',
-        addressCountry: 'TR',
-      },
-      geo: { '@type': 'GeoCoordinates', latitude: 36.857466, longitude: 30.596987 },
-      openingHoursSpecification: [{
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-        opens: '08:00', closes: '23:00',
-      }],
-      areaServed: [
-        'Liman, Konyaaltı', 'Hurma, Konyaaltı', 'Sarısu, Konyaaltı', 'Gürsu, Konyaaltı', 'Uncalı, Konyaaltı',
-        'Konyaaltı', 'Muratpaşa', 'Kepez', 'Antalya', 'Lara', 'Belek', 'Kemer', ].map((n) => ({ '@type': 'Place', name: n })),
-      contactPoint: [{
-        '@type': 'ContactPoint',
-        telephone: PHONE_TEL,
-        contactType: 'customer service',
-        areaServed: 'TR',
-        availableLanguage: ['Turkish', 'English', 'Russian', 'German', 'Polish', 'Ukrainian', 'Dutch', 'French', 'Spanish', 'Arabic'],
-      }],
-      sameAs: [MAPS, `https://wa.me/${WA_NUM}`, 'https://swaphubs.com/terzi'],
-      knowsLanguage: ['tr', 'en', 'ru', 'de', 'pl', 'uk', 'nl', 'fr', 'es', 'ar'],
-    },
+    businessNode(),
     {
       '@type': 'WebPage',
       '@id': `${PAGE_URL}#webpage`,
       url: PAGE_URL,
-      name: 'Fermuar Tamiri Konyaaltı — Aynı Gün Fermuar Değişimi',
+      name: 'Fermuar Tamiri Konyaaltı — Ertesi Gün Fermuar Değişimi',
       description: 'Konyaaltı\'da fermuar tamiri ve değişimi hizmeti. Pantolon, mont, ceket, çanta fermuarı.',
       inLanguage: 'tr',
       isPartOf: { '@id': `${SITE}#website` },
@@ -141,7 +97,7 @@ const jsonLd = {
       step: [
         { '@type': 'HowToStep', name: 'Fotoğraf Gönderin', text: 'WhatsApp\'tan bozuk fermuarın fotoğrafını gönderin, anında ön fiyat alın.' },
         { '@type': 'HowToStep', name: 'Kıyafeti Teslim Edin', text: 'Atölyeye getirin veya Hurma/Liman/Sarısu bölgesindeyseniz ücretsiz kurye ile gönderin.' },
-        { '@type': 'HowToStep', name: 'Fermuar Değişimi Yapılır', text: 'Uygun kalitede fermuar seçilir ve profesyonelce dikilir — genellikle aynı gün.' },
+        { '@type': 'HowToStep', name: 'Fermuar Değişimi Yapılır', text: 'Uygun kalitede fermuar seçilir ve profesyonelce dikilir — normal işte ertesi gün, acilde 1–2 saatte.' },
         { '@type': 'HowToStep', name: 'Teslim Alın', text: 'Kıyafetiniz test edilip kontrol edildikten sonra teslim edilir.' },
       ],
     },
@@ -149,9 +105,9 @@ const jsonLd = {
       '@type': 'FAQPage',
       '@id': `${PAGE_URL}#faq`,
       mainEntity: [
-        { '@type': 'Question', name: 'Konyaaltı\'da fermuar tamiri ne kadar sürer?', acceptedAnswer: { '@type': 'Answer', text: 'Çoğu fermuar tamiri ve değişimi aynı gün içinde tamamlanır. Yoğunluğa göre genellikle 1–2 gün sürebilir.' } },
+        { '@type': 'Question', name: 'Konyaaltı\'da fermuar tamiri ne kadar sürer?', acceptedAnswer: { '@type': 'Answer', text: 'Normal fermuar tamiri ve değişimi ertesi gün teslim edilir; acil işler 1–2 saatte tamamlanır.' } },
         { '@type': 'Question', name: 'Fermuar değişimi fiyatı ne kadar?', acceptedAnswer: { '@type': 'Answer', text: 'Pantolon/kot fermuarı ₺300\'den, mont/ceket fermuarı ₺300\'den, çanta fermuarı ₺300\'den başlar.' } },
-        { '@type': 'Question', name: 'Çanta fermuarı tamiri yapıyor musunuz, fiyatı ne kadar?', acceptedAnswer: { '@type': 'Answer', text: 'Evet. Çanta fermuarı değişimi ₺300\'den başlar; sıkışan fermuarın onarımı ₺100\'den başlar. Çantanın fotoğrafını WhatsApp\'tan gönderin, net fiyat ve süreyi söyleyelim. Çoğu iş aynı gün teslim edilir.' } },
+        { '@type': 'Question', name: 'Çanta fermuarı tamiri yapıyor musunuz, fiyatı ne kadar?', acceptedAnswer: { '@type': 'Answer', text: 'Evet. Çanta fermuarı değişimi ₺300\'den başlar; sıkışan fermuarın onarımı ₺100\'den başlar. Çantanın fotoğrafını WhatsApp\'tan gönderin, net fiyat ve süreyi söyleyelim. Normal iş ertesi gün, acil iş 1–2 saatte teslim edilir.' } },
         { '@type': 'Question', name: 'Her tür fermuarı değiştiriyor musunuz?', acceptedAnswer: { '@type': 'Answer', text: 'Evet — metal, plastik, sarmal (YKK dahil) her tip fermuarı değiştiriyoruz. Su geçirmez montlar için özel fermuar da temin ediyoruz.' } },
         { '@type': 'Question', name: 'Fermuar sıkıştı, kırılmadı — tamir edilebilir mi?', acceptedAnswer: { '@type': 'Answer', text: 'Evet, çoğu zaman sıkışan fermuar değişim gerektirmeden onarılabilir. Fotoğraf gönderirseniz değerlendirip size bilgi veririz.' } },
       ],
@@ -182,15 +138,13 @@ export default function FermuarTamiriPage() {
             <div className="hero-overlay" />
           </div>
           <div className="hero-content">
-            <span className="hero-tag">🔧 Aynı Gün Fermuar Değişimi · Konyaaltı</span>
+            <span className="hero-tag">🔧 Acil Fermuar Değişimi · Konyaaltı</span>
             <h1 id="hero-h">
-              Fermuar Tamiri <span className="accent">Konyaaltı</span><br />
-              Aynı Gün Teslim
-            </h1>
+              Fermuar Tamiri <span className="accent">Konyaaltı</span><br />Ertesi Gün Teslim, Acilde 1–2 Saat</h1>
             <p className="hero-desc">
               Pantolon, kot, mont, ceket ve çanta fermuarı değişimi ve tamiri.
               Hurma, Liman, Sarısu bölgesine ücretsiz servis. ₺300'den başlayan
-              şeffaf fiyatlarla, çoğu işlem aynı gün tamamlanır.
+              net fiyatla, normal işlemler ertesi gün, acil işler 1–2 saatte tamamlanır.
             </p>
             <div className="hero-btns">
               <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-primary">💬 Fotoğraf Gönderin →</a>
@@ -205,7 +159,7 @@ export default function FermuarTamiriPage() {
             <div className="sec-head">
               <span className="eyebrow">₺ Fermuar Fiyatları 2026</span>
               <h2 className="sec-h ff" id="price-h">Fermuar Tamiri & Değişimi Fiyat Listesi</h2>
-              <p className="sec-sub">Tüm fermuar tipleri için şeffaf, sabit fiyatlar.</p>
+              <p className="sec-sub">Tüm fermuar tipleri için başlangıç fiyatları.</p>
             </div>
             <div className="price-grid">
               <div className="price-card">
@@ -213,7 +167,7 @@ export default function FermuarTamiriPage() {
                   <span className="price-icon" aria-hidden="true">👖</span>
                   <div><div className="price-tr">Pantolon & Kot Fermuarı</div></div>
                 </div>
-                <p className="price-desc">En sık talep edilen fermuar değişimi. Aynı gün teslim.</p>
+                <p className="price-desc">En sık talep edilen fermuar değişimi. Ertesi gün teslim, acilde 1–2 saat.</p>
                 <table className="price-table"><tbody>
                   <tr><td>Standart Pantolon Fermuarı</td><td>₺300+</td></tr>
                   <tr><td>Kot Pantolon Fermuarı</td><td>₺300+</td></tr>
@@ -269,7 +223,7 @@ export default function FermuarTamiriPage() {
               </div>
               <div className="howto-item">
                 <div className="howto-t">Fermuar Değişimi Yapılır</div>
-                <div className="howto-d">Uygun kalitede fermuar seçilir ve profesyonelce dikilir — genellikle aynı gün.</div>
+                <div className="howto-d">Uygun kalitede fermuar seçilir ve profesyonelce dikilir — normal işte ertesi gün, acilde 1–2 saatte.</div>
               </div>
               <div className="howto-item">
                 <div className="howto-t">Teslim Alın</div>
@@ -287,9 +241,9 @@ export default function FermuarTamiriPage() {
               <h2 className="sec-h ff" id="faq-h">Fermuar Tamiri Hakkında Sık Sorulan Sorular</h2>
             </div>
             {[
-              ['Konyaaltı\'da fermuar tamiri ne kadar sürer?', 'Çoğu fermuar tamiri ve değişimi aynı gün içinde tamamlanır. Yoğunluğa göre genellikle 1–2 gün sürebilir.'],
+              ['Konyaaltı\'da fermuar tamiri ne kadar sürer?', 'Normal fermuar tamiri ve değişimi ertesi gün teslim edilir; acil işler 1–2 saatte tamamlanır.'],
               ['Fermuar değişimi fiyatı ne kadar?', 'Pantolon/kot fermuarı ₺300\'den, mont/ceket fermuarı ₺300\'den, çanta fermuarı ₺300\'den başlar.'],
-              ['Çanta fermuarı tamiri yapıyor musunuz, fiyatı ne kadar?', 'Evet. Çanta fermuarı değişimi ₺300\'den başlar; sıkışan fermuarın onarımı ₺100\'den başlar. Çantanın fotoğrafını WhatsApp\'tan gönderin, net fiyat ve süreyi söyleyelim. Çoğu iş aynı gün teslim edilir.'],
+              ['Çanta fermuarı tamiri yapıyor musunuz, fiyatı ne kadar?', 'Evet. Çanta fermuarı değişimi ₺300\'den başlar; sıkışan fermuarın onarımı ₺100\'den başlar. Çantanın fotoğrafını WhatsApp\'tan gönderin, net fiyat ve süreyi söyleyelim. Normal iş ertesi gün, acil iş 1–2 saatte teslim edilir.'],
               ['Her tür fermuarı değiştiriyor musunuz?', 'Evet — metal, plastik, sarmal (YKK dahil) her tip fermuarı değiştiriyoruz. Su geçirmez montlar için özel fermuar da temin ediyoruz.'],
               ['Fermuar sıkıştı, kırılmadı — tamir edilebilir mi?', 'Evet, çoğu zaman sıkışan fermuar değişim gerektirmeden onarılabilir. Fotoğraf gönderirseniz değerlendirip bilgi veririz.'],
             ].map(([q, a]) => (
@@ -303,7 +257,7 @@ export default function FermuarTamiriPage() {
 
         <section className="cta-final" aria-label="İletişime geç">
           <h2 className="cta-h ff">Fermuarınız Bozuldu mu?</h2>
-          <p className="cta-sub">Fotoğrafını gönderin, kısa sürede fiyat alın, aynı gün teslim.</p>
+          <p className="cta-sub">Fotoğrafını gönderin, kısa sürede fiyat alın; normal işte ertesi gün teslim.</p>
           <div className="cta-btns">
             <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-white">💬 WhatsApp'tan Yazın</a>
             <a href={MAPS} target="_blank" rel="noopener noreferrer" className="btn-outline-white">📍 Google Haritalar</a>

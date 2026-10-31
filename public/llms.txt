@@ -1,6 +1,6 @@
 # Terzi Can — Terzi Hizmeti (terzihizmeti.com.tr)
 
-> Terzi Can is a tailoring, alteration, repair, ironing and dry cleaning workshop in Konyaaltı, Antalya, Turkey (serving since 2006). Open every day 08:00–23:00. Free hotel and home visits in Konyaaltı (other areas priced by distance); Turkish, English, Russian and German spoken. Phone / WhatsApp: +90 531 898 64 18. Starting prices (2026): hemming ₺200, zipper replacement ₺300, wedding dress alteration from ₺800.
+> Terzi Can is a tailoring, alteration, repair, ironing and dry cleaning workshop in Konyaaltı, Antalya, Turkey (serving since 2006). Open every day 08:00–23:00. Free hotel pick-up and delivery in every area we serve (home addresses free in Konyaaltı and nearby neighbourhoods); Turkish, English, Russian and German spoken. Phone / WhatsApp: +90 531 898 64 18. Starting prices (2026): hemming ₺200, zipper replacement ₺300, wedding dress alteration from ₺800.
 
 This file lists the main pages of the site for AI assistants and answer engines. The main pages exist in Turkish, English, Russian and German; short landing pages also exist in Spanish, French, Polish, Ukrainian, Dutch and Arabic (listed at the end). Prefer the page in the user's language. A longer question-and-answer guide with verified facts is in llms-full.txt.
 
@@ -40,44 +40,50 @@ This file lists the main pages of the site for AI assistants and answer engines.
 
 ## Custom linen & cotton clothing and alterations for visitors (English, German, Russian)
 
-For tourists and holiday guests in Antalya: made-to-measure shirts, dresses, trousers, jackets and children's clothing in natural linen and cotton. Usually ready in 3 days (price confirmed on WhatsApp). Clothes bought in Antalya can be altered, usually in 1 day, and urgent jobs can often be done in 2–4 hours on the same day. Measurements at the workshop or at the hotel (free in Konyaaltı, other areas priced by distance).
+For tourists and holiday guests in Antalya: made-to-measure shirts, dresses, trousers, jackets and children's clothing in natural linen and cotton. Timing depends on the model and number of pieces (price confirmed on WhatsApp). Clothes bought in Antalya can be altered: standard jobs are ready the next day, urgent jobs take 1–2 hours. Measurements at the workshop or at the hotel (hotel service is free).
 
 - [Custom linen & cotton clothing Antalya (English)](https://terzihizmeti.com.tr/en/linen-cotton-tailoring): hub with all models, prices and FAQ
 - [Leinenkleidung nach Maß Antalya (Deutsch)](https://terzihizmeti.com.tr/de/leinen-baumwolle-schneiderei): Hub mit allen Modellen, Preisen und FAQ
 - [Пошив из льна и хлопка в Анталье (Русский)](https://terzihizmeti.com.tr/ru/poshiv-lyon-hlopok): хаб со всеми моделями, ценами и вопросами
-- [Linen shirt (English)](https://terzihizmeti.com.tr/en/linen-cotton-tailoring/linen-shirt-antalya): made to measure, usually 3 days
-- [Linen dress (English)](https://terzihizmeti.com.tr/en/linen-cotton-tailoring/linen-dress-antalya): made to measure, usually 3 days
-- [Linen trousers (English)](https://terzihizmeti.com.tr/en/linen-cotton-tailoring/linen-trousers-antalya): made to measure, usually 3 days
-- [Linen jacket & suit (English)](https://terzihizmeti.com.tr/en/linen-cotton-tailoring/linen-jacket-suit-antalya): made to measure, usually 3 days
-- [Kids' linen clothing (English)](https://terzihizmeti.com.tr/en/linen-cotton-tailoring/kids-linen-clothing-antalya): made to measure, usually 3 days
-- [Leinenhemd (Deutsch)](https://terzihizmeti.com.tr/de/leinen-baumwolle-schneiderei/leinenhemd-nach-mass-antalya): made to measure, usually 3 days
-- [Leinenkleid (Deutsch)](https://terzihizmeti.com.tr/de/leinen-baumwolle-schneiderei/leinenkleid-nach-mass-antalya): made to measure, usually 3 days
-- [Leinenhose (Deutsch)](https://terzihizmeti.com.tr/de/leinen-baumwolle-schneiderei/leinenhose-nach-mass-antalya): made to measure, usually 3 days
-- [Leinensakko & Sommeranzug (Deutsch)](https://terzihizmeti.com.tr/de/leinen-baumwolle-schneiderei/leinensakko-anzug-nach-mass-antalya): made to measure, usually 3 days
-- [Kinder-Leinenkleidung (Deutsch)](https://terzihizmeti.com.tr/de/leinen-baumwolle-schneiderei/kinder-leinenkleidung-antalya): made to measure, usually 3 days
-- [Льняная рубашка (Русский)](https://terzihizmeti.com.tr/ru/poshiv-lyon-hlopok/lnyanaya-rubashka-na-zakaz-antalya): made to measure, usually 3 days
-- [Льняное платье (Русский)](https://terzihizmeti.com.tr/ru/poshiv-lyon-hlopok/lnyanoe-plate-na-zakaz-antalya): made to measure, usually 3 days
-- [Льняные брюки (Русский)](https://terzihizmeti.com.tr/ru/poshiv-lyon-hlopok/lnyanye-bryuki-na-zakaz-antalya): made to measure, usually 3 days
-- [Льняной пиджак и костюм (Русский)](https://terzihizmeti.com.tr/ru/poshiv-lyon-hlopok/lnyanoy-pidzhak-kostyum-antalya): made to measure, usually 3 days
-- [Детская льняная одежда (Русский)](https://terzihizmeti.com.tr/ru/poshiv-lyon-hlopok/detskaya-lnyanaya-odezhda-antalya): made to measure, usually 3 days
-- [Tourist clothing alterations Antalya (English)](https://terzihizmeti.com.tr/en/tourist-clothing-alterations-antalya): 1 day, urgent jobs often 2–4 hours
-- [Kleidung ändern im Urlaub Antalya (Deutsch)](https://terzihizmeti.com.tr/de/kleidung-aendern-urlaub-antalya): in der Regel 1 Tag, dringend oft 2–4 Stunden
-- [Подгонка одежды туристам в Анталье (Русский)](https://terzihizmeti.com.tr/ru/podgonka-odezhdy-turistam-antalya): обычно 1 день, срочно часто 2–4 часа
+- [Linen shirt (English)](https://terzihizmeti.com.tr/en/linen-cotton-tailoring/linen-shirt-antalya): made to measure, timing depends on the model and number of pieces
+- [Linen dress (English)](https://terzihizmeti.com.tr/en/linen-cotton-tailoring/linen-dress-antalya): made to measure, timing depends on the model and number of pieces
+- [Linen trousers (English)](https://terzihizmeti.com.tr/en/linen-cotton-tailoring/linen-trousers-antalya): made to measure, timing depends on the model and number of pieces
+- [Linen jacket & suit (English)](https://terzihizmeti.com.tr/en/linen-cotton-tailoring/linen-jacket-suit-antalya): made to measure, timing depends on the model and number of pieces
+- [Kids' linen clothing (English)](https://terzihizmeti.com.tr/en/linen-cotton-tailoring/kids-linen-clothing-antalya): made to measure, timing depends on the model and number of pieces
+- [Leinenhemd (Deutsch)](https://terzihizmeti.com.tr/de/leinen-baumwolle-schneiderei/leinenhemd-nach-mass-antalya): made to measure, timing depends on the model and number of pieces
+- [Leinenkleid (Deutsch)](https://terzihizmeti.com.tr/de/leinen-baumwolle-schneiderei/leinenkleid-nach-mass-antalya): made to measure, timing depends on the model and number of pieces
+- [Leinenhose (Deutsch)](https://terzihizmeti.com.tr/de/leinen-baumwolle-schneiderei/leinenhose-nach-mass-antalya): made to measure, timing depends on the model and number of pieces
+- [Leinensakko & Sommeranzug (Deutsch)](https://terzihizmeti.com.tr/de/leinen-baumwolle-schneiderei/leinensakko-anzug-nach-mass-antalya): made to measure, timing depends on the model and number of pieces
+- [Kinder-Leinenkleidung (Deutsch)](https://terzihizmeti.com.tr/de/leinen-baumwolle-schneiderei/kinder-leinenkleidung-antalya): made to measure, timing depends on the model and number of pieces
+- [Льняная рубашка (Русский)](https://terzihizmeti.com.tr/ru/poshiv-lyon-hlopok/lnyanaya-rubashka-na-zakaz-antalya): made to measure, timing depends on the model and number of pieces
+- [Льняное платье (Русский)](https://terzihizmeti.com.tr/ru/poshiv-lyon-hlopok/lnyanoe-plate-na-zakaz-antalya): made to measure, timing depends on the model and number of pieces
+- [Льняные брюки (Русский)](https://terzihizmeti.com.tr/ru/poshiv-lyon-hlopok/lnyanye-bryuki-na-zakaz-antalya): made to measure, timing depends on the model and number of pieces
+- [Льняной пиджак и костюм (Русский)](https://terzihizmeti.com.tr/ru/poshiv-lyon-hlopok/lnyanoy-pidzhak-kostyum-antalya): made to measure, timing depends on the model and number of pieces
+- [Детская льняная одежда (Русский)](https://terzihizmeti.com.tr/ru/poshiv-lyon-hlopok/detskaya-lnyanaya-odezhda-antalya): made to measure, timing depends on the model and number of pieces
+- [Tourist clothing alterations Antalya (English)](https://terzihizmeti.com.tr/en/tourist-clothing-alterations-antalya): next day, urgent jobs 1–2 hours
+- [Kleidung ändern im Urlaub Antalya (Deutsch)](https://terzihizmeti.com.tr/de/kleidung-aendern-urlaub-antalya): am nächsten Tag, dringend 1–2 Stunden
+- [Подгонка одежды туристам в Анталье (Русский)](https://terzihizmeti.com.tr/ru/podgonka-odezhdy-turistam-antalya): на следующий день, срочно 1–2 часа
 
 ## Hotel and home service
 
-- [Hotel tailor Antalya (Turkish)](https://terzihizmeti.com.tr/otele-gelen-terzi-antalya): tailor visits hotels and homes
+- [Hotel tailor Antalya (Turkish)](https://terzihizmeti.com.tr/otele-gelen-terzi-antalya): hotel pick-up and delivery is free
 - [Hotel tailor Antalya (English)](https://terzihizmeti.com.tr/en/hotel-tailor-antalya): English hub; zones Belek, Lara, Güzeloba, Side, Kemer
 - [Выездной портной в Анталье (Russian)](https://terzihizmeti.com.tr/ru/vyezdnoy-portnoy-antalya): Russian hub
 - [Schneider-Service Hotel Antalya (German)](https://terzihizmeti.com.tr/de/schneider-service-hotel-antalya): German hub
 
-## Neighborhoods in Konyaaltı
+## Neighborhoods (Konyaaltı district)
+
+Meltem, Şirinyalı, Fener and Güzeloba belong to Muratpaşa (not Konyaaltı); area pages for them: https://terzihizmeti.com.tr/antalya-terzi/{meltem|sirinyali|fener|guzeloba}.
 
 - [Hurma](https://terzihizmeti.com.tr/hurma-terzi): workshop location
 - [Liman](https://terzihizmeti.com.tr/liman-terzi): nearby neighborhood
 - [Sarısu](https://terzihizmeti.com.tr/sarisu-terzi): nearby neighborhood
 - [Uncalı](https://terzihizmeti.com.tr/uncali-terzi): nearby neighborhood
 - [Gürsu](https://terzihizmeti.com.tr/gursu-terzi): nearby neighborhood
+
+## Promotional textiles and printed tote bags
+
+- [Promosyon tekstil ve baskılı bez çanta (Turkish)](https://terzihizmeti.com.tr/promosyon-tekstil-bez-canta): promotional textiles and printed cotton/canvas tote bags; printing techniques: screen printing (serigrafi), embroidery (nakış), transfer and DTF; also available in en, de, ru, es, fr, pl, uk, nl, ar (e.g. https://terzihizmeti.com.tr/en/promotional-textiles-tote-bags)
 
 ## Business textile manufacturing
 
@@ -116,5 +122,5 @@ For tourists and holiday guests in Antalya: made-to-measure shirts, dresses, tro
 
 - Women's and men's clothing, evening and gala dresses: made to measure, repaired and altered in linen, cotton, jersey (penye), satin and silk. The workshop supplies the fabric. Model design, model production and serial production are also offered.
 - Leather and denim: repair and alteration only (hemming, taking in, zip replacement). No new leather or denim garments are made.
-- Orders from abroad: measurements and model are sent online (WhatsApp), the garment is sewn in Antalya and shipped to the customer's country. Payment by bank transfer, shipping paid by the customer, usually 1–3 weeks. If it does not fit, it is corrected.
-- Hotel guests: measurements taken at the hotel and finished work delivered back; free in Konyaaltı neighbourhoods, farther areas agreed on WhatsApp. Open daily 08:00–23:00.
+- Orders from abroad: measurements and model are sent online (WhatsApp), the garment is sewn in Antalya and shipped to the customer's country. Payment by bank transfer, shipping paid by the customer, about 1–3 weeks depending on the order. If it does not fit, it is corrected.
+- Hotel guests: measurements taken at the hotel and finished work delivered back; free in every area we serve. Open daily 08:00–23:00.

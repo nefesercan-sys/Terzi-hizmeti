@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import ReviewsBlock from '@/components/ReviewsBlock';
-import { reviewSchema } from '@/lib/reviews';
+import { businessNode } from '@/lib/business';
 import Image from 'next/image';
 import { DISTRICT_BASE } from '@/lib/seo-data';
+import { fitKeywords } from '@/lib/meta-fit';
 
 const SITE      = 'https://terzihizmeti.com.tr';
 const PAGE_URL  = `${SITE}/liman-terzi`;
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
   title: { absolute: "Liman Terzi · Paça ₺200, Fermuar ₺300 · Adrese Servis" },
   description:
     "Liman terzi: paça kısaltma ₺200, fermuar değişimi ₺300, bel daraltma, tamir tadilat. Liman'a ücretsiz servis. Her gün 08:00–23:00. ☎ " + PHONE,
-  keywords: Array.from(new Set(['Liman tamir tadilat', 'Liman söküğü dikme', 'Liman yırtık tamiri', 'Liman elbise tamiri', 'Liman terzi', 'Liman mahallesi terzi', 'Liman Konyaaltı terzi', 'Liman paça kısaltma', 'Liman fermuar tamiri', 'Liman bel daraltma', 'Liman elbise dikimi', 'Liman gelinlik tadilatı', 'Liman ütü hizmeti', 'Liman kuru temizleme', 'Liman terzi fiyatları 2026', 'Konyaaltı Liman dikiş atölyesi', 'Liman fermuar değişimi', 'Liman fermuar değiştirme', 'Liman beden ayarlama', 'Liman beden ayarlaması', 'Liman beden küçültme', 'Liman beden büyütme', 'Liman pantolon daraltma', 'Liman pantolon kısaltma', 'Liman kot paçası kısaltma', 'Liman abiye tamiri', 'Liman mont fermuar değişimi', 'Liman ceket tadilatı', 'Liman gömlek daraltma', 'Liman etek daraltma', 'Liman şort kısaltma', 'Liman özel dikim', 'Liman bayan elbise dikimi', 'Liman yakınımda terzi', 'Konyaaltı Liman terzi tamir tadilat', 'Liman bay bayan elbise tamiri', 'Liman terzi', 'Liman bay bayan terzi', 'Liman dikim', 'Liman tamir tadilat', 'Liman elbise tamiri', 'Liman elbise tadilatı', 'Liman fermuar değişimi', 'Liman fermuar tamiri', 'Liman boy kısaltma', 'Liman bel daraltma', 'Liman etek boyu kısaltma', 'Liman pantolon boyu kısaltma', 'Liman paça kısaltma', 'Liman kot paçası kısaltma', 'Liman beden ölçüsüne göre elbise tadilatı', 'Liman mont tamiri', 'Liman ceket daraltma', 'Liman gömlek daraltma', 'Liman şort kısaltma', 'Liman pantolon daraltma', 'Liman etek daraltma', 'Liman elbise daraltma', 'Liman elbise dikimi'])) ,
+  keywords: fitKeywords(Array.from(new Set(['Liman tamir tadilat', 'Liman söküğü dikme', 'Liman yırtık tamiri', 'Liman elbise tamiri', 'Liman terzi', 'Liman mahallesi terzi', 'Liman Konyaaltı terzi', 'Liman paça kısaltma', 'Liman fermuar tamiri', 'Liman bel daraltma', 'Liman elbise dikimi', 'Liman gelinlik tadilatı', 'Liman ütü hizmeti', 'Liman kuru temizleme', 'Liman terzi fiyatları 2026', 'Konyaaltı Liman dikiş atölyesi', 'Liman fermuar değişimi', 'Liman fermuar değiştirme', 'Liman beden ayarlama', 'Liman beden ayarlaması', 'Liman beden küçültme', 'Liman beden büyütme', 'Liman pantolon daraltma', 'Liman pantolon kısaltma', 'Liman kot paçası kısaltma', 'Liman abiye tamiri', 'Liman mont fermuar değişimi', 'Liman ceket tadilatı', 'Liman gömlek daraltma', 'Liman etek daraltma', 'Liman şort kısaltma', 'Liman özel dikim', 'Liman bayan elbise dikimi', 'Liman yakınımda terzi', 'Konyaaltı Liman terzi tamir tadilat', 'Liman bay bayan elbise tamiri', 'Liman terzi', 'Liman bay bayan terzi', 'Liman dikim', 'Liman tamir tadilat', 'Liman elbise tamiri', 'Liman elbise tadilatı', 'Liman fermuar değişimi', 'Liman fermuar tamiri', 'Liman boy kısaltma', 'Liman bel daraltma', 'Liman etek boyu kısaltma', 'Liman pantolon boyu kısaltma', 'Liman paça kısaltma', 'Liman kot paçası kısaltma', 'Liman beden ölçüsüne göre elbise tadilatı', 'Liman mont tamiri', 'Liman ceket daraltma', 'Liman gömlek daraltma', 'Liman şort kısaltma', 'Liman pantolon daraltma', 'Liman etek daraltma', 'Liman elbise daraltma', 'Liman elbise dikimi']))),
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   alternates: { canonical: PAGE_URL, languages: { tr: PAGE_URL, en: `${SITE}${DISTRICT_BASE.en}/liman`, ru: `${SITE}${DISTRICT_BASE.ru}/liman`, de: `${SITE}${DISTRICT_BASE.de}/liman`, 'x-default': PAGE_URL } },
   openGraph: {
@@ -33,52 +34,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
-    {
-      '@type': ['LocalBusiness', 'ClothingStore'],
-      ...reviewSchema(),
-      additionalType: ['https://schema.org/SewingService', 'https://schema.org/DryCleaningService'],
-      '@id': `${SITE}#business`,
-      name: 'Terzi Can',
-      alternateName: [
-        'Terzi Can Antalya', 'Konyaaltı Terzi', 'Tailor Can Antalya',
-        'Портной Кан Анталья', 'Schneider Can Antalya', 'Terzi Hizmeti Antalya', 'Dikiş Atölyesi Antalya',
-      ],
-      description: "Antalya Konyaaltı'da 2006'dan bu yana hizmet veren profesyonel terzi atölyesi. Paça kısaltma, fermuar değişimi, bel daraltma, özel dikim, gelinlik tadilatı, tekstil imalatı ve kuru temizleme. Hurma, Liman, Sarısu, Gürsu, Uncalı bölgelerine hizmet.",
-      url: SITE,
-      telephone: PHONE_TEL,
-      priceRange: '₺₺',
-      currenciesAccepted: 'TRY, EUR, USD, RUB',
-      paymentAccepted: 'Cash, Credit Card',
-      image: `${SITE}/terzi-can-hero.jpg`,
-      logo: `${SITE}/terzi-can-hero.jpg`,
-      hasMap: MAPS,
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: 'Hurma Mahallesi',
-        addressLocality: 'Konyaaltı',
-        addressRegion: 'Antalya',
-        postalCode: '07130',
-        addressCountry: 'TR',
-      },
-      geo: { '@type': 'GeoCoordinates', latitude: 36.857466, longitude: 30.596987 },
-      openingHoursSpecification: [{
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-        opens: '08:00', closes: '23:00',
-      }],
-      areaServed: [
-        'Liman, Konyaaltı', 'Hurma, Konyaaltı', 'Sarısu, Konyaaltı', 'Gürsu, Konyaaltı', 'Uncalı, Konyaaltı',
-        'Konyaaltı', 'Muratpaşa', 'Kepez', 'Antalya', 'Lara', 'Belek', 'Kemer', ].map((n) => ({ '@type': 'Place', name: n })),
-      contactPoint: [{
-        '@type': 'ContactPoint',
-        telephone: PHONE_TEL,
-        contactType: 'customer service',
-        areaServed: 'TR',
-        availableLanguage: ['Turkish', 'English', 'Russian', 'German', 'Polish', 'Ukrainian', 'Dutch', 'French', 'Spanish', 'Arabic'],
-      }],
-      sameAs: [MAPS, `https://wa.me/${WA_NUM}`, 'https://swaphubs.com/terzi'],
-      knowsLanguage: ['tr', 'en', 'ru', 'de', 'pl', 'uk', 'nl', 'fr', 'es', 'ar'],
-    },
+    businessNode(),
     {
       '@type': 'WebPage',
       '@id': `${PAGE_URL}#webpage`,
@@ -129,7 +85,7 @@ const jsonLd = {
       mainEntity: [
         { '@type': 'Question', name: "Atölyeniz Liman'da mı?", acceptedAnswer: { '@type': 'Answer', text: 'Evet, atölyemiz Liman mahallesinde yer alıyor. Bu sayede Liman içindeki teslimatlar genellikle diğer mahallelere göre daha hızlı tamamlanır.' } },
         { '@type': 'Question', name: 'Liman terzi fiyatları ne kadar 2026?', acceptedAnswer: { '@type': 'Answer', text: `Paça kısaltma ₺200'den, fermuar değişimi ₺300'den, bel daraltma ₺200'den, elbise dikimi ₺800'den, gelinlik tadilatı ₺800'den, abiye tadilatı ₺800'den, ütü ₺80'den başlar. ☎ ${PHONE}` } },
-        { '@type': 'Question', name: 'Liman\'da aynı gün teslim mümkün mü?', acceptedAnswer: { '@type': 'Answer', text: 'Paça kısaltma, fermuar değişimi ve bel daraltma gibi standart işlemler genellikle aynı gün içinde tamamlanıp teslim edilir.' } },
+        { '@type': 'Question', name: 'Liman\'da acil tadilat ne kadar sürer?', acceptedAnswer: { '@type': 'Answer', text: 'Paça kısaltma, fermuar değişimi ve bel daraltma gibi standart işlemler ertesi gün, acil olanlar 1–2 saatte teslim edilir.' } },
         { '@type': 'Question', name: 'Gelinlik ve abiye tadilatı yapıyor musunuz?', acceptedAnswer: { '@type': 'Answer', text: `Evet, gelinlik ve abiye tadilatında uzmanız. Gelinlik tadilatı ₺800'den, abiye tadilatı ₺800'den başlar. ☎ ${PHONE}` } },
       ],
     },
@@ -176,7 +132,7 @@ export default function LimanPage() {
             <p className="hero-desc">
               Liman mahallesine terzi hizmeti. Paça kısaltma, fermuar değişimi,
               bel daraltma, özel dikim, gelinlik tadilatı, ütü ve kuru temizleme —
-              ₺200'den başlayan fiyatlarla, aynı gün teslim.
+              ₺200'den başlayan fiyatlarla; normal işler ertesi gün, acil işler 1–2 saatte teslim.
             </p>
             <div className="hero-btns">
               <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-primary">💬 WhatsApp'tan Yazın →</a>
@@ -233,7 +189,7 @@ export default function LimanPage() {
             <div className="howto-list">
               <div className="howto-item">
                 <div className="howto-t">Paça Kısaltma & Bel Daraltma</div>
-                <div className="howto-d">Pantolon, kot, etek kısaltma; elbise, ceket ve pantolonda bel daraltma. ₺200'den, aynı gün teslim.</div>
+                <div className="howto-d">Pantolon, kot, etek kısaltma; elbise, ceket ve pantolonda bel daraltma. ₺200'den, ertesi gün teslim.</div>
               </div>
               <div className="howto-item">
                 <div className="howto-t">Fermuar Değişimi</div>
@@ -260,7 +216,7 @@ export default function LimanPage() {
             {[
               ["Atölyeniz Liman'da mı?", 'Evet, atölyemiz Liman mahallesinde yer alıyor. Bu sayede Liman içindeki teslimatlar genellikle diğer mahallelere göre daha hızlı tamamlanır.'],
               ['Liman terzi fiyatları ne kadar 2026?', 'Paça kısaltma ₺200\'den, fermuar değişimi ₺300\'den, bel daraltma ₺200\'den, elbise dikimi ₺800\'den, gelinlik tadilatı ₺800\'den, abiye tadilatı ₺800\'den, ütü ₺80\'den başlar.'],
-              ['Liman\'da aynı gün teslim mümkün mü?', 'Paça kısaltma, fermuar değişimi ve bel daraltma gibi standart işlemler genellikle aynı gün içinde tamamlanıp teslim edilir.'],
+              ['Liman\'da acil tadilat ne kadar sürer?', 'Paça kısaltma, fermuar değişimi ve bel daraltma gibi standart işlemler ertesi gün, acil olanlar 1–2 saatte teslim edilir.'],
               ['Gelinlik ve abiye tadilatı yapıyor musunuz?', 'Evet, gelinlik ve abiye tadilatında uzmanız. Gelinlik tadilatı ₺800\'den, abiye tadilatı ₺800\'den başlar.'],
             ].map(([q, a]) => (
               <div key={q} className="faq-item">
@@ -273,7 +229,7 @@ export default function LimanPage() {
 
         <section className="cta-final" aria-label="İletişime geç">
           <h2 className="cta-h ff">Liman'da Terziye mi İhtiyacınız Var?</h2>
-          <p className="cta-sub">Fotoğraf gönderin, adresinizden alalım, aynı gün teslim edelim.</p>
+          <p className="cta-sub">Fotoğraf gönderin, adresinizden alalım, ertesi gün teslim edelim.</p>
           <div className="cta-btns">
             <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-white">💬 WhatsApp'tan Yazın</a>
             <a href={MAPS} target="_blank" rel="noopener noreferrer" className="btn-outline-white">📍 Google Haritalar</a>

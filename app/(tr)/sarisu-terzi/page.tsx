@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import ReviewsBlock from '@/components/ReviewsBlock';
-import { reviewSchema } from '@/lib/reviews';
+import { businessNode } from '@/lib/business';
 import Image from 'next/image';
 import { DISTRICT_BASE } from '@/lib/seo-data';
+import { fitKeywords } from '@/lib/meta-fit';
 
 const SITE      = 'https://terzihizmeti.com.tr';
 const PAGE_URL  = `${SITE}/sarisu-terzi`;
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
   title: { absolute: "Sarısu Terzi · Kot Paçası ₺200 · Her Gün Açık" },
   description:
     "Sarısu terzi: kot paçası, şort, pantolon kısaltma ₺200, fermuar ₺300, bel daraltma. Sarısu'ya ücretsiz servis. Her gün 08:00–23:00. ☎ " + PHONE,
-  keywords: Array.from(new Set(['Sarısu tamir tadilat', 'Sarısu söküğü dikme', 'Sarısu yırtık tamiri', 'Sarısu elbise tamiri', 'Sarısu terzi', 'Sarısu mahallesi terzi', 'Sarısu Konyaaltı terzi', 'Sarısu paça kısaltma', 'Sarısu fermuar tamiri', 'Sarısu bel daraltma', 'Sarısu elbise dikimi', 'Sarısu gelinlik tadilatı', 'Sarısu ütü hizmeti', 'Sarısu kuru temizleme', 'Sarısu terzi fiyatları 2026', 'Konyaaltı Sarısu dikiş atölyesi', 'Sarısu kot paçası kısaltma', 'Sarısu kot kısaltma', 'Sarısu kot daraltma', 'Sarısu şort kısaltma', 'Sarısu şort daraltma', 'Sarısu pantolon kısaltma', 'Sarısu pantolon daraltma', 'Sarısu etek kısaltma', 'Sarısu etek daraltma', 'Sarısu fermuar değişimi', 'Sarısu beden ayarlama', 'Sarısu ölçüye göre dikim', 'Sarısu özel dikim', 'Sarısu bay bayan terzi', 'Sarısu çocuk kıyafet tadilatı', 'Sarısu abiye tamiri', 'Sarısu ceket tadilatı', 'Sarısu mont kısaltma', 'Sarısu gömlek daraltma', 'Sarısu yakınımda terzi', 'Konyaaltı Sarısu terzi tamir tadilat', 'Sarısu bay bayan elbise tamiri', 'Sarısu terzi', 'Sarısu bay bayan terzi', 'Sarısu dikim', 'Sarısu tamir tadilat', 'Sarısu elbise tamiri', 'Sarısu elbise tadilatı', 'Sarısu fermuar değişimi', 'Sarısu fermuar tamiri', 'Sarısu boy kısaltma', 'Sarısu bel daraltma', 'Sarısu etek boyu kısaltma', 'Sarısu pantolon boyu kısaltma', 'Sarısu paça kısaltma', 'Sarısu kot paçası kısaltma', 'Sarısu beden ölçüsüne göre elbise tadilatı', 'Sarısu mont tamiri', 'Sarısu ceket daraltma', 'Sarısu gömlek daraltma', 'Sarısu şort kısaltma', 'Sarısu pantolon daraltma', 'Sarısu etek daraltma', 'Sarısu elbise daraltma', 'Sarısu elbise dikimi'])) ,
+  keywords: fitKeywords(Array.from(new Set(['Sarısu tamir tadilat', 'Sarısu söküğü dikme', 'Sarısu yırtık tamiri', 'Sarısu elbise tamiri', 'Sarısu terzi', 'Sarısu mahallesi terzi', 'Sarısu Konyaaltı terzi', 'Sarısu paça kısaltma', 'Sarısu fermuar tamiri', 'Sarısu bel daraltma', 'Sarısu elbise dikimi', 'Sarısu gelinlik tadilatı', 'Sarısu ütü hizmeti', 'Sarısu kuru temizleme', 'Sarısu terzi fiyatları 2026', 'Konyaaltı Sarısu dikiş atölyesi', 'Sarısu kot paçası kısaltma', 'Sarısu kot kısaltma', 'Sarısu kot daraltma', 'Sarısu şort kısaltma', 'Sarısu şort daraltma', 'Sarısu pantolon kısaltma', 'Sarısu pantolon daraltma', 'Sarısu etek kısaltma', 'Sarısu etek daraltma', 'Sarısu fermuar değişimi', 'Sarısu beden ayarlama', 'Sarısu ölçüye göre dikim', 'Sarısu özel dikim', 'Sarısu bay bayan terzi', 'Sarısu çocuk kıyafet tadilatı', 'Sarısu abiye tamiri', 'Sarısu ceket tadilatı', 'Sarısu mont kısaltma', 'Sarısu gömlek daraltma', 'Sarısu yakınımda terzi', 'Konyaaltı Sarısu terzi tamir tadilat', 'Sarısu bay bayan elbise tamiri', 'Sarısu terzi', 'Sarısu bay bayan terzi', 'Sarısu dikim', 'Sarısu tamir tadilat', 'Sarısu elbise tamiri', 'Sarısu elbise tadilatı', 'Sarısu fermuar değişimi', 'Sarısu fermuar tamiri', 'Sarısu boy kısaltma', 'Sarısu bel daraltma', 'Sarısu etek boyu kısaltma', 'Sarısu pantolon boyu kısaltma', 'Sarısu paça kısaltma', 'Sarısu kot paçası kısaltma', 'Sarısu beden ölçüsüne göre elbise tadilatı', 'Sarısu mont tamiri', 'Sarısu ceket daraltma', 'Sarısu gömlek daraltma', 'Sarısu şort kısaltma', 'Sarısu pantolon daraltma', 'Sarısu etek daraltma', 'Sarısu elbise daraltma', 'Sarısu elbise dikimi']))),
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   alternates: { canonical: PAGE_URL, languages: { tr: PAGE_URL, en: `${SITE}${DISTRICT_BASE.en}/sarisu`, ru: `${SITE}${DISTRICT_BASE.ru}/sarisu`, de: `${SITE}${DISTRICT_BASE.de}/sarisu`, 'x-default': PAGE_URL } },
   openGraph: {
@@ -33,52 +34,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
-    {
-      '@type': ['LocalBusiness', 'ClothingStore'],
-      ...reviewSchema(),
-      additionalType: ['https://schema.org/SewingService', 'https://schema.org/DryCleaningService'],
-      '@id': `${SITE}#business`,
-      name: 'Terzi Can',
-      alternateName: [
-        'Terzi Can Antalya', 'Konyaaltı Terzi', 'Tailor Can Antalya',
-        'Портной Кан Анталья', 'Schneider Can Antalya', 'Terzi Hizmeti Antalya', 'Dikiş Atölyesi Antalya',
-      ],
-      description: "Antalya Konyaaltı'da 2006'dan bu yana hizmet veren profesyonel terzi atölyesi. Paça kısaltma, fermuar değişimi, bel daraltma, özel dikim, gelinlik tadilatı, tekstil imalatı ve kuru temizleme. Hurma, Liman, Sarısu, Gürsu, Uncalı bölgelerine hizmet.",
-      url: SITE,
-      telephone: PHONE_TEL,
-      priceRange: '₺₺',
-      currenciesAccepted: 'TRY, EUR, USD, RUB',
-      paymentAccepted: 'Cash, Credit Card',
-      image: `${SITE}/terzi-can-hero.jpg`,
-      logo: `${SITE}/terzi-can-hero.jpg`,
-      hasMap: MAPS,
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: 'Hurma Mahallesi',
-        addressLocality: 'Konyaaltı',
-        addressRegion: 'Antalya',
-        postalCode: '07130',
-        addressCountry: 'TR',
-      },
-      geo: { '@type': 'GeoCoordinates', latitude: 36.857466, longitude: 30.596987 },
-      openingHoursSpecification: [{
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-        opens: '08:00', closes: '23:00',
-      }],
-      areaServed: [
-        'Liman, Konyaaltı', 'Hurma, Konyaaltı', 'Sarısu, Konyaaltı', 'Gürsu, Konyaaltı', 'Uncalı, Konyaaltı',
-        'Konyaaltı', 'Muratpaşa', 'Kepez', 'Antalya', 'Lara', 'Belek', 'Kemer', ].map((n) => ({ '@type': 'Place', name: n })),
-      contactPoint: [{
-        '@type': 'ContactPoint',
-        telephone: PHONE_TEL,
-        contactType: 'customer service',
-        areaServed: 'TR',
-        availableLanguage: ['Turkish', 'English', 'Russian', 'German', 'Polish', 'Ukrainian', 'Dutch', 'French', 'Spanish', 'Arabic'],
-      }],
-      sameAs: [MAPS, `https://wa.me/${WA_NUM}`, 'https://swaphubs.com/terzi'],
-      knowsLanguage: ['tr', 'en', 'ru', 'de', 'pl', 'uk', 'nl', 'fr', 'es', 'ar'],
-    },
+    businessNode(),
     {
       '@type': 'WebPage',
       '@id': `${PAGE_URL}#webpage`,
@@ -127,9 +83,9 @@ const jsonLd = {
       '@type': 'FAQPage',
       '@id': `${PAGE_URL}#faq`,
       mainEntity: [
-        { '@type': 'Question', name: "Sarısu'ya ücretsiz servis var mı?", acceptedAnswer: { '@type': 'Answer', text: 'Evet, Sarısu mahallesine ücretsiz adrese servis veriyoruz. Kıyafetinizi adresinizden alıp aynı gün veya 1–2 gün içinde teslim ediyoruz.' } },
+        { '@type': 'Question', name: "Sarısu'ya ücretsiz servis var mı?", acceptedAnswer: { '@type': 'Answer', text: 'Evet, Sarısu mahallesine ücretsiz adrese servis veriyoruz. Kıyafetinizi adresinizden alıp normal işte ertesi gün, acil işte 1–2 saatte teslim ediyoruz.' } },
         { '@type': 'Question', name: 'Sarısu terzi fiyatları ne kadar 2026?', acceptedAnswer: { '@type': 'Answer', text: `Paça kısaltma ₺200'den, fermuar değişimi ₺300'den, bel daraltma ₺200'den, elbise dikimi ₺800'den, gelinlik/abiye tadilatı ₺800'den, ütü ₺80'den başlar. ☎ ${PHONE}` } },
-        { '@type': 'Question', name: 'Sarısu\'da aynı gün teslim mümkün mü?', acceptedAnswer: { '@type': 'Answer', text: 'Paça kısaltma, fermuar değişimi ve bel daraltma gibi standart işlemler genellikle aynı gün içinde tamamlanıp teslim edilir.' } },
+        { '@type': 'Question', name: 'Sarısu\'da acil tadilat ne kadar sürer?', acceptedAnswer: { '@type': 'Answer', text: 'Paça kısaltma, fermuar değişimi ve bel daraltma gibi standart işlemler ertesi gün, acil olanlar 1–2 saatte teslim edilir.' } },
         { '@type': 'Question', name: 'Gelinlik ve abiye tadilatı yapıyor musunuz?', acceptedAnswer: { '@type': 'Answer', text: `Evet, gelinlik ve abiye tadilatında uzmanız. ₺800'den başlar. ☎ ${PHONE}` } },
       ],
     },
@@ -176,7 +132,7 @@ export default function SarisuPage() {
             <p className="hero-desc">
               Sarısu mahallesine terzi hizmeti. Paça kısaltma, fermuar değişimi,
               bel daraltma, özel dikim, gelinlik tadilatı, ütü ve kuru temizleme —
-              ₺200'den başlayan fiyatlarla, aynı gün teslim.
+              ₺200'den başlayan fiyatlarla; normal işler ertesi gün, acil işler 1–2 saatte teslim.
             </p>
             <div className="hero-btns">
               <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-primary">💬 WhatsApp'tan Yazın →</a>
@@ -233,7 +189,7 @@ export default function SarisuPage() {
             <div className="howto-list">
               <div className="howto-item">
                 <div className="howto-t">Paça Kısaltma & Bel Daraltma</div>
-                <div className="howto-d">Pantolon, kot, etek kısaltma; elbise, ceket ve pantolonda bel daraltma. ₺200'den, aynı gün teslim.</div>
+                <div className="howto-d">Pantolon, kot, etek kısaltma; elbise, ceket ve pantolonda bel daraltma. ₺200'den, ertesi gün teslim.</div>
               </div>
               <div className="howto-item">
                 <div className="howto-t">Fermuar Değişimi</div>
@@ -258,9 +214,9 @@ export default function SarisuPage() {
               <h2 className="sec-h ff" id="faq-h">Sarısu Terzi Hakkında Sık Sorulan Sorular</h2>
             </div>
             {[
-              ["Sarısu'ya ücretsiz servis var mı?", 'Evet, Sarısu mahallesine ücretsiz adrese servis veriyoruz. Kıyafetinizi adresinizden alıp aynı gün veya 1–2 gün içinde teslim ediyoruz.'],
+              ["Sarısu'ya ücretsiz servis var mı?", 'Evet, Sarısu mahallesine ücretsiz adrese servis veriyoruz. Kıyafetinizi adresinizden alıp normal işte ertesi gün, acil işte 1–2 saatte teslim ediyoruz.'],
               ['Sarısu terzi fiyatları ne kadar 2026?', 'Paça kısaltma ₺200\'den, fermuar değişimi ₺300\'den, bel daraltma ₺200\'den, elbise dikimi ₺800\'den, gelinlik/abiye tadilatı ₺800\'den, ütü ₺80\'den başlar.'],
-              ['Sarısu\'da aynı gün teslim mümkün mü?', 'Paça kısaltma, fermuar değişimi ve bel daraltma gibi standart işlemler genellikle aynı gün içinde tamamlanıp teslim edilir.'],
+              ['Sarısu\'da acil tadilat ne kadar sürer?', 'Paça kısaltma, fermuar değişimi ve bel daraltma gibi standart işlemler ertesi gün, acil olanlar 1–2 saatte teslim edilir.'],
               ['Gelinlik ve abiye tadilatı yapıyor musunuz?', 'Evet, gelinlik ve abiye tadilatında uzmanız. ₺800\'den başlar.'],
             ].map(([q, a]) => (
               <div key={q} className="faq-item">
@@ -273,7 +229,7 @@ export default function SarisuPage() {
 
         <section className="cta-final" aria-label="İletişime geç">
           <h2 className="cta-h ff">Sarısu'da Terziye mi İhtiyacınız Var?</h2>
-          <p className="cta-sub">Fotoğraf gönderin, adresinizden alalım, aynı gün teslim edelim.</p>
+          <p className="cta-sub">Fotoğraf gönderin, adresinizden alalım, ertesi gün teslim edelim.</p>
           <div className="cta-btns">
             <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-white">💬 WhatsApp'tan Yazın</a>
             <a href={MAPS} target="_blank" rel="noopener noreferrer" className="btn-outline-white">📍 Google Haritalar</a>

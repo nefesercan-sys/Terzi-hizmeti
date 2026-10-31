@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import ReviewsBlock from '@/components/ReviewsBlock';
-import { reviewSchema } from '@/lib/reviews';
+import { businessNode } from '@/lib/business';
 import Image from 'next/image';
 import { DISTRICT_BASE } from '@/lib/seo-data';
+import { fitDesc, fitKeywords } from '@/lib/meta-fit';
 
 const SITE      = 'https://terzihizmeti.com.tr';
 const PAGE_URL  = `${SITE}/uncali-terzi`;
@@ -18,8 +19,8 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Uncalı Terzi · Paça ₺200, Abiye Tadilatı ₺800'den" },
   description:
-    "Uncalı terzi: paça ₺200, abiye ve elbise tadilatı ₺800'den, etek kısaltma, daraltma, özel dikim. Uncalı'ya ücretsiz servis. 08:00–23:00. ☎ " + PHONE,
-  keywords: Array.from(new Set(['Uncalı tamir tadilat', 'Uncalı söküğü dikme', 'Uncalı yırtık tamiri', 'Uncalı elbise tamiri', 'Uncalı terzi', 'Uncalı mahallesi terzi', 'Uncalı Konyaaltı terzi', 'Uncalı paça kısaltma', 'Uncalı fermuar tamiri', 'Uncalı bel daraltma', 'Uncalı elbise dikimi', 'Uncalı gelinlik tadilatı', 'Uncalı ütü hizmeti', 'Uncalı kuru temizleme', 'Uncalı terzi fiyatları 2026', 'Konyaaltı Uncalı dikiş atölyesi', 'Uncalı abiye tamiri', 'Uncalı abiye tadilatı', 'Uncalı abiye daraltma', 'Uncalı abiye kısaltma', 'Uncalı abiye fermuar değişimi', 'Uncalı abiye özel dikim', 'Uncalı elbise daraltma', 'Uncalı elbise kısaltma', 'Uncalı ölçüye göre özel dikim', 'Uncalı bayan elbise dikimi', 'Uncalı etek kısaltma', 'Uncalı etek daraltma', 'Uncalı beden ayarlama', 'Uncalı fermuar değişimi', 'Uncalı kot paçası kısaltma', 'Uncalı pantolon kısaltma', 'Uncalı şort kısaltma', 'Uncalı ceket tadilatı', 'Uncalı gömlek daraltma', 'Uncalı yakınımda terzi', 'Konyaaltı Uncalı terzi tamir tadilat', 'Uncalı bay bayan elbise tamiri', 'Uncalı terzi', 'Uncalı bay bayan terzi', 'Uncalı dikim', 'Uncalı tamir tadilat', 'Uncalı elbise tamiri', 'Uncalı elbise tadilatı', 'Uncalı fermuar değişimi', 'Uncalı fermuar tamiri', 'Uncalı boy kısaltma', 'Uncalı bel daraltma', 'Uncalı etek boyu kısaltma', 'Uncalı pantolon boyu kısaltma', 'Uncalı paça kısaltma', 'Uncalı kot paçası kısaltma', 'Uncalı beden ölçüsüne göre elbise tadilatı', 'Uncalı mont tamiri', 'Uncalı ceket daraltma', 'Uncalı gömlek daraltma', 'Uncalı şort kısaltma', 'Uncalı pantolon daraltma', 'Uncalı etek daraltma', 'Uncalı elbise daraltma', 'Uncalı elbise dikimi'])) ,
+    fitDesc("Uncalı terzi: paça ₺200, abiye ve elbise tadilatı ₺800'den, etek kısaltma, daraltma, özel dikim. Uncalı'ya ücretsiz servis. 08:00–23:00. ☎ " + PHONE),
+  keywords: fitKeywords(Array.from(new Set(['Uncalı tamir tadilat', 'Uncalı söküğü dikme', 'Uncalı yırtık tamiri', 'Uncalı elbise tamiri', 'Uncalı terzi', 'Uncalı mahallesi terzi', 'Uncalı Konyaaltı terzi', 'Uncalı paça kısaltma', 'Uncalı fermuar tamiri', 'Uncalı bel daraltma', 'Uncalı elbise dikimi', 'Uncalı gelinlik tadilatı', 'Uncalı ütü hizmeti', 'Uncalı kuru temizleme', 'Uncalı terzi fiyatları 2026', 'Konyaaltı Uncalı dikiş atölyesi', 'Uncalı abiye tamiri', 'Uncalı abiye tadilatı', 'Uncalı abiye daraltma', 'Uncalı abiye kısaltma', 'Uncalı abiye fermuar değişimi', 'Uncalı abiye özel dikim', 'Uncalı elbise daraltma', 'Uncalı elbise kısaltma', 'Uncalı ölçüye göre özel dikim', 'Uncalı bayan elbise dikimi', 'Uncalı etek kısaltma', 'Uncalı etek daraltma', 'Uncalı beden ayarlama', 'Uncalı fermuar değişimi', 'Uncalı kot paçası kısaltma', 'Uncalı pantolon kısaltma', 'Uncalı şort kısaltma', 'Uncalı ceket tadilatı', 'Uncalı gömlek daraltma', 'Uncalı yakınımda terzi', 'Konyaaltı Uncalı terzi tamir tadilat', 'Uncalı bay bayan elbise tamiri', 'Uncalı terzi', 'Uncalı bay bayan terzi', 'Uncalı dikim', 'Uncalı tamir tadilat', 'Uncalı elbise tamiri', 'Uncalı elbise tadilatı', 'Uncalı fermuar değişimi', 'Uncalı fermuar tamiri', 'Uncalı boy kısaltma', 'Uncalı bel daraltma', 'Uncalı etek boyu kısaltma', 'Uncalı pantolon boyu kısaltma', 'Uncalı paça kısaltma', 'Uncalı kot paçası kısaltma', 'Uncalı beden ölçüsüne göre elbise tadilatı', 'Uncalı mont tamiri', 'Uncalı ceket daraltma', 'Uncalı gömlek daraltma', 'Uncalı şort kısaltma', 'Uncalı pantolon daraltma', 'Uncalı etek daraltma', 'Uncalı elbise daraltma', 'Uncalı elbise dikimi']))),
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   alternates: { canonical: PAGE_URL, languages: { tr: PAGE_URL, en: `${SITE}${DISTRICT_BASE.en}/uncali`, ru: `${SITE}${DISTRICT_BASE.ru}/uncali`, de: `${SITE}${DISTRICT_BASE.de}/uncali`, 'x-default': PAGE_URL } },
   openGraph: {
@@ -33,52 +34,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
-    {
-      '@type': ['LocalBusiness', 'ClothingStore'],
-      ...reviewSchema(),
-      additionalType: ['https://schema.org/SewingService', 'https://schema.org/DryCleaningService'],
-      '@id': `${SITE}#business`,
-      name: 'Terzi Can',
-      alternateName: [
-        'Terzi Can Antalya', 'Konyaaltı Terzi', 'Tailor Can Antalya',
-        'Портной Кан Анталья', 'Schneider Can Antalya', 'Terzi Hizmeti Antalya', 'Dikiş Atölyesi Antalya',
-      ],
-      description: "Antalya Konyaaltı'da 2006'dan bu yana hizmet veren profesyonel terzi atölyesi. Paça kısaltma, fermuar değişimi, bel daraltma, özel dikim, gelinlik tadilatı, tekstil imalatı ve kuru temizleme. Hurma, Liman, Sarısu, Gürsu, Uncalı bölgelerine hizmet.",
-      url: SITE,
-      telephone: PHONE_TEL,
-      priceRange: '₺₺',
-      currenciesAccepted: 'TRY, EUR, USD, RUB',
-      paymentAccepted: 'Cash, Credit Card',
-      image: `${SITE}/terzi-can-hero.jpg`,
-      logo: `${SITE}/terzi-can-hero.jpg`,
-      hasMap: MAPS,
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: 'Hurma Mahallesi',
-        addressLocality: 'Konyaaltı',
-        addressRegion: 'Antalya',
-        postalCode: '07130',
-        addressCountry: 'TR',
-      },
-      geo: { '@type': 'GeoCoordinates', latitude: 36.857466, longitude: 30.596987 },
-      openingHoursSpecification: [{
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-        opens: '08:00', closes: '23:00',
-      }],
-      areaServed: [
-        'Liman, Konyaaltı', 'Hurma, Konyaaltı', 'Sarısu, Konyaaltı', 'Gürsu, Konyaaltı', 'Uncalı, Konyaaltı',
-        'Konyaaltı', 'Muratpaşa', 'Kepez', 'Antalya', 'Lara', 'Belek', 'Kemer', ].map((n) => ({ '@type': 'Place', name: n })),
-      contactPoint: [{
-        '@type': 'ContactPoint',
-        telephone: PHONE_TEL,
-        contactType: 'customer service',
-        areaServed: 'TR',
-        availableLanguage: ['Turkish', 'English', 'Russian', 'German', 'Polish', 'Ukrainian', 'Dutch', 'French', 'Spanish', 'Arabic'],
-      }],
-      sameAs: [MAPS, `https://wa.me/${WA_NUM}`, 'https://swaphubs.com/terzi'],
-      knowsLanguage: ['tr', 'en', 'ru', 'de', 'pl', 'uk', 'nl', 'fr', 'es', 'ar'],
-    },
+    businessNode(),
     {
       '@type': 'WebPage',
       '@id': `${PAGE_URL}#webpage`,
@@ -129,7 +85,7 @@ const jsonLd = {
       mainEntity: [
         { '@type': 'Question', name: "Uncalı'ya terzi servisi geliyor mu?", acceptedAnswer: { '@type': 'Answer', text: 'Evet, Uncalı mahallesine terzi servisi veriyoruz. Adresten alım ve teslimat WhatsApp üzerinden planlanır.' } },
         { '@type': 'Question', name: 'Uncalı terzi fiyatları ne kadar 2026?', acceptedAnswer: { '@type': 'Answer', text: `Paça kısaltma ₺200'den, fermuar değişimi ₺300'den, bel daraltma ₺200'den, elbise dikimi ₺800'den, gelinlik/abiye tadilatı ₺800'den, ütü ₺80'den başlar. ☎ ${PHONE}` } },
-        { '@type': 'Question', name: 'Uncalı\'da aynı gün teslim mümkün mü?', acceptedAnswer: { '@type': 'Answer', text: 'Paça kısaltma, fermuar değişimi ve bel daraltma gibi standart işlemler genellikle aynı gün içinde tamamlanıp teslim edilir.' } },
+        { '@type': 'Question', name: 'Uncalı\'da acil tadilat ne kadar sürer?', acceptedAnswer: { '@type': 'Answer', text: 'Paça kısaltma, fermuar değişimi ve bel daraltma gibi standart işlemler ertesi gün, acil olanlar 1–2 saatte teslim edilir.' } },
         { '@type': 'Question', name: 'Gelinlik ve abiye tadilatı yapıyor musunuz?', acceptedAnswer: { '@type': 'Answer', text: `Evet, gelinlik ve abiye tadilatında uzmanız. ₺800'den başlar. ☎ ${PHONE}` } },
       ],
     },
@@ -176,7 +132,7 @@ export default function UncaliPage() {
             <p className="hero-desc">
               Uncalı mahallesine terzi hizmeti. Paça kısaltma, fermuar değişimi,
               bel daraltma, özel dikim, gelinlik tadilatı, ütü ve kuru temizleme —
-              ₺200'den başlayan fiyatlarla, aynı gün teslim.
+              ₺200'den başlayan fiyatlarla; normal işler ertesi gün, acil işler 1–2 saatte teslim.
             </p>
             <div className="hero-btns">
               <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-primary">💬 WhatsApp'tan Yazın →</a>
@@ -233,7 +189,7 @@ export default function UncaliPage() {
             <div className="howto-list">
               <div className="howto-item">
                 <div className="howto-t">Paça Kısaltma & Bel Daraltma</div>
-                <div className="howto-d">Pantolon, kot, etek kısaltma; elbise, ceket ve pantolonda bel daraltma. ₺200'den, aynı gün teslim.</div>
+                <div className="howto-d">Pantolon, kot, etek kısaltma; elbise, ceket ve pantolonda bel daraltma. ₺200'den, ertesi gün teslim.</div>
               </div>
               <div className="howto-item">
                 <div className="howto-t">Fermuar Değişimi</div>
@@ -260,7 +216,7 @@ export default function UncaliPage() {
             {[
               ["Uncalı'ya terzi servisi geliyor mu?", 'Evet, Uncalı mahallesine terzi servisi veriyoruz. Adresten alım ve teslimat WhatsApp üzerinden planlanır.'],
               ['Uncalı terzi fiyatları ne kadar 2026?', 'Paça kısaltma ₺200\'den, fermuar değişimi ₺300\'den, bel daraltma ₺200\'den, elbise dikimi ₺800\'den, gelinlik/abiye tadilatı ₺800\'den, ütü ₺80\'den başlar.'],
-              ['Uncalı\'da aynı gün teslim mümkün mü?', 'Paça kısaltma, fermuar değişimi ve bel daraltma gibi standart işlemler genellikle aynı gün içinde tamamlanıp teslim edilir.'],
+              ['Uncalı\'da acil tadilat ne kadar sürer?', 'Paça kısaltma, fermuar değişimi ve bel daraltma gibi standart işlemler ertesi gün, acil olanlar 1–2 saatte teslim edilir.'],
               ['Gelinlik ve abiye tadilatı yapıyor musunuz?', 'Evet, gelinlik ve abiye tadilatında uzmanız. ₺800\'den başlar.'],
             ].map(([q, a]) => (
               <div key={q} className="faq-item">
@@ -273,7 +229,7 @@ export default function UncaliPage() {
 
         <section className="cta-final" aria-label="İletişime geç">
           <h2 className="cta-h ff">Uncalı'da Terziye mi İhtiyacınız Var?</h2>
-          <p className="cta-sub">Fotoğraf gönderin, adresinizden alalım, aynı gün teslim edelim.</p>
+          <p className="cta-sub">Fotoğraf gönderin, adresinizden alalım, ertesi gün teslim edelim.</p>
           <div className="cta-btns">
             <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-white">💬 WhatsApp'tan Yazın</a>
             <a href={MAPS} target="_blank" rel="noopener noreferrer" className="btn-outline-white">📍 Google Haritalar</a>

@@ -24,7 +24,7 @@ export const FABRICS_ORDER: Record<FabricsLang, {
     leather: 'Leather and denim: repair and alteration only (hemming jeans, repairing or taking in leather jackets and trousers, shortening, zip replacement). We do not make new leather or denim garments.',
     abroadH: 'How to order from abroad',
     abroadSteps: ['Send us the model and your measurements on WhatsApp.', 'We sew the garment in our Antalya workshop.', 'We ship to the country you choose. Payment is by bank transfer and the customer pays shipping. It usually takes 1–3 weeks.', 'If it does not fit, we correct it.'],
-    abroadNote: 'If you are staying in a hotel, we can take your measurements there and deliver the finished work back to the hotel. Pickup and delivery are free in Konyaaltı neighbourhoods; for farther areas we agree on WhatsApp. Open daily 08:00–23:00.',
+    abroadNote: 'If you are staying in a hotel, we can take your measurements there and deliver the finished work back to the hotel. Hotel pickup and delivery are free in every area we serve. Open daily 08:00–23:00.',
   },
   ru: {
     h: 'Ткани и заказ из-за границы',
@@ -42,6 +42,6 @@ export const FABRICS_ORDER: Record<FabricsLang, {
     leather: 'Leder und Jeans: nur Reparatur und Änderung (Jeans kürzen, Lederjacken und -hosen reparieren oder enger machen, kürzen, Reißverschluss tauschen). Neue Kleidung aus Leder oder Jeansstoff nähen wir nicht.',
     abroadH: 'So bestellen Sie aus dem Ausland',
     abroadSteps: ['Senden Sie uns Modell und Körpermaße per WhatsApp.', 'Wir nähen das Stück in unserer Werkstatt in Antalya.', 'Wir versenden in das Land Ihrer Wahl. Zahlung per Banküberweisung, die Versandkosten trägt der Kunde. Dauer meist 1–3 Wochen.', 'Passt es nicht, korrigieren wir es.'],
-    abroadNote: 'Wenn Sie im Hotel wohnen, nehmen wir dort Maß und bringen das fertige Stück zurück ins Hotel. Abholung und Lieferung sind in den Vierteln von Konyaaltı kostenlos, für weiter entfernte Gebiete sprechen wir uns per WhatsApp ab. Täglich 08:00–23:00.',
+    abroadNote: 'Wenn Sie im Hotel wohnen, nehmen wir dort Maß und bringen das fertige Stück zurück ins Hotel. Abholung und Lieferung im Hotel sind in allen Gebieten, die wir bedienen, kostenlos. Täglich 08:00–23:00.',
   },
 };

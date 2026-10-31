@@ -1,13 +1,11 @@
 import type { Metadata } from 'next';
 import { INTL_ALT } from '@/lib/intl';
+import { DELIVERY } from '@/lib/delivery';
 import FabricsOrderBlock from '@/components/FabricsOrderBlock';
 import ReviewsBlock from '@/components/ReviewsBlock';
-import { reviewSchema } from '@/lib/reviews';
+import { businessNode } from '@/lib/business';
 import Image from 'next/image';
-import { Inter, Syne } from 'next/font/google';
 
-const inter = Inter({ subsets: ['latin', 'latin-ext'], variable: '--font-inter', display: 'swap' });
-const syne  = Syne({ subsets: ['latin'], weight: ['700', '800'], variable: '--font-syne', display: 'swap' });
 
 const SITE      = 'https://terzihizmeti.com.tr';
 const PAGE_URL  = `${SITE}/antalya-terzi`;
@@ -25,16 +23,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Antalya Terzi · Paça ₺200, Fermuar ₺300 · Her Gün Açık" },
   description: "Antalya'da bay bayan terzi: paça kısaltma ₺200, fermuar ₺300, bel daraltma ₺200. Konyaaltı'nda adrese ücretsiz servis. 08:00–23:00. ☎ " + PHONE,
-  keywords: [
-    'Hurma terzi Konyaaltı', 'Liman terzi Konyaaltı', 'Sarısu terzi Konyaaltı',
-    'Uncalı terzi', 'Gürsu terzi', 'Öğretmenevleri terzi', 'Ahatlı terzi', 'Toros terzi',
-    'Konyaaltı dikiş atölyesi', 'Konyaaltı tekstil atölyesi', 'fason imalat Antalya',
-    'bay kıyafet dikimi Antalya', 'bayan kıyafet dikimi Antalya', 'üniforma üretimi Antalya',
-    'Antalya\'da terzi hizmeti', 'terzi öner', 'elbise diktirmek', 'elbise tadilatı', 'elbisem yırtıldı', 'bel daraltma',
-    'özel dikim terzi', 'bay bayan terzi', 'terzi fiyatları', 'en yakın terzi', 'hafta sonu açık terzi',
-    'terzi Antalya', 'paça kısaltma fiyatı Konyaaltı', 'fermuar değişimi fiyatı Antalya',
-    'портной Анталья Коньяалты', 'Schneider Antalya Konyaaltı',
-  ],
+  keywords: ['Antalya terzi', 'Konyaaltı terzi', 'Hurma terzi', 'Liman terzi', 'Uncalı terzi', 'Gürsu terzi', 'otele gelen terzi Antalya', 'acil terzi Antalya'],
   authors: [{ name: BIZ, url: SITE }],
   creator: BIZ,
   publisher: 'Terzi Hizmeti',
@@ -74,55 +63,19 @@ export const metadata: Metadata = {
   verification: { google: 'W2S_Gr49EgkgWG7xAWWMc5qPW6Cw3wEnOi6O6UC9zkQ' },
 };
 
+const FAQS: [string, string][] = [
+  ['Hangi mahallelere ücretsiz servis var?', 'Hurma, Sarısu, Liman, Uncalı, Altınkum, Öğretmenevleri, Siteler, Arapsuyu ve Gürsu\'ya ücretsiz adrese servis veriyoruz. Diğer bölgelerde servis, mesafeye göre WhatsApp\'ta netleşir.'],
+  ["Ahatlı, Toros ve diğer Antalya bölgelerine hizmet var mı?", 'Evet, ev adreslerine randevuyla geliyoruz; ücret ve zamanı WhatsApp\'tan netleştiririz. Otellere alım-teslimat ücretsizdir.'],
+  ['Bay, bayan, çocuk kıyafeti dikiyor musunuz?', 'Evet, erkek, kadın ve çocuk kıyafetlerinde özel ölçü dikim hizmeti sunuyoruz.'],
+  ['Üniforma üretimi ve toplu sipariş alıyor musunuz?', 'Evet, otel, okul, restoran ve kurumlar için üniforma tasarımı ve toplu üretim yapıyoruz.'],
+  ['Fason imalat yapıyor musunuz?', 'Evet, markalar ve işletmeler için numune dikimi, kalıp çıkarma ve seri üretim hizmeti veriyoruz.'],
+  ['Muratpaşa, Lara, Belek, Side ve Kemer\'e hizmet var mı?', "Evet. Muratpaşa (Meltem, Şirinyalı, Fener, Güzeloba dahil), Lara, Belek, Side/Manavgat ve Kemer'deki otellere alım-teslimat ücretsizdir."],
+];
+
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
-    {
-      '@type': ['LocalBusiness', 'ClothingStore'],
-      ...reviewSchema(),
-      additionalType: ['https://schema.org/SewingService', 'https://schema.org/DryCleaningService'],
-      '@id': `${SITE}#business`,
-      name: 'Terzi Can',
-      alternateName: [
-        'Terzi Can Antalya', 'Konyaaltı Terzi', 'Tailor Can Antalya',
-        'Портной Кан Анталья', 'Schneider Can Antalya', 'Terzi Hizmeti Antalya', 'Dikiş Atölyesi Antalya',
-      ],
-      description: "Antalya Konyaaltı'da 2006'dan bu yana hizmet veren profesyonel terzi atölyesi. Paça kısaltma, fermuar değişimi, bel daraltma, özel dikim, gelinlik tadilatı, tekstil imalatı ve kuru temizleme. Hurma, Liman, Sarısu, Gürsu, Uncalı bölgelerine hizmet.",
-      url: SITE,
-      telephone: PHONE_TEL,
-      priceRange: '₺₺',
-      currenciesAccepted: 'TRY, EUR, USD, RUB',
-      paymentAccepted: 'Cash, Credit Card',
-      image: `${SITE}/terzi-can-hero.jpg`,
-      logo: `${SITE}/terzi-can-hero.jpg`,
-      hasMap: MAPS,
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: 'Hurma Mahallesi',
-        addressLocality: 'Konyaaltı',
-        addressRegion: 'Antalya',
-        postalCode: '07130',
-        addressCountry: 'TR',
-      },
-      geo: { '@type': 'GeoCoordinates', latitude: 36.857466, longitude: 30.596987 },
-      openingHoursSpecification: [{
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-        opens: '08:00', closes: '23:00',
-      }],
-      areaServed: [
-        'Liman, Konyaaltı', 'Hurma, Konyaaltı', 'Sarısu, Konyaaltı', 'Gürsu, Konyaaltı', 'Uncalı, Konyaaltı',
-        'Konyaaltı', 'Muratpaşa', 'Kepez', 'Antalya', 'Lara', 'Belek', 'Kemer', ].map((n) => ({ '@type': 'Place', name: n })),
-      contactPoint: [{
-        '@type': 'ContactPoint',
-        telephone: PHONE_TEL,
-        contactType: 'customer service',
-        areaServed: 'TR',
-        availableLanguage: ['Turkish', 'English', 'Russian', 'German', 'Polish', 'Ukrainian', 'Dutch', 'French', 'Spanish', 'Arabic'],
-      }],
-      sameAs: [MAPS, `https://wa.me/${WA_NUM}`, 'https://swaphubs.com/terzi'],
-      knowsLanguage: ['tr', 'en', 'ru', 'de', 'pl', 'uk', 'nl', 'fr', 'es', 'ar'],
-    },
+    businessNode(),
     {
       '@type': 'WebPage',
       '@id': `${PAGE_URL}#webpage`,
@@ -148,12 +101,8 @@ const jsonLd = {
     {
       '@type': 'FAQPage',
       '@id': `${PAGE_URL}#faq`,
-      mainEntity: [
-        { '@type': 'Question', name: 'Hurma, Sarısu, Liman, Uncalı, Altınkum, Öğretmenevleri, Siteler, Arapsuyu ve Gürsu\'ya terzi servisi var mı?', acceptedAnswer: { '@type': 'Answer', text: `Evet, atölyemiz bu mahallelere en yakın konumda. Hurma, Sarısu, Liman, Uncalı, Altınkum, Öğretmenevleri, Siteler, Arapsuyu ve Gürsu'ya ücretsiz adrese gelen servis sağlıyoruz. ☎ ${PHONE}` } },
-        { '@type': 'Question', name: 'Bay, bayan ve çocuk kıyafeti dikimi yapıyor musunuz?', acceptedAnswer: { '@type': 'Answer', text: 'Evet, erkek, kadın ve çocuk kıyafetlerinin tamamında özel ölçü dikim hizmeti veriyoruz.' } },
-        { '@type': 'Question', name: 'Üniforma üretimi ve toplu sipariş alıyor musunuz?', acceptedAnswer: { '@type': 'Answer', text: 'Evet, otel, restoran, okul, güvenlik ve sağlık sektörü için üniforma tasarımı ve toplu üretimi yapıyoruz.' } },
-        { '@type': 'Question', name: 'Fason imalat için minimum sipariş adedi var mı?', acceptedAnswer: { '@type': 'Answer', text: "Adet projeye göre belirlenir; numune, az adetli ve yüksek adetli fason imalat siparişleri proje bazında fiyatlandırılır. WhatsApp'tan detaylı bilgi alabilirsiniz." } },
-      ],
+      inLanguage: 'tr',
+      mainEntity: FAQS.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
     },
   ],
 };
@@ -167,7 +116,7 @@ interface Neighborhood {
 
 const NEIGHBORHOODS: Neighborhood[] = [
   { name: 'Hurma', tag: 'Öncelikli', note: 'Atölyeye en yakın — ücretsiz adrese servis', priority: true },
-  { name: 'Liman', tag: 'Öncelikli', note: 'Ücretsiz adrese servis, aynı gün randevu', priority: true },
+  { name: 'Liman', tag: 'Öncelikli', note: 'Otellere ücretsiz servis, WhatsApp\'tan randevu', priority: true },
   { name: 'Sarısu', tag: 'Öncelikli', note: 'Ücretsiz adrese servis', priority: true },
   { name: 'Uncalı', tag: 'Yakın', note: 'Ücretsiz adrese servis', priority: false },
   { name: 'Gürsu', tag: 'Yakın', note: 'Ücretsiz adrese servis', priority: false },
@@ -283,20 +232,12 @@ const REPAIR_CATEGORIES: Record<Lang, RepairCategory[]> = {
   ],
 };
 
-const FAQS: [string, string][] = [
-  ['Hangi mahallelere ücretsiz servis var?', 'Hurma, Sarısu, Liman, Uncalı, Altınkum, Öğretmenevleri, Siteler, Arapsuyu ve Gürsu\'ya ücretsiz adrese servis veriyoruz. Diğer bölgelerde servis, mesafeye göre WhatsApp\'ta netleşir.'],
-  ["Uncalı, Gürsu, Öğretmenevleri, Ahatlı, Toros'a hizmet var mı?", 'Evet, bu mahallelere randevulu adrese gelen servis veriyoruz.'],
-  ['Bay, bayan, çocuk kıyafeti dikiyor musunuz?', 'Evet, erkek, kadın ve çocuk kıyafetlerinde özel ölçü dikim hizmeti sunuyoruz.'],
-  ['Üniforma üretimi ve toplu sipariş alıyor musunuz?', 'Evet, otel, okul, restoran ve kurumlar için üniforma tasarımı ve toplu üretim yapıyoruz.'],
-  ['Fason imalat yapıyor musunuz?', 'Evet, markalar ve işletmeler için numune dikimi, kalıp çıkarma ve seri üretim hizmeti veriyoruz.'],
-  ['Diğer Antalya ilçelerine hizmet var mı?', "Evet, Muratpaşa, Kepez, Lara dahil yakın bölgelere kargo veya randevulu servisle ulaşıyoruz."],
-];
 
 const PROCESS_STEPS: [string, string, string][] = [
-  ['01', 'Mahallenizi Belirtin', "WhatsApp'tan bulunduğunuz mahalleyi ve ihtiyacınızı yazın."],
+  ['01', 'Mahallenizi Belirtin', "WhatsApp\'tan bulunduğunuz mahalleyi ve ihtiyacınızı yazın."],
   ['02', 'Ölçü & Tasarım', 'Adresinizde ölçü alınır veya atölyede tasarım detayları belirlenir.'],
   ['03', 'Dikim / Üretim', 'Tekli dikim ya da toplu üniforma/fason üretimi atölyede tamamlanır.'],
-  ['04', 'Teslimat', 'Yakın mahallelerde ücretsiz, diğer bölgelere mesafeye göre randevulu teslim.'],
+  ['04', 'Teslimat', 'Yakın mahallelerde ücretsiz, diğer bölgeler WhatsApp\'tan sorulur.'],
 ];
 
 export default function KonyaaltiTailorServicePage() {
@@ -306,7 +247,7 @@ export default function KonyaaltiTailorServicePage() {
 
       <a href="#main-content" className="skip-link">İçeriğe geç</a>
 
-      <div className={`${inter.variable} ${syne.variable}`} style={{ background: '#1E3329', color: '#F5F1E8', fontFamily: 'var(--font-inter), system-ui, sans-serif', lineHeight: 1.6, minHeight: '100vh' }}>
+      <div style={{ background: '#1E3329', color: '#F5F1E8', fontFamily: 'var(--font-inter), system-ui, sans-serif', lineHeight: 1.6, minHeight: '100vh' }}>
 
         <nav className="nav" aria-label="Ana site navigasyonu">
           <div className="nav-logo"><span className="nav-dot" aria-hidden="true" />TERZİ CAN</div>
@@ -337,10 +278,7 @@ export default function KonyaaltiTailorServicePage() {
               ve Fason İmalat Merkezi
             </h1>
             <p className="hero-desc" id="hero-desc">
-              Hurma, Liman, Sarısu, Uncalı, Gürsu, Öğretmenevleri, Ahatlı ve Toros
-              mahallelerine en yakın atölyemizden — bay, bayan ve çocuk kıyafet dikimi,
-              üniforma üretimi, fason imalat ve özel tasarım hizmeti. Antalya&apos;nın
-              yakın ilçelerine de ulaşıyoruz.
+              Antalya'da terzi arıyorsanız Terzi Can, Konyaaltı Hurma'daki atölyesinden bay, bayan ve çocuk kıyafetlerinde tamir, tadilat ve özel dikim yapar; Hurma, Liman, Sarısu, Uncalı, Gürsu ve çevresine, ayrıca Lara, Belek, Side ve Kemer otellerine hizmet verir. {DELIVERY.tr.urgent} {DELIVERY.tr.normal} Otellere alım-teslim ücretsizdir.
             </p>
             <div className="hero-btns">
               <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-primary">
@@ -422,7 +360,7 @@ export default function KonyaaltiTailorServicePage() {
           <section className="sec" id="fiyatlar" aria-labelledby="price-h">
             <div className="ctr">
               <div className="sec-head">
-                <span className="eyebrow">₺ Şeffaf Fiyatlar 2026 · Prices · Цены</span>
+                <span className="eyebrow">₺ Fiyatlar 2026 · Prices · Цены</span>
                 <h2 className="sec-h" id="price-h">Dikim, Tamir, Tadilat ve Ütü Hizmetleri</h2>
                 <p className="sec-sub">Antalya Konyaaltı terzi fiyatları — Türkçe, İngilizce, Rusça ve Almanca. Kesin fiyat için WhatsApp&apos;tan fotoğraf gönderin.</p>
               </div>
@@ -500,14 +438,14 @@ export default function KonyaaltiTailorServicePage() {
                   <div className="wk-icon" aria-hidden="true">🔧</div>
                   <h3 className="wk-tr">Fermuar Tamiri Konyaaltı</h3>
                   <span className="wk-en">Zipper Repair</span>
-                  <p className="wk-desc">Pantolon, mont, ceket, çanta fermuarı — aynı gün teslim, ₺300&apos;den.</p>
+                  <p className="wk-desc">Pantolon, mont, ceket, çanta fermuarı — ertesi gün teslim (acil 1–2 saat), ₺300&apos;den.</p>
                   <span style={{ fontSize: '.76rem', color: '#C9A96E', fontWeight: 700 }}>Fiyatları Gör <span aria-hidden="true">→</span></span>
                 </a>
                 <a href="/konyaalti-paca-kisaltma" className="wk-card" style={{ display: 'block' }}>
                   <div className="wk-icon" aria-hidden="true">📏</div>
                   <h3 className="wk-tr">Paça Kısaltma Konyaaltı</h3>
                   <span className="wk-en">Hemming</span>
-                  <p className="wk-desc">Pantolon, kot, etek kısaltma — aynı gün teslim, ₺200&apos;den.</p>
+                  <p className="wk-desc">Pantolon, kot, etek kısaltma — ertesi gün teslim (acil 1–2 saat), ₺200&apos;den.</p>
                   <span style={{ fontSize: '.76rem', color: '#C9A96E', fontWeight: 700 }}>Fiyatları Gör <span aria-hidden="true">→</span></span>
                 </a>
                 <a href="/antalya-gelinlik-tadilati" className="wk-card" style={{ display: 'block' }}>

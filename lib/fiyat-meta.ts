@@ -1,6 +1,7 @@
 // lib/fiyat-meta.ts — fiyat/SSS sayfaları için merkezi metadata + şema (4 dil)
 import type { Metadata } from 'next';
 import { FT, FIYAT_URLS, PRICE_ROWS, SITE, PHONE_TEL, type FLang } from '@/components/TerziFiyatlariSayfasi';
+import { fitDesc, fitKeywords } from '@/lib/meta-fit';
 
 const OG = `${SITE}/terzi-can-hero.jpg`;
 
@@ -10,8 +11,8 @@ export function buildFiyatMetadata(lang: FLang): Metadata {
   return {
     metadataBase: new URL(SITE),
     title: { absolute: T.metaTitle },
-    description: T.metaDesc,
-    keywords: T.keywords,
+    description: fitDesc(T.metaDesc),
+    keywords: fitKeywords(T.keywords),
     authors: [{ name: 'Terzi Can', url: SITE }],
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
     alternates: {

@@ -7,8 +7,6 @@
 export type OtelBolgesi = {
   slug: string;
   name: string;
-  hotels: string[];
-  travelTime: { tr: string; en: string; ru: string; de: string };
   blurb: { tr: string; en: string; ru: string; de: string };
 };
 
@@ -16,15 +14,6 @@ export const OTEL_BOLGELERI: OtelBolgesi[] = [
   {
     slug: 'belek',
     name: 'Belek',
-    hotels: [
-      'Regnum Carya', 'Rixos Premium Belek', 'Rixos Sungate', 'Maxx Royal Belek', 'Kaya Palazzo Golf Resort',
-      'Gloria Golf Resort', 'Calista Luxury Resort', 'Cornelia Diamond Golf Resort', 'Susesi Luxury Resort',
-      'Adam & Eve Hotel', 'TUI Magic Life Belek', 'Ela Quality Resort', 'Delphin BE Grand Resort', 'Papillon Zeugma',
-    ],
-    travelTime: {
-      tr: 'Konyaaltı atölyemizden ~35–40 dk',
-      en: '~35–40 min from our Konyaaltı workshop', ru: '~35–40 мин от мастерской в Коньяалты', de: '~35–40 Min von unserer Werkstatt in Konyaaltı',
-    },
     blurb: {
       tr: "Belek, Antalya'nın golf sahalarıyla ve 5 yıldızlı resort otelleriyle öne çıkan tatil bölgesi.",
       en: "Belek is Antalya's holiday area known for its golf courses and 5-star resort hotels.",
@@ -35,15 +24,6 @@ export const OTEL_BOLGELERI: OtelBolgesi[] = [
   {
     slug: 'lara',
     name: 'Lara',
-    hotels: [
-      'Titanic Mardan Palace', 'Delphin Diva Premiere', 'Delphin BE Grand Resort', 'Fame Residence Lara',
-      'Akra Hotel', 'Lara Barut Collection', 'Concorde De Luxe Resort', 'Limak Atlantis', 'Kervansaray Lara',
-      'IC Hotels Santai', 'Royal Wings Hotel', 'Crown Plaza Lara',
-    ],
-    travelTime: {
-      tr: 'Konyaaltı atölyemizden ~10–15 dk',
-      en: '~10–15 min from our Konyaaltı workshop', ru: '~10–15 мин от мастерской в Коньяалты', de: '~10–15 Min von unserer Werkstatt in Konyaaltı',
-    },
     blurb: {
       tr: "Lara, şehir merkezine yakın, uzun kumsalı olan ve sahil boyunca otellerin sıralandığı bir bölge.",
       en: "Lara lies close to the city centre, with a long sandy beach and hotels lined along the coast.",
@@ -54,14 +34,6 @@ export const OTEL_BOLGELERI: OtelBolgesi[] = [
   {
     slug: 'guzeloba',
     name: 'Güzeloba',
-    hotels: [
-      'Sherwood Exclusive Lara', 'Sherwood Breezes Resort', 'Delphin Imperial', 'Adalya Elite Lara',
-      'Aydinbey Famous Resort', 'Xanadu Resort (yakın)', 'Belconti Resort (yakın)',
-    ],
-    travelTime: {
-      tr: 'Konyaaltı atölyemizden ~15–20 dk',
-      en: '~15–20 min from our Konyaaltı workshop', ru: '~15–20 мин от мастерской в Коньяалты', de: '~15–20 Min von unserer Werkstatt in Konyaaltı',
-    },
     blurb: {
       tr: "Güzeloba, Lara'nın doğu yakasında, merkeze göre daha sakin, sahil boyunca uzanan bir otel bölgesi.",
       en: "Güzeloba sits on the eastern side of Lara, a calmer stretch of beachfront hotels compared with the centre.",
@@ -72,15 +44,6 @@ export const OTEL_BOLGELERI: OtelBolgesi[] = [
   {
     slug: 'kemer',
     name: 'Kemer',
-    hotels: [
-      'Rixos Sungate', 'Club Med Kemer', 'Alva Donna Beach Resort', 'Amara Dolce Vita Luxury',
-      'Kilikya Palace Göynük', 'Sherwood Dreams Resort', 'Sentido Zeynep Resort', 'Fantasia Hotel De Luxe Kemer',
-      'Club Turan Prince World', 'Simena Holiday Village',
-    ],
-    travelTime: {
-      tr: 'Konyaaltı atölyemizden ~40–50 dk',
-      en: '~40–50 min from our Konyaaltı workshop', ru: '~40–50 мин от мастерской в Коньяалты', de: '~40–50 Min von unserer Werkstatt in Konyaaltı',
-    },
     blurb: {
       tr: "Kemer, Toros Dağları'nın denize inen eteklerinde kurulu; marinası ve resort otelleriyle bilinen bir sahil kasabası.",
       en: "Kemer is a seaside town where the Taurus Mountains drop to the water, known for its marina and resort hotels.",
@@ -91,14 +54,6 @@ export const OTEL_BOLGELERI: OtelBolgesi[] = [
   {
     slug: 'side',
     name: 'Side',
-    hotels: [
-      'Crystal Sunset Luxury Resort', 'Papillon Ayscha Resort', 'TUI Sensatori Side', 'Barut Hotels Side',
-      'Kamelya Collection', 'Nashira Resort', 'Xanthe Resort & Spa', 'Side Star Resort', 'Defne Defnem Beach Hotel',
-    ],
-    travelTime: {
-      tr: 'Konyaaltı atölyemizden ~55–65 dk',
-      en: '~55–65 min from our Konyaaltı workshop', ru: '~55–65 мин от мастерской в Коньяалты', de: '~55–65 Min von unserer Werkstatt in Konyaaltı',
-    },
     blurb: {
       tr: "Side, Manavgat'a yakın; antik kalıntılarının yanında çok sayıda sahil oteli bulunan tarihi bir tatil beldesi.",
       en: "Side is a historic holiday town near Manavgat, with ancient ruins and many beach hotels side by side.",
@@ -109,14 +64,6 @@ export const OTEL_BOLGELERI: OtelBolgesi[] = [
   {
     slug: 'kundu',
     name: 'Kundu',
-    hotels: [
-      'Concorde De Luxe Resort Lara Antalya', 'Swandor Hotels & Resort Topkapi Palace', 'Kremlin Palace',
-      'Grand Park Lara', 'Akra Antalya', 'Delta Hotels by Marriott Antalya Lara',
-    ],
-    travelTime: {
-      tr: 'Konyaaltı atölyemizden ~20–25 dk',
-      en: '~20–25 min from our Konyaaltı workshop', ru: '~20–25 мин от мастерской в Коньяалты', de: '~20–25 Min von unserer Werkstatt in Konyaaltı',
-    },
     blurb: {
       tr: 'Kundu (Aksu), Lara\'nın hemen doğusunda, çok sayıda 5 yıldızlı all-inclusive resort barındıran bir otel bölgesi.',
       en: 'Kundu (Aksu), just east of Lara, is a hotel district home to numerous 5-star all-inclusive resorts.',
@@ -127,17 +74,9 @@ export const OTEL_BOLGELERI: OtelBolgesi[] = [
   {
     slug: 'konyaalti',
     name: 'Konyaaltı',
-    hotels: [
-      'Hillside Su Hotel', 'Megasaray Westbeach Antalya', 'Sealife Family Resort Hotel',
-      'Özkaymak Falez Hotel', 'Crowne Plaza Hotel Antalya by IHG',
-    ],
-    travelTime: {
-      tr: 'Konyaaltı atölyemizin bulunduğu bölge — ~5–10 dk',
-      en: '~5–10 min — this is where our workshop is based', ru: '~5–10 мин — район, где находится наша мастерская', de: '~5–10 Min — hier befindet sich unsere Werkstatt',
-    },
     blurb: {
-      tr: 'Konyaaltı, atölyemizin de bulunduğu bölge — 7 km\'lik sahil şeridi boyunca sıralanan otel ve apart-otellere ev sahipliği yapıyor.',
-      en: 'Konyaaltı, where our own workshop is based, is home to hotels and aparthotels lined along a 7 km stretch of coastline.',
+      tr: 'Konyaaltı, atölyemizin de bulunduğu bölge — sahil şeridi boyunca sıralanan otel ve apart-otellere ev sahipliği yapıyor.',
+      en: 'Konyaaltı, where our own workshop is based, is home to hotels and aparthotels lined along the coastline.',
       ru: 'Коньяалты, где расположена наша мастерская, — район с отелями и апарт-отелями вдоль 7-километровой береговой линии.',
       de: 'Konyaaltı, wo sich unsere eigene Werkstatt befindet, beherbergt Hotels und Aparthotels entlang eines 7 km langen Küstenabschnitts.',
     },
@@ -145,14 +84,6 @@ export const OTEL_BOLGELERI: OtelBolgesi[] = [
   {
     slug: 'goynuk',
     name: 'Göynük',
-    hotels: [
-      'Kilikya Palace Göynük', 'Orange County Resort Hotel Kemer', 'Queen\'s Park Resort Göynük',
-      'Grand Park Kemer', 'Seven Seas Hotel Life', 'NG Phaselis Bay',
-    ],
-    travelTime: {
-      tr: 'Konyaaltı atölyemizden ~45–50 dk',
-      en: '~45–50 min from our Konyaaltı workshop', ru: '~45–50 мин от мастерской в Коньяалты', de: '~45–50 Min von unserer Werkstatt in Konyaaltı',
-    },
     blurb: {
       tr: 'Göynük, Kemer\'in kuzey komşusu — sakin bir otel şeridi, Göynük Kanyonu\'na yakınlığıyla bilinir.',
       en: 'Göynük, Kemer\'s northern neighbour, is a quieter hotel row known for its proximity to Göynük Canyon.',
@@ -163,14 +94,6 @@ export const OTEL_BOLGELERI: OtelBolgesi[] = [
   {
     slug: 'muratpasa',
     name: 'Muratpaşa',
-    hotels: [
-      'Akra Antalya', 'Rixos Downtown Antalya', 'Ramada Plaza by Wyndham Antalya', 'DoubleTree By Hilton Antalya City Centre',
-      'The Marmara Antalya', 'Hotel Su & Aqualand', 'Miracle Resort Hotel', 'Alp Paşa Hotel',
-    ],
-    travelTime: {
-      tr: 'Konyaaltı atölyemizden ~10–15 dk',
-      en: '~10–15 min from our Konyaaltı workshop', ru: '~10–15 мин от мастерской в Коньяалты', de: '~10–15 Min von unserer Werkstatt in Konyaaltı',
-    },
     blurb: {
       tr: 'Muratpaşa, Antalya\'nın merkez ilçesi — Kaleiçi, şehir merkezi otelleri ve Lara\'nın bir bölümünü kapsayan geniş bir bölge.',
       en: 'Muratpaşa is Antalya\'s central district, covering Kaleiçi, city-centre hotels and part of the Lara area.',

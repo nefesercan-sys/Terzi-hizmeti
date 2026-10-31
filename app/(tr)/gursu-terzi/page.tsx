@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import ReviewsBlock from '@/components/ReviewsBlock';
-import { reviewSchema } from '@/lib/reviews';
+import { businessNode } from '@/lib/business';
 import Image from 'next/image';
 import { DISTRICT_BASE } from '@/lib/seo-data';
+import { fitKeywords } from '@/lib/meta-fit';
 
 const SITE      = 'https://terzihizmeti.com.tr';
 const PAGE_URL  = `${SITE}/gursu-terzi`;
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
   title: { absolute: "Gürsu Terzi · Pantolon, Ceket, Mont · Paça ₺200" },
   description:
     "Gürsu terzi: pantolon, ceket, mont tadilatı, paça ₺200, fermuar ₺300. Gürsu'ya ücretsiz servis. Her gün 08:00–23:00. ☎ " + PHONE,
-  keywords: Array.from(new Set(['Gürsu tamir tadilat', 'Gürsu söküğü dikme', 'Gürsu yırtık tamiri', 'Gürsu elbise tamiri', 'Gürsu terzi', 'Gürsu mahallesi terzi', 'Gürsu Konyaaltı terzi', 'Gürsu paça kısaltma', 'Gürsu fermuar tamiri', 'Gürsu bel daraltma', 'Gürsu elbise dikimi', 'Gürsu gelinlik tadilatı', 'Gürsu ütü hizmeti', 'Gürsu kuru temizleme', 'Gürsu terzi fiyatları 2026', 'Konyaaltı Gürsu dikiş atölyesi', 'Gürsu pantolon kısaltma', 'Gürsu pantolon daraltma', 'Gürsu kot paçası kısaltma', 'Gürsu şort kısaltma', 'Gürsu ceket tadilatı', 'Gürsu ceket daraltma', 'Gürsu mont kısaltma', 'Gürsu mont tamiri', 'Gürsu mont fermuar değişimi', 'Gürsu gömlek daraltma', 'Gürsu gömlek kısaltma', 'Gürsu etek kısaltma', 'Gürsu fermuar değişimi', 'Gürsu beden ayarlama', 'Gürsu erkek terzi', 'Gürsu bay bayan terzi', 'Gürsu ölçüye göre özel dikim', 'Gürsu özel dikim', 'Gürsu abiye tamiri', 'Gürsu yakınımda terzi', 'Konyaaltı Gürsu terzi tamir tadilat', 'Gürsu bay bayan elbise tamiri', 'Gürsu terzi', 'Gürsu bay bayan terzi', 'Gürsu dikim', 'Gürsu tamir tadilat', 'Gürsu elbise tamiri', 'Gürsu elbise tadilatı', 'Gürsu fermuar değişimi', 'Gürsu fermuar tamiri', 'Gürsu boy kısaltma', 'Gürsu bel daraltma', 'Gürsu etek boyu kısaltma', 'Gürsu pantolon boyu kısaltma', 'Gürsu paça kısaltma', 'Gürsu kot paçası kısaltma', 'Gürsu beden ölçüsüne göre elbise tadilatı', 'Gürsu mont tamiri', 'Gürsu ceket daraltma', 'Gürsu gömlek daraltma', 'Gürsu şort kısaltma', 'Gürsu pantolon daraltma', 'Gürsu etek daraltma', 'Gürsu elbise daraltma', 'Gürsu elbise dikimi'])) ,
+  keywords: fitKeywords(Array.from(new Set(['Gürsu tamir tadilat', 'Gürsu söküğü dikme', 'Gürsu yırtık tamiri', 'Gürsu elbise tamiri', 'Gürsu terzi', 'Gürsu mahallesi terzi', 'Gürsu Konyaaltı terzi', 'Gürsu paça kısaltma', 'Gürsu fermuar tamiri', 'Gürsu bel daraltma', 'Gürsu elbise dikimi', 'Gürsu gelinlik tadilatı', 'Gürsu ütü hizmeti', 'Gürsu kuru temizleme', 'Gürsu terzi fiyatları 2026', 'Konyaaltı Gürsu dikiş atölyesi', 'Gürsu pantolon kısaltma', 'Gürsu pantolon daraltma', 'Gürsu kot paçası kısaltma', 'Gürsu şort kısaltma', 'Gürsu ceket tadilatı', 'Gürsu ceket daraltma', 'Gürsu mont kısaltma', 'Gürsu mont tamiri', 'Gürsu mont fermuar değişimi', 'Gürsu gömlek daraltma', 'Gürsu gömlek kısaltma', 'Gürsu etek kısaltma', 'Gürsu fermuar değişimi', 'Gürsu beden ayarlama', 'Gürsu erkek terzi', 'Gürsu bay bayan terzi', 'Gürsu ölçüye göre özel dikim', 'Gürsu özel dikim', 'Gürsu abiye tamiri', 'Gürsu yakınımda terzi', 'Konyaaltı Gürsu terzi tamir tadilat', 'Gürsu bay bayan elbise tamiri', 'Gürsu terzi', 'Gürsu bay bayan terzi', 'Gürsu dikim', 'Gürsu tamir tadilat', 'Gürsu elbise tamiri', 'Gürsu elbise tadilatı', 'Gürsu fermuar değişimi', 'Gürsu fermuar tamiri', 'Gürsu boy kısaltma', 'Gürsu bel daraltma', 'Gürsu etek boyu kısaltma', 'Gürsu pantolon boyu kısaltma', 'Gürsu paça kısaltma', 'Gürsu kot paçası kısaltma', 'Gürsu beden ölçüsüne göre elbise tadilatı', 'Gürsu mont tamiri', 'Gürsu ceket daraltma', 'Gürsu gömlek daraltma', 'Gürsu şort kısaltma', 'Gürsu pantolon daraltma', 'Gürsu etek daraltma', 'Gürsu elbise daraltma', 'Gürsu elbise dikimi']))),
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   alternates: { canonical: PAGE_URL, languages: { tr: PAGE_URL, en: `${SITE}${DISTRICT_BASE.en}/gursu`, ru: `${SITE}${DISTRICT_BASE.ru}/gursu`, de: `${SITE}${DISTRICT_BASE.de}/gursu`, 'x-default': PAGE_URL } },
   openGraph: {
@@ -33,52 +34,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
-    {
-      '@type': ['LocalBusiness', 'ClothingStore'],
-      ...reviewSchema(),
-      additionalType: ['https://schema.org/SewingService', 'https://schema.org/DryCleaningService'],
-      '@id': `${SITE}#business`,
-      name: 'Terzi Can',
-      alternateName: [
-        'Terzi Can Antalya', 'Konyaaltı Terzi', 'Tailor Can Antalya',
-        'Портной Кан Анталья', 'Schneider Can Antalya', 'Terzi Hizmeti Antalya', 'Dikiş Atölyesi Antalya',
-      ],
-      description: "Antalya Konyaaltı'da 2006'dan bu yana hizmet veren profesyonel terzi atölyesi. Paça kısaltma, fermuar değişimi, bel daraltma, özel dikim, gelinlik tadilatı, tekstil imalatı ve kuru temizleme. Hurma, Liman, Sarısu, Gürsu, Uncalı bölgelerine hizmet.",
-      url: SITE,
-      telephone: PHONE_TEL,
-      priceRange: '₺₺',
-      currenciesAccepted: 'TRY, EUR, USD, RUB',
-      paymentAccepted: 'Cash, Credit Card',
-      image: `${SITE}/terzi-can-hero.jpg`,
-      logo: `${SITE}/terzi-can-hero.jpg`,
-      hasMap: MAPS,
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: 'Hurma Mahallesi',
-        addressLocality: 'Konyaaltı',
-        addressRegion: 'Antalya',
-        postalCode: '07130',
-        addressCountry: 'TR',
-      },
-      geo: { '@type': 'GeoCoordinates', latitude: 36.857466, longitude: 30.596987 },
-      openingHoursSpecification: [{
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-        opens: '08:00', closes: '23:00',
-      }],
-      areaServed: [
-        'Liman, Konyaaltı', 'Hurma, Konyaaltı', 'Sarısu, Konyaaltı', 'Gürsu, Konyaaltı', 'Uncalı, Konyaaltı',
-        'Konyaaltı', 'Muratpaşa', 'Kepez', 'Antalya', 'Lara', 'Belek', 'Kemer', ].map((n) => ({ '@type': 'Place', name: n })),
-      contactPoint: [{
-        '@type': 'ContactPoint',
-        telephone: PHONE_TEL,
-        contactType: 'customer service',
-        areaServed: 'TR',
-        availableLanguage: ['Turkish', 'English', 'Russian', 'German', 'Polish', 'Ukrainian', 'Dutch', 'French', 'Spanish', 'Arabic'],
-      }],
-      sameAs: [MAPS, `https://wa.me/${WA_NUM}`, 'https://swaphubs.com/terzi'],
-      knowsLanguage: ['tr', 'en', 'ru', 'de', 'pl', 'uk', 'nl', 'fr', 'es', 'ar'],
-    },
+    businessNode(),
     {
       '@type': 'WebPage',
       '@id': `${PAGE_URL}#webpage`,
@@ -129,7 +85,7 @@ const jsonLd = {
       mainEntity: [
         { '@type': 'Question', name: "Gürsu'ya terzi servisi geliyor mu?", acceptedAnswer: { '@type': 'Answer', text: 'Evet, Gürsu mahallesine terzi servisi veriyoruz. Adresten alım ve teslimat WhatsApp üzerinden planlanır.' } },
         { '@type': 'Question', name: 'Gürsu terzi fiyatları ne kadar 2026?', acceptedAnswer: { '@type': 'Answer', text: `Paça kısaltma ₺200'den, fermuar değişimi ₺300'den, bel daraltma ₺200'den, elbise dikimi ₺800'den, gelinlik tadilatı ₺800'den, abiye tadilatı ₺800'den, ütü ₺80'den başlar. ☎ ${PHONE}` } },
-        { '@type': 'Question', name: 'Gürsu\'da aynı gün teslim mümkün mü?', acceptedAnswer: { '@type': 'Answer', text: 'Paça kısaltma, fermuar değişimi ve bel daraltma gibi standart işlemler genellikle aynı gün içinde tamamlanıp teslim edilir.' } },
+        { '@type': 'Question', name: 'Gürsu\'da acil tadilat ne kadar sürer?', acceptedAnswer: { '@type': 'Answer', text: 'Paça kısaltma, fermuar değişimi ve bel daraltma gibi standart işlemler ertesi gün, acil olanlar 1–2 saatte teslim edilir.' } },
         { '@type': 'Question', name: 'Gelinlik ve abiye tadilatı yapıyor musunuz?', acceptedAnswer: { '@type': 'Answer', text: `Evet, gelinlik ve abiye tadilatında uzmanız. Gelinlik tadilatı ₺800'den, abiye tadilatı ₺800'den başlar. ☎ ${PHONE}` } },
       ],
     },
@@ -176,7 +132,7 @@ export default function GursuPage() {
             <p className="hero-desc">
               Gürsu mahallesine terzi hizmeti. Paça kısaltma, fermuar değişimi,
               bel daraltma, özel dikim, gelinlik tadilatı, ütü ve kuru temizleme —
-              ₺200'den başlayan fiyatlarla, aynı gün teslim.
+              ₺200'den başlayan fiyatlarla; normal işler ertesi gün, acil işler 1–2 saatte teslim.
             </p>
             <div className="hero-btns">
               <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-primary">💬 WhatsApp'tan Yazın →</a>
@@ -233,7 +189,7 @@ export default function GursuPage() {
             <div className="howto-list">
               <div className="howto-item">
                 <div className="howto-t">Paça Kısaltma & Bel Daraltma</div>
-                <div className="howto-d">Pantolon, kot, etek kısaltma; elbise, ceket ve pantolonda bel daraltma. ₺200'den, aynı gün teslim.</div>
+                <div className="howto-d">Pantolon, kot, etek kısaltma; elbise, ceket ve pantolonda bel daraltma. ₺200'den, ertesi gün teslim.</div>
               </div>
               <div className="howto-item">
                 <div className="howto-t">Fermuar Değişimi</div>
@@ -260,7 +216,7 @@ export default function GursuPage() {
             {[
               ["Gürsu'ya terzi servisi geliyor mu?", 'Evet, Gürsu mahallesine terzi servisi veriyoruz. Adresten alım ve teslimat WhatsApp üzerinden planlanır.'],
               ['Gürsu terzi fiyatları ne kadar 2026?', 'Paça kısaltma ₺200\'den, fermuar değişimi ₺300\'den, bel daraltma ₺200\'den, elbise dikimi ₺800\'den, gelinlik tadilatı ₺800\'den, abiye tadilatı ₺800\'den, ütü ₺80\'den başlar.'],
-              ['Gürsu\'da aynı gün teslim mümkün mü?', 'Paça kısaltma, fermuar değişimi ve bel daraltma gibi standart işlemler genellikle aynı gün içinde tamamlanıp teslim edilir.'],
+              ['Gürsu\'da acil tadilat ne kadar sürer?', 'Paça kısaltma, fermuar değişimi ve bel daraltma gibi standart işlemler ertesi gün, acil olanlar 1–2 saatte teslim edilir.'],
               ['Gelinlik ve abiye tadilatı yapıyor musunuz?', 'Evet, gelinlik ve abiye tadilatında uzmanız. Gelinlik tadilatı ₺800\'den, abiye tadilatı ₺800\'den başlar.'],
             ].map(([q, a]) => (
               <div key={q} className="faq-item">
@@ -273,7 +229,7 @@ export default function GursuPage() {
 
         <section className="cta-final" aria-label="İletişime geç">
           <h2 className="cta-h ff">Gürsu'da Terziye mi İhtiyacınız Var?</h2>
-          <p className="cta-sub">Fotoğraf gönderin, adresinizden alalım, aynı gün teslim edelim.</p>
+          <p className="cta-sub">Fotoğraf gönderin, adresinizden alalım, ertesi gün teslim edelim.</p>
           <div className="cta-btns">
             <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-white">💬 WhatsApp'tan Yazın</a>
             <a href={MAPS} target="_blank" rel="noopener noreferrer" className="btn-outline-white">📍 Google Haritalar</a>

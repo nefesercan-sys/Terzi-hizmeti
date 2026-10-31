@@ -1,4 +1,17 @@
 /** @type {import('next').NextConfig} */
+// CSP önce yalnızca raporlama modunda (engellemez); tarayıcı konsolunda ihlaller görüldükten sonra zorunlu hale getirilebilir.
+const csp = [
+  "default-src 'self'",
+  "script-src 'self' 'unsafe-inline' https://va.vercel-scripts.com",
+  "style-src 'self' 'unsafe-inline'",
+  "img-src 'self' data: blob: https://images.pexels.com https://maps.googleapis.com https://lh3.googleusercontent.com",
+  "font-src 'self' data:",
+  "connect-src 'self' https://vitals.vercel-insights.com https://va.vercel-scripts.com",
+  "frame-ancestors 'none'",
+  "base-uri 'self'",
+  "form-action 'self' https://wa.me",
+].join('; ');
+
 const nextConfig = {
   poweredByHeader: false,
   // Birden çok kök düzen (dil başına <html lang>) için gerekli 404 mekanizması
@@ -15,11 +28,11 @@ const nextConfig = {
     const kisa = (source, destination) => ({ source, has: comHost, destination, permanent: false });
     const wa = (m) => `https://wa.me/905318986418?text=${encodeURIComponent(m)}`;
     return [
-      // Hizmet verilmeyen Manavgat sayfaları → ilgili dil ana sayfası
-      { source: '/antalya-terzi/manavgat', destination: '/antalya-terzi', permanent: true },
-      { source: '/en/tailor-antalya/manavgat', destination: '/en/tailor-service-antalya', permanent: true },
-      { source: '/ru/portnoy-antalya/manavgat', destination: '/ru/uslugi-portnogo-antalya', permanent: true },
-      { source: '/de/schneider-antalya/manavgat', destination: '/de/schneiderservice-antalya', permanent: true },
+      // Manavgat (Side dahil) hizmet bölgesidir: eski /manavgat adresleri Side bölge sayfalarına gider
+      { source: '/antalya-terzi/manavgat', destination: '/otele-gelen-terzi-antalya/side', permanent: true },
+      { source: '/en/tailor-antalya/manavgat', destination: '/en/tailor-antalya/side', permanent: true },
+      { source: '/ru/portnoy-antalya/manavgat', destination: '/ru/portnoy-antalya/side', permanent: true },
+      { source: '/de/schneider-antalya/manavgat', destination: '/de/schneider-antalya/side', permanent: true },
       {
         source: '/:path*',
         has: [{ type: 'host', value: 'www.terzihizmeti.com.tr' }],
@@ -49,6 +62,8 @@ const nextConfig = {
           { key: 'X-Frame-Options', value: 'DENY' },
           { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
           { key: 'Strict-Transport-Security', value: 'max-age=31536000; includeSubDomains' },
+          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=(), payment=(), usb=()' },
+          { key: 'Content-Security-Policy-Report-Only', value: csp },
         ],
       },
       {

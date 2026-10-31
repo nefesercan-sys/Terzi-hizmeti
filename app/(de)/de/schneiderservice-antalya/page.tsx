@@ -4,6 +4,7 @@
 // Almanca "genel terzi" sayfası fiilen yoktu. Artık EN/RU karşılıklarına denk, kendi
 // içeriği ve kendi canonical'ı olan gerçek bir Almanca ana hizmet sayfası.
 import type { Metadata } from 'next';
+import { DELIVERY } from '@/lib/delivery';
 import FabricsOrderBlock from '@/components/FabricsOrderBlock';
 import ReviewsBlock from '@/components/ReviewsBlock';
 import { businessNode } from '@/lib/turist-keten';
@@ -131,8 +132,7 @@ export default function SchneiderserviceAntalya() {
               Schneider in Antalya: Änderungen, Reparatur, Maßanfertigung
             </h1>
             <p id="hero-desc" style={{ maxWidth: 720, margin: '0 auto 1.6rem', lineHeight: 1.7, fontSize: '1.05rem', opacity: .92 }}>
-              Terzi Can ist eine Änderungsschneiderei in Hurma, Konyaaltı. Wir kürzen Hosen, wechseln Reißverschlüsse, ändern Brautkleider und
-              fertigen nach Maß. Auf Wunsch kommen wir ins Hotel oder holen Ihre Kleidung ab. Schreiben Sie uns per WhatsApp in Ihrer Sprache.
+              Terzi Can ist eine Schneiderei in Konyaaltı, Antalya: Kürzen, Ändern, Reparieren und Maßanfertigung; erreichbar per WhatsApp oder Telefon unter +90 531 898 64 18, täglich 08:00–23:00. {DELIVERY.de.urgent} {DELIVERY.de.normal} Abholung und Lieferung im Hotel sind überall kostenlos, auch in Lara, Belek, Side und Kemer.
             </p>
             <div style={{ display: 'flex', gap: '.7rem', justifyContent: 'center', flexWrap: 'wrap' }}>
               <a href={WA_DEF} target="_blank" rel="noopener noreferrer" style={btn}>Foto senden, Preis erfahren</a>

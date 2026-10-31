@@ -10,7 +10,7 @@ import ReviewsBlock from '@/components/ReviewsBlock';
 import { AREA_NOTES, AREA_NOTE_UI } from '@/lib/district-facts';
 import { districtAnswer, districtFaqPool, SERVICE_PICK } from '@/lib/district-copy';
 import { areaIntro, areaNeeds, NEEDS_H, AREA_PROFILES } from '@/lib/area-profiles';
-import { reviewSchema } from '@/lib/reviews';
+import { businessNode as sharedBusinessNode } from '@/lib/business';
 import { OTEL_BOLGELERI } from '@/lib/otel-bolgeleri';
 import {
   DISTRICTS, SERVICES, MAHALLE_PAGES, findDistrict, LANGS, SITE, PHONE, PHONE_TEL, MAPS, LAST_UPDATE,
@@ -75,34 +75,7 @@ const SVC_HUB_NAME: Record<Lang, string> = {
 };
 
 // ── Ortak şema: işletme düğümü (ana sayfadaki @id ile aynı) ────
-function businessNode(lang: Lang) {
-  return {
-    '@type': ['LocalBusiness', 'ClothingStore'],
-    ...reviewSchema(),
-    '@id': `${SITE}#business`,
-    name: 'Terzi Can',
-    url: SITE,
-    telephone: PHONE_TEL,
-    priceRange: '₺₺',
-    image: OG,
-    hasMap: MAPS,
-    address: {
-      '@type': 'PostalAddress', streetAddress: 'Hurma Mahallesi', addressLocality: 'Konyaaltı',
-      addressRegion: 'Antalya', postalCode: '07130', addressCountry: 'TR',
-    },
-    geo: { '@type': 'GeoCoordinates', latitude: 36.857466, longitude: 30.596987 },
-    openingHoursSpecification: [{
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-      opens: '08:00', closes: '23:00',
-    }],
-    foundingDate: '2006',
-    knowsLanguage: ['tr', 'en', 'ru', 'de', 'pl', 'uk', 'nl', 'fr', 'es', 'ar'],
-    availableLanguage: ['Turkish', 'English', 'Russian', 'German', 'Polish', 'Ukrainian', 'Dutch', 'French', 'Spanish', 'Arabic'],
-    sameAs: [MAPS, `https://wa.me/${PHONE_TEL.replace('+', '')}`, 'https://swaphubs.com/terzi'],
-    inLanguage: lang,
-  };
-}
+const businessNode = (_lang: Lang) => sharedBusinessNode();
 
 const alternatesFor = (lang: Lang, urlFor: (l: Lang) => string, slug?: string) => {
   // Uzak bölgenin Türkçe sayfası noindex olduğu için hreflang'a girmez; x-default İngilizce olur.

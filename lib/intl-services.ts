@@ -3,7 +3,7 @@
 // Ek turist dilleri (ES/FR/PL/UK/NL/AR) için "hizmetler ve kumaşlar" sayfası: /{dil}/{slug}.
 // Kural (işletme sahibi, 29 Eki 2026): deri ve kot YALNIZCA tamir/tadilat; sıfırdan dikim keten, pamuk, penye, saten, ipek vb. kumaşlarda.
 // Yurt dışı: ölçü online alınır, burada dikilir, istenen ülkeye gönderilir. Fiyat/kargo ücreti YAZILMAZ (WhatsApp).
-// Süreler: tadilat genelde 1 gün, özel dikim ~3 gün, acil işler çoğu kez 2–4 saat. Saat 08:00–23:00 her gün. Ücretsiz alım: Konyaaltı.
+// Süreler: süreler lib/delivery.ts'ten. Saat 08:00–23:00 her gün. Ücretsiz alım: Konyaaltı.
 // ============================================================
 import type { ILang } from '@/lib/intl';
 

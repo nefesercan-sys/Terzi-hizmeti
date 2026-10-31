@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import FabricsOrderBlock from '@/components/FabricsOrderBlock';
+import { DELIVERY } from '@/lib/delivery';
 import ReviewsBlock from '@/components/ReviewsBlock';
 import { businessNode } from '@/lib/turist-keten';
 import { INTL_ALT } from '@/lib/intl';
@@ -182,8 +183,7 @@ export default function UslugiPortnogoAntalyaPage() {
             <span className="hero-eng">Портной Анталья</span>
             <h1 id="hero-h">Пошив, ремонт, подгонка<br /><span className="accent">прямо в ваш отель</span></h1>
             <p className="hero-desc" id="hero-desc">
-              Из нашей мастерской в Коньяалты Terzi Can обслуживает Коньяалты и ближайшие районы Антальи — Белек, Лару, Кемер, Сиде и другие. Пошив, ремонт, подгонка, глажка и химчистка с выездным портным,
-              который приедет в ваш отель или по адресу.
+              Terzi Can — портной в Коньяалты (Анталья): подшив, подгонка, ремонт и пошив по меркам; на связи в WhatsApp и по телефону +90 531 898 64 18 ежедневно с 08:00 до 23:00. {DELIVERY.ru.urgent} {DELIVERY.ru.normal} Забор и доставка в отели бесплатны везде, где мы работаем: Лара, Белек, Сиде, Кемер и другие районы.
             </p>
             <div className="hero-btns">
               <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-primary">

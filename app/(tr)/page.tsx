@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import { preconnect } from 'react-dom';
+import { DELIVERY } from '@/lib/delivery';
 import ReviewsBlock from '@/components/ReviewsBlock';
 import { reviewSchema } from '@/lib/reviews';
-import { DISTRICTS as SEO_DISTRICTS, SERVICES as SEO_SERVICES, SERVICE_BASE, districtUrl, serviceUrl, isTrNear } from '@/lib/seo-data';
+import { DISTRICTS as SEO_DISTRICTS, SERVICES as SEO_SERVICES, SERVICE_BASE, districtUrl, serviceUrl, isTrNear, isFreeService } from '@/lib/seo-data';
 
 // ─── CONSTANTS ────────────────────────────────────────────────────────────────
 const SITE      = 'https://terzihizmeti.com.tr';
@@ -128,8 +129,6 @@ const jsonLd = {
       url: SITE,
       telephone: PHONE_TEL,
       priceRange: '₺₺',
-      currenciesAccepted: 'TRY, EUR, USD, RUB',
-      paymentAccepted: 'Cash, Credit Card, Bank Transfer',
       image: OG,
       logo: `${SITE}/terzi-can-hero.jpg`,
       hasMap: MAPS,
@@ -165,7 +164,7 @@ const jsonLd = {
         '@type': 'OfferCatalog',
         name: 'Tailor Services Antalya 2026 / Услуги Ателье Анталья',
         itemListElement: [
-          { '@type': 'Offer', name: 'Pants Hemming / Paça Kısaltma / Укоротить брюки', price: '200', priceCurrency: 'TRY', priceValidUntil: '2027-12-31', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Pants & Jeans Hemming', description: 'Hemming for pants, jeans, skirts, dresses. Same day service.' } },
+          { '@type': 'Offer', name: 'Pants Hemming / Paça Kısaltma / Укоротить брюки', price: '200', priceCurrency: 'TRY', priceValidUntil: '2027-12-31', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Pants & Jeans Hemming', description: 'Hemming for pants, jeans, skirts, dresses. Next-day service, urgent jobs 1–2 hours.' } },
           { '@type': 'Offer', name: 'Zipper Replacement / Fermuar Değişimi / Замена молнии', price: '300', priceCurrency: 'TRY', priceValidUntil: '2027-12-31', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Zipper Repair & Replacement', description: 'Zipper replacement for jackets, pants, coats, bags.' } },
           { '@type': 'Offer', name: 'Waist & Dress Alterations / Bel Daraltma / Подгонка по фигуре', price: '200', priceCurrency: 'TRY', priceValidUntil: '2027-12-31', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Clothing Alterations', description: 'Resizing dresses, coats, suits, pants.' } },
           { '@type': 'Offer', name: 'Custom Dressmaking / Özel Elbise Dikimi / Индивидуальный пошив', price: '800', priceCurrency: 'TRY', priceValidUntil: '2027-12-31', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Custom Tailoring', description: 'Custom dresses, suits, shirts made to measure.' } },
@@ -184,7 +183,6 @@ const jsonLd = {
       isPartOf: { '@id': `${SITE}#website` },
       about: { '@id': `${SITE}#business` },
       inLanguage: ['tr', 'en', 'ru', 'de'],
-      datePublished: '2024-01-01',
       dateModified: TODAY,
       breadcrumb: { '@id': `${SITE}#breadcrumb` },
       speakable: {
@@ -207,7 +205,7 @@ const jsonLd = {
         { '@type': 'Question', name: 'Is there an English or Russian speaking tailor in Antalya?', acceptedAnswer: { '@type': 'Answer', text: `Yes! Terzi Can in Konyaaltı provides tailor and alteration services in English, Russian, German, and Turkish. Contact via WhatsApp: ${PHONE}` } },
         { '@type': 'Question', name: 'Есть ли портной в Анталье, который говорит по-русски?', acceptedAnswer: { '@type': 'Answer', text: `Да! Напишите в WhatsApp на русском — ателье Terzi Can в Коньяалты ответит. Подгонка одежды, ремонт, укорачивание брюк, замена молний, химчистка. Бесплатный выезд в Хурма, Лиман, Сарысу. WhatsApp: ${PHONE}` } },
         { '@type': 'Question', name: 'Gibt es einen deutschsprachigen Schneider in Antalya?', acceptedAnswer: { '@type': 'Answer', text: `Ja! Terzi Can in Konyaaltı bietet Änderungsschneiderei auf Deutsch, Englisch, Russisch und Türkisch. WhatsApp: ${PHONE}` } },
-        { '@type': 'Question', name: 'What is the price for pants hemming in Antalya 2026?', acceptedAnswer: { '@type': 'Answer', text: `Pants and jeans hemming starts from ₺200 at Terzi Can Konyaaltı. Same day delivery available. ☎ ${PHONE}` } },
+        { '@type': 'Question', name: 'What is the price for pants hemming in Antalya 2026?', acceptedAnswer: { '@type': 'Answer', text: `Pants and jeans hemming starts from ₺200 at Terzi Can Konyaaltı. Next-day delivery; urgent jobs 1–2 hours. ☎ ${PHONE}` } },
         { '@type': 'Question', name: 'Сколько стоит укоротить брюки в Анталье?', acceptedAnswer: { '@type': 'Answer', text: `Укоротить брюки или джинсы стоит от ₺200. Готовность на следующий день. ☎ ${PHONE}` } },
         { '@type': 'Question', name: 'Do you offer mobile tailor pickup service in Hurma, Liman, Sarisu?', acceptedAnswer: { '@type': 'Answer', text: `Yes! We offer free mobile tailor pickup and delivery in Hurma, Liman, and Sarisu (Konyaalti). ☎ ${PHONE}` } },
         { '@type': 'Question', name: 'Antalya paça kısaltma ve fermuar değişimi fiyatları 2026?', acceptedAnswer: { '@type': 'Answer', text: `Paça kısaltma ₺200'den, fermuar değişimi ₺300'den başlar. Normal tadilat ertesi gün, acil 1–2 saat. ☎ ${PHONE}` } },
@@ -243,12 +241,9 @@ const SERVICES = [
   { n:'08', title:'Üniforma & Seri İmalat', en:'Uniform Manufacturing', ru:'Пошив униформы', sub:'Otel · Restoran · Okul / Hotel & Uniforms', desc:'Toplu üniforma üretimi, fason tekstil, seri imalat ve nakış hizmeti.', price:'Teklif Al', time:'Proje bazlı', wa:WA_TR, img:'https://images.pexels.com/photos/5378708/pexels-photo-5378708.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop' },
 ];
 
-const DISTRICTS = [
-  { name:'Hurma', free:true }, { name:'Liman', free:true }, { name:'Sarısu', free:true },
-  { name:'Uncalı', free:false }, { name:'Çakırlar', free:false }, { name:'Gürsu', free:false },
-  { name:'Öğretmenevleri', free:false }, { name:'Meltem', free:false }, { name:'Göbi', free:false },
-  { name:'Arapsuyu', free:false }, { name:'Altınkum', free:false }, { name:'Konyaaltı Merkez', free:false },
-];
+// Mahalle listesi ve ücretsiz servis bilgisi TEK kaynaktan (lib/seo-data.ts FREE_SERVICE_SLUGS) okunur.
+const DISTRICTS = ['hurma', 'liman', 'sarisu', 'uncali', 'gursu', 'ogretmenevleri', 'meltem', 'arapsuyu', 'altinkum', 'uluc', 'siteler', 'konyaalti']
+  .map((slug) => ({ slug, name: SEO_DISTRICTS.find((x) => x.slug === slug)!.name.tr, free: isFreeService(slug) }));
 
 const FAQS = [
   ['Antalya paça kısaltma fiyatı ne kadar?','₺200\'den başlar. Ertesi gün teslim, acilde 1–2 saat.'],
@@ -315,6 +310,7 @@ export default function TerziHizmetiPage() {
           .ticker-item{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff;padding:0 2rem}
           .ticker-dot{color:rgba(255,255,255,.7);margin:0 .5rem}
           @keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+          @media (prefers-reduced-motion:reduce){.ticker-inner{animation:none}.ticker-wrap{overflow-x:auto}}
 
           .sec{padding:5rem 1.5rem}
           .ctr{max-width:980px;margin:0 auto}
@@ -420,7 +416,7 @@ export default function TerziHizmetiPage() {
             </h1>
 
             <p className="hero-desc" id="hero-desc">
-              <strong>Terzi Can</strong> — Antalya Konyaaltı'da profesyonel terzi ve dikiş atölyesi. Paça kısaltma, fermuar değişimi, bel daraltma, özel dikim, gelinlik tadilatı ve kuru temizleme. Hurma, Liman, Sarısu bölgelerine <strong style={{color:'#8FA88C'}}>ücretsiz terzi servisi</strong>.
+              <strong>Terzi Can</strong>, Antalya Konyaaltı Hurma'daki atölyesiyle paça kısaltma, daraltma, fermuar değişimi, özel dikim ve gelinlik/abiye tadilatı yapar; WhatsApp ve telefondan +90 531 898 64 18 numarasıyla her gün 08:00–23:00 ulaşılır. {DELIVERY.tr.urgent} {DELIVERY.tr.normal} Otellere alım-teslim ücretsizdir.
             </p>
 
             {/* YABANCI MÜŞTERİ HIZLI ERİŞİM KARTLARI */}
@@ -470,7 +466,7 @@ export default function TerziHizmetiPage() {
             <div className="hero-stats" aria-label="Stats">
               {([
                 ['2006\'dan', 'Beri Hizmet', 'Konyaaltı merkez'],
-                ['Aynı Gün', 'Paça · Bel · Fermuar', 'Same-day hemming'],
+                ['Aynı Gün', 'Paça · Bel · Fermuar', 'Next-day hemming'],
                 ['10 Dil', 'TR EN RU DE ES FR PL UK NL AR', 'Çok dilli hizmet'],
                 ['%100', 'Şeffaf Fiyat', 'Best Quality'],
               ] as [string,string,string][]).map(([n,l,d])=>(

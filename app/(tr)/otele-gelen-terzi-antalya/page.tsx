@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import ReviewsBlock from '@/components/ReviewsBlock';
-import { reviewSchema } from '@/lib/reviews';
+import { DELIVERY } from '@/lib/delivery';
+import { businessNode } from '@/lib/business';
 import Image from 'next/image';
 import { Inter, Syne } from 'next/font/google';
 
@@ -64,40 +65,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
-    {
-      '@type': ['ProfessionalService', 'LocalBusiness'],
-      ...reviewSchema(),
-      '@id': `${SITE}#vip-business`,
-      name: 'Terzi Can - Mobile Tailor',
-      alternateName: ['Otele Gelen Terzi', 'Mobile Tailor Antalya', 'Портной в отель Анталья', 'Mobiler Schneider Antalya'],
-      description: "Belek, Lara, Kundu, Kemer otellerine ekspres terzi ve kuru temizleme hizmeti. Lobi veya odada ölçü alımı.",
-      url: SITE,
-      telephone: PHONE_TEL,
-      priceRange: '₺₺₺',
-      currenciesAccepted: 'TRY, EUR, USD, RUB',
-      paymentAccepted: 'Cash, Credit Card',
-      image: OG,
-      hasMap: MAPS,
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: 'Antalya',
-        addressRegion: 'Antalya',
-        addressCountry: 'TR',
-      },
-      geo: { '@type': 'GeoCoordinates', latitude: 36.857466, longitude: 30.596987 },
-      areaServed: [
-        'Belek, Antalya', 'Kadriye, Antalya', 'Lara, Antalya', 'Kundu, Antalya', 
-        'Kemer, Antalya', 'Göynük, Antalya', 'Beldibi, Antalya', 'Serik, Antalya'
-      ].map((n) => ({ '@type': 'Place', name: n })),
-      contactPoint: [{
-        '@type': 'ContactPoint',
-        telephone: PHONE_TEL,
-        contactType: 'customer service',
-        areaServed: 'TR',
-        availableLanguage: ['Turkish', 'English', 'Russian', 'German', 'Polish', 'Ukrainian', 'Dutch', 'French', 'Spanish', 'Arabic'],
-      }],
-      knowsLanguage: ['tr', 'en', 'ru', 'de', 'pl', 'uk', 'nl', 'fr', 'es', 'ar'],
-    },
+    businessNode(),
     {
       '@type': 'WebPage',
       '@id': `${PAGE_URL}#webpage`,
@@ -141,10 +109,10 @@ interface LangLabel {
 }
 
 const LANG_LABELS: Record<Lang, LangLabel> = {
-  tr: { name: 'Türkçe', flag: '🇹🇷', note: 'Konyaaltı ve Meltem\'de alım-teslim ücretsizdir; diğer ev adresleri için WhatsApp\'tan sorun.' },
-  en: { name: 'English', flag: '🇬🇧', note: 'Hotel pick-up and delivery is free everywhere we serve; home addresses are free in Konyaaltı and Meltem; ask on WhatsApp for other areas.' },
-  ru: { name: 'Русский', flag: '🇷🇺', note: 'Забор и доставка бесплатны в Коньяалты и Мелтеме; для других районов уточняйте в WhatsApp.' },
-  de: { name: 'Deutsch', flag: '🇩🇪', note: 'Abholung und Lieferung sind in Konyaaltı und Meltem kostenlos; für andere Gebiete bitte per WhatsApp anfragen.' },
+  tr: { name: 'Türkçe', flag: '🇹🇷', note: 'Otellere alım-teslim tüm bölgelerde ücretsizdir; ev adreslerinde ücretsiz servis Konyaaltı ve yakın mahallelerde, diğer bölgeler WhatsApp\'tan sorulur.' },
+  en: { name: 'English', flag: '🇬🇧', note: 'Hotel pick-up and delivery is free everywhere we serve; home addresses are free in Konyaaltı and nearby neighbourhoods; ask on WhatsApp for other areas.' },
+  ru: { name: 'Русский', flag: '🇷🇺', note: 'Забор и доставка в отели бесплатны везде; на домашние адреса — бесплатно в Коньяалты и соседних кварталах, для других районов уточняйте в WhatsApp.' },
+  de: { name: 'Deutsch', flag: '🇩🇪', note: 'Abholung und Lieferung im Hotel sind überall kostenlos; für Wohnadressen gilt das in Konyaaltı und Nachbarvierteln, sonst bitte per WhatsApp anfragen.' },
 };
 
 interface VipCategory {
@@ -159,7 +127,7 @@ const Premium_CATEGORIES: Record<Lang, VipCategory[]> = {
   tr: [
     { icon: '🚗', title: 'Otelde Ölçü & Teslimat', keyword: 'otele gelen terzi servisi Antalya',
       desc: 'Adresinizde veya otel lobisinde ölçü alma ve provaya gelme hizmeti.',
-      rows: [['Alım-teslim (Konyaaltı, Meltem)', 'Ücretsiz'], ['Alım-teslim (Lara/Kundu)', 'WhatsApp\'tan sorun'], ['Alım-teslim (Belek/Kemer)', 'WhatsApp\'tan sorun']] },
+      rows: [['Otele alım-teslim (Konyaaltı, Lara, Kundu)', 'Ücretsiz'], ['Otele alım-teslim (Belek, Side)', 'Ücretsiz'], ['Otele alım-teslim (Kemer)', 'Ücretsiz']] },
     { icon: '✂️', title: 'Ekspres Tadilat', keyword: 'acil terzi Antalya',
       desc: 'Tatiliniz sırasında ihtiyaç duyduğunuz acil onarımlar.',
       rows: [['Acil Paça Kısaltma', '₺200+'], ['Acil Yırtık Onarımı / Fermuar', '₺300+'], ['Abiye / Elbise Tadilatı', '₺800+']] },
@@ -167,7 +135,7 @@ const Premium_CATEGORIES: Record<Lang, VipCategory[]> = {
   en: [
     { icon: '🚗', title: 'Hotel Fitting & Delivery', keyword: 'Mobile tailor Antalya',
       desc: 'We come to your hotel lobby or room for fitting and measurements.',
-      rows: [['Pick-up & delivery (Konyaalti, Meltem)', 'Free'], ['Pick-up & delivery (Lara/Kundu)', 'Ask on WhatsApp'], ['Pick-up & delivery (Belek/Kemer)', 'Ask on WhatsApp']] },
+      rows: [['Hotel pick-up & delivery (Konyaaltı, Lara, Kundu)', 'Free'], ['Hotel pick-up & delivery (Belek, Side)', 'Free'], ['Hotel pick-up & delivery (Kemer)', 'Free']] },
     { icon: '✂️', title: 'Express Alterations', keyword: 'urgent tailor Antalya',
       desc: 'Urgent repairs and alterations you need during your holiday.',
       rows: [['Express Hemming', '₺200+'], ['Express Tear / Zipper Repair', '₺300+'], ['Evening Dress Alterations', '₺800+']] },
@@ -175,7 +143,7 @@ const Premium_CATEGORIES: Record<Lang, VipCategory[]> = {
   ru: [
     { icon: '🚗', title: 'Выезд в отель и примерка', keyword: 'портной в отель Анталья',
       desc: 'Выезд в лобби отеля для снятия мерок и примерки.',
-      rows: [['Забор и доставка (Коньяалты, Мелтем)', 'Бесплатно'], ['Забор и доставка (Лара/Кунду)', 'Уточните в WhatsApp'], ['Забор и доставка (Белек/Кемер)', 'Уточните в WhatsApp']] },
+      rows: [['Забор и доставка в отели (Коньяалты, Лара, Кунду)', 'Бесплатно'], ['Забор и доставка в отели (Белек, Сиде)', 'Бесплатно'], ['Забор и доставка в отели (Кемер)', 'Бесплатно']] },
     { icon: '✂️', title: 'Экспресс-ремонт', keyword: 'срочный портной Анталья',
       desc: 'Срочный ремонт и подгонка одежды во время вашего отдыха.',
       rows: [['Срочное укорачивание', '₺200+'], ['Срочный ремонт / Молния', '₺300+'], ['Подгонка вечернего платья', '₺800+']] },
@@ -183,7 +151,7 @@ const Premium_CATEGORIES: Record<Lang, VipCategory[]> = {
   de: [
     { icon: '🚗', title: 'Anprobe & Lieferung im Hotel', keyword: 'mobiler Schneider Antalya',
       desc: 'Wir kommen in die Lobby oder aufs Zimmer Ihres Hotels für Maße und Anproben.',
-      rows: [['Abholung & Lieferung (Konyaalti, Meltem)', 'Kostenlos'], ['Abholung & Lieferung (Lara/Kundu)', 'Per WhatsApp anfragen'], ['Abholung & Lieferung (Belek/Kemer)', 'Per WhatsApp anfragen']] },
+      rows: [['Hotel-Abholung & Lieferung (Konyaaltı, Lara, Kundu)', 'Kostenlos'], ['Hotel-Abholung & Lieferung (Belek, Side)', 'Kostenlos'], ['Hotel-Abholung & Lieferung (Kemer)', 'Kostenlos']] },
     { icon: '✂️', title: 'Express-Änderungen', keyword: 'Notfall-Schneider Antalya',
       desc: 'Dringende Reparaturen und Änderungen während Ihres Urlaubs.',
       rows: [['Express-Kürzen', '₺200+'], ['Express-Riss / Reißverschluss', '₺300+'], ['Abendkleid-Änderungen', '₺800+']] },
@@ -237,7 +205,7 @@ export default function MobileTailorHotelPage() {
               ve Tadilat Servisi
             </h1>
             <p className="hero-desc" id="hero-desc">
-              Tatiliniz yarım kalmasın. Belek, Lara, Kundu ve Kemer otellerine mobil terzi aracımızla gelerek ölçü alıyor, ekspres tadilat ve kuru temizleme sonrası kıyafetlerinizi tekrar otelinize teslim ediyoruz. (message us on WhatsApp in your language & Russian)
+              Otelde kalıyorsanız Terzi Can kıyafetinizi otelden alır, Konyaaltı'ndaki atölyede tadil eder ve otele geri getirir; Konyaaltı, Lara, Belek, Side ve Kemer otellerine alım-teslim ücretsizdir. {DELIVERY.tr.urgent} {DELIVERY.tr.normal} Otel adınızı WhatsApp'tan iletmeniz yeterli (+90 531 898 64 18, her gün 08:00–23:00).
             </p>
             <div className="hero-btns">
               <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ background: '#C9A96E', color: '#111' }}>

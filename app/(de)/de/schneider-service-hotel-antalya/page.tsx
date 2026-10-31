@@ -172,7 +172,7 @@ export default function OtelBolgeleriDeHub() {
             </div>
             <div className="howto-list">
               <div className="howto-item"><div className="howto-t">1. Nachricht senden</div><div className="howto-d">Hotelname, Zimmernummer und Anliegen per WhatsApp mitteilen.</div></div>
-              <div className="howto-item"><div className="howto-t">2. Termin vereinbaren</div><div className="howto-d">Wir bestätigen einen passenden Zeitpunkt, meist noch am selben Tag.</div></div>
+              <div className="howto-item"><div className="howto-t">2. Termin vereinbaren</div><div className="howto-d">Wir bestätigen einen passenden Zeitpunkt, Zeit per WhatsApp.</div></div>
               <div className="howto-item"><div className="howto-t">3. Vor-Ort-Service</div><div className="howto-d">Unser Schneider kommt zu Ihnen, nimmt Maß oder holt das Kleidungsstück ab.</div></div>
               <div className="howto-item"><div className="howto-t">4. Lieferung ins Hotel</div><div className="howto-d">Fertiges Stück wird bei normalen Änderungen am nächsten Tag, bei Eilaufträgen in 1–2 Stunden zurückgebracht.</div></div>
             </div>

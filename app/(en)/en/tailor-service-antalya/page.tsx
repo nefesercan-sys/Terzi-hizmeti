@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { businessNode } from '@/lib/turist-keten';
+import { DELIVERY } from '@/lib/delivery';
 import { INTL_ALT } from '@/lib/intl';
 import FabricsOrderBlock from '@/components/FabricsOrderBlock';
 import ReviewsBlock from '@/components/ReviewsBlock';
@@ -101,7 +102,7 @@ const jsonLd = {
         { '@type': 'Question', name: 'Do you come to hotels in Belek, Lara and Kemer?', acceptedAnswer: { '@type': 'Answer', text: `Yes! Our mobile tailor comes to all hotels in Belek, Lara, Kemer and Side. Share your hotel name on WhatsApp. WhatsApp: ${PHONE}` } },
         { '@type': 'Question', name: 'Is the mobile visit free?', acceptedAnswer: { '@type': 'Answer', text: 'Hotel visits are free in every area we serve. In other districts the visit fee depends on the distance and is confirmed on WhatsApp beforehand.' } },
         { '@type': 'Question', name: 'Do you offer ironing and dry cleaning too?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, professional steam ironing and dry cleaning, with pickup and delivery to your hotel or address.' } },
-        { '@type': 'Question', name: 'Can I get same-day alterations?', acceptedAnswer: { '@type': 'Answer', text: `Yes, most repairs and hemming are completed the next day (urgent jobs 1–2 hours). WhatsApp: ${PHONE}` } },
+        { '@type': 'Question', name: 'How fast are urgent alterations?', acceptedAnswer: { '@type': 'Answer', text: `Yes, most repairs and hemming are completed the next day (urgent jobs 1–2 hours). WhatsApp: ${PHONE}` } },
         { '@type': 'Question', name: 'Do you speak English?', acceptedAnswer: { '@type': 'Answer', text: 'Yes — write to us on WhatsApp in your own language and we will reply.' } },
         ...EXTRA_FAQS.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
       ],
@@ -110,8 +111,8 @@ const jsonLd = {
 };
 
 const PRIORITY_DISTRICTS = [
-  { name: 'Konyaaltı', tag: 'Workshop', note: 'Our workshop is here — same-day service' },
-  { name: 'Muratpaşa', tag: 'By distance', note: 'Mobile visit, same-day appointment; arranged on WhatsApp' },
+  { name: 'Konyaaltı', tag: 'Workshop', note: 'Our workshop is here' },
+  { name: 'Muratpaşa', tag: 'By distance', note: 'Mobile visit; arranged on WhatsApp' },
   { name: 'Kepez', tag: 'By distance', note: 'Mobile visit; arranged on WhatsApp' },
   { name: 'Lara', tag: 'By distance', note: 'Mobile visit to Lara hotels; arranged on WhatsApp' },
   { name: 'Döşemealtı', tag: 'Nearby', note: 'Scheduled mobile visit' },
@@ -144,7 +145,7 @@ const FAQS: [string, string][] = [
   ['Do you come to hotels in Belek, Lara and Kemer?', 'Yes! Our mobile tailor visits all hotels in Belek, Lara, Kemer and Side. Just share your hotel name on WhatsApp.'],
   ['Is the mobile visit free?', 'Free in Konyaaltı. In other districts the visit fee depends on the distance; we confirm it on WhatsApp first.'],
   ['Do you offer ironing and dry cleaning?', 'Yes — professional steam ironing and dry cleaning, with pickup and delivery to your hotel or address.'],
-  ['Can I get same-day alterations before an event?', 'Yes, most repairs and hemming are completed the next day (urgent jobs 1–2 hours).'],
+  ['Can I get alterations before an event?', 'Yes, most repairs and hemming are completed the next day (urgent jobs 1–2 hours).'],
   ['Do you serve Konyaaltı and nearby districts?', 'Yes — free visits in Konyaaltı; Muratpaşa, Kepez, Lara, Döşemealtı, Belek, Kemer, Side and nearby districts by appointment, arranged on WhatsApp.'],
   ['Do you speak English?', 'Yes — write to us on WhatsApp in your own language and we will reply.'],
   ...EXTRA_FAQS,
@@ -185,8 +186,7 @@ export default function TailorServiceAntalyaPage() {
               Tailor, Repair & Alterations<br /><span className="accent">Delivered to Your Hotel</span>
             </h1>
             <p className="hero-desc" id="hero-desc">
-              From our Konyaaltı workshop, Terzi Can serves Konyaaltı and nearby districts of Antalya — Belek, Lara, Kemer, Side and beyond. Tailoring, repair, alterations, ironing and dry cleaning, with a mobile
-              tailor who comes to your hotel or address.
+              Terzi Can is a tailor in Konyaaltı, Antalya that hems, alters, repairs and sews to measure; reach us on WhatsApp or phone at +90 531 898 64 18, every day 08:00–23:00. {DELIVERY.en.urgent} {DELIVERY.en.normal} Hotel pick-up and delivery is free in every area we serve, including Lara, Belek, Side and Kemer.
             </p>
             <div className="hero-btns">
               <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-primary">
@@ -239,7 +239,7 @@ export default function TailorServiceAntalyaPage() {
               <div className="sec-head">
                 <span className="eyebrow">Tailoring & Repair Workshop</span>
                 <h2 className="sec-h" id="wk-h">Tailoring · Repair · Alterations · Ironing</h2>
-                <p className="sec-sub">A full-capacity textile workshop, from custom garments to same-day repairs.</p>
+                <p className="sec-sub">A full-capacity textile workshop, from custom garments to urgent repairs.</p>
               </div>
               <div className="wk-grid">
                 {SERVICES.map((s) => (

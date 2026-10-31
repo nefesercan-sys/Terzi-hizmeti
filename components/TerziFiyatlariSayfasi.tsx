@@ -369,7 +369,7 @@ export const FT: Record<FLang, FiyatText> = {
       },
       {
         "q": "I want to take in the waist of my dress",
-        "a": "Waist and size reduction, same day or the next day (urgent jobs 1–2 hours).",
+        "a": "Waist and size reduction, the next day (urgent jobs 1–2 hours).",
         "price": "from ₺200",
         "href": "#fiyatlar",
         "cta": "Price list"
@@ -431,7 +431,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "My dress is torn. Can it be repaired?",
-        "Yes. Tears and open seams are repaired; the price depends on the damage. Send a photo of the damage on WhatsApp for an exact price and time. Most repairs are done the same day or the next day (urgent jobs 1–2 hours)."
+        "Yes. Tears and open seams are repaired; the price depends on the damage. Send a photo of the damage on WhatsApp for an exact price and time. Most repairs are done the the next day (urgent jobs 1–2 hours)."
       ],
       [
         "I want to take in the waist of my dress. How much does it cost?",
@@ -439,7 +439,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "I want to shorten my trousers. How long does it take?",
-        "Hem shortening starts from ₺200; jeans and dress trousers are usually returned the same day."
+        "Hem shortening starts from ₺200; jeans and dress trousers are returned the next day (urgent jobs 1–2 hours)."
       ],
       [
         "I want to have a dress made for me. How does it work?",
@@ -646,7 +646,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Mein Kleid ist gerissen. Kann man es reparieren?",
-        "Ja. Risse und geöffnete Nähte werden repariert; der Preis hängt vom Schaden ab. Senden Sie ein Foto des Schadens per WhatsApp, dann nennen wir Preis und Dauer. Die meisten Reparaturen sind am selben Tag oder am nächsten Tag fertig."
+        "Ja. Risse und geöffnete Nähte werden repariert; der Preis hängt vom Schaden ab. Senden Sie ein Foto des Schadens per WhatsApp, dann nennen wir Preis und Dauer. Die meisten Reparaturen sind am nächsten Tag fertig, eilige in 1–2 Stunden."
       ],
       [
         "Ich möchte die Taille meines Kleides enger machen. Was kostet das?",

@@ -141,7 +141,7 @@ export default function UniformaImalatiPage() {
         <p className="text-lg text-gray-700 leading-relaxed mb-6">
           Terzi Can olarak Konyaaltı ve çevresindeki oteller, restoranlar, hastaneler, okullar ve güvenlik şirketleri için yüksek kaliteli kumaşlar ve özelleştirilebilir tasarımlarla profesyonel üniforma imalatı hizmeti sunuyoruz.
         </p>
-      <OrnekGorselSeridi lang="tr" tema="acik" anahtarlar={['sef-mutfak-uniforma', 'erkek-gomlek-atolye', 'polar-yelek', 'sweatshirt-katli']} sayfaUrl="https://terzihizmeti.com.tr/antalya-uniforma-imalati" />
+      <OrnekGorselSeridi konu={'uniforma'} lang="tr" tema="acik" anahtarlar={['sef-mutfak-uniforma', 'erkek-gomlek-atolye', 'polar-yelek', 'sweatshirt-katli']} sayfaUrl="https://terzihizmeti.com.tr/antalya-uniforma-imalati" />
       <ReviewsBlock lang="tr" />
       </main>
     </>

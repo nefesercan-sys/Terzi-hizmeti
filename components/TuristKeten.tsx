@@ -335,7 +335,7 @@ export function TuristExpress({ lang }: { lang: TLang }) {
         </div>
       </Section>
 
-      <OrnekGorselSeridi lang={lang} tema="acik" anahtarlar={['beyaz-gomlek-katli', 'palto-yaka-detay', 'pilili-etek']} />
+      <OrnekGorselSeridi konu={'keten'} lang={lang} tema="acik" anahtarlar={['beyaz-gomlek-katli', 'palto-yaka-detay', 'pilili-etek']} />
       <Faq title={u.faqH} items={c.faq} />
       <RelatedLinks lang={lang} current="express" />
       <FinalCta lang={lang} waHref={wa} />

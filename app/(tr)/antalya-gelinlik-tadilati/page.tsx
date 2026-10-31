@@ -226,7 +226,7 @@ export default function GelinlikTadilatiPage() {
         </section>
 
         {/* FAQ */}
-        <OrnekGorselSeridi lang="tr" anahtarlar={['abiye-elbise-atolye', 'abiye-askida']} sayfaUrl="https://terzihizmeti.com.tr/antalya-gelinlik-tadilati" />
+        <OrnekGorselSeridi konu={['gelinlik','genel']} lang="tr" anahtarlar={['abiye-elbise-atolye', 'abiye-askida']} sayfaUrl="https://terzihizmeti.com.tr/antalya-gelinlik-tadilati" />
 
         <section className="sec" id="faq" aria-labelledby="faq-h">
           <div className="ctr" style={{ maxWidth: 720 }}>

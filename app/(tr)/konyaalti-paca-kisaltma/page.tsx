@@ -219,7 +219,7 @@ export default function PacaKisaltmaPage() {
         </section>
 
         {/* FAQ */}
-        <OrnekGorselSeridi lang="tr" anahtarlar={['yun-pantolon-metre', 'keten-pantolon-katli', 'pilili-etek']} sayfaUrl="https://terzihizmeti.com.tr/konyaalti-paca-kisaltma" />
+        <OrnekGorselSeridi konu={'paca'} lang="tr" anahtarlar={['yun-pantolon-metre', 'keten-pantolon-katli', 'pilili-etek']} sayfaUrl="https://terzihizmeti.com.tr/konyaalti-paca-kisaltma" />
 
         <section className="sec" id="faq" aria-labelledby="faq-h">
           <div className="ctr" style={{ maxWidth: 720 }}>

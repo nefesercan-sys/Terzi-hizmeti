@@ -8,6 +8,7 @@
 // "modern tesis" iddiaları. Sayfada doğrulanamayan hiçbir sayı/sertifika yok.
 
 import Link from 'next/link';
+import { PROMO_PATH, PROMO_NAME, PROMO_ANAVERA_LINE } from '@/lib/promosyon-paths';
 
 export type AnaveraLang = 'en' | 'tr' | 'de' | 'ru';
 
@@ -549,6 +550,10 @@ export default function AnaveraTekstilSayfasi({ lang }: { lang: AnaveraLang }) {
             ))}
           </div>
           <p style={{ ...lead, textAlign: 'center', marginTop: '1.8rem', fontSize: '.95rem' }}>{t.catMore}</p>
+          <p style={{ ...lead, textAlign: 'center', marginTop: '.8rem', fontSize: '.95rem' }}>
+            {PROMO_ANAVERA_LINE[lang]}{' '}
+            <Link href={PROMO_PATH[lang]} style={{ color: NAVY, fontWeight: 700 }}>{PROMO_NAME[lang]}</Link>
+          </p>
         </div>
       </section>
 

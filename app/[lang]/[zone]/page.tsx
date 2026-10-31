@@ -2,6 +2,9 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import ZoneLanding from '@/components/ZoneLanding';
 import ServicesLanding from '@/components/ServicesLanding';
+import PromosyonTekstilSayfasi from '@/components/PromosyonTekstilSayfasi';
+import { buildPromoMetadata } from '@/lib/promosyon-tekstil';
+import { promoSlug } from '@/lib/promosyon-paths';
 import { SVC, isSvcSlug, svcUrl } from '@/lib/intl-services';
 import { ILANGS, INTL, isILang } from '@/lib/intl';
 import { ZCOPY, ZONE_SLUGS, parseZone, zoneData, zoneSlug, zoneUrl } from '@/lib/intl-zones';
@@ -11,7 +14,7 @@ import { OG_DEFAULT } from '@/lib/turist-keten';
 // Yalnızca tanımlı otel bölgesi sayfaları üretilir; diğer iki-segmentli yollar 404 olur.
 export const dynamicParams = false;
 export function generateStaticParams() {
-  return ILANGS.flatMap((lang) => [{ lang, zone: SVC[lang].slug }, ...ZONE_SLUGS.map((z) => ({ lang, zone: zoneSlug(lang, z) }))]);
+  return ILANGS.flatMap((lang) => [{ lang, zone: SVC[lang].slug }, { lang, zone: promoSlug(lang) }, ...ZONE_SLUGS.map((z) => ({ lang, zone: zoneSlug(lang, z) }))]);
 }
 
 type P = { params: Promise<{ lang: string; zone: string }> };
@@ -19,6 +22,7 @@ type P = { params: Promise<{ lang: string; zone: string }> };
 export async function generateMetadata({ params }: P): Promise<Metadata> {
   const { lang, zone: slug } = await params;
   if (!isILang(lang)) return {};
+  if (slug === promoSlug(lang)) return buildPromoMetadata(lang);
   if (isSvcSlug(lang, slug)) {
     const c = SVC[lang]; const url = `${SITE}${svcUrl(lang)}`;
     const title = c.title.length + 12 <= 60 ? `${c.title} | Terzi Can` : c.title;
@@ -62,6 +66,7 @@ export async function generateMetadata({ params }: P): Promise<Metadata> {
 export default async function Page({ params }: P) {
   const { lang, zone: slug } = await params;
   if (!isILang(lang)) notFound();
+  if (slug === promoSlug(lang)) return <PromosyonTekstilSayfasi lang={lang} />;
   if (isSvcSlug(lang, slug)) return <ServicesLanding lang={lang} />;
   const zone = parseZone(lang, slug);
   if (!zone) notFound();

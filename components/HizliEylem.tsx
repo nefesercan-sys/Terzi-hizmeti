@@ -10,13 +10,14 @@
 // ============================================================
 import { usePathname } from 'next/navigation';
 import { getLang } from '@/lib/icerik-haritasi';
+import { isPromoPath } from '@/lib/promosyon-paths';
 import { STEPS, VALUE_PROPS, pageWaMessage, waUrl, type Lang } from '@/lib/value-props';
 
 const SITE = 'https://terzihizmeti.com.tr';
 
 function useCtx(): { lang: Lang; path: string } | null {
   const path = usePathname() || '/';
-  if (path.includes('anavera-tekstil')) return null;           // B2B sayfa: bireysel terzi bandı yok
+  if (path.includes('anavera-tekstil') || isPromoPath(path)) return null; // B2B / promosyon tekstil sayfası: bireysel terzi bandı yok
   if (path === '/') return { lang: 'tr', path };
   const lang = getLang(path);
   return lang ? { lang, path } : null;

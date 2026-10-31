@@ -467,7 +467,7 @@ export default function KonyaaltiTailorServicePage() {
             </div>
           </section>
 
-          <OrnekGorselSeridi konu={'genel'} lang="tr" anahtarlar={['erkek-takim-olcu', 'erkek-palto-atolye', 'palto-yaka-detay', 'pilili-etek', 'beyaz-gomlek-katli', 'yun-pantolon-metre']} sayfaUrl="https://terzihizmeti.com.tr/antalya-terzi" />
+          <OrnekGorselSeridi konu={'terzi'} lang="tr" anahtarlar={['erkek-takim-olcu', 'erkek-palto-atolye', 'palto-yaka-detay', 'pilili-etek', 'beyaz-gomlek-katli', 'yun-pantolon-metre']} sayfaUrl="https://terzihizmeti.com.tr/antalya-terzi" />
 
           <section className="sec" style={{ background: 'rgba(0,0,0,.12)' }} id="faq" aria-labelledby="faq-h">
             <div className="ctr" style={{ maxWidth: 740 }}>

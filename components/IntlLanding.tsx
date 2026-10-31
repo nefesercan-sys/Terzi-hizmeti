@@ -97,7 +97,7 @@ export default function IntlLanding({ lang }: { lang: ILang }) {
         ))}
       </Block>
 
-      <OrnekGorselSeridi konu={'genel'} lang={lang} tema="acik" anahtarlar={['eve-gelen-terzi', 'abiye-elbise-atolye', 'erkek-takim-olcu', 'yun-pantolon-metre']} sayfaUrl={`${SITE}${iUrl(lang)}`} />
+      <OrnekGorselSeridi konu={'terzi'} lang={lang} tema="acik" anahtarlar={['eve-gelen-terzi', 'abiye-elbise-atolye', 'erkek-takim-olcu', 'yun-pantolon-metre']} sayfaUrl={`${SITE}${iUrl(lang)}`} />
 
       <Block><H2>{c.contactTitle}</H2>
         <p style={{ margin: '0 0 .5rem' }}><strong>{c.addressLabel}:</strong> {c.address}</p>

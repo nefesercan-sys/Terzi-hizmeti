@@ -607,7 +607,7 @@ export function DistrictPage({ lang, d }: { lang: Lang; d: District }) {
           </section>
         )}
 
-        <OrnekGorselSeridi konu="genel" lang={lang} anahtarlar={['eve-gelen-terzi', 'erkek-takim-olcu', 'beyaz-gomlek-katli', 'yun-pantolon-metre']} sayfaUrl={url} />
+        <OrnekGorselSeridi konu="terzi" yer={d.name[lang]} lang={lang} anahtarlar={['eve-gelen-terzi', 'erkek-takim-olcu', 'beyaz-gomlek-katli', 'yun-pantolon-metre']} sayfaUrl={url} />
 
         <Faq lang={lang} items={faq} />
         <Cta lang={lang} waMsg={waMsg} text={u.photoPrice} />
@@ -640,7 +640,7 @@ const HIZMET_GORSEL: Record<string, GorselAnahtar[]> = {
   'kiyafet-tamiri': ['erkek-takim-olcu', 'beyaz-gomlek-katli', 'pilili-etek'], beden: ['erkek-takim-olcu', 'beyaz-gomlek-katli', 'pilili-etek'],
 };
 
-const HIZMET_KONU: Record<string, 'paca' | 'fermuar' | 'gelinlik' | 'genel'> = { paca: 'paca', kot: 'paca', fermuar: 'fermuar', 'gelinlik-abiye': 'gelinlik', 'elbise-dikim': 'gelinlik', 'elbise-tamir': 'gelinlik', 'gece-kiyafeti': 'gelinlik' };
+const HIZMET_KONU: Record<string, 'paca' | 'fermuar' | 'gelinlik' | 'hizmet'> = { paca: 'paca', kot: 'paca', fermuar: 'fermuar', 'gelinlik-abiye': 'gelinlik', 'elbise-dikim': 'gelinlik', 'elbise-tamir': 'gelinlik', 'gece-kiyafeti': 'gelinlik' };
 
 export function ServicePage({ lang, s }: { lang: Lang; s: Service }) {
   const u = UI[lang];
@@ -729,7 +729,7 @@ export function ServicePage({ lang, s }: { lang: Lang; s: Service }) {
           </div>
         </section>
 
-        {HIZMET_GORSEL[s.id] && <OrnekGorselSeridi konu={HIZMET_KONU[s.id] || 'genel'} lang={lang} anahtarlar={HIZMET_GORSEL[s.id]} sayfaUrl={url} />}
+        {HIZMET_GORSEL[s.id] && <OrnekGorselSeridi konu={HIZMET_KONU[s.id] || 'hizmet'} lang={lang} anahtarlar={HIZMET_GORSEL[s.id]} sayfaUrl={url} />}
 
         <Faq lang={lang} items={faq} />
         <Cta lang={lang} waMsg={waMsg} text={u.photoPrice} />

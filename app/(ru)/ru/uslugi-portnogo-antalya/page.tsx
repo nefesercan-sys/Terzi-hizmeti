@@ -295,7 +295,7 @@ export default function UslugiPortnogoAntalyaPage() {
             </div>
           </section>
 
-      <OrnekGorselSeridi konu={'genel'} lang="ru" anahtarlar={['eve-gelen-terzi', 'erkek-takim-olcu', 'abiye-elbise-atolye', 'yun-pantolon-metre', 'beyaz-gomlek-katli', 'palto-yaka-detay']} sayfaUrl="https://terzihizmeti.com.tr/ru/uslugi-portnogo-antalya" />
+      <OrnekGorselSeridi konu={['terzi','fiyat']} lang="ru" anahtarlar={['eve-gelen-terzi', 'erkek-takim-olcu', 'abiye-elbise-atolye', 'yun-pantolon-metre', 'beyaz-gomlek-katli', 'palto-yaka-detay']} sayfaUrl="https://terzihizmeti.com.tr/ru/uslugi-portnogo-antalya" />
 
           <section className="sec" style={{ background: 'rgba(0,0,0,.12)' }} id="faq" aria-labelledby="faq-h">
             <div className="ctr" style={{ maxWidth: 740 }}>

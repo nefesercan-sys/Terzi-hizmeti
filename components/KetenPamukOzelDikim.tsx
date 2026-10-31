@@ -296,7 +296,7 @@ export default function KetenPamukOzelDikim({ lang = 'tr' }: { lang?: Lang }) {
         </div>
       </section>
 
-      <OrnekGorselSeridi lang={lang as 'tr' | 'en' | 'de' | 'ru'} tema="acik" anahtarlar={['keten-kadin-evde', 'keten-blazer-atolye', 'keten-erkek-gomlek', 'keten-pantolon-katli']} sayfaUrl={`https://terzihizmeti.com.tr${KETEN_URL[lang] || KETEN_URL.tr}`} />
+      <OrnekGorselSeridi konu={'keten'} lang={lang as 'tr' | 'en' | 'de' | 'ru'} tema="acik" anahtarlar={['keten-kadin-evde', 'keten-blazer-atolye', 'keten-erkek-gomlek', 'keten-pantolon-katli']} sayfaUrl={`https://terzihizmeti.com.tr${KETEN_URL[lang] || KETEN_URL.tr}`} />
 
       <section style={{ background: '#F2EDE4', padding: '3.5rem 1.5rem' }}>
         <div style={{ maxWidth: 1000, margin: '0 auto' }}>

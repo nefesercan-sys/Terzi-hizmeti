@@ -606,7 +606,7 @@ export default function AnaveraTekstilSayfasi({ lang }: { lang: AnaveraLang }) {
         </div>
       </section>
 
-      <OrnekGorselSeridi lang={lang} tema="acik" anahtarlar={['atolye-kesim-masasi', 'manken-palto-takim', 'manken-bej-ceket', 'kadin-trenckot-atolye']} sayfaUrl={`https://terzihizmeti.com.tr${lang === 'tr' ? '' : '/' + lang}/anavera-tekstil`} />
+      <OrnekGorselSeridi konu={['uniforma','promo']} lang={lang} tema="acik" anahtarlar={['atolye-kesim-masasi', 'manken-palto-takim', 'manken-bej-ceket', 'kadin-trenckot-atolye']} sayfaUrl={`https://terzihizmeti.com.tr${lang === 'tr' ? '' : '/' + lang}/anavera-tekstil`} />
 
       {/* CTA */}
       <section style={{ padding: '4rem 1rem', backgroundColor: NAVY, textAlign: 'center' }}>

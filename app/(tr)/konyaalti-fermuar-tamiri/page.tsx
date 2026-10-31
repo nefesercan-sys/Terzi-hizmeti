@@ -235,7 +235,7 @@ export default function FermuarTamiriPage() {
         </section>
 
         {/* FAQ */}
-        <OrnekGorselSeridi lang="tr" anahtarlar={['polar-yelek', 'kadin-trenckot-atolye', 'erkek-palto-atolye']} sayfaUrl="https://terzihizmeti.com.tr/konyaalti-fermuar-tamiri" />
+        <OrnekGorselSeridi konu={'fermuar'} lang="tr" anahtarlar={['polar-yelek', 'kadin-trenckot-atolye', 'erkek-palto-atolye']} sayfaUrl="https://terzihizmeti.com.tr/konyaalti-fermuar-tamiri" />
 
         <section className="sec" id="faq" aria-labelledby="faq-h">
           <div className="ctr" style={{ maxWidth: 720 }}>

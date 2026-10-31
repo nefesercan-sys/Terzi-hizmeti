@@ -991,7 +991,7 @@ export default function TerziFiyatlariSayfasi({ lang }: { lang: FLang }) {
         </div>
       </section>
 
-      <OrnekGorselSeridi lang={lang} anahtarlar={['yun-pantolon-metre', 'erkek-takim-olcu', 'abiye-askida', 'beyaz-gomlek-katli']} sayfaUrl={`https://terzihizmeti.com.tr${{ tr: '/antalya-terzi-fiyatlari', en: '/en/tailor-prices-antalya', de: '/de/schneider-preise-antalya', ru: '/ru/ceny-portnoy-antalya' }[lang]}`} />
+      <OrnekGorselSeridi konu={'genel'} lang={lang} anahtarlar={['yun-pantolon-metre', 'erkek-takim-olcu', 'abiye-askida', 'beyaz-gomlek-katli']} sayfaUrl={`https://terzihizmeti.com.tr${{ tr: '/antalya-terzi-fiyatlari', en: '/en/tailor-prices-antalya', de: '/de/schneider-preise-antalya', ru: '/ru/ceny-portnoy-antalya' }[lang]}`} />
 
       <section className="sec" id="sss" aria-labelledby="faq-h">
         <div className="ctr" style={{ maxWidth: 760 }}>

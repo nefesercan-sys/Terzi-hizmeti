@@ -275,7 +275,7 @@ export default function OtelBolgeSayfasi({ lang, region, allRegions, basePath, m
           </div>
         </section>
 
-        <OrnekGorselSeridi lang={lang} anahtarlar={['eve-gelen-terzi', 'kuru-temizleme-utu', 'erkek-takim-olcu']} sayfaUrl={`https://terzihizmeti.com.tr${basePath}/${region.slug}`} />
+        <OrnekGorselSeridi konu={'otel'} lang={lang} anahtarlar={['eve-gelen-terzi', 'kuru-temizleme-utu', 'erkek-takim-olcu']} sayfaUrl={`https://terzihizmeti.com.tr${basePath}/${region.slug}`} />
 
         <section className="sec" style={{ background: 'rgba(0,0,0,.12)' }} aria-labelledby="faq-h">
           <div className="ctr" style={{ maxWidth: 740 }}>

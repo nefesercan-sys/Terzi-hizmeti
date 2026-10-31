@@ -7,6 +7,7 @@
 // (50K+ adet/ay, 15+ ülke), sertifika iddiaları (OEKO-TEX, GOTS, ISO, AQL), "Onaylı üretici",
 // "modern tesis" iddiaları. Sayfada doğrulanamayan hiçbir sayı/sertifika yok.
 
+import Ilustrasyon, { type IlustrasyonTur } from '@/components/Ilustrasyon';
 import Link from 'next/link';
 import { PROMO_PATH, PROMO_NAME, PROMO_ANAVERA_LINE } from '@/lib/promosyon-paths';
 
@@ -410,12 +411,7 @@ export const translations: Record<AnaveraLang, Copy> = {
 const GOLD = '#C9A227';
 const GOLD_L = '#E4C664';
 const NAVY = '#0F172A';
-const IMGS = [
-  'https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
-  'https://images.pexels.com/photos/996329/pexels-photo-996329.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
-  'https://images.pexels.com/photos/1620760/pexels-photo-1620760.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
-  'https://images.pexels.com/photos/3760529/pexels-photo-3760529.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
-];
+const IMGS: IlustrasyonTur[] = ['kumas', 'canta', 'gomlek', 'makine'];
 
 const eyebrow = { color: '#D97706', fontWeight: 800, fontSize: '0.85rem', letterSpacing: '0.15em', textTransform: 'uppercase' } as const;
 const h2 = { fontSize: 'clamp(1.8rem, 3.5vw, 2.4rem)', fontWeight: 800, color: NAVY, margin: '0.5rem 0 0.8rem' } as const;
@@ -477,7 +473,7 @@ export default function AnaveraTekstilSayfasi({ lang }: { lang: AnaveraLang }) {
       </nav>
 
       {/* HERO */}
-      <section style={{ background: 'linear-gradient(135deg, rgba(15,23,42,0.96) 0%, rgba(30,41,59,0.9) 100%), url("https://images.pexels.com/photos/3738088/pexels-photo-3738088.jpeg?auto=compress&cs=tinysrgb&w=1600") center/cover', color: '#FFFFFF', padding: '4.5rem 1rem' }}>
+      <section style={{ background: 'linear-gradient(135deg, rgba(15,23,42,0.96) 0%, rgba(30,41,59,0.9) 100%)', color: '#FFFFFF', padding: '4.5rem 1rem' }}>
         <div style={{ maxWidth: 900, margin: '0 auto', textAlign: 'center' }}>
           <span style={{ display: 'inline-block', border: '1px solid rgba(201,162,39,.5)', background: 'rgba(201,162,39,.12)', color: '#FDE047', padding: '0.35rem 1rem', borderRadius: 30, fontSize: '0.8rem', fontWeight: 700, marginBottom: '1.4rem' }}>{t.heroBadge}</span>
           <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3.2rem)', fontWeight: 800, lineHeight: 1.15, margin: '0 0 1.2rem' }}>
@@ -541,7 +537,7 @@ export default function AnaveraTekstilSayfasi({ lang }: { lang: AnaveraLang }) {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.4rem' }}>
             {t.cat.map((c, i) => (
               <div key={c.title} style={{ ...card, padding: 0, overflow: 'hidden' }}>
-                <img src={IMGS[i]} alt={c.title} loading="lazy" style={{ width: '100%', height: 190, objectFit: 'cover', display: 'block' }} />
+                <div style={{ width: '100%', height: 190 }}><Ilustrasyon tur={IMGS[i % IMGS.length]} etiket={`${c.title} (çizim)`} /></div>
                 <div style={{ padding: '1.2rem' }}>
                   <h3 style={{ fontSize: '1.05rem', fontWeight: 800, margin: '0 0 .4rem' }}>{c.title}</h3>
                   <p style={{ color: '#64748B', fontSize: '.9rem', lineHeight: 1.55, margin: 0 }}>{c.desc}</p>

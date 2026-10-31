@@ -3,7 +3,7 @@ import { ANAVERA_URLS, translations, type AnaveraLang } from '@/components/Anave
 import { fitDesc, fitKeywords } from '@/lib/meta-fit';
 
 const SITE    = 'https://terzihizmeti.com.tr';
-const OG      = 'https://images.pexels.com/photos/3738088/pexels-photo-3738088.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop';
+const OG      = `${SITE}/og-anavera.png`;
 const PHONE_E = '+905318986418';
 
 type Copy = { title: string; description: string; ogLocale: string; keywords: string[] };

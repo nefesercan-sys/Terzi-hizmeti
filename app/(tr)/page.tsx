@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
-import { preconnect } from 'react-dom';
 import { DELIVERY } from '@/lib/delivery';
 import ReviewsBlock from '@/components/ReviewsBlock';
+import Ilustrasyon, { type IlustrasyonTur } from '@/components/Ilustrasyon';
 import { reviewSchema } from '@/lib/reviews';
 import { DISTRICTS as SEO_DISTRICTS, SERVICES as SEO_SERVICES, SERVICE_BASE, districtUrl, serviceUrl, isTrNear, isFreeService } from '@/lib/seo-data';
 
@@ -203,14 +203,14 @@ const C = {
 };
 
 const SERVICES = [
-  { n:'01', title:'Paça Kısaltma', en:'Pants Hemming', ru:'Укоротить брюки', sub:'Pantolon · Etek · Kot / Pants · Skirts', desc:'Erkek ve bayan pantolon, kot, etek paça kısaltma — temiz, görünmez dikiş.', price:'₺200+', time:'Acil 1–2 saat', wa:WA_TR, img:'https://images.pexels.com/photos/6765056/pexels-photo-6765056.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop' },
-  { n:'02', title:'Fermuar Değişimi', en:'Zipper Replacement', ru:'Замена молнии', sub:'Pantolon · Mont · Ceket · Çanta', desc:'Pantolon, mont, ceket, sweatshirt ve çanta fermuar değişimi, sıkışan fermuar tamiri.', price:'₺300+', time:'Acil 1–2 saat', wa:WA_TR, img:'https://images.pexels.com/photos/33952439/pexels-photo-33952439.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop' },
-  { n:'03', title:'Bel Daraltma & Tadilat', en:'Waist Alterations', ru:'Подгонка по фигуре', sub:'Elbise · Pantolon · Ceket', desc:'Elbise, pantolon ve ceketlerde bel daraltma, vücuda tam oturan ölçü ayarı.', price:'₺200+', time:'Acil 1–2 saat', wa:WA_TR, img:'https://images.pexels.com/photos/18022030/pexels-photo-18022030.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop' },
-  { n:'04', title:'Özel Elbise Dikimi', en:'Custom Tailoring', ru:'Пошив на заказ', sub:'Kadın · Erkek · Çocuk / Women & Men', desc:'Kadın elbisesi, erkek takım elbise, gömlek — ölçünüze özel sıfırdan dikim.', price:'₺800+', time:'Modele göre', wa:WA_TR, img:'https://images.pexels.com/photos/31112215/pexels-photo-31112215.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop' },
-  { n:'05', title:'Gelinlik & Abiye Tadilatı', en:'Wedding Dress Alterations', ru:'Ремонт свадебных платьев', sub:'Özel Gün Kıyafetleri / Evening Gowns', desc:'Özel gün kıyafetlerinde hassas daraltma, boy ayarı ve detaylı onarım.', price:'₺800+', time:'Ertesi gün', wa:WA_TR, img:'https://images.pexels.com/photos/8459366/pexels-photo-8459366.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop' },
-  { n:'06', title:'Kuru Temizleme & Ütü', en:'Dry Cleaning & Ironing', ru:'Химчистка и глажка', sub:'Profesyonel Bakım / Laundry', desc:'Profesyonel kuru temizleme, buharlı ütü ve pres hizmeti. Otellerden alım.', price:'₺80+', time:'1–2 saat', wa:WA_TR, img:'https://images.pexels.com/photos/5202797/pexels-photo-5202797.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop' },
-  { n:'07', title:'Eve Gelen Terzi', en:'Mobile Tailor Pickup', ru:'Выездной портной', sub:'Hurma · Liman · Sarısu Ücretsiz / Free Pickup', desc:'Araçlı terzi servisi: adresinizde ölçü alma; özel dikimde süre modele ve adede göre, normal tadilat ertesi gün, acil işler 1–2 saatte teslim.', price:'Ücretsiz / Free', time:'Ertesi gün', wa:WA_TR, img:'https://images.pexels.com/photos/6765658/pexels-photo-6765658.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop' },
-  { n:'08', title:'Üniforma & Seri İmalat', en:'Uniform Manufacturing', ru:'Пошив униформы', sub:'Otel · Restoran · Okul / Hotel & Uniforms', desc:'Toplu üniforma üretimi, fason tekstil, seri imalat ve nakış hizmeti.', price:'Teklif Al', time:'Proje bazlı', wa:WA_TR, img:'https://images.pexels.com/photos/5378708/pexels-photo-5378708.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop' },
+  { n:'01', title:'Paça Kısaltma', en:'Pants Hemming', ru:'Укоротить брюки', sub:'Pantolon · Etek · Kot / Pants · Skirts', desc:'Erkek ve bayan pantolon, kot, etek paça kısaltma — temiz, görünmez dikiş.', price:'₺200+', time:'Acil 1–2 saat', wa:WA_TR, tur:'pantolon' as IlustrasyonTur },
+  { n:'02', title:'Fermuar Değişimi', en:'Zipper Replacement', ru:'Замена молнии', sub:'Pantolon · Mont · Ceket · Çanta', desc:'Pantolon, mont, ceket, sweatshirt ve çanta fermuar değişimi, sıkışan fermuar tamiri.', price:'₺300+', time:'Acil 1–2 saat', wa:WA_TR, tur:'fermuar' as IlustrasyonTur },
+  { n:'03', title:'Bel Daraltma & Tadilat', en:'Waist Alterations', ru:'Подгонка по фигуре', sub:'Elbise · Pantolon · Ceket', desc:'Elbise, pantolon ve ceketlerde bel daraltma, vücuda tam oturan ölçü ayarı.', price:'₺200+', time:'Acil 1–2 saat', wa:WA_TR, tur:'elbise' as IlustrasyonTur },
+  { n:'04', title:'Özel Elbise Dikimi', en:'Custom Tailoring', ru:'Пошив на заказ', sub:'Kadın · Erkek · Çocuk / Women & Men', desc:'Kadın elbisesi, erkek takım elbise, gömlek — ölçünüze özel sıfırdan dikim.', price:'₺800+', time:'Modele göre', wa:WA_TR, tur:'makas' as IlustrasyonTur },
+  { n:'05', title:'Gelinlik & Abiye Tadilatı', en:'Wedding Dress Alterations', ru:'Ремонт свадебных платьев', sub:'Özel Gün Kıyafetleri / Evening Gowns', desc:'Özel gün kıyafetlerinde hassas daraltma, boy ayarı ve detaylı onarım.', price:'₺800+', time:'Ertesi gün', wa:WA_TR, tur:'gelinlik' as IlustrasyonTur },
+  { n:'06', title:'Kuru Temizleme & Ütü', en:'Dry Cleaning & Ironing', ru:'Химчистка и глажка', sub:'Profesyonel Bakım / Laundry', desc:'Profesyonel kuru temizleme, buharlı ütü ve pres hizmeti. Otellerden alım.', price:'₺80+', time:'1–2 saat', wa:WA_TR, tur:'utu' as IlustrasyonTur },
+  { n:'07', title:'Eve Gelen Terzi', en:'Mobile Tailor Pickup', ru:'Выездной портной', sub:'Hurma · Liman · Sarısu Ücretsiz / Free Pickup', desc:'Araçlı terzi servisi: adresinizde ölçü alma; özel dikimde süre modele ve adede göre, normal tadilat ertesi gün, acil işler 1–2 saatte teslim.', price:'Ücretsiz / Free', time:'Ertesi gün', wa:WA_TR, tur:'servis' as IlustrasyonTur },
+  { n:'08', title:'Üniforma & Seri İmalat', en:'Uniform Manufacturing', ru:'Пошив униформы', sub:'Otel · Restoran · Okul / Hotel & Uniforms', desc:'Toplu üniforma üretimi, fason tekstil, seri imalat ve nakış hizmeti.', price:'Teklif Al', time:'Proje bazlı', wa:WA_TR, tur:'gomlek' as IlustrasyonTur },
 ];
 
 // Mahalle listesi ve ücretsiz servis bilgisi TEK kaynaktan (lib/seo-data.ts FREE_SERVICE_SLUGS) okunur.
@@ -220,7 +220,6 @@ const DISTRICTS = ['hurma', 'liman', 'sarisu', 'uncali', 'gursu', 'ogretmenevler
 
 
 export default function TerziHizmetiPage() {
-  preconnect('https://images.pexels.com');
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
@@ -478,7 +477,7 @@ export default function TerziHizmetiPage() {
             {SERVICES.map((s,i)=>(
               <div className="svc-card" key={s.n}>
                 <div className="svc-img-wrap">
-                  <img src={s.img} alt={`${s.title} (örnek görsel)`} className="svc-img" loading={i===0?'eager':'lazy'} fetchPriority={i===0?'high':'auto'} decoding="async" width={600} height={400} />
+                  <Ilustrasyon tur={s.tur} etiket={`${s.title} (çizim)`} className="svc-img" />
                   <div className="svc-n svc-n-onimg">{s.n}</div>
                 </div>
                 <div className="svc-body">
@@ -509,12 +508,12 @@ export default function TerziHizmetiPage() {
             </div>
             <div className="gallery-grid">
               {[
-                { img:'https://images.pexels.com/photos/6765056/pexels-photo-6765056.jpeg?auto=compress&cs=tinysrgb&w=560&h=373&fit=crop', alt:'Ölçü alan terzi (örnek görsel)' },
-                { img:'https://images.pexels.com/photos/18022030/pexels-photo-18022030.jpeg?auto=compress&cs=tinysrgb&w=560&h=373&fit=crop', alt:'Elbise dikimi (örnek görsel)' },
-                { img:'https://images.pexels.com/photos/31112215/pexels-photo-31112215.jpeg?auto=compress&cs=tinysrgb&w=560&h=373&fit=crop', alt:'Tekstil dikim atölyesi (örnek görsel)' },
+                { tur:'metre' as IlustrasyonTur, alt:'Ölçü alma (çizim)' },
+                { tur:'makine' as IlustrasyonTur, alt:'Dikiş makinesi (çizim)' },
+                { tur:'utu' as IlustrasyonTur, alt:'Ütü ve teslim (çizim)' },
               ].map((g,i)=>(
                 <div className="gallery-item" key={i}>
-                  <img src={g.img} alt={g.alt} loading="lazy" width={560} height={373} />
+                  <Ilustrasyon tur={g.tur} etiket={g.alt} />
                 </div>
               ))}
             </div>

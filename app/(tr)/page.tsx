@@ -269,8 +269,9 @@ export default function TerziHizmetiPage() {
           .btn-secondary{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.08);color:#fff;font-weight:600;font-size:.9rem;padding:14px 22px;border-radius:4px;border:1px solid rgba(255,255,255,.15);transition:all .2s}
           .btn-secondary:hover{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.3)}
           
-          .hero-stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(201,169,110,.25);padding-top:1.8rem;gap:1rem}
+          .hero-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid rgba(201,169,110,.25);padding-top:1.8rem;gap:1rem}
           .stat-n{font-family:var(--font-syne),sans-serif;font-size:1.6rem;font-weight:800;color:#C9A96E;display:block;line-height:1}
+          @media (max-width:640px){.hero-stats{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:1.4rem}.stat-n{font-size:1.3rem;overflow-wrap:anywhere}}
           .stat-l{font-size:.65rem;color:rgba(255,255,255,.75);text-transform:uppercase;letter-spacing:.12em;margin-top:.3rem;display:block}
 
           /* YABANCI MÜŞTERİ KARTLARI (EN, RU, DE, TR) */

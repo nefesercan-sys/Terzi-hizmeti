@@ -7,7 +7,7 @@
 import type { Lang } from '@/lib/seo-data';
 
 export type AreaType = 'ilce_sahil' | 'ilce_merkez' | 'mah_sahil' | 'mah_konut' | 'otel_lara' | 'otel_golf' | 'otel_antik' | 'otel_orman' | 'dis';
-export interface AreaProfile { type: AreaType; parent?: 'konyaalti' | 'muratpasa' | 'kemer' | 'serik' | 'manavgat'; near: string[] }
+export interface AreaProfile { type: AreaType; parent?: 'konyaalti' | 'muratpasa' | 'kemer' | 'serik' | 'manavgat' | 'aksu'; near: string[] }
 
 export const AREA_PROFILES: Record<string, AreaProfile> = {
   konyaalti: { type: 'ilce_sahil', near: ['hurma', 'liman', 'sarisu', 'arapsuyu', 'altinkum', 'uncali', 'gursu'] },
@@ -22,7 +22,7 @@ export const AREA_PROFILES: Record<string, AreaProfile> = {
   sirinyali: { type: 'mah_konut', parent: 'muratpasa', near: ['meltem', 'fener', 'muratpasa'] },
   lara: { type: 'otel_lara', parent: 'muratpasa', near: ['guzeloba', 'kundu', 'fener'] },
   guzeloba: { type: 'otel_lara', parent: 'muratpasa', near: ['lara', 'fener', 'kundu'] },
-  kundu: { type: 'otel_lara', near: ['lara', 'guzeloba'] },
+  kundu: { type: 'otel_lara', parent: 'aksu', near: ['lara', 'guzeloba'] },
   arapsuyu: { type: 'mah_sahil', parent: 'konyaalti', near: ['altinkum', 'sarisu', 'siteler'] },
   toros: { type: 'mah_konut', parent: 'konyaalti', near: ['hurma', 'uncali', 'siteler'] },
   ogretmenevleri: { type: 'mah_konut', parent: 'konyaalti', near: ['siteler', 'toros', 'hurma'] },
@@ -46,6 +46,7 @@ const PARENT: Record<string, L4> = {
   kemer: { tr: 'Kemer', en: 'Kemer', ru: 'Кемер', de: 'Kemer' },
   serik: { tr: 'Serik', en: 'Serik', ru: 'Серик', de: 'Serik' },
   manavgat: { tr: 'Manavgat', en: 'Manavgat', ru: 'Манавгат', de: 'Manavgat' },
+  aksu: { tr: 'Aksu', en: 'Aksu', ru: 'Аксу', de: 'Aksu' },
 };
 const TYPE_TXT: Record<AreaType, L4> = {
   ilce_sahil: { tr: 'Antalya\'nın batı sahilindeki ilçe', en: "the district on Antalya's western coast", ru: 'район на западном побережье Антальи', de: 'der Bezirk an Antalyas Westküste' },

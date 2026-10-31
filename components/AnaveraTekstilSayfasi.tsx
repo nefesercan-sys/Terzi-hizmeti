@@ -428,6 +428,8 @@ function Head({ sub, title, desc, dark }: { sub: string; title: string; desc?: s
   );
 }
 
+import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
+
 export default function AnaveraTekstilSayfasi({ lang }: { lang: AnaveraLang }) {
   const t = translations[lang];
   const WA_LINK = WA(t.waMessage);
@@ -603,6 +605,8 @@ export default function AnaveraTekstilSayfasi({ lang }: { lang: AnaveraLang }) {
           </div>
         </div>
       </section>
+
+      <OrnekGorselSeridi lang={lang} tema="acik" anahtarlar={['atolye-kesim-masasi', 'manken-palto-takim', 'manken-bej-ceket', 'kadin-trenckot-atolye']} sayfaUrl={`https://terzihizmeti.com.tr${lang === 'tr' ? '' : '/' + lang}/anavera-tekstil`} />
 
       {/* CTA */}
       <section style={{ padding: '4rem 1rem', backgroundColor: NAVY, textAlign: 'center' }}>

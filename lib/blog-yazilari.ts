@@ -13,6 +13,7 @@ export interface BlogYazi {
   tarih: string;           // YYYY-MM-DD
   gorsel: string;          // /gorseller/...
   gorselAlt: string;
+  gorselBoyut?: [number, number]; // varsayılan 1264×848
   giris: string;
   bolumler: BlogBolum[];
   sss: { q: string; a: string }[];
@@ -226,8 +227,9 @@ export const BLOG_YAZILARI: BlogYazi[] = [
     baslik: 'Keten ve Pamuklu Kıyafet: Özel Dikim ve Bakım İpuçları',
     ozet: 'Yaz için keten gömlek, elbise ve pantolon yaptırırken kumaş seçimi, çekme payı ve ütüleme önerileri.',
     tarih: '2026-10-31',
-    gorsel: '/gorseller/kalip-ve-makas.webp',
-    gorselAlt: 'Keten kumaş üzerinde kalıp, makas ve metre (örnek görsel)',
+    gorsel: '/gorseller/keten-kadin-evde.webp',
+    gorselAlt: 'Keten gömlek ve pantolon giyen kadın (örnek görsel)',
+    gorselBoyut: [1376, 768],
     giris: 'Antalya gibi sıcak iklimlerde keten ve pamuk kumaş en rahat seçimlerdir. Ancak bu kumaşlar çeker, kırışır ve yanlış bakımda şeklini kaybedebilir. Özel dikim yaptırmadan önce bilmeniz gerekenler burada.',
     bolumler: [
       {
@@ -311,8 +313,9 @@ export const BLOG_YAZILARI: BlogYazi[] = [
     baslik: 'Otel ve Restoran Üniforması Yaptırırken Dikkat Edilecekler',
     ozet: 'Personel üniforması için kumaş, beden, nakış ve teslim planı. Otel, restoran ve spa işletmeleri için kontrol listesi.',
     tarih: '2026-10-31',
-    gorsel: '/gorseller/uniforma.webp',
-    gorselAlt: 'Askıda sıralı otel ve restoran üniformaları (örnek görsel)',
+    gorsel: '/gorseller/sef-mutfak-uniforma.webp',
+    gorselAlt: 'Aşçı ceketi ve önlük giyen mutfak personeli (örnek görsel)',
+    gorselBoyut: [1376, 768],
     giris: 'Üniforma, işletmenin ilk görünen yüzüdür. Sezon öncesi toplu sipariş verirken doğru kumaşı ve beden planını seçmek, hem maliyeti hem de personelin konforunu belirler. İşte işletmeler için kısa bir rehber.',
     bolumler: [
       {

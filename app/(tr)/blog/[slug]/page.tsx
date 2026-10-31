@@ -83,7 +83,7 @@ export default async function BlogYazisiSayfasi({ params }: { params: Promise<{ 
         <h1 style={{ fontSize: 'clamp(1.7rem,4.5vw,2.5rem)', fontWeight: 800, margin: '0 0 1.5rem', color: '#2C4A3E' }}>{y.baslik}</h1>
 
         <figure style={{ margin: '0 0 1.5rem' }}>
-          <img src={y.gorsel} alt={y.gorselAlt} width={1264} height={848} style={{ width: '100%', height: 'auto', borderRadius: 14, display: 'block' }} />
+          <img src={y.gorsel} alt={y.gorselAlt} width={y.gorselBoyut?.[0] ?? 1264} height={y.gorselBoyut?.[1] ?? 848} style={{ width: '100%', height: 'auto', borderRadius: 14, display: 'block' }} />
           <figcaption style={{ fontSize: '.75rem', color: '#999', marginTop: 6 }}>Örnek görsel</figcaption>
         </figure>
 

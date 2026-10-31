@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import ReviewsBlock from '@/components/ReviewsBlock';
+import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
 import { businessNode } from '@/lib/business';
 import { fitKeywords } from '@/lib/meta-fit';
 
@@ -234,6 +235,8 @@ export default function FermuarTamiriPage() {
         </section>
 
         {/* FAQ */}
+        <OrnekGorselSeridi lang="tr" anahtarlar={['polar-yelek', 'kadin-trenckot-atolye', 'erkek-palto-atolye']} sayfaUrl="https://terzihizmeti.com.tr/konyaalti-fermuar-tamiri" />
+
         <section className="sec" id="faq" aria-labelledby="faq-h">
           <div className="ctr" style={{ maxWidth: 720 }}>
             <div className="sec-head">

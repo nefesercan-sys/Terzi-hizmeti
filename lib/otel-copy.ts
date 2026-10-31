@@ -86,6 +86,7 @@ export function regionJsonLd(lang: L, slug: string, name: string, url: string, s
     '@graph': [
       { '@type': 'Service', '@id': `${url}#service`, name: serviceName, serviceType: { tr: 'Otele gelen terzi', en: 'Hotel pick-up tailoring and alterations', ru: 'Выездной портной', de: 'Hotel-Abholservice Schneider' }[lang],
         provider: { '@id': bizId }, areaServed: { '@type': 'Place', name: `${name}, Antalya` }, description: regionAnswer(lang, slug, name), url, inLanguage: lang },
+      { '@type': 'WebPage', '@id': `${url}#webpage`, url, name: serviceName, inLanguage: lang, about: { '@id': bizId }, speakable: { '@type': 'SpeakableSpecification', cssSelector: ['#hero-desc'] } },
       { '@type': 'FAQPage', '@id': `${url}#faq`, inLanguage: lang, mainEntity: faq.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) },
     ],
   };

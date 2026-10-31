@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { PHONE, PHONE_TEL, MAPS, SITE } from '@/lib/seo-data';
 import { businessNode, OG_DEFAULT, waLink, TURIST_UPDATE } from '@/lib/turist-keten';
 import { INTL, iUrl, type ILang } from '@/lib/intl';
+import { ZONE_VARIANTS, zoneVariantIndex } from '@/lib/zone-variants';
 import { ZCOPY, ZONE_SLUGS, zoneData, zoneUrl, type ZoneSlug } from '@/lib/intl-zones';
 
 const C = { green: '#2C4A3E', gold: '#D4B07A', cream: '#FAF7F2', sand: '#F2EDE4', ink: '#1C1814', muted: '#6B5F53', line: 'rgba(44,74,62,.15)' };
@@ -36,6 +37,9 @@ export function zoneJsonLd(lang: ILang, zone: ZoneSlug) {
 
 export default function ZoneLanding({ lang, zone }: { lang: ILang; zone: ZoneSlug }) {
   const g = INTL[lang]; const c = ZCOPY[lang]; const z = zoneData(lang, zone);
+  const vi = zoneVariantIndex(zone); const V = ZONE_VARIANTS[lang];
+  const leadText = vi === 0 ? c.lead(z.name) : V.lead[vi - 1](z.name);
+  const howText = vi === 0 ? c.how(z.name, z.home) : V.how[vi - 1](z.name);
   return (
     <main lang={lang} dir={g.dir} style={{ fontFamily: 'system-ui,sans-serif', background: C.cream, color: '#3A3028', minHeight: '100vh', lineHeight: 1.7 }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(zoneJsonLd(lang, zone)) }} />
@@ -44,7 +48,7 @@ export default function ZoneLanding({ lang, zone }: { lang: ILang; zone: ZoneSlu
         <div style={{ maxWidth: 820, margin: '0 auto' }}>
           <p style={{ margin: '0 0 .8rem', fontSize: '.85rem' }}><Link href={iUrl(lang)} style={{ color: C.gold }}>{c.back}</Link></p>
           <h1 id="hero-h" style={{ fontFamily: serif, fontSize: 'clamp(1.6rem,4.6vw,2.4rem)', fontWeight: 700, lineHeight: 1.2, color: '#fff', margin: '0 0 .9rem' }}>{c.h1(z.name)}</h1>
-          <p className="hero-desc" style={{ fontSize: '1.02rem', color: 'rgba(255,255,255,.92)', margin: 0 }}>{c.lead(z.name)}</p>
+          <p className="hero-desc" style={{ fontSize: '1.02rem', color: 'rgba(255,255,255,.92)', margin: 0 }}>{leadText}</p>
         </div>
       </header>
 
@@ -59,7 +63,7 @@ export default function ZoneLanding({ lang, zone }: { lang: ILang; zone: ZoneSlu
 
         <section style={{ background: '#fff', border: `1px solid ${C.line}`, borderRadius: 8, padding: '1.2rem 1.3rem', marginBottom: '1.8rem' }}>
           <H2>{c.howTitle}</H2>
-          <p style={{ margin: 0 }}>{c.how(z.name, z.home)}</p>
+          <p style={{ margin: 0 }}>{howText}</p>
         </section>
 
         <section style={{ marginBottom: '1.8rem' }}>

@@ -88,7 +88,7 @@ export default async function OtelBolgeEnPage({ params }: { params: Promise<{ re
           {
             '@type': 'Question',
             name: `How soon will I get it back?`,
-            acceptedAnswer: { '@type': 'Answer', text: `Hemming, taking in and zipper repairs are usually done the same day; dress, jacket, shirt and coat alterations take 1 day; dress making takes 3 days.` },
+            acceptedAnswer: { '@type': 'Answer', text: `Urgent repairs and alterations are ready in 1–2 hours and standard ones the next day; made-to-measure timing depends on the model and number of pieces.` },
           },
         ],
       },

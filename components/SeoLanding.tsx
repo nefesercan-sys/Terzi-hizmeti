@@ -123,10 +123,10 @@ const pickFit = (list: string[], max: number) => list.find((c) => c.length <= ma
 const priceShortOf = (lang: Lang, s: Service) =>
   s.priceFrom ? (lang === 'tr' ? `₺${s.priceFrom}'den` : lang === 'en' ? `from ₺${s.priceFrom}` : lang === 'ru' ? `от ₺${s.priceFrom}` : `ab ₺${s.priceFrom}`) : '';
 const TIME_SHORT: Record<Lang, Record<'same' | 'next' | 'three' | 'none', string>> = {
-  tr: { same: 'Aynı Gün', next: 'Ertesi Gün', three: '3 Günde', none: 'Yakınınızda' },
-  en: { same: 'Same Day', next: 'Next Day', three: 'In 3 Days', none: 'Near You' },
-  ru: { same: 'В тот же день', next: 'За 1 день', three: 'За 3 дня', none: 'Рядом' },
-  de: { same: 'Am selben Tag', next: 'Am nächsten Tag', three: 'In 3 Tagen', none: 'In der Nähe' },
+  tr: { same: 'Ertesi Gün', next: 'Ertesi Gün', three: 'Ölçüye Göre', none: 'Yakınınızda' },
+  en: { same: 'Next Day', next: 'Next Day', three: 'Made to Measure', none: 'Near You' },
+  ru: { same: 'На следующий день', next: 'На следующий день', three: 'На заказ', none: 'Рядом' },
+  de: { same: 'Am nächsten Tag', next: 'Am nächsten Tag', three: 'Nach Maß', none: 'In der Nähe' },
 };
 
 // ── Bölge önceliği: TR'de yerel mahalleler, yabancı dilde tatil bölgeleri öne ──
@@ -272,30 +272,30 @@ function _districtFaq(lang: Lang, d: District): [string, string][] {
   return {
     tr: [
       [`${loc} terzi nerede, en yakın atölye hangisi?`, `Atölyemiz Konyaaltı'nda, Hurma Mahallesi'nde. ${n} için kıyafeti adresinizden ya da otelinizden alıp geri getiriyoruz; otel ve eve servis ücretsiz. WhatsApp'tan her gün 08:00–23:00 yazabilirsiniz.`],
-      [`${loc} ${by('paca').q.tr} ve ${by('fermuar').q.tr} aynı gün biter mi?`, 'Evet, paça kısaltma, daraltma ve fermuar değişimi ya da tamiri aynı gün teslim edilir.'],
+      [`${loc} ${by('paca').q.tr} ve ${by('fermuar').q.tr} aynı gün biter mi?`, 'Normal paça, daraltma ve fermuar işleri ertesi gün, acil işler 1–2 saatte teslim edilir.'],
       [`${loc} gelinlik ve abiye ayarı ne kadar tutar?`, "Gelinlik ve abiye tadilatı ₺800'den başlıyor. Kesin fiyat fotoğrafa ve işin kapsamına göre verilir; abiye ertesi gün hazır olur."],
-      [`${loc} ${by('elbise-dikim').q.tr} ne zaman teslim alınır?`, 'Elbise dikimi 3 günde hazır olur. Elbise, ceket, gömlek, mont ve abiye tadilatı ya da tamiri 1 gün sürer.'],
+      [`${loc} ${by('elbise-dikim').q.tr} ne zaman teslim alınır?`, 'Özel dikimde süre modele ve adede göre belirlenir. Normal tamir ve tadilat ertesi gün, acil işler 1–2 saatte teslim edilir.'],
       [`Turist olarak ${loc} terzi bulabilir miyim?`, "Evet. WhatsApp'tan kendi dilinizde yazabilirsiniz; otel ve eve servis ücretsiz. Kıyafetin fotoğrafını WhatsApp'tan gönderin, fiyatı hemen söyleyelim."],
     ],
     en: [
       [`Where is the nearest tailor ${loc}?`, `Our workshop is in Hurma, Konyaaltı. For ${n} we pick garments up from your address or hotel and bring them back, free of charge for hotels and homes. You can reach us on WhatsApp every day from 08:00 to 23:00.`],
-      [`Can ${by('paca').q.en} and ${by('fermuar').q.en} be done in one day ${loc}?`, 'Yes. Hemming, taking in and zipper replacement or repair are returned the same day.'],
+      [`Can ${by('paca').q.en} and ${by('fermuar').q.en} be done in one day ${loc}?`, 'Standard hemming, taking in and zipper work is returned the next day; urgent jobs take 1–2 hours.'],
       [`What does a wedding or evening dress alteration cost ${loc}?`, 'Wedding dress alterations start at ₺800 and evening dress alterations at ₺800. The exact price is set from a photo and the scope of work; evening dresses are ready the next day.'],
-      [`How soon is ${by('elbise-dikim').q.en} ready ${loc}?`, 'Dress making is ready in 3 days. Alterations and repairs of dresses, jackets, shirts, coats and evening dresses take 1 day.'],
+      [`How soon is ${by('elbise-dikim').q.en} ready ${loc}?`, 'Made-to-measure timing depends on the model and number of pieces. Standard alterations and repairs are ready the next day; urgent jobs take 1–2 hours.'],
       [`Can tourists use a tailor ${loc}?`, 'Yes. message us on WhatsApp in your language, and hotel and home service is free. Send a photo of the garment on WhatsApp and we will quote right away.'],
     ],
     ru: [
       [`Где ближайший портной ${loc}?`, `Мастерская находится в Хурме (Коньяалты). Для района ${n} забираем вещи с вашего адреса или из отеля и возвращаем, для отелей и дома это бесплатно. Пишите в WhatsApp каждый день с 08:00 до 23:00.`],
-      [`Сколько ждать: ${by('paca').q.ru} и ${by('fermuar').q.ru} ${loc}?`, 'Подшив, ушивание и замена или ремонт молнии возвращаем в тот же день.'],
+      [`Сколько ждать: ${by('paca').q.ru} и ${by('fermuar').q.ru} ${loc}?`, 'Подшив, ушивание и замена или ремонт молнии возвращаем на следующий день.'],
       [`Сколько стоит подгонка свадебного или вечернего платья ${loc}?`, 'Подгонка свадебного и вечернего платья начинается от ₺800. Точную цену называем по фото и объёму работ; вечерние платья готовы на следующий день.'],
-      [`Сколько дней занимает ${by('elbise-dikim').q.ru} ${loc}?`, 'Пошив платья занимает 3 дня. Переделка и ремонт платьев, пиджаков, рубашек, курток и вечерних платьев — 1 день.'],
+      [`Сколько дней занимает ${by('elbise-dikim').q.ru} ${loc}?`, 'При индивидуальном пошиве срок зависит от модели и количества изделий. Обычный ремонт и подгонка готовы на следующий день, срочные — за 1–2 часа.'],
       [`Подходит ли ваш сервис туристам ${loc}?`, 'Да. Напишите нам в WhatsApp на своём языке, выезд в отели и на дом бесплатный. Пришлите фото вещи в WhatsApp, и мы сразу назовём цену.'],
     ],
     de: [
       [`Wo finde ich einen Schneider ${loc}?`, `Unsere Werkstatt liegt in Hurma, Konyaaltı. Für ${n} holen wir Kleidung an Ihrer Adresse oder im Hotel ab und bringen sie zurück; für Hotels und Zuhause ist das kostenlos. Per WhatsApp erreichen Sie uns täglich von 08:00 bis 23:00.`],
-      [`Sind ${by('paca').q.de} und ${by('fermuar').q.de} ${loc} am selben Tag erledigt?`, 'Ja. Hose kürzen, enger machen und Reißverschluss wechseln oder reparieren sind am selben Tag fertig.'],
+      [`Sind ${by('paca').q.de} und ${by('fermuar').q.de} ${loc} am nächsten Tag erledigt?`, 'Ja. Hose kürzen, enger machen und Reißverschluss wechseln oder reparieren sind am nächsten Tag fertig (eilig in 1–2 Stunden).'],
       [`Was kostet es, ein Brautkleid oder Abendkleid ${loc} ändern zu lassen?`, 'Änderungen am Brautkleid starten bei ₺800, am Abendkleid bei ₺800. Der genaue Preis ergibt sich aus Foto und Aufwand; Abendkleider sind am nächsten Tag fertig.'],
-      [`Wann ist ${by('elbise-dikim').q.de} ${loc} fertig?`, 'Ein Kleid nähen dauert 3 Tage. Änderungen und Reparaturen an Kleidern, Sakkos, Hemden, Mänteln und Abendkleidern sind nach 1 Tag fertig.'],
+      [`Wann ist ${by('elbise-dikim').q.de} ${loc} fertig?`, 'Bei Maßanfertigung richtet sich die Dauer nach Modell und Stückzahl. Normale Änderungen und Reparaturen sind am nächsten Tag fertig, eilige in 1–2 Stunden.'],
       [`Kann ich als Tourist ${loc} einen Schneider nutzen?`, 'Ja. Schreiben Sie uns per WhatsApp in Ihrer Sprache; Hotel- und Heimservice sind kostenlos. Schicken Sie ein Foto per WhatsApp, den Preis nennen wir sofort.'],
     ],
   }[lang] as [string, string][];

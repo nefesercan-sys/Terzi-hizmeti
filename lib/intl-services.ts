@@ -7,6 +7,7 @@
 // ============================================================
 import type { ILang } from '@/lib/intl';
 
+import { DELIVERY } from '@/lib/delivery';
 export type SvcCopy = {
   slug: string; title: string; desc: string; h1: string; lead: string; back: string;
   altTitle: string; alt: string[]; leatherTitle: string; leather: string;
@@ -34,7 +35,7 @@ export const SVC: Record<ILang, SvcCopy> = {
     faqTitle: 'Preguntas frecuentes',
     faq: [
       ['¿Hacen prendas nuevas de cuero o de vaquero?', 'No. Con cuero y vaqueros hacemos solo arreglos y reparaciones. La confección a medida es en lino, algodón, punto, satén, seda y telas similares.'],
-      ['¿Cuánto tarda un arreglo o una prenda a medida?', 'Los arreglos suelen estar listos en 1 día y las prendas a medida en unos 3 días. Los trabajos urgentes a menudo se resuelven en 2–4 horas. Consúltenos por WhatsApp.'],
+      ['¿Cuánto tarda un arreglo o una prenda a medida?', `${DELIVERY.es.urgent} ${DELIVERY.es.normal} ${DELIVERY.es.custom}`],
       ['¿Recogen y entregan en el hotel?', 'Sí. Podemos tomar medidas o recoger la prenda en su hotel y entregarla allí. Es gratis en los barrios de Konyaaltı; para zonas más alejadas se acuerda por WhatsApp.'],
       ['¿Envían la ropa a mi país?', 'Sí. Tomamos sus medidas en línea, cosemos en Antalya y enviamos a su país, normalmente en 1–3 semanas. El pago es por transferencia bancaria. Si no le queda bien, lo corregimos. La tela la ponemos nosotros. El costo del envío lo paga el cliente.'],
       ['¿Cuánto cuesta?', 'El precio depende de la prenda y del trabajo. Envíe una foto por WhatsApp y le decimos el precio antes de empezar.'],
@@ -59,7 +60,7 @@ export const SVC: Record<ILang, SvcCopy> = {
     faqTitle: 'Questions fréquentes',
     faq: [
       ['Fabriquez-vous des vêtements neufs en cuir ou en jean ?', 'Non. Pour le cuir et le jean, nous faisons uniquement des retouches et des réparations. Le sur-mesure se fait en lin, coton, jersey, satin, soie et tissus similaires.'],
-      ['Combien de temps prend une retouche ou une pièce sur mesure ?', 'Les retouches sont en général prêtes en 1 jour et les pièces sur mesure en environ 3 jours. Les travaux urgents se font souvent en 2 à 4 heures. Demandez-nous sur WhatsApp.'],
+      ['Combien de temps prend une retouche ou une pièce sur mesure ?', `${DELIVERY.fr.urgent} ${DELIVERY.fr.normal} ${DELIVERY.fr.custom}`],
       ['Venez-vous chercher et livrer à l’hôtel ?', 'Oui. Nous pouvons prendre les mesures ou récupérer le vêtement à votre hôtel et le livrer sur place. C’est gratuit dans les quartiers de Konyaaltı ; pour les zones plus éloignées, cela se convient sur WhatsApp.'],
       ['Expédiez-vous les vêtements dans mon pays ?', 'Oui. Nous prenons vos mesures en ligne, cousons à Antalya et expédions dans votre pays, généralement en 1 à 3 semaines. Le paiement se fait par virement bancaire. Si le vêtement ne vous va pas, nous le corrigeons. Le tissu est fourni par nous. Les frais d’expédition sont à la charge du client.'],
       ['Quel est le prix ?', 'Le prix dépend du vêtement et du travail. Envoyez une photo sur WhatsApp et nous vous indiquons le prix avant de commencer.'],
@@ -84,7 +85,7 @@ export const SVC: Record<ILang, SvcCopy> = {
     faqTitle: 'Najczęstsze pytania',
     faq: [
       ['Czy szyjecie nowe ubrania ze skóry lub jeansu?', 'Nie. Skórę i jeans tylko naprawiamy i przerabiamy. Szycie na miarę wykonujemy z lnu, bawełny, dzianiny, satyny, jedwabiu i podobnych tkanin.'],
-      ['Ile trwa przeróbka lub szycie na miarę?', 'Przeróbki są zwykle gotowe w 1 dzień, a ubrania szyte na miarę w około 3 dni. Pilne zlecenia często realizujemy w 2–4 godziny. Zapytaj na WhatsApp.'],
+      ['Ile trwa przeróbka lub szycie na miarę?', `${DELIVERY.pl.urgent} ${DELIVERY.pl.normal} ${DELIVERY.pl.custom}`],
       ['Czy odbieracie i dostarczacie do hotelu?', 'Tak. Możemy zdjąć miarę lub odebrać ubranie w hotelu i tam je dostarczyć. W dzielnicach Konyaaltı jest to bezpłatne; w dalszych rejonach ustalamy to przez WhatsApp.'],
       ['Czy wysyłacie ubrania do mojego kraju?', 'Tak. Bierzemy wymiary online, szyjemy w Antalyi i wysyłamy do Twojego kraju, zwykle w 1–3 tygodnie. Płatność przelewem bankowym. Jeśli ubranie nie pasuje, poprawiamy je. Tkaninę zapewniamy my. Koszt wysyłki ponosi klient.'],
       ['Ile to kosztuje?', 'Cena zależy od rodzaju ubrania i pracy. Wyślij zdjęcie na WhatsApp, a podamy cenę przed rozpoczęciem pracy.'],
@@ -109,7 +110,7 @@ export const SVC: Record<ILang, SvcCopy> = {
     faqTitle: 'Часті запитання',
     faq: [
       ['Чи шиєте ви нові речі зі шкіри або джинсу?', 'Ні. Зі шкірою та джинсом ми лише ремонтуємо й підганяємо. Пошив на замовлення виконуємо з льону, бавовни, трикотажу, атласу, шовку та подібних тканин.'],
-      ['Скільки часу займає підгонка чи пошив?', 'Підгонка зазвичай готова за 1 день, пошив на замовлення — приблизно за 3 дні. Термінові роботи часто виконуємо за 2–4 години. Уточніть у WhatsApp.'],
+      ['Скільки часу займає підгонка чи пошив?', `${DELIVERY.uk.urgent} ${DELIVERY.uk.normal} ${DELIVERY.uk.custom}`],
       ['Чи забираєте та привозите в готель?', 'Так. Можемо зняти мірки або забрати річ у вашому готелі й привезти назад. У районах Коньяалти це безкоштовно; для віддаленіших місць домовляємося у WhatsApp.'],
       ['Чи відправляєте речі до моєї країни?', 'Так. Знімаємо мірки онлайн, шиємо в Анталії й відправляємо у вашу країну, зазвичай за 1–3 тижні. Оплата банківським переказом. Якщо річ не підійшла, ми її виправимо. Тканину надаємо ми. Вартість доставки сплачує клієнт.'],
       ['Скільки це коштує?', 'Ціна залежить від речі та роботи. Надішліть фото у WhatsApp, і ми назвемо ціну до початку роботи.'],
@@ -134,7 +135,7 @@ export const SVC: Record<ILang, SvcCopy> = {
     faqTitle: 'Veelgestelde vragen',
     faq: [
       ['Maken jullie nieuwe kleding van leer of jeans?', 'Nee. Leer en jeans doen wij alleen als reparatie en vermaakwerk. Maatwerk maken wij van linnen, katoen, tricot, satijn, zijde en vergelijkbare stoffen.'],
-      ['Hoe lang duurt vermaken of maatwerk?', 'Vermaakwerk is meestal in 1 dag klaar, maatwerk in ongeveer 3 dagen. Spoedklussen zijn vaak in 2 tot 4 uur klaar. Vraag het via WhatsApp.'],
+      ['Hoe lang duurt vermaken of maatwerk?', `${DELIVERY.nl.urgent} ${DELIVERY.nl.normal} ${DELIVERY.nl.custom}`],
       ['Halen jullie kleding op en brengen jullie die terug naar het hotel?', 'Ja. Wij kunnen de maten opnemen of de kleding ophalen bij uw hotel en daar weer terugbrengen. In de wijken van Konyaaltı is dat gratis; voor verder weg spreken we het af via WhatsApp.'],
       ['Sturen jullie kleding naar mijn land?', 'Ja. Wij nemen uw maten online op, naaien in Antalya en sturen naar uw land, meestal binnen 1–3 weken. Betaling gaat via bankoverschrijving. Past het niet, dan passen we het aan. De stof leveren wij. De verzendkosten betaalt de klant.'],
       ['Wat kost het?', 'De prijs hangt af van het kledingstuk en het werk. Stuur een foto via WhatsApp, dan noemen wij de prijs voordat wij beginnen.'],
@@ -159,7 +160,7 @@ export const SVC: Record<ILang, SvcCopy> = {
     faqTitle: 'الأسئلة الشائعة',
     faq: [
       ['هل تصنعون ملابس جديدة من الجلد أو الجينز؟', 'لا. نتعامل مع الجلد والجينز إصلاحًا وتعديلًا فقط. أما الخياطة حسب المقاس فتكون بالكتان والقطن والجيرسيه والساتان والحرير وأقمشة مشابهة.'],
-      ['كم تستغرق عملية التعديل أو الخياطة؟', 'التعديلات تكون جاهزة عادةً خلال يوم واحد، والخياطة حسب المقاس خلال نحو 3 أيام. والأعمال العاجلة تُنجز غالبًا خلال 2 إلى 4 ساعات. اسألنا عبر واتساب.'],
+      ['كم تستغرق عملية التعديل أو الخياطة؟', `${DELIVERY.ar.urgent} ${DELIVERY.ar.normal} ${DELIVERY.ar.custom}`],
       ['هل تستلمون الملابس وتسلّمونها في الفندق؟', 'نعم. يمكننا أخذ المقاسات أو استلام القطعة من فندقك وتسليمها إليه. الخدمة مجانية في أحياء كونيالتي، وللمناطق الأبعد نتفق عبر واتساب.'],
       ['هل ترسلون الملابس إلى بلدي؟', 'نعم. نأخذ مقاساتك عبر الإنترنت ونخيط في أنطاليا ونشحن إلى بلدك عادةً خلال 1–3 أسابيع. الدفع بالحوالة المصرفية. وإن لم تناسبك القطعة نعدّلها. القماش نوفّره نحن. تكلفة الشحن على العميل.'],
       ['كم السعر؟', 'يعتمد السعر على القطعة ونوع العمل. أرسل صورة عبر واتساب ونخبرك بالسعر قبل البدء.'],

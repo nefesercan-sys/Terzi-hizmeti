@@ -129,7 +129,7 @@ const jsonLd = {
       mainEntity: [
         { '@type': 'Question', name: "Atölyeniz Liman'da mı?", acceptedAnswer: { '@type': 'Answer', text: 'Evet, atölyemiz Liman mahallesinde yer alıyor. Bu sayede Liman içindeki teslimatlar genellikle diğer mahallelere göre daha hızlı tamamlanır.' } },
         { '@type': 'Question', name: 'Liman terzi fiyatları ne kadar 2026?', acceptedAnswer: { '@type': 'Answer', text: `Paça kısaltma ₺200'den, fermuar değişimi ₺300'den, bel daraltma ₺200'den, elbise dikimi ₺800'den, gelinlik tadilatı ₺800'den, abiye tadilatı ₺800'den, ütü ₺80'den başlar. ☎ ${PHONE}` } },
-        { '@type': 'Question', name: 'Liman\'da aynı gün teslim mümkün mü?', acceptedAnswer: { '@type': 'Answer', text: 'Paça kısaltma, fermuar değişimi ve bel daraltma gibi standart işlemler genellikle aynı gün içinde tamamlanıp teslim edilir.' } },
+        { '@type': 'Question', name: 'Liman\'da acil tadilat ne kadar sürer?', acceptedAnswer: { '@type': 'Answer', text: 'Paça kısaltma, fermuar değişimi ve bel daraltma gibi standart işlemler ertesi gün, acil olanlar 1–2 saatte teslim edilir.' } },
         { '@type': 'Question', name: 'Gelinlik ve abiye tadilatı yapıyor musunuz?', acceptedAnswer: { '@type': 'Answer', text: `Evet, gelinlik ve abiye tadilatında uzmanız. Gelinlik tadilatı ₺800'den, abiye tadilatı ₺800'den başlar. ☎ ${PHONE}` } },
       ],
     },
@@ -233,7 +233,7 @@ export default function LimanPage() {
             <div className="howto-list">
               <div className="howto-item">
                 <div className="howto-t">Paça Kısaltma & Bel Daraltma</div>
-                <div className="howto-d">Pantolon, kot, etek kısaltma; elbise, ceket ve pantolonda bel daraltma. ₺200'den, aynı gün teslim.</div>
+                <div className="howto-d">Pantolon, kot, etek kısaltma; elbise, ceket ve pantolonda bel daraltma. ₺200'den, ertesi gün teslim.</div>
               </div>
               <div className="howto-item">
                 <div className="howto-t">Fermuar Değişimi</div>
@@ -260,7 +260,7 @@ export default function LimanPage() {
             {[
               ["Atölyeniz Liman'da mı?", 'Evet, atölyemiz Liman mahallesinde yer alıyor. Bu sayede Liman içindeki teslimatlar genellikle diğer mahallelere göre daha hızlı tamamlanır.'],
               ['Liman terzi fiyatları ne kadar 2026?', 'Paça kısaltma ₺200\'den, fermuar değişimi ₺300\'den, bel daraltma ₺200\'den, elbise dikimi ₺800\'den, gelinlik tadilatı ₺800\'den, abiye tadilatı ₺800\'den, ütü ₺80\'den başlar.'],
-              ['Liman\'da aynı gün teslim mümkün mü?', 'Paça kısaltma, fermuar değişimi ve bel daraltma gibi standart işlemler genellikle aynı gün içinde tamamlanıp teslim edilir.'],
+              ['Liman\'da acil tadilat ne kadar sürer?', 'Paça kısaltma, fermuar değişimi ve bel daraltma gibi standart işlemler ertesi gün, acil olanlar 1–2 saatte teslim edilir.'],
               ['Gelinlik ve abiye tadilatı yapıyor musunuz?', 'Evet, gelinlik ve abiye tadilatında uzmanız. Gelinlik tadilatı ₺800\'den, abiye tadilatı ₺800\'den başlar.'],
             ].map(([q, a]) => (
               <div key={q} className="faq-item">
@@ -273,7 +273,7 @@ export default function LimanPage() {
 
         <section className="cta-final" aria-label="İletişime geç">
           <h2 className="cta-h ff">Liman'da Terziye mi İhtiyacınız Var?</h2>
-          <p className="cta-sub">Fotoğraf gönderin, adresinizden alalım, aynı gün teslim edelim.</p>
+          <p className="cta-sub">Fotoğraf gönderin, adresinizden alalım, ertesi gün teslim edelim.</p>
           <div className="cta-btns">
             <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-white">💬 WhatsApp'tan Yazın</a>
             <a href={MAPS} target="_blank" rel="noopener noreferrer" className="btn-outline-white">📍 Google Haritalar</a>

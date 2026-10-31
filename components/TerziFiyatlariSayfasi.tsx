@@ -152,14 +152,14 @@ export const FT: Record<FLang, FiyatText> = {
       },
       {
         "q": "Elbisenin belini daraltmak istiyorum",
-        "a": "Bel ve beden daraltma, aynı gün veya 1–2 gün içinde.",
+        "a": "Bel ve beden daraltma, normal işte ertesi gün.",
         "price": "₺200'den",
         "href": "#fiyatlar",
         "cta": "Fiyat listesi"
       },
       {
         "q": "Pantolonumun paçasını kısaltmak istiyorum",
-        "a": "Kot ve kumaş pantolon paça kısaltma, çoğu zaman aynı gün.",
+        "a": "Kot ve kumaş pantolon paça kısaltma, normal işte ertesi gün; acilde 1–2 saat.",
         "price": "₺200'den",
         "href": "/konyaalti-paca-kisaltma",
         "cta": "Paça kısaltma"
@@ -214,7 +214,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Elbisem yırtıldı, tamir edilir mi?",
-        "Evet. Yırtık ve sökülen dikişler onarılır; fiyat işe göre değişir. Yırtığın fotoğrafını WhatsApp'tan gönderirseniz net fiyat ve süre söyleriz. Çoğu onarım aynı gün veya 1–2 gün içinde tamamlanır."
+        "Evet. Yırtık ve sökülen dikişler onarılır; fiyat işe göre değişir. Yırtığın fotoğrafını WhatsApp'tan gönderirseniz net fiyat ve süre söyleriz. Normal onarım ertesi gün, acil onarım 1–2 saatte teslim edilir."
       ],
       [
         "Elbisemin belini daraltmak istiyorum, ne kadar tutar?",
@@ -222,7 +222,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Pantolonumun paçasını kısaltmak istiyorum, ne kadar sürer?",
-        "Paça kısaltma ₺200'den başlar; kot ve kumaş pantolonlarda çoğu zaman aynı gün teslim edilir. Ayrıntı: /konyaalti-paca-kisaltma"
+        "Paça kısaltma ₺200'den başlar; kot ve kumaş pantolonlarda normal işte ertesi gün, acilde 1–2 saatte teslim edilir. Ayrıntı: /konyaalti-paca-kisaltma"
       ],
       [
         "Kendime elbise diktirmek istiyorum, nasıl ilerliyor?",
@@ -242,7 +242,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "En hızlı ve uygun fiyatlı terzi hizmeti hangisi?",
-        "Fiyatlarımız yukarıda açıkça yayınlanır. Paça kısaltma, fermuar değişimi gibi küçük işler çoğunlukla aynı gün teslim edilir. En uygun ve en hızlı seçeneği görmek için işin fotoğrafını gönderip net fiyat ve süre almanızı öneririz."
+        "Başlangıç fiyatlarımız yukarıda yayınlanır. Paça kısaltma, fermuar değişimi gibi küçük işler normal şartlarda ertesi gün, acil olanlar 1–2 saatte teslim edilir. Fotoğrafı gönderip net fiyat ve süre almanızı öneririz."
       ],
       [
         "Bana yakın terzi nerede?",
@@ -369,14 +369,14 @@ export const FT: Record<FLang, FiyatText> = {
       },
       {
         "q": "I want to take in the waist of my dress",
-        "a": "Waist and size reduction, same day or usually within 1–2 days.",
+        "a": "Waist and size reduction, same day or the next day (urgent jobs 1–2 hours).",
         "price": "from ₺200",
         "href": "#fiyatlar",
         "cta": "Price list"
       },
       {
         "q": "I want to shorten my trousers",
-        "a": "Jeans and dress trousers, usually done the same day.",
+        "a": "Jeans and dress trousers, ready the next day.",
         "price": "from ₺200",
         "href": "/en/tailor-service-antalya",
         "cta": "Tailor service"
@@ -431,7 +431,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "My dress is torn. Can it be repaired?",
-        "Yes. Tears and open seams are repaired; the price depends on the damage. Send a photo of the damage on WhatsApp for an exact price and time. Most repairs are done the same day or usually within 1–2 days."
+        "Yes. Tears and open seams are repaired; the price depends on the damage. Send a photo of the damage on WhatsApp for an exact price and time. Most repairs are done the same day or the next day (urgent jobs 1–2 hours)."
       ],
       [
         "I want to take in the waist of my dress. How much does it cost?",
@@ -459,7 +459,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Which tailor is fastest and most affordable?",
-        "Our prices are published openly above. Small jobs like hemming and zipper replacement are mostly delivered the same day. To see the fastest and most affordable option for your job, send a photo and ask for the exact price and time."
+        "Our prices are published openly above. Small jobs like hemming and zipper replacement are delivered the next day (urgent jobs 1–2 hours). To see the fastest and most affordable option for your job, send a photo and ask for the exact price and time."
       ],
       [
         "Where is the nearest tailor?",
@@ -584,14 +584,14 @@ export const FT: Record<FLang, FiyatText> = {
       },
       {
         "q": "Ich möchte die Taille meines Kleides enger machen",
-        "a": "Taillen- und Größenanpassung, am selben Tag oder in der Regel innerhalb von 1–2 Tagen.",
+        "a": "Taillen- und Größenanpassung, am nächsten Tag, eilig in 1–2 Stunden.",
         "price": "ab ₺200",
         "href": "#fiyatlar",
         "cta": "Preisliste"
       },
       {
         "q": "Ich möchte meine Hose kürzen",
-        "a": "Jeans und Stoffhosen, meist am selben Tag fertig.",
+        "a": "Jeans und Stoffhosen, am nächsten Tag fertig (eilig in 1–2 Stunden).",
         "price": "ab ₺200",
         "href": "/de/schneiderservice-antalya",
         "cta": "Schneiderservice"
@@ -646,7 +646,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Mein Kleid ist gerissen. Kann man es reparieren?",
-        "Ja. Risse und geöffnete Nähte werden repariert; der Preis hängt vom Schaden ab. Senden Sie ein Foto des Schadens per WhatsApp, dann nennen wir Preis und Dauer. Die meisten Reparaturen sind am selben Tag oder innerhalb von in der Regel 1–2 Tagen fertig."
+        "Ja. Risse und geöffnete Nähte werden repariert; der Preis hängt vom Schaden ab. Senden Sie ein Foto des Schadens per WhatsApp, dann nennen wir Preis und Dauer. Die meisten Reparaturen sind am selben Tag oder am nächsten Tag fertig."
       ],
       [
         "Ich möchte die Taille meines Kleides enger machen. Was kostet das?",
@@ -654,7 +654,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Ich möchte meine Hose kürzen. Wie lange dauert das?",
-        "Kürzen beginnt ab ₺200; Jeans und Stoffhosen sind meist am selben Tag fertig."
+        "Kürzen beginnt ab ₺200; Jeans und Stoffhosen sind am nächsten Tag fertig (eilig in 1–2 Stunden)."
       ],
       [
         "Ich möchte mir ein Kleid schneidern lassen. Wie läuft das ab?",
@@ -674,7 +674,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Welcher Schneider ist am schnellsten und günstigsten?",
-        "Unsere Preise sind oben offen veröffentlicht. Kleine Arbeiten wie Kürzen und Reißverschluss wechseln sind meist am selben Tag fertig. Um die schnellste und günstigste Lösung für Ihre Arbeit zu sehen, senden Sie ein Foto und fragen Sie nach Preis und Dauer."
+        "Unsere Preise sind oben offen veröffentlicht. Kleine Arbeiten wie Kürzen und Reißverschluss wechseln sind am nächsten Tag fertig (eilig in 1–2 Stunden). Um die schnellste und günstigste Lösung für Ihre Arbeit zu sehen, senden Sie ein Foto und fragen Sie nach Preis und Dauer."
       ],
       [
         "Wo ist der nächste Schneider?",
@@ -799,14 +799,14 @@ export const FT: Record<FLang, FiyatText> = {
       },
       {
         "q": "Хочу ушить платье в талии",
-        "a": "Уменьшение по талии и размеру, в тот же день или обычно за 1–2 дня.",
+        "a": "Уменьшение по талии и размеру, на следующий день, срочно — за 1–2 часа.",
         "price": "от ₺200",
         "href": "#fiyatlar",
         "cta": "Прайс-лист"
       },
       {
         "q": "Хочу укоротить брюки",
-        "a": "Джинсы и классические брюки, чаще всего в тот же день.",
+        "a": "Джинсы и классические брюки, чаще всего на следующий день.",
         "price": "от ₺200",
         "href": "/ru/uslugi-portnogo-antalya",
         "cta": "Услуги портного"
@@ -861,7 +861,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "У меня порвалось платье. Можно ли его починить?",
-        "Да. Разрывы и распоротые швы чиним; цена зависит от повреждения. Пришлите фото повреждения в WhatsApp — назовём точную цену и срок. Большинство ремонтов делаем в тот же день или обычно за 1–2 дня."
+        "Да. Разрывы и распоротые швы чиним; цена зависит от повреждения. Пришлите фото повреждения в WhatsApp — назовём точную цену и срок. Большинство ремонтов делаем на следующий день, срочно — за 1–2 часа."
       ],
       [
         "Хочу ушить платье в талии. Сколько это стоит?",
@@ -869,7 +869,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Хочу укоротить брюки. Сколько времени это занимает?",
-        "Подшив — от ₺200; джинсы и классические брюки чаще всего готовы в тот же день."
+        "Подшив — от ₺200; джинсы и классические брюки чаще всего готовы на следующий день."
       ],
       [
         "Хочу платье на заказ. Как это происходит?",
@@ -889,7 +889,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Какой портной самый быстрый и недорогой?",
-        "Наши цены открыто указаны выше. Небольшие работы — подшив, замена молнии — чаще всего готовы в тот же день. Чтобы увидеть самый быстрый и выгодный вариант для вашей работы, пришлите фото и спросите точную цену и срок."
+        "Наши цены открыто указаны выше. Небольшие работы — подшив, замена молнии — чаще всего готовы на следующий день. Чтобы увидеть самый быстрый и выгодный вариант для вашей работы, пришлите фото и спросите точную цену и срок."
       ],
       [
         "Где ближайший портной?",

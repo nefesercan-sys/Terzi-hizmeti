@@ -127,9 +127,9 @@ const jsonLd = {
       '@type': 'FAQPage',
       '@id': `${PAGE_URL}#faq`,
       mainEntity: [
-        { '@type': 'Question', name: "Sarısu'ya ücretsiz servis var mı?", acceptedAnswer: { '@type': 'Answer', text: 'Evet, Sarısu mahallesine ücretsiz adrese servis veriyoruz. Kıyafetinizi adresinizden alıp aynı gün veya 1–2 gün içinde teslim ediyoruz.' } },
+        { '@type': 'Question', name: "Sarısu'ya ücretsiz servis var mı?", acceptedAnswer: { '@type': 'Answer', text: 'Evet, Sarısu mahallesine ücretsiz adrese servis veriyoruz. Kıyafetinizi adresinizden alıp normal işte ertesi gün, acil işte 1–2 saatte teslim ediyoruz.' } },
         { '@type': 'Question', name: 'Sarısu terzi fiyatları ne kadar 2026?', acceptedAnswer: { '@type': 'Answer', text: `Paça kısaltma ₺200'den, fermuar değişimi ₺300'den, bel daraltma ₺200'den, elbise dikimi ₺800'den, gelinlik/abiye tadilatı ₺800'den, ütü ₺80'den başlar. ☎ ${PHONE}` } },
-        { '@type': 'Question', name: 'Sarısu\'da aynı gün teslim mümkün mü?', acceptedAnswer: { '@type': 'Answer', text: 'Paça kısaltma, fermuar değişimi ve bel daraltma gibi standart işlemler genellikle aynı gün içinde tamamlanıp teslim edilir.' } },
+        { '@type': 'Question', name: 'Sarısu\'da acil tadilat ne kadar sürer?', acceptedAnswer: { '@type': 'Answer', text: 'Paça kısaltma, fermuar değişimi ve bel daraltma gibi standart işlemler ertesi gün, acil olanlar 1–2 saatte teslim edilir.' } },
         { '@type': 'Question', name: 'Gelinlik ve abiye tadilatı yapıyor musunuz?', acceptedAnswer: { '@type': 'Answer', text: `Evet, gelinlik ve abiye tadilatında uzmanız. ₺800'den başlar. ☎ ${PHONE}` } },
       ],
     },
@@ -233,7 +233,7 @@ export default function SarisuPage() {
             <div className="howto-list">
               <div className="howto-item">
                 <div className="howto-t">Paça Kısaltma & Bel Daraltma</div>
-                <div className="howto-d">Pantolon, kot, etek kısaltma; elbise, ceket ve pantolonda bel daraltma. ₺200'den, aynı gün teslim.</div>
+                <div className="howto-d">Pantolon, kot, etek kısaltma; elbise, ceket ve pantolonda bel daraltma. ₺200'den, ertesi gün teslim.</div>
               </div>
               <div className="howto-item">
                 <div className="howto-t">Fermuar Değişimi</div>
@@ -258,9 +258,9 @@ export default function SarisuPage() {
               <h2 className="sec-h ff" id="faq-h">Sarısu Terzi Hakkında Sık Sorulan Sorular</h2>
             </div>
             {[
-              ["Sarısu'ya ücretsiz servis var mı?", 'Evet, Sarısu mahallesine ücretsiz adrese servis veriyoruz. Kıyafetinizi adresinizden alıp aynı gün veya 1–2 gün içinde teslim ediyoruz.'],
+              ["Sarısu'ya ücretsiz servis var mı?", 'Evet, Sarısu mahallesine ücretsiz adrese servis veriyoruz. Kıyafetinizi adresinizden alıp normal işte ertesi gün, acil işte 1–2 saatte teslim ediyoruz.'],
               ['Sarısu terzi fiyatları ne kadar 2026?', 'Paça kısaltma ₺200\'den, fermuar değişimi ₺300\'den, bel daraltma ₺200\'den, elbise dikimi ₺800\'den, gelinlik/abiye tadilatı ₺800\'den, ütü ₺80\'den başlar.'],
-              ['Sarısu\'da aynı gün teslim mümkün mü?', 'Paça kısaltma, fermuar değişimi ve bel daraltma gibi standart işlemler genellikle aynı gün içinde tamamlanıp teslim edilir.'],
+              ['Sarısu\'da acil tadilat ne kadar sürer?', 'Paça kısaltma, fermuar değişimi ve bel daraltma gibi standart işlemler ertesi gün, acil olanlar 1–2 saatte teslim edilir.'],
               ['Gelinlik ve abiye tadilatı yapıyor musunuz?', 'Evet, gelinlik ve abiye tadilatında uzmanız. ₺800\'den başlar.'],
             ].map(([q, a]) => (
               <div key={q} className="faq-item">
@@ -273,7 +273,7 @@ export default function SarisuPage() {
 
         <section className="cta-final" aria-label="İletişime geç">
           <h2 className="cta-h ff">Sarısu'da Terziye mi İhtiyacınız Var?</h2>
-          <p className="cta-sub">Fotoğraf gönderin, adresinizden alalım, aynı gün teslim edelim.</p>
+          <p className="cta-sub">Fotoğraf gönderin, adresinizden alalım, ertesi gün teslim edelim.</p>
           <div className="cta-btns">
             <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-white">💬 WhatsApp'tan Yazın</a>
             <a href={MAPS} target="_blank" rel="noopener noreferrer" className="btn-outline-white">📍 Google Haritalar</a>

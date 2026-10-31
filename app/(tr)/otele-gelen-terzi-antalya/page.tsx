@@ -111,7 +111,7 @@ const jsonLd = {
       '@id': `${PAGE_URL}#faq`,
       mainEntity: [
         { '@type': 'Question', name: 'Otelin lobisine gelip ölçü alabiliyor musunuz?', acceptedAnswer: { '@type': 'Answer', text: 'Evet, Belek, Lara, Kundu ve Kemer bölgelerindeki otellerin lobisinde veya resepsiyonunda ölçü alımı yapıyoruz.' } },
-        { '@type': 'Question', name: 'Do you provide express alteration for tourists in hotels?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, we offer same-day or next-day express alteration services for hotel guests in Antalya, Belek, and Lara.' } },
+        { '@type': 'Question', name: 'Do you provide express alteration for tourists in hotels?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, we offer urgent (1–2 hours) and next-day alteration services for hotel guests in Antalya, Belek, and Lara.' } },
         { '@type': 'Question', name: 'Вы приезжаете в отели Белека и Кемера?', acceptedAnswer: { '@type': 'Answer', text: 'Да, мы предоставляем услуги портного с выездом в отели Белека, Кемера, Лары и Кунду. Экспресс-доставка.' } },
       ],
     }
@@ -360,7 +360,7 @@ export default function MobileTailorHotelPage() {
               </details>
               <details className="faq-item">
                 <summary className="faq-q">Kıyafetlerimi ne zaman teslim edersiniz? (Express service?)</summary>
-                <p className="faq-a">Paça kısaltma, yırtık onarımı gibi basit tadilatlar için ekspres servis (aynı gün) seçeneğimiz vardır. İhtiyacınıza göre WhatsApp'tan süre teyidi alabilirsiniz.</p>
+                <p className="faq-a">Paça kısaltma, yırtık onarımı gibi basit tadilatlar için acil servis (1–2 saat) seçeneğimiz vardır. İhtiyacınıza göre WhatsApp'tan süre teyidi alabilirsiniz.</p>
               </details>
               <details className="faq-item">
                 <summary className="faq-q">Sadece tadilat mı yoksa sıfırdan ölçüye göre dikim yapıyor musunuz?</summary>

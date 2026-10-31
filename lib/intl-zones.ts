@@ -8,6 +8,7 @@
 import { OTEL_BOLGELERI } from '@/lib/otel-bolgeleri';
 import { ILANGS, type ILang } from '@/lib/intl';
 
+import { DELIVERY } from '@/lib/delivery';
 export const ZONE_SLUGS = ['belek', 'lara', 'guzeloba', 'side', 'kemer', 'konyaalti', 'kundu', 'muratpasa'] as const;
 export type ZoneSlug = (typeof ZONE_SLUGS)[number];
 export const isZone = (s: string): s is ZoneSlug => (ZONE_SLUGS as readonly string[]).includes(s);
@@ -114,7 +115,7 @@ export const ZCOPY: Record<ILang, ZCopy> = {
     faqTitle: 'Preguntas frecuentes',
     faq: (z, home) => [
       [`¿Atienden hoteles en ${z}?`, home ? `Sí. El taller está en Konyaaltı y la recogida en hoteles de la zona es gratuita.` : `Sí, atendemos hoteles en ${z}. Indíquenos el nombre del hotel por WhatsApp y confirmamos las condiciones.`],
-      ['¿Cuánto tarda un arreglo?', 'Los arreglos sencillos suelen estar listos en un día y las urgencias con frecuencia en 2–4 horas; el plazo exacto se confirma por WhatsApp.'],
+      ['¿Cuánto tarda un arreglo?', `${DELIVERY.es.urgent} ${DELIVERY.es.normal}`],
       ['¿Cómo conozco el precio?', 'Envíe por WhatsApp una foto de la prenda y del problema; normalmente indicamos precio y plazo desde la foto.'],
     ],
     back: '← Sastre en Antalya para turistas', zonesLabel: 'Otras zonas hoteleras', wa: (z) => `Hola, estoy alojado en ${z} y necesito un arreglo de ropa. Le envío una foto.`, cta: 'Escribir por WhatsApp',
@@ -129,7 +130,7 @@ export const ZCOPY: Record<ILang, ZCopy> = {
     faqTitle: 'Questions fréquentes',
     faq: (z, home) => [
       [`Desservez-vous les hôtels à ${z} ?`, home ? 'Oui. L\'atelier est à Konyaaltı et la collecte dans les hôtels du secteur est gratuite.' : `Oui, nous desservons les hôtels à ${z}. Indiquez-nous le nom de l'hôtel sur WhatsApp et nous confirmons les conditions.`],
-      ['Combien de temps dure une retouche ?', 'Les retouches simples sont souvent prêtes en un jour et les urgences souvent en 2 à 4 heures ; le délai exact est confirmé sur WhatsApp.'],
+      ['Combien de temps dure une retouche ?', `${DELIVERY.fr.urgent} ${DELIVERY.fr.normal}`],
       ['Comment connaître le prix ?', 'Envoyez sur WhatsApp une photo du vêtement et du problème ; nous indiquons en général prix et délai d\'après la photo.'],
     ],
     back: '← Tailleur à Antalya pour touristes', zonesLabel: 'Autres zones hôtelières', wa: (z) => `Bonjour, je séjourne à ${z} et j'ai besoin d'une retouche. Je vous envoie une photo.`, cta: 'Écrire sur WhatsApp',
@@ -144,7 +145,7 @@ export const ZCOPY: Record<ILang, ZCopy> = {
     faqTitle: 'Najczęstsze pytania',
     faq: (z, home) => [
       [`Czy obsługujecie hotele w ${z}?`, home ? 'Tak. Pracownia jest w Konyaaltı, a odbiór z hoteli w tej okolicy jest bezpłatny.' : `Tak, obsługujemy hotele w ${z}. Podaj nazwę hotelu na WhatsAppie, a potwierdzimy warunki.`],
-      ['Ile trwa przeróbka?', 'Proste przeróbki są zwykle gotowe w jeden dzień, pilne często w 2–4 godziny; dokładny termin potwierdzamy na WhatsAppie.'],
+      ['Ile trwa przeróbka?', `${DELIVERY.pl.urgent} ${DELIVERY.pl.normal}`],
       ['Jak poznać cenę?', 'Wyślij na WhatsAppie zdjęcie ubrania i problemu; zwykle podajemy cenę i termin na podstawie zdjęcia.'],
     ],
     back: '← Krawiec w Antalyi dla turystów', zonesLabel: 'Inne rejony hotelowe', wa: (z) => `Dzień dobry, mieszkam w ${z} i potrzebuję przeróbki ubrania. Wysyłam zdjęcie.`, cta: 'Napisz na WhatsAppie',
@@ -159,7 +160,7 @@ export const ZCOPY: Record<ILang, ZCopy> = {
     faqTitle: 'Часті запитання',
     faq: (z, home) => [
       [`Чи обслуговуєте ви готелі в районі ${z}?`, home ? 'Так. Ательє у Коньяалти, а забір із готелів району безкоштовний.' : `Так, ми обслуговуємо готелі в районі ${z}. Вкажіть назву готелю у WhatsApp, і ми підтвердимо умови.`],
-      ['Скільки триває підгонка?', 'Прості роботи зазвичай готові за день, термінові часто за 2–4 години; точний строк підтверджуємо у WhatsApp.'],
+      ['Скільки триває підгонка?', `${DELIVERY.uk.urgent} ${DELIVERY.uk.normal}`],
       ['Як дізнатися ціну?', 'Надішліть у WhatsApp фото речі та проблеми; зазвичай ми називаємо ціну та строк за фото.'],
     ],
     back: '← Кравець в Анталії для туристів', zonesLabel: 'Інші готельні зони', wa: (z) => `Добрий день, я зупинився в районі ${z} і потребую підгонки одягу. Надсилаю фото.`, cta: 'Написати у WhatsApp',
@@ -174,7 +175,7 @@ export const ZCOPY: Record<ILang, ZCopy> = {
     faqTitle: 'Veelgestelde vragen',
     faq: (z, home) => [
       [`Bedienen jullie hotels in ${z}?`, home ? 'Ja. Het atelier ligt in Konyaaltı en ophalen bij hotels in de buurt is gratis.' : `Ja, wij bedienen hotels in ${z}. Geef de hotelnaam door via WhatsApp en wij bevestigen de voorwaarden.`],
-      ['Hoe lang duurt een aanpassing?', 'Eenvoudige klussen zijn meestal binnen een dag klaar en spoedklussen vaak binnen 2–4 uur; de exacte termijn bevestigen wij via WhatsApp.'],
+      ['Hoe lang duurt een aanpassing?', `${DELIVERY.nl.urgent} ${DELIVERY.nl.normal}`],
       ['Hoe weet ik de prijs?', 'Stuur via WhatsApp een foto van het kledingstuk en het probleem; meestal noemen wij prijs en termijn aan de hand van de foto.'],
     ],
     back: '← Kleermaker in Antalya voor toeristen', zonesLabel: 'Andere hotelgebieden', wa: (z) => `Hallo, ik verblijf in ${z} en heb een kledingaanpassing nodig. Ik stuur een foto.`, cta: 'Stuur een WhatsApp-bericht',
@@ -189,7 +190,7 @@ export const ZCOPY: Record<ILang, ZCopy> = {
     faqTitle: 'الأسئلة الشائعة',
     faq: (z, home) => [
       [`هل تخدمون فنادق ${z}؟`, home ? 'نعم. الورشة في كونيالتي والاستلام من فنادق المنطقة مجاني.' : `نعم، نخدم فنادق ${z}. أرسل اسم الفندق عبر واتساب ونؤكد لك الشروط.`],
-      ['كم يستغرق التعديل؟', 'التعديلات البسيطة تكون جاهزة عادةً خلال يوم والعاجلة غالباً خلال 2–4 ساعات، ويُؤكَّد الموعد الدقيق عبر واتساب.'],
+      ['كم يستغرق التعديل؟', `${DELIVERY.ar.urgent} ${DELIVERY.ar.normal}`],
       ['كيف أعرف السعر؟', 'أرسل عبر واتساب صورة للقطعة وللمشكلة؛ نحدد السعر والموعد عادةً من الصورة.'],
     ],
     back: '← خيّاط في أنطاليا للسياح', zonesLabel: 'مناطق فندقية أخرى', wa: (z) => `مرحباً، أقيم في ${z} وأحتاج إلى تعديل ملابس. أرسل لكم صورة.`, cta: 'راسلنا على واتساب',

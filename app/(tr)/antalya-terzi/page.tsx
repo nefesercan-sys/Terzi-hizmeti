@@ -152,7 +152,7 @@ const jsonLd = {
         { '@type': 'Question', name: 'Hurma, Sarısu, Liman, Uncalı, Altınkum, Öğretmenevleri, Siteler, Arapsuyu ve Gürsu\'ya terzi servisi var mı?', acceptedAnswer: { '@type': 'Answer', text: `Evet, atölyemiz bu mahallelere en yakın konumda. Hurma, Sarısu, Liman, Uncalı, Altınkum, Öğretmenevleri, Siteler, Arapsuyu ve Gürsu'ya ücretsiz adrese gelen servis sağlıyoruz. ☎ ${PHONE}` } },
         { '@type': 'Question', name: 'Bay, bayan ve çocuk kıyafeti dikimi yapıyor musunuz?', acceptedAnswer: { '@type': 'Answer', text: 'Evet, erkek, kadın ve çocuk kıyafetlerinin tamamında özel ölçü dikim hizmeti veriyoruz.' } },
         { '@type': 'Question', name: 'Üniforma üretimi ve toplu sipariş alıyor musunuz?', acceptedAnswer: { '@type': 'Answer', text: 'Evet, otel, restoran, okul, güvenlik ve sağlık sektörü için üniforma tasarımı ve toplu üretimi yapıyoruz.' } },
-        { '@type': 'Question', name: 'Fason imalat için minimum sipariş adedi var mı?', acceptedAnswer: { '@type': 'Answer', text: "Adet projeye göre belirlenir; numune, az adetli ve yüksek adetli fason imalat siparişleri proje bazında fiyatlandırılır. WhatsApp'tan detaylı bilgi alabilirsiniz." } },
+        { '@type': 'Question', name: 'Fason imalat için minimum sipariş adedi var mı?', acceptedAnswer: { '@type': 'Answer', text: "Adet projeye göre belirlenir; numune, az adetli ve yüksek adetli fason imalat siparişleri proje bazında fiyatlandırılır. WhatsApp\'tan detaylı bilgi alabilirsiniz." } },
       ],
     },
   ],
@@ -167,7 +167,7 @@ interface Neighborhood {
 
 const NEIGHBORHOODS: Neighborhood[] = [
   { name: 'Hurma', tag: 'Öncelikli', note: 'Atölyeye en yakın — ücretsiz adrese servis', priority: true },
-  { name: 'Liman', tag: 'Öncelikli', note: 'Ücretsiz adrese servis, aynı gün randevu', priority: true },
+  { name: 'Liman', tag: 'Öncelikli', note: 'Otellere ücretsiz servis, WhatsApp\'tan randevu', priority: true },
   { name: 'Sarısu', tag: 'Öncelikli', note: 'Ücretsiz adrese servis', priority: true },
   { name: 'Uncalı', tag: 'Yakın', note: 'Ücretsiz adrese servis', priority: false },
   { name: 'Gürsu', tag: 'Yakın', note: 'Ücretsiz adrese servis', priority: false },
@@ -293,7 +293,7 @@ const FAQS: [string, string][] = [
 ];
 
 const PROCESS_STEPS: [string, string, string][] = [
-  ['01', 'Mahallenizi Belirtin', "WhatsApp'tan bulunduğunuz mahalleyi ve ihtiyacınızı yazın."],
+  ['01', 'Mahallenizi Belirtin', "WhatsApp\'tan bulunduğunuz mahalleyi ve ihtiyacınızı yazın."],
   ['02', 'Ölçü & Tasarım', 'Adresinizde ölçü alınır veya atölyede tasarım detayları belirlenir.'],
   ['03', 'Dikim / Üretim', 'Tekli dikim ya da toplu üniforma/fason üretimi atölyede tamamlanır.'],
   ['04', 'Teslimat', 'Yakın mahallelerde ücretsiz, diğer bölgelere mesafeye göre randevulu teslim.'],
@@ -500,14 +500,14 @@ export default function KonyaaltiTailorServicePage() {
                   <div className="wk-icon" aria-hidden="true">🔧</div>
                   <h3 className="wk-tr">Fermuar Tamiri Konyaaltı</h3>
                   <span className="wk-en">Zipper Repair</span>
-                  <p className="wk-desc">Pantolon, mont, ceket, çanta fermuarı — aynı gün teslim, ₺300&apos;den.</p>
+                  <p className="wk-desc">Pantolon, mont, ceket, çanta fermuarı — ertesi gün teslim (acil 1–2 saat), ₺300&apos;den.</p>
                   <span style={{ fontSize: '.76rem', color: '#C9A96E', fontWeight: 700 }}>Fiyatları Gör <span aria-hidden="true">→</span></span>
                 </a>
                 <a href="/konyaalti-paca-kisaltma" className="wk-card" style={{ display: 'block' }}>
                   <div className="wk-icon" aria-hidden="true">📏</div>
                   <h3 className="wk-tr">Paça Kısaltma Konyaaltı</h3>
                   <span className="wk-en">Hemming</span>
-                  <p className="wk-desc">Pantolon, kot, etek kısaltma — aynı gün teslim, ₺200&apos;den.</p>
+                  <p className="wk-desc">Pantolon, kot, etek kısaltma — ertesi gün teslim (acil 1–2 saat), ₺200&apos;den.</p>
                   <span style={{ fontSize: '.76rem', color: '#C9A96E', fontWeight: 700 }}>Fiyatları Gör <span aria-hidden="true">→</span></span>
                 </a>
                 <a href="/antalya-gelinlik-tadilati" className="wk-card" style={{ display: 'block' }}>

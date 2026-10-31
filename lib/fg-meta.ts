@@ -42,9 +42,9 @@ const FG_DISTRICT: Record<string, Row> = {
     de: { t: "Arapsuyu: Herren- und Damenkleidung ändern | Terzi Can", d: "Änderungen für Herren und Damen in Arapsuyu: Jeans kürzen, Hose enger machen, Kleid reparieren, Nähte schließen. Abholung gratis. ☎ +90 531 898 64 18", kw: ["Schneider Arapsuyu", "Jeans kürzen Arapsuyu", "Kleidung reparieren Arapsuyu"] },
   },
   "toros": {
-    en: { t: "Toros Tailor Near Me: Same-Day Trouser Hemming | Terzi Can", d: "Looking for a tailor near Toros? Trouser, skirt and jeans hemming from ₺200, usually ready the same day. Pick-up arranged on WhatsApp. ☎ +90 531 898 64 18", kw: ["tailor near me Toros", "trouser hemming near me", "same day hemming Antalya", "tailor open now Antalya"] },
-    ru: { t: "Портной рядом, Торос: подшив брюк в тот же день | Terzi Can", d: "Портной рядом в районе Торос. Подшив брюк, юбок и джинсов от ₺200, обычно в тот же день. Ежедневно 08:00–23:00, WhatsApp. ☎ +90 531 898 64 18", kw: ["портной рядом Торос", "подшить брюки рядом", "подшив в тот же день Анталья"] },
-    de: { t: "Toros: Schneider in der Nähe, Hose am selben Tag | Terzi Can", d: "Schneider in der Nähe von Toros: Hosen, Röcke und Jeans kürzen ab ₺200, meist am selben Tag. Abholung per WhatsApp. ☎ +90 531 898 64 18", kw: ["Schneider in der Nähe Toros", "Hose kürzen in der Nähe", "Hose kürzen am selben Tag Antalya"] },
+    en: { t: "Toros Tailor Near Me: Same-Day Trouser Hemming | Terzi Can", d: "Looking for a tailor near Toros? Trouser, skirt and jeans hemming from ₺200, ready the next day. Pick-up arranged on WhatsApp. ☎ +90 531 898 64 18", kw: ["tailor near me Toros", "trouser hemming near me", "same day hemming Antalya", "tailor open now Antalya"] },
+    ru: { t: "Портной рядом, Торос: подшив брюк на следующий день | Terzi Can", d: "Портной рядом в районе Торос. Подшив брюк, юбок и джинсов от ₺200, обычно на следующий день. Ежедневно 08:00–23:00, WhatsApp. ☎ +90 531 898 64 18", kw: ["портной рядом Торос", "подшить брюки рядом", "подшив на следующий день Анталья"] },
+    de: { t: "Toros: Schneider in der Nähe, Hose am selben Tag | Terzi Can", d: "Schneider in der Nähe von Toros: Hosen, Röcke und Jeans kürzen ab ₺200, am nächsten Tag. Abholung per WhatsApp. ☎ +90 531 898 64 18", kw: ["Schneider in der Nähe Toros", "Hose kürzen in der Nähe", "Hose kürzen am selben Tag Antalya"] },
   },
   "ogretmenevleri": {
     en: { t: "Öğretmenevleri Tailor: Coat, Leather, Zipper Fix | Terzi Can", d: "Coat, jacket and leather jacket alterations in Öğretmenevleri: shorten, take in, replace zippers from ₺300. Pick-up arranged on WhatsApp. ☎ +90 531 898 64 18", kw: ["tailor Öğretmenevleri", "coat alteration Antalya", "leather jacket repair Antalya", "zipper replacement Öğretmenevleri"] },
@@ -130,9 +130,9 @@ const FG_DISTRICT: Record<string, Row> = {
 
 const FG_SERVICE: Record<string, Row> = {
   "paca": {
-    en: { t: "Trouser & Skirt Hemming Antalya from ₺200 | Terzi Can", d: "Trouser, skirt and jeans hemming in Antalya from ₺200, usually the same day. Length marked on you, clean stitching. ☎ +90 531 898 64 18", kw: ["skirt hemming", "trouser hemming Antalya", "shorten trousers", "hem pants near me"] },
-    ru: { t: "Подшив брюк и юбок в Анталье от ₺200 | Terzi Can", d: "Подшив брюк, юбок и джинсов в Анталье от ₺200, обычно в тот же день. Длину отмечаем на вас, аккуратный шов. ☎ +90 531 898 64 18", kw: ["подшить юбку", "подшив брюк Анталья", "укоротить брюки"] },
-    de: { t: "Hosen & Röcke kürzen in Antalya ab ₺200 | Terzi Can", d: "Hosen, Röcke und Jeans kürzen in Antalya ab ₺200, meist am selben Tag. Länge am Körper abgesteckt, saubere Naht. ☎ +90 531 898 64 18", kw: ["Rock kürzen", "Hose kürzen Antalya", "Hosensaum kürzen"] },
+    en: { t: "Trouser & Skirt Hemming Antalya from ₺200 | Terzi Can", d: "Trouser, skirt and jeans hemming in Antalya from ₺200, ready the next day. Length marked on you, clean stitching. ☎ +90 531 898 64 18", kw: ["skirt hemming", "trouser hemming Antalya", "shorten trousers", "hem pants near me"] },
+    ru: { t: "Подшив брюк и юбок в Анталье от ₺200 | Terzi Can", d: "Подшив брюк, юбок и джинсов в Анталье от ₺200, обычно на следующий день. Длину отмечаем на вас, аккуратный шов. ☎ +90 531 898 64 18", kw: ["подшить юбку", "подшив брюк Анталья", "укоротить брюки"] },
+    de: { t: "Hosen & Röcke kürzen in Antalya ab ₺200 | Terzi Can", d: "Hosen, Röcke und Jeans kürzen in Antalya ab ₺200, am nächsten Tag. Länge am Körper abgesteckt, saubere Naht. ☎ +90 531 898 64 18", kw: ["Rock kürzen", "Hose kürzen Antalya", "Hosensaum kürzen"] },
   },
   "kot": {
     en: { t: "Jeans Hemming & Taking In Antalya from ₺200 | Terzi Can", d: "Jeans hemming and taking in from ₺200 in Antalya. Machines and thread made for heavy denim, length and leg width set to your measurements. ☎ +90 531 898 64 18", kw: ["jeans hemming", "taper jeans tailor", "take in jeans waist Antalya"] },
@@ -140,13 +140,13 @@ const FG_SERVICE: Record<string, Row> = {
     de: { t: "Jeans kürzen & enger machen Antalya ab ₺200 | Terzi Can", d: "Jeans kürzen und enger machen ab ₺200 in Antalya. Maschinen und Garn für dicken Denim, Länge und Beinweite nach Ihren Maßen. ☎ +90 531 898 64 18", kw: ["Jeans kürzen", "Jeans enger machen", "Jeans Bund enger Antalya"] },
   },
   "bel": {
-    en: { t: "Take In Waist: Trousers, Skirts, Dresses Antalya | Terzi Can", d: "Clothes too big? We take in the waist of trousers, skirts, dresses and jackets in Antalya, set at a fitting. Often ready the same day. ☎ +90 531 898 64 18", kw: ["waist alteration", "take in trousers waist", "clothes too big alteration", "skirt waist alteration"] },
-    ru: { t: "Ушить в талии: брюки, юбка, платье, Анталья | Terzi Can", d: "Одежда велика? Ушиваем талию брюк, юбок, платьев и пиджаков в Анталье, посадка определяется на примерке. Часто в тот же день. ☎ +90 531 898 64 18", kw: ["ушить в талии", "ушить брюки", "ушить платье", "уменьшить размер одежды"] },
-    de: { t: "Taille enger machen: Hose, Rock, Kleid Antalya | Terzi Can", d: "Kleidung zu groß? Wir machen die Taille von Hosen, Röcken, Kleidern und Sakkos enger, abgestimmt bei der Anprobe. Oft am selben Tag. ☎ +90 531 898 64 18", kw: ["Taille enger machen", "Hose enger machen", "Kleid enger machen", "Kleidung zu groß ändern"] },
+    en: { t: "Take In Waist: Trousers, Skirts, Dresses Antalya | Terzi Can", d: "Clothes too big? We take in the waist of trousers, skirts, dresses and jackets in Antalya, set at a fitting. Ready the next day. ☎ +90 531 898 64 18", kw: ["waist alteration", "take in trousers waist", "clothes too big alteration", "skirt waist alteration"] },
+    ru: { t: "Ушить в талии: брюки, юбка, платье, Анталья | Terzi Can", d: "Одежда велика? Ушиваем талию брюк, юбок, платьев и пиджаков в Анталье, посадка определяется на примерке. Часто на следующий день. ☎ +90 531 898 64 18", kw: ["ушить в талии", "ушить брюки", "ушить платье", "уменьшить размер одежды"] },
+    de: { t: "Taille enger machen: Hose, Rock, Kleid Antalya | Terzi Can", d: "Kleidung zu groß? Wir machen die Taille von Hosen, Röcken, Kleidern und Sakkos enger, abgestimmt bei der Anprobe. am nächsten Tag. ☎ +90 531 898 64 18", kw: ["Taille enger machen", "Hose enger machen", "Kleid enger machen", "Kleidung zu groß ändern"] },
   },
   "fermuar": {
     en: { t: "Zipper Repair & Replacement Antalya from ₺300 | Terzi Can", d: "Zipper replacement and repair from ₺300 in Antalya: trousers, jackets, coats, dresses and bags. ☎ +90 531 898 64 18", kw: ["zipper repair", "zipper replacement Antalya", "jacket zipper replacement", "bag zipper repair"] },
-    ru: { t: "Замена и ремонт молнии в Анталье от ₺300 | Terzi Can", d: "Замена и ремонт молнии в Анталье от ₺300: брюки, куртки, пальто, платья и сумки. Подбираем по ткани и цвету, часто в тот же день. ☎ +90 531 898 64 18", kw: ["замена молнии", "ремонт молнии Анталья", "заменить молнию на куртке"] },
+    ru: { t: "Замена и ремонт молнии в Анталье от ₺300 | Terzi Can", d: "Замена и ремонт молнии в Анталье от ₺300: брюки, куртки, пальто, платья и сумки. Подбираем по ткани и цвету, на следующий день. ☎ +90 531 898 64 18", kw: ["замена молнии", "ремонт молнии Анталья", "заменить молнию на куртке"] },
     de: { t: "Reißverschluss wechseln & reparieren ab ₺300 | Terzi Can", d: "Reißverschluss wechseln und reparieren ab ₺300 in Antalya: Hosen, Jacken, Mäntel, Kleider und Taschen. ☎ +90 531 898 64 18", kw: ["Reißverschluss wechseln", "Reißverschluss reparieren Antalya", "Reißverschluss Jacke wechseln"] },
   },
   "elbise-dikim": {

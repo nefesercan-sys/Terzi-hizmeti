@@ -166,7 +166,7 @@ export default function OtelBolgeleriRuHub() {
             </div>
             <div className="howto-list">
               <div className="howto-item"><div className="howto-t">1. Напишите нам</div><div className="howto-d">Укажите название отеля, номер комнаты и запрос в WhatsApp.</div></div>
-              <div className="howto-item"><div className="howto-t">2. Согласуем время</div><div className="howto-d">Мы подтвердим удобное время, обычно в тот же день.</div></div>
+              <div className="howto-item"><div className="howto-t">2. Согласуем время</div><div className="howto-d">Мы подтвердим удобное время, обычно на следующий день.</div></div>
               <div className="howto-item"><div className="howto-t">3. Сервис на месте</div><div className="howto-d">Наш портной приедет к вам, снимет мерки или заберёт вещь.</div></div>
               <div className="howto-item"><div className="howto-t">4. Доставка в отель</div><div className="howto-d">Готовая вещь возвращается обычно в течение 1–2 дней.</div></div>
             </div>

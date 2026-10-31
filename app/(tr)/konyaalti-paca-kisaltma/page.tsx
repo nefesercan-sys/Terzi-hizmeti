@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import ReviewsBlock from '@/components/ReviewsBlock';
+import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
 import { businessNode } from '@/lib/business';
 import { fitDesc } from '@/lib/meta-fit';
 
@@ -218,6 +219,8 @@ export default function PacaKisaltmaPage() {
         </section>
 
         {/* FAQ */}
+        <OrnekGorselSeridi lang="tr" anahtarlar={['yun-pantolon-metre', 'keten-pantolon-katli', 'pilili-etek']} sayfaUrl="https://terzihizmeti.com.tr/konyaalti-paca-kisaltma" />
+
         <section className="sec" id="faq" aria-labelledby="faq-h">
           <div className="ctr" style={{ maxWidth: 720 }}>
             <div className="sec-head">

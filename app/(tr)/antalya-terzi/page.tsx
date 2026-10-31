@@ -3,6 +3,7 @@ import { INTL_ALT } from '@/lib/intl';
 import { DELIVERY } from '@/lib/delivery';
 import FabricsOrderBlock from '@/components/FabricsOrderBlock';
 import ReviewsBlock from '@/components/ReviewsBlock';
+import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
 import { businessNode } from '@/lib/business';
 import Image from 'next/image';
 
@@ -465,6 +466,8 @@ export default function KonyaaltiTailorServicePage() {
               </div>
             </div>
           </section>
+
+          <OrnekGorselSeridi lang="tr" anahtarlar={['erkek-takim-olcu', 'erkek-palto-atolye', 'palto-yaka-detay', 'pilili-etek', 'beyaz-gomlek-katli', 'yun-pantolon-metre']} sayfaUrl="https://terzihizmeti.com.tr/antalya-terzi" />
 
           <section className="sec" style={{ background: 'rgba(0,0,0,.12)' }} id="faq" aria-labelledby="faq-h">
             <div className="ctr" style={{ maxWidth: 740 }}>

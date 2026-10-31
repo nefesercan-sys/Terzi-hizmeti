@@ -235,6 +235,10 @@ const T: Record<Lang, any> = {
 
 export const KETEN_PAMUK_T = T;
 
+import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
+
+const KETEN_URL: Record<string, string> = { tr: '/keten-pamuk-ozel-dikim', en: '/en/linen-cotton-tailoring', de: '/de/leinen-baumwolle-schneiderei', ru: '/ru/poshiv-lyon-hlopok' };
+
 export default function KetenPamukOzelDikim({ lang = 'tr' }: { lang?: Lang }) {
   const t = T[lang] || T['tr'];
   const waMsg = lang === 'ru' ? 'Здравствуйте, хочу заказать пошив из льна/хлопка. Модель: '
@@ -291,6 +295,8 @@ export default function KetenPamukOzelDikim({ lang = 'tr' }: { lang?: Lang }) {
           </div>
         </div>
       </section>
+
+      <OrnekGorselSeridi lang={lang as 'tr' | 'en' | 'de' | 'ru'} tema="acik" anahtarlar={['keten-kadin-evde', 'keten-blazer-atolye', 'keten-erkek-gomlek', 'keten-pantolon-katli']} sayfaUrl={`https://terzihizmeti.com.tr${KETEN_URL[lang] || KETEN_URL.tr}`} />
 
       <section style={{ background: '#F2EDE4', padding: '3.5rem 1.5rem' }}>
         <div style={{ maxWidth: 1000, margin: '0 auto' }}>

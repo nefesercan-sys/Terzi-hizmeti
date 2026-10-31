@@ -27,6 +27,9 @@ export const PROMO_FOTOLAR: { src: string; idx: number }[] = [
   { src: '/gorseller/bez-canta-atolye.webp', idx: 0 }, // Bez çanta
   { src: '/gorseller/hazir-giyim-atolye.webp', idx: 1 }, // Tişört
   { src: '/gorseller/uniforma.webp', idx: 7 }, // Uniforma
+  { src: '/gorseller/polar-yelek.webp', idx: 2 }, // Polar yelek
+  { src: '/gorseller/yun-pantolon-metre.webp', idx: 4 }, // Pantolon
+  { src: '/gorseller/sef-mutfak-uniforma.webp', idx: 6 }, // Önlük
 ];
 export const ORNEK_GORSEL: Record<PLang, string> = {
   tr: 'örnek görsel', en: 'illustrative image', de: 'Beispielbild', ru: 'пример изображения', es: 'imagen ilustrativa',

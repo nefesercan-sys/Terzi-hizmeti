@@ -1,5 +1,6 @@
 // terzihizmeti.com.tr — Otel bölgesi derinlik sayfası (ES/FR/PL/UK/NL/AR). Veri: lib/intl-zones.ts. Sunucu bileşeni, stil inline.
 import Link from 'next/link';
+import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
 import { PHONE, PHONE_TEL, MAPS, SITE } from '@/lib/seo-data';
 import { businessNode, OG_DEFAULT, waLink, TURIST_UPDATE } from '@/lib/turist-keten';
 import { INTL, iUrl, type ILang } from '@/lib/intl';
@@ -75,6 +76,8 @@ export default function ZoneLanding({ lang, zone }: { lang: ILang; zone: ZoneSlu
             </div>
           ))}
         </section>
+
+        <OrnekGorselSeridi lang={lang} tema="acik" anahtarlar={['eve-gelen-terzi', 'erkek-takim-olcu', 'beyaz-gomlek-katli', 'yun-pantolon-metre']} sayfaUrl={`${SITE}${zoneUrl(lang, zone)}`} />
 
         <section style={{ background: C.sand, borderRadius: 8, padding: '1.3rem' }}>
           <p style={{ margin: '0 0 1rem' }}>

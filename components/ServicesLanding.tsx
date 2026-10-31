@@ -1,5 +1,6 @@
 // terzihizmeti.com.tr — "Hizmetler ve kumaşlar" sayfası (ES/FR/PL/UK/NL/AR). Veri: lib/intl-services.ts. Sunucu bileşeni, stil inline.
 import Link from 'next/link';
+import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
 import { PHONE, PHONE_TEL, MAPS, SITE } from '@/lib/seo-data';
 import { businessNode, OG_DEFAULT, waLink, TURIST_UPDATE } from '@/lib/turist-keten';
 import { INTL, iUrl, type ILang } from '@/lib/intl';
@@ -79,6 +80,8 @@ export default function ServicesLanding({ lang }: { lang: ILang }) {
             </div>
           ))}
         </section>
+
+        <OrnekGorselSeridi lang={lang} tema="acik" anahtarlar={['erkek-takim-olcu', 'abiye-elbise-atolye', 'yun-pantolon-metre', 'beyaz-gomlek-katli', 'palto-yaka-detay', 'pilili-etek']} sayfaUrl={`${SITE}${svcUrl(lang)}`} />
 
         <section style={{ background: C.sand, borderRadius: 8, padding: '1.3rem' }}>
           <p style={{ margin: '0 0 1rem' }}>

@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import { INTL_ALT } from '@/lib/intl';
+import { DELIVERY } from '@/lib/delivery';
 import FabricsOrderBlock from '@/components/FabricsOrderBlock';
 import ReviewsBlock from '@/components/ReviewsBlock';
-import { reviewSchema } from '@/lib/reviews';
+import { businessNode } from '@/lib/business';
 import Image from 'next/image';
 import { Inter, Syne } from 'next/font/google';
 
@@ -77,52 +78,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
-    {
-      '@type': ['LocalBusiness', 'ClothingStore'],
-      ...reviewSchema(),
-      additionalType: ['https://schema.org/SewingService', 'https://schema.org/DryCleaningService'],
-      '@id': `${SITE}#business`,
-      name: 'Terzi Can',
-      alternateName: [
-        'Terzi Can Antalya', 'Konyaaltı Terzi', 'Tailor Can Antalya',
-        'Портной Кан Анталья', 'Schneider Can Antalya', 'Terzi Hizmeti Antalya', 'Dikiş Atölyesi Antalya',
-      ],
-      description: "Antalya Konyaaltı'da 2006'dan bu yana hizmet veren profesyonel terzi atölyesi. Paça kısaltma, fermuar değişimi, bel daraltma, özel dikim, gelinlik tadilatı, tekstil imalatı ve kuru temizleme. Hurma, Liman, Sarısu, Gürsu, Uncalı bölgelerine hizmet.",
-      url: SITE,
-      telephone: PHONE_TEL,
-      priceRange: '₺₺',
-      currenciesAccepted: 'TRY, EUR, USD, RUB',
-      paymentAccepted: 'Cash, Credit Card',
-      image: `${SITE}/terzi-can-hero.jpg`,
-      logo: `${SITE}/terzi-can-hero.jpg`,
-      hasMap: MAPS,
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: 'Hurma Mahallesi',
-        addressLocality: 'Konyaaltı',
-        addressRegion: 'Antalya',
-        postalCode: '07130',
-        addressCountry: 'TR',
-      },
-      geo: { '@type': 'GeoCoordinates', latitude: 36.857466, longitude: 30.596987 },
-      openingHoursSpecification: [{
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-        opens: '08:00', closes: '23:00',
-      }],
-      areaServed: [
-        'Liman, Konyaaltı', 'Hurma, Konyaaltı', 'Sarısu, Konyaaltı', 'Gürsu, Konyaaltı', 'Uncalı, Konyaaltı',
-        'Konyaaltı', 'Muratpaşa', 'Kepez', 'Antalya', 'Lara', 'Belek', 'Kemer', ].map((n) => ({ '@type': 'Place', name: n })),
-      contactPoint: [{
-        '@type': 'ContactPoint',
-        telephone: PHONE_TEL,
-        contactType: 'customer service',
-        areaServed: 'TR',
-        availableLanguage: ['Turkish', 'English', 'Russian', 'German', 'Polish', 'Ukrainian', 'Dutch', 'French', 'Spanish', 'Arabic'],
-      }],
-      sameAs: [MAPS, `https://wa.me/${WA_NUM}`, 'https://swaphubs.com/terzi'],
-      knowsLanguage: ['tr', 'en', 'ru', 'de', 'pl', 'uk', 'nl', 'fr', 'es', 'ar'],
-    },
+    businessNode(),
     {
       '@type': 'WebPage',
       '@id': `${PAGE_URL}#webpage`,
@@ -337,10 +293,7 @@ export default function KonyaaltiTailorServicePage() {
               ve Fason İmalat Merkezi
             </h1>
             <p className="hero-desc" id="hero-desc">
-              Hurma, Liman, Sarısu, Uncalı, Gürsu, Öğretmenevleri, Ahatlı ve Toros
-              mahallelerine en yakın atölyemizden — bay, bayan ve çocuk kıyafet dikimi,
-              üniforma üretimi, fason imalat ve özel tasarım hizmeti. Antalya&apos;nın
-              yakın ilçelerine de ulaşıyoruz.
+              Antalya'da terzi arıyorsanız Terzi Can, Konyaaltı Hurma'daki atölyesinden bay, bayan ve çocuk kıyafetlerinde tamir, tadilat ve özel dikim yapar; Hurma, Liman, Sarısu, Uncalı, Gürsu ve çevresine, ayrıca Lara, Belek, Side ve Kemer otellerine hizmet verir. {DELIVERY.tr.urgent} {DELIVERY.tr.normal} Otellere alım-teslim ücretsizdir.
             </p>
             <div className="hero-btns">
               <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-primary">

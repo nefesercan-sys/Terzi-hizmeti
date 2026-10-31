@@ -6,17 +6,17 @@
 // Sayfa kümesi (her dilde):
 //   • Hub        : /en/linen-cotton-tailoring | /de/leinen-baumwolle-schneiderei | /ru/poshiv-lyon-hlopok
 //   • Ürün sayfa : {hub}/{ürün-slug}  (gömlek, elbise, pantolon, ceket, çocuk)
-//   • Ekspres    : turistlerin satın aldığı kıyafetlerin tadilatı (1 gün / acilde birkaç saat)
+//   • Ekspres    : turistlerin satın aldığı kıyafetlerin tadilatı (ertesi gün / acilde 1–2 saat)
 //
 // Kurallar (sitenin diğer dosyalarıyla aynı):
-//  - Sadece işletme sahibinin verdiği bilgiler: 2006'dan beri, her gün 08:00–23:00, otel/eve ücretsiz servis,
-//    özel dikim genellikle 3 gün, tadilat genellikle 1 gün, acilde çoğunlukla 2–4 saat.
+//  - Sadece işletme sahibinin verdiği bilgiler: 2006'dan beri, her gün 08:00–23:00, otellere ücretsiz servis,
+//    süreler lib/delivery.ts'ten (acil 1–2 saat, normal ertesi gün, özel dikim modele ve adede göre).
 //  - Süre sözleri "genellikle/usually" ile yazılır; kesin gün/saat WhatsApp'ta netleşir (kesin garanti YOK).
 //  - Görseller örnek/stil görselidir (müşteri fotoğrafı gibi sunulmaz) — sayfada bu not yer alır.
 // ============================================================
 import type { Metadata } from 'next';
+import { businessNode as sharedBusinessNode } from '@/lib/business';
 import { SITE, PHONE_TEL, MAPS, abs } from '@/lib/seo-data';
-import { reviewSchema } from '@/lib/reviews';
 
 import {
   TLANGS, TR_HUB, HUB, EXPRESS, PRICES_PAGE, ANAVERA, PRODUCT_IDS,
@@ -583,7 +583,7 @@ export const HUB_COPY: L3<HubCopy> = {
       ['Nehmen Sie bei mir im Hotel Maß?', 'Ja. Der Hotelservice ist in allen Gebieten, die wir bedienen, kostenlos; wir messen Sie im Hotel aus. Sie können auch unsere Werkstatt in Hurma, Konyaaltı besuchen.'],
       ['Können Sie nach Foto oder eigenem Entwurf nähen?', 'Ja. Senden Sie ein Foto oder beschreiben Sie Ihre Idee per WhatsApp. Wir passen sie Ihren Maßen an und schlagen einen passenden Stoff vor.'],
       ['Welche Kleidungsstücke kann ich bestellen?', 'Hemden, Kleider, Hosen, Shorts, Sakkos und Sommeranzüge für Damen und Herren sowie Kinderkleidung — aus natürlichen Leinen- und Baumwollstoffen.'],
-      ['Ändern Sie auch Kleidung, die ich in Antalya gekauft habe?', 'Ja. Kürzen, Taille und Seiten enger machen, Ärmel kürzen und Reparaturen sind am nächsten Tag fertig. In dringenden Fällen oft in 1–2 Stunden am selben Tag; wir bestätigen per WhatsApp.'],
+      ['Ändern Sie auch Kleidung, die ich in Antalya gekauft habe?', 'Ja. Kürzen, Taille und Seiten enger machen, Ärmel kürzen und Reparaturen sind am nächsten Tag fertig. In dringenden Fällen in 1–2 Stunden; wir bestätigen per WhatsApp.'],
       ['Wo sind Sie und wann haben Sie geöffnet?', 'Terzi Can befindet sich in Hurma Mahallesi, Konyaaltı, Antalya, täglich von 08:00 bis 23:00 Uhr geöffnet. Wir arbeiten seit 2006 und sprechen Deutsch, Englisch, Russisch und Türkisch.'],
     ],
     related: 'Leinen- & Baumwollkleidung',
@@ -687,7 +687,7 @@ export const EXPRESS_COPY: L3<ExpressCopy> = {
     glance: { std: 'In der Regel am nächsten Tag.', urgent: 'Eilaufträge 1–2 Stunden; per WhatsApp bestätigt.', price: 'Kürzen ab ₺200 · Taille ab ₺200 · Reißverschluss ab ₺300.', pickup: 'Abholung und Lieferung im Hotel auf Wunsch (Hotelservice kostenlos).' },
     glanceLabels: { std: 'Standard', urgent: 'Dringend', price: 'Preise', pickup: 'Abholung' },
     faq: [
-      ['Wie schnell ändern Sie in Antalya gekaufte Kleidung?', 'Die meisten Änderungen sind am nächsten Tag fertig. In dringenden Fällen oft in 1–2 Stunden am selben Tag. Die genaue Zeit bestätigen wir vorab per WhatsApp.'],
+      ['Wie schnell ändern Sie in Antalya gekaufte Kleidung?', 'Die meisten Änderungen sind am nächsten Tag fertig. In dringenden Fällen in 1–2 Stunden. Die genaue Zeit bestätigen wir vorab per WhatsApp.'],
       ['Können Sie die Kleidung im Hotel abholen?', 'Ja. Der Hotelservice ist in allen Gebieten, die wir bedienen, kostenlos. Senden Sie Hotelname und Standort per WhatsApp.'],
       ['Was kostet das Kürzen einer Hose?', 'Hose kürzen ab ₺200. Den Endpreis bestätigen wir per WhatsApp anhand Ihres Fotos.'],
       ['Ändern Sie auch Kleidung aus dem Laden oder Basar?', 'Ja, unabhängig davon, wo Sie sie gekauft haben. Senden Sie ein Foto und sagen Sie uns, was geändert werden soll.'],
@@ -734,33 +734,8 @@ export const EXPRESS_COPY: L3<ExpressCopy> = {
 };
 
 // ── JSON-LD / Metadata yardımcıları ─────────────────────────
-export function businessNode(lang: TLang) {
-  return {
-    '@type': ['LocalBusiness', 'ClothingStore'],
-    ...reviewSchema(),
-    '@id': `${SITE}#business`,
-    name: 'Terzi Can',
-    url: SITE,
-    telephone: PHONE_TEL,
-    priceRange: '₺₺',
-    image: OG_DEFAULT,
-    hasMap: MAPS,
-    address: {
-      '@type': 'PostalAddress', streetAddress: 'Hurma Mahallesi', addressLocality: 'Konyaaltı',
-      addressRegion: 'Antalya', postalCode: '07130', addressCountry: 'TR',
-    },
-    geo: { '@type': 'GeoCoordinates', latitude: 36.857466, longitude: 30.596987 },
-    openingHoursSpecification: [{
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-      opens: '08:00', closes: '23:00',
-    }],
-    foundingDate: '2006',
-    knowsLanguage: ['tr', 'en', 'ru', 'de', 'pl', 'uk', 'nl', 'fr', 'es', 'ar'],
-    availableLanguage: ['Turkish', 'English', 'Russian', 'German', 'Polish', 'Ukrainian', 'Dutch', 'French', 'Spanish', 'Arabic'],
-    sameAs: [MAPS, `https://wa.me/${PHONE_TEL.replace('+', '')}`, 'https://swaphubs.com/terzi'],
-    inLanguage: lang,
-  };
+export function businessNode(_lang: TLang) {
+  return sharedBusinessNode({ reviews: false });
 }
 
 const faqNode = (url: string, faq: [string, string][]) => ({

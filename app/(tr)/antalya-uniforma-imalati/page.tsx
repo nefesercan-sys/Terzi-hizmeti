@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import ReviewsBlock from '@/components/ReviewsBlock';
-import { reviewSchema } from '@/lib/reviews';
+import { businessNode } from '@/lib/business';
 
 // ── Mobil / Tarayıcı Yapılandırması ─────────────────────────────────────────
 export const viewport: Viewport = {
@@ -32,85 +32,7 @@ const ANTALYA_ILCELER = [
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
-    {
-      '@type': ['LocalBusiness', 'Tailor'],
-      ...reviewSchema(),
-      '@id': `${HOME_URL}/#business`,
-      name: 'Terzi Can',
-      alternateName: [
-        'Antalya Üniforma İmalatı',
-        'Antalya Kurumsal Kıyafet Dikimi',
-        'Konyaaltı Terzi Can',
-      ],
-      description:
-        'Konyaaltı ve çevresinde otel, restoran, hastane, okul ve güvenlik firmaları için profesyonel üniforma üretimi ve özel tasarım dikiş atölyesi.',
-      url: HOME_URL,
-      telephone: PHONE_E164,
-      priceRange: '$$',
-      currenciesAccepted: 'TRY, EUR, USD, RUB',
-      paymentAccepted: 'Cash, Credit Card, Bank Transfer',
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: 'Hurma Mahallesi',
-        addressLocality: 'Konyaaltı',
-        addressRegion: 'Antalya',
-        postalCode: '07130',
-        addressCountry: 'TR',
-      },
-      geo: { '@type': 'GeoCoordinates', latitude: 36.857466, longitude: 30.596987 },
-      areaServed: ANTALYA_ILCELER,
-      hasOfferCatalog: {
-        '@type': 'OfferCatalog',
-        name: 'Antalya Üniforma ve Kurumsal Kıyafet İmalatı Hizmetleri 2026',
-        itemListElement: [
-          {
-            '@type': 'Offer',
-            itemOffered: {
-              '@type': 'Service',
-              name: 'Güvenlik Üniforması',
-              description: 'Güvenlik personeli, vale, teknik ekip kıyafeti imalatı.',
-              areaServed: ANTALYA_ILCELER,
-            },
-          },
-          {
-            '@type': 'Offer',
-            itemOffered: {
-              '@type': 'Service',
-              name: 'Hastane & Sağlık Üniforması',
-              description: 'Doktor önlüğü, hemşire forması, sağlık personeli kıyafeti.',
-              areaServed: ANTALYA_ILCELER,
-            },
-          },
-          {
-            '@type': 'Offer',
-            itemOffered: {
-              '@type': 'Service',
-              name: 'Okul Üniforması',
-              description: 'Öğrenci forması, spor kıyafeti, okul öncesi üniforma tasarımı.',
-              areaServed: ANTALYA_ILCELER,
-            },
-          },
-          {
-            '@type': 'Offer',
-            itemOffered: {
-              '@type': 'Service',
-              name: 'Restoran & Mutfak Üniforması',
-              description: 'Garson, şef, aşçı üniforması ve önlük imalatı.',
-              areaServed: ANTALYA_ILCELER,
-            },
-          },
-          {
-            '@type': 'Offer',
-            itemOffered: {
-              '@type': 'Service',
-              name: 'Otel Personel Üniforması',
-              description: 'Resepsiyon, kat hizmetleri, kat görevlisi, bellboy ve spa kıyafetleri.',
-              areaServed: ANTALYA_ILCELER,
-            },
-          },
-        ],
-      },
-    },
+    businessNode(),
 
     {
       '@type': 'WebPage',
@@ -118,14 +40,13 @@ const jsonLd = {
       name: PAGE_TITLE,
       url: SITE_URL,
       isPartOf: { '@id': `${HOME_URL}/#website` },
-      about: { '@id': `${HOME_URL}/#business` },
+      about: { '@id': `${SITE}#business` },
       description: PAGE_DESC,
       inLanguage: 'tr',
-      datePublished: '2024-01-01',
       dateModified: LAST_MODIFIED,
       lastReviewed: LAST_MODIFIED,
       breadcrumb: { '@id': `${SITE_URL}#breadcrumb` },
-      mainEntity: { '@id': `${HOME_URL}/#business` },
+      mainEntity: { '@id': `${SITE}#business` },
     },
 
     {

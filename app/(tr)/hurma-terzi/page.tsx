@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import ReviewsBlock from '@/components/ReviewsBlock';
-import { reviewSchema } from '@/lib/reviews';
+import { businessNode } from '@/lib/business';
 import Image from 'next/image';
 import { DISTRICT_BASE } from '@/lib/seo-data';
 
@@ -33,52 +33,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
-    {
-      '@type': ['LocalBusiness', 'ClothingStore'],
-      ...reviewSchema(),
-      additionalType: ['https://schema.org/SewingService', 'https://schema.org/DryCleaningService'],
-      '@id': `${SITE}#business`,
-      name: 'Terzi Can',
-      alternateName: [
-        'Terzi Can Antalya', 'Konyaaltı Terzi', 'Tailor Can Antalya',
-        'Портной Кан Анталья', 'Schneider Can Antalya', 'Terzi Hizmeti Antalya', 'Dikiş Atölyesi Antalya',
-      ],
-      description: "Antalya Konyaaltı'da 2006'dan bu yana hizmet veren profesyonel terzi atölyesi. Paça kısaltma, fermuar değişimi, bel daraltma, özel dikim, gelinlik tadilatı, tekstil imalatı ve kuru temizleme. Hurma, Liman, Sarısu, Gürsu, Uncalı bölgelerine hizmet.",
-      url: SITE,
-      telephone: PHONE_TEL,
-      priceRange: '₺₺',
-      currenciesAccepted: 'TRY, EUR, USD, RUB',
-      paymentAccepted: 'Cash, Credit Card',
-      image: `${SITE}/terzi-can-hero.jpg`,
-      logo: `${SITE}/terzi-can-hero.jpg`,
-      hasMap: MAPS,
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: 'Hurma Mahallesi',
-        addressLocality: 'Konyaaltı',
-        addressRegion: 'Antalya',
-        postalCode: '07130',
-        addressCountry: 'TR',
-      },
-      geo: { '@type': 'GeoCoordinates', latitude: 36.857466, longitude: 30.596987 },
-      openingHoursSpecification: [{
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-        opens: '08:00', closes: '23:00',
-      }],
-      areaServed: [
-        'Liman, Konyaaltı', 'Hurma, Konyaaltı', 'Sarısu, Konyaaltı', 'Gürsu, Konyaaltı', 'Uncalı, Konyaaltı',
-        'Konyaaltı', 'Muratpaşa', 'Kepez', 'Antalya', 'Lara', 'Belek', 'Kemer', ].map((n) => ({ '@type': 'Place', name: n })),
-      contactPoint: [{
-        '@type': 'ContactPoint',
-        telephone: PHONE_TEL,
-        contactType: 'customer service',
-        areaServed: 'TR',
-        availableLanguage: ['Turkish', 'English', 'Russian', 'German', 'Polish', 'Ukrainian', 'Dutch', 'French', 'Spanish', 'Arabic'],
-      }],
-      sameAs: [MAPS, `https://wa.me/${WA_NUM}`, 'https://swaphubs.com/terzi'],
-      knowsLanguage: ['tr', 'en', 'ru', 'de', 'pl', 'uk', 'nl', 'fr', 'es', 'ar'],
-    },
+    businessNode(),
     {
       '@type': 'WebPage',
       '@id': `${PAGE_URL}#webpage`,
@@ -176,7 +131,7 @@ export default function HurmaTerziPage() {
             <p className="hero-desc">
               Hurma mahallesine özel adrese servisli terzi hizmeti. Paça kısaltma, fermuar
               değişimi, bel daraltma, özel dikim, gelinlik tadilatı, ütü ve kuru temizleme —
-              ₺200'den başlayan fiyatlarla, aynı gün teslim.
+              ₺200'den başlayan fiyatlarla; normal işler ertesi gün, acil işler 1–2 saatte teslim.
             </p>
             <div className="hero-btns">
               <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-primary">💬 WhatsApp'tan Yazın →</a>
@@ -195,7 +150,7 @@ export default function HurmaTerziPage() {
                 Konyaaltı'nın sahil şeridindeki Hurma mahallesi, hem yerleşik hem tatilci
                 nüfusuyla terzi hizmetine sürekli ihtiyaç duyan bir bölge. Hurma sınırları
                 içinde — sahil şeridi, iç mahalle sokakları ve site/apartman bölgelerinin
-                tamamına — kıyafetinizi adresinizden alıp aynı gün teslim ediyoruz.
+                tamamına — kıyafetinizi adresinizden alıp normal işte ertesi gün, acil işte 1–2 saatte teslim ediyoruz.
               </p>
             </div>
           </div>

@@ -6,6 +6,7 @@
 // Siteye özgü ayarlar yalnızca aşağıdaki SITE_CFG bloğundadır.
 // ============================================================
 import type { Metadata } from 'next';
+import { businessNode } from '@/lib/business';
 import {
   SITE, PHONE, PHONE_TEL, MAPS, LANGS, LAST_UPDATE, SERVICES, SERVICE_BASE, HUB_MAIN, HOTEL_BASE,
   serviceUrl, type Lang,
@@ -94,7 +95,7 @@ const T = {
     desc: `Terzi Can tailor, Antalya: call or WhatsApp ${PHONE}. Hurma, Konyaaltı. Open daily 08:00–23:00. Send a photo, get the price today.`,
     tag: 'Antalya · Konyaaltı · Open daily 08:00–23:00',
     h1: 'Contact Terzi Can — Tailor in Antalya',
-    lead: 'Phone, WhatsApp and address. Call or message us: send a photo and get the price and turnaround time the same day.',
+    lead: 'Phone, WhatsApp and address. Call or message us: send a photo and get the price and turnaround time.',
     call: 'Call now', wa: 'Message on WhatsApp', maps: 'Directions (Google Maps)',
     infoH: 'Contact details',
     rows: [
@@ -110,7 +111,7 @@ const T = {
     stepsH: 'How it works',
     steps: [
       ['1', 'Send a photo', 'Send a photo of the garment and what you need on WhatsApp.'],
-      ['2', 'Price and time', 'We reply with the price and turnaround. Hemming, waist and zipper jobs are mostly ready the same day.'],
+      ['2', 'Price and time', 'We reply with the price and turnaround. Hemming, waist and zipper jobs are ready the next day (urgent jobs 1–2 hours).'],
       ['3', 'Visit us or we come to you', 'Drop in at our workshop or ask for hotel/home pick-up and delivery (hotel service is free).'],
     ] as [string, string, string][],
     faqH: 'Frequently asked questions',
@@ -182,7 +183,7 @@ const T = {
     desc: `Schneider Terzi Can, Antalya: Anruf oder WhatsApp ${PHONE}. Hurma, Konyaaltı. Täglich 08:00–23:00. Foto senden, Preis noch heute erfahren.`,
     tag: 'Antalya · Konyaaltı · Täglich 08:00–23:00',
     h1: 'Kontakt Terzi Can — Schneider in Antalya',
-    lead: 'Telefon, WhatsApp und Adresse. Rufen Sie an oder schreiben Sie uns: Foto senden und Preis sowie Fertigstellungszeit noch am selben Tag erfahren.',
+    lead: 'Telefon, WhatsApp und Adresse. Rufen Sie an oder schreiben Sie uns: Foto senden und Preis sowie Fertigstellungszeit erfahren.',
     call: 'Jetzt anrufen', wa: 'Per WhatsApp schreiben', maps: 'Route (Google Maps)',
     infoH: 'Kontaktdaten',
     rows: [
@@ -268,33 +269,7 @@ function buildJsonLd(lang: Lang) {
   return {
     '@context': 'https://schema.org',
     '@graph': [
-      {
-        '@type': ['LocalBusiness', 'ClothingStore'],
-        additionalType: ['https://schema.org/SewingService', 'https://schema.org/DryCleaningService'],
-        '@id': SITE_CFG.businessId,
-        name: SITE_CFG.businessName,
-        url: SITE,
-        telephone: PHONE_TEL,
-        priceRange: '₺₺',
-        image: SITE_CFG.image,
-        hasMap: MAPS,
-        address: {
-          '@type': 'PostalAddress', streetAddress: 'Hurma Mahallesi', addressLocality: 'Konyaaltı',
-          addressRegion: 'Antalya', postalCode: '07130', addressCountry: 'TR',
-        },
-        geo: { '@type': 'GeoCoordinates', ...SITE_CFG.geo },
-        openingHoursSpecification: [{
-          '@type': 'OpeningHoursSpecification',
-          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-          opens: '08:00', closes: '23:00',
-        }],
-        contactPoint: [{
-          '@type': 'ContactPoint', telephone: PHONE_TEL, contactType: 'customer service', areaServed: 'TR',
-          availableLanguage: ['Turkish', 'English', 'Russian', 'German', 'Polish', 'Ukrainian', 'Dutch', 'French', 'Spanish', 'Arabic'],
-        }],
-        sameAs: SITE_CFG.sameAs,
-        knowsLanguage: ['tr', 'en', 'ru', 'de', 'pl', 'uk', 'nl', 'fr', 'es', 'ar'],
-      },
+      businessNode({ reviews: false }),
       {
         '@type': 'ContactPage', '@id': `${url}#webpage`, url, name: c.title, description: c.desc, inLanguage: lang,
         dateModified: LAST_UPDATE,

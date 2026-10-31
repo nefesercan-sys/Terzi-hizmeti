@@ -204,12 +204,12 @@ const BREADCRUMB_PAGES: Record<string, Crumb[]> = {
   '/keten-pamuk-ozel-dikim': [{ name: 'Keten ve pamuk özel dikim', href: '/keten-pamuk-ozel-dikim' }],
   '/otele-gelen-terzi-antalya': [{ name: 'Otele gelen terzi', href: '/otele-gelen-terzi-antalya' }],
   '/en/hotel-tailor-antalya': [{ name: 'Hotel Tailor Antalya', href: '/en/hotel-tailor-antalya' }],
-  '/en/linen-cotton-tailoring': [{ name: 'Linen & Cotton Tailoring', href: '/en/linen-cotton-tailoring' }],
-  '/de/schneiderservice-antalya': [{ name: 'Schneiderservice Antalya', href: '/de/schneiderservice-antalya' }],
+  // '/en/linen-cotton-tailoring': sayfa kendi BreadcrumbList şemasını basar (çift şema olmasın)
+  // '/de/schneiderservice-antalya': sayfa kendi BreadcrumbList şemasını basar (çift şema olmasın)
   '/de/schneider-service-hotel-antalya': [{ name: 'Schneider Service Hotel Antalya', href: '/de/schneider-service-hotel-antalya' }],
-  '/de/leinen-baumwolle-schneiderei': [{ name: 'Leinen & Baumwolle Schneiderei', href: '/de/leinen-baumwolle-schneiderei' }],
+  // '/de/leinen-baumwolle-schneiderei': sayfa kendi BreadcrumbList şemasını basar (çift şema olmasın)
   '/ru/vyezdnoy-portnoy-antalya': [{ name: 'Выездной портной Анталья', href: '/ru/vyezdnoy-portnoy-antalya' }],
-  '/ru/poshiv-lyon-hlopok': [{ name: 'Пошив из льна и хлопка', href: '/ru/poshiv-lyon-hlopok' }],
+  // '/ru/poshiv-lyon-hlopok': sayfa kendi BreadcrumbList şemasını basar (çift şema olmasın)
 };
 
 export function getBreadcrumb(pathname: string): Crumb[] | null {

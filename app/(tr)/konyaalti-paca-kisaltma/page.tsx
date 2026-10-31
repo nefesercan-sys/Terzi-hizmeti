@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import ReviewsBlock from '@/components/ReviewsBlock';
-import { reviewSchema } from '@/lib/reviews';
+import { businessNode } from '@/lib/business';
 
 const SITE     = 'https://terzihizmeti.com.tr';
 const PAGE_URL = `${SITE}/konyaalti-paca-kisaltma`;
@@ -36,52 +36,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
-    {
-      '@type': ['LocalBusiness', 'ClothingStore'],
-      ...reviewSchema(),
-      additionalType: ['https://schema.org/SewingService', 'https://schema.org/DryCleaningService'],
-      '@id': `${SITE}#business`,
-      name: 'Terzi Can',
-      alternateName: [
-        'Terzi Can Antalya', 'Konyaaltı Terzi', 'Tailor Can Antalya',
-        'Портной Кан Анталья', 'Schneider Can Antalya', 'Terzi Hizmeti Antalya', 'Dikiş Atölyesi Antalya',
-      ],
-      description: "Antalya Konyaaltı'da 2006'dan bu yana hizmet veren profesyonel terzi atölyesi. Paça kısaltma, fermuar değişimi, bel daraltma, özel dikim, gelinlik tadilatı, tekstil imalatı ve kuru temizleme. Hurma, Liman, Sarısu, Gürsu, Uncalı bölgelerine hizmet.",
-      url: SITE,
-      telephone: PHONE_TEL,
-      priceRange: '₺₺',
-      currenciesAccepted: 'TRY, EUR, USD, RUB',
-      paymentAccepted: 'Cash, Credit Card',
-      image: `${SITE}/terzi-can-hero.jpg`,
-      logo: `${SITE}/terzi-can-hero.jpg`,
-      hasMap: MAPS,
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: 'Hurma Mahallesi',
-        addressLocality: 'Konyaaltı',
-        addressRegion: 'Antalya',
-        postalCode: '07130',
-        addressCountry: 'TR',
-      },
-      geo: { '@type': 'GeoCoordinates', latitude: 36.857466, longitude: 30.596987 },
-      openingHoursSpecification: [{
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-        opens: '08:00', closes: '23:00',
-      }],
-      areaServed: [
-        'Liman, Konyaaltı', 'Hurma, Konyaaltı', 'Sarısu, Konyaaltı', 'Gürsu, Konyaaltı', 'Uncalı, Konyaaltı',
-        'Konyaaltı', 'Muratpaşa', 'Kepez', 'Antalya', 'Lara', 'Belek', 'Kemer', ].map((n) => ({ '@type': 'Place', name: n })),
-      contactPoint: [{
-        '@type': 'ContactPoint',
-        telephone: PHONE_TEL,
-        contactType: 'customer service',
-        areaServed: 'TR',
-        availableLanguage: ['Turkish', 'English', 'Russian', 'German', 'Polish', 'Ukrainian', 'Dutch', 'French', 'Spanish', 'Arabic'],
-      }],
-      sameAs: [MAPS, `https://wa.me/${WA_NUM}`, 'https://swaphubs.com/terzi'],
-      knowsLanguage: ['tr', 'en', 'ru', 'de', 'pl', 'uk', 'nl', 'fr', 'es', 'ar'],
-    },
+    businessNode(),
     {
       '@type': 'WebPage',
       '@id': `${PAGE_URL}#webpage`,
@@ -175,7 +130,7 @@ export default function PacaKisaltmaPage() {
             <span className="hero-tag">📏 Acil Paça Kısaltma · Konyaaltı</span>
             <h1 id="hero-h">
               Paça Kısaltma <span className="accent">Konyaaltı</span><br />
-              ₺200'den, Aynı Gün Teslim
+              ₺200'den, Ertesi Gün Teslim
             </h1>
             <p className="hero-desc">
               Pantolon, kot, etek paça kısaltma — görünmez dikiş tekniğiyle,

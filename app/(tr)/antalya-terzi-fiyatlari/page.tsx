@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { fitKeywords } from '@/lib/meta-fit';
+import { FT, PRICE_ROWS } from '@/components/TerziFiyatlariSayfasi';
 
 // Bu sayfa, insanların (ve yapay zeka asistanlarının) doğal dilde sorduğu sorulara
 // tek sayfada cevap verir: "Antalya'da terzi", "terzi fiyatları", "elbisem yırtıldı",
@@ -63,17 +64,17 @@ const QUICK: { q: string; a: string; price: string; href: string; cta: string }[
   { q: 'Elbise diktirmek / kendime elbise dikmek', a: 'Ölçü, model ve kumaş seçimi, prova ve teslim. Fotoğrafını gönderin.', price: '₺800\'den', href: '#dikim', cta: 'Özel dikim' },
   { q: 'Gelinlik ve abiye tadilatı', a: 'Hassas daraltma, boy ve askı ayarı; prova randevusu.', price: '₺800\'den', href: '/antalya-gelinlik-tadilati', cta: 'Gelinlik tadilatı' },
   { q: 'Adrese veya otele gelen terzi', a: 'Ölçüyü adresinizde alırız, işi atölyede yapar, geri teslim ederiz.', price: 'Otellere ücretsiz; ev adresi WhatsApp\'tan', href: '/otele-gelen-terzi-antalya', cta: 'Otele gelen terzi' },
-  { q: 'Pamuklu, doğal kumaştan dikim', a: '%100 keten ve pamuktan özel dikim ve seri üretim yapılır.', price: 'Fotoğrafa göre', href: '/keten-pamuk-ozel-dikim', cta: 'Keten & pamuk' },
+  { q: 'Pamuklu, doğal kumaştan dikim', a: 'Keten ve pamuktan özel dikim ve seri üretim yapılır.', price: 'Fotoğrafa göre', href: '/keten-pamuk-ozel-dikim', cta: 'Keten & pamuk' },
   { q: 'Model, tasarım, dikim atölyesi, seri imalat', a: 'Önce numune, onaydan sonra seri imalat ve üretim takibi (adet: modele göre teklif, proje bazında netleşir).', price: 'Teklif', href: '/anavera-tekstil', cta: 'Anavera Tekstil' },
 ];
 
-// ── Fiyat tabloları (site genelindeki fiyatlarla aynı; başlangıç fiyatlarıdır) ──
-const PRICES: { icon: string; title: string; rows: [string, string][] }[] = [
-  { icon: '🔧', title: 'Tamir', rows: [['Pantolon fermuarı değişimi', '₺300+'], ['Mont fermuarı değişimi', '₺300+'], ['Düğme, çıtçıt, kanca', '₺60+'], ['Astar değişimi', '₺300+']] },
-  { icon: '📏', title: 'Tadilat', rows: [['Paça kısaltma', '₺200+'], ['Bel daraltma', '₺200+'], ['Kol kısaltma', '₺200+'], ['Elbise / ceket tadilatı', '₺200+'], ['Gelinlik ve abiye tadilatı', '₺800+']] },
-  { icon: '✂️', title: 'Özel dikim', rows: [['Erkek pantolon', '₺400+'], ['Kadın elbise', '₺800+'], ['Abiye', '₺900+'], ['Çocuk giyim', '₺250+']] },
-  { icon: '🧺', title: 'Ütü & kuru temizleme', rows: [['Ütü (adet)', '₺80+'], ['Kuru temizleme (elbise)', '₺300+'], ['Kuru temizleme (mont)', '₺500+'], ['Yıkama + ütü (kg)', '₺80+/kg']] },
-];
+// ── Fiyat tabloları: tek kaynak components/TerziFiyatlariSayfasi.tsx (PRICE_ROWS + FT.tr adları) ──
+const PRICES: { icon: string; title: string; rows: [string, string][] }[] = PRICE_ROWS.map((g, i) => ({
+  icon: g.icon,
+  title: FT.tr.priceTitles[i],
+  rows: g.rows.map((p, j) => [FT.tr.priceNames[i][j], p] as [string, string]),
+}));
+
 
 // ── SSS: hem görünür hem şema; doğal dil soruları ─────────────────────────────
 const FAQS: [string, string][] = [
@@ -93,12 +94,12 @@ const FAQS: [string, string][] = [
    'Evet. Ölçü ve teslim adresinizde ya da otelinizde yapılır, iş atölyede tamamlanır. Otellere ziyaret hizmet verilen tüm bölgelerde ücretsizdir; ev adreslerinde ücretsiz servis Konyaaltı ve yakın mahallelerde geçerlidir, diğer bölgeler WhatsApp\'tan sorulur. Ayrıntı: /otele-gelen-terzi-antalya'],
   ['Terzi fiyatlarını nasıl öğrenirim?',
    'Yukarıdaki liste başlangıç fiyatlarıdır. İşin fotoğrafını WhatsApp\'tan gönderirseniz kumaşa ve işçiliğe göre net fiyat söylenir; teklif ücretsizdir.'],
-  ['En hızlı ve uygun fiyatlı terzi hizmeti hangisi?',
+  ['Terzi hizmetinde süre ve fiyat nasıl belirlenir?',
    'Başlangıç fiyatlarımız yukarıda yayınlanır. Paça kısaltma, fermuar değişimi gibi küçük işler normal şartlarda ertesi gün, acil olanlar 1–2 saatte teslim edilir. Fotoğrafı gönderip net fiyat ve süre almanızı öneririz.'],
   ['Bana yakın terzi nerede?',
    'Atölye Konyaaltı\'ndadır; Hurma, Liman, Sarısu, Uncalı ve Gürsu\'na ücretsiz servis yapılır. Konum: Google Haritalar\'da "TERZİ Can Antalya Tailor Service". Antalya\'nın diğer bölgelerine de randevuyla gidilir.'],
   ['Pamuklu, doğal kumaştan dikim yapıyor musunuz?',
-   'Evet. %100 keten ve pamuktan özel dikim ve seri üretim yapılır; işletmeler için numune sonrası seri üretim mümkündür. Ayrıntı: /keten-pamuk-ozel-dikim'],
+   'Evet. Keten ve pamuktan özel dikim ve seri üretim yapılır; işletmeler için numune sonrası seri üretim mümkündür. Ayrıntı: /keten-pamuk-ozel-dikim'],
   ['Model, tasarım ve seri imalat (dikim imalat fiyatları) nasıl işliyor?',
    'Tasarımınızı veya referans fotoğrafı gönderirsiniz; önce numune dikilir ve onaylanır, sonra seri imalata geçilir ve üretim takibi paylaşılır. Fiyat model, kumaş ve adede göre teklif edilir; adet projeye göre WhatsApp\'ta netleşir. Ayrıntı: /anavera-tekstil'],
 ];

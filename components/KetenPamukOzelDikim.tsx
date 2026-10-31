@@ -56,7 +56,7 @@ const MODELLER = [
 
 const T: Record<Lang, any> = {
   tr: {
-    tag: '🧵 Özel Dikim · %100 Keten & Pamuk',
+    tag: '🧵 Özel Dikim · Keten & Pamuk',
     h1a: 'Keten & Pamuk', h1b: 'Özel Dikim Modelleri',
     heroDesc: 'Aşağıdaki modellerden birini beğenin ya da kendi fikrinizi getirin — doğal keten veya pamuktan, tam sizin ölçünüze göre dikelim. Antalya Konyaaltı atölyemizde; bay bayan, tek veya seri adet, otelinize teslim ya da yurt içi ve yurt dışı gönderim.',
     galleryH: 'Model Örnekleri', gallerySub: 'Beğendiğiniz modeli WhatsApp\'tan gönderin, ölçünüzü alalım.',
@@ -71,7 +71,7 @@ const T: Record<Lang, any> = {
     faqH: 'Sık Sorulan Sorular',
     faq: [
       ['Hazır model mi seçmem lazım, kendi tasarımımı da diktirebilir miyim?', 'Hayır, hazır modelle sınırlı değilsiniz — kendi fotoğrafınızı veya fikrinizi WhatsApp\'tan gönderebilirsiniz, ona göre dikeriz.'],
-      ['Kumaşı siz mi seçiyorsunuz, ben mi?', 'Siz seçersiniz — %100 keten veya %100 pamuk arasından, WhatsApp\'ta görüşürken karar veriyoruz.'],
+      ['Kumaşı siz mi seçiyorsunuz, ben mi?', 'Siz seçersiniz — keten veya pamuk arasından, WhatsApp\'ta görüşürken karar veriyoruz.'],
       ['Dikim ne kadar sürüyor?', 'Süre modele ve adede göre belirlenir; kesin gün WhatsApp\'ta netleşir.'],
       ['Otelime teslimat yapıyor musunuz?', 'Evet, Belek, Lara, Kemer ve Side otellerine teslim ediyoruz, ödeme teslimde alınır.'],
       ['Ölçümü nasıl vereceğim?', 'WhatsApp üzerinden ölçülerinizi paylaşırsınız, isterseniz görüntülü görüşmeyle de yardımcı oluruz.'],
@@ -100,7 +100,7 @@ const T: Record<Lang, any> = {
     shipLine: 'Siparişler Avrupa, Rusya ve diğer ülkelere gönderilir. Süre ve fiyat WhatsApp\'ta netleşir.',
   },
   en: {
-    tag: '🧵 Custom Tailoring · 100% Linen & Cotton',
+    tag: '🧵 Custom Tailoring · Linen & Cotton',
     h1a: 'Linen & Cotton', h1b: 'Custom Tailoring Models',
     heroDesc: 'Pick a style below or bring your own idea — we\'ll tailor it in natural linen or cotton, made exactly to your measurements. Made in our Konyaaltı, Antalya workshop for men and women, single piece or serial, delivered to your hotel or shipped across Turkey and abroad.',
     galleryH: 'Style Examples', gallerySub: 'Send the style you like on WhatsApp and we\'ll take your measurements.',
@@ -115,7 +115,7 @@ const T: Record<Lang, any> = {
     faqH: 'Frequently Asked Questions',
     faq: [
       ['Do I have to pick a ready-made style, or can I have my own design made?', 'You are not limited to the gallery — send your own photo or idea on WhatsApp and we\'ll tailor it.'],
-      ['Do I choose the fabric, or do you?', 'You choose — 100% linen or 100% cotton, we\'ll confirm the choice with you on WhatsApp.'],
+      ['Do I choose the fabric, or do you?', 'You choose — linen or cotton, we\'ll confirm the choice with you on WhatsApp.'],
       ['How long does tailoring take?', 'Timing depends on the model and number of pieces; the exact day is confirmed on WhatsApp.'],
       ['Do you deliver to my hotel?', 'Yes, we deliver to hotels across Antalya, payment on delivery.'],
       ['How do I give you my measurements?', 'You share them on WhatsApp — we can also help via a video call if needed.'],
@@ -144,7 +144,7 @@ const T: Record<Lang, any> = {
     shipLine: 'Orders are shipped to Europe, Russia and other countries. Time and price are agreed on WhatsApp.',
   },
   ru: {
-    tag: '🧵 Пошив на заказ · 100% лён и хлопок',
+    tag: '🧵 Пошив на заказ · лён и хлопок',
     h1a: 'Лён и хлопок', h1b: 'Модели на заказ',
     heroDesc: 'Выберите модель ниже или предложите свою идею — сошьём из натурального льна или хлопка точно по вашим меркам. Мастерская в Коньяалты, Анталья: мужская и женская одежда, одна вещь или серия, доставка в отель или по Турции и за рубеж.',
     galleryH: 'Примеры моделей', gallerySub: 'Отправьте понравившуюся модель в WhatsApp — снимем мерки.',
@@ -159,7 +159,7 @@ const T: Record<Lang, any> = {
     faqH: 'Часто задаваемые вопросы',
     faq: [
       ['Нужно ли выбирать готовую модель, или можно сшить своё?', 'Вы не ограничены галереей — пришлите своё фото или идею в WhatsApp, мы сошьём по нему.'],
-      ['Я выбираю ткань или вы?', 'Вы выбираете — 100% лён или 100% хлопок, окончательно определим в WhatsApp.'],
+      ['Я выбираю ткань или вы?', 'Вы выбираете — лён или хлопок, окончательно определим в WhatsApp.'],
       ['Сколько времени занимает пошив?', 'Срок зависит от модели и количества изделий; точный день подтверждаем в WhatsApp.'],
       ['Вы доставляете в отель?', 'Да, доставляем в отели по всей Анталье, оплата при получении.'],
       ['Как передать мерки?', 'Пришлите их в WhatsApp — при необходимости поможем и по видеосвязи.'],
@@ -188,7 +188,7 @@ const T: Record<Lang, any> = {
     shipLine: 'Заказы отправляем в Европу, Россию и другие страны. Срок и цену уточняем в WhatsApp.',
   },
   de: {
-    tag: '🧵 Maßschneiderei · 100% Leinen & Baumwolle',
+    tag: '🧵 Maßschneiderei · Leinen & Baumwolle',
     h1a: 'Leinen & Baumwolle', h1b: 'Modelle nach Maß',
     heroDesc: 'Wählen Sie unten einen Stil oder bringen Sie Ihre eigene Idee mit — wir schneidern aus natürlichem Leinen oder Baumwolle, genau nach Ihren Maßen. Gefertigt in unserer Werkstatt in Konyaaltı für Damen und Herren, Einzelstück oder Serie, geliefert ans Hotel oder versendet in der Türkei und ins Ausland.',
     galleryH: 'Stilbeispiele', gallerySub: 'Senden Sie den gewünschten Stil per WhatsApp — wir nehmen Maß.',
@@ -203,7 +203,7 @@ const T: Record<Lang, any> = {
     faqH: 'Häufig gestellte Fragen',
     faq: [
       ['Muss ich ein fertiges Modell wählen, oder kann ich mein eigenes Design schneidern lassen?', 'Sie sind nicht auf die Galerie beschränkt — senden Sie Ihr eigenes Foto oder Ihre Idee per WhatsApp, wir schneidern danach.'],
-      ['Wähle ich den Stoff, oder Sie?', 'Sie wählen — 100% Leinen oder 100% Baumwolle, wir bestätigen die Wahl gemeinsam per WhatsApp.'],
+      ['Wähle ich den Stoff, oder Sie?', 'Sie wählen — Leinen oder Baumwolle, wir bestätigen die Wahl gemeinsam per WhatsApp.'],
       ['Wie lange dauert die Anfertigung?', 'Die Dauer richtet sich nach Modell und Stückzahl fertig, je nach Komplexität des Modells; der genaue Tag wird per WhatsApp bestätigt.'],
       ['Liefern Sie an mein Hotel?', 'Ja, wir liefern an Hotels in ganz Antalya, Zahlung bei Lieferung.'],
       ['Wie gebe ich meine Maße an?', 'Teilen Sie sie per WhatsApp mit — bei Bedarf helfen wir auch per Videoanruf.'],

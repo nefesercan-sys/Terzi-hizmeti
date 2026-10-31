@@ -3,11 +3,8 @@ import ReviewsBlock from '@/components/ReviewsBlock';
 import { DELIVERY } from '@/lib/delivery';
 import { businessNode } from '@/lib/business';
 import Image from 'next/image';
-import { Inter, Syne } from 'next/font/google';
 import { fitDesc } from '@/lib/meta-fit';
 
-const inter = Inter({ subsets: ['latin', 'latin-ext'], variable: '--font-inter', display: 'swap' });
-const syne  = Syne({ subsets: ['latin'], weight: ['700', '800'], variable: '--font-syne', display: 'swap' });
 
 const SITE      = 'https://terzihizmeti.com.tr';
 const PAGE_URL  = `${SITE}/otele-gelen-terzi-antalya`;
@@ -167,7 +164,7 @@ export default function MobileTailorHotelPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <a href="#main-content" className="skip-link">İçeriğe geç</a>
 
-      <div className={`${inter.variable} ${syne.variable}`} style={{ background: '#1E3329', color: '#F5F1E8', fontFamily: 'var(--font-inter), system-ui, sans-serif', lineHeight: 1.6, minHeight: '100vh' }}>
+      <div style={{ background: '#1E3329', color: '#F5F1E8', fontFamily: 'var(--font-inter), system-ui, sans-serif', lineHeight: 1.6, minHeight: '100vh' }}>
 
         {/* NAVIGASYON */}
         <nav className="nav" aria-label="Ana site navigasyonu">

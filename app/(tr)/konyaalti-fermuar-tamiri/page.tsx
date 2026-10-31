@@ -144,7 +144,7 @@ export default function FermuarTamiriPage() {
             <p className="hero-desc">
               Pantolon, kot, mont, ceket ve çanta fermuarı değişimi ve tamiri.
               Hurma, Liman, Sarısu bölgesine ücretsiz servis. ₺300'den başlayan
-              şeffaf fiyatlarla, normal işlemler ertesi gün, acil işler 1–2 saatte tamamlanır.
+              net fiyatla, normal işlemler ertesi gün, acil işler 1–2 saatte tamamlanır.
             </p>
             <div className="hero-btns">
               <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-primary">💬 Fotoğraf Gönderin →</a>
@@ -159,7 +159,7 @@ export default function FermuarTamiriPage() {
             <div className="sec-head">
               <span className="eyebrow">₺ Fermuar Fiyatları 2026</span>
               <h2 className="sec-h ff" id="price-h">Fermuar Tamiri & Değişimi Fiyat Listesi</h2>
-              <p className="sec-sub">Tüm fermuar tipleri için şeffaf, sabit fiyatlar.</p>
+              <p className="sec-sub">Tüm fermuar tipleri için başlangıç fiyatları.</p>
             </div>
             <div className="price-grid">
               <div className="price-card">

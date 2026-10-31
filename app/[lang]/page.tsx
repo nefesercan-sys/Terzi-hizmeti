@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
         'x-default': `${SITE}/antalya-terzi`,
       },
     },
-    openGraph: { title: c.title, description: c.desc, url, siteName: 'Terzi Can', locale: c.locale, type: 'website', images: [{ url: OG_DEFAULT, width: 1200, height: 630, alt: c.h1 }] },
+    openGraph: { title: c.title, description: fitDesc(c.desc), url, siteName: 'Terzi Can', locale: c.locale, type: 'website', images: [{ url: OG_DEFAULT, width: 1200, height: 630, alt: c.h1 }] },
     twitter: { card: 'summary_large_image', title: c.title, description: fitDesc(c.desc), images: [OG_DEFAULT] },
     other: { 'geo.region': 'TR-07', 'geo.placename': 'Antalya' },
   };

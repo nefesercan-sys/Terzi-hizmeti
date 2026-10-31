@@ -756,10 +756,6 @@ const crumbNode = (url: string, crumbs: { name: string; item: string }[]) => ({
   itemListElement: crumbs.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, item: c.item })),
 });
 
-const priceOffer = (url: string) => ({
-  '@type': 'Offer', url, priceCurrency: 'EUR',
-});
-
 /** Hub: kendi BreadcrumbList'i YOK — IcerikHaritasi (BREADCRUMB_PAGES) üretiyor. */
 export function hubJsonLd(lang: TLang) {
   const url = abs(hubUrl(lang));
@@ -774,7 +770,7 @@ export function hubJsonLd(lang: TLang) {
         '@type': 'Service', '@id': `${url}#service`, name: u.hubName, serviceType: 'Made-to-measure clothing',
         provider: { '@id': `${SITE}#business` },
         areaServed: { '@type': 'AdministrativeArea', name: 'Antalya' },
-        description: c.desc, offers: priceOffer(url),
+        description: c.desc,
         availableChannel: { '@type': 'ServiceChannel', serviceUrl: url, servicePhone: PHONE_TEL },
         hasOfferCatalog: {
           '@type': 'OfferCatalog', name: u.hubName,
@@ -813,7 +809,7 @@ export function productJsonLd(lang: TLang, p: ProductId) {
         '@type': 'Service', '@id': `${url}#service`, name: c.h1, serviceType: 'Made-to-measure clothing',
         provider: { '@id': `${SITE}#business` },
         areaServed: { '@type': 'AdministrativeArea', name: 'Antalya' },
-        description: c.lead, offers: priceOffer(url),
+        description: c.lead,
         availableChannel: { '@type': 'ServiceChannel', serviceUrl: url, servicePhone: PHONE_TEL },
       },
       faqNode(url, c.faq),

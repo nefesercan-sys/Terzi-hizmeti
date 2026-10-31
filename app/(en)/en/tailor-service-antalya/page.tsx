@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     title: 'Tailor Service Antalya · Mobile Tailor to Your Hotel',
     description: 'Tailoring, repair, alterations and ironing across Konyaaltı and nearby districts. We come to you.',
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'en_US', alternateLocale: ['tr_TR'], type: 'website',
-    images: [{ url: OG, width: 1024, height: 1024, alt: 'Tailor Service Antalya', type: 'image/png' }],
+    images: [{ url: OG, width: 1024, height: 1024, alt: 'Tailor Service Antalya', type: 'image/jpeg' }],
   },
   twitter: { card: 'summary_large_image', title: 'Tailor Service Antalya — Mobile Tailor', description: 'We come to your hotel across Konyaaltı and nearby districts.', images: [OG] },
   other: { 'geo.region': 'TR-07', 'geo.placename': 'Antalya', contact: PHONE },
@@ -257,7 +257,7 @@ export default function TailorServiceAntalyaPage() {
           <section className="sec" id="fiyatlar" aria-labelledby="price-h">
             <div className="ctr">
               <div className="sec-head">
-                <span className="eyebrow">₺ Transparent Prices 2026</span>
+                <span className="eyebrow">₺ Prices 2026</span>
                 <h2 className="sec-h" id="price-h">Tailoring, Repair, Alterations & Ironing Prices</h2>
                 <p className="sec-sub">Send a photo on WhatsApp for an exact quote.</p>
               </div>

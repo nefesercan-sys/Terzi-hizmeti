@@ -146,7 +146,7 @@ export default function PacaKisaltmaPage() {
             <div className="sec-head">
               <span className="eyebrow">₺ Paça Kısaltma Fiyatları 2026</span>
               <h2 className="sec-h ff" id="price-h">Fiyat Listesi</h2>
-              <p className="sec-sub">Kumaş türüne göre şeffaf fiyatlandırma.</p>
+              <p className="sec-sub">Kumaş türüne göre fiyatlandırma.</p>
             </div>
             <div className="price-grid">
               <div className="price-card">

@@ -5,10 +5,7 @@ import FabricsOrderBlock from '@/components/FabricsOrderBlock';
 import ReviewsBlock from '@/components/ReviewsBlock';
 import { businessNode } from '@/lib/business';
 import Image from 'next/image';
-import { Inter, Syne } from 'next/font/google';
 
-const inter = Inter({ subsets: ['latin', 'latin-ext'], variable: '--font-inter', display: 'swap' });
-const syne  = Syne({ subsets: ['latin'], weight: ['700', '800'], variable: '--font-syne', display: 'swap' });
 
 const SITE      = 'https://terzihizmeti.com.tr';
 const PAGE_URL  = `${SITE}/antalya-terzi`;
@@ -66,6 +63,15 @@ export const metadata: Metadata = {
   verification: { google: 'W2S_Gr49EgkgWG7xAWWMc5qPW6Cw3wEnOi6O6UC9zkQ' },
 };
 
+const FAQS: [string, string][] = [
+  ['Hangi mahallelere ücretsiz servis var?', 'Hurma, Sarısu, Liman, Uncalı, Altınkum, Öğretmenevleri, Siteler, Arapsuyu ve Gürsu\'ya ücretsiz adrese servis veriyoruz. Diğer bölgelerde servis, mesafeye göre WhatsApp\'ta netleşir.'],
+  ["Ahatlı, Toros ve diğer Antalya bölgelerine hizmet var mı?", 'Evet, ev adreslerine randevuyla geliyoruz; ücret ve zamanı WhatsApp\'tan netleştiririz. Otellere alım-teslimat ücretsizdir.'],
+  ['Bay, bayan, çocuk kıyafeti dikiyor musunuz?', 'Evet, erkek, kadın ve çocuk kıyafetlerinde özel ölçü dikim hizmeti sunuyoruz.'],
+  ['Üniforma üretimi ve toplu sipariş alıyor musunuz?', 'Evet, otel, okul, restoran ve kurumlar için üniforma tasarımı ve toplu üretim yapıyoruz.'],
+  ['Fason imalat yapıyor musunuz?', 'Evet, markalar ve işletmeler için numune dikimi, kalıp çıkarma ve seri üretim hizmeti veriyoruz.'],
+  ['Muratpaşa, Lara, Belek, Side ve Kemer\'e hizmet var mı?', "Evet. Muratpaşa (Meltem, Şirinyalı, Fener, Güzeloba dahil), Lara, Belek, Side/Manavgat ve Kemer'deki otellere alım-teslimat ücretsizdir."],
+];
+
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -95,12 +101,8 @@ const jsonLd = {
     {
       '@type': 'FAQPage',
       '@id': `${PAGE_URL}#faq`,
-      mainEntity: [
-        { '@type': 'Question', name: 'Hurma, Sarısu, Liman, Uncalı, Altınkum, Öğretmenevleri, Siteler, Arapsuyu ve Gürsu\'ya terzi servisi var mı?', acceptedAnswer: { '@type': 'Answer', text: `Evet, atölyemiz bu mahallelere en yakın konumda. Hurma, Sarısu, Liman, Uncalı, Altınkum, Öğretmenevleri, Siteler, Arapsuyu ve Gürsu'ya ücretsiz adrese gelen servis sağlıyoruz. ☎ ${PHONE}` } },
-        { '@type': 'Question', name: 'Bay, bayan ve çocuk kıyafeti dikimi yapıyor musunuz?', acceptedAnswer: { '@type': 'Answer', text: 'Evet, erkek, kadın ve çocuk kıyafetlerinin tamamında özel ölçü dikim hizmeti veriyoruz.' } },
-        { '@type': 'Question', name: 'Üniforma üretimi ve toplu sipariş alıyor musunuz?', acceptedAnswer: { '@type': 'Answer', text: 'Evet, otel, restoran, okul, güvenlik ve sağlık sektörü için üniforma tasarımı ve toplu üretimi yapıyoruz.' } },
-        { '@type': 'Question', name: 'Fason imalat için minimum sipariş adedi var mı?', acceptedAnswer: { '@type': 'Answer', text: "Adet projeye göre belirlenir; numune, az adetli ve yüksek adetli fason imalat siparişleri proje bazında fiyatlandırılır. WhatsApp\'tan detaylı bilgi alabilirsiniz." } },
-      ],
+      inLanguage: 'tr',
+      mainEntity: FAQS.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
     },
   ],
 };
@@ -230,14 +232,6 @@ const REPAIR_CATEGORIES: Record<Lang, RepairCategory[]> = {
   ],
 };
 
-const FAQS: [string, string][] = [
-  ['Hangi mahallelere ücretsiz servis var?', 'Hurma, Sarısu, Liman, Uncalı, Altınkum, Öğretmenevleri, Siteler, Arapsuyu ve Gürsu\'ya ücretsiz adrese servis veriyoruz. Diğer bölgelerde servis, mesafeye göre WhatsApp\'ta netleşir.'],
-  ["Uncalı, Gürsu, Öğretmenevleri, Ahatlı, Toros'a hizmet var mı?", 'Evet, bu mahallelere randevulu adrese gelen servis veriyoruz.'],
-  ['Bay, bayan, çocuk kıyafeti dikiyor musunuz?', 'Evet, erkek, kadın ve çocuk kıyafetlerinde özel ölçü dikim hizmeti sunuyoruz.'],
-  ['Üniforma üretimi ve toplu sipariş alıyor musunuz?', 'Evet, otel, okul, restoran ve kurumlar için üniforma tasarımı ve toplu üretim yapıyoruz.'],
-  ['Fason imalat yapıyor musunuz?', 'Evet, markalar ve işletmeler için numune dikimi, kalıp çıkarma ve seri üretim hizmeti veriyoruz.'],
-  ['Diğer Antalya ilçelerine hizmet var mı?', "Evet, Muratpaşa, Kepez, Lara dahil yakın bölgelere kargo veya randevulu servisle ulaşıyoruz."],
-];
 
 const PROCESS_STEPS: [string, string, string][] = [
   ['01', 'Mahallenizi Belirtin', "WhatsApp\'tan bulunduğunuz mahalleyi ve ihtiyacınızı yazın."],
@@ -253,7 +247,7 @@ export default function KonyaaltiTailorServicePage() {
 
       <a href="#main-content" className="skip-link">İçeriğe geç</a>
 
-      <div className={`${inter.variable} ${syne.variable}`} style={{ background: '#1E3329', color: '#F5F1E8', fontFamily: 'var(--font-inter), system-ui, sans-serif', lineHeight: 1.6, minHeight: '100vh' }}>
+      <div style={{ background: '#1E3329', color: '#F5F1E8', fontFamily: 'var(--font-inter), system-ui, sans-serif', lineHeight: 1.6, minHeight: '100vh' }}>
 
         <nav className="nav" aria-label="Ana site navigasyonu">
           <div className="nav-logo"><span className="nav-dot" aria-hidden="true" />TERZİ CAN</div>
@@ -366,7 +360,7 @@ export default function KonyaaltiTailorServicePage() {
           <section className="sec" id="fiyatlar" aria-labelledby="price-h">
             <div className="ctr">
               <div className="sec-head">
-                <span className="eyebrow">₺ Şeffaf Fiyatlar 2026 · Prices · Цены</span>
+                <span className="eyebrow">₺ Fiyatlar 2026 · Prices · Цены</span>
                 <h2 className="sec-h" id="price-h">Dikim, Tamir, Tadilat ve Ütü Hizmetleri</h2>
                 <p className="sec-sub">Antalya Konyaaltı terzi fiyatları — Türkçe, İngilizce, Rusça ve Almanca. Kesin fiyat için WhatsApp&apos;tan fotoğraf gönderin.</p>
               </div>

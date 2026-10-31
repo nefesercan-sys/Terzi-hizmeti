@@ -7,8 +7,8 @@ import IcerikHaritasi from '@/components/IcerikHaritasi';
 import { HizliEylemBandi, HizliAkis } from '@/components/HizliEylem';
 import RuTelegramButton from '@/components/RuTelegramButton';
 
-const inter = Inter({ subsets: ['latin'], weight: ['400', '500', '600', '700', '800', '900'], variable: '--font-inter', display: 'swap' });
-const syne = Syne({ subsets: ['latin'], weight: ['700', '800'], variable: '--font-syne', display: 'swap' });
+const inter = Inter({ subsets: ['latin', 'latin-ext', 'cyrillic'], weight: ['400', '500', '600', '700', '800', '900'], variable: '--font-inter', display: 'swap' });
+const syne = Syne({ subsets: ['latin', 'latin-ext'], weight: ['700', '800'], variable: '--font-syne', display: 'swap' });
 
 const SITE = 'https://terzihizmeti.com.tr';
 

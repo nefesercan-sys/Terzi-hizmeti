@@ -194,7 +194,7 @@ export const FT: Record<FLang, FiyatText> = {
       },
       {
         "q": "Pamuklu, doğal kumaştan dikim",
-        "a": "%100 keten ve pamuktan özel dikim ve seri üretim yapılır.",
+        "a": "Keten ve pamuktan özel dikim ve seri üretim yapılır.",
         "price": "Fotoğrafa göre",
         "href": "/keten-pamuk-ozel-dikim",
         "cta": "Keten & pamuk"
@@ -241,7 +241,7 @@ export const FT: Record<FLang, FiyatText> = {
         "Yukarıdaki liste başlangıç fiyatlarıdır. İşin fotoğrafını WhatsApp'tan gönderirseniz kumaşa ve işçiliğe göre net fiyat söylenir; teklif ücretsizdir."
       ],
       [
-        "En hızlı ve uygun fiyatlı terzi hizmeti hangisi?",
+        "Terzi hizmetinde süre ve fiyat nasıl belirlenir?",
         "Başlangıç fiyatlarımız yukarıda yayınlanır. Paça kısaltma, fermuar değişimi gibi küçük işler normal şartlarda ertesi gün, acil olanlar 1–2 saatte teslim edilir. Fotoğrafı gönderip net fiyat ve süre almanızı öneririz."
       ],
       [
@@ -250,7 +250,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Pamuklu, doğal kumaştan dikim yapıyor musunuz?",
-        "Evet. %100 keten ve pamuktan özel dikim ve seri üretim yapılır; işletmeler için numune sonrası seri üretim mümkündür. Ayrıntı: /keten-pamuk-ozel-dikim"
+        "Evet. Keten ve pamuktan özel dikim ve seri üretim yapılır; işletmeler için numune sonrası seri üretim mümkündür. Ayrıntı: /keten-pamuk-ozel-dikim"
       ],
       [
         "Model, tasarım ve seri imalat (dikim imalat fiyatları) nasıl işliyor?",
@@ -290,7 +290,7 @@ export const FT: Record<FLang, FiyatText> = {
     "webName": "Tailor Prices Antalya 2026",
     "serviceType": "Tailoring, repair, alterations, custom sewing, ironing and dry cleaning",
     "catalogName": "Tailor price list 2026 (starting prices)",
-    "heroTag": "₺ Transparent prices · Open every day 08:00–23:00 · Konyaaltı, Antalya",
+    "heroTag": "₺ Prices · Open every day 08:00–23:00 · Konyaaltı, Antalya",
     "h1a": "Tailor Prices in Antalya 2026",
     "h1b": "Send a Photo, Get Your Price",
     "heroDesc": "Hemming ₺200, taking in a waist ₺200, zipper replacement ₺300, custom dress from ₺800. Clothing repair, alterations, custom sewing, and a tailor who comes to your hotel or address. Send a photo of the job on WhatsApp and get an exact price and time.",
@@ -411,7 +411,7 @@ export const FT: Record<FLang, FiyatText> = {
       },
       {
         "q": "Custom clothing in natural cotton or linen",
-        "a": "Custom sewing and serial production in 100% linen and cotton.",
+        "a": "Custom sewing and serial production in linen and cotton.",
         "price": "Based on your photo",
         "href": "/en/linen-cotton-tailoring",
         "cta": "Linen & cotton"
@@ -467,7 +467,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Do you sew in natural cotton or linen?",
-        "Yes. Custom sewing and serial production in 100% linen and cotton; for businesses, serial production after a sample is possible. Details: /en/linen-cotton-tailoring"
+        "Yes. Custom sewing and serial production in linen and cotton; for businesses, serial production after a sample is possible. Details: /en/linen-cotton-tailoring"
       ],
       [
         "How do model design and serial production (production prices) work?",
@@ -505,7 +505,7 @@ export const FT: Record<FLang, FiyatText> = {
     "webName": "Schneider Preise Antalya 2026",
     "serviceType": "Schneiderei, Reparatur, Änderungen, Maßanfertigung, Bügelservice und chemische Reinigung",
     "catalogName": "Schneider-Preisliste 2026 (Ab-Preise)",
-    "heroTag": "₺ Transparente Preise · Täglich 08:00–23:00 geöffnet · Konyaaltı, Antalya",
+    "heroTag": "₺ Preise · Täglich 08:00–23:00 geöffnet · Konyaaltı, Antalya",
     "h1a": "Schneider Preise in Antalya 2026",
     "h1b": "Foto senden, Preis erfahren",
     "heroDesc": "Hose kürzen ab ₺200, Taille enger machen ab ₺200, Reißverschluss ab ₺300, Kleid nach Maß ab ₺800. Kleidung reparieren, Änderungen, Maßanfertigung und ein Schneider, der zu Ihrem Hotel oder Ihrer Adresse kommt. Senden Sie ein Foto per WhatsApp und erfahren Sie Preis und Dauer.",
@@ -626,7 +626,7 @@ export const FT: Record<FLang, FiyatText> = {
       },
       {
         "q": "Maßanfertigung aus Naturstoff (Baumwolle, Leinen)",
-        "a": "Maßschneiderei und Serienproduktion aus 100% Leinen und Baumwolle.",
+        "a": "Maßschneiderei und Serienproduktion aus Leinen und Baumwolle.",
         "price": "Nach Ihrem Foto",
         "href": "/de/leinen-baumwolle-schneiderei",
         "cta": "Leinen & Baumwolle"
@@ -682,7 +682,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Nähen Sie aus Naturstoffen wie Baumwolle oder Leinen?",
-        "Ja. Maßschneiderei aus 100% Leinen und Baumwolle; für Unternehmen ist nach einem Muster auch Serienproduktion möglich. Details: /de/leinen-baumwolle-schneiderei"
+        "Ja. Maßschneiderei aus Leinen und Baumwolle; für Unternehmen ist nach einem Muster auch Serienproduktion möglich. Details: /de/leinen-baumwolle-schneiderei"
       ],
       [
         "Wie funktionieren Modellentwurf und Serienproduktion (Produktionspreise)?",
@@ -720,7 +720,7 @@ export const FT: Record<FLang, FiyatText> = {
     "webName": "Цены портного в Анталье 2026",
     "serviceType": "Пошив, ремонт, подгонка одежды, глажка и химчистка",
     "catalogName": "Прайс-лист портного 2026 (цены «от»)",
-    "heroTag": "₺ Прозрачные цены · Ежедневно 08:00–23:00 · Коньяалты, Анталья",
+    "heroTag": "₺ Цены · Ежедневно 08:00–23:00 · Коньяалты, Анталья",
     "h1a": "Цены портного в Анталье 2026",
     "h1b": "Пришлите фото — узнайте цену",
     "heroDesc": "Подшив брюк от ₺200, ушить в талии от ₺200, замена молнии от ₺300, платье на заказ от ₺800. Ремонт и подгонка одежды, пошив на заказ и портной, который приедет в ваш отель или по адресу. Пришлите фото работы в WhatsApp — назовём точную цену и срок.",
@@ -841,7 +841,7 @@ export const FT: Record<FLang, FiyatText> = {
       },
       {
         "q": "Одежда на заказ из натурального хлопка или льна",
-        "a": "Пошив на заказ и серийное производство из 100% льна и хлопка.",
+        "a": "Пошив на заказ и серийное производство из льна и хлопка.",
         "price": "По вашему фото",
         "href": "/ru/poshiv-lyon-hlopok",
         "cta": "Лён и хлопок"
@@ -897,7 +897,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Шьёте ли вы из натурального хлопка или льна?",
-        "Да. Пошив на заказ из 100% льна и хлопка; для компаний после образца возможно серийное производство. Подробнее: /ru/poshiv-lyon-hlopok"
+        "Да. Пошив на заказ из льна и хлопка; для компаний после образца возможно серийное производство. Подробнее: /ru/poshiv-lyon-hlopok"
       ],
       [
         "Как проходят разработка модели и серийное производство (цены на производство)?",

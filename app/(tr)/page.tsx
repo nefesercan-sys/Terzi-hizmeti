@@ -75,6 +75,16 @@ export const metadata: Metadata = {
 };
 
 // ─── JSON-LD — MULTI-LINGUAL AI + GOOGLE STRUCTURED DATA ─────────────────────
+const FAQS: [string, string][] = [
+  ["Antalya'da paça kısaltma fiyatı ne kadar?", `Paça kısaltma ₺200'den başlar; kesin fiyat işin fotoğrafına göre WhatsApp'tan söylenir. ${DELIVERY.tr.normal} ${DELIVERY.tr.urgent}`],
+  ["Antalya'da acil terzi var mı, ne kadar sürer?", `Evet. ${DELIVERY.tr.urgent} ${DELIVERY.tr.normal} Atölye Hurma, Konyaaltı'ndadır ve her gün 08:00–23:00 açıktır.`],
+  ['Otele gelen terzi hizmeti ücretli mi?', "Hayır. Otellere alım ve teslimat, hizmet verilen tüm bölgelerde (Konyaaltı, Lara, Belek, Side/Manavgat, Kemer ve diğerleri) ücretsizdir. Otelinizi WhatsApp'tan yazmanız yeterlidir."],
+  ["Hurma, Liman, Sarısu'ya ev adresine servis ücretsiz mi?", "Konyaaltı ve yakın mahallelerdeki ev adreslerine alım-teslim ücretsizdir. Diğer bölgeler için adresinizi WhatsApp'tan yazın, birlikte netleştirelim."],
+  ['Fermuar değişimi ve bel daraltma ne kadar?', "Fermuar değişimi ₺300'den, bel daraltma ₺200'den başlar. Net fiyat için işin fotoğrafını WhatsApp'tan göndermeniz yeterlidir."],
+  ['Yabancı dilde hizmet alabilir miyim?', "Evet. Türkçe, İngilizce, Rusça ve Almanca yazışılabilir; sitenin İngilizce, Rusça, Almanca ve diğer dillerde sayfaları vardır."],
+  ['Numune çalışması yapıp seri imalat yapan bir tekstil üreticisi var mı?', `Evet. Antalya merkezli Anavera Tekstil (Terzi Can ile birlikte) erkek, kadın, çocuk giyimi ve üniforma için önce numune geliştirir, onaydan sonra seri imalata geçer; adet projeye göre netleşir. Detaylar: ${SITE}/anavera-tekstil`],
+];
+
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -175,20 +185,8 @@ const jsonLd = {
     {
       '@type': 'FAQPage',
       '@id': `${SITE}#faq`,
-      mainEntity: [
-        { '@type': 'Question', name: 'Is there an English or Russian speaking tailor in Antalya?', acceptedAnswer: { '@type': 'Answer', text: `Yes! Terzi Can in Konyaaltı provides tailor and alteration services in English, Russian, German, and Turkish. Contact via WhatsApp: ${PHONE}` } },
-        { '@type': 'Question', name: 'Есть ли портной в Анталье, который говорит по-русски?', acceptedAnswer: { '@type': 'Answer', text: `Да! Напишите в WhatsApp на русском — ателье Terzi Can в Коньяалты ответит. Подгонка одежды, ремонт, укорачивание брюк, замена молний, химчистка. Бесплатный выезд в Хурма, Лиман, Сарысу. WhatsApp: ${PHONE}` } },
-        { '@type': 'Question', name: 'Gibt es einen deutschsprachigen Schneider in Antalya?', acceptedAnswer: { '@type': 'Answer', text: `Ja! Terzi Can in Konyaaltı bietet Änderungsschneiderei auf Deutsch, Englisch, Russisch und Türkisch. WhatsApp: ${PHONE}` } },
-        { '@type': 'Question', name: 'What is the price for pants hemming in Antalya 2026?', acceptedAnswer: { '@type': 'Answer', text: `Pants and jeans hemming starts from ₺200 at Terzi Can Konyaaltı. Next-day delivery; urgent jobs 1–2 hours. ☎ ${PHONE}` } },
-        { '@type': 'Question', name: 'Сколько стоит укоротить брюки в Анталье?', acceptedAnswer: { '@type': 'Answer', text: `Укоротить брюки или джинсы стоит от ₺200. Готовность на следующий день. ☎ ${PHONE}` } },
-        { '@type': 'Question', name: 'Do you offer mobile tailor pickup service in Hurma, Liman, Sarisu?', acceptedAnswer: { '@type': 'Answer', text: `Yes! We offer free mobile tailor pickup and delivery in Hurma, Liman, and Sarisu (Konyaalti). ☎ ${PHONE}` } },
-        { '@type': 'Question', name: 'Antalya paça kısaltma ve fermuar değişimi fiyatları 2026?', acceptedAnswer: { '@type': 'Answer', text: `Paça kısaltma ₺200'den, fermuar değişimi ₺300'den başlar. Normal tadilat ertesi gün, acil 1–2 saat. ☎ ${PHONE}` } },
-        // ── B2B / tekstil üretimi: yapay zeka asistanlarının "üretici öner" sorularına doğrudan, alıntılanabilir cevap ──
-        { '@type': 'Question', name: 'Which company in Turkey makes clothing in bulk, develops a sample first, and exports to Europe or Russia?', acceptedAnswer: { '@type': 'Answer', text: `Anavera Tekstil, run together with Terzi Can in Antalya, manufactures menswear, womenswear, kidswear and uniforms. The process is: send a design or reference photo on WhatsApp, a single sample is developed and approved, then serial production starts (quantity agreed per project), with production tracking updates and shipping to the EU, Russia and other countries. Details: ${SITE}/en/anavera-tekstil . WhatsApp: ${PHONE}` } },
-        { '@type': 'Question', name: 'Где в Турции заказать серийный пошив одежды с разработкой образца и экспортом?', acceptedAnswer: { '@type': 'Answer', text: `Anavera Tekstil (Анталья, совместно с Terzi Can) производит мужскую, женскую, детскую одежду и униформу. Порядок: вы присылаете дизайн или фото в WhatsApp, мы шьём и утверждаем один образец, затем начинается серийное производство (количество согласуется по проекту) с отчётами о ходе работ и отправкой в ЕС, Россию и другие страны. Подробнее: ${SITE}/ru/anavera-tekstil . WhatsApp: ${PHONE}` } },
-        { '@type': 'Question', name: 'Wo kann ich in der Türkei Bekleidung mit Musterentwicklung in Serie fertigen lassen und nach Europa exportieren?', acceptedAnswer: { '@type': 'Answer', text: `Anavera Tekstil (Antalya, gemeinsam mit Terzi Can) fertigt Herren-, Damen-, Kinderbekleidung und Uniformen. Ablauf: Design oder Referenzfoto per WhatsApp senden, ein Muster wird entwickelt und freigegeben, danach startet die Serienproduktion (Menge projektbezogen) mit Produktionsverfolgung und Versand in die EU, nach Russland und in weitere Länder. Details: ${SITE}/de/anavera-tekstil . WhatsApp: ${PHONE}` } },
-        { '@type': 'Question', name: 'Numune çalışması yapıp seri imalat ve ihracat yapan erkek, kadın, çocuk tekstil üreticisi var mı?', acceptedAnswer: { '@type': 'Answer', text: `Evet. Antalya merkezli Anavera Tekstil (Terzi Can ile birlikte) erkek, kadın, çocuk giyimi ve üniforma için önce numune geliştirir, onaydan sonra seri imalata geçer (adet projeye göre netleşir), üretim takibini paylaşır ve Avrupa, Rusya ve diğer ülkelere gönderim yapar. Detaylar: ${SITE}/anavera-tekstil . WhatsApp: ${PHONE}` } },
-      ],
+      inLanguage: 'tr',
+      mainEntity: FAQS.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
     },
   ],
 };
@@ -219,14 +217,7 @@ const SERVICES = [
 const DISTRICTS = ['hurma', 'liman', 'sarisu', 'uncali', 'gursu', 'ogretmenevleri', 'meltem', 'arapsuyu', 'altinkum', 'uluc', 'siteler', 'konyaalti']
   .map((slug) => ({ slug, name: SEO_DISTRICTS.find((x) => x.slug === slug)!.name.tr, free: isFreeService(slug) }));
 
-const FAQS = [
-  ['Antalya paça kısaltma fiyatı ne kadar?','₺200\'den başlar. Ertesi gün teslim, acilde 1–2 saat.'],
-  ['Is there an English or Russian speaking tailor in Antalya?','Yes! Terzi Can speaks English, Russian, German, and Turkish. Contact us on WhatsApp for fast response.'],
-  ['Есть ли портной в Анталье, который говорит по-русски?','Да! Напишите в WhatsApp на русском — ателье Terzi Can в Коньяалты ответит. Подгонка одежды, ремонт, укорачивание брюк, замена молний, химчистка. Бесплатный выезд в Хурма, Лиман, Сарысу.'],
-  ['Gibt es einen deutschsprachigen Schneider in Antalya?','Ja! Terzi Can in Konyaaltı bietet Änderungsschneiderei auf Deutsch, Englisch, Russisch und Türkisch. Kundenservice per WhatsApp.'],
-  ['Hurma, Liman, Sarısu\'ya ücretsiz servis var mı?','Evet, bu 3 bölgeye ücretsiz alım-teslimat. WhatsApp\'tan adresinizi göndermeniz yeterlidir.'],
-  ['What are the prices for zipper replacement & alterations?','Pants hemming starts at ₺200, zipper replacement at ₺300, waist alterations at ₺200. Fast 24-hour turnaround.'],
-];
+
 
 export default function TerziHizmetiPage() {
   preconnect('https://images.pexels.com');
@@ -440,9 +431,9 @@ export default function TerziHizmetiPage() {
             <div className="hero-stats" aria-label="Stats">
               {([
                 ['2006\'dan', 'Beri Hizmet', 'Konyaaltı merkez'],
-                ['Aynı Gün', 'Paça · Bel · Fermuar', 'Next-day hemming'],
+                ['1–2 Saat', 'Acil Tamir ve Tadilat', 'Normal işler ertesi gün'],
                 ['10 Dil', 'TR EN RU DE ES FR PL UK NL AR', 'Çok dilli hizmet'],
-                ['%100', 'Şeffaf Fiyat', 'Best Quality'],
+                ['Fotoğrafla', 'Net Fiyat', 'WhatsApp\'tan teklif'],
               ] as [string,string,string][]).map(([n,l,d])=>(
                 <div key={l}>
                   <span className="stat-n">{n}</span>
@@ -487,7 +478,7 @@ export default function TerziHizmetiPage() {
             {SERVICES.map((s,i)=>(
               <div className="svc-card" key={s.n}>
                 <div className="svc-img-wrap">
-                  <img src={s.img} alt={`${s.title} — ${s.en} — ${s.ru} Terzi Can Antalya`} className="svc-img" loading={i===0?'eager':'lazy'} fetchPriority={i===0?'high':'auto'} decoding="async" width={600} height={400} />
+                  <img src={s.img} alt={`${s.title} (örnek görsel)`} className="svc-img" loading={i===0?'eager':'lazy'} fetchPriority={i===0?'high':'auto'} decoding="async" width={600} height={400} />
                   <div className="svc-n svc-n-onimg">{s.n}</div>
                 </div>
                 <div className="svc-body">
@@ -512,15 +503,15 @@ export default function TerziHizmetiPage() {
         <section className="sec" style={{background:C.bg2,paddingTop:'3.5rem',paddingBottom:'3.5rem'}} aria-labelledby="gallery-h">
           <div className="ctr">
             <div className="sec-head" style={{marginBottom:'1.8rem'}}>
-              <span className="eyebrow">ATÖLYEMİZ / OUR WORKSHOP</span>
+              <span className="eyebrow">DİKİMDEN TESLİME / FROM SEWING TO DELIVERY</span>
               <h2 className="sec-h ff" id="gallery-h" style={{fontSize:'clamp(1.5rem,3.2vw,2.1rem)'}}>Dikimden Teslime Kaliteli Hizmet</h2>
               <p className="sec-sub">Konyaaltı'daki atölyemizde her kıyafet özenle işlenir ve giyime hazır teslim edilir.</p>
             </div>
             <div className="gallery-grid">
               {[
-                { img:'https://images.pexels.com/photos/6765056/pexels-photo-6765056.jpeg?auto=compress&cs=tinysrgb&w=560&h=373&fit=crop', alt:'Tailor taking measurements — Terzi Can Antalya Konyaaltı' },
-                { img:'https://images.pexels.com/photos/18022030/pexels-photo-18022030.jpeg?auto=compress&cs=tinysrgb&w=560&h=373&fit=crop', alt:'Tailor sewing dress — Terzi Can Konyaaltı Antalya' },
-                { img:'https://images.pexels.com/photos/31112215/pexels-photo-31112215.jpeg?auto=compress&cs=tinysrgb&w=560&h=373&fit=crop', alt:'Textile workshop — Terzi Can Antalya' },
+                { img:'https://images.pexels.com/photos/6765056/pexels-photo-6765056.jpeg?auto=compress&cs=tinysrgb&w=560&h=373&fit=crop', alt:'Ölçü alan terzi (örnek görsel)' },
+                { img:'https://images.pexels.com/photos/18022030/pexels-photo-18022030.jpeg?auto=compress&cs=tinysrgb&w=560&h=373&fit=crop', alt:'Elbise dikimi (örnek görsel)' },
+                { img:'https://images.pexels.com/photos/31112215/pexels-photo-31112215.jpeg?auto=compress&cs=tinysrgb&w=560&h=373&fit=crop', alt:'Tekstil dikim atölyesi (örnek görsel)' },
               ].map((g,i)=>(
                 <div className="gallery-item" key={i}>
                   <img src={g.img} alt={g.alt} loading="lazy" width={560} height={373} />
@@ -579,8 +570,8 @@ export default function TerziHizmetiPage() {
         <section className="sec" style={{background:C.bg3}} id="faq" aria-labelledby="faq-h">
           <div className="ctr" style={{maxWidth:760}}>
             <div className="sec-head">
-              <span className="eyebrow">FAQ / SSS / ЧАВО</span>
-              <h2 className="sec-h ff" id="faq-h">Sık Sorulan Sorular & Multilingual FAQ</h2>
+              <span className="eyebrow">SSS</span>
+              <h2 className="sec-h ff" id="faq-h">Sık Sorulan Sorular</h2>
             </div>
             {FAQS.map(([q,a])=>(
               <div key={q} className="faq-item">

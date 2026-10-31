@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     title: 'Портной Анталья · Выездной портной в отель',
     description: 'Пошив, ремонт, подгонка и глажка во всех районах Антальи. Мы приедем к вам.',
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'ru_RU', alternateLocale: ['tr_TR'], type: 'website',
-    images: [{ url: OG, width: 1024, height: 1024, alt: 'Портной Анталья', type: 'image/png' }],
+    images: [{ url: OG, width: 1024, height: 1024, alt: 'Портной Анталья', type: 'image/jpeg' }],
   },
   twitter: { card: 'summary_large_image', title: 'Портной Анталья — Выездной портной', description: 'Приедем в ваш отель во всех районах Антальи.', images: [OG] },
   other: { 'geo.region': 'TR-07', 'geo.placename': 'Antalya', contact: PHONE },
@@ -252,7 +252,7 @@ export default function UslugiPortnogoAntalyaPage() {
           <section className="sec" id="fiyatlar" aria-labelledby="price-h">
             <div className="ctr">
               <div className="sec-head">
-                <span className="eyebrow">₺ Прозрачные цены 2026</span>
+                <span className="eyebrow">₺ Цены 2026</span>
                 <h2 className="sec-h" id="price-h">Цены на пошив, ремонт, подгонку и глажку</h2>
                 <p className="sec-sub">Отправьте фото в WhatsApp для точной цены.</p>
               </div>

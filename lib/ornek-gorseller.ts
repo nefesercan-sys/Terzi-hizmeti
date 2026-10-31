@@ -97,6 +97,12 @@ export const GORSELLER = {
   'polar-yelek': { ...S('polar-yelek'),
     baslik: { tr: 'Polar yelek', en: 'Fleece vest', de: 'Fleeceweste', ru: 'Флисовый жилет' },
     aciklama: { tr: 'Fermuarlı polar yelek; ekip giyimi için logolu üretim yapılır.', en: 'Zippered fleece vest; made with a logo for team wear.', de: 'Fleeceweste mit Reißverschluss; für Teamkleidung mit Logo.', ru: 'Флисовый жилет на молнии; для командной одежды — с логотипом.' } },
+  'eve-gelen-terzi': { ...S('eve-gelen-terzi'),
+    baslik: { tr: 'Eve ve otele gelen terzi', en: 'Tailor visiting your home or hotel', de: 'Schneider kommt zu Ihnen nach Hause oder ins Hotel', ru: 'Портной приезжает домой или в отель' },
+    aciklama: { tr: 'Ölçü ve prova için adresinize gelen terzi hizmeti.', en: 'A tailor who comes to your address for measuring and fittings.', de: 'Ein Schneider, der zum Maßnehmen und zur Anprobe zu Ihnen kommt.', ru: 'Портной приезжает по вашему адресу для мерок и примерки.' } },
+  'kuru-temizleme-utu': { ...S('kuru-temizleme-utu'),
+    baslik: { tr: 'Kuru temizleme ve ütü', en: 'Dry cleaning and ironing', de: 'Reinigung und Bügeln', ru: 'Химчистка и глажка' },
+    aciklama: { tr: 'Kuru temizleme, buharlı ütü ve pres hizmeti.', en: 'Dry cleaning, steam ironing and pressing.', de: 'Reinigung, Dampfbügeln und Pressen.', ru: 'Химчистка, отпаривание и глажка.' } },
 } satisfies Record<string, OrnekGorsel>;
 
 export type GorselAnahtar = keyof typeof GORSELLER;

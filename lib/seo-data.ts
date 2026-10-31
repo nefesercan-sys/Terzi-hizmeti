@@ -17,6 +17,7 @@ type L4<T = string> = Record<Lang, T>;
 export const SITE = 'https://terzihizmeti.com.tr';
 export const PHONE = '+90 531 898 64 18';
 export const PHONE_TEL = '+905318986418';
+export const BUSINESS_ID = `${SITE}#business`;
 export const MAPS = 'https://www.google.com/maps?cid=6436895271281342624';
 export const LAST_UPDATE = '2026-10-30';
 

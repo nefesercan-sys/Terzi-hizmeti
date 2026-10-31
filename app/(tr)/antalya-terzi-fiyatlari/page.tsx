@@ -61,7 +61,7 @@ const QUICK: { q: string; a: string; price: string; href: string; cta: string }[
   { q: 'Fermuar değişimi', a: 'Pantolon, kot, etek, mont ve çanta fermuarı.', price: '₺300\'den', href: '/konyaalti-fermuar-tamiri', cta: 'Fermuar tamiri' },
   { q: 'Elbise diktirmek / kendime elbise dikmek', a: 'Ölçü, model ve kumaş seçimi, prova ve teslim. Fotoğrafını gönderin.', price: '₺800\'den', href: '#dikim', cta: 'Özel dikim' },
   { q: 'Gelinlik ve abiye tadilatı', a: 'Hassas daraltma, boy ve askı ayarı; prova randevusu.', price: '₺800\'den', href: '/antalya-gelinlik-tadilati', cta: 'Gelinlik tadilatı' },
-  { q: 'Adrese veya otele gelen terzi', a: 'Ölçüyü adresinizde alırız, işi atölyede yapar, geri teslim ederiz.', price: 'Konyaaltı ücretsiz, diğer bölgeler mesafeye göre', href: '/otele-gelen-terzi-antalya', cta: 'Otele gelen terzi' },
+  { q: 'Adrese veya otele gelen terzi', a: 'Ölçüyü adresinizde alırız, işi atölyede yapar, geri teslim ederiz.', price: 'Otellere ücretsiz; ev adresi WhatsApp\'tan', href: '/otele-gelen-terzi-antalya', cta: 'Otele gelen terzi' },
   { q: 'Pamuklu, doğal kumaştan dikim', a: '%100 keten ve pamuktan özel dikim ve seri üretim yapılır.', price: 'Fotoğrafa göre', href: '/keten-pamuk-ozel-dikim', cta: 'Keten & pamuk' },
   { q: 'Model, tasarım, dikim atölyesi, seri imalat', a: 'Önce numune, onaydan sonra seri imalat ve üretim takibi (adet: modele göre teklif, proje bazında netleşir).', price: 'Teklif', href: '/anavera-tekstil', cta: 'Anavera Tekstil' },
 ];
@@ -89,7 +89,7 @@ const FAQS: [string, string][] = [
   ['Fermuar değişimi yapan, hafta sonu açık bir terzi var mı?',
    'Terzi Can haftanın 7 günü, Cumartesi ve Pazar dahil, 08:00–23:00 arası açıktır. Mesai dışında WhatsApp\'tan fotoğraf ve mesaj bırakabilirsiniz. Fermuar değişimi ₺300\'den başlar.'],
   ['Adrese veya otele gelen terzi var mı?',
-   'Evet. Ölçü ve teslim adresinizde ya da otelinizde yapılır, iş atölyede tamamlanır. Konyaaltı\'nda ziyaret ücretsizdir; diğer bölgelerde servis ücreti mesafeye göre belirlenir. Ayrıntı: /otele-gelen-terzi-antalya'],
+   'Evet. Ölçü ve teslim adresinizde ya da otelinizde yapılır, iş atölyede tamamlanır. Otellere ziyaret hizmet verilen tüm bölgelerde ücretsizdir; ev adreslerinde ücretsiz servis Konyaaltı ve yakın mahallelerde geçerlidir, diğer bölgeler WhatsApp\'tan sorulur. Ayrıntı: /otele-gelen-terzi-antalya'],
   ['Terzi fiyatlarını nasıl öğrenirim?',
    'Yukarıdaki liste başlangıç fiyatlarıdır. İşin fotoğrafını WhatsApp\'tan gönderirseniz kumaşa ve işçiliğe göre net fiyat söylenir; teklif ücretsizdir.'],
   ['En hızlı ve uygun fiyatlı terzi hizmeti hangisi?',

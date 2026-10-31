@@ -102,7 +102,7 @@ const T = {
       ['Address', 'Hurma Mahallesi, 07130 Konyaaltı / Antalya, Türkiye'],
       ['Opening hours', 'Every day 08:00–23:00 (including Saturday and Sunday)'],
       ['Languages', 'English, Turkish, Russian, German'],
-      ['Service', 'Free pick-up and delivery to hotels and homes in Konyaaltı (other areas priced by distance, arranged on WhatsApp)'],
+      ['Service', 'Free pick-up and delivery to hotels in every area we serve; home addresses are free in Konyaaltı and nearby neighbourhoods (other areas: ask on WhatsApp)'],
     ] as [string, string][],
     needH: 'What do you need?',
     needSub: 'Tap what you need: open the page or ask directly on WhatsApp.',
@@ -111,7 +111,7 @@ const T = {
     steps: [
       ['1', 'Send a photo', 'Send a photo of the garment and what you need on WhatsApp.'],
       ['2', 'Price and time', 'We reply with the price and turnaround. Hemming, waist and zipper jobs are mostly ready the same day.'],
-      ['3', 'Visit us or we come to you', 'Drop in at our workshop or ask for hotel/home pick-up and delivery (free in Konyaaltı).'],
+      ['3', 'Visit us or we come to you', 'Drop in at our workshop or ask for hotel/home pick-up and delivery (hotel service is free).'],
     ] as [string, string, string][],
     faqH: 'Frequently asked questions',
     faq: [
@@ -155,7 +155,7 @@ const T = {
     steps: [
       ['1', 'Пришлите фото', 'Отправьте в WhatsApp фото вещи и напишите, что нужно сделать.'],
       ['2', 'Цена и срок', 'Мы ответим с ценой и сроком. Подшив, талия и молния чаще всего готовы на следующий день.'],
-      ['3', 'Приходите или мы приедем', 'Заходите в мастерскую или закажите забор и доставку в отель или на дом (в Коньяалты бесплатно).'],
+      ['3', 'Приходите или мы приедем', 'Заходите в мастерскую или закажите забор и доставку в отель или на дом (для отелей бесплатно).'],
     ] as [string, string, string][],
     faqH: 'Частые вопросы',
     faq: [
@@ -199,7 +199,7 @@ const T = {
     steps: [
       ['1', 'Foto senden', 'Schicken Sie per WhatsApp ein Foto des Kleidungsstücks und Ihren Wunsch.'],
       ['2', 'Preis und Zeit', 'Wir nennen Preis und Fertigstellungszeit. Kürzen, Taille und Reißverschluss sind am nächsten Tag fertig (eilig in 1–2 Stunden).'],
-      ['3', 'Kommen Sie vorbei oder wir kommen', 'Besuchen Sie unsere Werkstatt oder fragen Sie die Abholung und Lieferung ins Hotel oder nach Hause an (in Konyaaltı kostenlos).'],
+      ['3', 'Kommen Sie vorbei oder wir kommen', 'Besuchen Sie unsere Werkstatt oder fragen Sie die Abholung und Lieferung ins Hotel oder nach Hause an (Hotelservice kostenlos).'],
     ] as [string, string, string][],
     faqH: 'Häufige Fragen',
     faq: [

@@ -3,6 +3,8 @@ import { notFound } from 'next/navigation';
 import { zoneAlt } from '@/lib/intl-zones';
 import { OTEL_BOLGELERI, bulOtelBolgesi } from '@/lib/otel-bolgeleri';
 import OtelBolgeSayfasi from '@/components/OtelBolgeSayfasi';
+import { regionJsonLd } from '@/lib/otel-copy';
+import { BUSINESS_ID } from '@/lib/seo-data';
 
 const SITE = 'https://terzihizmeti.com.tr';
 const PHONE_TEL = '+905318986418';
@@ -57,50 +59,12 @@ export default async function OtelBolgeRuPage({ params }: { params: Promise<{ re
   if (!r) notFound();
 
   const url = `${SITE}${BASE_PATH}/${r.slug}`;
-  
-  const seoContent = {
-    h1: `Портной для гостей отелей района ${r.name}: заберём, подгоним, вернём`,
-    h2: `Подгонка и ремонт одежды в отпуске — без поездки в город`,
-    body1: `Брюки длинны, молния сломалась, платье нужно ушить к ужину? Если вы остановились в районе ${r.name}, пришлите фото в WhatsApp — скажем, что можно сделать и сколько это стоит.`,
-    body2: `Мастерская находится в Хурме (Коньяалты) и работает ежедневно с 08:00 до 23:00. Мы забираем вещь из вашего отеля, работаем в мастерской и возвращаем обратно; стоимость забора и доставки в отели зависит от района. Подшив, ушивание и молнии готовы на следующий день.`
-  };
-
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@graph': [
-      {
-        '@type': 'Service',
-        '@id': `${url}#service`,
-        name: `Портной с выездом в отель — ${r.name}`,
-        serviceType: 'Clothing Alterations & Mobile Tailoring',
-        provider: { '@type': 'ClothingStore', name: 'Terzi Can', telephone: PHONE_TEL, url: `${SITE}/antalya-terzi`, image: `${SITE}/terzi-can-hero.jpg` },
-        areaServed: { '@type': 'Place', name: `${r.name}, Antalya` },
-        description: seoContent.body2,
-        url,
-      },
-      {
-        '@type': 'FAQPage',
-        '@id': `${url}#faq`,
-        mainEntity: [
-          {
-            '@type': 'Question',
-            name: `Как забрать вещь из отеля в районе ${r.name}?`,
-            acceptedAnswer: { '@type': 'Answer', text: `Пришлите в WhatsApp фото вещи и название отеля. Мы согласуем время, заберём вещь в мастерскую и вернём её в ваш отель.` },
-          },
-          {
-            '@type': 'Question',
-            name: `Когда я получу вещь обратно?`,
-            acceptedAnswer: { '@type': 'Answer', text: `Срочный ремонт и подгонка занимают 1–2 часа, обычные — до следующего дня; при индивидуальном пошиве срок зависит от модели и количества изделий.` },
-          },
-        ],
-      },
-    ],
-  };
+  const jsonLd = regionJsonLd('ru', r.slug, r.name, url, SITE, BUSINESS_ID);
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <OtelBolgeSayfasi lang="ru" region={r} allRegions={OTEL_BOLGELERI} basePath={BASE_PATH} maps={MAPS} seoContent={seoContent} />
+      <OtelBolgeSayfasi lang="ru" region={r} allRegions={OTEL_BOLGELERI} basePath={BASE_PATH} maps={MAPS} />
     </>
   );
 }

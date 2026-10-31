@@ -5,7 +5,6 @@
 // Veri: otel adları ve bölge tanımı lib/otel-bolgeleri.ts'ten; mesafe/dakika YAZILMAZ (sitenin kuralı).
 // Ücretsiz alım-teslim yalnızca Konyaaltı; diğer bölgelerde koşullar WhatsApp'tan teyit edilir.
 // ============================================================
-import { OTEL_BOLGELERI } from '@/lib/otel-bolgeleri';
 import { ILANGS, type ILang } from '@/lib/intl';
 
 import { DELIVERY } from '@/lib/delivery';
@@ -99,8 +98,8 @@ const BLURB: Record<ILang, Record<ZoneSlug, string>> = {
 export type ZCopy = {
   title: (z: string) => string; desc: (z: string) => string; h1: (z: string) => string; lead: (z: string) => string;
   aboutTitle: (z: string) => string; hotelsLabel: string;
-  howTitle: string; how: (z: string, home: boolean) => string;
-  faqTitle: string; faq: (z: string, home: boolean) => [string, string][];
+  howTitle: string; how: (z: string, home?: boolean) => string;
+  faqTitle: string; faq: (z: string, home?: boolean) => [string, string][];
   back: string; zonesLabel: string; wa: (z: string) => string; cta: string;
 };
 
@@ -111,10 +110,10 @@ export const ZCOPY: Record<ILang, ZCopy> = {
     h1: (z) => `Sastre para hoteles en ${z}`, lead: (z) => `Si se aloja en ${z}, le recogemos la prenda en el hotel y se la devolvemos arreglada. Envíe una foto por WhatsApp y le decimos precio y plazo.`,
     aboutTitle: (z) => `Sobre la zona de ${z}`, hotelsLabel: 'Ejemplos de hoteles de la zona',
     howTitle: 'Cómo funciona en su hotel',
-    how: (z, home) => home ? `Nuestro taller está en Hurma, Konyaaltı, y la recogida y entrega en hoteles de Konyaaltı es gratuita. Escríbanos con el nombre de su hotel y la fecha de salida.` : `Escríbanos por WhatsApp con el nombre de su hotel en ${z} y su fecha de salida. Confirmamos las condiciones de recogida y entrega para su hotel antes de nada.`,
+    how: (z) => `Nuestro taller está en Hurma, Konyaaltı. La recogida y la entrega en hoteles son gratuitas en todas las zonas que atendemos, incluida ${z}. Escríbanos por WhatsApp con el nombre de su hotel y su fecha de salida.`,
     faqTitle: 'Preguntas frecuentes',
     faq: (z, home) => [
-      [`¿Atienden hoteles en ${z}?`, home ? `Sí. El taller está en Konyaaltı y la recogida en hoteles de la zona es gratuita.` : `Sí, atendemos hoteles en ${z}. Indíquenos el nombre del hotel por WhatsApp y confirmamos las condiciones.`],
+      [`¿Atienden hoteles en ${z}?`, `Sí, atendemos hoteles en ${z}. La recogida y entrega en hoteles es gratuita; indíquenos el nombre del hotel por WhatsApp.`],
       ['¿Cuánto tarda un arreglo?', `${DELIVERY.es.urgent} ${DELIVERY.es.normal}`],
       ['¿Cómo conozco el precio?', 'Envíe por WhatsApp una foto de la prenda y del problema; normalmente indicamos precio y plazo desde la foto.'],
     ],
@@ -126,10 +125,10 @@ export const ZCOPY: Record<ILang, ZCopy> = {
     h1: (z) => `Tailleur pour hôtels à ${z}`, lead: (z) => `Si vous séjournez à ${z}, nous récupérons le vêtement à l'hôtel et vous le rapportons retouché. Envoyez une photo sur WhatsApp : prix et délai vous sont indiqués.`,
     aboutTitle: (z) => `À propos de la zone de ${z}`, hotelsLabel: 'Exemples d\'hôtels de la zone',
     howTitle: 'Comment cela se passe à votre hôtel',
-    how: (z, home) => home ? `Notre atelier est à Hurma, Konyaaltı, et la collecte et la livraison dans les hôtels de Konyaaltı sont gratuites. Écrivez-nous avec le nom de votre hôtel et votre date de départ.` : `Écrivez-nous sur WhatsApp avec le nom de votre hôtel à ${z} et votre date de départ. Nous confirmons d'abord les conditions de collecte et de livraison pour votre hôtel.`,
+    how: (z) => `Notre atelier est à Hurma, Konyaaltı. La collecte et la livraison dans les hôtels sont gratuites dans toutes les zones desservies, y compris ${z}. Écrivez-nous sur WhatsApp avec le nom de votre hôtel et votre date de départ.`,
     faqTitle: 'Questions fréquentes',
     faq: (z, home) => [
-      [`Desservez-vous les hôtels à ${z} ?`, home ? 'Oui. L\'atelier est à Konyaaltı et la collecte dans les hôtels du secteur est gratuite.' : `Oui, nous desservons les hôtels à ${z}. Indiquez-nous le nom de l'hôtel sur WhatsApp et nous confirmons les conditions.`],
+      [`Desservez-vous les hôtels à ${z} ?`, `Oui, nous desservons les hôtels à ${z}. La collecte et la livraison dans les hôtels sont gratuites ; indiquez-nous le nom de l\'hôtel sur WhatsApp.`],
       ['Combien de temps dure une retouche ?', `${DELIVERY.fr.urgent} ${DELIVERY.fr.normal}`],
       ['Comment connaître le prix ?', 'Envoyez sur WhatsApp une photo du vêtement et du problème ; nous indiquons en général prix et délai d\'après la photo.'],
     ],
@@ -141,10 +140,10 @@ export const ZCOPY: Record<ILang, ZCopy> = {
     h1: (z) => `Krawiec dla hoteli w ${z}`, lead: (z) => `Jeśli mieszkasz w ${z}, odbierzemy ubranie z hotelu i oddamy je poprawione. Wyślij zdjęcie na WhatsAppie, a podamy cenę i termin.`,
     aboutTitle: (z) => `O rejonie ${z}`, hotelsLabel: 'Przykładowe hotele w okolicy',
     howTitle: 'Jak to wygląda w Twoim hotelu',
-    how: (z, home) => home ? `Nasza pracownia jest w Hurma w Konyaaltı, a odbiór i dostawa do hoteli w Konyaaltı są bezpłatne. Napisz do nas z nazwą hotelu i datą wyjazdu.` : `Napisz na WhatsAppie z nazwą hotelu w ${z} i datą wyjazdu. Najpierw potwierdzimy warunki odbioru i dostawy dla Twojego hotelu.`,
+    how: (z) => `Nasza pracownia jest w Hurma w Konyaaltı. Odbiór i dostawa do hoteli są bezpłatne we wszystkich obsługiwanych rejonach, także w ${z}. Napisz na WhatsAppie z nazwą hotelu i datą wyjazdu.`,
     faqTitle: 'Najczęstsze pytania',
     faq: (z, home) => [
-      [`Czy obsługujecie hotele w ${z}?`, home ? 'Tak. Pracownia jest w Konyaaltı, a odbiór z hoteli w tej okolicy jest bezpłatny.' : `Tak, obsługujemy hotele w ${z}. Podaj nazwę hotelu na WhatsAppie, a potwierdzimy warunki.`],
+      [`Czy obsługujecie hotele w ${z}?`, `Tak, obsługujemy hotele w ${z}. Odbiór i dostawa do hoteli są bezpłatne; podaj nazwę hotelu na WhatsAppie.`],
       ['Ile trwa przeróbka?', `${DELIVERY.pl.urgent} ${DELIVERY.pl.normal}`],
       ['Jak poznać cenę?', 'Wyślij na WhatsAppie zdjęcie ubrania i problemu; zwykle podajemy cenę i termin na podstawie zdjęcia.'],
     ],
@@ -156,10 +155,10 @@ export const ZCOPY: Record<ILang, ZCopy> = {
     h1: (z) => `Кравець для готелів: ${z}`, lead: (z) => `Якщо ви зупинилися в районі ${z}, ми заберемо річ у готелі й повернемо підігнаною. Надішліть фото у WhatsApp, і ми назвемо ціну та строк.`,
     aboutTitle: (z) => `Про район: ${z}`, hotelsLabel: 'Приклади готелів у районі',
     howTitle: 'Як це відбувається у вашому готелі',
-    how: (z, home) => home ? `Наше ательє в районі Хурма, Коньяалти, а забір і доставка до готелів Коньяалти безкоштовні. Напишіть нам з назвою готелю та датою виїзду.` : `Напишіть у WhatsApp з назвою вашого готелю (${z}) і датою виїзду. Спершу ми підтвердимо умови забору та доставки для вашого готелю.`,
+    how: (z) => `Наше ательє в районі Хурма, Коньяалти. Забір і доставка до готелів безкоштовні в усіх районах, які ми обслуговуємо, зокрема в ${z}. Напишіть у WhatsApp з назвою готелю та датою виїзду.`,
     faqTitle: 'Часті запитання',
     faq: (z, home) => [
-      [`Чи обслуговуєте ви готелі в районі ${z}?`, home ? 'Так. Ательє у Коньяалти, а забір із готелів району безкоштовний.' : `Так, ми обслуговуємо готелі в районі ${z}. Вкажіть назву готелю у WhatsApp, і ми підтвердимо умови.`],
+      [`Чи обслуговуєте ви готелі в районі ${z}?`, `Так, ми обслуговуємо готелі в районі ${z}. Забір і доставка до готелів безкоштовні; вкажіть назву готелю у WhatsApp.`],
       ['Скільки триває підгонка?', `${DELIVERY.uk.urgent} ${DELIVERY.uk.normal}`],
       ['Як дізнатися ціну?', 'Надішліть у WhatsApp фото речі та проблеми; зазвичай ми називаємо ціну та строк за фото.'],
     ],
@@ -171,10 +170,10 @@ export const ZCOPY: Record<ILang, ZCopy> = {
     h1: (z) => `Kleermaker voor hotels in ${z}`, lead: (z) => `Verblijft u in ${z}? Dan halen wij het kledingstuk op bij uw hotel en brengen het aangepast terug. Stuur een foto via WhatsApp en wij geven prijs en termijn door.`,
     aboutTitle: (z) => `Over het gebied ${z}`, hotelsLabel: 'Voorbeelden van hotels in de buurt',
     howTitle: 'Zo werkt het bij uw hotel',
-    how: (z, home) => home ? `Ons atelier ligt in Hurma, Konyaaltı, en ophalen en terugbrengen bij hotels in Konyaaltı is gratis. Schrijf ons met de naam van uw hotel en uw vertrekdatum.` : `Schrijf ons via WhatsApp met de naam van uw hotel in ${z} en uw vertrekdatum. Wij bevestigen eerst de voorwaarden voor ophalen en terugbrengen bij uw hotel.`,
+    how: (z) => `Ons atelier ligt in Hurma, Konyaaltı. Ophalen en terugbrengen bij hotels is gratis in alle gebieden die wij bedienen, ook in ${z}. Schrijf ons via WhatsApp met de naam van uw hotel en uw vertrekdatum.`,
     faqTitle: 'Veelgestelde vragen',
     faq: (z, home) => [
-      [`Bedienen jullie hotels in ${z}?`, home ? 'Ja. Het atelier ligt in Konyaaltı en ophalen bij hotels in de buurt is gratis.' : `Ja, wij bedienen hotels in ${z}. Geef de hotelnaam door via WhatsApp en wij bevestigen de voorwaarden.`],
+      [`Bedienen jullie hotels in ${z}?`, `Ja, wij bedienen hotels in ${z}. Ophalen en terugbrengen bij hotels is gratis; geef de hotelnaam door via WhatsApp.`],
       ['Hoe lang duurt een aanpassing?', `${DELIVERY.nl.urgent} ${DELIVERY.nl.normal}`],
       ['Hoe weet ik de prijs?', 'Stuur via WhatsApp een foto van het kledingstuk en het probleem; meestal noemen wij prijs en termijn aan de hand van de foto.'],
     ],
@@ -186,10 +185,10 @@ export const ZCOPY: Record<ILang, ZCopy> = {
     h1: (z) => `خيّاط لفنادق ${z}`, lead: (z) => `إذا كنت تقيم في ${z} فنستلم القطعة من فندقك ونعيدها إليك معدّلة. أرسل صورة عبر واتساب ونخبرك بالسعر والموعد.`,
     aboutTitle: (z) => `نبذة عن منطقة ${z}`, hotelsLabel: 'أمثلة على فنادق في المنطقة',
     howTitle: 'كيف يتم الأمر في فندقك',
-    how: (z, home) => home ? `ورشتنا في حي هورما بكونيالتي، والاستلام والتسليم في فنادق كونيالتي مجاني. راسلنا باسم فندقك وتاريخ مغادرتك.` : `راسلنا على واتساب باسم فندقك في ${z} وتاريخ مغادرتك. نؤكد لك أولاً شروط الاستلام والتسليم لفندقك.`,
+    how: (z) => `ورشتنا في حي هورما بكونيالتي. الاستلام والتسليم في الفنادق مجاني في جميع المناطق التي نخدمها، ومنها ${z}. راسلنا على واتساب باسم فندقك وتاريخ مغادرتك.`,
     faqTitle: 'الأسئلة الشائعة',
     faq: (z, home) => [
-      [`هل تخدمون فنادق ${z}؟`, home ? 'نعم. الورشة في كونيالتي والاستلام من فنادق المنطقة مجاني.' : `نعم، نخدم فنادق ${z}. أرسل اسم الفندق عبر واتساب ونؤكد لك الشروط.`],
+      [`هل تخدمون فنادق ${z}؟`, `نعم، نخدم فنادق ${z}. الاستلام والتسليم في الفنادق مجاني؛ أرسل اسم الفندق عبر واتساب.`],
       ['كم يستغرق التعديل؟', `${DELIVERY.ar.urgent} ${DELIVERY.ar.normal}`],
       ['كيف أعرف السعر؟', 'أرسل عبر واتساب صورة للقطعة وللمشكلة؛ نحدد السعر والموعد عادةً من الصورة.'],
     ],
@@ -197,7 +196,7 @@ export const ZCOPY: Record<ILang, ZCopy> = {
   },
 };
 
+
 export function zoneData(l: ILang, z: ZoneSlug) {
-  const reg = OTEL_BOLGELERI.find((b) => b.slug === z);
-  return { name: NAMES[l][z], blurb: BLURB[l][z], hotels: reg ? reg.hotels.filter((h) => !/\(yakın\)/.test(h)) : [], home: z === 'konyaalti' };
+  return { name: NAMES[l][z], blurb: BLURB[l][z], hotels: [] as string[], home: z === 'konyaalti' };
 }

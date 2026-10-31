@@ -51,7 +51,7 @@ export interface AngleCtx {
 const SVC: Record<ALang, { free: string; paid: string }> = {
   tr: { free: 'Konyaaltı\'nda ücretsiz servis', paid: 'Uzak bölgede servis duruma göre' },
   en: { free: 'Free pick-up in Konyaaltı', paid: 'Pick-up priced by area' },
-  ru: { free: 'Выезд в Коньяалты бесплатно', paid: 'Выезд — по району' },
+  ru: { free: 'Забор из отелей бесплатно', paid: 'Выезд — по району' },
   de: { free: 'Gratis-Abholung in Konyaaltı', paid: 'Abholung je nach Gebiet' },
 };
 

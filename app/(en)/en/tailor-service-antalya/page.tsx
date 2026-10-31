@@ -54,7 +54,7 @@ const EXTRA_FAQS: [string, string][] = [
   ['Where can I get trousers hemmed near me in Antalya?', 'At Terzi Can in Hurma, Konyaaltı, open every day 08:00–23:00. Hemming (trousers, jeans) starts at ₺200 and is ready the next day (urgent jobs 1–2 hours). WhatsApp: ' + PHONE],
   ['How much does hemming and zipper replacement cost in Antalya?', 'Hemming from ₺200, waist taking-in from ₺200, zipper replacement from ₺300, wedding dress alteration from ₺800 (2026 prices). Send a photo on WhatsApp for an exact quote.'],
   ['Can you alter a jacket, coat, shirt, skirt or shorts?', 'Yes. We alter and repair jackets, coats, shirts, skirts, shorts, dresses and trousers for men and women. Send a photo of the garment on WhatsApp and we will quote the price and time.'],
-  ['I am a hotel guest staying only a few days. Is that enough time?', 'Yes. Most hemming and repairs are ready the next day (urgent jobs 1–2 hours), and we can pick up and return clothes to your hotel (free in Konyaaltı, priced by distance elsewhere).'],
+  ['I am a hotel guest staying only a few days. Is that enough time?', 'Yes. Most hemming and repairs are ready the next day (urgent jobs 1–2 hours), and we can pick up and return clothes to your hotel (free for hotels).'],
   ['What are your opening hours and how do I contact you?', 'Every day 08:00–23:00. Call or WhatsApp ' + PHONE + '. The workshop is in Hurma, Konyaaltı, Antalya.'],
 ];
 
@@ -99,7 +99,7 @@ const jsonLd = {
       '@type': 'FAQPage', '@id': `${PAGE_URL}#faq`,
       mainEntity: [
         { '@type': 'Question', name: 'Do you come to hotels in Belek, Lara and Kemer?', acceptedAnswer: { '@type': 'Answer', text: `Yes! Our mobile tailor comes to all hotels in Belek, Lara, Kemer and Side. Share your hotel name on WhatsApp. WhatsApp: ${PHONE}` } },
-        { '@type': 'Question', name: 'Is the mobile visit free?', acceptedAnswer: { '@type': 'Answer', text: 'The visit is free in Konyaaltı. In other districts the visit fee depends on the distance and is confirmed on WhatsApp beforehand.' } },
+        { '@type': 'Question', name: 'Is the mobile visit free?', acceptedAnswer: { '@type': 'Answer', text: 'Hotel visits are free in every area we serve. In other districts the visit fee depends on the distance and is confirmed on WhatsApp beforehand.' } },
         { '@type': 'Question', name: 'Do you offer ironing and dry cleaning too?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, professional steam ironing and dry cleaning, with pickup and delivery to your hotel or address.' } },
         { '@type': 'Question', name: 'Can I get same-day alterations?', acceptedAnswer: { '@type': 'Answer', text: `Yes, most repairs and hemming are completed the next day (urgent jobs 1–2 hours). WhatsApp: ${PHONE}` } },
         { '@type': 'Question', name: 'Do you speak English?', acceptedAnswer: { '@type': 'Answer', text: 'Yes — write to us on WhatsApp in your own language and we will reply.' } },
@@ -111,9 +111,9 @@ const jsonLd = {
 
 const PRIORITY_DISTRICTS = [
   { name: 'Konyaaltı', tag: 'Workshop', note: 'Our workshop is here — same-day service' },
-  { name: 'Muratpaşa', tag: 'By distance', note: 'Mobile visit, same-day appointment; fee by distance' },
-  { name: 'Kepez', tag: 'By distance', note: 'Mobile visit; fee by distance' },
-  { name: 'Lara', tag: 'By distance', note: 'Mobile visit to Lara hotels; fee by distance' },
+  { name: 'Muratpaşa', tag: 'By distance', note: 'Mobile visit, same-day appointment; arranged on WhatsApp' },
+  { name: 'Kepez', tag: 'By distance', note: 'Mobile visit; arranged on WhatsApp' },
+  { name: 'Lara', tag: 'By distance', note: 'Mobile visit to Lara hotels; arranged on WhatsApp' },
   { name: 'Döşemealtı', tag: 'Nearby', note: 'Scheduled mobile visit' },
   { name: 'Aksu', tag: 'Nearby', note: 'Scheduled mobile visit' },
 ];
@@ -145,7 +145,7 @@ const FAQS: [string, string][] = [
   ['Is the mobile visit free?', 'Free in Konyaaltı. In other districts the visit fee depends on the distance; we confirm it on WhatsApp first.'],
   ['Do you offer ironing and dry cleaning?', 'Yes — professional steam ironing and dry cleaning, with pickup and delivery to your hotel or address.'],
   ['Can I get same-day alterations before an event?', 'Yes, most repairs and hemming are completed the next day (urgent jobs 1–2 hours).'],
-  ['Do you serve Konyaaltı and nearby districts?', 'Yes — free visits in Konyaaltı; Muratpaşa, Kepez, Lara, Döşemealtı, Belek, Kemer, Side and nearby districts by appointment, with the visit fee set by distance.'],
+  ['Do you serve Konyaaltı and nearby districts?', 'Yes — free visits in Konyaaltı; Muratpaşa, Kepez, Lara, Döşemealtı, Belek, Kemer, Side and nearby districts by appointment, arranged on WhatsApp.'],
   ['Do you speak English?', 'Yes — write to us on WhatsApp in your own language and we will reply.'],
   ...EXTRA_FAQS,
 ];
@@ -154,7 +154,7 @@ const PROCESS_STEPS: [string, string, string][] = [
   ['01', 'Share Your Location', 'Send your hotel name or address on WhatsApp.'],
   ['02', 'Measurement & Design', 'We take measurements at your address, or discuss design details.'],
   ['03', 'Tailoring / Repair', 'The work is completed at our Konyaaltı workshop.'],
-  ['04', 'Delivery', 'Free delivery in Konyaaltı; scheduled delivery elsewhere in Antalya, priced by distance.'],
+  ['04', 'Delivery', 'Free delivery in Konyaaltı; scheduled delivery elsewhere in Antalya. Ask on WhatsApp.'],
 ];
 
 export default function TailorServiceAntalyaPage() {
@@ -212,7 +212,7 @@ export default function TailorServiceAntalyaPage() {
               <div className="sec-head">
                 <span className="eyebrow">📍 Antalya Districts</span>
                 <h2 className="sec-h" id="nb-h">We Start From the District Closest to You</h2>
-                <p className="sec-sub">Free mobile visits in Konyaaltı; scheduled visits elsewhere in Antalya, priced by distance.</p>
+                <p className="sec-sub">Free mobile visits in Konyaaltı; scheduled visits elsewhere in Antalya. Ask on WhatsApp.</p>
               </div>
               <ul className="nb-grid" aria-label="Priority districts">
                 {PRIORITY_DISTRICTS.map((n) => (

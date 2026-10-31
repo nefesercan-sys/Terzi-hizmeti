@@ -125,10 +125,10 @@ interface HotelRegion {
 }
 
 const HOTEL_REGIONS: HotelRegion[] = [
-  { name: 'Belek & Kadriye', tag: 'Otel Servisi', desc: 'Maxx Royal, Regnum Carya, Rixos ve diğer tüm resort oteller.' },
-  { name: 'Lara & Kundu', tag: 'Hızlı Servis', desc: 'Titanic, Concorde, Delphin ve Kundu oteller bölgesi.' },
+  { name: 'Belek & Kadriye', tag: 'Otel Servisi', desc: 'Golf sahaları ve resort otelleriyle bilinen bölgedeki oteller.' },
+  { name: 'Lara & Kundu', tag: 'Hızlı Servis', desc: 'Lara ve Kundu otel bölgesindeki oteller.' },
   { name: 'Kemer Beli', tag: 'Randevulu', desc: 'Göynük, Beldibi, Tekirova, Kiriş otelleri.' },
-  { name: 'Konyaaltı & Şehir Merkezi', tag: 'Öncelikli', desc: 'Şehir içi tüm oteller, Su Hotel, Rixos Downtown vb.' },
+  { name: 'Konyaaltı & Şehir Merkezi', tag: 'Öncelikli', desc: 'Konyaaltı sahili ve şehir merkezindeki oteller.' },
 ];
 
 type Lang = 'tr' | 'en' | 'ru' | 'de';
@@ -141,8 +141,8 @@ interface LangLabel {
 }
 
 const LANG_LABELS: Record<Lang, LangLabel> = {
-  tr: { name: 'Türkçe', flag: '🇹🇷', note: 'Konyaaltı ve Meltem\'de alım-teslim ücretsizdir; diğer bölgeler için WhatsApp\'tan sorun.' },
-  en: { name: 'English', flag: '🇬🇧', note: 'Pick-up and delivery is free in Konyaaltı and Meltem; ask on WhatsApp for other areas.' },
+  tr: { name: 'Türkçe', flag: '🇹🇷', note: 'Konyaaltı ve Meltem\'de alım-teslim ücretsizdir; diğer ev adresleri için WhatsApp\'tan sorun.' },
+  en: { name: 'English', flag: '🇬🇧', note: 'Hotel pick-up and delivery is free everywhere we serve; home addresses are free in Konyaaltı and Meltem; ask on WhatsApp for other areas.' },
   ru: { name: 'Русский', flag: '🇷🇺', note: 'Забор и доставка бесплатны в Коньяалты и Мелтеме; для других районов уточняйте в WhatsApp.' },
   de: { name: 'Deutsch', flag: '🇩🇪', note: 'Abholung und Lieferung sind in Konyaaltı und Meltem kostenlos; für andere Gebiete bitte per WhatsApp anfragen.' },
 };

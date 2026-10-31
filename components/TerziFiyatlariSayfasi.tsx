@@ -188,7 +188,7 @@ export const FT: Record<FLang, FiyatText> = {
       {
         "q": "Adrese veya otele gelen terzi",
         "a": "Ölçüyü adresinizde alırız, işi atölyede yapar, geri teslim ederiz.",
-        "price": "Konyaaltı ücretsiz, diğer bölgeler mesafeye göre",
+        "price": "Otellere ücretsiz; ev adresi WhatsApp'tan",
         "href": "/otele-gelen-terzi-antalya",
         "cta": "Otele gelen terzi"
       },
@@ -234,7 +234,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Adrese veya otele gelen terzi var mı?",
-        "Evet. Ölçü ve teslim adresinizde ya da otelinizde yapılır, iş atölyede tamamlanır. Konyaaltı'nda ziyaret ücretsizdir; diğer bölgelerde servis ücreti mesafeye göre belirlenir. Ayrıntı: /otele-gelen-terzi-antalya"
+        "Evet. Ölçü ve teslim adresinizde ya da otelinizde yapılır, iş atölyede tamamlanır. Otellere ziyaret hizmet verilen tüm bölgelerde ücretsizdir; ev adreslerinde ücretsiz servis Konyaaltı ve yakın mahallelerde geçerlidir, diğer bölgeler WhatsApp'tan sorulur. Ayrıntı: /otele-gelen-terzi-antalya"
       ],
       [
         "Terzi fiyatlarını nasıl öğrenirim?",
@@ -405,7 +405,7 @@ export const FT: Record<FLang, FiyatText> = {
       {
         "q": "A tailor who comes to my hotel or address",
         "a": "We take measurements at your hotel or address, do the work in our workshop and deliver it back.",
-        "price": "Free in Konyaaltı; other areas by distance",
+        "price": "Free in Konyaaltı; other areas on request",
         "href": "/en/hotel-tailor-antalya",
         "cta": "Hotel tailor"
       },
@@ -451,7 +451,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Does a tailor come to my hotel or address?",
-        "Yes. Measurements and delivery are done at your hotel or address; the work is completed in the workshop. Visits are free in Konyaaltı, Muratpaşa, Kepez and Lara; other areas by appointment. Details: /en/hotel-tailor-antalya"
+        "Yes. Measurements and delivery are done at your hotel or address; the work is completed in the workshop. Hotel visits are free in every area we serve; home addresses are free in Konyaaltı and nearby neighbourhoods, other areas by appointment. Details: /en/hotel-tailor-antalya"
       ],
       [
         "How do I find out the price?",
@@ -620,7 +620,7 @@ export const FT: Record<FLang, FiyatText> = {
       {
         "q": "Schneider, der ins Hotel oder an meine Adresse kommt",
         "a": "Wir nehmen Maß in Ihrem Hotel oder an Ihrer Adresse, arbeiten in der Werkstatt und liefern zurück.",
-        "price": "Kostenlos in Konyaaltı; andere Gebiete nach Entfernung",
+        "price": "Kostenlos in Konyaaltı; Wohnadressen andernorts per WhatsApp",
         "href": "/de/schneider-service-hotel-antalya",
         "cta": "Schneider im Hotel"
       },
@@ -835,7 +835,7 @@ export const FT: Record<FLang, FiyatText> = {
       {
         "q": "Портной, который приедет в отель или по адресу",
         "a": "Снимаем мерки в отеле или по адресу, работаем в мастерской и привозим обратно.",
-        "price": "Бесплатно в Коньяалты; другие районы по расстоянию",
+        "price": "Бесплатно в Коньяалты; домашние адреса в других районах — через WhatsApp",
         "href": "/ru/vyezdnoy-portnoy-antalya",
         "cta": "Портной в отель"
       },

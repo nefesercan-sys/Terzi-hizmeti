@@ -3,6 +3,8 @@ import { notFound } from 'next/navigation';
 import { zoneAlt } from '@/lib/intl-zones';
 import { OTEL_BOLGELERI, bulOtelBolgesi } from '@/lib/otel-bolgeleri';
 import OtelBolgeSayfasi from '@/components/OtelBolgeSayfasi';
+import { regionJsonLd } from '@/lib/otel-copy';
+import { BUSINESS_ID } from '@/lib/seo-data';
 
 const SITE = 'https://terzihizmeti.com.tr';
 const PHONE_TEL = '+905318986418';
@@ -54,53 +56,12 @@ export default async function OtelBolgeEnPage({ params }: { params: Promise<{ re
   if (!r) notFound();
 
   const url = `${SITE}${BASE_PATH}/${r.slug}`;
-  
-  // İçerikte kullanılmak üzere hazırlanan VIP SEO Metinleri
-  const seoContent = {
-    h1: `Hotel Tailor in ${r.name} — We Collect, Fix and Bring It Back`,
-    h2: `Clothing alterations for holidaymakers, handled without a trip into town`,
-    body1: `A hem that is too long, a zipper that gave way, a dress that needs taking in before dinner? If you are staying in ${r.name}, send us a photo on WhatsApp and we will tell you what can be done and what it costs.`,
-    body2: `Our workshop is in Hurma, Konyaaltı, and it is open every day from 08:00 to 23:00. We collect the garment from your hotel, work on it in the workshop and deliver it back; pick-up and delivery fee to hotels depends on the area. Hemming, taking in and zipper jobs are ready the same day.`
-  };
-
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@graph': [
-      {
-        '@type': 'Service',
-        '@id': `${url}#service`,
-        name: `Hotel Tailor ${r.name} — Pick-up & Delivery`,
-        serviceType: 'Clothing Alterations & Mobile Tailoring',
-        provider: { '@type': 'ClothingStore', name: 'Terzi Can', telephone: PHONE_TEL, url: `${SITE}/antalya-terzi`, image: `${SITE}/terzi-can-hero.jpg`, priceRange: '$$' },
-        areaServed: { '@type': 'Place', name: `${r.name}, Antalya` },
-        description: seoContent.body2,
-        url,
-      },
-      {
-        '@type': 'FAQPage',
-        '@id': `${url}#faq`,
-        mainEntity: [
-          {
-            '@type': 'Question',
-            name: `How do I get my clothes collected from a hotel in ${r.name}?`,
-            acceptedAnswer: { '@type': 'Answer', text: `Send a photo of the garment and your hotel name on WhatsApp. We arrange a collection time, take the garment to our workshop and bring it back to your hotel.` },
-          },
-          {
-            '@type': 'Question',
-            name: `How soon will I get it back?`,
-            acceptedAnswer: { '@type': 'Answer', text: `Urgent repairs and alterations are ready in 1–2 hours and standard ones the next day; made-to-measure timing depends on the model and number of pieces.` },
-          },
-        ],
-      },
-    ],
-  };
+  const jsonLd = regionJsonLd('en', r.slug, r.name, url, SITE, BUSINESS_ID);
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      {/* seoContent objesini OtelBolgeSayfasi bileşenine prop olarak gönderebilir veya doğrudan burada ekranda basabilirsiniz */}
-      <OtelBolgeSayfasi lang="en" region={r} allRegions={OTEL_BOLGELERI} basePath={BASE_PATH} maps={MAPS} seoContent={seoContent} />
+      <OtelBolgeSayfasi lang="en" region={r} allRegions={OTEL_BOLGELERI} basePath={BASE_PATH} maps={MAPS} />
     </>
   );
 }
- 

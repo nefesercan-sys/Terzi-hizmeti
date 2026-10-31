@@ -296,7 +296,7 @@ const PROCESS_STEPS: [string, string, string][] = [
   ['01', 'Mahallenizi Belirtin', "WhatsApp\'tan bulunduğunuz mahalleyi ve ihtiyacınızı yazın."],
   ['02', 'Ölçü & Tasarım', 'Adresinizde ölçü alınır veya atölyede tasarım detayları belirlenir.'],
   ['03', 'Dikim / Üretim', 'Tekli dikim ya da toplu üniforma/fason üretimi atölyede tamamlanır.'],
-  ['04', 'Teslimat', 'Yakın mahallelerde ücretsiz, diğer bölgelere mesafeye göre randevulu teslim.'],
+  ['04', 'Teslimat', 'Yakın mahallelerde ücretsiz, diğer bölgeler WhatsApp\'tan sorulur.'],
 ];
 
 export default function KonyaaltiTailorServicePage() {

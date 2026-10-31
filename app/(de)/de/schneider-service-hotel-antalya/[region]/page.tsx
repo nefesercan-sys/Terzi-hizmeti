@@ -3,6 +3,8 @@ import { notFound } from 'next/navigation';
 import { zoneAlt } from '@/lib/intl-zones';
 import { OTEL_BOLGELERI, bulOtelBolgesi } from '@/lib/otel-bolgeleri';
 import OtelBolgeSayfasi from '@/components/OtelBolgeSayfasi';
+import { regionJsonLd } from '@/lib/otel-copy';
+import { BUSINESS_ID } from '@/lib/seo-data';
 
 const SITE = 'https://terzihizmeti.com.tr';
 const PHONE_TEL = '+905318986418';
@@ -61,50 +63,12 @@ export default async function OtelBolgeDePage({ params }: { params: Promise<{ re
   if (!r) notFound();
 
   const url = `${SITE}${BASE_PATH}/${r.slug}`;
-  
-  const seoContent = {
-    h1: `Schneider für Hotelgäste in ${r.name}: Abholung, Änderung, Rückgabe`,
-    h2: `Kleidung im Urlaub anpassen lassen – ohne Fahrt in die Stadt`,
-    body1: `Die Hose ist zu lang, der Reißverschluss defekt, das Kleid muss vor dem Abendessen enger? Wenn Sie in ${r.name} wohnen, schicken Sie uns ein Foto per WhatsApp – wir sagen Ihnen, was möglich ist und was es kostet.`,
-    body2: `Unsere Werkstatt liegt in Hurma, Konyaaltı, und ist täglich von 08:00 bis 23:00 geöffnet. Wir holen das Kleidungsstück im Hotel ab, arbeiten in der Werkstatt und bringen es zurück; das Entgelt für Abholung und Lieferung zu Hotels richtet sich nach dem Gebiet. Kürzen, Enger machen und Reißverschlussarbeiten sind am nächsten Tag fertig (eilig in 1–2 Stunden).`
-  };
-
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@graph': [
-      {
-        '@type': 'Service',
-        '@id': `${url}#service`,
-        name: `Schneider-Service mit Hotelabholung ${r.name}`,
-        serviceType: 'Clothing Alterations & Mobile Tailoring',
-        provider: { '@type': 'ClothingStore', name: 'Terzi Can', telephone: PHONE_TEL, url: `${SITE}/antalya-terzi`, image: `${SITE}/terzi-can-hero.jpg` },
-        areaServed: { '@type': 'Place', name: `${r.name}, Antalya` },
-        description: seoContent.body2,
-        url,
-      },
-      {
-        '@type': 'FAQPage',
-        '@id': `${url}#faq`,
-        mainEntity: [
-          {
-            '@type': 'Question',
-            name: `Wie wird meine Kleidung im Hotel in ${r.name} abgeholt?`,
-            acceptedAnswer: { '@type': 'Answer', text: `Senden Sie uns ein Foto des Kleidungsstücks und den Namen Ihres Hotels per WhatsApp. Wir vereinbaren eine Abholzeit, nehmen es mit in die Werkstatt und bringen es zurück ins Hotel.` },
-          },
-          {
-            '@type': 'Question',
-            name: `Wann bekomme ich die Kleidung zurück?`,
-            acceptedAnswer: { '@type': 'Answer', text: `Eilige Änderungen sind in 1–2 Stunden, normale am nächsten Tag fertig; bei Maßanfertigung richtet sich die Dauer nach Modell und Stückzahl.` },
-          },
-        ],
-      },
-    ],
-  };
+  const jsonLd = regionJsonLd('de', r.slug, r.name, url, SITE, BUSINESS_ID);
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <OtelBolgeSayfasi lang="de" region={r} allRegions={OTEL_BOLGELERI} basePath={BASE_PATH} maps={MAPS} seoContent={seoContent} />
+      <OtelBolgeSayfasi lang="de" region={r} allRegions={OTEL_BOLGELERI} basePath={BASE_PATH} maps={MAPS} />
     </>
   );
 }

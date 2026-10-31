@@ -79,7 +79,7 @@ const FAQS: [string, string][] = [
   ['Wo kann ich in Antalya in meiner Nähe eine Hose kürzen lassen?', 'Bei Terzi Can in Hurma, Konyaaltı, täglich von 08:00 bis 23:00 geöffnet. Hosen und Jeans kürzen ab ₺200, meist am nächsten Tag, eilig in 1–2 Stunden. WhatsApp: ' + PHONE],
   ['Was kostet Kürzen und Reißverschluss wechseln in Antalya?', 'Kürzen ab ₺200, Taille enger machen ab ₺200, Reißverschluss wechseln ab ₺300, Brautkleid ändern ab ₺800 (Preise 2026). Den genauen Preis nennen wir nach einem Foto per WhatsApp.'],
   ['Ändern Sie auch Jacken, Mäntel, Hemden, Röcke und Shorts?', 'Ja. Wir ändern und reparieren Jacken, Mäntel, Hemden, Röcke, Shorts, Kleider und Hosen für Damen und Herren. Senden Sie ein Foto per WhatsApp, wir nennen Preis und Dauer.'],
-  ['Ich bin nur wenige Tage im Hotel. Reicht die Zeit?', 'Ja. Kürzen und Reparaturen sind am nächsten Tag oder am nächsten Tag fertig. Wir holen die Kleidung im Hotel ab und bringen sie zurück (in Konyaaltı kostenlos, sonst nach Entfernung).'],
+  ['Ich bin nur wenige Tage im Hotel. Reicht die Zeit?', 'Ja. Kürzen und Reparaturen sind am nächsten Tag oder am nächsten Tag fertig. Wir holen die Kleidung im Hotel ab und bringen sie zurück (für Hotels kostenlos).'],
   ['Haben Sie am Wochenende geöffnet?', 'Ja, die Werkstatt ist an sieben Tagen in der Woche geöffnet. Die aktuellen Zeiten stehen bei Google Maps.'],
 ];
 

@@ -1,11 +1,11 @@
 // components/PromosyonTekstilSayfasi.tsx
 // Promosyon / reklam tekstili ve baskılı bez çanta imalatı — 10 dilde tek bileşen (veri: lib/promosyon-tekstil.ts).
-// Anavera Tekstil sayfalarıyla aynı görsel dil (lacivert/altın), sunucu bileşeni, stil inline, görsel yok.
+// Anavera Tekstil sayfalarıyla aynı görsel dil (lacivert/altın), sunucu bileşeni, stil inline; örnek görseller (yapay zekâ ile üretilmiş, "örnek görsel" etiketli).
 // RTL (ar): kök <div dir="rtl"> + mantıksal CSS özellikleri; telefon numarası dir="ltr".
 import Link from 'next/link';
 import {
   COPY, PHONE, PHONE_E, SITE, ANAVERA_TARGET, MAIN_TARGET, PLANGS, PROMO_PATH, PROMO_NAME,
-  buildPromoJsonLd, waLink, type PLang,
+  buildPromoJsonLd, waLink, PROMO_FOTOLAR, ORNEK_GORSEL, type PLang,
 } from '@/lib/promosyon-tekstil';
 
 const GOLD = '#C9A227';
@@ -91,6 +91,26 @@ export default function PromosyonTekstilSayfasi({ lang }: { lang: PLang }) {
             ))}
           </ul>
           <p style={{ textAlign: 'center', color: '#475569', maxWidth: 680, margin: '1.8rem auto 0' }}>{c.makeMore}</p>
+        </div>
+      </section>
+
+      {/* ÖRNEK GÖRSELLER (ürün adı = başlık, açıklama = figcaption; alt metin dilin kendisinde) */}
+      <section aria-label={c.makeTitle} style={{ padding: '0 1rem 3.5rem' }}>
+        <div style={{ maxWidth: 1100, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.1rem' }}>
+          {PROMO_FOTOLAR.map((f) => {
+            const [name, desc] = c.items[f.idx];
+            return (
+              <figure key={f.src} style={{ margin: 0, ...card, padding: 0, overflow: 'hidden' }}>
+                <img src={f.src} alt={`${name} (${ORNEK_GORSEL[lang]})`} title={name} width={1264} height={848} loading="lazy" decoding="async"
+                  style={{ width: '100%', height: 'auto', aspectRatio: '3 / 2', objectFit: 'cover', display: 'block' }} />
+                <figcaption style={{ padding: '1rem 1.2rem 1.2rem' }}>
+                  <strong style={{ display: 'block', fontSize: '1.02rem', marginBottom: '.25rem' }}>{name}</strong>
+                  <span style={{ color: '#475569', fontSize: '.9rem' }}>{desc}</span>
+                  <span style={{ display: 'block', color: '#94A3B8', fontSize: '.72rem', marginTop: '.4rem' }}>{ORNEK_GORSEL[lang]}</span>
+                </figcaption>
+              </figure>
+            );
+          })}
         </div>
       </section>
 

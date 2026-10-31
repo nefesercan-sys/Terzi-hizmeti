@@ -16,6 +16,20 @@ const WA_NUM = '905318986418';
 
 type Lang = 'tr' | 'en' | 'ru' | 'de';
 
+
+// H1 varyantları (bölge slug'ına göre deterministik); bölge adı vurgulu kalır.
+const H1V: Record<string, ((r: string) => [string, string])[]> = {
+  tr: [(r) => ['Otele Gelen Terzi', r], (r) => ['Otelinize gelen terzi', r], (r) => [`${r} otellerine terzi servisi`, 'Alım ve teslim ücretsiz']],
+  en: [(r) => ['Hotel Tailor', r], (r) => ['Tailor that comes to your hotel in', r], (r) => [`${r} hotel tailor service`, 'Free pickup and delivery']],
+  ru: [(r) => ['Портной в отеле', r], (r) => ['Портной с выездом в отель:', r], (r) => [`Портной для отелей: ${r}`, 'Забор и доставка бесплатно']],
+  de: [(r) => ['Schneider im Hotel', r], (r) => ['Schneider kommt ins Hotel:', r], (r) => [`Hotel-Schneider ${r}`, 'Abholung und Lieferung kostenlos']],
+};
+const h1Varyant = (lang: string, slug: string, r: string) => {
+  const v = H1V[lang]; if (!v) return null;
+  const [a, b] = v[[...slug].reduce((x, c) => x + c.charCodeAt(0), 0) % v.length](r);
+  return <>{a}<br /><span className="accent">{b}</span></>;
+};
+
 const T: Record<Lang, any> = {
   en: {
     noPartner: 'We do not work for or represent any hotel; the region name only tells you where we can come.',
@@ -204,7 +218,7 @@ export default function OtelBolgeSayfasi({ lang, region, allRegions, basePath, m
         <div className="hero-content">
           <span className="hero-tag">{t.tag(region.name)}</span>
           <span className="hero-eng">Terzi Can</span>
-          <h1 id="hero-h">{t.h1(region.name)}</h1>
+          <h1 id="hero-h">{h1Varyant(lang, region.slug, region.name) ?? t.h1(region.name)}</h1>
           <p className="hero-desc" id="hero-desc">{t.heroDesc(region.name, regionAnswer(lang, region.slug, region.name))}</p>
           <div className="hero-btns">
             <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-primary"><span aria-hidden="true">💬</span> {t.waShare} <span aria-hidden="true">→</span></a>

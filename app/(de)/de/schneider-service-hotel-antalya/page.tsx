@@ -145,14 +145,13 @@ export default function OtelBolgeleriDeHub() {
             <div className="sec-head">
               <span className="eyebrow">Bezirke</span>
               <h2 className="sec-h ff" id="regions-h">Wählen Sie Ihren Hotelbezirk</h2>
-              <p className="sec-sub">Jeder Bezirk hat eine eigene Seite mit Hotelliste, Fahrzeit und direktem WhatsApp-Kontakt.</p>
+              <p className="sec-sub">Jeder Bezirk hat eine eigene Seite mit Hotelliste und direktem WhatsApp-Kontakt.</p>
             </div>
             <div className="wk-grid">
               {OTEL_BOLGELERI.map((r) => (
                 <a key={r.slug} href={`${BASE_PATH}/${r.slug}`} className="wk-card" style={{ textDecoration: 'none', color: 'inherit' }}>
                   <div className="wk-tr">{r.name}</div>
                   <p className="wk-d">{r.blurb.de}</p>
-                  <p style={{ fontSize: '.75rem', color: 'rgba(245,241,232,.5)', marginTop: '.6rem' }}>⏱ {r.travelTime.de}</p>
                 </a>
               ))}
             </div>

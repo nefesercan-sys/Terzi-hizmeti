@@ -140,14 +140,13 @@ export default function OtelBolgeleriRuHub() {
             <div className="sec-head">
               <span className="eyebrow">Районы</span>
               <h2 className="sec-h ff" id="regions-h">Выберите ваш отельный район</h2>
-              <p className="sec-sub">У каждого района своя страница со списком отелей, временем в пути и прямым контактом в WhatsApp.</p>
+              <p className="sec-sub">У каждого района своя страница со списком отелей и прямым контактом в WhatsApp.</p>
             </div>
             <div className="wk-grid">
               {OTEL_BOLGELERI.map((r) => (
                 <a key={r.slug} href={`${BASE_PATH}/${r.slug}`} className="wk-card" style={{ textDecoration: 'none', color: 'inherit' }}>
                   <div className="wk-tr">{r.name}</div>
                   <p className="wk-d">{r.blurb.ru}</p>
-                  <p style={{ fontSize: '.75rem', color: 'rgba(245,241,232,.5)', marginTop: '.6rem' }}>⏱ {r.travelTime.ru}</p>
                 </a>
               ))}
             </div>

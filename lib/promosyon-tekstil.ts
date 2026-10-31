@@ -22,7 +22,7 @@ export const PHONE_E = '+905318986418';
 export const waLink = (t: string) => `https://wa.me/${PHONE_E.replace('+', '')}?text=${encodeURIComponent(t)}`;
 const OG = `${SITE}/og-promosyon.jpg`;
 
-/** Sayfadaki örnek görseller (yapay zekâ ile üretilmiş; gerçek iş fotoğrafı değildir). idx: COPY[lang].items içindeki sıra. */
+/** Sayfadaki örnek görseller (örnek niteliğinde; gerçek iş fotoğrafı değildir). idx: COPY[lang].items içindeki sıra. */
 export const PROMO_FOTOLAR: { src: string; idx: number }[] = [
   { src: '/gorseller/bez-canta-atolye.webp', idx: 0 }, // Bez çanta
   { src: '/gorseller/hazir-giyim-atolye.webp', idx: 1 }, // Tişört

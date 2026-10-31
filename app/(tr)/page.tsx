@@ -202,6 +202,15 @@ const C = {
   muted: '#565C45',
 };
 
+// Yapay zekâ ile üretilmiş örnek görseller (gerçek iş fotoğrafı değildir; alt metinde "örnek görsel" yazar).
+// Fotoğrafı olmayan hizmetlerde özgün çizim kullanılır. Gerçek fotoğraf gelince bu tabloya eklenir.
+const FOTO: Record<string, string> = {
+  '01': '/gorseller/paca-kisaltma.webp',
+  '02': '/gorseller/fermuar-degisimi.webp',
+  '03': '/gorseller/bel-daraltma-manken.webp',
+  '04': '/gorseller/kalip-ve-makas.webp',
+};
+
 const SERVICES = [
   { n:'01', title:'Paça Kısaltma', en:'Pants Hemming', ru:'Укоротить брюки', sub:'Pantolon · Etek · Kot / Pants · Skirts', desc:'Erkek ve bayan pantolon, kot, etek paça kısaltma — temiz, görünmez dikiş.', price:'₺200+', time:'Acil 1–2 saat', wa:WA_TR, tur:'pantolon' as IlustrasyonTur },
   { n:'02', title:'Fermuar Değişimi', en:'Zipper Replacement', ru:'Замена молнии', sub:'Pantolon · Mont · Ceket · Çanta', desc:'Pantolon, mont, ceket, sweatshirt ve çanta fermuar değişimi, sıkışan fermuar tamiri.', price:'₺300+', time:'Acil 1–2 saat', wa:WA_TR, tur:'fermuar' as IlustrasyonTur },
@@ -477,7 +486,9 @@ export default function TerziHizmetiPage() {
             {SERVICES.map((s,i)=>(
               <div className="svc-card" key={s.n}>
                 <div className="svc-img-wrap">
-                  <Ilustrasyon tur={s.tur} etiket={`${s.title} (çizim)`} className="svc-img" />
+                  {FOTO[s.n]
+                    ? <img src={FOTO[s.n]} alt={`${s.title} (örnek görsel)`} className="svc-img" loading={i===0?'eager':'lazy'} fetchPriority={i===0?'high':'auto'} decoding="async" width={1264} height={848} />
+                    : <Ilustrasyon tur={s.tur} etiket={`${s.title} (çizim)`} className="svc-img" />}
                   <div className="svc-n svc-n-onimg">{s.n}</div>
                 </div>
                 <div className="svc-body">
@@ -508,12 +519,12 @@ export default function TerziHizmetiPage() {
             </div>
             <div className="gallery-grid">
               {[
-                { tur:'metre' as IlustrasyonTur, alt:'Ölçü alma (çizim)' },
-                { tur:'makine' as IlustrasyonTur, alt:'Dikiş makinesi (çizim)' },
-                { tur:'utu' as IlustrasyonTur, alt:'Ütü ve teslim (çizim)' },
+                { src:'/gorseller/dikis-makinesi.webp', alt:'Dikiş makinesinde çalışma (örnek görsel)' },
+                { src:'/gorseller/hazir-giyim-atolye.webp', alt:'Tekstil atölyesi, katlanmış hazır giyim (örnek görsel)' },
+                { src:'/gorseller/bez-canta-atolye.webp', alt:'Atölyede bez çantalar (örnek görsel)' },
               ].map((g,i)=>(
                 <div className="gallery-item" key={i}>
-                  <Ilustrasyon tur={g.tur} etiket={g.alt} />
+                  <img src={g.src} alt={g.alt} loading="lazy" decoding="async" width={1264} height={848} />
                 </div>
               ))}
             </div>

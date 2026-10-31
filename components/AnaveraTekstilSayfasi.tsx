@@ -7,7 +7,6 @@
 // (50K+ adet/ay, 15+ ülke), sertifika iddiaları (OEKO-TEX, GOTS, ISO, AQL), "Onaylı üretici",
 // "modern tesis" iddiaları. Sayfada doğrulanamayan hiçbir sayı/sertifika yok.
 
-import Ilustrasyon, { type IlustrasyonTur } from '@/components/Ilustrasyon';
 import Link from 'next/link';
 import { PROMO_PATH, PROMO_NAME, PROMO_ANAVERA_LINE } from '@/lib/promosyon-paths';
 
@@ -411,7 +410,8 @@ export const translations: Record<AnaveraLang, Copy> = {
 const GOLD = '#C9A227';
 const GOLD_L = '#E4C664';
 const NAVY = '#0F172A';
-const IMGS: IlustrasyonTur[] = ['kumas', 'canta', 'gomlek', 'makine'];
+// Yapay zekâ ile üretilmiş örnek görseller (gerçek iş fotoğrafı değildir).
+const IMGS = ['/gorseller/hazir-giyim-atolye.webp', '/gorseller/kalip-ve-makas.webp', '/gorseller/bez-canta-atolye.webp', '/gorseller/dikis-makinesi.webp'];
 
 const eyebrow = { color: '#D97706', fontWeight: 800, fontSize: '0.85rem', letterSpacing: '0.15em', textTransform: 'uppercase' } as const;
 const h2 = { fontSize: 'clamp(1.8rem, 3.5vw, 2.4rem)', fontWeight: 800, color: NAVY, margin: '0.5rem 0 0.8rem' } as const;
@@ -537,7 +537,7 @@ export default function AnaveraTekstilSayfasi({ lang }: { lang: AnaveraLang }) {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.4rem' }}>
             {t.cat.map((c, i) => (
               <div key={c.title} style={{ ...card, padding: 0, overflow: 'hidden' }}>
-                <div style={{ width: '100%', height: 190 }}><Ilustrasyon tur={IMGS[i % IMGS.length]} etiket={`${c.title} (çizim)`} /></div>
+                <img src={IMGS[i % IMGS.length]} alt={`${c.title} (illustrative)`} loading="lazy" decoding="async" width={1264} height={848} style={{ width: '100%', height: 190, objectFit: 'cover', display: 'block' }} />
                 <div style={{ padding: '1.2rem' }}>
                   <h3 style={{ fontSize: '1.05rem', fontWeight: 800, margin: '0 0 .4rem' }}>{c.title}</h3>
                   <p style={{ color: '#64748B', fontSize: '.9rem', lineHeight: 1.55, margin: 0 }}>{c.desc}</p>

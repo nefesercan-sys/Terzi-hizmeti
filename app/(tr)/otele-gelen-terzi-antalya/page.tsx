@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
 import ReviewsBlock from '@/components/ReviewsBlock';
 import { DELIVERY } from '@/lib/delivery';
 import { businessNode } from '@/lib/business';
@@ -88,7 +89,7 @@ interface HotelRegion {
 const HOTEL_REGIONS: HotelRegion[] = [
   { name: 'Belek & Kadriye', tag: 'Otel Servisi', desc: 'Golf sahaları ve resort otelleriyle bilinen bölgedeki oteller.' },
   { name: 'Lara & Kundu', tag: 'Hızlı Servis', desc: 'Lara ve Kundu otel bölgesindeki oteller.' },
-  { name: 'Kemer Beli', tag: 'Randevulu', desc: 'Göynük, Beldibi, Tekirova, Kiriş otelleri.' },
+  { name: 'Kemer, Beldibi & Göynük', tag: 'Randevulu', desc: 'Kemer, Beldibi, Göynük, Tekirova ve Kiriş otelleri.' },
   { name: 'Konyaaltı & Şehir Merkezi', tag: 'Öncelikli', desc: 'Konyaaltı sahili ve şehir merkezindeki oteller.' },
 ];
 
@@ -241,6 +242,8 @@ export default function MobileTailorHotelPage() {
           </section>
 
           {/* SÜREÇ ADIMLARI */}
+          <OrnekGorselSeridi lang="tr" anahtarlar={['eve-gelen-terzi', 'kuru-temizleme-utu', 'erkek-takim-olcu', 'abiye-elbise-atolye']} sayfaUrl="https://terzihizmeti.com.tr/otele-gelen-terzi-antalya" />
+
           <section className="sec" style={{ background: 'rgba(0,0,0,.12)' }} aria-labelledby="proc-h">
             <div className="ctr">
               <div className="sec-head">

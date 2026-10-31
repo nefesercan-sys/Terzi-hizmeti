@@ -1,5 +1,6 @@
 // terzihizmeti.com.tr — Ek turist dilleri için kısa tanıtım sayfası (veri: lib/intl.ts). Sunucu bileşeni, stil inline.
 import Link from 'next/link';
+import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
 import { PHONE, PHONE_TEL, MAPS, SITE } from '@/lib/seo-data';
 import { ILANGS, INTL, NB, NB_DISTRICT, ZONES, iUrl, type ILang } from '@/lib/intl';
 import { SVC, svcUrl } from '@/lib/intl-services';
@@ -95,6 +96,8 @@ export default function IntlLanding({ lang }: { lang: ILang }) {
           </div>
         ))}
       </Block>
+
+      <OrnekGorselSeridi lang={lang} tema="acik" anahtarlar={['eve-gelen-terzi', 'abiye-elbise-atolye', 'erkek-takim-olcu', 'yun-pantolon-metre']} sayfaUrl={`${SITE}${iUrl(lang)}`} />
 
       <Block><H2>{c.contactTitle}</H2>
         <p style={{ margin: '0 0 .5rem' }}><strong>{c.addressLabel}:</strong> {c.address}</p>

@@ -1,20 +1,39 @@
 // Örnek görseller (yapay zekâ ile üretilmiş; gerçek iş/müşteri fotoğrafı DEĞİLDİR). Tek kaynak: başlık + açıklama 4 dilde.
 // Kullanım: <OrnekGorselSeridi lang="tr" anahtarlar={['sef-mutfak-uniforma', ...]} />
-export type GLang = 'tr' | 'en' | 'de' | 'ru';
-type L = Record<GLang, string>;
+export type L4 = 'tr' | 'en' | 'de' | 'ru';
+export type GLang = L4 | 'es' | 'fr' | 'pl' | 'uk' | 'nl' | 'ar';
+type L = Record<L4, string>;
+type LA = Record<GLang, string>;
+import { EK_METIN, type EkLang } from './ornek-gorseller-ek';
 export interface OrnekGorsel { src: string; w: number; h: number; baslik: L; aciklama: L }
+
+/** Dile göre başlık + açıklama (tr/en/de/ru ana veri; es/fr/pl/uk/nl/ar ek dosyadan; yoksa İngilizce). */
+export function gorselMetin(k: GorselAnahtar, lang: GLang): { baslik: string; aciklama: string } {
+  const g = GORSELLER[k];
+  if (lang === 'tr' || lang === 'en' || lang === 'de' || lang === 'ru') return { baslik: g.baslik[lang], aciklama: g.aciklama[lang] };
+  const e = EK_METIN[k]?.[lang as EkLang];
+  return e ? { baslik: e[0], aciklama: e[1] } : { baslik: g.baslik.en, aciklama: g.aciklama.en };
+}
 
 const W = 1600, H = 893; // 1376×768 kaynaklar 1600 genişliğe ölçeklendi; 1264×848 kaynaklar olduğu gibi
 const S = (n: string, w = 1264, h = 848) => ({ src: `/gorseller/${n}.webp`, w, h });
 const WIDE = (n: string) => S(n, 1376, 768);
 
-export const ORNEK_ETIKET: L = { tr: 'örnek görsel', en: 'illustrative image', de: 'Beispielbild', ru: 'пример изображения' };
-export const ORNEK_BASLIK: L = { tr: 'Örnek görseller', en: 'Sample images', de: 'Beispielbilder', ru: 'Примеры изображений' };
-export const ORNEK_NOT: L = {
+export const ORNEK_ETIKET: LA = { tr: 'örnek görsel', en: 'illustrative image', de: 'Beispielbild', ru: 'пример изображения',
+  es: 'imagen ilustrativa', fr: 'image d’illustration', pl: 'obraz poglądowy', uk: 'ілюстративне зображення', nl: 'illustratieve afbeelding', ar: 'صورة توضيحية' };
+export const ORNEK_BASLIK: LA = { tr: 'Örnek görseller', en: 'Sample images', de: 'Beispielbilder', ru: 'Примеры изображений',
+  es: 'Imágenes de ejemplo', fr: 'Exemples d’images', pl: 'Przykładowe obrazy', uk: 'Приклади зображень', nl: 'Voorbeeldafbeeldingen', ar: 'صور توضيحية' };
+export const ORNEK_NOT: LA = {
   tr: 'Bu görseller yapay zekâ ile üretilmiş örneklerdir; gerçek iş veya müşteri fotoğrafı değildir.',
   en: 'These are AI-generated illustrations, not photos of real work or customers.',
   de: 'Diese Bilder sind KI-generierte Beispiele, keine Fotos echter Arbeiten oder Kunden.',
   ru: 'Это изображения, созданные ИИ, а не фотографии реальных работ или клиентов.',
+  es: 'Estas imágenes están generadas por IA; no son fotos de trabajos o clientes reales.',
+  fr: 'Ces images sont générées par IA ; ce ne sont pas des photos de vrais travaux ou clients.',
+  pl: 'Są to obrazy wygenerowane przez AI, a nie zdjęcia prawdziwych prac ani klientów.',
+  uk: 'Це зображення, створені ШІ, а не фотографії реальних робіт чи клієнтів.',
+  nl: "Dit zijn door AI gegenereerde afbeeldingen, geen foto's van echt werk of klanten.",
+  ar: 'هذه صور مُنشأة بالذكاء الاصطناعي وليست صورًا لأعمال أو عملاء حقيقيين.',
 };
 
 export const GORSELLER = {
@@ -78,6 +97,12 @@ export const GORSELLER = {
   'polar-yelek': { ...S('polar-yelek'),
     baslik: { tr: 'Polar yelek', en: 'Fleece vest', de: 'Fleeceweste', ru: 'Флисовый жилет' },
     aciklama: { tr: 'Fermuarlı polar yelek; ekip giyimi için logolu üretim yapılır.', en: 'Zippered fleece vest; made with a logo for team wear.', de: 'Fleeceweste mit Reißverschluss; für Teamkleidung mit Logo.', ru: 'Флисовый жилет на молнии; для командной одежды — с логотипом.' } },
+  'eve-gelen-terzi': { ...S('eve-gelen-terzi'),
+    baslik: { tr: 'Eve ve otele gelen terzi', en: 'Tailor visiting your home or hotel', de: 'Schneider kommt zu Ihnen nach Hause oder ins Hotel', ru: 'Портной приезжает домой или в отель' },
+    aciklama: { tr: 'Ölçü ve prova için adresinize gelen terzi hizmeti.', en: 'A tailor who comes to your address for measuring and fittings.', de: 'Ein Schneider, der zum Maßnehmen und zur Anprobe zu Ihnen kommt.', ru: 'Портной приезжает по вашему адресу для мерок и примерки.' } },
+  'kuru-temizleme-utu': { ...S('kuru-temizleme-utu'),
+    baslik: { tr: 'Kuru temizleme ve ütü', en: 'Dry cleaning and ironing', de: 'Reinigung und Bügeln', ru: 'Химчистка и глажка' },
+    aciklama: { tr: 'Kuru temizleme, buharlı ütü ve pres hizmeti.', en: 'Dry cleaning, steam ironing and pressing.', de: 'Reinigung, Dampfbügeln und Pressen.', ru: 'Химчистка, отпаривание и глажка.' } },
 } satisfies Record<string, OrnekGorsel>;
 
 export type GorselAnahtar = keyof typeof GORSELLER;

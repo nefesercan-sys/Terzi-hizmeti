@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
 import FabricsOrderBlock from '@/components/FabricsOrderBlock';
 import { DELIVERY } from '@/lib/delivery';
 import ReviewsBlock from '@/components/ReviewsBlock';
@@ -293,6 +294,8 @@ export default function UslugiPortnogoAntalyaPage() {
               </ol>
             </div>
           </section>
+
+      <OrnekGorselSeridi lang="ru" anahtarlar={['eve-gelen-terzi', 'erkek-takim-olcu', 'abiye-elbise-atolye', 'yun-pantolon-metre', 'beyaz-gomlek-katli', 'palto-yaka-detay']} sayfaUrl="https://terzihizmeti.com.tr/ru/uslugi-portnogo-antalya" />
 
           <section className="sec" style={{ background: 'rgba(0,0,0,.12)' }} id="faq" aria-labelledby="faq-h">
             <div className="ctr" style={{ maxWidth: 740 }}>

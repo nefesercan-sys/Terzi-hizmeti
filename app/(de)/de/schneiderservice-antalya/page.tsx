@@ -3,6 +3,7 @@
 // kopyasıydı (214 satır, tek fark başlık) ve canonical'ı o sayfayı gösteriyordu. Böylece
 // Almanca "genel terzi" sayfası fiilen yoktu. Artık EN/RU karşılıklarına denk, kendi
 // içeriği ve kendi canonical'ı olan gerçek bir Almanca ana hizmet sayfası.
+import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
 import type { Metadata } from 'next';
 import { DELIVERY } from '@/lib/delivery';
 import FabricsOrderBlock from '@/components/FabricsOrderBlock';
@@ -205,6 +206,8 @@ export default function SchneiderserviceAntalya() {
       </main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@graph': [businessNode('de')] }) }} />
       <FabricsOrderBlock lang="de" />
+      <OrnekGorselSeridi lang="de" anahtarlar={['eve-gelen-terzi', 'erkek-takim-olcu', 'abiye-elbise-atolye', 'yun-pantolon-metre', 'beyaz-gomlek-katli', 'palto-yaka-detay']} sayfaUrl="https://terzihizmeti.com.tr/de/schneiderservice-antalya" />
+
       <ReviewsBlock lang="de" />
     </>
   );

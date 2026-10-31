@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
 import { PRICE_ROWS } from '@/components/TerziFiyatlariSayfasi';
 import Link from 'next/link';
 import type { OtelBolgesi } from '@/lib/otel-bolgeleri';
@@ -273,6 +274,8 @@ export default function OtelBolgeSayfasi({ lang, region, allRegions, basePath, m
             </ol>
           </div>
         </section>
+
+        <OrnekGorselSeridi lang={lang} anahtarlar={['eve-gelen-terzi', 'kuru-temizleme-utu', 'erkek-takim-olcu']} sayfaUrl={`https://terzihizmeti.com.tr${basePath}/${region.slug}`} />
 
         <section className="sec" style={{ background: 'rgba(0,0,0,.12)' }} aria-labelledby="faq-h">
           <div className="ctr" style={{ maxWidth: 740 }}>

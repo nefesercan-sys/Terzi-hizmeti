@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
 import { businessNode } from '@/lib/turist-keten';
 import { DELIVERY } from '@/lib/delivery';
 import { INTL_ALT } from '@/lib/intl';
@@ -298,6 +299,8 @@ export default function TailorServiceAntalyaPage() {
               </ol>
             </div>
           </section>
+
+      <OrnekGorselSeridi lang="en" anahtarlar={['eve-gelen-terzi', 'erkek-takim-olcu', 'abiye-elbise-atolye', 'yun-pantolon-metre', 'beyaz-gomlek-katli', 'palto-yaka-detay']} sayfaUrl="https://terzihizmeti.com.tr/en/tailor-service-antalya" />
 
           <section className="sec" style={{ background: 'rgba(0,0,0,.12)' }} id="faq" aria-labelledby="faq-h">
             <div className="ctr" style={{ maxWidth: 740 }}>

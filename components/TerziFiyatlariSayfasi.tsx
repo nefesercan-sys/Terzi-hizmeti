@@ -5,6 +5,7 @@
 // Fiyatlar tek yerde (PRICE_ROWS) tutulur; dil dosyaları sadece isimleri çevirir,
 // böylece 4 dilde fiyat tutarsızlığı olması mümkün olmaz.
 
+import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
 export type FLang = 'tr' | 'en' | 'de' | 'ru';
 
 export const SITE = 'https://terzihizmeti.com.tr';
@@ -989,6 +990,8 @@ export default function TerziFiyatlariSayfasi({ lang }: { lang: FLang }) {
           </div>
         </div>
       </section>
+
+      <OrnekGorselSeridi lang={lang} anahtarlar={['yun-pantolon-metre', 'erkek-takim-olcu', 'abiye-askida', 'beyaz-gomlek-katli']} sayfaUrl={`https://terzihizmeti.com.tr${{ tr: '/antalya-terzi-fiyatlari', en: '/en/tailor-prices-antalya', de: '/de/schneider-preise-antalya', ru: '/ru/ceny-portnoy-antalya' }[lang]}`} />
 
       <section className="sec" id="sss" aria-labelledby="faq-h">
         <div className="ctr" style={{ maxWidth: 760 }}>

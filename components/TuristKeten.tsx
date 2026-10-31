@@ -7,6 +7,7 @@
 // Tüm metin/şema verisi lib/turist-keten.ts'te. Site Tailwind kullanmıyor → stil inline.
 // Sunucu bileşeni (hook yok): içerik HTML olarak sunucuda render edilir.
 // ============================================================
+import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
 import Link from 'next/link';
 import { PHONE, SERVICES, serviceUrl, HOTEL_BASE } from '@/lib/seo-data';
 import {
@@ -334,6 +335,7 @@ export function TuristExpress({ lang }: { lang: TLang }) {
         </div>
       </Section>
 
+      <OrnekGorselSeridi lang={lang} tema="acik" anahtarlar={['beyaz-gomlek-katli', 'palto-yaka-detay', 'pilili-etek']} />
       <Faq title={u.faqH} items={c.faq} />
       <RelatedLinks lang={lang} current="express" />
       <FinalCta lang={lang} waHref={wa} />

@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next';
+import { BLOG_YAZILARI } from '@/lib/blog-yazilari';
 import { OTEL_BOLGELERI } from '@/lib/otel-bolgeleri';
 import { DISTRICTS, SERVICES, LANGS, SERVICE_BASE, districtUrl, serviceUrl, LAST_UPDATE, isIndexable, type Lang } from '@/lib/seo-data';
 import { TLANGS, allNewPages, hubUrl, TR_HUB, TURIST_UPDATE } from '@/lib/turist-keten';
@@ -85,6 +86,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // 📝 6. BLOG İÇERİKLERİ (Priority: 0.70 / 0.60)
     { url: `${SITE}/blog`, lastModified: lm('/blog'), changeFrequency: 'weekly', priority: 0.70 },
     { url: `${SITE}/blog/2026-yaz-sezonu-gelinlik-tadilat-rehberi`, lastModified: lm('/blog/2026-yaz-sezonu-gelinlik-tadilat-rehberi'), changeFrequency: 'monthly', priority: 0.60 },
+    ...BLOG_YAZILARI.map((y) => ({ url: `${SITE}/blog/${y.slug}`, lastModified: new Date(y.tarih), changeFrequency: 'monthly' as const, priority: 0.60 })),
   ];
 
   // 🔎 7. BÖLGE × HİZMET SEO SAYFALARI (4 dil, hreflang karşılıklı)

@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 
 const SITE  = 'https://terzihizmeti.com.tr';
+import { BLOG_YAZILARI } from '@/lib/blog-yazilari';
+
 const PHONE = '+90 531 898 64 18';
 
 // ─── Blog yazıları listesi ────────────────────────────────────────────────
@@ -8,6 +10,7 @@ const PHONE = '+90 531 898 64 18';
 // bir satır eklemek yeterli — hem bu sayfa hem de sitemap otomatik güncellenir
 // (app/sitemap.ts zaten bu klasörleri okuyorsa; okumuyorsa orada da elle ekleyin).
 const YAZILAR = [
+  ...BLOG_YAZILARI.map(({ slug, baslik, ozet, tarih }) => ({ slug, baslik, ozet, tarih })),
   {
     slug: '2026-yaz-sezonu-gelinlik-tadilat-rehberi',
     baslik: '2026 Yaz Sezonu Gelinlik Tadilat Rehberi',

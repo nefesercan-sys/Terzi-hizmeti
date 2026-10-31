@@ -6,7 +6,7 @@ import { TLANGS, allNewPages, hubUrl, TR_HUB, TURIST_UPDATE } from '@/lib/turist
 import { ILANGS, INTL, iUrl } from '@/lib/intl';
 import { ZONE_SLUGS, zoneUrl } from '@/lib/intl-zones';
 import { svcUrl } from '@/lib/intl-services';
-import { PLANGS, promoUrl, promoAlternates, PROMO_LAST_UPDATE } from '@/lib/promosyon-tekstil';
+import { PLANGS, promoUrl, promoAlternates, PROMO_LAST_UPDATE, PROMO_FOTOLAR } from '@/lib/promosyon-tekstil';
 
 const SITE = "https://terzihizmeti.com.tr";
 const NOW = new Date('2026-10-27');   // önceki sürümde değişen sayfalar
@@ -147,7 +147,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Promosyon / reklam tekstili ve baskılı bez çanta imalatı (10 dil, hreflang karşılıklı; x-default: EN)
   const promoSayfalari: MetadataRoute.Sitemap = PLANGS.map((l) => ({
-    url: promoUrl(l), lastModified: new Date(PROMO_LAST_UPDATE), changeFrequency: 'monthly' as const, priority: 0.8, alternates: { languages: promoAlternates() },
+    url: promoUrl(l), lastModified: new Date(PROMO_LAST_UPDATE), changeFrequency: 'monthly' as const, priority: 0.8, alternates: { languages: promoAlternates() }, images: PROMO_FOTOLAR.map((f) => `${SITE}${f.src}`),
   }));
 
   // Aynı URL birden fazla bölümde üretilebilir; ilk kayıt (sabit sayfalar) korunur.

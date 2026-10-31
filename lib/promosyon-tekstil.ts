@@ -20,10 +20,21 @@ export const SITE = 'https://terzihizmeti.com.tr';
 export const PHONE = '+90 531 898 64 18';
 export const PHONE_E = '+905318986418';
 export const waLink = (t: string) => `https://wa.me/${PHONE_E.replace('+', '')}?text=${encodeURIComponent(t)}`;
-const OG = `${SITE}/linen/og-linen-tailor-antalya.jpg`;
+const OG = `${SITE}/og-promosyon.jpg`;
+
+/** Sayfadaki örnek görseller (yapay zekâ ile üretilmiş; gerçek iş fotoğrafı değildir). idx: COPY[lang].items içindeki sıra. */
+export const PROMO_FOTOLAR: { src: string; idx: number }[] = [
+  { src: '/gorseller/bez-canta-atolye.webp', idx: 0 }, // Bez çanta
+  { src: '/gorseller/hazir-giyim-atolye.webp', idx: 1 }, // Tişört
+  { src: '/gorseller/uniforma.webp', idx: 7 }, // Uniforma
+];
+export const ORNEK_GORSEL: Record<PLang, string> = {
+  tr: 'örnek görsel', en: 'illustrative image', de: 'Beispielbild', ru: 'пример изображения', es: 'imagen ilustrativa',
+  fr: 'image d’illustration', pl: 'obraz poglądowy', uk: 'ілюстративне зображення', nl: 'illustratieve afbeelding', ar: 'صورة توضيحية',
+};
 
 /** Sayfanın yayın / son içerik güncelleme tarihi (sitemap lastModified). */
-export const PROMO_LAST_UPDATE = '2026-10-30';
+export const PROMO_LAST_UPDATE = '2026-10-31';
 
 export const promoUrl = (l: PLang) => `${SITE}${PROMO_PATH[l]}`;
 
@@ -600,7 +611,7 @@ export function buildPromoJsonLd(lang: PLang) {
       },
       {
         '@type': 'WebPage', '@id': `${url}#webpage`, url, name: c.title, description: c.desc, inLanguage: lang,
-        about: { '@id': `${url}#service` }, isPartOf: { '@id': `${SITE}#website` },
+        about: { '@id': `${url}#service` }, primaryImageOfPage: { '@id': `${url}#img-0` }, isPartOf: { '@id': `${SITE}#website` },
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['#hero-h', '.hero-desc'] },
       },
       {
@@ -613,6 +624,11 @@ export function buildPromoJsonLd(lang: PLang) {
           itemListElement: c.items.map(([name, desc]) => ({ '@type': 'Offer', itemOffered: { '@type': 'Service', name, description: desc } })),
         },
       },
+      ...PROMO_FOTOLAR.map((f) => ({
+        '@type': 'ImageObject', '@id': `${url}#img-${f.idx}`, contentUrl: `${SITE}${f.src}`, url: `${SITE}${f.src}`,
+        name: c.items[f.idx][0], caption: c.items[f.idx][1], description: `${c.items[f.idx][0]} (${ORNEK_GORSEL[lang]})`,
+        width: 1264, height: 848, inLanguage: lang,
+      })),
       {
         '@type': 'BreadcrumbList', '@id': `${url}#breadcrumb`,
         itemListElement: [

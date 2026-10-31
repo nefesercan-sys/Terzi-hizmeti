@@ -4,7 +4,7 @@ import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
 import { PHONE, PHONE_TEL, MAPS, SITE } from '@/lib/seo-data';
 import { businessNode, OG_DEFAULT, waLink, TURIST_UPDATE } from '@/lib/turist-keten';
 import { INTL, iUrl, type ILang } from '@/lib/intl';
-import { ZONE_VARIANTS, zoneVariantIndex } from '@/lib/zone-variants';
+import { ZONE_VARIANTS, ZONE_H1, zoneVariantIndex } from '@/lib/zone-variants';
 import { ZCOPY, ZONE_SLUGS, zoneData, zoneUrl, type ZoneSlug } from '@/lib/intl-zones';
 
 const C = { green: '#2C4A3E', gold: '#D4B07A', cream: '#FAF7F2', sand: '#F2EDE4', ink: '#1C1814', muted: '#6B5F53', line: 'rgba(44,74,62,.15)' };
@@ -48,7 +48,7 @@ export default function ZoneLanding({ lang, zone }: { lang: ILang; zone: ZoneSlu
       <header style={{ background: C.green, padding: '3rem 1.25rem 2.4rem' }}>
         <div style={{ maxWidth: 820, margin: '0 auto' }}>
           <p style={{ margin: '0 0 .8rem', fontSize: '.85rem' }}><Link href={iUrl(lang)} style={{ color: C.gold }}>{c.back}</Link></p>
-          <h1 id="hero-h" style={{ fontFamily: serif, fontSize: 'clamp(1.6rem,4.6vw,2.4rem)', fontWeight: 700, lineHeight: 1.2, color: '#fff', margin: '0 0 .9rem' }}>{c.h1(z.name)}</h1>
+          <h1 id="hero-h" style={{ fontFamily: serif, fontSize: 'clamp(1.6rem,4.6vw,2.4rem)', fontWeight: 700, lineHeight: 1.2, color: '#fff', margin: '0 0 .9rem' }}>{vi === 0 || !ZONE_H1[lang] ? c.h1(z.name) : ZONE_H1[lang][vi - 1](z.name)}</h1>
           <p className="hero-desc" style={{ fontSize: '1.02rem', color: 'rgba(255,255,255,.92)', margin: 0 }}>{leadText}</p>
         </div>
       </header>

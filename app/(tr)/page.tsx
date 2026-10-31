@@ -29,33 +29,7 @@ export const metadata: Metadata = {
   title: { absolute: "Terzi Can Antalya — Tamir Tadilat, Paça ₺200, Fermuar ₺300" },
   description:
     "Konyaaltı Hurma, Liman, Uncalı, Gürsu'da bay bayan tamir tadilat: söküğü dikme, paça ₺200, fermuar değişimi ₺300. Her gün 08:00–23:00. ☎ 0531 898 64 18",
-  keywords: [
-    // Türkçe — insanların ve yapay zeka asistanlarının gerçek soruları
-    'tamir tadilat Antalya', 'bay bayan tamir tadilat', 'söküğü dikme', 'yırtık tamiri', 'elbise tamiri ve tadilatı', 'kıyafet tamiri Antalya', 'etek kısaltma', 'Antalya\'da terzi hizmeti', 'bana terzi öner', 'terzi bul', 'en yakın terzi', 'yakınımda terzi hizmeti',
-    'elbise diktirmek', 'kendime elbise diktirmek', 'elbise tadilatı', 'elbisem yırtıldı', 'yırtık onarımı',
-    'elbisenin belini daraltmak', 'pantolon paçası kısaltma', 'fermuar değişimi yapan terzi',
-    'hafta sonu açık terzi', 'adrese gelen terzi', 'otelde terzi hizmeti', 'Antalya terzi servisi',
-    'terzi fiyatları', 'terzi fiyat listesi 2026', 'özel dikim terzi', 'bay bayan terzi',
-    'antalya özel dikim terzi', 'özel dikim terzi Konyaaltı', 'bay bayan özel dikim Antalya',
-    'pamuklu doğal kumaş dikimi', 'model tasarım dikim atölyesi', 'dikim imalat fiyatları', 'kaliteli dikiş imalat',
-    'terzi Antalya', 'terzi hizmeti', 'Konyaaltı terzi', 'paça kısaltma Antalya', 'fermuar değişimi Antalya',
-    'bel daraltma Antalya', 'elbise dikimi Antalya', 'gelinlik tadilatı Antalya', 'kuru temizleme Antalya',
-    'Hurma terzi', 'Liman terzi', 'Sarısu terzi', 'Uncalı terzi', 'eve gelen terzi Antalya',
-
-    // English (İngilizce AI & Arama)
-    'tailor Antalya', 'tailor Konyaaltı', 'alterations Antalya', 'pants hemming Antalya', 'zipper replacement Antalya',
-    'dressmaker Antalya', 'suit tailor Antalya', 'mobile tailor Antalya', 'clothing repair Antalya',
-    'tailor in Hurma', 'tailor in Liman', 'dry cleaning Antalya', 'english speaking tailor Antalya',
-
-    // Русский (Rusça AI & Arama)
-    'портной Анталья', 'ателье Анталья', 'ателье Коньяалты', 'ремонт одежды Анталья', 'укоротить брюки Анталья',
-    'замена молнии Анталья', 'подгонка одежды Анталья', 'пошив платья Анталья', 'химчистка Анталья',
-    'портной Хурма', 'портной Лиман', 'портной Сарысу', 'русскоязычный портной Анталья', 'выездной портной Анталья',
-
-    // Deutsch (Almanca AI & Arama)
-    'Schneider Antalya', 'Änderungsschneiderei Antalya', 'Änderungsschneiderei Konyaaltı', 'Hose kürzen Antalya',
-    'Reißverschluss reparieren Antalya', 'Kleidung anpassen Antalya', 'Maßschneiderei Antalya', 'Textilreinigung Antalya',
-  ],
+  keywords: ['Antalya terzi', 'Konyaaltı terzi', 'otele gelen terzi Antalya', 'acil terzi Antalya', 'paça kısaltma Konyaaltı', 'fermuar değişimi Antalya', 'gelinlik tadilatı Antalya', 'özel dikim Antalya'],
   authors: [{ name: BIZ, url: SITE }],
   creator: BIZ,
   publisher: 'Terzi Can',

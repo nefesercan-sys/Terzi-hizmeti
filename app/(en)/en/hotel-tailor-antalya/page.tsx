@@ -9,11 +9,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Hotel Tailor Antalya: We Come to Belek, Lara, Kemer & Side" },
   description: "Mobile tailor to hotels in Belek, Lara, Güzeloba, Kemer, Side: alterations, repairs, ironing, dry cleaning. We come to you. ☎ +90 531 898 64 18",
-  keywords: [
-    'hotel tailor Antalya', 'mobile tailor Antalya', 'tailor Belek hotel', 'tailor Lara hotel',
-    'tailor Kemer hotel', 'tailor Side hotel', 'zipper repair Antalya', 'dress alteration hotel Antalya',
-    'dry cleaning hotel Antalya', 'wedding dress alteration Antalya',
-  ],
+  keywords: ['hotel tailor Antalya', 'tailor Belek hotel', 'tailor Lara hotel', 'tailor Kemer hotel', 'tailor Side hotel', 'urgent clothing alteration Antalya', 'mobile tailor Antalya', 'dress alteration hotel Antalya'],
   alternates: {
     canonical: `${SITE}${BASE_PATH}`,
     languages: {

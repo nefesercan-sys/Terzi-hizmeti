@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import ReviewsBlock from '@/components/ReviewsBlock';
 import { businessNode } from '@/lib/business';
+import { fitKeywords } from '@/lib/meta-fit';
 
 const SITE     = 'https://terzihizmeti.com.tr';
 const PAGE_URL = `${SITE}/konyaalti-fermuar-tamiri`;
@@ -22,14 +23,14 @@ export const metadata: Metadata = {
   title: { absolute: "Fermuar Değişimi ₺300 · Ertesi Gün · Konyaaltı" },
   description:
     "Pantolon, mont, ceket ve çanta fermuarı ₺300'den. Normal iş ertesi gün, acil 1–2 saat. Hurma, Liman, Sarısu'ya ücretsiz servis. ☎ " + PHONE,
-  keywords: [
+  keywords: fitKeywords([
     'fermuar tamiri Konyaaltı', 'fermuar değişimi Antalya', 'fermuar tamiri Antalya',
     'pantolon fermuarı değişimi', 'mont fermuarı tamiri', 'ceket fermuarı değişimi',
     'çanta fermuarı tamiri', 'sıkışan fermuar tamiri Antalya', 'fermuar ustası Konyaaltı',
     'acil fermuar değişimi', 'zipper repair Antalya', 'ремонт молнии Анталья',
     'fermuar değişimi ne kadar', 'terzi fermuar değişimi fiyatları', 'mont fermuarı değiştirme fiyatları',
     'çanta fermuar tamiri fiyat', 'fermuar değişimi fiyatları 2026',
-  ],
+  ]),
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   alternates: { canonical: PAGE_URL },
   openGraph: {

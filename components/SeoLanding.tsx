@@ -22,6 +22,7 @@ import {
 import { angleFor, angleTitles, angleDescs, angleKeywords, unfreeDeep, unfree } from '@/lib/seo-angles';
 import { fgNearDistrict, fgServiceMeta } from '@/lib/fg-meta';
 import { trNearDistrict } from '@/lib/tr-meta';
+import { fitDesc, fitKeywords } from '@/lib/meta-fit';
 
 const WA = (m: string) => `https://wa.me/${PHONE_TEL.replace('+', '')}?text=${encodeURIComponent(m)}`;
 const OG = `${SITE}/terzi-can-hero.jpg`;
@@ -313,15 +314,15 @@ export function districtMetadata(lang: Lang, d: District): Metadata {
   return {
     metadataBase: new URL(SITE),
     title: { absolute: c.title },
-    description: c.desc,
-    keywords: Array.from(new Set(kw)),
+    description: fitDesc(c.desc),
+    keywords: fitKeywords(kw),
     // Türkçe + uzak bölge: dizine alınmasın, linkler takip edilsin.
     robots: !isIndexable(lang, d.slug)
       ? { index: false, follow: true }
       : { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
     alternates: alternatesFor(lang, (l) => abs(districtUrl(l, d)), d.slug),
     openGraph: {
-      title: c.title, description: c.desc, url, siteName: 'Terzi Can', locale: OG_LOCALE[lang], type: 'website',
+      title: c.title, description: fitDesc(c.desc), url, siteName: 'Terzi Can', locale: OG_LOCALE[lang], type: 'website',
       images: [{ url: OG, width: 1024, height: 1024, alt: c.title }],
     },
   };
@@ -333,8 +334,8 @@ export function serviceMetadata(lang: Lang, s: Service): Metadata {
   return {
     metadataBase: new URL(SITE),
     title: { absolute: c.title },
-    description: c.desc,
-    keywords: Array.from(new Set([
+    description: fitDesc(c.desc),
+    keywords: fitKeywords([
       ...c.kw,
       ...s.vars[lang],
       ...s.vars[lang].slice(0, 3).map((v) => `${v} Antalya`),
@@ -345,11 +346,11 @@ export function serviceMetadata(lang: Lang, s: Service): Metadata {
         ru: [`${s.vars.ru[0]} цена Анталья`, `${s.vars.ru[0]} мужская и женская`, `${s.vars.ru[0]} 7 дней в неделю`],
         de: [`${s.vars.de[0]} Preis Antalya`, `${s.vars.de[0]} Damen und Herren`, `${s.vars.de[0]} 7 Tage geöffnet`],
       } as Record<string, string[]>)[lang],
-    ])),
+    ]),
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
     alternates: alternatesFor(lang, (l) => abs(serviceUrl(l, s))),
     openGraph: {
-      title: c.title, description: c.desc, url, siteName: 'Terzi Can', locale: OG_LOCALE[lang], type: 'website',
+      title: c.title, description: fitDesc(c.desc), url, siteName: 'Terzi Can', locale: OG_LOCALE[lang], type: 'website',
       images: [{ url: OG, width: 1024, height: 1024, alt: c.title }],
     },
   };
@@ -372,10 +373,10 @@ export function hubMetadata(lang: Lang): Metadata {
   return {
     metadataBase: new URL(SITE),
     title: { absolute: title },
-    description,
+    description: fitDesc(description),
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
     alternates: alternatesFor(lang, (l) => abs(SERVICE_BASE[l])),
-    openGraph: { title, description, url, siteName: 'Terzi Can', locale: OG_LOCALE[lang], type: 'website', images: [{ url: OG, width: 1024, height: 1024, alt: title }] },
+    openGraph: { title, description: fitDesc(description), url, siteName: 'Terzi Can', locale: OG_LOCALE[lang], type: 'website', images: [{ url: OG, width: 1024, height: 1024, alt: title }] },
   };
 }
 

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { fitKeywords } from '@/lib/meta-fit';
 
 // Bu sayfa, insanların (ve yapay zeka asistanlarının) doğal dilde sorduğu sorulara
 // tek sayfada cevap verir: "Antalya'da terzi", "terzi fiyatları", "elbisem yırtıldı",
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
   title: { absolute: "Antalya Terzi Fiyatları 2026 · Paça ₺200, Fermuar ₺300" },
   description:
     "Antalya terzi fiyat listesi 2026: paça ₺200, bel daraltma ₺200, fermuar ₺300, abiye-gelinlik ₺800'den. Fotoğraf at, net fiyat. ☎ " + PHONE,
-  keywords: [
+  keywords: fitKeywords([
     'Antalya terzi', 'terzi fiyatları', 'terzi fiyat listesi 2026', 'Antalya terzi fiyatları',
     'elbise diktirmek', 'elbise tadilatı', 'elbisem yırtıldı', 'bel daraltma', 'paça kısaltma fiyatı',
     'fermuar değişimi fiyatı', 'adrese gelen terzi', 'otelde terzi hizmeti', 'özel dikim terzi',
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
     'pamuklu doğal kumaş dikimi', 'Konyaaltı terzi',
     'terzi paça kısaltma fiyatları 2026', 'paça kısaltma ücreti', 'pantolon paçası kaç tl', 'fermuar değişimi ne kadar',
     'mont fermuarı değiştirme fiyatları', 'çanta fermuar tamiri fiyat', 'antalya özel dikim terzi',
-  ],
+  ]),
   authors: [{ name: 'Terzi Can', url: SITE }],
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   alternates: {

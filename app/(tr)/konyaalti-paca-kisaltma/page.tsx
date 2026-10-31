@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import ReviewsBlock from '@/components/ReviewsBlock';
 import { businessNode } from '@/lib/business';
+import { fitDesc } from '@/lib/meta-fit';
 
 const SITE     = 'https://terzihizmeti.com.tr';
 const PAGE_URL = `${SITE}/konyaalti-paca-kisaltma`;
@@ -16,13 +17,8 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Paça Kısaltma ₺200 · Ertesi Gün · Konyaaltı Terzi" },
   description:
-    "Pantolon, kot, etek paça kısaltma ₺200'den, normal iş ertesi gün, acil 1–2 saat. Hurma, Liman, Sarısu'ya ücretsiz servis. Her gün 08:00–23:00. ☎ " + PHONE,
-  keywords: [
-    'paça kısaltma Konyaaltı', 'pantolon kısaltma Antalya', 'kot paça kısaltma',
-    'etek kısaltma Antalya', 'paça kısaltma fiyatı 2026', 'acil paça kısaltma',
-    'pantolon boyu kısaltma Konyaaltı', 'hemming Antalya', 'подшить брюки Анталья',
-    'terzi paça kısaltma fiyatları 2026', 'paça kısaltma ücreti', 'pantolon paçası kaç tl', 'pantolon paça kısaltma ücreti 2026', 'paça kısaltma ne kadar',
-  ],
+    fitDesc("Pantolon, kot, etek paça kısaltma ₺200'den, normal iş ertesi gün, acil 1–2 saat. Hurma, Liman, Sarısu'ya ücretsiz servis. Her gün 08:00–23:00. ☎ " + PHONE),
+  keywords: ['paça kısaltma Konyaaltı', 'pantolon kısaltma Antalya', 'kot paça kısaltma', 'etek kısaltma Antalya', 'acil paça kısaltma', 'paça kısaltma fiyatı', 'Konyaaltı terzi', 'Antalya terzi'],
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   alternates: { canonical: PAGE_URL },
   openGraph: {

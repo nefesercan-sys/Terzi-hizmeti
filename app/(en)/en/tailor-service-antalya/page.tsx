@@ -25,15 +25,7 @@ export const metadata: Metadata = {
   title: { absolute: "Tailor in Antalya: Repairs, Alterations, Custom | Terzi Can" },
   // SEO Optimizasyonu: Google'da kesilmemesi için ~150 karaktere optimize edildi
   description: 'Mobile tailor, repair, alterations, and ironing service across Konyaaltı and nearby districts. We visit your hotel in Belek, Lara, Kemer, and Side.',
-  keywords: [
-    'tailor prices Antalya', 'tailor open Sunday Antalya', 'tailor open weekend Antalya', 'my dress is torn Antalya', 'take in waist dress Antalya',
-    'tailor service Antalya', 'mobile tailor Antalya', 'hotel tailor Antalya',
-    'English speaking tailor Antalya', 'clothing repair Antalya', 'alterations Antalya',
-    'hemming Antalya', 'ironing service Antalya', 'dry cleaning Antalya',
-    'Belek hotel tailor', 'Lara hotel tailor', 'Kemer hotel tailor',
-    'Side hotel tailor', 'Konyaaltı tailor', 'wedding dress alteration Antalya',
-    'suit tailoring Antalya', 'zipper repair Antalya',
-  ],
+  keywords: ['tailor Antalya', 'tailor service Antalya', 'hotel tailor Antalya', 'urgent clothing alteration Antalya', 'tailor Konyaaltı', 'clothing repair Antalya', 'trouser hemming Antalya', 'tailor open Sunday Antalya'],
   authors: [{ name: 'Terzi Can', url: SITE }],
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   alternates: {

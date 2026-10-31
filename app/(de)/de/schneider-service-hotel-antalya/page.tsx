@@ -9,11 +9,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: 'Schneider im Hotel Antalya · Mobiler Service',
   description: 'Mobiler Schneider zu Hotels in Belek, Lara, Güzeloba, Kemer, Side: Änderungen, Reparatur, Bügeln, Reinigung. Wir kommen zu Ihnen. ☎ +90 531 898 64 18',
-  keywords: [
-    'Schneider Hotel Antalya', 'mobiler Schneider Antalya', 'Änderungsschneiderei Hotel',
-    'Schneider Belek Hotel', 'Schneider Lara Hotel', 'Schneider Kemer Hotel', 'Schneider Side Hotel',
-    'Reißverschluss Reparatur Antalya', 'Kleidung kürzen Antalya', 'chemische Reinigung Hotel Antalya',
-  ],
+  keywords: ['Schneider Hotel Antalya', 'mobiler Schneider Antalya', 'Schneider Belek Hotel', 'Schneider Lara Hotel', 'Schneider Kemer Hotel', 'Schneider Side Hotel', 'Kleidung ändern Antalya eilig', 'Änderungsschneiderei Hotel Antalya'],
   alternates: {
     canonical: `${SITE}${BASE_PATH}`,
     languages: {

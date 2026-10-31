@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import KetenPamukOzelDikim, { KETEN_PAMUK_T } from '@/components/KetenPamukOzelDikim';
+import { fitKeywords } from '@/lib/meta-fit';
 
 // DÜZELTME: Bu dosya daha önce components/KetenPamukOzelDikim.tsx'in birebir kopyasıydı ve
 // hiç metadata içermiyordu (başlık/açıklama/canonical yoktu). Artık bileşeni kullanır.
@@ -15,10 +16,10 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: 'Keten Pamuk Özel Dikim, Kalıp, Seri Üretim | Terzi Can' },
   description: 'Keten ve pamuk giyim: bay, bayan, çocuk özel dikim, model ve kalıp çıkarma, numune, seri ve fason üretim. Avrupa ve Rusya\'ya gönderim. ☎ ' + PHONE,
-  keywords: ['keten özel dikim antalya', 'pamuk özel dikim', 'keten elbise diktirmek', 'keten gömlek dikim', 'bay keten giyim dikimi', 'bayan keten elbise modelleri', 'keten pamuk model ve kalıp çıkarma', 'keten giyim numune çalışması', 'keten pamuk seri üretim', 'keten giyim seri imalat', 'pamuk giyim seri imalat', 'keten giyim fason üretim', 'pamuk giyim fason dikim', 'özel ve seri keten üretimi', 'Avrupa ve Rusya\'ya keten giyim gönderimi', 'keten pamuk giyim imalatı antalya',
+  keywords: fitKeywords(['keten özel dikim antalya', 'pamuk özel dikim', 'keten elbise diktirmek', 'keten gömlek dikim', 'bay keten giyim dikimi', 'bayan keten elbise modelleri', 'keten pamuk model ve kalıp çıkarma', 'keten giyim numune çalışması', 'keten pamuk seri üretim', 'keten giyim seri imalat', 'pamuk giyim seri imalat', 'keten giyim fason üretim', 'pamuk giyim fason dikim', 'özel ve seri keten üretimi', 'Avrupa ve Rusya\'ya keten giyim gönderimi', 'keten pamuk giyim imalatı antalya',
     'bay bayan keten elbise', 'keten pantolon özel dikim', 'keten ceket özel dikim', 'keten şort dikimi', 'keten etek dikimi', 'pamuk gömlek özel dikim',
     'doğal kumaş özel dikim', 'doğal kumaş giyim üretimi', 'kişiye özel keten elbise', 'tek adet ve seri adet dikim',
-    'keten giyim kargo', 'keten giyim yurt dışı gönderim', 'keten pamuk giyim yurt içi gönderim'],
+    'keten giyim kargo', 'keten giyim yurt dışı gönderim', 'keten pamuk giyim yurt içi gönderim']),
   authors: [{ name: 'Terzi Can', url: SITE }],
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   alternates: {

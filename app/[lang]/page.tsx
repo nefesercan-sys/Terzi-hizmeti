@@ -4,6 +4,7 @@ import IntlLanding from '@/components/IntlLanding';
 import { ILANGS, INTL, iUrl, isILang } from '@/lib/intl';
 import { SITE } from '@/lib/seo-data';
 import { OG_DEFAULT } from '@/lib/turist-keten';
+import { fitDesc, fitKeywords } from '@/lib/meta-fit';
 
 // Yalnızca ILANGS içindeki diller üretilir; diğer tek-segmentli yollar 404 olur.
 export const dynamicParams = false;
@@ -19,8 +20,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   return {
     metadataBase: new URL(SITE),
     title: { absolute: c.title },
-    description: c.desc,
-    keywords: c.keywords,
+    description: fitDesc(c.desc),
+    keywords: fitKeywords(c.keywords),
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
     alternates: {
       canonical: url,
@@ -31,7 +32,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       },
     },
     openGraph: { title: c.title, description: c.desc, url, siteName: 'Terzi Can', locale: c.locale, type: 'website', images: [{ url: OG_DEFAULT, width: 1200, height: 630, alt: c.h1 }] },
-    twitter: { card: 'summary_large_image', title: c.title, description: c.desc, images: [OG_DEFAULT] },
+    twitter: { card: 'summary_large_image', title: c.title, description: fitDesc(c.desc), images: [OG_DEFAULT] },
     other: { 'geo.region': 'TR-07', 'geo.placename': 'Antalya' },
   };
 }

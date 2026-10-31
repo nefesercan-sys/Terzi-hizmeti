@@ -4,6 +4,7 @@ import { DELIVERY } from '@/lib/delivery';
 import { businessNode } from '@/lib/business';
 import Image from 'next/image';
 import { Inter, Syne } from 'next/font/google';
+import { fitDesc } from '@/lib/meta-fit';
 
 const inter = Inter({ subsets: ['latin', 'latin-ext'], variable: '--font-inter', display: 'swap' });
 const syne  = Syne({ subsets: ['latin'], weight: ['700', '800'], variable: '--font-syne', display: 'swap' });
@@ -23,13 +24,8 @@ const OG        = `${SITE}/terzi-can-hero.jpg`;
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Otelde Terzi Hizmeti: Belek, Lara, Kemer, Side — Otele Gelir" },
-  description: "Antalya'da otellere ve adresinize gelen Premium terzi hizmeti. Belek, Lara, Kundu, Kemer bölgelerinde ölçü alma, ekspres tadilat ve teslimat. ☎ " + PHONE,
-  keywords: [
-    'otele gelen terzi Antalya', 'Premium tailor Antalya', 'mobile tailor Belek',
-    'Lara otel terzi', 'Kemer terzi', 'Kundu terzi', 'Belek tailor service',
-    'портной с выездом в отель Анталья', 'mobiler Schneider Antalya',
-    'otel terzisi', 'ekspres terzi Antalya', 'adrese gelen terzi', 'otelde terzi hizmeti', 'Antalya terzi servisi', 'evime gelen terzi'
-  ],
+  description: fitDesc("Antalya'da otele gelen terzi: Belek, Lara, Kundu, Kemer, Side bölgelerinde otelden alım, tadilat ve teslimat ücretsiz. Her gün 08:00–23:00. ☎ " + PHONE),
+  keywords: ['otele gelen terzi Antalya', 'otelde terzi hizmeti', 'Belek otel terzi', 'Lara otel terzi', 'Kemer otel terzi', 'Side otel terzi', 'acil terzi Antalya', 'turist terzi Antalya'],
   authors: [{ name: BIZ, url: SITE }],
   creator: BIZ,
   publisher: 'Terzi Hizmeti',

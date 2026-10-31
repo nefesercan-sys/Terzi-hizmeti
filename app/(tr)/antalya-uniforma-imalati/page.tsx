@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from 'next';
 import ReviewsBlock from '@/components/ReviewsBlock';
 import { businessNode } from '@/lib/business';
+import { BUSINESS_ID } from '@/lib/seo-data';
+import { fitDesc, fitKeywords } from '@/lib/meta-fit';
 
 // ── Mobil / Tarayıcı Yapılandırması ─────────────────────────────────────────
 export const viewport: Viewport = {
@@ -40,13 +42,13 @@ const jsonLd = {
       name: PAGE_TITLE,
       url: SITE_URL,
       isPartOf: { '@id': `${HOME_URL}/#website` },
-      about: { '@id': `${SITE}#business` },
+      about: { '@id': BUSINESS_ID },
       description: PAGE_DESC,
       inLanguage: 'tr',
       dateModified: LAST_MODIFIED,
       lastReviewed: LAST_MODIFIED,
       breadcrumb: { '@id': `${SITE_URL}#breadcrumb` },
-      mainEntity: { '@id': `${SITE}#business` },
+      mainEntity: { '@id': BUSINESS_ID },
     },
 
     {
@@ -87,13 +89,13 @@ const jsonLd = {
 export const metadata: Metadata = {
   metadataBase: new URL(HOME_URL),
   title: { absolute: PAGE_TITLE + ' | Terzi Can' },
-  description: PAGE_DESC,
-  keywords: [
+  description: fitDesc(PAGE_DESC),
+  keywords: fitKeywords([
     'Antalya üniforma imalatı','otel personeli kıyafeti Antalya','güvenlik üniforması Antalya',
     'okul forması dikimi Antalya','aşçı kıyafeti Antalya','garson önlüğü Antalya',
     'sağlık personeli forması Antalya','doktor önlüğü dikimi','özel dikim atölyesi Antalya',
     'terzi can Antalya üniforma',
-  ],
+  ]),
   authors: [{ name: 'Terzi Can', url: HOME_URL }],
   robots: {
     index: true,

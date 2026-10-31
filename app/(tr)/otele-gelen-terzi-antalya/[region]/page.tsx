@@ -5,6 +5,7 @@ import { OTEL_BOLGELERI, bulOtelBolgesi } from '@/lib/otel-bolgeleri';
 import OtelBolgeSayfasi from '@/components/OtelBolgeSayfasi';
 import { regionJsonLd } from '@/lib/otel-copy';
 import { BUSINESS_ID } from '@/lib/seo-data';
+import { fitDesc, fitKeywords } from '@/lib/meta-fit';
 
 const SITE      = 'https://terzihizmeti.com.tr';
 const PHONE_TEL = '+905318986418';
@@ -21,11 +22,11 @@ export async function generateMetadata({ params }: { params: Promise<{ region: s
   if (!r) return {};
   const url = `${SITE}${BASE_PATH}/${r.slug}`;
   const title = `${r.name} Otel Terzisi · Paça ₺200'den, Otelden Alır`;
-  const desc = `${r.name} otelinde mi kalıyorsunuz? Paça ₺200'den, fermuar ₺300'den; otelden alıp tadil edip getiriyoruz. Ev adresleri için WhatsApp'tan sorulur. 08:00–23:00.`;
+  const desc = fitDesc(`${r.name} otelinde mi kalıyorsunuz? Paça ₺200'den, fermuar ₺300'den; otelden alıp tadil edip getiriyoruz. Ev adresleri için WhatsApp'tan sorulur. 08:00–23:00.`);
   return {
     metadataBase: new URL(SITE),
     title: { absolute: title }, description: desc,
-    keywords: [`${r.name} otel terzi`, `${r.name} terzi`, 'otele gelen terzi Antalya', `${r.name} fermuar tamiri`, `${r.name} paça kısaltma`, `${r.name} otelde terzi`],
+    keywords: fitKeywords([`${r.name} otel terzi`, `${r.name} terzi`, 'otele gelen terzi Antalya', `${r.name} fermuar tamiri`, `${r.name} paça kısaltma`, `${r.name} otelde terzi`]),
     alternates: {
       canonical: url,
       languages: {

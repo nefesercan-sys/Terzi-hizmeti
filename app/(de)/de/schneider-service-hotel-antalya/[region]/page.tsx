@@ -5,6 +5,7 @@ import { OTEL_BOLGELERI, bulOtelBolgesi } from '@/lib/otel-bolgeleri';
 import OtelBolgeSayfasi from '@/components/OtelBolgeSayfasi';
 import { regionJsonLd } from '@/lib/otel-copy';
 import { BUSINESS_ID } from '@/lib/seo-data';
+import { fitDesc, fitKeywords } from '@/lib/meta-fit';
 
 const SITE = 'https://terzihizmeti.com.tr';
 const PHONE_TEL = '+905318986418';
@@ -31,14 +32,14 @@ export async function generateMetadata({ params }: { params: Promise<{ region: s
 
   const url = `${SITE}${BASE_PATH}/${r.slug}`;
   const title = `Schneider im Hotel ${r.name}, Antalya | Abholung & Lieferung`;
-  const desc = `Urlaub in ${r.name}? Wir holen Kleidung im Hotel ab, ändern sie in Konyaaltı und bringen sie zurück. Täglich 08:00–23:00, Lieferung je nach Gebiet.`;
+  const desc = fitDesc(`Urlaub in ${r.name}? Wir holen Kleidung im Hotel ab, ändern sie in Konyaaltı und bringen sie zurück. Täglich 08:00–23:00, Lieferung je nach Gebiet.`);
   const ogImage = `${SITE}/terzi-can-hero.jpg`;
 
   return {
     metadataBase: new URL(SITE),
     title: { absolute: title },
     description: desc,
-    keywords: [`Schneider Hotel ${r.name}`, `Änderungsschneiderei ${r.name}`, `Hose kürzen ${r.name}`, `Reißverschluss reparieren ${r.name}`, 'Schneider Antalya Urlaub', 'Kleidung ändern lassen Antalya Hotel'],
+    keywords: fitKeywords([`Schneider Hotel ${r.name}`, `Änderungsschneiderei ${r.name}`, `Hose kürzen ${r.name}`, `Reißverschluss reparieren ${r.name}`, 'Schneider Antalya Urlaub', 'Kleidung ändern lassen Antalya Hotel']),
     alternates: {
       canonical: url,
       languages: {

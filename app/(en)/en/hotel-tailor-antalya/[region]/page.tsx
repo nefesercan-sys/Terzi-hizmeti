@@ -5,6 +5,7 @@ import { OTEL_BOLGELERI, bulOtelBolgesi } from '@/lib/otel-bolgeleri';
 import OtelBolgeSayfasi from '@/components/OtelBolgeSayfasi';
 import { regionJsonLd } from '@/lib/otel-copy';
 import { BUSINESS_ID } from '@/lib/seo-data';
+import { fitDesc, fitKeywords } from '@/lib/meta-fit';
 
 const SITE = 'https://terzihizmeti.com.tr';
 const PHONE_TEL = '+905318986418';
@@ -25,14 +26,14 @@ export async function generateMetadata({ params }: { params: Promise<{ region: s
   const url = `${SITE}${BASE_PATH}/${r.slug}`;
   // Yeni VIP SEO Başlığı ve Açıklaması (Dinamik)
   const title = `Hotel Tailor in ${r.name}, Antalya | Pick-up & Delivery`;
-  const desc = `Staying in ${r.name}? We collect clothes from your hotel, alter them in Konyaaltı and bring them back. Open daily 08:00–23:00.`;
+  const desc = fitDesc(`Staying in ${r.name}? We collect clothes from your hotel, alter them in Konyaaltı and bring them back. Open daily 08:00–23:00.`);
   const ogImage = `${SITE}/terzi-can-hero.jpg`;
 
   return {
     metadataBase: new URL(SITE),
     title: { absolute: title },
     description: desc,
-    keywords: [`tailor near hotels in ${r.name}`, `${r.name} hotel tailor`, `clothing alterations ${r.name}`, `hemming ${r.name} Antalya`, `zipper repair ${r.name}`, 'holiday clothing alterations Antalya', 'hotel pick-up tailor Antalya'],
+    keywords: fitKeywords([`tailor near hotels in ${r.name}`, `${r.name} hotel tailor`, `clothing alterations ${r.name}`, `hemming ${r.name} Antalya`, `zipper repair ${r.name}`, 'holiday clothing alterations Antalya', 'hotel pick-up tailor Antalya']),
     alternates: {
       canonical: url,
       languages: {

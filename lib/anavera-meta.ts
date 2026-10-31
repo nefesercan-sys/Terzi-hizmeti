@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { ANAVERA_URLS, translations, type AnaveraLang } from '@/components/AnaveraTekstilSayfasi';
+import { fitDesc, fitKeywords } from '@/lib/meta-fit';
 
 const SITE    = 'https://terzihizmeti.com.tr';
 const OG      = 'https://images.pexels.com/photos/3738088/pexels-photo-3738088.jpeg?auto=compress&cs=tinysrgb&w=1200&h=630&fit=crop';
@@ -40,8 +41,8 @@ export function buildAnaveraMetadata(lang: AnaveraLang): Metadata {
   return {
     metadataBase: new URL(SITE),
     title: { absolute: c.title },
-    description: c.description,
-    keywords: c.keywords,
+    description: fitDesc(c.description),
+    keywords: fitKeywords(c.keywords),
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large' } },
     alternates: {
       canonical: url,

@@ -197,14 +197,14 @@ const T: Record<Lang, any> = {
     steps: [
       ['1️⃣', 'Stil wählen', 'Wählen Sie ein Modell unten oder senden Sie Ihr eigenes Foto/Idee.'],
       ['2️⃣', 'Maße & Stoff', 'Teilen Sie Ihre Maße per WhatsApp mit, wählen Sie Leinen oder Baumwolle.'],
-      ['3️⃣', 'Schneidern', 'In unserer Werkstatt gefertigt — die Dauer richtet sich nach Modell und Stückzahln fertig.'],
+      ['3️⃣', 'Schneidern', 'In unserer Werkstatt gefertigt — die Dauer richtet sich nach Modell und Stückzahl fertig.'],
       ['4️⃣', 'Lieferung', 'Lieferung an Ihr Hotel oder Ihre Adresse, Zahlung bei Lieferung.'],
     ],
     faqH: 'Häufig gestellte Fragen',
     faq: [
       ['Muss ich ein fertiges Modell wählen, oder kann ich mein eigenes Design schneidern lassen?', 'Sie sind nicht auf die Galerie beschränkt — senden Sie Ihr eigenes Foto oder Ihre Idee per WhatsApp, wir schneidern danach.'],
       ['Wähle ich den Stoff, oder Sie?', 'Sie wählen — 100% Leinen oder 100% Baumwolle, wir bestätigen die Wahl gemeinsam per WhatsApp.'],
-      ['Wie lange dauert die Anfertigung?', 'Die Dauer richtet sich nach Modell und Stückzahln fertig, je nach Komplexität des Modells; der genaue Tag wird per WhatsApp bestätigt.'],
+      ['Wie lange dauert die Anfertigung?', 'Die Dauer richtet sich nach Modell und Stückzahl fertig, je nach Komplexität des Modells; der genaue Tag wird per WhatsApp bestätigt.'],
       ['Liefern Sie an mein Hotel?', 'Ja, wir liefern an Hotels in ganz Antalya, Zahlung bei Lieferung.'],
       ['Wie gebe ich meine Maße an?', 'Teilen Sie sie per WhatsApp mit — bei Bedarf helfen wir auch per Videoanruf.'],
       ['Erstellen Sie Modelle und Schnittmuster?', 'Ja. Wir erstellen Modell und Schnittmuster nach Foto, Skizze oder Musterstück und nähen zuerst ein Muster; nach Ihrer Freigabe folgen Maßanfertigung oder Serie.'],

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import ReviewsBlock from '@/components/ReviewsBlock';
 import { businessNode } from '@/lib/business';
+import { fitKeywords } from '@/lib/meta-fit';
 
 const SITE     = 'https://terzihizmeti.com.tr';
 const PAGE_URL = `${SITE}/antalya-gelinlik-tadilati`;
@@ -17,11 +18,11 @@ export const metadata: Metadata = {
   title: { absolute: "Gelinlik & Abiye Tadilatı Antalya — Prova ile" },
   description:
     'Antalya\'da gelinlik ve abiye tadilatı. Hassas daraltma, boy ayarı, detaylı onarım. ₺800\'den, randevulu ve özenli hizmet. Konyaaltı merkezli atölye.',
-  keywords: [
+  keywords: fitKeywords([
     'gelinlik tadilatı Antalya', 'abiye tadilatı Antalya', 'gelinlik daraltma Antalya',
     'gelinlik boy ayarı Konyaaltı', 'düğün kıyafeti tadilatı', 'nişanlık tadilatı Antalya',
     'wedding dress alterations Antalya', 'подгонка свадебного платья Анталья',
-  ],
+  ]),
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   alternates: { canonical: PAGE_URL },
   openGraph: {

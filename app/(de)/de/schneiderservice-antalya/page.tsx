@@ -31,11 +31,7 @@ export const metadata: Metadata = {
   title: { absolute: 'Schneider in Antalya: Änderungen, Reparatur, Maßanfertigung' },
   description:
     'Änderungsschneiderei in Antalya (Konyaaltı): Hose kürzen, Reißverschluss, Brautkleid, Maßanfertigung. Hotelservice, Deutsch, täglich offen.',
-  keywords: [
-    'Schneider Antalya', 'Änderungsschneiderei Antalya', 'Schneider Antalya Deutsch', 'Hose kürzen Antalya',
-    'Reißverschluss Reparatur Antalya', 'Brautkleid ändern Antalya', 'Maßanfertigung Antalya',
-    'mobiler Schneider Antalya', 'Schneider Konyaaltı', 'Kleidung reparieren Antalya', 'Schneider Sonntag geöffnet Antalya',
-  ],
+  keywords: ['Schneider Antalya', 'Änderungsschneiderei Antalya', 'Schneider Hotel Antalya', 'Kleidung ändern Antalya eilig', 'Schneider Konyaaltı', 'Hose kürzen Antalya', 'Reißverschluss wechseln Antalya', 'Maßanfertigung Antalya'],
   alternates: {
     canonical: PAGE_URL,
     languages: { tr: TR_URL, en: EN_URL, ru: RU_URL, de: PAGE_URL, ...INTL_ALT, 'x-default': TR_URL },

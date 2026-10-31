@@ -8,11 +8,14 @@ import { svcUrl } from '@/lib/intl-services';
 import { PLANGS, promoUrl, promoAlternates, PROMO_LAST_UPDATE } from '@/lib/promosyon-tekstil';
 
 const SITE = "https://terzihizmeti.com.tr";
-const NOW = new Date('2026-10-27');   // v36'da değişen sayfalar
+const NOW = new Date('2026-10-27');   // önceki sürümde değişen sayfalar
+const NOW30 = new Date('2026-10-30'); // bu dalda içeriği değişen sayfalar
 const OLD = new Date('2026-09-20');   // v36'da değişmeyen sayfalar (sahte güncelleme tarihi verme)
 // İçeriği değişen sayfalar (yorum bölümü eklenenler dahil) — yeni içerik eklenince buraya ekle
 const CHANGED = new Set(['', '/ru/uslugi-portnogo-antalya', '/antalya-terzi', '/antalya-terzi-fiyatlari', '/antalya-gelinlik-tadilati', '/antalya-uniforma-imalati', '/en/tailor-service-antalya', '/de/schneiderservice-antalya', '/gursu-terzi', '/hurma-terzi', '/liman-terzi', '/sarisu-terzi', '/uncali-terzi', '/keten-pamuk-ozel-dikim', '/en/linen-cotton-tailoring', '/de/leinen-baumwolle-schneiderei', '/ru/poshiv-lyon-hlopok', '/konyaalti-fermuar-tamiri', '/konyaalti-paca-kisaltma', '/otele-gelen-terzi-antalya', '/blog/2026-yaz-sezonu-gelinlik-tadilat-rehberi', '/anavera-tekstil', '/en/anavera-tekstil', '/de/anavera-tekstil', '/ru/anavera-tekstil']);
-const lm = (path: string) => (CHANGED.has(path) ? NOW : OLD);
+// Bu dalda (fix/icerik-seo-hatalar) metni değişen sayfalar: süreler, otel ücretsiz kuralı, SSS, doğrudan cevap, bölgeye özgü bölümler, fiyat kaynağı.
+const CHANGED30 = new Set(['', '/antalya-terzi', '/otele-gelen-terzi-antalya', '/antalya-terzi-fiyatlari', '/en/tailor-prices-antalya', '/de/schneider-preise-antalya', '/ru/ceny-portnoy-antalya', '/antalya-gelinlik-tadilati', '/antalya-uniforma-imalati', '/gursu-terzi', '/hurma-terzi', '/liman-terzi', '/sarisu-terzi', '/uncali-terzi', '/keten-pamuk-ozel-dikim', '/konyaalti-fermuar-tamiri', '/konyaalti-paca-kisaltma', '/en/tailor-service-antalya', '/ru/uslugi-portnogo-antalya', '/de/schneiderservice-antalya', '/en/hotel-tailor-antalya', '/ru/vyezdnoy-portnoy-antalya', '/de/schneider-service-hotel-antalya']);
+const lm = (path: string) => (CHANGED30.has(path) ? NOW30 : CHANGED.has(path) ? NOW : OLD);
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // OTEL_BOLGELERI verisini güvenli bir şekilde slug metin dizisine çeviriyoruz
@@ -21,12 +24,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     : Object.keys(OTEL_BOLGELERI);
 
   // Otel bölgeleri için dinamik sayfalar (Niş Alt Sayfalar - Priority: 0.75)
-  const otelSayfalari: MetadataRoute.Sitemap = bolgeListesi.flatMap((slug) => [
-    { url: `${SITE}/otele-gelen-terzi-antalya/${slug}`, lastModified: OLD, changeFrequency: 'weekly', priority: 0.75 },
-    { url: `${SITE}/en/hotel-tailor-antalya/${slug}`, lastModified: OLD, changeFrequency: 'weekly', priority: 0.75 },
-    { url: `${SITE}/ru/vyezdnoy-portnoy-antalya/${slug}`, lastModified: OLD, changeFrequency: 'weekly', priority: 0.75 },
-    { url: `${SITE}/de/schneider-service-hotel-antalya/${slug}`, lastModified: OLD, changeFrequency: 'weekly', priority: 0.75 },
-  ]);
+  // Bölge başına TR/EN/RU/DE karşılıkları birbirine hreflang ile bağlanır (içerik bu dalda değişti: NOW30).
+  const otelSayfalari: MetadataRoute.Sitemap = bolgeListesi.flatMap((slug) => {
+    const urls = {
+      tr: `${SITE}/otele-gelen-terzi-antalya/${slug}`,
+      en: `${SITE}/en/hotel-tailor-antalya/${slug}`,
+      ru: `${SITE}/ru/vyezdnoy-portnoy-antalya/${slug}`,
+      de: `${SITE}/de/schneider-service-hotel-antalya/${slug}`,
+    };
+    // Ek 6 dilli karşılıklar (ZONE_SLUGS) varsa hreflang kümesi onları da içerir; aksi halde karşılıklılık bozulur.
+    const extra = (ZONE_SLUGS as readonly string[]).includes(slug)
+      ? Object.fromEntries(ILANGS.map((x) => [INTL[x].hreflang, `${SITE}${zoneUrl(x, slug as (typeof ZONE_SLUGS)[number])}`]))
+      : {};
+    const alternates = { languages: { ...urls, ...extra, 'x-default': urls.tr } };
+    return Object.values(urls).map((url) => ({ url, lastModified: NOW30, changeFrequency: 'weekly' as const, priority: 0.75, alternates }));
+  });
 
   // Sabit Sayfalar Hiyerarşisi
   const sabitSayfalar: MetadataRoute.Sitemap = [

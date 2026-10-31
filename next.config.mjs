@@ -1,4 +1,17 @@
 /** @type {import('next').NextConfig} */
+// CSP önce yalnızca raporlama modunda (engellemez); tarayıcı konsolunda ihlaller görüldükten sonra zorunlu hale getirilebilir.
+const csp = [
+  "default-src 'self'",
+  "script-src 'self' 'unsafe-inline' https://va.vercel-scripts.com",
+  "style-src 'self' 'unsafe-inline'",
+  "img-src 'self' data: blob: https://images.pexels.com https://maps.googleapis.com https://lh3.googleusercontent.com",
+  "font-src 'self' data:",
+  "connect-src 'self' https://vitals.vercel-insights.com https://va.vercel-scripts.com",
+  "frame-ancestors 'none'",
+  "base-uri 'self'",
+  "form-action 'self' https://wa.me",
+].join('; ');
+
 const nextConfig = {
   poweredByHeader: false,
   // Birden çok kök düzen (dil başına <html lang>) için gerekli 404 mekanizması
@@ -49,6 +62,8 @@ const nextConfig = {
           { key: 'X-Frame-Options', value: 'DENY' },
           { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
           { key: 'Strict-Transport-Security', value: 'max-age=31536000; includeSubDomains' },
+          { key: 'Permissions-Policy', value: 'camera=(), microphone=(), geolocation=(), payment=(), usb=()' },
+          { key: 'Content-Security-Policy-Report-Only', value: csp },
         ],
       },
       {

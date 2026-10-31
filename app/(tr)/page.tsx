@@ -203,12 +203,16 @@ const C = {
 };
 
 // Yapay zekâ ile üretilmiş örnek görseller (gerçek iş fotoğrafı değildir; alt metinde "örnek görsel" yazar).
-// Fotoğrafı olmayan hizmetlerde özgün çizim kullanılır. Gerçek fotoğraf gelince bu tabloya eklenir.
+// Tabloda olmayan bir hizmet için özgün çizim (Ilustrasyon) kullanılır. Gerçek fotoğraf gelince buradaki dosyalar değiştirilir.
 const FOTO: Record<string, string> = {
   '01': '/gorseller/paca-kisaltma.webp',
   '02': '/gorseller/fermuar-degisimi.webp',
   '03': '/gorseller/bel-daraltma-manken.webp',
   '04': '/gorseller/kalip-ve-makas.webp',
+  '05': '/gorseller/gelinlik-abiye.webp',
+  '06': '/gorseller/kuru-temizleme-utu.webp',
+  '07': '/gorseller/eve-gelen-terzi.webp',
+  '08': '/gorseller/uniforma.webp',
 };
 
 const SERVICES = [

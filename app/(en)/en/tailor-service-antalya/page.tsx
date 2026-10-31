@@ -300,7 +300,7 @@ export default function TailorServiceAntalyaPage() {
             </div>
           </section>
 
-      <OrnekGorselSeridi konu={'genel'} lang="en" anahtarlar={['eve-gelen-terzi', 'erkek-takim-olcu', 'abiye-elbise-atolye', 'yun-pantolon-metre', 'beyaz-gomlek-katli', 'palto-yaka-detay']} sayfaUrl="https://terzihizmeti.com.tr/en/tailor-service-antalya" />
+      <OrnekGorselSeridi konu={['terzi','fiyat']} lang="en" anahtarlar={['eve-gelen-terzi', 'erkek-takim-olcu', 'abiye-elbise-atolye', 'yun-pantolon-metre', 'beyaz-gomlek-katli', 'palto-yaka-detay']} sayfaUrl="https://terzihizmeti.com.tr/en/tailor-service-antalya" />
 
           <section className="sec" style={{ background: 'rgba(0,0,0,.12)' }} id="faq" aria-labelledby="faq-h">
             <div className="ctr" style={{ maxWidth: 740 }}>

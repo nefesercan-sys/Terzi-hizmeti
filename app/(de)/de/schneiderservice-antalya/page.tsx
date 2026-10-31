@@ -206,7 +206,7 @@ export default function SchneiderserviceAntalya() {
       </main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@graph': [businessNode('de')] }) }} />
       <FabricsOrderBlock lang="de" />
-      <OrnekGorselSeridi konu={'genel'} lang="de" anahtarlar={['eve-gelen-terzi', 'erkek-takim-olcu', 'abiye-elbise-atolye', 'yun-pantolon-metre', 'beyaz-gomlek-katli', 'palto-yaka-detay']} sayfaUrl="https://terzihizmeti.com.tr/de/schneiderservice-antalya" />
+      <OrnekGorselSeridi konu={['terzi','fiyat']} lang="de" anahtarlar={['eve-gelen-terzi', 'erkek-takim-olcu', 'abiye-elbise-atolye', 'yun-pantolon-metre', 'beyaz-gomlek-katli', 'palto-yaka-detay']} sayfaUrl="https://terzihizmeti.com.tr/de/schneiderservice-antalya" />
 
       <ReviewsBlock lang="de" />
     </>

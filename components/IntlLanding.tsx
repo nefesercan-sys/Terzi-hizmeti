@@ -5,6 +5,7 @@ import { PHONE, PHONE_TEL, MAPS, SITE } from '@/lib/seo-data';
 import { ILANGS, INTL, NB, NB_DISTRICT, ZONES, iUrl, type ILang } from '@/lib/intl';
 import { SVC, svcUrl } from '@/lib/intl-services';
 import { FIYAT, fiyatUrl } from '@/lib/intl-fiyat';
+import { ILETISIM, iletisimUrl } from '@/lib/intl-iletisim';
 import { ZCOPY, ZONE_SLUGS, zoneData, zoneUrl } from '@/lib/intl-zones';
 import { eurText } from '@/lib/facts';
 import { waLink, businessNode, OG_DEFAULT } from '@/lib/turist-keten';
@@ -128,6 +129,7 @@ export default function IntlLanding({ lang }: { lang: ILang }) {
           <a href={`tel:${PHONE_TEL}`} style={{ color: C.green, fontWeight: 700 }} dir="ltr">☎ {c.call}: {PHONE}</a>
           {' · '}
           <a href={MAPS} target="_blank" rel="noopener noreferrer" style={{ color: C.green }}>{c.mapLabel}</a>
+          {' · '}<Link href={iletisimUrl(lang)} style={{ color: C.green }}>{ILETISIM[lang].h1}</Link>
         </p>
         <p style={{ margin: 0, fontSize: '.9rem', color: C.muted }}>
           {c.otherLangs}:{' '}

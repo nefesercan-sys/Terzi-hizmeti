@@ -5,6 +5,7 @@
 // Veri: lib/seo-data.ts. Sadece doğrulanmış bilgi kullanılır (bkz. dosya başlığı).
 // ============================================================
 import { sixForService } from '@/lib/intl-hizmet';
+import { sixAlt } from '@/lib/intl-topics';
 import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
 import type { GorselAnahtar } from '@/lib/ornek-gorseller';
 import type { Metadata } from 'next';
@@ -378,7 +379,7 @@ export function hubMetadata(lang: Lang): Metadata {
     title: { absolute: title },
     description: fitDesc(description),
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
-    alternates: alternatesFor(lang, (l) => abs(SERVICE_BASE[l])),
+    alternates: (() => { const a = alternatesFor(lang, (l) => abs(SERVICE_BASE[l])); return { ...a, languages: { ...a.languages, ...sixAlt('tamir') } }; })(),
     openGraph: { title, description: fitDesc(description), url, siteName: 'Terzi Can', locale: OG_LOCALE[lang], type: 'website', images: [{ url: OG, width: 1024, height: 1024, alt: title }] },
   };
 }

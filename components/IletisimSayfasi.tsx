@@ -41,6 +41,8 @@ export const CONTACT_URL = SITE_CFG.contactUrl;
 
 const OG_LOCALE: L4 = { tr: 'tr_TR', en: 'en_US', ru: 'ru_RU', de: 'de_DE' };
 const PHONE_LOCAL = '0531 898 64 18';
+// Yol tarifi: işletme koordinatları (lib/business.ts geo ile aynı)
+const DIR_URL = 'https://www.google.com/maps/dir/?api=1&destination=36.857466,30.596987';
 const WA_BASE = `https://wa.me/${PHONE_TEL.replace('+', '')}`;
 const abs = (p: string) => `${SITE}${p === '/' ? '' : p}`;
 
@@ -52,7 +54,7 @@ const T = {
     tag: 'Antalya · Konyaaltı · Her gün 08:00–23:00',
     h1: 'Terzi Can İletişim',
     lead: 'Telefon, WhatsApp ve adres bilgileri. Aramanız ya da yazmanız yeterli: fotoğraf gönderin, fiyatı ve teslim süresini öğrenin.',
-    call: 'Hemen Ara', wa: "WhatsApp'tan Yaz", maps: 'Yol Tarifi (Google Haritalar)',
+    call: 'Hemen Ara', wa: "WhatsApp'tan Yaz", maps: 'Yol Tarifi (Google Haritalar)', dirH: 'Nasıl gelinir?', dirP: 'Atölyemiz Hurma Mahallesi\'nde (07130 Konyaaltı / Antalya). Aşağıdaki düğme size konumumuza giden yolu açar; Google Haritalar\'da "TERZİ Can" adıyla da bulabilirsiniz. Gelmeden önce aramanız veya WhatsApp\'tan yazmanız işinizi hızlandırır.', dirBtn: 'Yol tarifini aç', dirMap: 'Haritada gör',
     infoH: 'İletişim Bilgileri',
     rows: [
       ['Telefon / WhatsApp', PHONE],
@@ -96,7 +98,7 @@ const T = {
     tag: 'Antalya · Konyaaltı · Open daily 08:00–23:00',
     h1: 'Contact Terzi Can — Tailor in Antalya',
     lead: 'Phone, WhatsApp and address. Call or message us: send a photo and get the price and turnaround time.',
-    call: 'Call now', wa: 'Message on WhatsApp', maps: 'Directions (Google Maps)',
+    call: 'Call now', wa: 'Message on WhatsApp', maps: 'Directions (Google Maps)', dirH: 'How to find us', dirP: 'Our workshop is in Hurma district (07130 Konyaaltı / Antalya). The button below opens directions to our location; you can also find us on Google Maps as "TERZİ Can". Calling or messaging us on WhatsApp before you come speeds things up.', dirBtn: 'Open directions', dirMap: 'View on map',
     infoH: 'Contact details',
     rows: [
       ['Phone / WhatsApp', PHONE],
@@ -140,7 +142,7 @@ const T = {
     tag: 'Анталья · Коньяалты · Ежедневно 08:00–23:00',
     h1: 'Контакты Terzi Can — портной в Анталье',
     lead: 'Телефон, WhatsApp и адрес. Позвоните или напишите: пришлите фото и на следующий день узнайте цену и срок.',
-    call: 'Позвонить', wa: 'Написать в WhatsApp', maps: 'Маршрут (Google Maps)',
+    call: 'Позвонить', wa: 'Написать в WhatsApp', maps: 'Маршрут (Google Maps)', dirH: 'Как нас найти', dirP: 'Наша мастерская находится в районе Хурма (07130 Коньяалты / Анталья). Кнопка ниже откроет маршрут к нам; на Google Картах нас можно найти как «TERZİ Can». Позвоните или напишите в WhatsApp перед визитом — так будет быстрее.', dirBtn: 'Открыть маршрут', dirMap: 'Показать на карте',
     infoH: 'Контактная информация',
     rows: [
       ['Телефон / WhatsApp', PHONE],
@@ -184,7 +186,7 @@ const T = {
     tag: 'Antalya · Konyaaltı · Täglich 08:00–23:00',
     h1: 'Kontakt Terzi Can — Schneider in Antalya',
     lead: 'Telefon, WhatsApp und Adresse. Rufen Sie an oder schreiben Sie uns: Foto senden und Preis sowie Fertigstellungszeit erfahren.',
-    call: 'Jetzt anrufen', wa: 'Per WhatsApp schreiben', maps: 'Route (Google Maps)',
+    call: 'Jetzt anrufen', wa: 'Per WhatsApp schreiben', maps: 'Route (Google Maps)', dirH: 'So finden Sie uns', dirP: 'Unsere Werkstatt liegt im Viertel Hurma (07130 Konyaaltı / Antalya). Die Schaltfläche unten öffnet die Route zu uns; auf Google Maps finden Sie uns als „TERZİ Can“. Ein Anruf oder eine WhatsApp-Nachricht vorab beschleunigt alles.', dirBtn: 'Route öffnen', dirMap: 'Auf der Karte ansehen',
     infoH: 'Kontaktdaten',
     rows: [
       ['Telefon / WhatsApp', PHONE],
@@ -306,6 +308,11 @@ const CSS = `
 .ct-btn{display:inline-flex;align-items:center;gap:10px;font-weight:800;font-size:1rem;padding:15px 24px;border-radius:6px}
 .ct-call{background:#C9A96E;color:#1E3329}
 .ct-wa{background:#0F7B3C;color:#fff}
+.ct-dh{font-size:1.15rem;font-weight:800;margin:1.6rem 0 .5rem}
+.ct-dp{max-width:680px;margin-bottom:1rem}
+.ct-dbtns{display:flex;flex-wrap:wrap;gap:12px}
+.ct-dbtn{display:inline-flex;align-items:center;gap:8px;font-weight:700;padding:12px 20px;border-radius:6px;background:#2C4A3E;color:#fff}
+.ct-dbtn.alt{background:transparent;color:#2C4A3E;border:2px solid #2C4A3E}
 .ct-map{border:2px solid rgba(255,255,255,.5);color:#fff;font-weight:700}
 .ct-sec{padding:2.6rem 1.25rem}
 .ct-sec.alt{background:#F2EDE5}
@@ -355,7 +362,7 @@ export default function IletisimSayfasi({ lang }: { lang: Lang }) {
               <div className="ct-btns">
                 <a className="ct-btn ct-call" href={`tel:${PHONE_TEL}`}>📞 {c.call}: {PHONE}</a>
                 <a className="ct-btn ct-wa" href={waHref} target="_blank" rel="noopener noreferrer">💬 {c.wa}</a>
-                <a className="ct-btn ct-map" href={MAPS} target="_blank" rel="noopener noreferrer">📍 {c.maps}</a>
+                <a className="ct-btn ct-map" href={DIR_URL} target="_blank" rel="noopener noreferrer">📍 {c.maps}</a>
               </div>
             </div>
           </section>
@@ -370,6 +377,12 @@ export default function IletisimSayfasi({ lang }: { lang: Lang }) {
                     <div className="ct-v">{i === 0 ? <a href={`tel:${PHONE_TEL}`}>{v}</a> : v}</div>
                   </div>
                 ))}
+              </div>
+              <h3 className="ct-dh">{c.dirH}</h3>
+              <p className="ct-dp">{c.dirP}</p>
+              <div className="ct-dbtns">
+                <a className="ct-dbtn" href={DIR_URL} target="_blank" rel="noopener noreferrer">📍 {c.dirBtn}</a>
+                <a className="ct-dbtn alt" href={MAPS} target="_blank" rel="noopener noreferrer">🗺️ {c.dirMap}</a>
               </div>
             </div>
           </section>

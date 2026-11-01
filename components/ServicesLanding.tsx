@@ -5,6 +5,7 @@ import { PHONE, PHONE_TEL, MAPS, SITE } from '@/lib/seo-data';
 import { businessNode, OG_DEFAULT, waLink, TURIST_UPDATE } from '@/lib/turist-keten';
 import { INTL, iUrl, type ILang } from '@/lib/intl';
 import { SVC, svcUrl } from '@/lib/intl-services';
+import { TOPIC_IDS, TOPICS, topicUrl } from '@/lib/intl-topics';
 import { PROMO_PATH, PROMO_NAME } from '@/lib/promosyon-paths';
 
 const C = { green: '#2C4A3E', gold: '#D4B07A', cream: '#FAF7F2', sand: '#F2EDE4', ink: '#1C1814', muted: '#6B5F53', line: 'rgba(44,74,62,.15)' };
@@ -98,6 +99,7 @@ export default function ServicesLanding({ lang }: { lang: ILang }) {
             <strong>{c.b2bTitle}:</strong> {c.b2b}{' '}<Link href={ANAVERA[lang]} style={{ color: C.green }}>{c.b2bLink}</Link>
           </p>
           <p style={{ margin: '.5rem 0 0', fontSize: '.88rem', color: C.muted }}>
+            {TOPIC_IDS.map((t) => <span key={t}><Link href={topicUrl(lang, t)} style={{ color: C.green }}>{TOPICS[lang][t].h1}</Link>{' · '}</span>)}
             <Link href={PROMO_PATH[lang]} style={{ color: C.green }}>{PROMO_NAME[lang]}</Link>
           </p>
         </section>

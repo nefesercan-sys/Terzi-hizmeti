@@ -8,7 +8,7 @@
 import { ILANGS, type ILang } from '@/lib/intl';
 
 import { DELIVERY } from '@/lib/delivery';
-export const ZONE_SLUGS = ['belek', 'lara', 'guzeloba', 'side', 'kemer', 'konyaalti', 'kundu', 'muratpasa'] as const;
+export const ZONE_SLUGS = ['belek', 'lara', 'guzeloba', 'side', 'kemer', 'konyaalti', 'kundu', 'muratpasa', 'goynuk', 'antalya'] as const;
 export type ZoneSlug = (typeof ZONE_SLUGS)[number];
 export const isZone = (s: string): s is ZoneSlug => (ZONE_SLUGS as readonly string[]).includes(s);
 
@@ -24,12 +24,12 @@ export const zoneAlt = (z: string): Record<string, string> =>
   isZone(z) ? Object.fromEntries(ILANGS.map((l) => [l, `https://terzihizmeti.com.tr${zoneUrl(l, z)}`])) : {};
 
 const NAMES: Record<ILang, Record<ZoneSlug, string>> = {
-  es: { belek: 'Belek', lara: 'Lara', guzeloba: 'Güzeloba', side: 'Side', kemer: 'Kemer', konyaalti: 'Konyaaltı', kundu: 'Kundu', muratpasa: 'Muratpaşa' },
-  fr: { belek: 'Belek', lara: 'Lara', guzeloba: 'Güzeloba', side: 'Side', kemer: 'Kemer', konyaalti: 'Konyaaltı', kundu: 'Kundu', muratpasa: 'Muratpaşa' },
-  pl: { belek: 'Belek', lara: 'Lara', guzeloba: 'Güzeloba', side: 'Side', kemer: 'Kemer', konyaalti: 'Konyaaltı', kundu: 'Kundu', muratpasa: 'Muratpaşa' },
-  nl: { belek: 'Belek', lara: 'Lara', guzeloba: 'Güzeloba', side: 'Side', kemer: 'Kemer', konyaalti: 'Konyaaltı', kundu: 'Kundu', muratpasa: 'Muratpaşa' },
-  uk: { belek: 'Белек', lara: 'Лара', guzeloba: 'Гюзельоба', side: 'Сіде', kemer: 'Кемер', konyaalti: 'Коньяалти', kundu: 'Кунду', muratpasa: 'Муратпаша' },
-  ar: { belek: 'بيليك', lara: 'لارا', guzeloba: 'غوزيلوبا', side: 'سيدي', kemer: 'كيمر', konyaalti: 'كونيالتي', kundu: 'كوندو', muratpasa: 'موراتباشا' },
+  es: { belek: 'Belek', lara: 'Lara', guzeloba: 'Güzeloba', side: 'Side', kemer: 'Kemer', konyaalti: 'Konyaaltı', kundu: 'Kundu', muratpasa: 'Muratpaşa', goynuk: 'Göynük', antalya: 'Antalya' },
+  fr: { belek: 'Belek', lara: 'Lara', guzeloba: 'Güzeloba', side: 'Side', kemer: 'Kemer', konyaalti: 'Konyaaltı', kundu: 'Kundu', muratpasa: 'Muratpaşa', goynuk: 'Göynük', antalya: 'Antalya' },
+  pl: { belek: 'Belek', lara: 'Lara', guzeloba: 'Güzeloba', side: 'Side', kemer: 'Kemer', konyaalti: 'Konyaaltı', kundu: 'Kundu', muratpasa: 'Muratpaşa', goynuk: 'Göynük', antalya: 'Antalya' },
+  nl: { belek: 'Belek', lara: 'Lara', guzeloba: 'Güzeloba', side: 'Side', kemer: 'Kemer', konyaalti: 'Konyaaltı', kundu: 'Kundu', muratpasa: 'Muratpaşa', goynuk: 'Göynük', antalya: 'Antalya' },
+  uk: { belek: 'Белек', lara: 'Лара', guzeloba: 'Гюзельоба', side: 'Сіде', kemer: 'Кемер', konyaalti: 'Коньяалти', kundu: 'Кунду', muratpasa: 'Муратпаша', goynuk: 'Гейнюк', antalya: 'Анталія' },
+  ar: { belek: 'بيليك', lara: 'لارا', guzeloba: 'غوزيلوبا', side: 'سيدي', kemer: 'كيمر', konyaalti: 'كونيالتي', kundu: 'كوندو', muratpasa: 'موراتباشا', goynuk: 'غوينوك', antalya: 'أنطاليا' },
 };
 
 const BLURB: Record<ILang, Record<ZoneSlug, string>> = {
@@ -42,6 +42,8 @@ const BLURB: Record<ILang, Record<ZoneSlug, string>> = {
     konyaalti: 'Konyaaltı, donde está nuestro propio taller, reúne hoteles y apartahoteles a lo largo de siete kilómetros de costa.',
     kundu: 'Kundu (Aksu), justo al este de Lara, es una zona hotelera con numerosos resorts de cinco estrellas todo incluido.',
     muratpasa: 'Muratpaşa es el distrito central de Antalya: abarca Kaleiçi, los hoteles del centro, el barrio de Meltem y parte de la zona de Lara. En Meltem la recogida y la entrega son gratuitas.',
+    goynuk: 'Göynük, al norte de Kemer, es una tranquila franja de hoteles junto al mar, cerca del cañón de Göynük.',
+    antalya: 'Antalya reúne zonas hoteleras en toda la costa: Konyaaltı, Lara, Kundu, Belek, Side, Kemer y Göynük. Atendemos hoteles en todas ellas.',
   },
   fr: {
     belek: 'Belek est la zone de vacances d\'Antalya connue pour ses terrains de golf et ses complexes hôteliers 5 étoiles.',
@@ -52,6 +54,8 @@ const BLURB: Record<ILang, Record<ZoneSlug, string>> = {
     konyaalti: 'Konyaaltı, où se trouve notre atelier, accueille hôtels et appart-hôtels le long de sept kilomètres de côte.',
     kundu: 'Kundu (Aksu), juste à l\'est de Lara, est une zone hôtelière avec de nombreux resorts cinq étoiles tout compris.',
     muratpasa: 'Muratpaşa est le district central d\'Antalya : il comprend Kaleiçi, les hôtels du centre, le quartier de Meltem et une partie de Lara. À Meltem, la collecte et la livraison sont gratuites.',
+    goynuk: 'Göynük, au nord de Kemer, est une paisible bande d\'hôtels en bord de mer, près du canyon de Göynük.',
+    antalya: 'Antalya compte des zones hôtelières le long de toute la côte : Konyaaltı, Lara, Kundu, Belek, Side, Kemer et Göynük. Nous desservons les hôtels de toutes ces zones.',
   },
   pl: {
     belek: 'Belek to wakacyjny rejon Antalyi znany z pól golfowych i pięciogwiazdkowych kompleksów hotelowych.',
@@ -62,6 +66,8 @@ const BLURB: Record<ILang, Record<ZoneSlug, string>> = {
     konyaalti: 'Konyaaltı, gdzie mieści się nasza pracownia, to hotele i aparthotele ułożone wzdłuż siedmiu kilometrów wybrzeża.',
     kundu: 'Kundu (Aksu), tuż na wschód od Lary, to strefa hotelowa z wieloma pięciogwiazdkowymi kompleksami all inclusive.',
     muratpasa: 'Muratpaşa to centralny dystrykt Antalyi: obejmuje Kaleiçi, hotele w centrum, osiedle Meltem i część rejonu Lara. W Meltem odbiór i dowóz są bezpłatne.',
+    goynuk: 'Göynük, na północ od Kemer, to spokojny pas hoteli nad morzem, blisko kanionu Göynük.',
+    antalya: 'Antalya ma strefy hotelowe na całym wybrzeżu: Konyaaltı, Lara, Kundu, Belek, Side, Kemer i Göynük. Obsługujemy hotele we wszystkich tych rejonach.',
   },
   uk: {
     belek: 'Белек це курортна зона Анталії, відома гольф-полями та 5-зірковими готелями.',
@@ -72,6 +78,8 @@ const BLURB: Record<ILang, Record<ZoneSlug, string>> = {
     konyaalti: 'Коньяалти, де розташоване наше ательє, це готелі й апарт-готелі вздовж семи кілометрів узбережжя.',
     kundu: 'Кунду (Аксу), одразу на схід від Лари, — готельна зона з численними п\'ятизірковими курортами «все включено».',
     muratpasa: 'Муратпаша — центральний район Анталії: до нього входять Калеїчі, готелі в центрі, мікрорайон Мельтем і частина Лари. У Мельтемі забір і доставка безкоштовні.',
+    goynuk: 'Гейнюк, на північ від Кемера, — спокійна смуга готелів біля моря, поруч із каньйоном Гейнюк.',
+    antalya: 'В Анталії готельні зони розташовані вздовж усього узбережжя: Коньяалти, Лара, Кунду, Белек, Сіде, Кемер і Гейнюк. Ми обслуговуємо готелі в усіх цих районах.',
   },
   nl: {
     belek: 'Belek is het vakantiegebied van Antalya, bekend om zijn golfbanen en 5-sterrenresorts.',
@@ -82,6 +90,8 @@ const BLURB: Record<ILang, Record<ZoneSlug, string>> = {
     konyaalti: 'Konyaaltı, waar ons eigen atelier staat, telt hotels en aparthotels langs zeven kilometer kustlijn.',
     kundu: 'Kundu (Aksu), net ten oosten van Lara, is een hotelzone met veel vijfsterrenresorts met all-inclusive.',
     muratpasa: 'Muratpaşa is het centrale district van Antalya: Kaleiçi, hotels in het centrum, de wijk Meltem en een deel van Lara. In Meltem is ophalen en terugbrengen gratis.',
+    goynuk: 'Göynük, ten noorden van Kemer, is een rustige hotelstrook aan zee, vlak bij de Göynük-kloof.',
+    antalya: 'Antalya heeft hotelzones langs de hele kust: Konyaaltı, Lara, Kundu, Belek, Side, Kemer en Göynük. Wij bedienen hotels in al deze zones.',
   },
   ar: {
     belek: 'بيليك منطقة عطلات في أنطاليا تُعرف بملاعب الغولف ومنتجعاتها من فئة 5 نجوم.',
@@ -92,6 +102,8 @@ const BLURB: Record<ILang, Record<ZoneSlug, string>> = {
     konyaalti: 'كونيالتي، حيث تقع ورشتنا، تضم فنادق وشققاً فندقية على امتداد سبعة كيلومترات من الساحل.',
     kundu: 'كوندو (أكسو)، شرق لارا مباشرة، منطقة فنادق تضم منتجعات خمس نجوم عديدة بنظام الشامل.',
     muratpasa: 'موراتباشا هي منطقة وسط أنطاليا وتشمل كاليتشي وفنادق المركز وحي ملتم وجزءًا من منطقة لارا. في حي ملتم الاستلام والتسليم مجاني.',
+    goynuk: 'غوينوك شمال كيمر شريط هادئ من الفنادق على البحر، قرب وادي غوينوك.',
+    antalya: 'تضم أنطاليا مناطق فنادق على امتداد الساحل: كونيالتي ولارا وكوندو وبيليك وسيدي وكيمر وغوينوك. نخدم الفنادق في جميع هذه المناطق.',
   },
 };
 

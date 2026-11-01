@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { zoneAlt } from '@/lib/intl-zones';
 import { OTEL_BOLGELERI } from '@/lib/otel-bolgeleri';
 
 const SITE = 'https://terzihizmeti.com.tr';
@@ -17,6 +18,7 @@ export const metadata: Metadata = {
       'en': `${SITE}${BASE_PATH}`,
       'ru': `${SITE}/ru/vyezdnoy-portnoy-antalya`,
       'de': `${SITE}/de/schneider-service-hotel-antalya`,
+      ...zoneAlt('antalya'),
       'x-default': `${SITE}/otele-gelen-terzi-antalya`,
     },
   },

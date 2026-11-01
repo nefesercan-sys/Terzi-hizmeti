@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { zoneAlt } from '@/lib/intl-zones';
 import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
 import ReviewsBlock from '@/components/ReviewsBlock';
 import { DELIVERY } from '@/lib/delivery';
@@ -38,6 +39,7 @@ export const metadata: Metadata = {
       'en': `${SITE}/en/hotel-tailor-antalya`,
       'ru': `${SITE}/ru/vyezdnoy-portnoy-antalya`,
       'de': `${SITE}/de/schneider-service-hotel-antalya`,
+      ...zoneAlt('antalya'),
       'x-default': PAGE_URL,
     },
   },

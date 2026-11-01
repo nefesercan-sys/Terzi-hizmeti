@@ -50,7 +50,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // 📍 2. ANA ŞEHİR SAYFASI & MERKEZ HİZMETLER (Priority: 0.90)
     { url: `${SITE}/antalya-terzi`, lastModified: lm('/antalya-terzi'), changeFrequency: 'weekly', priority: 0.90 },
-    { url: `${SITE}/otele-gelen-terzi-antalya`, lastModified: lm('/otele-gelen-terzi-antalya'), changeFrequency: 'weekly', priority: 0.90 },
+    { url: `${SITE}/otele-gelen-terzi-antalya`, lastModified: lm('/otele-gelen-terzi-antalya'), changeFrequency: 'weekly', priority: 0.90, alternates: { languages: { tr: `${SITE}/otele-gelen-terzi-antalya`, en: `${SITE}/en/hotel-tailor-antalya`, ru: `${SITE}/ru/vyezdnoy-portnoy-antalya`, de: `${SITE}/de/schneider-service-hotel-antalya`, ...Object.fromEntries(ILANGS.map((x) => [INTL[x].hreflang, `${SITE}${zoneUrl(x, 'antalya')}`])), 'x-default': `${SITE}/otele-gelen-terzi-antalya` } } },
 
     // 🏠 3. KONYAALTI MAHALLE SAYFALARI (Sıcak Lokal Müşteri - Priority: 0.85)
     { url: `${SITE}/hurma-terzi`, lastModified: lm('/hurma-terzi'), changeFrequency: 'weekly', priority: 0.85 },
@@ -78,9 +78,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE}/en/tailor-service-antalya`, lastModified: lm('/en/tailor-service-antalya'), changeFrequency: 'weekly', priority: 0.80 },
     { url: `${SITE}/ru/uslugi-portnogo-antalya`, lastModified: lm('/ru/uslugi-portnogo-antalya'), changeFrequency: 'weekly', priority: 0.80 },
     { url: `${SITE}/de/schneiderservice-antalya`, lastModified: lm('/de/schneiderservice-antalya'), changeFrequency: 'weekly', priority: 0.80 },
-    { url: `${SITE}/en/hotel-tailor-antalya`, lastModified: lm('/en/hotel-tailor-antalya'), changeFrequency: 'weekly', priority: 0.80 },
-    { url: `${SITE}/ru/vyezdnoy-portnoy-antalya`, lastModified: lm('/ru/vyezdnoy-portnoy-antalya'), changeFrequency: 'weekly', priority: 0.80 },
-    { url: `${SITE}/de/schneider-service-hotel-antalya`, lastModified: lm('/de/schneider-service-hotel-antalya'), changeFrequency: 'weekly', priority: 0.80 },
+    { url: `${SITE}/en/hotel-tailor-antalya`, lastModified: lm('/en/hotel-tailor-antalya'), changeFrequency: 'weekly', priority: 0.80, alternates: { languages: { tr: `${SITE}/otele-gelen-terzi-antalya`, en: `${SITE}/en/hotel-tailor-antalya`, ru: `${SITE}/ru/vyezdnoy-portnoy-antalya`, de: `${SITE}/de/schneider-service-hotel-antalya`, ...Object.fromEntries(ILANGS.map((x) => [INTL[x].hreflang, `${SITE}${zoneUrl(x, 'antalya')}`])), 'x-default': `${SITE}/otele-gelen-terzi-antalya` } } },
+    { url: `${SITE}/ru/vyezdnoy-portnoy-antalya`, lastModified: lm('/ru/vyezdnoy-portnoy-antalya'), changeFrequency: 'weekly', priority: 0.80, alternates: { languages: { tr: `${SITE}/otele-gelen-terzi-antalya`, en: `${SITE}/en/hotel-tailor-antalya`, ru: `${SITE}/ru/vyezdnoy-portnoy-antalya`, de: `${SITE}/de/schneider-service-hotel-antalya`, ...Object.fromEntries(ILANGS.map((x) => [INTL[x].hreflang, `${SITE}${zoneUrl(x, 'antalya')}`])), 'x-default': `${SITE}/otele-gelen-terzi-antalya` } } },
+    { url: `${SITE}/de/schneider-service-hotel-antalya`, lastModified: lm('/de/schneider-service-hotel-antalya'), changeFrequency: 'weekly', priority: 0.80, alternates: { languages: { tr: `${SITE}/otele-gelen-terzi-antalya`, en: `${SITE}/en/hotel-tailor-antalya`, ru: `${SITE}/ru/vyezdnoy-portnoy-antalya`, de: `${SITE}/de/schneider-service-hotel-antalya`, ...Object.fromEntries(ILANGS.map((x) => [INTL[x].hreflang, `${SITE}${zoneUrl(x, 'antalya')}`])), 'x-default': `${SITE}/otele-gelen-terzi-antalya` } } },
     { url: `${SITE}/en/linen-cotton-tailoring`, lastModified: lm('/en/linen-cotton-tailoring'), changeFrequency: 'weekly', priority: 0.78 },
     { url: `${SITE}/ru/poshiv-lyon-hlopok`, lastModified: lm('/ru/poshiv-lyon-hlopok'), changeFrequency: 'weekly', priority: 0.78 },
     { url: `${SITE}/de/leinen-baumwolle-schneiderei`, lastModified: lm('/de/leinen-baumwolle-schneiderei'), changeFrequency: 'weekly', priority: 0.78 },
@@ -144,7 +144,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const zoneSayfalari: MetadataRoute.Sitemap = ZONE_SLUGS.flatMap((z) => {
     const alt = { languages: {
       tr: `${SITE}/otele-gelen-terzi-antalya/${z}`, en: `${SITE}/en/hotel-tailor-antalya/${z}`, ru: `${SITE}/ru/vyezdnoy-portnoy-antalya/${z}`, de: `${SITE}/de/schneider-service-hotel-antalya/${z}`,
-      ...Object.fromEntries(ILANGS.map((x) => [INTL[x].hreflang, `${SITE}${zoneUrl(x, z)}`])), 'x-default': `${SITE}/otele-gelen-terzi-antalya/${z}`,
+      ...Object.fromEntries(ILANGS.map((x) => [INTL[x].hreflang, `${SITE}${zoneUrl(x, z)}`])), 'x-default': z === 'antalya' ? `${SITE}/otele-gelen-terzi-antalya` : `${SITE}/otele-gelen-terzi-antalya/${z}`,
     } };
     return ILANGS.map((l) => ({ url: `${SITE}${zoneUrl(l, z)}`, lastModified: new Date(LAST_UPDATE), changeFrequency: 'monthly' as const, priority: 0.65, alternates: alt }));
   });

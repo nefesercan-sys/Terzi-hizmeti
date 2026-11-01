@@ -1,4 +1,4 @@
-// Anavera Tekstil — ES / FR / PL. Fiyat, minimum adet ve sabit süre yazılmaz.
+// Anavera Tekstil — ES / FR / PL. Fiyat ve sabit süre yazılmaz; minimum sipariş adedi yoktur.
 import type { UPack } from './uretim-types';
 
 export const U_ES: UPack = {
@@ -21,7 +21,7 @@ export const U_ES: UPack = {
     lead: 'Una vez aprobada la muestra, producimos el modelo en cantidad con el mismo patrón, tela y acabado. Cantidad, plazo y precio se confirman por WhatsApp según modelo, tela y volumen.',
     pointsTitle: 'Qué producimos en serie',
     points: ['Camisas, chaquetas, pantalones, shorts, camisetas y faldas', 'Lino, algodón, punto (penye), tejido plano y de punto', 'Mismo patrón y tabla de tallas que la muestra', 'Series pequeñas y medianas', 'Envío a clientes en Turquía y en el extranjero'],
-    faq: [['¿Hay pedido mínimo?', 'La cantidad depende del modelo y de la tela. Díganos por WhatsApp cuántas piezas quiere y le diremos si es posible.'], ['¿Cuánto tarda la producción?', 'Depende de la cantidad, el modelo y el suministro de tela; el calendario se da tras aprobar la muestra.'], ['¿Cómo conozco el precio?', 'Envíe modelo, tela y cantidad, o una foto de su muestra, y le daremos el precio según el trabajo.']],
+    faq: [['¿Hay pedido mínimo?', 'No, no hay pedido mínimo: trabajamos desde una sola muestra hasta la producción en serie. El precio y el plazo se confirman por WhatsApp según modelo, tela y cantidad.'], ['¿Cuánto tarda la producción?', 'Depende de la cantidad, el modelo y el suministro de tela; el calendario se da tras aprobar la muestra.'], ['¿Cómo conozco el precio?', 'Envíe modelo, tela y cantidad, o una foto de su muestra, y le daremos el precio según el trabajo.']],
     wa: 'Hola, quiero un presupuesto de producción en serie de ropa.',
   },
   marka: {
@@ -79,7 +79,7 @@ export const U_FR: UPack = {
     lead: 'Une fois l\'échantillon validé, nous produisons le modèle en quantité avec le même patron, le même tissu et la même finition. Quantité, délai et prix sont confirmés sur WhatsApp selon le modèle, le tissu et le volume.',
     pointsTitle: 'Ce que nous produisons en série',
     points: ['Chemises, vestes, pantalons, shorts, t-shirts et jupes', 'Lin, coton, jersey (penye), tissé et maille', 'Même patron et tableau de tailles que l\'échantillon', 'Petites et moyennes séries', 'Expédition vers des clients en Turquie et à l\'étranger'],
-    faq: [['Y a-t-il une quantité minimale ?', 'La quantité dépend du modèle et du tissu. Indiquez sur WhatsApp le nombre de pièces souhaité et nous vous dirons si c\'est possible.'], ['Quelle est la durée de production ?', 'Elle dépend de la quantité, du modèle et de l\'approvisionnement en tissu ; un calendrier précis est donné après validation.'], ['Comment connaître le prix ?', 'Envoyez modèle, tissu et quantité, ou une photo de votre échantillon ; nous chiffrons d\'après le travail.']],
+    faq: [['Y a-t-il une quantité minimale ?', 'Non, il n\'y a pas de quantité minimale : de l\'échantillon unique à la production en série. Le prix et le délai sont confirmés sur WhatsApp selon le modèle, le tissu et la quantité.'], ['Quelle est la durée de production ?', 'Elle dépend de la quantité, du modèle et de l\'approvisionnement en tissu ; un calendrier précis est donné après validation.'], ['Comment connaître le prix ?', 'Envoyez modèle, tissu et quantité, ou une photo de votre échantillon ; nous chiffrons d\'après le travail.']],
     wa: 'Bonjour, je souhaite un devis pour une production en série.',
   },
   marka: {
@@ -137,7 +137,7 @@ export const U_PL: UPack = {
     lead: 'Po akceptacji próbki szyjemy model w serii, z tym samym wykrojem, tkaniną i wykończeniem. Ilość, termin i cenę potwierdzamy na WhatsApp według modelu, tkaniny i nakładu.',
     pointsTitle: 'Co szyjemy seryjnie',
     points: ['Koszule, marynarki, spodnie, szorty, T-shirty i spódnice', 'Len, bawełna, dzianina (penye), tkaniny i dzianiny', 'Ten sam wykrój i tabela rozmiarów co w próbce', 'Małe i średnie serie', 'Wysyłka do klientów w Turcji i za granicą'],
-    faq: [['Czy jest minimalne zamówienie?', 'Ilość zależy od modelu i tkaniny. Napisz na WhatsApp, ile sztuk potrzebujesz, a powiemy, czy to możliwe.'], ['Ile trwa produkcja?', 'To zależy od ilości, modelu i dostawy tkaniny; jasny harmonogram podajemy po akceptacji próbki.'], ['Jak poznać cenę?', 'Wyślij model, tkaninę i ilość lub zdjęcie próbki — wycenimy według pracy.']],
+    faq: [['Czy jest minimalne zamówienie?', 'Nie, nie ma minimalnego zamówienia: od pojedynczej próbki po produkcję seryjną. Cenę i termin ustalamy na WhatsApp wg modelu, tkaniny i ilości.'], ['Ile trwa produkcja?', 'To zależy od ilości, modelu i dostawy tkaniny; jasny harmonogram podajemy po akceptacji próbki.'], ['Jak poznać cenę?', 'Wyślij model, tkaninę i ilość lub zdjęcie próbki — wycenimy według pracy.']],
     wa: 'Dzień dobry, chcę wycenę produkcji seryjnej odzieży.',
   },
   marka: {

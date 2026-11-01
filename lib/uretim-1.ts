@@ -1,4 +1,4 @@
-// Anavera Tekstil — TR / EN / DE / RU. Kural: fiyat, minimum adet ve sabit süre YAZILMAZ (örneğe/adede göre WhatsApp'ta netleşir).
+// Anavera Tekstil — TR / EN / DE / RU. Kural: fiyat ve sabit süre YAZILMAZ; minimum sipariş adedi YOKTUR (sahibin kararı).
 // Ürünler: gömlek, ceket, pantolon, şort, tişört, etek. Kumaşlar: keten, pamuk, penye, dokuma, örme.
 import type { UPack } from './uretim-types';
 
@@ -22,7 +22,7 @@ export const U_TR: UPack = {
     lead: 'Numunesi onaylanan modeli aynı kalıp, kumaş ve işçilikle adetli olarak üretiyoruz. Adet, model ve kumaşa göre plan ve fiyat WhatsApp\'tan netleşir.',
     pointsTitle: 'Seri imalatta neler üretiyoruz',
     points: ['Gömlek, ceket, pantolon, şort, tişört ve etek', 'Keten, pamuk, penye, dokuma ve örme kumaşlar', 'Numuneyle aynı kalıp ve ölçü tablosu', 'Küçük ve orta adetli seriler', 'Yurt içi ve yurt dışı müşteriye sevkiyat'],
-    faq: [['Minimum adet var mı?', 'Adet modele ve kumaşa göre belirlenir. Ne kadar üretmek istediğinizi WhatsApp\'tan yazın, uygun olup olmadığını söyleyelim.'], ['Üretim süresi ne kadar?', 'Süre adede, modele ve kumaş temine bağlıdır; net takvim numune onayından sonra verilir.'], ['Fiyatı nasıl öğrenirim?', 'Model, kumaş ve adet bilgisini ya da numune fotoğrafını gönderin; fiyatı işe bakarak söyleyelim.']],
+    faq: [['Minimum adet var mı?', 'Hayır, minimum sipariş adedi yok; tek parça numuneden seri üretime kadar çalışırız. Fiyat ve süre model, kumaş ve adede göre WhatsApp\'tan netleşir.'], ['Üretim süresi ne kadar?', 'Süre adede, modele ve kumaş temine bağlıdır; net takvim numune onayından sonra verilir.'], ['Fiyatı nasıl öğrenirim?', 'Model, kumaş ve adet bilgisini ya da numune fotoğrafını gönderin; fiyatı işe bakarak söyleyelim.']],
     wa: 'Merhaba, seri imalat için teklif almak istiyorum.',
   },
   marka: {
@@ -80,7 +80,7 @@ export const U_EN: UPack = {
     lead: 'Once a sample is approved, we produce the model in quantity with the same pattern, fabric and workmanship. Quantity, schedule and price are confirmed on WhatsApp based on model, fabric and amount.',
     pointsTitle: 'What we produce in series',
     points: ['Shirts, jackets, trousers, shorts, t-shirts and skirts', 'Linen, cotton, jersey (penye), woven and knit fabrics', 'Same pattern and size chart as the approved sample', 'Small and medium runs', 'Shipping to customers in Turkey and abroad'],
-    faq: [['Is there a minimum order?', 'Quantity depends on the model and fabric. Tell us how many pieces you want on WhatsApp and we will say whether it works.'], ['How long does production take?', 'It depends on quantity, model and fabric supply; a clear schedule is given after sample approval.'], ['How do I get a price?', 'Send the model, fabric and quantity, or a photo of your sample, and we will quote based on the work.']],
+    faq: [['Is there a minimum order?', 'No, there is no minimum order quantity: we work from a single sample piece up to serial production. Price and timing are confirmed on WhatsApp per model, fabric and quantity.'], ['How long does production take?', 'It depends on quantity, model and fabric supply; a clear schedule is given after sample approval.'], ['How do I get a price?', 'Send the model, fabric and quantity, or a photo of your sample, and we will quote based on the work.']],
     wa: 'Hello, I would like a quote for series garment production.',
   },
   marka: {
@@ -138,7 +138,7 @@ export const U_DE: UPack = {
     lead: 'Ist das Muster freigegeben, fertigen wir das Modell in Stückzahl mit demselben Schnitt, Stoff und derselben Verarbeitung. Menge, Zeitplan und Preis klären wir per WhatsApp nach Modell, Stoff und Stückzahl.',
     pointsTitle: 'Was wir in Serie fertigen',
     points: ['Hemden, Sakkos, Hosen, Shorts, T-Shirts und Röcke', 'Leinen, Baumwolle, Jersey (Penye), Web- und Strickware', 'Schnitt und Größentabelle wie beim freigegebenen Muster', 'Kleine und mittlere Serien', 'Versand an Kunden in der Türkei und im Ausland'],
-    faq: [['Gibt es eine Mindestmenge?', 'Die Menge hängt von Modell und Stoff ab. Schreiben Sie uns per WhatsApp, wie viele Teile Sie möchten, und wir sagen, ob es passt.'], ['Wie lange dauert die Produktion?', 'Das hängt von Menge, Modell und Stoffbeschaffung ab; einen klaren Zeitplan nennen wir nach der Musterfreigabe.'], ['Wie erfahre ich den Preis?', 'Senden Sie Modell, Stoff und Menge oder ein Foto Ihres Musters; wir nennen den Preis nach Prüfung der Arbeit.']],
+    faq: [['Gibt es eine Mindestmenge?', 'Nein, es gibt keine Mindestbestellmenge: vom einzelnen Musterstück bis zur Serienfertigung. Preis und Zeit werden per WhatsApp nach Modell, Stoff und Menge geklärt.'], ['Wie lange dauert die Produktion?', 'Das hängt von Menge, Modell und Stoffbeschaffung ab; einen klaren Zeitplan nennen wir nach der Musterfreigabe.'], ['Wie erfahre ich den Preis?', 'Senden Sie Modell, Stoff und Menge oder ein Foto Ihres Musters; wir nennen den Preis nach Prüfung der Arbeit.']],
     wa: 'Hallo, ich möchte ein Angebot für Serienfertigung von Bekleidung.',
   },
   marka: {
@@ -196,7 +196,7 @@ export const U_RU: UPack = {
     lead: 'После утверждения образца шьём модель партией с той же выкройкой, тканью и качеством. Количество, сроки и цена уточняются в WhatsApp по модели, ткани и тиражу.',
     pointsTitle: 'Что шьём серийно',
     points: ['Рубашки, пиджаки, брюки, шорты, футболки и юбки', 'Лён, хлопок, трикотаж (пенье), тканые и вязаные материалы', 'Та же выкройка и таблица размеров, что у образца', 'Небольшие и средние партии', 'Отправка клиентам в Турции и за рубежом'],
-    faq: [['Есть минимальный тираж?', 'Тираж зависит от модели и ткани. Напишите в WhatsApp, сколько изделий нужно, — скажем, подходит ли.'], ['Сколько занимает производство?', 'Срок зависит от тиража, модели и поставки ткани; чёткий график называем после утверждения образца.'], ['Как узнать цену?', 'Пришлите модель, ткань и количество или фото образца — назовём цену по работе.']],
+    faq: [['Есть минимальный тираж?', 'Нет, минимального тиража нет: работаем от одного образца до серийного производства. Цена и сроки уточняются в WhatsApp по модели, ткани и количеству.'], ['Сколько занимает производство?', 'Срок зависит от тиража, модели и поставки ткани; чёткий график называем после утверждения образца.'], ['Как узнать цену?', 'Пришлите модель, ткань и количество или фото образца — назовём цену по работе.']],
     wa: 'Здравствуйте, хочу получить предложение по серийному пошиву.',
   },
   marka: {

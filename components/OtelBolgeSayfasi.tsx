@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
-import { PRICE_ROWS } from '@/components/TerziFiyatlariSayfasi';
+import { priceRowsFor, type FLang } from '@/components/TerziFiyatlariSayfasi';
 import Link from 'next/link';
 import type { OtelBolgesi } from '@/lib/otel-bolgeleri';
 import { regionAnswer, regionFaq } from '@/lib/otel-copy';
@@ -8,7 +8,8 @@ import { areaIntro, areaNeeds, NEEDS_H, pickVariant } from '@/lib/area-profiles'
 import { findDistrict } from '@/lib/seo-data';
 
 // Fiyatlar tek kaynaktan (fiyat sayfası bileşeni)
-const P = { hem: PRICE_ROWS[1].rows[0], zip: PRICE_ROWS[0].rows[0], alter: PRICE_ROWS[1].rows[3], wedding: PRICE_ROWS[1].rows[4], iron: PRICE_ROWS[3].rows[0], dry: PRICE_ROWS[3].rows[1] };
+const mkP = (l: FLang) => { const R = priceRowsFor(l); return { hem: R[1].rows[0], zip: R[0].rows[0], alter: R[1].rows[3], wedding: R[1].rows[4], iron: R[3].rows[0], dry: R[3].rows[1] }; };
+const P_tr = mkP('tr'), P_en = mkP('en'), P_ru = mkP('ru'), P_de = mkP('de');
 
 const PHONE = '+90 531 898 64 18';
 const PHONE_TEL = '+905318986418';
@@ -48,7 +49,7 @@ const T: Record<Lang, any> = {
       { icon: '🧺', tr: 'Ironing & Dry Cleaning', en: 'Steam press, dry cleaning', desc: 'Professional steam ironing and dry cleaning, picked up and delivered.', items: ['Ironing', 'Dry Cleaning'] },
     ],
     priceEyebrow: 'Pricing', priceH: 'Prices', priceSub: 'Hotel pick-up and delivery is free — you only pay for the work.',
-    priceRows: [['Hotel Visit', 'FREE'], ['Hemming', (P.hem)], ['Zipper Replacement', (P.zip)], ['Dress / Suit Alteration', (P.alter)], ['Wedding Dress Alteration', (P.wedding)], ['Ironing (per item)', (P.iron)], ['Dry Cleaning', (P.dry)]],
+    priceRows: [['Hotel Visit', 'FREE'], ['Hemming', (P_en.hem)], ['Zipper Replacement', (P_en.zip)], ['Dress / Suit Alteration', (P_en.alter)], ['Wedding Dress Alteration', (P_en.wedding)], ['Ironing (per item)', (P_en.iron)], ['Dry Cleaning', (P_en.dry)]],
     procEyebrow: 'Process', procH: 'How It Works',
     steps: [
       ['01', 'Share Hotel & Room', `Send hotel name and room number to ${PHONE}`],
@@ -84,7 +85,7 @@ const T: Record<Lang, any> = {
       { icon: '🧺', tr: 'Глажка и химчистка', en: 'Паровая глажка, химчистка', desc: 'Профессиональная глажка и химчистка с забором и доставкой.', items: ['Глажка', 'Химчистка'] },
     ],
     priceEyebrow: 'Стоимость', priceH: 'Цены', priceSub: 'Забор и доставка в отель бесплатны — вы платите только за работу.',
-    priceRows: [['Выезд в отель', 'БЕСПЛАТНО'], ['Укорачивание', ('от ' + P.hem.replace('+', ''))], ['Замена молнии', ('от ' + P.zip.replace('+', ''))], ['Подгонка платья/костюма', ('от ' + P.alter.replace('+', ''))], ['Подгонка свадебного платья', ('от ' + P.wedding.replace('+', ''))], ['Глажка (за вещь)', ('от ' + P.iron.replace('+', ''))], ['Химчистка', ('от ' + P.dry.replace('+', ''))]],
+    priceRows: [['Выезд в отель', 'БЕСПЛАТНО'], ['Укорачивание', ('от ' + P_ru.hem.replace('+', ''))], ['Замена молнии', ('от ' + P_ru.zip.replace('+', ''))], ['Подгонка платья/костюма', ('от ' + P_ru.alter.replace('+', ''))], ['Подгонка свадебного платья', ('от ' + P_ru.wedding.replace('+', ''))], ['Глажка (за вещь)', ('от ' + P_ru.iron.replace('+', ''))], ['Химчистка', ('от ' + P_ru.dry.replace('+', ''))]],
     procEyebrow: 'Процесс', procH: 'Как мы работаем',
     steps: [
       ['01', 'Отель и номер', `Отправьте название отеля и номер комнаты на ${PHONE}`],
@@ -120,7 +121,7 @@ const T: Record<Lang, any> = {
       { icon: '🧺', tr: 'Bügelservice & Reinigung', en: 'Dampfbügeln, Reinigung', desc: 'Professionelles Bügeln und chemische Reinigung mit Abholung und Lieferung.', items: ['Bügeln', 'Chemische Reinigung'] },
     ],
     priceEyebrow: 'Kosten', priceH: 'Preise', priceSub: 'Abholung und Lieferung im Hotel sind kostenlos — Sie zahlen nur die Arbeit.',
-    priceRows: [['Hotelbesuch', 'KOSTENLOS'], ['Kürzen', ('ab ' + P.hem.replace('+', ''))], ['Reißverschluss ersetzen', ('ab ' + P.zip.replace('+', ''))], ['Kleid-/Anzugänderung', ('ab ' + P.alter.replace('+', ''))], ['Brautkleid ändern', ('ab ' + P.wedding.replace('+', ''))], ['Bügeln (pro Stück)', ('ab ' + P.iron.replace('+', ''))], ['Chemische Reinigung', ('ab ' + P.dry.replace('+', ''))]],
+    priceRows: [['Hotelbesuch', 'KOSTENLOS'], ['Kürzen', ('ab ' + P_de.hem.replace('+', ''))], ['Reißverschluss ersetzen', ('ab ' + P_de.zip.replace('+', ''))], ['Kleid-/Anzugänderung', ('ab ' + P_de.alter.replace('+', ''))], ['Brautkleid ändern', ('ab ' + P_de.wedding.replace('+', ''))], ['Bügeln (pro Stück)', ('ab ' + P_de.iron.replace('+', ''))], ['Chemische Reinigung', ('ab ' + P_de.dry.replace('+', ''))]],
     procEyebrow: 'Ablauf', procH: 'So funktioniert es',
     steps: [
       ['01', 'Hotel & Zimmer angeben', `Senden Sie Hotelname und Zimmernummer an ${PHONE}`],
@@ -156,7 +157,7 @@ const T: Record<Lang, any> = {
       { icon: '🧺', tr: 'Ütü & Kuru Temizleme', en: 'Buharlı ütü, kuru temizleme', desc: 'Profesyonel buharlı ütü ve kuru temizleme, alım-teslimatlı.', items: ['Ütü', 'Kuru Temizleme'] },
     ],
     priceEyebrow: '₺ Fiyatlar', priceH: 'Fiyatlar', priceSub: 'Otele alım-teslim ücretsiz — yalnızca yapılan iş ücretlendirilir.',
-    priceRows: [['Otel Ziyareti', 'ÜCRETSİZ'], ['Boy Kısaltma', (P.hem)], ['Fermuar Değişimi', (P.zip)], ['Elbise / Takım Tadilatı', (P.alter)], ['Gelinlik Tadilatı', (P.wedding)], ['Ütü (adet başı)', (P.iron)], ['Kuru Temizleme', (P.dry)]],
+    priceRows: [['Otel Ziyareti', 'ÜCRETSİZ'], ['Boy Kısaltma', (P_tr.hem)], ['Fermuar Değişimi', (P_tr.zip)], ['Elbise / Takım Tadilatı', (P_tr.alter)], ['Gelinlik Tadilatı', (P_tr.wedding)], ['Ütü (adet başı)', (P_tr.iron)], ['Kuru Temizleme', (P_tr.dry)]],
     procEyebrow: 'Süreç', procH: 'Nasıl Çalışır',
     steps: [
       ['01', 'Otel & Oda Bilginizi Gönderin', `Otel adı ve oda numaranızı ${PHONE} numarasına iletin`],

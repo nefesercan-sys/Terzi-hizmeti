@@ -80,12 +80,10 @@ const jsonLd = {
       hasOfferCatalog: {
         '@type': 'OfferCatalog', name: 'Tailoring, Repair, Alterations and Ironing',
         itemListElement: [
-          { '@type': 'Offer', price: '200', priceCurrency: 'TRY', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Hemming' } },
-          { '@type': 'Offer', price: '300', priceCurrency: 'TRY', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Zipper Replacement' } },
-          { '@type': 'Offer', price: '200', priceCurrency: 'TRY', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Waist Taking In' } },
-          { '@type': 'Offer', price: '800', priceCurrency: 'TRY', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Wedding & Evening Dress Alterations' } },
-          { '@type': 'Offer', price: '80', priceCurrency: 'TRY', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Ironing' } },
-          { '@type': 'Offer', price: '300', priceCurrency: 'TRY', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Dry Cleaning' } },
+          { '@type': 'Offer', price: '10', priceCurrency: 'EUR', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Hemming' } },
+          { '@type': 'Offer', price: '15', priceCurrency: 'EUR', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Zipper Replacement' } },
+          { '@type': 'Offer', price: '10', priceCurrency: 'EUR', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Waist Taking In' } },
+          { '@type': 'Offer', price: '40', priceCurrency: 'EUR', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Wedding & Evening Dress Alterations' } },
         ],
       },
     },

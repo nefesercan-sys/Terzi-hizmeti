@@ -188,17 +188,16 @@ export const INTL: Record<ILang, ICopy> = {
 };
 
 
-/** Ücretsiz alım-teslim mahalleleri (işletme sahibinin onayladığı liste, Ekim 2026) — her dilde mahalle adlarıyla görünür. */
+/** Eve ve otele ücretsiz alım-teslim: hizmet verilen TÜM bölgelerde (sahibin kararı, Ekim 2026). */
 export const NB: Record<ILang, { title: string; text: string }> = {
-  es: { title: 'Recogida y entrega gratis a domicilio en estos barrios', text: 'Sin coste de servicio en Hurma, Liman, Sarısu, Gürsu, Uluç, Uncalı, Meltem, Siteler, Öğretmenevleri, Altınkum y Arapsuyu. Todos los días de 08:00 a 23:00: acortar y ajustar pantalones, vaqueros, faldas, abrigos y chaquetas, cambiar y reparar cremalleras, arreglos de vestidos de fiesta y de novia, y confección a medida.' },
-  fr: { title: 'Prise en charge et livraison gratuites à domicile dans ces quartiers', text: 'Service gratuit à Hurma, Liman, Sarısu, Gürsu, Uluç, Uncalı, Meltem, Siteler, Öğretmenevleri, Altınkum et Arapsuyu. Tous les jours de 08h00 à 23h00 : ourlets et ajustements de pantalons, jeans, jupes, manteaux et vestes, changement et réparation de fermetures éclair, retouches de robes de soirée et de mariée, sur-mesure.' },
-  pl: { title: 'Bezpłatny odbiór i dowóz pod adres domowy w tych dzielnicach', text: 'Bez opłaty za dojazd: Hurma, Liman, Sarısu, Gürsu, Uluç, Uncalı, Meltem, Siteler, Öğretmenevleri, Altınkum i Arapsuyu. Codziennie 08:00–23:00: skracanie i zwężanie spodni, jeansów, spódnic, płaszczy i kurtek, wymiana i naprawa zamków, przeróbki sukienek wieczorowych i ślubnych, szycie na miarę.' },
-  uk: { title: 'Безкоштовний забір і доставка додому в цих районах', text: 'Без плати за виїзд: Hurma, Liman, Sarısu, Gürsu, Uluç, Uncalı, Meltem, Siteler, Öğretmenevleri, Altınkum та Arapsuyu. Щодня 08:00–23:00: вкорочення і звуження штанів, джинсів, спідниць, пальт і курток, заміна та ремонт блискавок, підгонка вечірніх і весільних суконь, пошиття на замовлення.' },
-  nl: { title: 'Gratis ophalen en terugbrengen aan huis in deze wijken', text: 'Geen servicekosten in Hurma, Liman, Sarısu, Gürsu, Uluç, Uncalı, Meltem, Siteler, Öğretmenevleri, Altınkum en Arapsuyu. Dagelijks 08:00–23:00: broeken, jeans, rokken, jassen en jasjes korter of nauwer maken, ritsen vervangen en repareren, avond- en bruidsjurken aanpassen en maatwerk.' },
-  ar: { title: 'استلام وتسليم مجاني للمنازل في هذه الأحياء', text: 'بدون رسوم خدمة في: Hurma, Liman, Sarısu, Gürsu, Uluç, Uncalı, Meltem, Siteler, Öğretmenevleri, Altınkum, Arapsuyu. يوميًا من 08:00 إلى 23:00: تقصير وتضييق البناطيل والجينز والتنانير والمعاطف والجاكيتات، تغيير وإصلاح السحابات، تعديل فساتين السهرة والزفاف، والتفصيل حسب المقاس.' },
+  es: { title: 'Recogida y entrega gratis a domicilio y en hoteles', text: 'Recogida y entrega gratuitas a domicilio y en hotel en todas las zonas que atendemos (Konyaaltı, Muratpaşa, Lara, Belek, Side, Kemer…). Todos los días de 08:00 a 23:00. Solo paga el trabajo.' },
+  fr: { title: 'Prise en charge et livraison gratuites à domicile et à l\'hôtel', text: 'Prise en charge et livraison gratuites à domicile et à l\'hôtel dans toutes les zones desservies (Konyaaltı, Muratpaşa, Lara, Belek, Side, Kemer…). Tous les jours de 08h00 à 23h00. Vous ne payez que le travail.' },
+  pl: { title: 'Bezpłatny odbiór i dowóz do domu i hotelu', text: 'Bezpłatny odbiór i dowóz do domu i do hotelu we wszystkich obsługiwanych rejonach (Konyaaltı, Muratpaşa, Lara, Belek, Side, Kemer…). Codziennie 08:00–23:00. Płacisz tylko za usługę.' },
+  uk: { title: 'Безкоштовний забір і доставка додому та в готель', text: 'Безкоштовний забір і доставка додому та в готель у всіх районах, які ми обслуговуємо (Konyaaltı, Muratpaşa, Lara, Belek, Side, Kemer…). Щодня 08:00–23:00. Ви платите лише за роботу.' },
+  nl: { title: 'Gratis ophalen en terugbrengen aan huis en in het hotel', text: 'Gratis ophalen en terugbrengen aan huis en in het hotel in alle gebieden die we bedienen (Konyaaltı, Muratpaşa, Lara, Belek, Side, Kemer…). Dagelijks 08:00–23:00. U betaalt alleen voor het werk.' },
+  ar: { title: 'استلام وتسليم مجاني للمنازل والفنادق', text: 'استلام وتسليم مجاني للمنازل والفنادق في جميع المناطق التي نخدمها (Konyaaltı, Muratpaşa, Lara, Belek, Side, Kemer…). يوميًا من 08:00 إلى 23:00. تدفع فقط مقابل العمل.' },
 };
 
-// İlçe/mahalle bağlantısı (Konyaaltı ve Muratpaşa) — 6 yeni dil
 export const NB_DISTRICT: Record<ILang, { title: string; text: string }> = {
   es: { title: 'Barrios por distrito', text: 'Distrito de Konyaaltı: Hurma (donde está el taller), Liman, Sarısu, Gürsu, Uluç, Uncalı, Siteler, Öğretmenevleri, Altınkum, Arapsuyu. Distrito de Muratpaşa: Meltem, Şirinyalı, Fener, Güzeloba.' },
   fr: { title: 'Quartiers par district', text: "District de Konyaaltı : Hurma (où se trouve l'atelier), Liman, Sarısu, Gürsu, Uluç, Uncalı, Siteler, Öğretmenevleri, Altınkum, Arapsuyu. District de Muratpaşa : Meltem, Şirinyalı, Fener, Güzeloba." },

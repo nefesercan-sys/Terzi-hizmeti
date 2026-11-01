@@ -75,8 +75,6 @@ const jsonLd = {
       '@id': `${PAGE_URL}#faq`,
       mainEntity: [
         { '@type': 'Question', name: 'Otelin lobisine gelip ölçü alabiliyor musunuz?', acceptedAnswer: { '@type': 'Answer', text: 'Evet, Belek, Lara, Kundu ve Kemer bölgelerindeki otellerin lobisinde veya resepsiyonunda ölçü alımı yapıyoruz.' } },
-        { '@type': 'Question', name: 'Do you provide express alteration for tourists in hotels?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, we offer urgent (1–2 hours) and next-day alteration services for hotel guests in Antalya, Belek, and Lara.' } },
-        { '@type': 'Question', name: 'Вы приезжаете в отели Белека и Кемера?', acceptedAnswer: { '@type': 'Answer', text: 'Да, мы предоставляем услуги портного с выездом в отели Белека, Кемера, Лары и Кунду. Экспресс-доставка.' } },
       ],
     }
   ],

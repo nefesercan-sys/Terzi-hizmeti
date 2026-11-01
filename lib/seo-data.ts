@@ -29,7 +29,7 @@ export const LAST_UPDATE = '2026-11-01';
 export const TR_NEAR_SLUGS = ['konyaalti', 'hurma', 'liman', 'gursu', 'uluc', 'altinkum', 'ogretmenevleri', 'arapsuyu', 'siteler', 'uncali', 'sarisu', 'meltem', 'muratpasa', 'fener', 'sirinyali', 'toros', 'manavgat', 'serik'];
 /** Otellere alım-teslim TÜM hizmet bölgelerinde ücretsizdir (sahibinin kararı). */
 export const HOTEL_SERVICE_FREE = true;
-/** Otel dışı (ev) adreslerde ücretsiz alım-teslim yalnızca bu mahallelerde (TEK kaynak); diğerleri WhatsApp'tan sorulur. */
+/** Eski mahalle listesi (kullanılmıyor): eve ve otele ücretsiz servis her bölgede geçerlidir. */
 export const FREE_SERVICE_SLUGS = ['konyaalti', 'hurma', 'sarisu', 'liman', 'uncali', 'altinkum', 'ogretmenevleri', 'siteler', 'arapsuyu', 'gursu', 'uluc', 'meltem'];
 export const isFreeService = (_slug: string): boolean => true; // Eve ve otele ücretsiz servis: her bölgede (sahibin kararı)
 export const isTrNear = (slug: string): boolean => TR_NEAR_SLUGS.includes(slug);

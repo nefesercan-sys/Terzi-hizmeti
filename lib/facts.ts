@@ -14,7 +14,7 @@ export const MIN_ORDER_SERIAL: number | null = null; // seri üretimde minimum a
 /** Başlangıç fiyatları (₺, "+" = başlayan). */
 export const TRY_FROM = {
   hem: 200, waist: 200, sleeve: 200, dressAdjust: 200,
-  zipperPants: 300, zipperCoat: 300, button: 60, lining: 300,
+  zipperPants: 300, zipperCoat: 300,
   skirtPantsSew: 1000, dressSew: 800, kidsSew: 1000, groomSuit: 20000,
   eveningWeddingAlter: 800,
 } as const;
@@ -22,7 +22,7 @@ export type PriceKey = keyof typeof TRY_FROM;
 
 /** Yabancı dil EURO fiyatı; sahibin verdiği EUR listesi varsa o öncelikli, yoksa TRY / kur. */
 export const EUR_OVERRIDE: Partial<Record<PriceKey, number>> = {
-  hem: 10, waist: 10, sleeve: 10, dressAdjust: 10, zipperPants: 20, zipperCoat: 15, button: 10, lining: 10,
+  hem: 10, waist: 10, sleeve: 10, dressAdjust: 10, zipperPants: 15, zipperCoat: 20,
 };
 export const eurFrom = (k: PriceKey): number => EUR_OVERRIDE[k] ?? Math.round(TRY_FROM[k] / TRY_PER_EUR);
 const group = (n: number, sep: string) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, sep);

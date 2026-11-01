@@ -75,7 +75,6 @@ const jsonLd = {
           { '@type': 'Offer', name: 'Bel Daraltma', price: '200', priceCurrency: 'TRY', priceValidUntil: '2027-12-31' },
           { '@type': 'Offer', name: 'Elbise Dikimi', price: '800', priceCurrency: 'TRY', priceValidUntil: '2027-12-31' },
           { '@type': 'Offer', name: 'Gelinlik Tadilatı', price: '800', priceCurrency: 'TRY', priceValidUntil: '2027-12-31' },
-          { '@type': 'Offer', name: 'Ütü Hizmeti', price: '80', priceCurrency: 'TRY', priceValidUntil: '2027-12-31' },
         ],
       },
     },

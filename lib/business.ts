@@ -25,7 +25,7 @@ export function businessNode(opts: { reviews?: boolean } = {}) {
   description: "Antalya Konyaaltı'da 2006'dan bu yana hizmet veren profesyonel terzi atölyesi. Paça kısaltma, fermuar değişimi, bel daraltma, özel dikim, gelinlik tadilatı, tekstil imalatı ve kuru temizleme. Hurma, Liman, Sarısu, Gürsu, Uncalı bölgelerine hizmet.",
   url: SITE,
   telephone: PHONE_TEL,
-  priceRange: '₺₺',
+  priceRange: '$$',
   image: `${SITE}/terzi-can-hero.jpg`,
   logo: `${SITE}/terzi-can-hero.jpg`,
   hasMap: MAPS,

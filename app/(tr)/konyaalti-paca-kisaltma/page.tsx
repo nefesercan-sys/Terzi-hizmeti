@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Paça Kısaltma Fiyatları 2026 · ₺200 · Konyaaltı Terzi" },
   description:
-    fitDesc("Pantolon, kot, etek paça kısaltma ₺200'den, normal iş ertesi gün, acil 1–2 saat. Hurma, Liman, Sarısu'ya ücretsiz servis. Her gün 08:00–23:00. ☎ " + PHONE),
+    fitDesc("Pantolon, kot, etek paça kısaltma ₺200'den, normal iş ertesi gün, acil 1–2 saat. Eve ve otele ücretsiz servis. Her gün 08:00–23:00. ☎ " + PHONE),
   keywords: ['paça kısaltma Konyaaltı', 'pantolon kısaltma Antalya', 'kot paça kısaltma', 'etek kısaltma Antalya', 'acil paça kısaltma', 'paça kısaltma fiyatı', 'Konyaaltı terzi', 'Antalya terzi'],
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   alternates: { canonical: PAGE_URL },
@@ -131,8 +131,8 @@ export default function PacaKisaltmaPage() {
             </h1>
             <p className="hero-desc">
               Pantolon, kot, etek paça kısaltma — görünmez dikiş tekniğiyle,
-              orijinal görünümü koruyarak. Hurma, Liman, Sarısu bölgesine
-              ücretsiz adrese servis.
+              orijinal görünümü koruyarak. Eve ve otele
+              ücretsiz servis.
             </p>
             <div className="hero-btns">
               <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-primary">💬 Ölçü Gönderin →</a>

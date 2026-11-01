@@ -7,7 +7,8 @@ Güven notu: Rakamlar haber/ihracatçı birliği/blog kaynaklarından; "(doğrul
 - TCMB kuru (bigpara, 30 Ekim 2026 güncellemesi): USD/TRY ≈ 49,86 ; EUR/TRY ≈ 55,82. (Sayfadaki tarih alanı tutarsızdı; yaklaşık değer.)
 - TCMB politika faizi: 22 Ekim 2026'da %37 → %36 (100 baz puan indirim). Mart–Eylül arası %37'de sabit kalmıştı. Karar metni: enflasyonun alttaki seyri düşüyor, enerji fiyatları risk.
 - TÜFE yıllık: Ağustos 2026 %31,51 (Toko blog, doğrulanmadı).
-- ⚠ ÇELİŞKİ / KARAR BEKLİYOR: Sitelerde yabancı dil sayfalarındaki € fiyatlar "₺20 = €1" varsayımıyla yazıldı (tadilat €10, fermuar €15/20, elbise €40, etek-pantolon-çocuk €50, damatlık €1000). Gerçek kurla (≈₺56/€) ₺200 ≈ €3,6; ₺20.000 ≈ €358. Yani € fiyatlar TL fiyatın yaklaşık 2,8 katı. Bu bilinçli bir "turist fiyatı" ise tamam, değilse tutarsızlık. Sahibin kararı.
+- ✅ SAHİP KARARI (1 Kasım 2026): € fiyatlar OLDUĞU GİBİ KALACAK. Turist ve yerli için bilinçli olarak farklı fiyat politikası var; € fiyatları gerçek kura çevirme, "tutarsız" diye düzeltme. (Aşağıdaki hesap sadece bilgi.)
+- Bilgi (karar verildi, değiştirme): Sitelerde yabancı dil sayfalarındaki € fiyatlar "₺20 = €1" varsayımıyla yazıldı (tadilat €10, fermuar €15/20, elbise €40, etek-pantolon-çocuk €50, damatlık €1000). Gerçek kurla (≈₺56/€) ₺200 ≈ €3,6; ₺20.000 ≈ €358. Yani € fiyatlar TL fiyatın yaklaşık 2,8 katı. Bu bilinçli bir "turist fiyatı" ise tamam, değilse tutarsızlık. Sahibin kararı.
 - Enflasyon %30+ olduğundan ₺ "den başlar" fiyatları 3-6 ayda eskir; periyodik gözden geçir.
 
 ## 2. Antalya: ziyaretçi sayıları ve davranış
@@ -56,4 +57,4 @@ Aktiviteler: plaj (Konyaaltı, Lara), tarihi (Kaleiçi, Perge, Aspendos, Myra, O
 - Hizmet YOK: gelinlik dikimi (sadece tadilat), düğme ve astar hizmeti, kuru temizleme/ütü/çamaşır (şimdilik), ilan/pazar/bal (gizli).
 - Hizmet var: tadilat (paça/bel/kol ₺200+, fermuar ₺300+ pantolon; mont fermuarı €20 / pantolon €15), abiye-gelinlik TADİLATI ₺800+, elbise dikimi ₺800+, etek/pantolon dikimi ₺1000+, çocuk kıyafeti dikimi ₺1000+, damatlık ₺20.000+, deri/kot tamiri, seri üretim (Anavera Tekstil, alt marka; minimum adet yok; dünyaya gönderim).
 - Teslim: acil 1–2 saat, normal ertesi gün, özel dikim modele/adede göre.
-- Açık sorular: € fiyat kuru (bkz. 1), ana dil dışı 6 dilin yerel okuması, Rusya tekstil verisi.
+- Açık sorular: ana dil dışı 6 dilin yerel okuması, Rusya tekstil verisi.

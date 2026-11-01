@@ -21,7 +21,7 @@ const TODAY     = '2026-10-04';
 // sayfaları genel sayfalara göre daha hızlı ve yüksek sıralar.
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Fermuar Değişimi ₺300 · Ertesi Gün · Konyaaltı" },
+  title: { absolute: "Fermuar Değişimi Fiyatları ₺300 · Ertesi Gün · Konyaaltı" },
   description:
     "Pantolon, mont, ceket ve çanta fermuarı ₺300'den. Normal iş ertesi gün, acil 1–2 saat. Hurma, Liman, Sarısu'ya ücretsiz servis. ☎ " + PHONE,
   keywords: fitKeywords([

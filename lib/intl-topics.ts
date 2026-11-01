@@ -314,6 +314,9 @@ const SITE_ABS = 'https://terzihizmeti.com.tr';
 const CORE: Partial<Record<TopicId, Record<'tr' | 'en' | 'de' | 'ru', string>>> = {
   keten: { tr: '/keten-pamuk-ozel-dikim', en: '/en/linen-cotton-tailoring', de: '/de/leinen-baumwolle-schneiderei', ru: '/ru/poshiv-lyon-hlopok' },
   tekstil: { tr: '/anavera-tekstil', en: '/en/anavera-tekstil', de: '/de/anavera-tekstil', ru: '/ru/anavera-tekstil' },
+  // Özel dikim: TR/EN/RU/DE'deki "özel dikim" hizmet sayfası (birebir). Tamir-tadilat: hizmetler ana sayfası (yaklaşık eşleşme).
+  ozel: { tr: '/terzi-hizmetleri/ozel-dikim-antalya', en: '/en/tailor-services/custom-tailoring-made-to-measure', de: '/de/schneider-leistungen/massanfertigung-schneider', ru: '/ru/uslugi-portnogo/poshiv-na-zakaz' },
+  tamir: { tr: '/terzi-hizmetleri', en: '/en/tailor-services', de: '/de/schneider-leistungen', ru: '/ru/uslugi-portnogo' },
 };
 const SIX: ILang[] = ['es', 'fr', 'pl', 'uk', 'nl', 'ar'];
 /** Yeni 6 dilin konu sayfası karşılıkları (hreflang kodu → mutlak URL). */

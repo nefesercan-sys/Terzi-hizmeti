@@ -113,6 +113,7 @@ export const HIZMET: Record<ILang, Record<HizmetId, HizmetCopy>> = {
 export const hizmetUrl = (l: ILang, h: HizmetId) => `/${l}/${HIZMET[l][h].slug}`;
 export const parseHizmet = (l: ILang, slug: string): HizmetId | undefined => HIZMET_IDS.find((h) => HIZMET[l][h].slug === slug);
 import { SERVICES, serviceUrl } from '@/lib/seo-data';
+import { sixAlt } from '@/lib/intl-topics';
 const SITE_ABS = 'https://terzihizmeti.com.tr';
 /** Yeni hizmet sayfası → TR/EN/RU/DE hizmet sayfasının Türkçe slug'ı (SERVICES). */
 export const HIZMET_SVC: Record<HizmetId, string> = {
@@ -137,6 +138,7 @@ export const hizmetLanguages = (h: HizmetId): Record<string, string> => {
 };
 /** Mevcut TR/EN/RU/DE hizmet sayfası için eklenecek 6 dil karşılığı (yoksa boş). */
 export const sixForService = (trSlug: string): Record<string, string> => {
+  if (trSlug === 'ozel-dikim-antalya') return sixAlt('ozel');
   const h = HIZMET_IDS.find((x) => HIZMET_SVC[x] === trSlug);
   return h ? hizmetSix(h) : {};
 };

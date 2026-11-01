@@ -98,7 +98,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     return { languages: Object.fromEntries([...ls.map((l) => [l, `${SITE}${urlFor(l)}`]), ['x-default', `${SITE}${urlFor(ls.includes('tr') ? 'tr' : 'en')}`]]) };
   };
   const seoSayfalari: MetadataRoute.Sitemap = [
-    ...LANGS.map((l) => ({ url: `${SITE}${SERVICE_BASE[l]}`, lastModified: SEO_DATE, changeFrequency: 'weekly' as const, priority: 0.8, alternates: alt((x) => SERVICE_BASE[x]) })),
+    ...LANGS.map((l) => ({ url: `${SITE}${SERVICE_BASE[l]}`, lastModified: SEO_DATE, changeFrequency: 'weekly' as const, priority: 0.8, alternates: (() => { const a = alt((x) => SERVICE_BASE[x]); return { languages: { ...a.languages, ...sixAlt('tamir') } }; })() })),
     ...SERVICES.flatMap((s) => LANGS.map((l) => ({ url: `${SITE}${serviceUrl(l, s)}`, lastModified: SEO_DATE, changeFrequency: 'monthly' as const, priority: 0.78, alternates: (() => { const a = alt((x) => serviceUrl(x, s)); return { languages: { ...a.languages, ...sixForService(s.slug.tr) } }; })() }))),
     ...DISTRICTS.flatMap((d) => LANGS.filter((l) => isIndexable(l, d.slug)).map((l) => ({ url: `${SITE}${districtUrl(l, d)}`, lastModified: SEO_DATE, changeFrequency: 'monthly' as const, priority: 0.76, alternates: alt((x) => districtUrl(x, d), (x) => isIndexable(x, d.slug)) }))),
   ];

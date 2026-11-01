@@ -10,7 +10,7 @@ import { PLANGS, promoUrl, promoAlternates, PROMO_LAST_UPDATE, PROMO_FOTOLAR } f
 
 const SITE = "https://terzihizmeti.com.tr";
 const NOW = new Date('2026-10-27');   // önceki sürümde değişen sayfalar
-const NOW30 = new Date('2026-10-30'); // bu dalda içeriği değişen sayfalar
+const NOW30 = new Date('2026-11-01'); // bu dalda içeriği değişen sayfalar
 const OLD = new Date('2026-09-20');   // v36'da değişmeyen sayfalar (sahte güncelleme tarihi verme)
 // İçeriği değişen sayfalar (yorum bölümü eklenenler dahil) — yeni içerik eklenince buraya ekle
 const CHANGED = new Set(['', '/ru/uslugi-portnogo-antalya', '/antalya-terzi', '/antalya-terzi-fiyatlari', '/antalya-gelinlik-tadilati', '/antalya-uniforma-imalati', '/en/tailor-service-antalya', '/de/schneiderservice-antalya', '/gursu-terzi', '/hurma-terzi', '/liman-terzi', '/sarisu-terzi', '/uncali-terzi', '/keten-pamuk-ozel-dikim', '/en/linen-cotton-tailoring', '/de/leinen-baumwolle-schneiderei', '/ru/poshiv-lyon-hlopok', '/konyaalti-fermuar-tamiri', '/konyaalti-paca-kisaltma', '/otele-gelen-terzi-antalya', '/blog/2026-yaz-sezonu-gelinlik-tadilat-rehberi', '/anavera-tekstil', '/en/anavera-tekstil', '/de/anavera-tekstil', '/ru/anavera-tekstil']);
@@ -129,6 +129,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${SITE}${iUrl(l)}`, lastModified: new Date(LAST_UPDATE), changeFrequency: 'monthly' as const, priority: 0.7, alternates: intlAlt,
   }));
 
+  // Dört ana hizmet sayfası, 6 ek dil sayfasının hreflang kümesinin üyesidir: karşılıklılık için aynı kümeyi taşırlar.
+  const intlHubUrls = new Set([`${SITE}/antalya-terzi`, `${SITE}/en/tailor-service-antalya`, `${SITE}/ru/uslugi-portnogo-antalya`, `${SITE}/de/schneiderservice-antalya`]);
+  sabitSayfalar.forEach((e) => { if (intlHubUrls.has(e.url)) e.alternates = intlAlt; });
+
   // Otel bölgesi derinlik sayfaları (6 dil × 6 bölge): bölge başına TR/EN/RU/DE karşılıklarıyla hreflang
   const zoneSayfalari: MetadataRoute.Sitemap = ZONE_SLUGS.flatMap((z) => {
     const alt = { languages: {
@@ -148,10 +152,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   // Aynı URL birden fazla bölümde üretilebilir; ilk kayıt (sabit sayfalar) korunur.
-  const gorulen = new Set<string>();
-  return [...sabitSayfalar, ...otelSayfalari, ...seoSayfalari, ...turistSayfalari, ...iletisimSayfalari, ...intlSayfalari, ...zoneSayfalari, ...svcSayfalari, ...promoSayfalari].filter((e) => {
-    if (gorulen.has(e.url)) return false;
-    gorulen.add(e.url);
-    return true;
-  });
+  // Çift kayıtta ilk kayıt kalır; ilkinde hreflang yoksa sonraki kaydın alternates'i ona taşınır (karşılıklı hreflang bozulmasın).
+  const gorulen = new Map<string, MetadataRoute.Sitemap[number]>();
+  const hepsi = [...sabitSayfalar, ...otelSayfalari, ...seoSayfalari, ...turistSayfalari, ...iletisimSayfalari, ...intlSayfalari, ...zoneSayfalari, ...svcSayfalari, ...promoSayfalari];
+  for (const e of hepsi) {
+    const ilk = gorulen.get(e.url);
+    if (!ilk) gorulen.set(e.url, e);
+    else if (!ilk.alternates && e.alternates) ilk.alternates = e.alternates;
+  }
+  return [...gorulen.values()];
 }

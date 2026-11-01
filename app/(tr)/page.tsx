@@ -99,7 +99,7 @@ const jsonLd = {
     {
       '@type': ['LocalBusiness', 'ClothingStore'],
       ...reviewSchema(),
-      additionalType: ['https://schema.org/SewingService', 'https://schema.org/DryCleaningService'],
+      additionalType: ['https://schema.org/SewingService'],
       '@id': `${SITE}#business`,
       name: BIZ,
       alternateName: [

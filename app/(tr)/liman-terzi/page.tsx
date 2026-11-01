@@ -84,7 +84,7 @@ const jsonLd = {
       '@id': `${PAGE_URL}#faq`,
       mainEntity: [
         { '@type': 'Question', name: "Atölyeniz Liman'da mı?", acceptedAnswer: { '@type': 'Answer', text: 'Evet, atölyemiz Liman mahallesinde yer alıyor. Bu sayede Liman içindeki teslimatlar genellikle diğer mahallelere göre daha hızlı tamamlanır.' } },
-        { '@type': 'Question', name: 'Liman terzi fiyatları ne kadar 2026?', acceptedAnswer: { '@type': 'Answer', text: `Paça kısaltma ₺200'den, fermuar değişimi ₺300'den, bel daraltma ₺200'den, elbise dikimi ₺800'den, gelinlik tadilatı ₺800'den, abiye tadilatı ₺800'den, ütü ₺80'den başlar. ☎ ${PHONE}` } },
+        { '@type': 'Question', name: 'Liman terzi fiyatları ne kadar 2026?', acceptedAnswer: { '@type': 'Answer', text: `Paça kısaltma ₺200'den, fermuar değişimi ₺300'den, bel daraltma ₺200'den, elbise dikimi ₺800'den, gelinlik tadilatı ₺800'den, abiye tadilatı ₺800'den. ☎ ${PHONE}` } },
         { '@type': 'Question', name: 'Liman\'da acil tadilat ne kadar sürer?', acceptedAnswer: { '@type': 'Answer', text: 'Paça kısaltma, fermuar değişimi ve bel daraltma gibi standart işlemler ertesi gün, acil olanlar 1–2 saatte teslim edilir.' } },
         { '@type': 'Question', name: 'Gelinlik ve abiye tadilatı yapıyor musunuz?', acceptedAnswer: { '@type': 'Answer', text: `Evet, gelinlik ve abiye tadilatında uzmanız. Gelinlik tadilatı ₺800'den, abiye tadilatı ₺800'den başlar. ☎ ${PHONE}` } },
       ],
@@ -98,7 +98,7 @@ const FIYATLAR: [string, string, string][] = [
   ['Bel Daraltma', 'Elbise, pantolon, ceket', '₺200+'],
   ['Elbise Dikimi', 'Kadın, erkek, çocuk özel dikim', '₺800+'],
   ['Gelinlik Tadilatı', 'Hassas daraltma, boy ayarı', '₺800+'],
-  ['Ütü Hizmeti', 'Buharlı ütü, otel alım-teslim', '₺80+'],
+  ['Ütü Hizmeti', 'Buharlı ütü, otel alım-teslim', 'Fotoğrafa göre'],
 ];
 
 export default function LimanPage() {
@@ -215,7 +215,7 @@ export default function LimanPage() {
             </div>
             {[
               ["Atölyeniz Liman'da mı?", 'Evet, atölyemiz Liman mahallesinde yer alıyor. Bu sayede Liman içindeki teslimatlar genellikle diğer mahallelere göre daha hızlı tamamlanır.'],
-              ['Liman terzi fiyatları ne kadar 2026?', 'Paça kısaltma ₺200\'den, fermuar değişimi ₺300\'den, bel daraltma ₺200\'den, elbise dikimi ₺800\'den, gelinlik tadilatı ₺800\'den, abiye tadilatı ₺800\'den, ütü ₺80\'den başlar.'],
+              ['Liman terzi fiyatları ne kadar 2026?', 'Paça kısaltma ₺200\'den, fermuar değişimi ₺300\'den, bel daraltma ₺200\'den, elbise dikimi ₺800\'den, gelinlik tadilatı ₺800\'den, abiye tadilatı ₺800\'den.'],
               ['Liman\'da acil tadilat ne kadar sürer?', 'Paça kısaltma, fermuar değişimi ve bel daraltma gibi standart işlemler ertesi gün, acil olanlar 1–2 saatte teslim edilir.'],
               ['Gelinlik ve abiye tadilatı yapıyor musunuz?', 'Evet, gelinlik ve abiye tadilatında uzmanız. Gelinlik tadilatı ₺800\'den, abiye tadilatı ₺800\'den başlar.'],
             ].map(([q, a]) => (

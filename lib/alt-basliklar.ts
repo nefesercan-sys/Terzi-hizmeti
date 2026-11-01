@@ -1,5 +1,5 @@
 // Sayfa alt başlıkları (H2) + kısa açıklamalar, 10 dilde. {y} = yer adı (varsayılan: Antalya).
-// Yalnızca doğrulanmış bilgiler: paça/bel ₺200+, fermuar ₺300+, gelinlik/abiye ₺800+, kuru temizleme ₺80+, acil 1–2 saat, normal ertesi gün,
+// Yalnızca doğrulanmış bilgiler: paça/bel ₺200+, fermuar ₺300+, gelinlik/abiye ₺800+, acil 1–2 saat, normal ertesi gün,
 // özel dikim modele/adede göre, her gün 08:00–23:00, WhatsApp'tan fotoğrafla fiyat, hizmet verilen bölgelerde ücretsiz otel alım-teslim.
 export type L10 = 'tr' | 'en' | 'de' | 'ru' | 'es' | 'fr' | 'pl' | 'uk' | 'nl' | 'ar';
 export type Konu = 'genel' | 'paca' | 'fermuar' | 'gelinlik' | 'keten' | 'uniforma' | 'promo' | 'otel' | 'terzi' | 'fiyat' | 'hizmet' | 'bolge' | 'terziFp' | 'hizmetFp';
@@ -556,16 +556,16 @@ const BASE: Record<Exclude<Konu, 'terziFp' | 'hizmetFp'>, Item[]> = {
     "ar": "أسعار الخياطة في {y}: التقصير والسحّاب والخصر وفستان الزفاف"
    },
    "p": {
-    "tr": "Paça kısaltma ve bel daraltma ₺200'den, fermuar değişimi ₺300'den, gelinlik, abiye ve elbise tadilatı ₺800'den başlar. Kuru temizleme ₺80'den başlar.",
+    "tr": "Paça kısaltma ve bel daraltma ₺200'den, fermuar değişimi ₺300'den, gelinlik, abiye ve elbise tadilatı ₺800'den başlar.",
     "en": "Hemming and waist taking-in start from €10, zipper replacement from €20, coat alterations and coat zippers from €15, leather alterations from €30. Wedding, evening and custom dresses are priced by photo.",
     "de": "Saum kürzen und Bund enger machen ab €10, Reißverschluss-Wechsel ab €20, Manteländerungen und Mantel-Reißverschlüsse ab €15, Lederänderungen ab €30. Braut-, Abendkleider und Maßanfertigung nach Foto.",
     "ru": "Подшив и ушивание в талии — от €10, замена молнии — от €20, переделка пальто и молний на них — от €15, переделка кожаных изделий — от €30. Свадебные, вечерние платья и пошив на заказ — по фото.",
-    "es": "Bajos y cintura desde ₺200, cambio de cremallera desde ₺300, arreglos de vestidos de novia, de noche y de vestir desde ₺800. Limpieza en seco desde ₺80.",
-    "fr": "Ourlet et taille dès ₺200, remplacement de fermeture dès ₺300, retouches de robes de mariée, de soirée et d’habillées dès ₺800. Nettoyage à sec dès ₺80.",
-    "pl": "Nogawki i talia od ₺200, wymiana zamka od ₺300, przeróbki sukni ślubnych, wieczorowych i sukienek od ₺800. Pranie chemiczne od ₺80.",
-    "uk": "Підшивання й звуження в талії — від ₺200, заміна блискавки — від ₺300, переробка весільних і вечірніх суконь — від ₺800. Хімчистка — від ₺80.",
-    "nl": "Zoom en taille innemen vanaf ₺200, ritsvervanging vanaf ₺300, aanpassingen van bruids-, avond- en gewone jurken vanaf ₺800. Stomerij vanaf ₺80.",
-    "ar": "التقصير وتضييق الخصر من ₺200، واستبدال السحّاب من ₺300، وتعديل فساتين الزفاف والسهرة من ₺800. التنظيف الجاف من ₺80."
+    "es": "Bajos y cintura desde €10, cambio de cremallera desde €20, arreglos de vestidos de novia, de noche y de vestir desde €40.",
+    "fr": "Ourlet et taille dès €10, remplacement de fermeture dès €20, retouches de robes de mariée, de soirée et d’habillées dès €40.",
+    "pl": "Nogawki i talia od €10, wymiana zamka od €20, przeróbki sukni ślubnych, wieczorowych i sukienek od €40.",
+    "uk": "Підшивання й звуження в талії — від €10, заміна блискавки — від €20, переробка весільних і вечірніх суконь — від €40.",
+    "nl": "Zoom en taille innemen vanaf €10, ritsvervanging vanaf €20, aanpassingen van bruids-, avond- en gewone jurken vanaf €40.",
+    "ar": "التقصير وتضييق الخصر من €10، واستبدال السحّاب من €20، وتعديل فساتين الزفاف والسهرة من €40."
    }
   },
   {

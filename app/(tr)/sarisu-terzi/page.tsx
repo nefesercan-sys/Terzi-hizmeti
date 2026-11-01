@@ -84,7 +84,7 @@ const jsonLd = {
       '@id': `${PAGE_URL}#faq`,
       mainEntity: [
         { '@type': 'Question', name: "Sarısu'ya ücretsiz servis var mı?", acceptedAnswer: { '@type': 'Answer', text: 'Evet, Sarısu mahallesine ücretsiz adrese servis veriyoruz. Kıyafetinizi adresinizden alıp normal işte ertesi gün, acil işte 1–2 saatte teslim ediyoruz.' } },
-        { '@type': 'Question', name: 'Sarısu terzi fiyatları ne kadar 2026?', acceptedAnswer: { '@type': 'Answer', text: `Paça kısaltma ₺200'den, fermuar değişimi ₺300'den, bel daraltma ₺200'den, elbise dikimi ₺800'den, gelinlik/abiye tadilatı ₺800'den, ütü ₺80'den başlar. ☎ ${PHONE}` } },
+        { '@type': 'Question', name: 'Sarısu terzi fiyatları ne kadar 2026?', acceptedAnswer: { '@type': 'Answer', text: `Paça kısaltma ₺200'den, fermuar değişimi ₺300'den, bel daraltma ₺200'den, elbise dikimi ₺800'den, gelinlik/abiye tadilatı ₺800'den. ☎ ${PHONE}` } },
         { '@type': 'Question', name: 'Sarısu\'da acil tadilat ne kadar sürer?', acceptedAnswer: { '@type': 'Answer', text: 'Paça kısaltma, fermuar değişimi ve bel daraltma gibi standart işlemler ertesi gün, acil olanlar 1–2 saatte teslim edilir.' } },
         { '@type': 'Question', name: 'Gelinlik ve abiye tadilatı yapıyor musunuz?', acceptedAnswer: { '@type': 'Answer', text: `Evet, gelinlik ve abiye tadilatında uzmanız. ₺800'den başlar. ☎ ${PHONE}` } },
       ],
@@ -98,7 +98,7 @@ const FIYATLAR: [string, string, string][] = [
   ['Bel Daraltma', 'Elbise, pantolon, ceket', '₺200+'],
   ['Elbise Dikimi', 'Kadın, erkek, çocuk özel dikim', '₺800+'],
   ['Gelinlik & Abiye Tadilatı', 'Hassas daraltma, boy ayarı', '₺800+'],
-  ['Ütü Hizmeti', 'Buharlı ütü, otel alım-teslim', '₺80+'],
+  ['Ütü Hizmeti', 'Buharlı ütü, otel alım-teslim', 'Fotoğrafa göre'],
 ];
 
 export default function SarisuPage() {
@@ -215,7 +215,7 @@ export default function SarisuPage() {
             </div>
             {[
               ["Sarısu'ya ücretsiz servis var mı?", 'Evet, Sarısu mahallesine ücretsiz adrese servis veriyoruz. Kıyafetinizi adresinizden alıp normal işte ertesi gün, acil işte 1–2 saatte teslim ediyoruz.'],
-              ['Sarısu terzi fiyatları ne kadar 2026?', 'Paça kısaltma ₺200\'den, fermuar değişimi ₺300\'den, bel daraltma ₺200\'den, elbise dikimi ₺800\'den, gelinlik/abiye tadilatı ₺800\'den, ütü ₺80\'den başlar.'],
+              ['Sarısu terzi fiyatları ne kadar 2026?', 'Paça kısaltma ₺200\'den, fermuar değişimi ₺300\'den, bel daraltma ₺200\'den, elbise dikimi ₺800\'den, gelinlik/abiye tadilatı ₺800\'den.'],
               ['Sarısu\'da acil tadilat ne kadar sürer?', 'Paça kısaltma, fermuar değişimi ve bel daraltma gibi standart işlemler ertesi gün, acil olanlar 1–2 saatte teslim edilir.'],
               ['Gelinlik ve abiye tadilatı yapıyor musunuz?', 'Evet, gelinlik ve abiye tadilatında uzmanız. ₺800\'den başlar.'],
             ].map(([q, a]) => (

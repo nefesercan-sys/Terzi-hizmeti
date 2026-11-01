@@ -169,7 +169,7 @@ export default function PacaKisaltmaPage() {
                 <p className="price-desc">Orijinal dikiş taklidi dahil kot paça kısaltma.</p>
                 <table className="price-table"><tbody>
                   <tr><td>Standart Kot Paça</td><td>₺200+</td></tr>
-                  <tr><td>Orijinal Dikiş Taklitli</td><td>₺220+</td></tr>
+                  <tr><td>Orijinal Dikiş Taklitli</td><td>Fotoğrafa göre</td></tr>
                 </tbody></table>
               </div>
               <div className="price-card">

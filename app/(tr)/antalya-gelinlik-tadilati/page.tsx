@@ -175,8 +175,8 @@ export default function GelinlikTadilatiPage() {
                 <p className="price-desc">Özel gün kıyafetlerinde detaylı tadilat.</p>
                 <table className="price-table"><tbody>
                   <tr><td>Abiye Tadilatı</td><td>₺800+</td></tr>
-                  <tr><td>Nişanlık Daraltma</td><td>₺450+</td></tr>
-                  <tr><td>Askı / Omuz Ayarı</td><td>₺250+</td></tr>
+                  <tr><td>Nişanlık Daraltma</td><td>Fotoğrafa göre</td></tr>
+                  <tr><td>Askı / Omuz Ayarı</td><td>Fotoğrafa göre</td></tr>
                 </tbody></table>
               </div>
               <div className="price-card">

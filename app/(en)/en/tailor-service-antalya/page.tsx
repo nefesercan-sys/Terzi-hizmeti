@@ -327,7 +327,7 @@ export default function TailorServiceAntalyaPage() {
         <footer>
           <div>© {new Date().getFullYear()} Terzi Can · Antalya Tailor Service · {PHONE}</div>
           <nav className="foot-links" aria-label="Footer links">
-            <a href="/en/tailor-prices-antalya">Tailor Prices 2026</a>
+            <a href="/en/tailor-services">All Tailor Services</a>
             <a href="/">Ana Sayfa (TR)</a>
             <a href={RU_URL}>Русский</a>
             <a href={DE_URL}>Deutsch</a>

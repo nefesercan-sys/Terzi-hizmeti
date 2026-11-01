@@ -1,4 +1,4 @@
-// Anavera Tekstil — UK / NL / AR. Fiyat, minimum adet ve sabit süre yazılmaz.
+// Anavera Tekstil — UK / NL / AR. Fiyat ve sabit süre yazılmaz; minimum sipariş adedi yoktur.
 import type { UPack } from './uretim-types';
 
 export const U_UK: UPack = {
@@ -21,7 +21,7 @@ export const U_UK: UPack = {
     lead: 'Після схвалення зразка шиємо модель партією з тією самою викрійкою, тканиною та якістю. Кількість, терміни й ціну уточнюємо у WhatsApp за моделлю, тканиною й накладом.',
     pointsTitle: 'Що шиємо серійно',
     points: ['Сорочки, піджаки, штани, шорти, футболки та спідниці', 'Льон, бавовна, трикотаж (пенье), ткані й в’язані матеріали', 'Та сама викрійка й таблиця розмірів, що у зразка', 'Невеликі та середні партії', 'Відправлення клієнтам у Туреччині та за кордоном'],
-    faq: [['Чи є мінімальний наклад?', 'Кількість залежить від моделі й тканини. Напишіть у WhatsApp, скільки виробів потрібно, — скажемо, чи підходить.'], ['Скільки триває виробництво?', 'Термін залежить від кількості, моделі й постачання тканини; чіткий графік називаємо після схвалення зразка.'], ['Як дізнатися ціну?', 'Надішліть модель, тканину й кількість або фото зразка — назвемо ціну за роботою.']],
+    faq: [['Чи є мінімальний наклад?', 'Ні, мінімального накладу немає: працюємо від одного зразка до серійного виробництва. Ціна й терміни уточнюються в WhatsApp за моделлю, тканиною та кількістю.'], ['Скільки триває виробництво?', 'Термін залежить від кількості, моделі й постачання тканини; чіткий графік називаємо після схвалення зразка.'], ['Як дізнатися ціну?', 'Надішліть модель, тканину й кількість або фото зразка — назвемо ціну за роботою.']],
     wa: 'Вітаю, хочу отримати пропозицію щодо серійного пошиву.',
   },
   marka: {
@@ -79,7 +79,7 @@ export const U_NL: UPack = {
     lead: 'Is het sample goedgekeurd, dan maken we het model in aantallen met hetzelfde patroon, dezelfde stof en afwerking. Aantal, planning en prijs bevestigen we via WhatsApp op basis van model, stof en oplage.',
     pointsTitle: 'Wat we in serie maken',
     points: ['Overhemden, jasjes, broeken, shorts, T-shirts en rokken', 'Linnen, katoen, tricot (penye), geweven en gebreide stoffen', 'Hetzelfde patroon en dezelfde maattabel als het sample', 'Kleine en middelgrote series', 'Verzending naar klanten in Turkije en het buitenland'],
-    faq: [['Is er een minimale afname?', 'Het aantal hangt af van model en stof. Laat via WhatsApp weten hoeveel stuks u wilt, dan zeggen we of het kan.'], ['Hoe lang duurt de productie?', 'Dat hangt af van aantal, model en stofleverantie; een duidelijke planning geven we na goedkeuring van het sample.'], ['Hoe krijg ik de prijs?', 'Stuur model, stof en aantal of een foto van uw sample; we berekenen de prijs op basis van het werk.']],
+    faq: [['Is er een minimale afname?', 'Nee, er is geen minimale afname: van één enkel voorbeeldstuk tot serieproductie. Prijs en levertijd worden via WhatsApp bevestigd per model, stof en aantal.'], ['Hoe lang duurt de productie?', 'Dat hangt af van aantal, model en stofleverantie; een duidelijke planning geven we na goedkeuring van het sample.'], ['Hoe krijg ik de prijs?', 'Stuur model, stof en aantal of een foto van uw sample; we berekenen de prijs op basis van het werk.']],
     wa: 'Hallo, ik wil een offerte voor serieproductie van kleding.',
   },
   marka: {
@@ -137,7 +137,7 @@ export const U_AR: UPack = {
     lead: 'بعد اعتماد العيّنة ننتج الموديل بكميات بنفس الباترون والقماش والتشطيب. تُؤكَّد الكمية والجدول والسعر عبر واتساب حسب الموديل والقماش والكمية.',
     pointsTitle: 'ماذا ننتج بالجملة',
     points: ['قمصان وجاكيتات وبنطلونات وشورتات وتيشرتات وتنانير', 'كتان وقطن وجيرسي (بينيه) وأقمشة منسوجة ومحبوكة', 'نفس الباترون وجدول المقاسات كالعيّنة', 'سلاسل صغيرة ومتوسطة', 'الشحن إلى عملاء في تركيا وخارجها'],
-    faq: [['هل هناك حد أدنى للكمية؟', 'تعتمد الكمية على الموديل والقماش. اكتب لنا عبر واتساب عدد القطع المطلوب ونخبرك إن كان ممكناً.'], ['كم يستغرق الإنتاج؟', 'يعتمد على الكمية والموديل وتوفر القماش؛ نعطيك جدولاً واضحاً بعد اعتماد العيّنة.'], ['كيف أعرف السعر؟', 'أرسل الموديل والقماش والكمية أو صورة عيّنتك ونحدد السعر حسب العمل.']],
+    faq: [['هل هناك حد أدنى للكمية؟', 'لا، لا يوجد حد أدنى للكمية: نعمل من قطعة عينة واحدة حتى الإنتاج بالجملة. يتم تأكيد السعر والمدة عبر واتساب حسب الموديل والقماش والكمية.'], ['كم يستغرق الإنتاج؟', 'يعتمد على الكمية والموديل وتوفر القماش؛ نعطيك جدولاً واضحاً بعد اعتماد العيّنة.'], ['كيف أعرف السعر؟', 'أرسل الموديل والقماش والكمية أو صورة عيّنتك ونحدد السعر حسب العمل.']],
     wa: 'مرحباً، أريد عرض سعر لإنتاج الملابس بالجملة.',
   },
   marka: {

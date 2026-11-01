@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import { PHONE, PHONE_TEL, MAPS, SITE } from '@/lib/seo-data';
 import { businessNode, OG_DEFAULT, waLink, TURIST_UPDATE } from '@/lib/turist-keten';
+import QuoteForm from '@/components/QuoteForm';
 import { UDATA, U_IDS, uUrl, ANAVERA_HOME, type UId, type UL } from '@/lib/uretim';
 
 const C = { green: '#2C4A3E', gold: '#D4B07A', cream: '#FAF7F2', sand: '#F2EDE4', ink: '#1C1814', muted: '#6B5F53' };
@@ -20,6 +21,19 @@ const UI: Record<UL, { back: string; faq: string; cta: string; more: string; cal
   ar: { back: '← Anavera Tekstil', faq: 'الأسئلة الشائعة', cta: 'راسلنا عبر واتساب', more: 'صفحات إنتاج أخرى', call: 'اتصل', map: 'افتح على الخريطة', flow: 'رسم/صورة ← عيّنة ← اعتماد ← قطعة حسب الطلب أو سلسلة ← شحن' },
 };
 
+const BRAND: Record<UL, string> = {
+  tr: 'Anavera Tekstil, Terzi Can\'ın seri üretim ve ihracat markasıdır.',
+  en: 'Anavera Tekstil is the serial production and export brand of Terzi Can.',
+  de: 'Anavera Tekstil ist die Serienfertigungs- und Exportmarke von Terzi Can.',
+  ru: 'Anavera Tekstil — бренд серийного производства и экспорта Terzi Can.',
+  es: 'Anavera Tekstil es la marca de producción en serie y exportación de Terzi Can.',
+  fr: 'Anavera Tekstil est la marque de production en série et d\'export de Terzi Can.',
+  pl: 'Anavera Tekstil to marka produkcji seryjnej i eksportu Terzi Can.',
+  uk: 'Anavera Tekstil — бренд серійного виробництва та експорту Terzi Can.',
+  nl: 'Anavera Tekstil is het merk voor serieproductie en export van Terzi Can.',
+  ar: 'Anavera Tekstil هي علامة الإنتاج بالجملة والتصدير التابعة لـ Terzi Can.',
+};
+
 export function uJsonLd(lang: UL, id: UId) {
   const c = UDATA[lang][id]; const url = `${SITE}${uUrl(lang, id)}`;
   return {
@@ -27,7 +41,8 @@ export function uJsonLd(lang: UL, id: UId) {
     '@graph': [
       businessNode('en'),
       { '@type': 'WebPage', '@id': `${url}#webpage`, url, name: c.title, description: c.desc, inLanguage: lang, dateModified: TURIST_UPDATE, about: { '@id': `${SITE}#business` }, primaryImageOfPage: { '@type': 'ImageObject', url: OG_DEFAULT } },
-      { '@type': 'Service', '@id': `${url}#service`, name: c.h1, provider: { '@id': `${SITE}#business` }, areaServed: [{ '@type': 'Place', name: 'Antalya' }, { '@type': 'Place', name: 'Europe' }, { '@type': 'Place', name: 'Worldwide (shipping)' }], inLanguage: lang },
+      { '@type': 'Brand', '@id': `${SITE}#anavera`, name: 'Anavera Tekstil', description: BRAND.en, url: `${SITE}${ANAVERA_HOME('en')}`, logo: OG_DEFAULT },
+      { '@type': 'Service', '@id': `${url}#service`, brand: { '@id': `${SITE}#anavera` }, name: c.h1, provider: { '@id': `${SITE}#business` }, areaServed: [{ '@type': 'Place', name: 'Antalya' }, { '@type': 'Place', name: 'Europe' }, { '@type': 'Place', name: 'Worldwide (shipping)' }], inLanguage: lang },
       { '@type': 'FAQPage', '@id': `${url}#faq`, mainEntity: c.faq.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) },
     ],
   };
@@ -45,6 +60,7 @@ export default function UretimLanding({ lang, id }: { lang: UL; id: UId }) {
           <p style={{ margin: '0 0 .8rem', fontSize: '.85rem' }}><Link href={ANAVERA_HOME(lang)} style={{ color: C.gold }}>{ui.back}</Link></p>
           <h1 style={{ fontFamily: serif, fontSize: 'clamp(1.6rem,4.6vw,2.4rem)', fontWeight: 700, lineHeight: 1.2, color: '#fff', margin: '0 0 .9rem' }}>{c.h1}</h1>
           <p style={{ fontSize: '1.02rem', color: 'rgba(255,255,255,.92)', margin: 0 }}>{c.lead}</p>
+          <p style={{ fontSize: '.85rem', color: C.gold, margin: '.9rem 0 0' }}>{BRAND[lang]}</p>
         </div>
       </header>
       <article style={{ maxWidth: 820, margin: '0 auto', padding: '2rem 1.25rem' }}>
@@ -62,6 +78,7 @@ export default function UretimLanding({ lang, id }: { lang: UL; id: UId }) {
             </div>
           ))}
         </section>
+        <QuoteForm lang={lang} />
         <section style={{ background: C.sand, borderRadius: 8, padding: '1.3rem' }}>
           <p style={{ margin: '0 0 1rem' }}>
             <a href={waLink(c.wa)} target="_blank" rel="noopener noreferrer" style={{ background: '#25d366', color: '#fff', padding: '.8rem 1.5rem', fontWeight: 700, textDecoration: 'none', fontSize: '.92rem', borderRadius: 4, display: 'inline-block' }}>{ui.cta}</a>

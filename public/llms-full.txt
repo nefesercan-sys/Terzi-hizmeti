@@ -13,7 +13,7 @@
 
 Prices are starting prices and depend on fabric and work. Turnaround: urgent repairs and alterations 1–2 hours; standard repairs and alterations next day;
 made-to-measure sewing depends on the model and the number of pieces; wedding dress time is confirmed per job. Open every day 08:00–23:00, serving since 2006,
-free service to hotels in every area we serve (home addresses free in Konyaaltı and nearby neighbourhoods). Wedding dress alteration from ₺800, evening dress from ₺800.
+free pick-up and delivery to homes and hotels in every area we serve. Wedding dress alteration from ₺800, evening dress from ₺800.
 
 ## Services people ask for
 
@@ -83,7 +83,7 @@ Opening hours, price levels and service areas can change. The live pages and the
 ## Key Facts
 
 - **Business name:** Terzi Can (Google Maps: "TERZİ Can Antalya Tailor Service"), serving since 2006
-- **Opening hours:** every day 08:00–23:00; free service to hotels in every area we serve (home addresses free in Konyaaltı and nearby neighbourhoods)
+- **Opening hours:** every day 08:00–23:00; free pick-up and delivery to homes and hotels in every area we serve
 - **Location / workshop:** Konyaaltı, Antalya, Turkey (also serves Hurma, Liman, Sarısu, Uncalı,
   Gürsu; Meltem, Şirinyalı, Fener and Güzeloba belong to Muratpaşa; hotel zones Lara, Belek, Side/Manavgat and Kemer are served too)
 - **Phone / WhatsApp:** +90 531 898 64 18
@@ -93,7 +93,7 @@ Opening hours, price levels and service areas can change. The live pages and the
   evening dress alterations, uniform manufacturing
 - **Typical prices (2026, starting from):** hemming ₺200, zipper replacement ₺300, dress/suit
   alteration ₺200, wedding dress alteration from ₺800, ironing ₺80/item, dry cleaning ₺300
-- **Mobile / hotel-visiting service:** hotel pick-up and delivery is free in every area served (home addresses: free in Konyaaltı and nearby neighbourhoods, otherwise ask on WhatsApp);
+- **Mobile / hotel-visiting service:** pick-up and delivery to homes and hotels is free in every area served;
   scheduled visits to other Antalya districts, including the hotel zones of Belek, Lara, Kundu,
   Konyaaltı, Kemer, Göynük, Muratpaşa and Side — the tailor comes to the customer's hotel or home,
   takes measurements, and delivers the finished garment back (urgent jobs 1–2 hours, standard repairs and alterations next day, made-to-measure timing depends on the model and number of pieces). Dedicated hotel-zone pages exist in Turkish, English, German and Russian for each of
@@ -152,7 +152,7 @@ Each service has a page in four languages, and each Antalya area has a page in f
 - Services (TR slugs under /terzi-hizmetleri/): pantolon-paca-kisaltma (trouser hemming), kot-pantolon-paca-kisaltma (jeans), bel-daraltma (waist), fermuar-degisimi-tamiri (zipper), elbise-dikimi (dress making), elbise-tamiri-tadilati (dress repair/alteration), gelinlik-abiye-tadilati (wedding and evening dress), takim-elbise-ceket-tadilati (suit/jacket), mont-palto-tadilati (coat), gomlek-daraltma-kisaltma (shirt), deri-ceket-pantolon-tadilati (leather), tisort-sort-tadilati (T-shirt/shorts), olcuye-gore-beden-ayarlama (fit to measurements)
 - Area pages: TR https://terzihizmeti.com.tr/antalya-terzi/{area} · EN https://terzihizmeti.com.tr/en/tailor-antalya/{area} · RU https://terzihizmeti.com.tr/ru/portnoy-antalya/{area} · DE https://terzihizmeti.com.tr/de/schneider-antalya/{area}
 - Areas ({area}): muratpasa, konyaalti, meltem, fener, sirinyali, lara, guzeloba, kundu, arapsuyu, toros, ogretmenevleri, kepez, aksu, dosemealti, belek, side, kemer, beldibi, goynuk. Konyaaltı neighbourhoods Hurma, Liman, Sarısu, Uncalı and Gürsu have their own pages (/hurma-terzi, /liman-terzi, /sarisu-terzi, /uncali-terzi, /gursu-terzi).
-- Verified facts used on those pages: single workshop in Hurma, Konyaaltı; open daily 08:00–23:00; free service to hotels in every area we serve (home addresses free in Konyaaltı and nearby neighbourhoods); urgent repairs 1–2 hours, standard repairs and alterations next day, made-to-measure timing by model and quantity; wedding dress alteration from ₺800, evening dress from ₺800.
+- Verified facts used on those pages: single workshop in Hurma, Konyaaltı; open daily 08:00–23:00; free pick-up and delivery to homes and hotels in every area we serve; urgent repairs 1–2 hours, standard repairs and alterations next day, made-to-measure timing by model and quantity; wedding dress alteration from ₺800, evening dress from ₺800.
 
 ## Linen & cotton pages for visitors (EN / DE / RU)
 
@@ -188,7 +188,7 @@ zipper replacement from ₺300, wedding dress alteration from ₺800 (2026 price
 
 **Q: Can a tailor come to my hotel in Belek, Lara, Kundu, Kemer, Side or Konyaaltı?**
 A: Yes. Terzi Can offers a mobile tailor service to hotels in nine Antalya zones (Belek, Lara, Güzeloba,
-Kemer, Side, Kundu, Konyaaltı, Göynük, Muratpaşa). Free hotel pick-up and delivery in every area served (home addresses free in Konyaaltı and nearby neighbourhoods);
+Kemer, Side, Kundu, Konyaaltı, Göynük, Muratpaşa). Free pick-up and delivery to homes and hotels in every area served;
 urgent jobs take 1–2 hours, standard alterations next day, made-to-measure timing depends on the model and number of pieces. Page: https://terzihizmeti.com.tr/en/hotel-tailor-antalya
 
 **Q: Where can I get custom linen or cotton clothing made in Antalya?**
@@ -262,3 +262,14 @@ Terzi Can, Hurma, Konyaaltı, Antalya. Since 2006. Open every day 08:00–23:00.
 - Українська (https://terzihizmeti.com.tr/uk): Кравець в Анталії для туристів. Термінові — 1–2 години, звичайні — наступного дня, пошиття за мірками — за моделлю та кількістю. Ціна у WhatsApp за фото.
 - Nederlands (https://terzihizmeti.com.tr/nl): Kleermaker in Antalya voor toeristen. Spoed 1–2 uur, gewoon vermaken de volgende dag, maatwerk naar model en aantal. Prijs via WhatsApp met een foto.
 - العربية (https://terzihizmeti.com.tr/ar): خيّاط في أنطاليا للسياح. العاجل خلال ساعة إلى ساعتين، التعديلات العادية في اليوم التالي، والتفصيل حسب الموديل والعدد. السعر عبر واتساب بصورة.
+
+
+## Anavera Tekstil — serial production and export brand of Terzi Can
+
+Anavera Tekstil is the sub-brand of Terzi Can for serial garment production and export: sample development, custom production, serial production (no minimum order quantity), private label and worldwide shipping (Europe, Russian-speaking countries and anywhere else). Fabrics: linen, cotton, jersey (penye), woven and knitted; products: shirts, jackets, trousers, shorts, T-shirts, skirts. Customers can fill in the quote form on each page (product, fabric, quantity, country, notes) and send it via WhatsApp +90 531 898 64 18. Pages in 10 languages:
+
+- Sample development: [tr](https://terzihizmeti.com.tr/numune-uretimi-antalya) · [en](https://terzihizmeti.com.tr/en/sample-development-antalya) · [de](https://terzihizmeti.com.tr/de/musterfertigung-antalya) · [ru](https://terzihizmeti.com.tr/ru/razrabotka-obraztsov-antalya) · [es](https://terzihizmeti.com.tr/es/desarrollo-de-muestras-ropa-antalya) · [fr](https://terzihizmeti.com.tr/fr/developpement-echantillons-vetements-antalya) · [pl](https://terzihizmeti.com.tr/pl/opracowanie-probek-odziezy-antalya) · [uk](https://terzihizmeti.com.tr/uk/rozrobka-zrazkiv-odyagu-antaliya) · [nl](https://terzihizmeti.com.tr/nl/sample-ontwikkeling-kleding-antalya) · [ar](https://terzihizmeti.com.tr/ar/tatwir-aynat-malabis-antalya)
+- Serial garment production: [tr](https://terzihizmeti.com.tr/seri-imalat-antalya) · [en](https://terzihizmeti.com.tr/en/garment-series-production-antalya) · [de](https://terzihizmeti.com.tr/de/serienfertigung-bekleidung-antalya) · [ru](https://terzihizmeti.com.tr/ru/seriynyy-poshiv-antalya) · [es](https://terzihizmeti.com.tr/es/produccion-en-serie-ropa-antalya) · [fr](https://terzihizmeti.com.tr/fr/production-serie-vetements-antalya) · [pl](https://terzihizmeti.com.tr/pl/produkcja-seryjna-odziezy-antalya) · [uk](https://terzihizmeti.com.tr/uk/seriyne-vyrobnytstvo-odyagu-antaliya) · [nl](https://terzihizmeti.com.tr/nl/serieproductie-kleding-antalya) · [ar](https://terzihizmeti.com.tr/ar/intaj-malabis-silsila-antalya)
+- Private label / own brand production: [tr](https://terzihizmeti.com.tr/markaniza-ozel-uretim-antalya) · [en](https://terzihizmeti.com.tr/en/private-label-clothing-antalya) · [de](https://terzihizmeti.com.tr/de/eigene-marke-produktion-antalya) · [ru](https://terzihizmeti.com.tr/ru/poshiv-pod-svoy-brend-antalya) · [es](https://terzihizmeti.com.tr/es/ropa-marca-propia-antalya) · [fr](https://terzihizmeti.com.tr/fr/vetements-marque-propre-antalya) · [pl](https://terzihizmeti.com.tr/pl/odziez-wlasna-marka-antalya) · [uk](https://terzihizmeti.com.tr/uk/odyag-vlasnyi-brend-antaliya) · [nl](https://terzihizmeti.com.tr/nl/kleding-eigen-merk-antalya) · [ar](https://terzihizmeti.com.tr/ar/malabis-alamah-khassa-antalya)
+- Worldwide shipping of production: [tr](https://terzihizmeti.com.tr/yurt-disi-gonderim-uretim) · [en](https://terzihizmeti.com.tr/en/ship-clothing-worldwide-antalya) · [de](https://terzihizmeti.com.tr/de/versand-bekleidung-weltweit-antalya) · [ru](https://terzihizmeti.com.tr/ru/dostavka-odezhdy-za-granitsu-antalya) · [es](https://terzihizmeti.com.tr/es/envio-de-ropa-al-extranjero-antalya) · [fr](https://terzihizmeti.com.tr/fr/expedition-vetements-etranger-antalya) · [pl](https://terzihizmeti.com.tr/pl/wysylka-odziezy-za-granice-antalya) · [uk](https://terzihizmeti.com.tr/uk/dostavka-odyagu-za-kordon-antaliya) · [nl](https://terzihizmeti.com.tr/nl/kleding-verzenden-wereldwijd-antalya) · [ar](https://terzihizmeti.com.tr/ar/shahn-malabis-lil-kharij-antalya)
+- Clothing manufacturer Antalya: [tr](https://terzihizmeti.com.tr/giyim-uretici-antalya) · [en](https://terzihizmeti.com.tr/en/clothing-manufacturer-antalya) · [de](https://terzihizmeti.com.tr/de/bekleidungshersteller-antalya) · [ru](https://terzihizmeti.com.tr/ru/shveynoe-proizvodstvo-antalya) · [es](https://terzihizmeti.com.tr/es/fabricante-de-ropa-antalya) · [fr](https://terzihizmeti.com.tr/fr/fabricant-vetements-antalya) · [pl](https://terzihizmeti.com.tr/pl/producent-odziezy-antalya) · [uk](https://terzihizmeti.com.tr/uk/vyrobnyk-odyagu-antaliya) · [nl](https://terzihizmeti.com.tr/nl/kledingfabrikant-antalya) · [ar](https://terzihizmeti.com.tr/ar/masna-malabis-antalya)

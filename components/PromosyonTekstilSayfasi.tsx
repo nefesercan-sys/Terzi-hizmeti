@@ -3,6 +3,7 @@
 // Anavera Tekstil sayfalarıyla aynı görsel dil (lacivert/altın), sunucu bileşeni, stil inline; örnek görseller (yapay zekâ ile üretilmiş, "örnek görsel" etiketli).
 // RTL (ar): kök <div dir="rtl"> + mantıksal CSS özellikleri; telefon numarası dir="ltr".
 import Link from 'next/link';
+import { UDATA, uUrl } from '@/lib/uretim';
 import {
   COPY, PHONE, PHONE_E, SITE, ANAVERA_TARGET, MAIN_TARGET, PLANGS, PROMO_PATH, PROMO_NAME,
   buildPromoJsonLd, waLink, PROMO_FOTOLAR, ORNEK_GORSEL, type PLang,
@@ -183,6 +184,8 @@ export default function PromosyonTekstilSayfasi({ lang }: { lang: PLang }) {
             <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'grid', gap: '.5rem', fontSize: '.92rem' }}>
               <li><Link href={anavera.path} hrefLang={anavera.lang} style={{ color: '#E2E8F0' }}>{c.relAnavera}{anaveraSuffix}</Link></li>
               <li><Link href={mainPath} style={{ color: '#E2E8F0' }}>{c.relMain}</Link></li>
+              <li><Link href={uUrl(lang, 'uretici')} style={{ color: '#E2E8F0' }}>{UDATA[lang].uretici.h1}</Link></li>
+              <li><Link href={uUrl(lang, 'gonderim')} style={{ color: '#E2E8F0' }}>{UDATA[lang].gonderim.h1}</Link></li>
             </ul>
           </div>
           <div>

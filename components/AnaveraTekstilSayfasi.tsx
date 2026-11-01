@@ -8,6 +8,7 @@
 // "modern tesis" iddiaları. Sayfada doğrulanamayan hiçbir sayı/sertifika yok.
 
 import Link from 'next/link';
+import { UDATA, U_IDS, uUrl } from '@/lib/uretim';
 import { PROMO_PATH, PROMO_NAME, PROMO_ANAVERA_LINE } from '@/lib/promosyon-paths';
 
 export type AnaveraLang = 'en' | 'tr' | 'de' | 'ru';
@@ -609,6 +610,13 @@ export default function AnaveraTekstilSayfasi({ lang }: { lang: AnaveraLang }) {
       <OrnekGorselSeridi konu={['uniforma','promo']} lang={lang} tema="acik" anahtarlar={['atolye-kesim-masasi', 'manken-palto-takim', 'manken-bej-ceket', 'kadin-trenckot-atolye']} sayfaUrl={`https://terzihizmeti.com.tr${lang === 'tr' ? '' : '/' + lang}/anavera-tekstil`} />
 
       {/* CTA */}
+      <section style={{ padding: '2.5rem 1rem', backgroundColor: '#fff', textAlign: 'center' }}>
+        <h2 style={{ fontSize: '1.3rem', fontWeight: 800, margin: '0 0 1rem', color: NAVY }}>{{ tr: 'Üretim sayfalarımız', en: 'Our production pages', de: 'Unsere Produktionsseiten', ru: 'Страницы о производстве' }[lang]}</h2>
+        <p style={{ maxWidth: 820, margin: '0 auto', lineHeight: 2 }}>
+          {U_IDS.map((id, i) => <span key={id}>{i > 0 && ' · '}<Link href={uUrl(lang, id)} style={{ color: NAVY, fontWeight: 600 }}>{UDATA[lang][id].h1}</Link></span>)}
+        </p>
+      </section>
+
       <section style={{ padding: '4rem 1rem', backgroundColor: NAVY, textAlign: 'center' }}>
         <h2 style={{ color: '#FFFFFF', fontSize: 'clamp(1.6rem, 3vw, 2.2rem)', fontWeight: 800, margin: '0 0 .8rem' }}>{t.ctaTitle}</h2>
         <p style={{ color: '#CBD5E1', maxWidth: 620, margin: '0 auto 1.8rem', lineHeight: 1.7 }}>{t.ctaDesc}</p>

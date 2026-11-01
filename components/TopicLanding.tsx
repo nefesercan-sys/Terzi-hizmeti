@@ -5,6 +5,7 @@ import { businessNode, OG_DEFAULT, waLink, TURIST_UPDATE } from '@/lib/turist-ke
 import { INTL, iUrl, type ILang } from '@/lib/intl';
 import { svcUrl } from '@/lib/intl-services';
 import { TOPICS, TOPIC_IDS, TOPIC_UI, topicUrl, type TopicId } from '@/lib/intl-topics';
+import { UDATA, U_IDS, uUrl } from '@/lib/uretim';
 import { HIZMET, HIZMET_IDS, hizmetUrl, type HizmetId } from '@/lib/intl-hizmet';
 
 const C = { green: '#2C4A3E', gold: '#D4B07A', cream: '#FAF7F2', sand: '#F2EDE4', ink: '#1C1814', muted: '#6B5F53', line: 'rgba(44,74,62,.15)' };
@@ -56,6 +57,12 @@ export default function TopicLanding({ lang, topic, hizmet }: { lang: ILang; top
           <section style={{ marginBottom: '1.8rem' }}>
             <H2>{ui.moreTitle}</H2>
             <ul style={{ margin: 0, paddingInlineStart: '1.2rem' }}>{HIZMET_IDS.map((h) => <li key={h}><Link href={hizmetUrl(lang, h)} style={{ color: C.green }}>{HIZMET[lang][h].name}</Link></li>)}</ul>
+          </section>
+        )}
+        {topic === 'tekstil' && (
+          <section style={{ marginBottom: '1.8rem' }}>
+            <H2>{ui.moreTitle}</H2>
+            <ul style={{ margin: 0, paddingInlineStart: '1.2rem' }}>{U_IDS.map((u) => <li key={u}><Link href={uUrl(lang, u)} style={{ color: C.green }}>{UDATA[lang][u].h1}</Link></li>)}</ul>
           </section>
         )}
         <section style={{ background: C.sand, borderRadius: 8, padding: '1.3rem' }}>

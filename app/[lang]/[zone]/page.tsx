@@ -14,11 +14,13 @@ import { ZCOPY, ZONE_SLUGS, parseZone, zoneData, zoneSlug, zoneUrl } from '@/lib
 import { SITE } from '@/lib/seo-data';
 import { OG_DEFAULT } from '@/lib/turist-keten';
 import { fitDesc } from '@/lib/meta-fit';
+import UretimLanding from '@/components/UretimLanding';
+import { UDATA, U_IDS, parseU, uMetadata } from '@/lib/uretim';
 
 // Yalnızca tanımlı otel bölgesi sayfaları üretilir; diğer iki-segmentli yollar 404 olur.
 export const dynamicParams = false;
 export function generateStaticParams() {
-  return ILANGS.flatMap((lang) => [{ lang, zone: SVC[lang].slug }, { lang, zone: promoSlug(lang) }, ...TOPIC_IDS.map((t) => ({ lang, zone: TOPICS[lang][t].slug })), ...HIZMET_IDS.map((h) => ({ lang, zone: HIZMET[lang][h].slug })), ...ZONE_SLUGS.map((z) => ({ lang, zone: zoneSlug(lang, z) }))]);
+  return ILANGS.flatMap((lang) => [...U_IDS.map((u) => ({ lang, zone: UDATA[lang][u].slug })), { lang, zone: SVC[lang].slug }, { lang, zone: promoSlug(lang) }, ...TOPIC_IDS.map((t) => ({ lang, zone: TOPICS[lang][t].slug })), ...HIZMET_IDS.map((h) => ({ lang, zone: HIZMET[lang][h].slug })), ...ZONE_SLUGS.map((z) => ({ lang, zone: zoneSlug(lang, z) }))]);
 }
 
 type P = { params: Promise<{ lang: string; zone: string }> };
@@ -26,6 +28,8 @@ type P = { params: Promise<{ lang: string; zone: string }> };
 export async function generateMetadata({ params }: P): Promise<Metadata> {
   const { lang, zone: slug } = await params;
   if (!isILang(lang)) return {};
+  const uid = parseU(lang, slug);
+  if (uid) return uMetadata(lang, uid);
   if (slug === promoSlug(lang)) return buildPromoMetadata(lang);
   if (isSvcSlug(lang, slug)) {
     const c = SVC[lang]; const url = `${SITE}${svcUrl(lang)}`;
@@ -98,6 +102,8 @@ export async function generateMetadata({ params }: P): Promise<Metadata> {
 export default async function Page({ params }: P) {
   const { lang, zone: slug } = await params;
   if (!isILang(lang)) notFound();
+  const uid = parseU(lang, slug);
+  if (uid) return <UretimLanding lang={lang} id={uid} />;
   if (slug === promoSlug(lang)) return <PromosyonTekstilSayfasi lang={lang} />;
   if (isSvcSlug(lang, slug)) return <ServicesLanding lang={lang} />;
   const hz = parseHizmet(lang, slug);

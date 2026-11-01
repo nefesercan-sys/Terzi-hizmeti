@@ -5,6 +5,7 @@ import { DISTRICTS, SERVICES, LANGS, SERVICE_BASE, districtUrl, serviceUrl, LAST
 import { TLANGS, allNewPages, hubUrl, TR_HUB, TURIST_UPDATE } from '@/lib/turist-keten';
 import { ILANGS, INTL, iUrl } from '@/lib/intl';
 import { ZONE_SLUGS, zoneUrl } from '@/lib/intl-zones';
+import { U_IDS, UL_LIST, uUrl, uLanguages } from '@/lib/uretim';
 import { svcUrl } from '@/lib/intl-services';
 import { HIZMET_IDS, hizmetUrl, hizmetLanguages, sixForService } from '@/lib/intl-hizmet';
 import { TOPIC_IDS, topicUrl, topicLanguages, sixAlt } from '@/lib/intl-topics';
@@ -168,7 +169,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const hizmetSayfalari: MetadataRoute.Sitemap = HIZMET_IDS.flatMap((h) => ILANGS.map((l) => ({
     url: `${SITE}${hizmetUrl(l, h)}`, lastModified: new Date(LAST_UPDATE), changeFrequency: 'monthly' as const, priority: 0.72, alternates: { languages: hizmetLanguages(h) },
   })));
-  const hepsi = [...sabitSayfalar, ...otelSayfalari, ...seoSayfalari, ...turistSayfalari, ...iletisimSayfalari, ...intlSayfalari, ...zoneSayfalari, ...svcSayfalari, ...konuSayfalari, ...hizmetSayfalari, ...promoSayfalari];
+  const uretimSayfalari: MetadataRoute.Sitemap = U_IDS.flatMap((u) => UL_LIST.map((l) => ({
+    url: `${SITE}${uUrl(l, u)}`, lastModified: new Date(LAST_UPDATE), changeFrequency: 'monthly' as const, priority: 0.78, alternates: { languages: uLanguages(u) },
+  })));
+  const hepsi = [...sabitSayfalar, ...otelSayfalari, ...seoSayfalari, ...turistSayfalari, ...iletisimSayfalari, ...intlSayfalari, ...zoneSayfalari, ...svcSayfalari, ...konuSayfalari, ...hizmetSayfalari, ...uretimSayfalari, ...promoSayfalari];
   for (const e of hepsi) {
     const ilk = gorulen.get(e.url);
     if (!ilk) gorulen.set(e.url, e);

@@ -15,7 +15,7 @@ export function businessNode(opts: { reviews?: boolean } = {}) {
   return {
   '@type': ['LocalBusiness', 'ClothingStore'],
   ...(opts.reviews === false ? {} : reviewSchema()),
-  additionalType: ['https://schema.org/SewingService', 'https://schema.org/DryCleaningService'],
+  additionalType: ['https://schema.org/SewingService'],
   '@id': BUSINESS_ID,
   name: 'Terzi Can',
   alternateName: [

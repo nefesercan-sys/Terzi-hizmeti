@@ -4,6 +4,7 @@
 // için 4 dilli, veri odaklı sunucu bileşenleri + metadata üreticileri.
 // Veri: lib/seo-data.ts. Sadece doğrulanmış bilgi kullanılır (bkz. dosya başlığı).
 // ============================================================
+import { sixForService } from '@/lib/intl-hizmet';
 import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
 import type { GorselAnahtar } from '@/lib/ornek-gorseller';
 import type { Metadata } from 'next';
@@ -350,7 +351,7 @@ export function serviceMetadata(lang: Lang, s: Service): Metadata {
       } as Record<string, string[]>)[lang],
     ]),
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
-    alternates: alternatesFor(lang, (l) => abs(serviceUrl(l, s))),
+    alternates: (() => { const a = alternatesFor(lang, (l) => abs(serviceUrl(l, s))); return { ...a, languages: { ...a.languages, ...sixForService(s.slug.tr) } }; })(),
     openGraph: {
       title: c.title, description: fitDesc(c.desc), url, siteName: 'Terzi Can', locale: OG_LOCALE[lang], type: 'website',
       images: [{ url: OG, width: 1024, height: 1024, alt: c.title }],

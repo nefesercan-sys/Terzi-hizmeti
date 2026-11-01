@@ -112,7 +112,31 @@ export const HIZMET: Record<ILang, Record<HizmetId, HizmetCopy>> = {
 
 export const hizmetUrl = (l: ILang, h: HizmetId) => `/${l}/${HIZMET[l][h].slug}`;
 export const parseHizmet = (l: ILang, slug: string): HizmetId | undefined => HIZMET_IDS.find((h) => HIZMET[l][h].slug === slug);
+import { SERVICES, serviceUrl } from '@/lib/seo-data';
 const SITE_ABS = 'https://terzihizmeti.com.tr';
-/** Altı dilin karşılıkları (kendi aralarında hreflang). */
-export const hizmetLanguages = (h: HizmetId): Record<string, string> =>
+/** Yeni hizmet sayfası → TR/EN/RU/DE hizmet sayfasının Türkçe slug'ı (SERVICES). */
+export const HIZMET_SVC: Record<HizmetId, string> = {
+  paca: 'pantolon-paca-kisaltma', kot: 'kot-pantolon-paca-kisaltma', bel: 'bel-daraltma', fermuar: 'fermuar-degisimi-tamiri',
+  elbise: 'elbise-dikimi', gelinlik: 'gelinlik-abiye-tadilati', abiye: 'abiye-tadilati-gece-kiyafetleri', kol: 'kol-boyu-kisaltma',
+  takim: 'takim-elbise-ceket-tadilati', mont: 'mont-palto-tadilati', deri: 'deri-ceket-pantolon-tadilati', pantolon: 'pantolon-tadilati',
+  beden: 'olcuye-gore-beden-ayarlama', tamir: 'kiyafet-tamiri-onarimi',
+};
+const svcOf = (h: HizmetId) => SERVICES.find((x) => x.slug.tr === HIZMET_SVC[h]);
+/** Yeni 6 dilin hreflang karşılıkları. */
+export const hizmetSix = (h: HizmetId): Record<string, string> =>
   Object.fromEntries((['es', 'fr', 'pl', 'uk', 'nl', 'ar'] as ILang[]).map((l) => [l, `${SITE_ABS}${hizmetUrl(l, h)}`]));
+/** TR/EN/RU/DE hizmet sayfaları. */
+export const hizmetCore = (h: HizmetId): Record<string, string> => {
+  const sv = svcOf(h);
+  return sv ? Object.fromEntries((['tr', 'en', 'ru', 'de'] as const).map((l) => [l, `${SITE_ABS}${serviceUrl(l, sv)}`])) : {};
+};
+/** Yeni sayfanın tam hreflang kümesi (10 dil + x-default). */
+export const hizmetLanguages = (h: HizmetId): Record<string, string> => {
+  const c = hizmetCore(h);
+  return { ...c, ...hizmetSix(h), ...(c.tr ? { 'x-default': c.tr } : {}) };
+};
+/** Mevcut TR/EN/RU/DE hizmet sayfası için eklenecek 6 dil karşılığı (yoksa boş). */
+export const sixForService = (trSlug: string): Record<string, string> => {
+  const h = HIZMET_IDS.find((x) => HIZMET_SVC[x] === trSlug);
+  return h ? hizmetSix(h) : {};
+};

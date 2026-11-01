@@ -39,6 +39,9 @@ export const metadata: Metadata = {
     canonical: PAGE_URL,
     languages: {
       'tr': PAGE_URL,
+      'en': `${SITE}/en/tailor-prices-antalya`,
+      'de': `${SITE}/de/schneider-preise-antalya`,
+      'ru': `${SITE}/ru/ceny-portnoy-antalya`,
       'x-default': PAGE_URL,
     },
   },

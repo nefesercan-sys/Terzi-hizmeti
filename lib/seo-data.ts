@@ -25,7 +25,7 @@ export const LAST_UPDATE = '2026-11-01';
 // Türkçe sayfalar yalnızca atölyeye (Konyaaltı/Hurma) yakın bölgelerde aramaya açık; uzak bölgelerin Türkçe sayfaları
 // noindex olur, sitemap'ten, iç linklerden ve hreflang'dan çıkar. Yabancı dil (EN/RU/DE) sayfaları TÜM bölgelerde açıktır.
 // Bir bölgeyi Türkçede açmak/kapatmak için bu listeyi değiştirmek yeterli.
-export const TR_NEAR_SLUGS = ['konyaalti', 'hurma', 'liman', 'gursu', 'uluc', 'altinkum', 'ogretmenevleri', 'arapsuyu', 'siteler', 'uncali', 'sarisu', 'meltem', 'muratpasa', 'fener', 'sirinyali', 'toros'];
+export const TR_NEAR_SLUGS = ['konyaalti', 'hurma', 'liman', 'gursu', 'uluc', 'altinkum', 'ogretmenevleri', 'arapsuyu', 'siteler', 'uncali', 'sarisu', 'meltem', 'muratpasa', 'fener', 'sirinyali', 'toros', 'manavgat'];
 /** Otellere alım-teslim TÜM hizmet bölgelerinde ücretsizdir (sahibinin kararı). */
 export const HOTEL_SERVICE_FREE = true;
 /** Otel dışı (ev) adreslerde ücretsiz alım-teslim yalnızca bu mahallelerde (TEK kaynak); diğerleri WhatsApp'tan sorulur. */
@@ -120,6 +120,8 @@ export const DISTRICTS: District[] = [
     loc: { tr: "Belek'te", en: 'in Belek', ru: 'в Белеке', de: 'in Belek' }, alias: [] },
   { slug: 'side', kind: 'resort', hotelSlug: 'side', name: { tr: 'Side', en: 'Side', ru: 'Сиде', de: 'Side' },
     loc: { tr: "Side'de", en: 'in Side', ru: 'в Сиде', de: 'in Side' }, alias: ['Manavgat Side'] },
+  { slug: 'manavgat', kind: 'outer', name: { tr: 'Manavgat', en: 'Manavgat', ru: 'Манавгат', de: 'Manavgat' },
+    loc: { tr: "Manavgat'ta", en: 'in Manavgat', ru: 'в Манавгате', de: 'in Manavgat' }, alias: ['Manavgat Side'] },
   { slug: 'kemer', kind: 'resort', hotelSlug: 'kemer', name: { tr: 'Kemer', en: 'Kemer', ru: 'Кемер', de: 'Kemer' },
     loc: { tr: "Kemer'de", en: 'in Kemer', ru: 'в Кемере', de: 'in Kemer' }, alias: [] },
   { slug: 'beldibi', kind: 'resort', name: { tr: 'Beldibi', en: 'Beldibi', ru: 'Бельдиби', de: 'Beldibi' },

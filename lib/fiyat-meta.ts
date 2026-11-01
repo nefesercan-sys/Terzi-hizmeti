@@ -1,6 +1,6 @@
 // lib/fiyat-meta.ts — fiyat/SSS sayfaları için merkezi metadata + şema (4 dil)
 import type { Metadata } from 'next';
-import { FT, FIYAT_URLS, PRICE_ROWS, SITE, PHONE_TEL, type FLang } from '@/components/TerziFiyatlariSayfasi';
+import { FT, FIYAT_URLS, priceRowsFor, SITE, PHONE_TEL, type FLang } from '@/components/TerziFiyatlariSayfasi';
 import { fitDesc, fitKeywords } from '@/lib/meta-fit';
 
 const OG = `${SITE}/terzi-can-hero.jpg`;
@@ -63,8 +63,8 @@ export function buildFiyatJsonLd(lang: FLang) {
         areaServed: ['Konyaaltı', 'Muratpaşa', 'Kepez', 'Lara', 'Antalya'].map((n) => ({ '@type': 'Place', name: n })),
         hasOfferCatalog: {
           '@type': 'OfferCatalog', name: T.catalogName,
-          itemListElement: PRICE_ROWS.flatMap((g, i) => g.rows.map((p, j) => ({
-            '@type': 'Offer', priceCurrency: 'TRY', price: p.replace(/[^0-9]/g, ''),
+          itemListElement: priceRowsFor(lang).flatMap((g, i) => g.rows.map((p, j) => ({ p, i, j })).filter((x) => /[0-9]/.test(x.p)).map(({ p, i, j }) => ({
+            '@type': 'Offer', priceCurrency: lang === 'tr' ? 'TRY' : 'EUR', price: p.replace(/[^0-9]/g, ''),
             itemOffered: { '@type': 'Service', name: T.priceNames[i][j] },
           }))),
         },

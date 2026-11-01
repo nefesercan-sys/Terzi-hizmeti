@@ -28,15 +28,6 @@ const nextConfig = {
     const kisa = (source, destination) => ({ source, has: comHost, destination, permanent: false });
     const wa = (m) => `https://wa.me/905318986418?text=${encodeURIComponent(m)}`;
     return [
-      // Yabancı dillerde fiyat yazılmaz: fiyat sayfaları hizmet sayfalarına yönlenir
-      { source: '/en/tailor-prices-antalya', destination: '/en/tailor-service-antalya', permanent: true },
-      { source: '/de/schneider-preise-antalya', destination: '/de/schneiderservice-antalya', permanent: true },
-      { source: '/ru/ceny-portnoy-antalya', destination: '/ru/uslugi-portnogo-antalya', permanent: true },
-      // Manavgat (Side dahil) hizmet bölgesidir: eski /manavgat adresleri Side bölge sayfalarına gider
-      { source: '/antalya-terzi/manavgat', destination: '/otele-gelen-terzi-antalya/side', permanent: true },
-      { source: '/en/tailor-antalya/manavgat', destination: '/en/tailor-antalya/side', permanent: true },
-      { source: '/ru/portnoy-antalya/manavgat', destination: '/ru/portnoy-antalya/side', permanent: true },
-      { source: '/de/schneider-antalya/manavgat', destination: '/de/schneider-antalya/side', permanent: true },
       {
         source: '/:path*',
         has: [{ type: 'host', value: 'www.terzihizmeti.com.tr' }],

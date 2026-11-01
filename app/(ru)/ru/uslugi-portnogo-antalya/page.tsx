@@ -322,7 +322,7 @@ export default function UslugiPortnogoAntalyaPage() {
         <footer>
           <div>© {new Date().getFullYear()} Terzi Can · Портной Анталья · {PHONE}</div>
           <nav className="foot-links" aria-label="Ссылки в подвале">
-            <a href="/ru/uslugi-portnogo">Все услуги портного</a>
+            <a href="/ru/ceny-portnoy-antalya">Цены портного 2026</a>
             <a href="/">Ana Sayfa (TR)</a>
             <a href={EN_URL}>English</a>
             <a href={DE_URL}>Deutsch</a>

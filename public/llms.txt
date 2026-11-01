@@ -22,6 +22,9 @@ This file lists the main pages of the site for AI assistants and answer engines.
 ## Prices
 
 - [Antalya terzi fiyatları (Turkish)](https://terzihizmeti.com.tr/antalya-terzi-fiyatlari): price list and answers to common questions
+- [Tailor prices Antalya (English)](https://terzihizmeti.com.tr/en/tailor-prices-antalya): price list in English
+- [Цены портного в Анталье (Russian)](https://terzihizmeti.com.tr/ru/ceny-portnoy-antalya): price list in Russian
+- [Schneider Preise Antalya (German)](https://terzihizmeti.com.tr/de/schneider-preise-antalya): price list in German
 
 ## Services
 

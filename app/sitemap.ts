@@ -15,7 +15,7 @@ const OLD = new Date('2026-09-20');   // v36'da değişmeyen sayfalar (sahte gü
 // İçeriği değişen sayfalar (yorum bölümü eklenenler dahil) — yeni içerik eklenince buraya ekle
 const CHANGED = new Set(['', '/ru/uslugi-portnogo-antalya', '/antalya-terzi', '/antalya-terzi-fiyatlari', '/antalya-gelinlik-tadilati', '/antalya-uniforma-imalati', '/en/tailor-service-antalya', '/de/schneiderservice-antalya', '/gursu-terzi', '/hurma-terzi', '/liman-terzi', '/sarisu-terzi', '/uncali-terzi', '/keten-pamuk-ozel-dikim', '/en/linen-cotton-tailoring', '/de/leinen-baumwolle-schneiderei', '/ru/poshiv-lyon-hlopok', '/konyaalti-fermuar-tamiri', '/konyaalti-paca-kisaltma', '/otele-gelen-terzi-antalya', '/blog/2026-yaz-sezonu-gelinlik-tadilat-rehberi', '/anavera-tekstil', '/en/anavera-tekstil', '/de/anavera-tekstil', '/ru/anavera-tekstil']);
 // Bu dalda (fix/icerik-seo-hatalar) metni değişen sayfalar: süreler, otel ücretsiz kuralı, SSS, doğrudan cevap, bölgeye özgü bölümler, fiyat kaynağı.
-const CHANGED30 = new Set(['', '/antalya-terzi', '/otele-gelen-terzi-antalya', '/antalya-terzi-fiyatlari', '/antalya-gelinlik-tadilati', '/antalya-uniforma-imalati', '/gursu-terzi', '/hurma-terzi', '/liman-terzi', '/sarisu-terzi', '/uncali-terzi', '/keten-pamuk-ozel-dikim', '/konyaalti-fermuar-tamiri', '/konyaalti-paca-kisaltma', '/en/tailor-service-antalya', '/ru/uslugi-portnogo-antalya', '/de/schneiderservice-antalya', '/en/hotel-tailor-antalya', '/ru/vyezdnoy-portnoy-antalya', '/de/schneider-service-hotel-antalya']);
+const CHANGED30 = new Set(['', '/antalya-terzi', '/otele-gelen-terzi-antalya', '/antalya-terzi-fiyatlari', '/en/tailor-prices-antalya', '/de/schneider-preise-antalya', '/ru/ceny-portnoy-antalya', '/antalya-gelinlik-tadilati', '/antalya-uniforma-imalati', '/gursu-terzi', '/hurma-terzi', '/liman-terzi', '/sarisu-terzi', '/uncali-terzi', '/keten-pamuk-ozel-dikim', '/konyaalti-fermuar-tamiri', '/konyaalti-paca-kisaltma', '/en/tailor-service-antalya', '/ru/uslugi-portnogo-antalya', '/de/schneiderservice-antalya', '/en/hotel-tailor-antalya', '/ru/vyezdnoy-portnoy-antalya', '/de/schneider-service-hotel-antalya']);
 const lm = (path: string) => (CHANGED30.has(path) ? NOW30 : CHANGED.has(path) ? NOW : OLD);
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -67,6 +67,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE}/konyaalti-paca-kisaltma`, lastModified: lm('/konyaalti-paca-kisaltma'), changeFrequency: 'monthly', priority: 0.82 },
     { url: `${SITE}/antalya-gelinlik-tadilati`, lastModified: lm('/antalya-gelinlik-tadilati'), changeFrequency: 'monthly', priority: 0.82 },
     { url: `${SITE}/antalya-terzi-fiyatlari`, lastModified: lm('/antalya-terzi-fiyatlari'), changeFrequency: 'weekly', priority: 0.90 },
+    { url: `${SITE}/en/tailor-prices-antalya`, lastModified: lm('/en/tailor-prices-antalya'), changeFrequency: 'weekly', priority: 0.85 },
+    { url: `${SITE}/de/schneider-preise-antalya`, lastModified: lm('/de/schneider-preise-antalya'), changeFrequency: 'weekly', priority: 0.85 },
+    { url: `${SITE}/ru/ceny-portnoy-antalya`, lastModified: lm('/ru/ceny-portnoy-antalya'), changeFrequency: 'weekly', priority: 0.85 },
     { url: `${SITE}/antalya-uniforma-imalati`, lastModified: lm('/antalya-uniforma-imalati'), changeFrequency: 'monthly', priority: 0.82 },
 
     // 🌍 5. ÇOK DİLLİ LANDING SAYFALARI (Priority: 0.80 / 0.78)

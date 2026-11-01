@@ -66,7 +66,7 @@ export const metadata: Metadata = {
 
 const FAQS: [string, string][] = [
   ['Servis ücretsiz mi?', 'Evet. Hizmet verdiğimiz her bölgede eve ve otele alım-teslim ücretsizdir. Adresinizi veya otelinizi WhatsApp üzerinden yazmanız yeterli.'],
-  ["Ahatlı, Toros ve diğer Antalya bölgelerine hizmet var mı?", 'Evet, ev adreslerine randevuyla geliyoruz; ücret ve zamanı WhatsApp\'tan netleştiririz. Otellere alım-teslimat ücretsizdir.'],
+  ["Ahatlı, Toros ve diğer Antalya bölgelerine hizmet var mı?", 'Evet. Eve ve otele alım-teslim tüm bölgelerde ücretsizdir; WhatsApp\'tan yazmanız yeterli.'],
   ['Bay, bayan, çocuk kıyafeti dikiyor musunuz?', 'Evet, erkek, kadın ve çocuk kıyafetlerinde özel ölçü dikim hizmeti sunuyoruz.'],
   ['Üniforma üretimi ve toplu sipariş alıyor musunuz?', 'Evet, otel, okul, restoran ve kurumlar için üniforma tasarımı ve toplu üretim yapıyoruz.'],
   ['Fason imalat yapıyor musunuz?', 'Evet, markalar ve işletmeler için numune dikimi, kalıp çıkarma ve seri üretim hizmeti veriyoruz.'],
@@ -125,8 +125,8 @@ const NEIGHBORHOODS: Neighborhood[] = [
   { name: 'Altınkum', tag: 'Yakın', note: 'Ücretsiz adrese servis', priority: false },
   { name: 'Siteler', tag: 'Yakın', note: 'Ücretsiz adrese servis', priority: false },
   { name: 'Arapsuyu', tag: 'Yakın', note: 'Ücretsiz adrese servis', priority: false },
-  { name: 'Ahatlı', tag: 'Yakın', note: 'Randevulu adrese gelen servis', priority: false },
-  { name: 'Toros', tag: 'Yakın', note: 'Randevulu adrese gelen servis', priority: false },
+  { name: 'Ahatlı', tag: 'Yakın', note: 'Ücretsiz adrese servis', priority: false },
+  { name: 'Toros', tag: 'Yakın', note: 'Ücretsiz adrese servis', priority: false },
 ];
 
 const OTHER_DISTRICTS: string[] = [

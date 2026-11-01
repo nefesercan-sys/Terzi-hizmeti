@@ -105,7 +105,7 @@ interface LangLabel {
 }
 
 const LANG_LABELS: Record<Lang, LangLabel> = {
-  tr: { name: 'Türkçe', flag: '🇹🇷', note: 'Eve ve otele alım-teslim hizmet verdiğimiz tüm bölgelerde ücretsizdir.'tan sorulur.' },
+  tr: { name: 'Türkçe', flag: '🇹🇷', note: 'Eve ve otele alım-teslim hizmet verdiğimiz tüm bölgelerde ücretsizdir.' },
   en: { name: 'English', flag: '🇬🇧', note: 'Pick-up and delivery to homes and hotels is free in every area we serve.' },
   ru: { name: 'Русский', flag: '🇷🇺', note: 'Забор и доставка на дом и в отели бесплатны во всех районах, которые мы обслуживаем.' },
   de: { name: 'Deutsch', flag: '🇩🇪', note: 'Abholung und Lieferung zu Hause und im Hotel sind in allen Gebieten, die wir bedienen, kostenlos.' },

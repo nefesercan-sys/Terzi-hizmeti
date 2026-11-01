@@ -16,7 +16,7 @@ export const MAPS = 'https://www.google.com/maps?cid=6436895271281342624';
 const WA = (m: string) => `https://wa.me/905318986418?text=${encodeURIComponent(m)}`;
 
 export const PRICE_ROWS: { icon: string; rows: string[] }[] = [
-  { icon: '🔧', rows: [tryText('zipperPants'), tryText('zipperCoat'), tryText('button'), tryText('lining')] },
+  { icon: '🔧', rows: [tryText('zipperPants'), tryText('zipperCoat'), 'Fotoğrafa göre', 'Fotoğrafa göre'] },
   { icon: '📏', rows: [tryText('hem'), tryText('waist'), tryText('sleeve'), tryText('dressAdjust'), tryText('eveningWeddingAlter')] },
   { icon: '✂️', rows: [tryText('skirtPantsSew'), tryText('dressSew'), tryText('groomSuit'), tryText('kidsSew')] },
   { icon: '🧺', rows: ['Fotoğrafa göre', 'Fotoğrafa göre', 'Fotoğrafa göre', 'Fotoğrafa göre'] },
@@ -26,15 +26,15 @@ export const PRICE_ROWS: { icon: string; rows: string[] }[] = [
 // null = fotoğrafa göre. Satır sırası PRICE_ROWS ile birebir aynıdır.
 const FOREIGN_BY_PHOTO: Record<'en' | 'de' | 'ru', string> = { en: 'By photo', de: 'Per Foto', ru: 'По фото' };
 const EUR_ROWS: { icon: string; rows: (string | null)[] }[] = [
-  { icon: '🔧', rows: [eurText('zipperPants'), eurText('zipperCoat'), eurText('button'), eurText('lining')] },
+  { icon: '🔧', rows: [eurText('zipperPants'), eurText('zipperCoat'), null, null] },
   { icon: '📏', rows: [eurText('hem'), eurText('waist'), eurText('sleeve'), eurText('dressAdjust'), eurText('eveningWeddingAlter')] },
   { icon: '✂️', rows: [eurText('skirtPantsSew'), eurText('dressSew'), eurText('groomSuit'), eurText('kidsSew')] },
   { icon: '🧺', rows: [null, null, null, null] },
 ];
 export const FOREIGN_NOTE: Record<'en' | 'de' | 'ru', string> = {
-  en: 'Starting prices in euro. Leather alterations (length etc.) from €30; coat alterations and coat zippers from €15. The final price is confirmed from your photo.',
-  de: 'Ab-Preise in Euro. Lederänderungen (z. B. Länge) ab €30; Manteländerungen und Mantel-Reißverschlüsse ab €15. Der Endpreis wird anhand Ihres Fotos bestätigt.',
-  ru: 'Цены указаны «от», в евро. Переделка кожаных изделий (длина и др.) — от €30; переделка пальто и курток и замена молний на них — от €15. Итоговая цена подтверждается по фото.',
+  en: 'Starting prices in euro. Leather alterations (length etc.) from €30; coat alterations from €15 and coat zippers from €20. The final price is confirmed from your photo.',
+  de: 'Ab-Preise in Euro. Lederänderungen (z. B. Länge) ab €30; Manteländerungen ab €15 und Mantel-Reißverschlüsse ab €20. Der Endpreis wird anhand Ihres Fotos bestätigt.',
+  ru: 'Цены указаны «от», в евро. Переделка кожаных изделий (длина и др.) — от €30; переделка пальто и курток — от €15, замена молний на пальто — от €20. Итоговая цена подтверждается по фото.',
 };
 /** Dile göre fiyat tablosu: tr → ₺ (PRICE_ROWS), en/de/ru → € (EUR_ROWS). */
 export function priceRowsFor(lang: FLang): { icon: string; rows: string[] }[] {
@@ -285,9 +285,9 @@ export const FT: Record<FLang, FiyatText> = {
     "htmlLang": "en",
     "locale": "en_US",
     "metaTitle": "Tailor Prices Antalya 2026 — Every Service, One Page",
-    "metaDesc": "Antalya tailor prices 2026: hemming €10, waist €10, zipper €20, repairs from €10. Send a photo on WhatsApp for the price. Open daily 08:00–23:00.",
+    "metaDesc": "Antalya tailor prices 2026: hemming €10, waist €10, zipper €15, repairs from €10. Send a photo on WhatsApp for the price. Open daily 08:00–23:00.",
     "ogTitle": "Tailor Prices Antalya 2026 — Send a Photo, Get Your Price",
-    "ogDesc": "Hemming €10, waist €10, zipper €20, repairs from €10. Mobile tailor to your hotel. Open 7 days.",
+    "ogDesc": "Hemming €10, waist €10, zipper €15, repairs from €10. Mobile tailor to your hotel. Open 7 days.",
     "keywords": [
       "tailor Antalya",
       "tailor prices Antalya",
@@ -315,7 +315,7 @@ export const FT: Record<FLang, FiyatText> = {
     "heroTag": "€ Prices · Open every day 08:00–23:00 · Konyaaltı, Antalya",
     "h1a": "Tailor Prices in Antalya 2026",
     "h1b": "Send a Photo, Get Your Price",
-    "heroDesc": "Hemming €10, taking in a waist €10, zipper replacement €20, repairs from €10, coat alterations from €15, leather from €30. Clothing repair, alterations, custom sewing, and a tailor who comes to your hotel or address. Send a photo of the job on WhatsApp and get an exact price and time.",
+    "heroDesc": "Hemming €10, taking in a waist €10, zipper replacement €15, repairs from €10, coat alterations from €15, leather from €30. Clothing repair, alterations, custom sewing, and a tailor who comes to your hotel or address. Send a photo of the job on WhatsApp and get an exact price and time.",
     "btnPhoto": "💬 Send a Photo →",
     "quickEyebrow": "What do you need?",
     "quickH": "Quick Answers for Your Situation",
@@ -469,7 +469,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Is there a tailor open on weekends and Sundays for zipper replacement?",
-        "Terzi Can is open every day of the week, including Saturday and Sunday, from 08:00to23:00. Outside these hours you can leave photos and messages on WhatsApp. Zipper replacement starts from €20."
+        "Terzi Can is open every day of the week, including Saturday and Sunday, from 08:00to23:00. Outside these hours you can leave photos and messages on WhatsApp. Zipper replacement starts from €15."
       ],
       [
         "Does a tailor come to my hotel or address?",
@@ -502,9 +502,9 @@ export const FT: Record<FLang, FiyatText> = {
     "htmlLang": "de",
     "locale": "de_DE",
     "metaTitle": "Schneider Preisliste Antalya 2026 — Alle Leistungen",
-    "metaDesc": "Schneiderpreise Antalya 2026: Kürzen ab €10, Taille ab €10, Reißverschluss ab €20, Reparaturen ab €10. Foto per WhatsApp. Täglich 08:00–23:00.",
+    "metaDesc": "Schneiderpreise Antalya 2026: Kürzen ab €10, Taille ab €10, Reißverschluss ab €15, Reparaturen ab €10. Foto per WhatsApp. Täglich 08:00–23:00.",
     "ogTitle": "Schneider Preise Antalya 2026 — Foto senden, Preis erfahren",
-    "ogDesc": "Kürzen ab €10, Taille ab €10, Reißverschluss ab €20, Reparaturen ab €10. Mobiler Schneider, 7 Tage geöffnet.",
+    "ogDesc": "Kürzen ab €10, Taille ab €10, Reißverschluss ab €15, Reparaturen ab €10. Mobiler Schneider, 7 Tage geöffnet.",
     "keywords": [
       "Schneider Antalya",
       "Schneider Preise Antalya",
@@ -530,7 +530,7 @@ export const FT: Record<FLang, FiyatText> = {
     "heroTag": "€ Preise · Täglich 08:00–23:00 geöffnet · Konyaaltı, Antalya",
     "h1a": "Schneider Preise in Antalya 2026",
     "h1b": "Foto senden, Preis erfahren",
-    "heroDesc": "Hose kürzen ab €10, Taille enger machen ab €10, Reißverschluss wechseln ab €20, Reparaturen ab €10, Manteländerungen ab €15, Leder ab €30. Kleidung reparieren, Änderungen, Maßanfertigung und ein Schneider, der zu Ihrem Hotel oder Ihrer Adresse kommt. Senden Sie ein Foto per WhatsApp und erfahren Sie Preis und Dauer.",
+    "heroDesc": "Hose kürzen ab €10, Taille enger machen ab €10, Reißverschluss wechseln ab €15, Reparaturen ab €10, Manteländerungen ab €15, Leder ab €30. Kleidung reparieren, Änderungen, Maßanfertigung und ein Schneider, der zu Ihrem Hotel oder Ihrer Adresse kommt. Senden Sie ein Foto per WhatsApp und erfahren Sie Preis und Dauer.",
     "btnPhoto": "💬 Foto senden →",
     "quickEyebrow": "Was brauchen Sie?",
     "quickH": "Schnelle Antworten für Ihren Fall",
@@ -684,7 +684,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Gibt es einen Schneider für Reißverschlüsse, der am Wochenende und sonntags geöffnet ist?",
-        "Terzi Can hat an allen 7 Tagen der Woche geöffnet, auch samstags und sonntags, von 08:00bis23:00 Uhr. Außerhalb dieser Zeiten können Sie Fotos und Nachrichten per WhatsApp senden. Reißverschluss wechseln ab €20."
+        "Terzi Can hat an allen 7 Tagen der Woche geöffnet, auch samstags und sonntags, von 08:00bis23:00 Uhr. Außerhalb dieser Zeiten können Sie Fotos und Nachrichten per WhatsApp senden. Reißverschluss wechseln ab €15."
       ],
       [
         "Kommt ein Schneider in mein Hotel oder an meine Adresse?",
@@ -717,9 +717,9 @@ export const FT: Record<FLang, FiyatText> = {
     "htmlLang": "ru",
     "locale": "ru_RU",
     "metaTitle": "Цены портного в Анталье 2026 — все услуги на одной странице",
-    "metaDesc": "Цены портного в Анталье 2026: подшив от €10, талия от €10, молния от €20, ремонт от €10. Пришлите фото в WhatsApp. Ежедневно 08:00–23:00.",
+    "metaDesc": "Цены портного в Анталье 2026: подшив от €10, талия от €10, молния от €15, ремонт от €10. Пришлите фото в WhatsApp. Ежедневно 08:00–23:00.",
     "ogTitle": "Цены портного в Анталье 2026 — пришлите фото, узнайте цену",
-    "ogDesc": "Подшив от €10, талия от €10, молния от €20, ремонт от €10. Выездной портной, работаем 7 дней.",
+    "ogDesc": "Подшив от €10, талия от €10, молния от €15, ремонт от €10. Выездной портной, работаем 7 дней.",
     "keywords": [
       "портной Анталья",
       "цены портного Анталья",
@@ -745,7 +745,7 @@ export const FT: Record<FLang, FiyatText> = {
     "heroTag": "€ Цены · Ежедневно 08:00–23:00 · Коньяалты, Анталья",
     "h1a": "Цены портного в Анталье 2026",
     "h1b": "Пришлите фото — узнайте цену",
-    "heroDesc": "Подшив брюк от €10, ушить в талии от €10, замена молнии от €20, ремонт от €10, переделка пальто и курток от €15, кожа от €30. Ремонт и подгонка одежды, пошив на заказ и портной, который приедет в ваш отель или по адресу. Пришлите фото работы в WhatsApp — назовём точную цену и срок.",
+    "heroDesc": "Подшив брюк от €10, ушить в талии от €10, замена молнии от €15, ремонт от €10, переделка пальто и курток от €15, кожа от €30. Ремонт и подгонка одежды, пошив на заказ и портной, который приедет в ваш отель или по адресу. Пришлите фото работы в WhatsApp — назовём точную цену и срок.",
     "btnPhoto": "💬 Отправить фото →",
     "quickEyebrow": "Что вам нужно?",
     "quickH": "Быстрые ответы по вашей задаче",
@@ -899,7 +899,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Есть ли портной для замены молнии, который работает в выходные и в воскресенье?",
-        "Terzi Can работает все 7 дней в неделю, включая субботу и воскресенье, с 08:00до23:00. Вне этого времени можно оставить фото и сообщение в WhatsApp. Замена молнии — от €20."
+        "Terzi Can работает все 7 дней в неделю, включая субботу и воскресенье, с 08:00до23:00. Вне этого времени можно оставить фото и сообщение в WhatsApp. Замена молнии — от €15."
       ],
       [
         "Приедет ли портной в мой отель или по адресу?",

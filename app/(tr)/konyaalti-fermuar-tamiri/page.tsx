@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Fermuar Değişimi Fiyatları ₺300 · Ertesi Gün · Konyaaltı" },
   description:
-    "Pantolon, mont, ceket ve çanta fermuarı ₺300'den. Normal iş ertesi gün, acil 1–2 saat. Hurma, Liman, Sarısu'ya ücretsiz servis. ☎ " + PHONE,
+    "Pantolon, mont, ceket ve çanta fermuarı ₺300'den. Normal iş ertesi gün, acil 1–2 saat. Eve ve otele ücretsiz servis. ☎ " + PHONE,
   keywords: fitKeywords([
     'fermuar tamiri Konyaaltı', 'fermuar değişimi Antalya', 'fermuar tamiri Antalya',
     'pantolon fermuarı değişimi', 'mont fermuarı tamiri', 'ceket fermuarı değişimi',
@@ -97,7 +97,7 @@ const jsonLd = {
       estimatedCost: { '@type': 'MonetaryAmount', currency: 'TRY', value: '200-350' },
       step: [
         { '@type': 'HowToStep', name: 'Fotoğraf Gönderin', text: 'WhatsApp\'tan bozuk fermuarın fotoğrafını gönderin, anında ön fiyat alın.' },
-        { '@type': 'HowToStep', name: 'Kıyafeti Teslim Edin', text: 'Atölyeye getirin veya Hurma/Liman/Sarısu bölgesindeyseniz ücretsiz kurye ile gönderin.' },
+        { '@type': 'HowToStep', name: 'Kıyafeti Teslim Edin', text: 'Atölyeye getirin veya eve/otele ücretsiz alım-teslim isteyin.' },
         { '@type': 'HowToStep', name: 'Fermuar Değişimi Yapılır', text: 'Uygun kalitede fermuar seçilir ve profesyonelce dikilir — normal işte ertesi gün, acilde 1–2 saatte.' },
         { '@type': 'HowToStep', name: 'Teslim Alın', text: 'Kıyafetiniz test edilip kontrol edildikten sonra teslim edilir.' },
       ],
@@ -144,7 +144,7 @@ export default function FermuarTamiriPage() {
               Fermuar Tamiri <span className="accent">Konyaaltı</span><br />Ertesi Gün Teslim, Acilde 1–2 Saat</h1>
             <p className="hero-desc">
               Pantolon, kot, mont, ceket ve çanta fermuarı değişimi ve tamiri.
-              Hurma, Liman, Sarısu bölgesine ücretsiz servis. ₺300'den başlayan
+              Eve ve otele ücretsiz servis. ₺300'den başlayan
               net fiyatla, normal işlemler ertesi gün, acil işler 1–2 saatte tamamlanır.
             </p>
             <div className="hero-btns">
@@ -220,7 +220,7 @@ export default function FermuarTamiriPage() {
               </div>
               <div className="howto-item">
                 <div className="howto-t">Kıyafeti Teslim Edin</div>
-                <div className="howto-d">Atölyeye getirin veya Hurma, Liman, Sarısu bölgesindeyseniz ücretsiz kurye ile gönderin.</div>
+                <div className="howto-d">Atölyeye getirin veya eve/otele ücretsiz alım-teslim isteyin.</div>
               </div>
               <div className="howto-item">
                 <div className="howto-t">Fermuar Değişimi Yapılır</div>

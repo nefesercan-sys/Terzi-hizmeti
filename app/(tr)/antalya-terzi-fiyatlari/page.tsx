@@ -127,7 +127,7 @@ const jsonLd = {
       areaServed: ['Konyaaltı', 'Muratpaşa', 'Kepez', 'Lara', 'Antalya'].map((n) => ({ '@type': 'Place', name: n })),
       hasOfferCatalog: {
         '@type': 'OfferCatalog', name: 'Terzi fiyat listesi 2026 (başlangıç fiyatları)',
-        itemListElement: PRICES.flatMap((g) => g.rows.map(([name, price]) => ({
+        itemListElement: PRICES.flatMap((g) => g.rows.filter(([, price]) => /[0-9]/.test(price)).map(([name, price]) => ({
           '@type': 'Offer', priceCurrency: 'TRY', price: price.replace(/[^0-9]/g, ''),
           itemOffered: { '@type': 'Service', name },
         }))),

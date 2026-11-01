@@ -5,10 +5,20 @@ import { PHONE, PHONE_TEL, MAPS, SITE } from '@/lib/seo-data';
 import { ILANGS, INTL, NB, NB_DISTRICT, ZONES, iUrl, type ILang } from '@/lib/intl';
 import { SVC, svcUrl } from '@/lib/intl-services';
 import { ZCOPY, ZONE_SLUGS, zoneData, zoneUrl } from '@/lib/intl-zones';
+import { eurText } from '@/lib/facts';
 import { waLink, businessNode, OG_DEFAULT } from '@/lib/turist-keten';
 
 const C = { green: '#2C4A3E', gold: '#D4B07A', cream: '#FAF7F2', sand: '#F2EDE4', ink: '#1C1814', muted: '#6B5F53', line: 'rgba(44,74,62,.15)' };
 const serif = 'Georgia,serif';
+
+const PRICE_T: Record<ILang, { title: string; hem: string; zipP: string; zipC: string; dress: string; sew: string; note: string }> = {
+  es: { title: 'Precios desde (euros)', hem: 'Bajos y cintura', zipP: 'Cremallera pantalón', zipC: 'Cremallera abrigo', dress: 'Arreglo de vestido de novia/noche', sew: 'Falda, pantalón o ropa infantil a medida', note: 'El precio final se confirma por foto en WhatsApp.' },
+  fr: { title: 'Prix à partir de (euros)', hem: 'Ourlet et taille', zipP: 'Fermeture pantalon', zipC: 'Fermeture manteau', dress: 'Retouche robe de mariée/soirée', sew: 'Jupe, pantalon ou vêtement enfant sur mesure', note: 'Le prix final est confirmé par photo sur WhatsApp.' },
+  pl: { title: 'Ceny od (euro)', hem: 'Skracanie i talia', zipP: 'Zamek w spodniach', zipC: 'Zamek w płaszczu', dress: 'Przeróbka sukni ślubnej/wieczorowej', sew: 'Spódnica, spodnie lub odzież dziecięca na miarę', note: 'Cenę końcową potwierdzamy po zdjęciu na WhatsApp.' },
+  uk: { title: 'Ціни від (євро)', hem: 'Підшивання і талія', zipP: 'Блискавка на штанах', zipC: 'Блискавка на пальті', dress: 'Переробка весільної/вечірньої сукні', sew: 'Спідниця, штани чи дитячий одяг на замовлення', note: 'Остаточну ціну підтверджуємо за фото у WhatsApp.' },
+  nl: { title: 'Prijzen vanaf (euro)', hem: 'Zoom en taille', zipP: 'Rits broek', zipC: 'Rits jas', dress: 'Aanpassing bruids-/avondjurk', sew: 'Rok, broek of kinderkleding op maat', note: 'De eindprijs wordt per foto via WhatsApp bevestigd.' },
+  ar: { title: 'الأسعار تبدأ من (يورو)', hem: 'التقصير والخصر', zipP: 'سحّاب البنطال', zipC: 'سحّاب المعطف', dress: 'تعديل فستان الزفاف/السهرة', sew: 'تفصيل تنورة أو بنطال أو ملابس أطفال', note: 'يتم تأكيد السعر النهائي بالصورة عبر واتساب.' },
+};
 
 export function intlJsonLd(lang: ILang) {
   const c = INTL[lang];
@@ -82,10 +92,21 @@ export default function IntlLanding({ lang }: { lang: ILang }) {
 
       <Block><H2>{ZCOPY[lang].zonesLabel}</H2>
         <p style={{ margin: 0 }}>
-          {ZONE_SLUGS.filter((z) => z !== 'antalya').map((z, i) => (
+          {ZONE_SLUGS.map((z, i) => (
             <span key={z}>{i > 0 && ' · '}<Link href={zoneUrl(lang, z)} style={{ color: C.green }}>{zoneData(lang, z).name}</Link></span>
           ))}
         </p>
+      </Block>
+
+      <Block bg={C.sand}><H2>{PRICE_T[lang].title}</H2>
+        <ul style={{ margin: 0, paddingInlineStart: '1.2rem' }}>
+          <li>{PRICE_T[lang].hem}: {eurText('hem')}</li>
+          <li>{PRICE_T[lang].zipP}: {eurText('zipperPants')}</li>
+          <li>{PRICE_T[lang].zipC}: {eurText('zipperCoat')}</li>
+          <li>{PRICE_T[lang].dress}: {eurText('eveningWeddingAlter')}</li>
+          <li>{PRICE_T[lang].sew}: {eurText('skirtPantsSew')}</li>
+        </ul>
+        <p style={{ margin: '.8rem 0 0', color: C.muted, fontSize: '.92rem' }}>{PRICE_T[lang].note}</p>
       </Block>
 
       <Block><H2>{c.faqTitle}</H2>

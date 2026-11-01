@@ -836,7 +836,7 @@ export function expressJsonLd(lang: TLang) {
         provider: { '@id': `${SITE}#business` },
         areaServed: { '@type': 'AdministrativeArea', name: 'Antalya' },
         description: c.lead,
-        offers: { '@type': 'Offer', url, priceCurrency: 'TRY', priceSpecification: { '@type': 'PriceSpecification', minPrice: 200, priceCurrency: 'TRY' } },
+        offers: { '@type': 'Offer', url, priceCurrency: 'EUR', priceSpecification: { '@type': 'PriceSpecification', minPrice: 10, priceCurrency: 'EUR' } },
         availableChannel: { '@type': 'ServiceChannel', serviceUrl: url, servicePhone: PHONE_TEL },
       },
       faqNode(url, c.faq),

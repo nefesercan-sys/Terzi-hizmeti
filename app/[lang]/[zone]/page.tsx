@@ -74,7 +74,8 @@ export async function generateMetadata({ params }: P): Promise<Metadata> {
   const title = base.length + 12 <= 60 ? `${base} | Terzi Can` : base;
   const description = fitDesc(zc.desc(z.name));
   const url = `${SITE}${zoneUrl(lang, zone)}`;
-  const tr = `${SITE}/otele-gelen-terzi-antalya/${zone}`;
+  const sfx = zone === 'antalya' ? '' : `/${zone}`; // 'antalya' = otel ana sayfası
+  const tr = `${SITE}/otele-gelen-terzi-antalya${sfx}`;
   return {
     metadataBase: new URL(SITE),
     title: { absolute: title },
@@ -83,7 +84,7 @@ export async function generateMetadata({ params }: P): Promise<Metadata> {
     alternates: {
       canonical: url,
       languages: {
-        tr, en: `${SITE}/en/hotel-tailor-antalya/${zone}`, ru: `${SITE}/ru/vyezdnoy-portnoy-antalya/${zone}`, de: `${SITE}/de/schneider-service-hotel-antalya/${zone}`,
+        tr, en: `${SITE}/en/hotel-tailor-antalya${sfx}`, ru: `${SITE}/ru/vyezdnoy-portnoy-antalya${sfx}`, de: `${SITE}/de/schneider-service-hotel-antalya${sfx}`,
         ...Object.fromEntries(ILANGS.map((l) => [INTL[l].hreflang, `${SITE}${zoneUrl(l, zone)}`])),
         'x-default': tr,
       },

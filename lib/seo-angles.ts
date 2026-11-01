@@ -49,10 +49,10 @@ export interface AngleCtx {
 }
 
 const SVC: Record<ALang, { free: string; paid: string }> = {
-  tr: { free: 'Konyaaltı\'nda ücretsiz servis', paid: 'Uzak bölgede servis duruma göre' },
-  en: { free: 'Free pick-up in Konyaaltı', paid: 'Pick-up priced by area' },
-  ru: { free: 'Забор из отелей бесплатно', paid: 'Выезд — по району' },
-  de: { free: 'Gratis-Abholung in Konyaaltı', paid: 'Abholung je nach Gebiet' },
+  tr: { free: 'Eve ve otele ücretsiz servis', paid: 'Eve ve otele ücretsiz servis' },
+  en: { free: 'Free pick-up to home and hotel', paid: 'Free pick-up to home and hotel' },
+  ru: { free: 'Бесплатный забор на дом и в отель', paid: 'Бесплатный забор на дом и в отель' },
+  de: { free: 'Gratis-Abholung zu Hause und im Hotel', paid: 'Gratis-Abholung zu Hause und im Hotel' },
 };
 
 type T = { titles: (n: string) => string[]; core: (c: AngleCtx) => string; extra: string; kw: (n: string) => string[] };
@@ -230,7 +230,7 @@ export function angleKeywords(lang: ALang, a: number, n: string): string[] {
 }
 export const svcLine = (lang: ALang, free: boolean) => S(lang, free);
 
-// ── Ücretsiz servis yalnızca Konyaaltı bölgesinde; diğer bölgelerde "bölgeye göre" ──
+// ── Eve ve otele ücretsiz servis her bölgede (UNFREE yalnızca geriye dönük uyumluluk) ──
 type UL = 'tr' | 'en' | 'ru' | 'de';
 const UNFREE: Record<UL, [RegExp, string][]> = {
   tr: [

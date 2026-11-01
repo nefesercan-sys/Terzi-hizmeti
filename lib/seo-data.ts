@@ -31,7 +31,7 @@ export const TR_NEAR_SLUGS = ['konyaalti', 'hurma', 'liman', 'gursu', 'uluc', 'a
 export const HOTEL_SERVICE_FREE = true;
 /** Otel dışı (ev) adreslerde ücretsiz alım-teslim yalnızca bu mahallelerde (TEK kaynak); diğerleri WhatsApp'tan sorulur. */
 export const FREE_SERVICE_SLUGS = ['konyaalti', 'hurma', 'sarisu', 'liman', 'uncali', 'altinkum', 'ogretmenevleri', 'siteler', 'arapsuyu', 'gursu', 'uluc', 'meltem'];
-export const isFreeService = (slug: string): boolean => FREE_SERVICE_SLUGS.includes(slug);
+export const isFreeService = (_slug: string): boolean => true; // Eve ve otele ücretsiz servis: her bölgede (sahibin kararı)
 export const isTrNear = (slug: string): boolean => TR_NEAR_SLUGS.includes(slug);
 // ── Türkçe yakın bölge sayfaları için ek anahtar kelime katmanı ─────────────────────────────
 // Konyaaltı: sahil mahalleleri + günlük arama kalıpları. Diğer yakın bölgeler: dönüşümlü 6 terim (sayfalar birbirinin kopyası olmasın).

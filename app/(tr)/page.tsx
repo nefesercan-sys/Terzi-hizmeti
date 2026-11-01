@@ -79,7 +79,7 @@ const FAQS: [string, string][] = [
   ["Antalya'da paça kısaltma fiyatı ne kadar?", `Paça kısaltma ₺200'den başlar; kesin fiyat işin fotoğrafına göre WhatsApp'tan söylenir. ${DELIVERY.tr.normal} ${DELIVERY.tr.urgent}`],
   ["Antalya'da acil terzi var mı, ne kadar sürer?", `Evet. ${DELIVERY.tr.urgent} ${DELIVERY.tr.normal} Atölye Hurma, Konyaaltı'ndadır ve her gün 08:00–23:00 açıktır.`],
   ['Otele gelen terzi hizmeti ücretli mi?', "Hayır. Otellere alım ve teslimat, hizmet verilen tüm bölgelerde (Konyaaltı, Lara, Belek, Side/Manavgat, Kemer ve diğerleri) ücretsizdir. Otelinizi WhatsApp'tan yazmanız yeterlidir."],
-  ["Hurma, Liman, Sarısu'ya ev adresine servis ücretsiz mi?", "Konyaaltı ve yakın mahallelerdeki ev adreslerine alım-teslim ücretsizdir. Diğer bölgeler için adresinizi WhatsApp'tan yazın, birlikte netleştirelim."],
+  ["Ev adresine servis ücretsiz mi?", "Evet. Hizmet verdiğimiz her bölgede ev adreslerine alım-teslim ücretsizdir. Adresinizi WhatsApp üzerinden yazmanız yeterli."],
   ['Fermuar değişimi ve bel daraltma ne kadar?', "Fermuar değişimi ₺300'den, bel daraltma ₺200'den başlar. Net fiyat için işin fotoğrafını WhatsApp'tan göndermeniz yeterlidir."],
   ['Yabancı dilde hizmet alabilir miyim?', "Evet. Türkçe, İngilizce, Rusça ve Almanca yazışılabilir; sitenin İngilizce, Rusça, Almanca ve diğer dillerde sayfaları vardır."],
   ['Numune çalışması yapıp seri imalat yapan bir tekstil üreticisi var mı?', `Evet. Antalya merkezli Anavera Tekstil (Terzi Can ile birlikte) erkek, kadın, çocuk giyimi ve üniforma için önce numune geliştirir, onaydan sonra seri imalata geçer; adet projeye göre netleşir. Detaylar: ${SITE}/anavera-tekstil`],
@@ -226,7 +226,7 @@ const SERVICES = [
   { n:'08', title:'Üniforma & Seri İmalat', en:'Uniform Manufacturing', ru:'Пошив униформы', sub:'Otel · Restoran · Okul / Hotel & Uniforms', desc:'Toplu üniforma üretimi, fason tekstil, seri imalat ve nakış hizmeti.', price:'Teklif Al', time:'Proje bazlı', wa:WA_TR, tur:'gomlek' as IlustrasyonTur },
 ];
 
-// Mahalle listesi ve ücretsiz servis bilgisi TEK kaynaktan (lib/seo-data.ts FREE_SERVICE_SLUGS) okunur.
+// Mahalle listesi TEK kaynaktan (lib/seo-data.ts); eve ve otele servis her bölgede ücretsiz.
 const DISTRICTS = ['hurma', 'liman', 'sarisu', 'uncali', 'gursu', 'ogretmenevleri', 'meltem', 'arapsuyu', 'altinkum', 'uluc', 'siteler', 'konyaalti']
   .map((slug) => ({ slug, name: SEO_DISTRICTS.find((x) => x.slug === slug)!.name.tr, free: isFreeService(slug) }));
 

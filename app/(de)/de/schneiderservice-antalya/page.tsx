@@ -70,7 +70,7 @@ const STEPS: [string, string][] = [
 const FAQS: [string, string][] = [
   ['Gibt es in Antalya einen Schneider, der Deutsch spricht?', 'Ja. Am einfachsten schreiben Sie uns per WhatsApp.'],
   ['Kommt der Schneider ins Hotel?', 'Ja. Wir besuchen Hotels, zum Beispiel in Belek, Lara, Kemer und Side. Senden Sie Hotelname und Standort per WhatsApp. Details zum Hotelservice: ' + HOTEL_URL],
-  ['Ist der Besuch kostenlos?', 'In Konyaaltı ist der Besuch kostenlos; in anderen Bezirken richtet sich das Entgelt nach der Entfernung. Für weiter entfernte Bezirke klären wir die Einzelheiten vorab per WhatsApp.'],
+  ['Ist der Besuch kostenlos?', 'Ja. Abholung und Lieferung zu Hause und im Hotel sind in allen Gebieten, die wir bedienen, kostenlos.'],
   ['Wie bekomme ich einen Preis, ohne vorbeizukommen?', 'Senden Sie ein Foto des Kleidungsstücks und der gewünschten Arbeit per WhatsApp. Wir nennen Preis und Bearbeitungszeit. Preisliste: ' + PRICE_URL],
   ['Wie schnell ist eine Änderung fertig?', 'Viele Reparaturen und das Kürzen von Hosen sind am nächsten Tag, eilig in 1–2 Stunden fertig. Die genaue Zeit hängt von Arbeit und Auslastung ab und wird per WhatsApp bestätigt.'],
   ['Können Sie ein Brautkleid oder Abendkleid ändern?', 'Ja. Brautkleid- und Abendkleid-Änderungen sind möglich; der Preis hängt vom Aufwand ab. Senden Sie am besten vorab Fotos.'],

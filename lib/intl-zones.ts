@@ -3,7 +3,7 @@
 // Ek turist dilleri (ES/FR/PL/UK/NL/AR) için otel bölgesi derinlik sayfaları: /{dil}/{bölge-slug}.
 // Bölgeler: işletme sahibinin onayladığı Belek, Lara, Güzeloba, Side, Kemer + atölyenin bulunduğu Konyaaltı.
 // Veri: otel adları ve bölge tanımı lib/otel-bolgeleri.ts'ten; mesafe/dakika YAZILMAZ (sitenin kuralı).
-// Ücretsiz alım-teslim yalnızca Konyaaltı; diğer bölgelerde koşullar WhatsApp'tan teyit edilir.
+// Eve ve otele alım-teslim tüm bölgelerde ücretsizdir (sahibin kararı).
 // ============================================================
 import { ILANGS, type ILang } from '@/lib/intl';
 

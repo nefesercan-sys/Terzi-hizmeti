@@ -15,7 +15,7 @@ export const FABRICS_ORDER: Record<FabricsLang, {
     leather: 'Deri ve kot: yalnızca tamir ve tadilat (kot paça kısaltma, deri ceket ve pantolon tamiri, daraltma, kısaltma, fermuar değişimi). Sıfırdan deri ya da kot dikimi yapmıyoruz.',
     abroadH: 'Yurt dışından sipariş nasıl verilir?',
     abroadSteps: ['WhatsApp\'tan modeli ve beden ölçülerinizi gönderin.', 'Dikimi Antalya\'daki atölyemizde yaparız.', 'İstediğiniz ülkeye kargolarız. Ödeme banka havalesiyle, kargo ücretini müşteri öder. Genellikle 1–3 hafta sürer.', 'Beden uymazsa düzeltme yaparız.'],
-    abroadNote: 'Otelde kalıyorsanız ölçünüzü otelinizde alıp işi bitince otele teslim ediyoruz. Konyaaltı mahallelerinde alım ve teslim ücretsiz, daha uzak bölgeler için WhatsApp\'tan görüşülür. Her gün 08:00–23:00.',
+    abroadNote: 'Otelde kalıyorsanız ölçünüzü otelinizde alıp işi bitince otele teslim ediyoruz. Eve ve otele alım-teslim tüm bölgelerde ücretsizdir. Her gün 08:00–23:00.',
   },
   en: {
     h: 'Fabrics and orders from abroad',
@@ -33,7 +33,7 @@ export const FABRICS_ORDER: Record<FabricsLang, {
     leather: 'Кожа и джинсы: только ремонт и подгонка (подшив джинсов, ремонт и ушивание кожаных курток и брюк, укорачивание, замена молний). Новые вещи из кожи или джинсовой ткани мы не шьём.',
     abroadH: 'Как заказать из-за границы',
     abroadSteps: ['Пришлите в WhatsApp модель и свои мерки.', 'Мы шьём вещь в нашей мастерской в Анталье.', 'Отправляем в выбранную вами страну. Оплата банковским переводом, доставку оплачивает клиент. Обычно это занимает 1–3 недели.', 'Если вещь не подошла, мы её исправим.'],
-    abroadNote: 'Если вы живёте в отеле, мы снимем мерки в отеле и вернём готовую вещь туда же. В районах Коньяалты забор и доставка бесплатны, для более дальних районов договариваемся в WhatsApp. Ежедневно 08:00–23:00.',
+    abroadNote: 'Если вы живёте в отеле, мы снимем мерки в отеле и вернём готовую вещь туда же. Забор и доставка бесплатны во всех районах. Ежедневно 08:00–23:00.',
   },
   de: {
     h: 'Stoffe und Bestellungen aus dem Ausland',

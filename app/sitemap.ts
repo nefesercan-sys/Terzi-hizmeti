@@ -8,6 +8,7 @@ import { ZONE_SLUGS, zoneUrl } from '@/lib/intl-zones';
 import { U_IDS, UL_LIST, uUrl, uLanguages } from '@/lib/uretim';
 import { svcUrl } from '@/lib/intl-services';
 import { fiyatUrl } from '@/lib/intl-fiyat';
+import { iletisimUrl } from '@/lib/intl-iletisim';
 import { HIZMET_IDS, hizmetUrl, hizmetLanguages, sixForService } from '@/lib/intl-hizmet';
 import { TOPIC_IDS, topicUrl, topicLanguages, sixAlt } from '@/lib/intl-topics';
 import { PLANGS, promoUrl, promoAlternates, PROMO_LAST_UPDATE, PROMO_FOTOLAR } from '@/lib/promosyon-tekstil';
@@ -156,6 +157,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const svcSayfalari: MetadataRoute.Sitemap = ILANGS.map((l) => ({ url: `${SITE}${svcUrl(l)}`, lastModified: new Date(LAST_UPDATE), changeFrequency: 'monthly' as const, priority: 0.75, alternates: svcAlt }));
   const fiyatAlt = { languages: Object.fromEntries(ILANGS.map((x) => [INTL[x].hreflang, `${SITE}${fiyatUrl(x)}`])) };
   const fiyatSayfalari: MetadataRoute.Sitemap = ILANGS.map((l) => ({ url: `${SITE}${fiyatUrl(l)}`, lastModified: new Date(LAST_UPDATE), changeFrequency: 'monthly' as const, priority: 0.75, alternates: fiyatAlt }));
+  const iletAlt = { languages: Object.fromEntries(ILANGS.map((x) => [INTL[x].hreflang, `${SITE}${iletisimUrl(x)}`])) };
+  const iletSayfalari: MetadataRoute.Sitemap = ILANGS.map((l) => ({ url: `${SITE}${iletisimUrl(l)}`, lastModified: new Date(LAST_UPDATE), changeFrequency: 'monthly' as const, priority: 0.7, alternates: iletAlt }));
 
   // Promosyon / reklam tekstili ve baskılı bez çanta imalatı (10 dil, hreflang karşılıklı; x-default: EN)
   const promoSayfalari: MetadataRoute.Sitemap = PLANGS.map((l) => ({
@@ -175,7 +178,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const uretimSayfalari: MetadataRoute.Sitemap = U_IDS.flatMap((u) => UL_LIST.map((l) => ({
     url: `${SITE}${uUrl(l, u)}`, lastModified: new Date(LAST_UPDATE), changeFrequency: 'monthly' as const, priority: 0.78, alternates: { languages: uLanguages(u) },
   })));
-  const hepsi = [...sabitSayfalar, ...otelSayfalari, ...seoSayfalari, ...turistSayfalari, ...iletisimSayfalari, ...intlSayfalari, ...zoneSayfalari, ...svcSayfalari, ...fiyatSayfalari, ...konuSayfalari, ...hizmetSayfalari, ...uretimSayfalari, ...promoSayfalari];
+  const hepsi = [...sabitSayfalar, ...otelSayfalari, ...seoSayfalari, ...turistSayfalari, ...iletisimSayfalari, ...intlSayfalari, ...zoneSayfalari, ...svcSayfalari, ...fiyatSayfalari, ...iletSayfalari, ...konuSayfalari, ...hizmetSayfalari, ...uretimSayfalari, ...promoSayfalari];
   for (const e of hepsi) {
     const ilk = gorulen.get(e.url);
     if (!ilk) gorulen.set(e.url, e);

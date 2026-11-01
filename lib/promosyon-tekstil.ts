@@ -11,6 +11,7 @@
 // Route'lar: tr/en/de/ru → kendi route grupları; es/fr/pl/uk/nl/ar → app/[lang]/[zone].
 // ============================================================
 import type { Metadata } from 'next';
+import { UDATA } from '@/lib/uretim';
 import { PLANGS, PROMO_PATH, PROMO_NAME, type PLang } from '@/lib/promosyon-paths';
 
 export { PLANGS, PROMO_PATH, PROMO_NAME };
@@ -581,6 +582,12 @@ export const COPY: Record<PLang, PCopy> = {
 };
 
 // ── Metadata ────────────────────────────────────────────────
+// Net cevap: yurt dışı gönderim sorusu (üretim sayfalarıyla aynı, doğrulanmış bilgi). Fiyat/adet/süre uydurulmaz.
+for (const l of PLANGS) {
+  const q = UDATA[l].gonderim.faq[0];
+  if (!COPY[l].faq.some((x) => x[0] === q[0])) COPY[l].faq = [...COPY[l].faq, q];
+}
+
 export function buildPromoMetadata(lang: PLang): Metadata {
   const c = COPY[lang];
   const url = promoUrl(lang);

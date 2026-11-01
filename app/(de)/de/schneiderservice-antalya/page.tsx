@@ -48,13 +48,13 @@ export const metadata: Metadata = {
 
 const SERVICES: { title: string; desc: string; rows: [string, string][] }[] = [
   { title: 'Änderungen', desc: 'Passform-Anpassungen, damit Kleidung genau sitzt.',
-    rows: [['Hose kürzen', 'ab ₺200'], ['Taille enger machen', 'ab ₺200'], ['Ärmel kürzen', 'ab ₺200'], ['Kleid / Jacke anpassen', 'ab ₺200'], ['Brautkleid und Abendkleid', 'ab ₺800']] },
+    rows: [['Hose kürzen', ''], ['Taille enger machen', ''], ['Ärmel kürzen', ''], ['Kleid / Jacke anpassen', ''], ['Brautkleid und Abendkleid', '']] },
   { title: 'Reparatur', desc: 'Reißverschluss, Risse, Knöpfe und Futter.',
-    rows: [['Reißverschluss (Hose)', 'ab ₺300'], ['Reißverschluss (Mantel)', 'ab ₺300'], ['Knopf, Haken', 'ab ₺60']] },
+    rows: [['Reißverschluss (Hose)', ''], ['Reißverschluss (Mantel)', ''], ['Knopf, Haken', '']] },
   { title: 'Maßanfertigung', desc: 'Kleidung nach Ihren Maßen, auch aus Leinen und Baumwolle.',
-    rows: [['Herrenhose', 'ab ₺400'], ['Damenkleid', 'ab ₺800'], ['Abendkleid', 'ab ₺900'], ['Kinderkleidung', 'ab ₺250']] },
+    rows: [['Herrenhose', ''], ['Damenkleid', ''], ['Abendkleid', ''], ['Kinderkleidung', '']] },
   { title: 'Bügeln und Reinigung', desc: 'Dampfbügeln und chemische Reinigung.',
-    rows: [['Bügeln (pro Stück)', 'ab ₺80'], ['Reinigung (Kleid)', 'ab ₺300'], ['Reinigung (Mantel)', 'ab ₺500']] },
+    rows: [['Bügeln (pro Stück)', ''], ['Reinigung (Kleid)', ''], ['Reinigung (Mantel)', '']] },
 ];
 
 const FREE_DISTRICTS = ['Konyaaltı'];
@@ -73,9 +73,9 @@ const FAQS: [string, string][] = [
   ['Ist der Besuch kostenlos?', 'In Konyaaltı ist der Besuch kostenlos; in anderen Bezirken richtet sich das Entgelt nach der Entfernung. Für weiter entfernte Bezirke klären wir die Einzelheiten vorab per WhatsApp.'],
   ['Wie bekomme ich einen Preis, ohne vorbeizukommen?', 'Senden Sie ein Foto des Kleidungsstücks und der gewünschten Arbeit per WhatsApp. Wir nennen Preis und Bearbeitungszeit. Preisliste: ' + PRICE_URL],
   ['Wie schnell ist eine Änderung fertig?', 'Viele Reparaturen und das Kürzen von Hosen sind am nächsten Tag, eilig in 1–2 Stunden fertig. Die genaue Zeit hängt von Arbeit und Auslastung ab und wird per WhatsApp bestätigt.'],
-  ['Können Sie ein Brautkleid oder Abendkleid ändern?', 'Ja. Brautkleid- und Abendkleid-Änderungen gibt es ab ₺800, je nach Aufwand. Senden Sie am besten vorab Fotos.'],
-  ['Wo kann ich in Antalya in meiner Nähe eine Hose kürzen lassen?', 'Bei Terzi Can in Hurma, Konyaaltı, täglich von 08:00 bis 23:00 geöffnet. Hosen und Jeans kürzen ab ₺200, meist am nächsten Tag, eilig in 1–2 Stunden. WhatsApp: ' + PHONE],
-  ['Was kostet Kürzen und Reißverschluss wechseln in Antalya?', 'Kürzen ab ₺200, Taille enger machen ab ₺200, Reißverschluss wechseln ab ₺300, Brautkleid ändern ab ₺800 (Preise 2026). Den genauen Preis nennen wir nach einem Foto per WhatsApp.'],
+  ['Können Sie ein Brautkleid oder Abendkleid ändern?', 'Ja. Brautkleid- und Abendkleid-Änderungen sind möglich; der Preis hängt vom Aufwand ab. Senden Sie am besten vorab Fotos.'],
+  ['Wo kann ich in Antalya in meiner Nähe eine Hose kürzen lassen?', 'Bei Terzi Can in Hurma, Konyaaltı, täglich von 08:00 bis 23:00 geöffnet. Hosen und Jeans kürzen, meist am nächsten Tag, eilig in 1–2 Stunden. WhatsApp: ' + PHONE],
+  ['Was kostet Kürzen und Reißverschluss wechseln in Antalya?', 'Der Preis hängt von Kleidungsstück und Arbeit ab: Kürzen, Taille enger machen, Reißverschluss wechseln, Abend- und Brautkleid ändern. Den genauen Preis nennen wir nach einem Foto per WhatsApp.'],
   ['Ändern Sie auch Jacken, Mäntel, Hemden, Röcke und Shorts?', 'Ja. Wir ändern und reparieren Jacken, Mäntel, Hemden, Röcke, Shorts, Kleider und Hosen für Damen und Herren. Senden Sie ein Foto per WhatsApp, wir nennen Preis und Dauer.'],
   ['Ich bin nur wenige Tage im Hotel. Reicht die Zeit?', 'Ja. Kürzen und Reparaturen sind am nächsten Tag oder am nächsten Tag fertig. Wir holen die Kleidung im Hotel ab und bringen sie zurück (für Hotels kostenlos).'],
   ['Haben Sie am Wochenende geöffnet?', 'Ja, die Werkstatt ist an sieben Tagen in der Woche geöffnet. Die aktuellen Zeiten stehen bei Google Maps.'],
@@ -140,8 +140,8 @@ export default function SchneiderserviceAntalya() {
         </section>
 
         <section style={{ ...wrap, padding: '2.5rem 1.25rem 0' }}>
-          <h2 style={{ fontSize: '1.5rem', fontWeight: 800, margin: '0 0 1rem' }}>Leistungen und Richtpreise</h2>
-          <p style={{ margin: '0 0 1.2rem', opacity: .8, fontSize: '.92rem' }}>Alle Preise sind Ab-Preise und hängen von Stoff und Aufwand ab. Stand: Oktober 2026.</p>
+          <h2 style={{ fontSize: '1.5rem', fontWeight: 800, margin: '0 0 1rem' }}>Leistungen</h2>
+          <p style={{ margin: '0 0 1.2rem', opacity: .8, fontSize: '.92rem' }}>Der Preis hängt von Stoff und Aufwand ab; wir nennen ihn per WhatsApp anhand eines Fotos.</p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(240px,1fr))', gap: '1rem' }}>
             {SERVICES.map((s) => (
               <div key={s.title} style={card}>
@@ -150,7 +150,7 @@ export default function SchneiderserviceAntalya() {
                 <ul style={{ listStyle: 'none', margin: 0, padding: 0, fontSize: '.92rem' }}>
                   {s.rows.map(([n, p]) => (
                     <li key={n} style={{ display: 'flex', justifyContent: 'space-between', gap: '.6rem', padding: '.3rem 0', borderTop: '1px solid rgba(128,128,128,.2)' }}>
-                      <span>{n}</span><strong style={{ whiteSpace: 'nowrap' }}>{p}</strong>
+                      <span>{n}</span>{p && <strong style={{ whiteSpace: 'nowrap' }}>{p}</strong>}
                     </li>
                   ))}
                 </ul>

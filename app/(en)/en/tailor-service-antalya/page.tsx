@@ -45,8 +45,8 @@ export const metadata: Metadata = {
 
 // AI/özet aramalarında en çok sorulan sorular (kısa, doğrudan cevaplar)
 const EXTRA_FAQS: [string, string][] = [
-  ['Where can I get trousers hemmed near me in Antalya?', 'At Terzi Can in Hurma, Konyaaltı, open every day 08:00–23:00. Hemming (trousers, jeans) starts at ₺200 and is ready the next day (urgent jobs 1–2 hours). WhatsApp: ' + PHONE],
-  ['How much does hemming and zipper replacement cost in Antalya?', 'Hemming from ₺200, waist taking-in from ₺200, zipper replacement from ₺300, wedding dress alteration from ₺800 (2026 prices). Send a photo on WhatsApp for an exact quote.'],
+  ['Where can I get trousers hemmed near me in Antalya?', 'At Terzi Can in Hurma, Konyaaltı, open every day 08:00–23:00. Hemming (trousers, jeans) is ready the next day (urgent jobs 1–2 hours). WhatsApp: ' + PHONE],
+  ['How much does hemming and zipper replacement cost in Antalya?', 'The price depends on the garment and the work: hemming, waist taking-in, zipper replacement, evening and wedding dress alterations. Send a photo on WhatsApp for an exact quote.'],
   ['Can you alter a jacket, coat, shirt, skirt or shorts?', 'Yes. We alter and repair jackets, coats, shirts, skirts, shorts, dresses and trousers for men and women. Send a photo of the garment on WhatsApp and we will quote the price and time.'],
   ['I am a hotel guest staying only a few days. Is that enough time?', 'Yes. Most hemming and repairs are ready the next day (urgent jobs 1–2 hours), and we can pick up and return clothes to your hotel (free for hotels).'],
   ['What are your opening hours and how do I contact you?', 'Every day 08:00–23:00. Call or WhatsApp ' + PHONE + '. The workshop is in Hurma, Konyaaltı, Antalya.'],
@@ -125,13 +125,13 @@ const SERVICES = [
 
 const REPAIR_CATEGORIES = [
   { icon: '✂️', title: 'Tailoring', keyword: 'custom tailoring Antalya', desc: 'Made-from-scratch garments to your exact measurements.',
-    rows: [["Men's Trousers", '₺400+'], ["Women's Dress", '₺800+'], ['Evening Gown', '₺900+'], ["Children's Clothing", '₺250+']] as [string, string][] },
+    rows: [["Men's Trousers", ''], ["Women's Dress", ''], ['Evening Gown', ''], ["Children's Clothing", '']] as [string, string][] },
   { icon: '🔧', title: 'Repair', keyword: 'clothing repair Antalya', desc: 'Zippers, tears, buttons — everyday fixes.',
-    rows: [['Zipper Replacement (Trousers)', '₺300+'], ['Zipper Replacement (Coat)', '₺300+'], ['Button, Hook Repair', '₺60+'], ['Lining Replacement', '₺300+']] as [string, string][] },
+    rows: [['Zipper Replacement (Trousers)', ''], ['Zipper Replacement (Coat)', ''], ['Button, Hook Repair', ''], ['Lining Replacement', '']] as [string, string][] },
   { icon: '📏', title: 'Alterations', keyword: 'hemming Antalya', desc: 'Precise fit adjustments to your body.',
-    rows: [['Hemming', '₺200+'], ['Waist Taking In', '₺200+'], ['Sleeve Shortening', '₺200+'], ['Dress / Jacket Resizing', '₺200+'], ['Wedding & Evening Dress', '₺800+']] as [string, string][] },
+    rows: [['Hemming', ''], ['Waist Taking In', ''], ['Sleeve Shortening', ''], ['Dress / Jacket Resizing', ''], ['Wedding & Evening Dress', '']] as [string, string][] },
   { icon: '🧺', title: 'Ironing & Dry Cleaning', keyword: 'ironing dry cleaning Antalya', desc: 'Professional steam ironing and dry cleaning.',
-    rows: [['Ironing (per item)', '₺80+'], ['Dry Cleaning (Dress)', '₺300+'], ['Dry Cleaning (Coat)', '₺500+'], ['Laundry & Ironing (per kg)', '₺80+/kg']] as [string, string][] },
+    rows: [['Ironing (per item)', ''], ['Dry Cleaning (Dress)', ''], ['Dry Cleaning (Coat)', ''], ['Laundry & Ironing (per kg)', '']] as [string, string][] },
 ];
 
 const FAQS: [string, string][] = [
@@ -258,9 +258,9 @@ export default function TailorServiceAntalyaPage() {
           <section className="sec" id="fiyatlar" aria-labelledby="price-h">
             <div className="ctr">
               <div className="sec-head">
-                <span className="eyebrow">₺ Prices 2026</span>
-                <h2 className="sec-h" id="price-h">Tailoring, Repair, Alterations & Ironing Prices</h2>
-                <p className="sec-sub">Send a photo on WhatsApp for an exact quote.</p>
+                <span className="eyebrow">Prices</span>
+                <h2 className="sec-h" id="price-h">Tailoring, Repair, Alterations & Ironing</h2>
+                <p className="sec-sub">Send a photo on WhatsApp and we quote the exact price.</p>
               </div>
               <div className="price-grid">
                 {REPAIR_CATEGORIES.map((cat) => (
@@ -273,13 +273,13 @@ export default function TailorServiceAntalyaPage() {
                     <table className="price-table" aria-label={cat.title}>
                       <caption className="visually-hidden">{cat.title} price list</caption>
                       <thead><tr><th scope="col" className="visually-hidden">Service</th><th scope="col" className="visually-hidden">Price</th></tr></thead>
-                      <tbody>{cat.rows.map((row) => (<tr key={row[0]}><td>{row[0]}</td><td>{row[1]}</td></tr>))}</tbody>
+                      <tbody>{cat.rows.map((row) => (<tr key={row[0]}><td colSpan={2}>{row[0]}</td></tr>))}</tbody>
                     </table>
                   </article>
                 ))}
               </div>
               <p style={{ fontSize: '.76rem', color: 'rgba(255,255,255,.4)', marginTop: '1rem', fontStyle: 'italic' }}>
-                Prices are starting prices and may vary by fabric and workmanship. VAT included.
+                The price depends on the fabric and the work; we confirm it on WhatsApp before we start.
               </p>
               <div style={{ textAlign: 'center', marginTop: '1.8rem' }}>
                 <a href={WA('Hello, I would like to know your tailoring/repair/ironing prices.')} target="_blank" rel="noopener noreferrer" className="btn-primary">

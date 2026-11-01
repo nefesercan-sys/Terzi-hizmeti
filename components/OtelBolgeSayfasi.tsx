@@ -47,7 +47,7 @@ const T: Record<Lang, any> = {
       { icon: '📏', tr: 'Alterations', en: 'Hemming, taking in', desc: 'Precise fit adjustments so clothing sits exactly right.', items: ['Hemming', 'Waist Taking In', 'Sleeve Shortening'] },
       { icon: '🧺', tr: 'Ironing & Dry Cleaning', en: 'Steam press, dry cleaning', desc: 'Professional steam ironing and dry cleaning, picked up and delivered.', items: ['Ironing', 'Dry Cleaning'] },
     ],
-    priceEyebrow: '₺ Prices', priceH: 'Prices', priceSub: 'Hotel pick-up and delivery is free — you only pay for the work.',
+    priceEyebrow: 'Pricing', priceH: 'Prices', priceSub: 'Hotel pick-up and delivery is free — you only pay for the work.',
     priceRows: [['Hotel Visit', 'FREE'], ['Hemming', (P.hem)], ['Zipper Replacement', (P.zip)], ['Dress / Suit Alteration', (P.alter)], ['Wedding Dress Alteration', (P.wedding)], ['Ironing (per item)', (P.iron)], ['Dry Cleaning', (P.dry)]],
     procEyebrow: 'Process', procH: 'How It Works',
     steps: [
@@ -83,7 +83,7 @@ const T: Record<Lang, any> = {
       { icon: '📏', tr: 'Подгонка', en: 'Укорачивание, заужение', desc: 'Точная подгонка по фигуре.', items: ['Укорачивание', 'Заужение талии', 'Укорачивание рукавов'] },
       { icon: '🧺', tr: 'Глажка и химчистка', en: 'Паровая глажка, химчистка', desc: 'Профессиональная глажка и химчистка с забором и доставкой.', items: ['Глажка', 'Химчистка'] },
     ],
-    priceEyebrow: '₺ Цены', priceH: 'Цены', priceSub: 'Забор и доставка в отель бесплатны — вы платите только за работу.',
+    priceEyebrow: 'Стоимость', priceH: 'Цены', priceSub: 'Забор и доставка в отель бесплатны — вы платите только за работу.',
     priceRows: [['Выезд в отель', 'БЕСПЛАТНО'], ['Укорачивание', ('от ' + P.hem.replace('+', ''))], ['Замена молнии', ('от ' + P.zip.replace('+', ''))], ['Подгонка платья/костюма', ('от ' + P.alter.replace('+', ''))], ['Подгонка свадебного платья', ('от ' + P.wedding.replace('+', ''))], ['Глажка (за вещь)', ('от ' + P.iron.replace('+', ''))], ['Химчистка', ('от ' + P.dry.replace('+', ''))]],
     procEyebrow: 'Процесс', procH: 'Как мы работаем',
     steps: [
@@ -119,7 +119,7 @@ const T: Record<Lang, any> = {
       { icon: '📏', tr: 'Änderungen', en: 'Kürzen, enger machen', desc: 'Präzise Passform-Anpassungen für perfekten Sitz.', items: ['Kürzen', 'Taille enger machen', 'Ärmel kürzen'] },
       { icon: '🧺', tr: 'Bügelservice & Reinigung', en: 'Dampfbügeln, Reinigung', desc: 'Professionelles Bügeln und chemische Reinigung mit Abholung und Lieferung.', items: ['Bügeln', 'Chemische Reinigung'] },
     ],
-    priceEyebrow: '₺ Preise', priceH: 'Preise', priceSub: 'Abholung und Lieferung im Hotel sind kostenlos — Sie zahlen nur die Arbeit.',
+    priceEyebrow: 'Kosten', priceH: 'Preise', priceSub: 'Abholung und Lieferung im Hotel sind kostenlos — Sie zahlen nur die Arbeit.',
     priceRows: [['Hotelbesuch', 'KOSTENLOS'], ['Kürzen', ('ab ' + P.hem.replace('+', ''))], ['Reißverschluss ersetzen', ('ab ' + P.zip.replace('+', ''))], ['Kleid-/Anzugänderung', ('ab ' + P.alter.replace('+', ''))], ['Brautkleid ändern', ('ab ' + P.wedding.replace('+', ''))], ['Bügeln (pro Stück)', ('ab ' + P.iron.replace('+', ''))], ['Chemische Reinigung', ('ab ' + P.dry.replace('+', ''))]],
     procEyebrow: 'Ablauf', procH: 'So funktioniert es',
     steps: [

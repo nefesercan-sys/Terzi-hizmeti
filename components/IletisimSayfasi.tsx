@@ -118,7 +118,7 @@ const T = {
     faq: [
       ['What is the phone number of Terzi Can?', `Our phone and WhatsApp number is ${PHONE}. You can call or message us on WhatsApp.`],
       ['Are you open on Sunday?', 'Yes. Terzi Can is open 7 days a week, including Saturday and Sunday, from 08:00 to 23:00.'],
-      ['How do I get a price?', 'Send a photo of the garment on WhatsApp. Starting prices: hemming from ₺200, zipper replacement from ₺300, evening dress alterations from ₺800, wedding gown alterations from ₺800.'],
+      ['How do I get a price?', 'Send a photo of the garment on WhatsApp. We give the exact price and time from the photo.'],
       ['Do you pick up from hotels or homes?', 'Yes, we offer free pick-up and delivery to hotels and homes in Konyaaltı. For farther areas, pick-up is arranged on WhatsApp.'],
       ['Where is your workshop?', 'Hurma Mahallesi, 07130 Konyaaltı / Antalya. Get directions on Google Maps.'],
       ['Which languages do you speak?', 'English, Turkish, Russian and German.'],
@@ -162,7 +162,7 @@ const T = {
     faq: [
       ['Какой телефон у Terzi Can?', `Телефон и WhatsApp: ${PHONE}. Можно позвонить или написать в WhatsApp.`],
       ['Вы работаете в воскресенье?', 'Да. Terzi Can работает 7 дней в неделю, включая субботу и воскресенье, с 08:00 до 23:00.'],
-      ['Как узнать цену?', 'Пришлите фото вещи в WhatsApp. Цены от: подшив брюк от ₺200, замена молнии от ₺300, переделка вечернего платья от ₺800, свадебного платья от ₺800.'],
+      ['Как узнать цену?', 'Пришлите фото вещи в WhatsApp. Назовём точную цену и срок по фото.'],
       ['Вы забираете вещи из отеля или с дома?', 'Да, в Коньяалты забор и доставка в отели и на дом бесплатны. Для дальних районов забор согласуется в WhatsApp.'],
       ['Где находится мастерская?', 'Hurma Mahallesi, 07130 Коньяалты / Анталья. Маршрут — в Google Maps.'],
       ['На каких языках вы обслуживаете?', 'На русском, турецком, английском и немецком.'],
@@ -206,7 +206,7 @@ const T = {
     faq: [
       ['Wie lautet die Telefonnummer von Terzi Can?', `Telefon und WhatsApp: ${PHONE}. Sie können anrufen oder per WhatsApp schreiben.`],
       ['Haben Sie sonntags geöffnet?', 'Ja. Terzi Can ist 7 Tage die Woche, auch samstags und sonntags, von 08:00 bis 23:00 Uhr geöffnet.'],
-      ['Wie erfahre ich den Preis?', 'Schicken Sie ein Foto des Kleidungsstücks per WhatsApp. Ab-Preise: Hose kürzen ab ₺200, Reißverschluss ersetzen ab ₺300, Abendkleid ändern ab ₺800, Brautkleid ändern ab ₺800.'],
+      ['Wie erfahre ich den Preis?', 'Schicken Sie ein Foto des Kleidungsstücks per WhatsApp. Wir nennen Ihnen Preis und Dauer anhand des Fotos.'],
       ['Holen Sie im Hotel oder zu Hause ab?', 'Ja, in Konyaaltı holen wir kostenlos im Hotel oder zu Hause ab und liefern zurück. Für weiter entfernte Gebiete wird die Abholung per WhatsApp geplant.'],
       ['Wo ist Ihre Werkstatt?', 'Hurma Mahallesi, 07130 Konyaaltı / Antalya. Die Route finden Sie bei Google Maps.'],
       ['Welche Sprachen sprechen Sie?', 'Schreiben Sie uns per WhatsApp in Ihrer Sprache.'],

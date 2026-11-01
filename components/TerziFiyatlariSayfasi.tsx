@@ -6,6 +6,7 @@
 // böylece 4 dilde fiyat tutarsızlığı olması mümkün olmaz.
 
 import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
+import { tryText, eurText } from '@/lib/facts';
 export type FLang = 'tr' | 'en' | 'de' | 'ru';
 
 export const SITE = 'https://terzihizmeti.com.tr';
@@ -15,19 +16,19 @@ export const MAPS = 'https://www.google.com/maps?cid=6436895271281342624';
 const WA = (m: string) => `https://wa.me/905318986418?text=${encodeURIComponent(m)}`;
 
 export const PRICE_ROWS: { icon: string; rows: string[] }[] = [
-  { "icon": "🔧", "rows": ["₺300+", "₺300+", "₺60+", "₺300+"] },
-  { "icon": "📏", "rows": ["₺200+", "₺200+", "₺200+", "₺200+", "₺800+"] },
-  { "icon": "✂️", "rows": ["₺400+", "₺800+", "₺900+", "₺250+"] },
-  { "icon": "🧺", "rows": ["₺80+", "₺300+", "₺500+", "₺80+/kg"] }
+  { icon: '🔧', rows: [tryText('zipperPants'), tryText('zipperCoat'), tryText('button'), tryText('lining')] },
+  { icon: '📏', rows: [tryText('hem'), tryText('waist'), tryText('sleeve'), tryText('dressAdjust'), tryText('eveningWeddingAlter')] },
+  { icon: '✂️', rows: [tryText('skirtPantsSew'), tryText('dressSew'), tryText('groomSuit'), tryText('kidsSew')] },
+  { icon: '🧺', rows: ['₺80+', '₺300+', '₺500+', '₺80+/kg'] },
 ];
 
 // Yabancı dillerde fiyat EURO ve "başlangıç" fiyatıdır (sahibinin verdiği liste); fiyatı verilmeyen kalemler "fotoğrafa göre".
 // null = fotoğrafa göre. Satır sırası PRICE_ROWS ile birebir aynıdır.
 const FOREIGN_BY_PHOTO: Record<'en' | 'de' | 'ru', string> = { en: 'By photo', de: 'Per Foto', ru: 'По фото' };
 const EUR_ROWS: { icon: string; rows: (string | null)[] }[] = [
-  { icon: '🔧', rows: ['€20+', '€15+', '€10+', '€10+'] },
-  { icon: '📏', rows: ['€10+', '€10+', '€10+', '€10+', null] },
-  { icon: '✂️', rows: [null, null, null, null] },
+  { icon: '🔧', rows: [eurText('zipperPants'), eurText('zipperCoat'), eurText('button'), eurText('lining')] },
+  { icon: '📏', rows: [eurText('hem'), eurText('waist'), eurText('sleeve'), eurText('dressAdjust'), eurText('eveningWeddingAlter')] },
+  { icon: '✂️', rows: [eurText('skirtPantsSew'), eurText('dressSew'), eurText('groomSuit'), eurText('kidsSew')] },
   { icon: '🧺', rows: [null, null, null, null] },
 ];
 export const FOREIGN_NOTE: Record<'en' | 'de' | 'ru', string> = {
@@ -151,9 +152,9 @@ export const FT: Record<FLang, FiyatText> = {
         "Gelinlik ve abiye tadilatı"
       ],
       [
-        "Erkek pantolon",
+        "Etek / pantolon",
         "Kadın elbise",
-        "Abiye",
+        "Damatlık",
         "Çocuk giyim"
       ],
       [
@@ -247,7 +248,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Kendime elbise diktirmek istiyorum, nasıl ilerliyor?",
-        "Beğendiğiniz modelin fotoğrafını WhatsApp'tan gönderirsiniz. Ölçü alınır, kumaş ve model netleşir, gerekirse prova yapılır, sonra teslim edilir. Kadın elbise dikimi ₺800'den, abiye ₺900'den başlar; fiyat kumaş ve işçiliğe göre netleşir."
+        "Beğendiğiniz modelin fotoğrafını WhatsApp'tan gönderirsiniz. Ölçü alınır, kumaş ve model netleşir, gerekirse prova yapılır, sonra teslim edilir. Kadın elbise dikimi ₺800'den, etek ve pantolon dikimi ₺1000'den, çocuk kıyafeti ₺1000'den, damatlık ₺20.000'den başlar; fiyat kumaş ve işçiliğe göre netleşir."
       ],
       [
         "Fermuar değişimi yapan, hafta sonu ve pazar günü açık bir terzi var mı?",
@@ -255,7 +256,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Adrese veya otele gelen terzi var mı?",
-        "Evet. Ölçü ve teslim adresinizde ya da otelinizde yapılır, iş atölyede tamamlanır. Otellere ziyaret hizmet verilen tüm bölgelerde ücretsizdir; ev adreslerinde ücretsiz servis Konyaaltı ve yakın mahallelerde geçerlidir, diğer bölgeler WhatsApp'tan sorulur. Ayrıntı: /otele-gelen-terzi-antalya"
+        "Evet. Ölçü ve teslim adresinizde ya da otelinizde yapılır, iş atölyede tamamlanır. Eve ve otele ziyaret hizmet verilen tüm bölgelerde ücretsizdir. Ayrıntı: /otele-gelen-terzi-antalya"
       ],
       [
         "Terzi fiyatlarını nasıl öğrenirim?",
@@ -267,7 +268,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Bana yakın terzi nerede?",
-        "Atölye Konyaaltı'ndadır; Hurma, Liman, Sarısu, Uncalı ve Gürsu'na ücretsiz servis yapılır. Konum: Google Haritalar'da \"TERZİ Can Antalya Tailor Service\". Antalya'nın diğer bölgelerine de randevuyla gidilir."
+        "Atölye Konyaaltı'ndadır; Eve ve otele her bölgede ücretsiz servis yapılır. Konum: Google Haritalar'da \"TERZİ Can Antalya Tailor Service\"."
       ],
       [
         "Pamuklu, doğal kumaştan dikim yapıyor musunuz?",
@@ -368,9 +369,9 @@ export const FT: Record<FLang, FiyatText> = {
         "Wedding & evening dress alteration"
       ],
       [
-        "Men's trousers",
+        "Skirt / trousers",
         "Women's dress",
-        "Evening gown",
+        "Groom suit",
         "Children's clothing"
       ],
       [
@@ -426,7 +427,7 @@ export const FT: Record<FLang, FiyatText> = {
       {
         "q": "A tailor who comes to my hotel or address",
         "a": "We take measurements at your hotel or address, do the work in our workshop and deliver it back.",
-        "price": "Free in Konyaaltı; other areas on request",
+        "price": "0",
         "href": "/en/hotel-tailor-antalya",
         "cta": "Hotel tailor"
       },
@@ -472,7 +473,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Does a tailor come to my hotel or address?",
-        "Yes. Measurements and delivery are done at your hotel or address; the work is completed in the workshop. Hotel visits are free in every area we serve; home addresses are free in Konyaaltı and nearby neighbourhoods, other areas by appointment. Details: /en/hotel-tailor-antalya"
+        "Yes. Measurements and delivery are done at your hotel or address; the work is completed in the workshop. Pick-up and delivery to homes and hotels is free in every area we serve. Details: /en/hotel-tailor-antalya"
       ],
       [
         "How do I find out the price?",
@@ -484,7 +485,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Where is the nearest tailor?",
-        "The workshop is in Konyaaltı, with free service to Hurma, Liman, Sarısu, Uncalı and Gürsu. Find it on Google Maps as \"TERZİ Can Antalya Tailor Service\". Other Antalya areas by appointment."
+        "The workshop is in Konyaaltı, with free pick-up and delivery to homes and hotels in every area we serve. Find it on Google Maps as \"TERZİ Can Antalya Tailor Service\"."
       ],
       [
         "Do you sew in natural cotton or linen?",
@@ -583,9 +584,9 @@ export const FT: Record<FLang, FiyatText> = {
         "Braut- & Abendkleid ändern"
       ],
       [
-        "Herrenhose",
+        "Rock / Hose",
         "Damenkleid",
-        "Abendkleid",
+        "Herrenanzug (Bräutigam)",
         "Kinderkleidung"
       ],
       [
@@ -687,7 +688,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Kommt ein Schneider in mein Hotel oder an meine Adresse?",
-        "Ja. Maßnehmen und Lieferung erfolgen in Ihrem Hotel oder an Ihrer Adresse; die Arbeit wird in der Werkstatt erledigt. In Konyaaltı ist der Besuch kostenlos; in anderen Bezirken richtet sich das Entgelt nach der Entfernung (nach Terminvereinbarung). Details: /de/schneider-service-hotel-antalya"
+        "Ja. Maßnehmen und Lieferung erfolgen in Ihrem Hotel oder an Ihrer Adresse; die Arbeit wird in der Werkstatt erledigt. Abholung und Lieferung zu Hause und im Hotel sind in allen Gebieten, die wir bedienen, kostenlos. Details: /de/schneider-service-hotel-antalya"
       ],
       [
         "Wie erfahre ich die Preise?",
@@ -699,7 +700,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Wo ist der nächste Schneider?",
-        "Die Werkstatt liegt in Konyaaltı, mit kostenlosem Service nach Hurma, Liman, Sarısu, Uncalı und Gürsu. Auf Google Maps: \"TERZİ Can Antalya Tailor Service\". Andere Bezirke Antalyas nach Terminvereinbarung."
+        "Die Werkstatt liegt in Konyaaltı, mit kostenloser Abholung und Lieferung zu Hause und im Hotel in allen Gebieten, die wir bedienen. Auf Google Maps: \"TERZİ Can Antalya Tailor Service\"."
       ],
       [
         "Nähen Sie aus Naturstoffen wie Baumwolle oder Leinen?",
@@ -798,9 +799,9 @@ export const FT: Record<FLang, FiyatText> = {
         "Подгонка свадебного и вечернего платья"
       ],
       [
-        "Мужские брюки",
+        "Юбка / брюки",
         "Женское платье",
-        "Вечернее платье",
+        "Костюм жениха",
         "Детская одежда"
       ],
       [
@@ -902,7 +903,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Приедет ли портной в мой отель или по адресу?",
-        "Да. Мерки и выдача — в вашем отеле или по адресу, работа выполняется в мастерской. В Коньяалты выезд бесплатный; в другие районы — по записи, стоимость зависит от расстояния. Подробнее: /ru/vyezdnoy-portnoy-antalya"
+        "Да. Мерки и выдача — в вашем отеле или по адресу, работа выполняется в мастерской. Забор и доставка на дом и в отели бесплатны во всех районах, которые мы обслуживаем."
       ],
       [
         "Как узнать цену?",
@@ -914,7 +915,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Где ближайший портной?",
-        "Мастерская в Коньяалты, бесплатный выезд в Хурму, Лиман, Сарысу, Унджалы и Гюрсу. На Google Maps: «TERZİ Can Antalya Tailor Service». В другие районы Антальи — по записи."
+        "Мастерская в Коньяалты, бесплатный забор и доставка на дом и в отели во всех районах, которые мы обслуживаем. На Google Maps: «TERZİ Can Antalya Tailor Service»."
       ],
       [
         "Шьёте ли вы из натурального хлопка или льна?",

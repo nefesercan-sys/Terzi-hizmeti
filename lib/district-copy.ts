@@ -1,7 +1,7 @@
 // ============================================================
 // lib/district-copy.ts — bölge sayfaları için doğrudan cevap paragrafı + doğal soru kalıplı SSS havuzu (tr/en/ru/de)
 // Süreler lib/delivery.ts'ten; fiyatlar sitede zaten yayınlanan başlangıç fiyatlarıdır (₺200 / ₺300 / ₺800).
-// Otellere servis her bölgede ücretsiz; ev adresinde ücretsiz yalnızca seo-data FREE_SERVICE_SLUGS.
+// Eve ve otele alım-teslim her bölgede ücretsiz (isFreeService her zaman true).
 // SSS bölgeye göre seçilir (slug karması) → sayfalar aynı 5 soruyu tekrarlamaz.
 // ============================================================
 import { DELIVERY } from '@/lib/delivery';

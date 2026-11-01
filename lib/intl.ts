@@ -2,8 +2,8 @@
 // terzihizmeti.com.tr — lib/intl.ts
 // Ek turist dilleri (ES/FR/PL/UK/NL/AR): her dil için TEK kısa tanıtım sayfası (/es, /fr, /pl, /uk, /nl, /ar).
 // Yalnızca işletme sahibinin doğruladığı bilgiler: Hurma/Konyaaltı atölye, 2006'dan beri, her gün 08:00–23:00,
-// süreler lib/delivery.ts'ten, WhatsApp'tan fotoğrafla fiyat. Otellere alım-teslim tüm hizmet bölgelerinde ücretsiz;
-// ev adreslerinde ücretsiz yalnızca Konyaaltı ve yakın mahalleler (lib/seo-data.ts FREE_SERVICE_SLUGS).
+// süreler lib/delivery.ts'ten, WhatsApp'tan fotoğrafla fiyat. Eve ve otele alım-teslim tüm hizmet bölgelerinde ücretsiz;
+// ev adreslerinde de ücretsiz (tüm hizmet bölgeleri).
 // Fiyat yazılmaz.
 // ============================================================
 import { DELIVERY } from '@/lib/delivery';

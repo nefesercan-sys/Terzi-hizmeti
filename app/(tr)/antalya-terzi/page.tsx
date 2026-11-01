@@ -23,7 +23,7 @@ const OG        = `${SITE}/terzi-can-hero.jpg`;
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Antalya Terzi · Paça ₺200, Fermuar ₺300 · Her Gün Açık" },
-  description: "Antalya'da bay bayan terzi: paça kısaltma ₺200, fermuar ₺300, bel daraltma ₺200. Konyaaltı'nda adrese ücretsiz servis. 08:00–23:00. ☎ " + PHONE,
+  description: "Antalya'da bay bayan terzi: paça kısaltma ₺200, fermuar ₺300, bel daraltma ₺200. Eve ve otele ücretsiz servis. 08:00–23:00. ☎ " + PHONE,
   keywords: ['Antalya terzi', 'Konyaaltı terzi', 'Hurma terzi', 'Liman terzi', 'Uncalı terzi', 'Gürsu terzi', 'otele gelen terzi Antalya', 'acil terzi Antalya'],
   authors: [{ name: BIZ, url: SITE }],
   creator: BIZ,
@@ -65,8 +65,8 @@ export const metadata: Metadata = {
 };
 
 const FAQS: [string, string][] = [
-  ['Hangi mahallelere ücretsiz servis var?', 'Hurma, Sarısu, Liman, Uncalı, Altınkum, Öğretmenevleri, Siteler, Arapsuyu ve Gürsu\'ya ücretsiz adrese servis veriyoruz. Diğer bölgelerde servis, mesafeye göre WhatsApp\'ta netleşir.'],
-  ["Ahatlı, Toros ve diğer Antalya bölgelerine hizmet var mı?", 'Evet, ev adreslerine randevuyla geliyoruz; ücret ve zamanı WhatsApp\'tan netleştiririz. Otellere alım-teslimat ücretsizdir.'],
+  ['Servis ücretsiz mi?', 'Evet. Hizmet verdiğimiz her bölgede eve ve otele alım-teslim ücretsizdir. Adresinizi veya otelinizi WhatsApp üzerinden yazmanız yeterli.'],
+  ["Ahatlı, Toros ve diğer Antalya bölgelerine hizmet var mı?", 'Evet. Eve ve otele alım-teslim tüm bölgelerde ücretsizdir; WhatsApp\'tan yazmanız yeterli.'],
   ['Bay, bayan, çocuk kıyafeti dikiyor musunuz?', 'Evet, erkek, kadın ve çocuk kıyafetlerinde özel ölçü dikim hizmeti sunuyoruz.'],
   ['Üniforma üretimi ve toplu sipariş alıyor musunuz?', 'Evet, otel, okul, restoran ve kurumlar için üniforma tasarımı ve toplu üretim yapıyoruz.'],
   ['Fason imalat yapıyor musunuz?', 'Evet, markalar ve işletmeler için numune dikimi, kalıp çıkarma ve seri üretim hizmeti veriyoruz.'],
@@ -125,8 +125,8 @@ const NEIGHBORHOODS: Neighborhood[] = [
   { name: 'Altınkum', tag: 'Yakın', note: 'Ücretsiz adrese servis', priority: false },
   { name: 'Siteler', tag: 'Yakın', note: 'Ücretsiz adrese servis', priority: false },
   { name: 'Arapsuyu', tag: 'Yakın', note: 'Ücretsiz adrese servis', priority: false },
-  { name: 'Ahatlı', tag: 'Yakın', note: 'Randevulu adrese gelen servis', priority: false },
-  { name: 'Toros', tag: 'Yakın', note: 'Randevulu adrese gelen servis', priority: false },
+  { name: 'Ahatlı', tag: 'Yakın', note: 'Ücretsiz adrese servis', priority: false },
+  { name: 'Toros', tag: 'Yakın', note: 'Ücretsiz adrese servis', priority: false },
 ];
 
 const OTHER_DISTRICTS: string[] = [
@@ -143,7 +143,7 @@ interface WorkshopService {
 
 const WORKSHOP_SERVICES: WorkshopService[] = [
   { icon: '👔', tr: 'Bay Kıyafet Dikimi', en: "Men's Tailoring", desc: 'Erkek gömlek, pantolon, ceket, takım elbise. Ölçüye özel dikim ve tasarım.', items: ['Gömlek', 'Pantolon', 'Ceket', 'Takım Elbise', 'Damatlık'] },
-  { icon: '👗', tr: 'Bayan Kıyafet Dikimi', en: "Women's Tailoring", desc: 'Kadın elbise, bluz, etek, abiye. Kişiye özel model ve ölçü.', items: ['Elbise', 'Bluz', 'Etek', 'Abiye', 'Gelinlik'] },
+  { icon: '👗', tr: 'Bayan Kıyafet Dikimi', en: "Women's Tailoring", desc: 'Kadın elbise, bluz, etek, abiye. Kişiye özel model ve ölçü.', items: ['Elbise', 'Bluz', 'Etek', 'Abiye'] },
   { icon: '🧸', tr: 'Çocuk Kıyafeti Dikimi', en: "Children's Clothing", desc: 'Çocuk ve bebek kıyafeti, okul kıyafeti, özel gün dikimi.', items: ['Okul Kıyafeti', 'Günlük Giyim', 'Özel Gün', 'Bebek Kıyafeti'] },
   { icon: '🏨', tr: 'Üniforma Üretimi', en: 'Uniform Manufacturing', desc: 'Otel, restoran, okul, güvenlik, sağlık sektörü için toplu üniforma üretimi.', items: ['Otel', 'Restoran', 'Okul', 'Güvenlik', 'Sağlık'] },
   { icon: '🏭', tr: 'Fason İmalat', en: 'Contract Manufacturing', desc: 'Marka ve işletmeler için numune dikimi, kalıp çıkarma, seri üretim.', items: ['Numune Dikimi', 'Kalıp Çıkarma', 'Seri Üretim', 'Toplu Sipariş'] },
@@ -178,7 +178,7 @@ const REPAIR_CATEGORIES: Record<Lang, RepairCategory[]> = {
   tr: [
     { icon: '✂️', title: 'Dikim Hizmetleri', keyword: 'terzi dikim Antalya · özel ölçü dikim Konyaaltı',
       desc: 'Sıfırdan kıyafet dikimi. Bay, bayan, çocuk — ölçünüze özel tasarım ve üretim.',
-      rows: [['Erkek Pantolon Dikimi', '₺400+'], ['Kadın Elbise Dikimi', '₺800+'], ['Abiye / Özel Gün Dikimi', '₺900+'], ['Çocuk Kıyafeti Dikimi', '₺250+']] },
+      rows: [['Etek / Pantolon Dikimi', '₺1000+'], ['Kadın Elbise Dikimi', '₺800+'], ['Damatlık Dikimi', '₺20.000+'], ['Çocuk Kıyafeti Dikimi', '₺1000+']] },
     { icon: '🔧', title: 'Tamir Hizmetleri', keyword: 'kıyafet tamiri Antalya · fermuar tamiri Konyaaltı',
       desc: 'Yırtık, sökük, fermuar, düğme — günlük giyimde en sık ihtiyaç duyulan onarımlar.',
       rows: [['Fermuar Değişimi (Pantolon/Kot)', '₺300+'], ['Fermuar Değişimi (Mont/Ceket)', '₺300+'], ['Düğme, Kopça, Fitil Tamiri', '₺60+'], ['Astar Değişimi', '₺300+']] },
@@ -192,44 +192,44 @@ const REPAIR_CATEGORIES: Record<Lang, RepairCategory[]> = {
   en: [
     { icon: '✂️', title: 'Tailoring Services', keyword: 'tailor Antalya · custom-fit sewing Konyaaltı',
       desc: 'Made-from-scratch garments. Men, women, children — designed and sewn to your exact measurements.',
-      rows: [["Men's Trousers Tailoring", '₺400+'], ["Women's Dress Making", '₺800+'], ['Evening Gown / Special Occasion', '₺900+'], ["Children's Clothing", '₺250+']] },
+      rows: [['Skirt / Trousers Tailoring', '€50+'], ["Women's Dress Making", '€40+'], ['Groom Suit', '€1000+'], ["Children's Clothing", '€50+']] },
     { icon: '🔧', title: 'Repair Services', keyword: 'clothing repair Antalya · zipper repair Konyaaltı',
       desc: 'Tears, seams, zippers, buttons — the everyday fixes clothing needs most.',
-      rows: [['Zipper Replacement (Trousers/Jeans)', '₺300+'], ['Zipper Replacement (Coat/Jacket)', '₺300+'], ['Button, Hook, Snap Repair', '₺60+'], ['Lining Replacement', '₺300+']] },
+      rows: [['Zipper Replacement (Trousers/Jeans)', '€20+'], ['Zipper Replacement (Coat/Jacket)', '€15+'], ['Button, Hook, Snap Repair', '€10+'], ['Lining Replacement', '€10+']] },
     { icon: '📏', title: 'Alterations', keyword: 'hemming Antalya · waist taking in Konyaaltı',
       desc: 'Precise fit adjustments so your clothing sits exactly right on your body.',
-      rows: [['Hemming (Trousers/Jeans/Skirt)', '₺200+'], ['Waist Taking In', '₺200+'], ['Sleeve Shortening', '₺200+'], ['Dress / Jacket Taking In', '₺200+'], ['Wedding & Evening Dress Alterations', '₺800+']] },
+      rows: [['Hemming (Trousers/Jeans/Skirt)', 'By photo'], ['Waist Taking In', 'By photo'], ['Sleeve Shortening', 'By photo'], ['Dress / Jacket Taking In', 'By photo'], ['Wedding & Evening Dress Alterations', 'By photo']] },
     { icon: '🧺', title: 'Ironing & Dry Cleaning', keyword: 'ironing service Antalya · dry cleaning Konyaaltı',
       desc: 'Professional steam ironing and dry cleaning.',
-      rows: [['Ironing (per item)', '₺80+'], ['Dry Cleaning (Dress)', '₺300+'], ['Dry Cleaning (Coat)', '₺500+'], ['Laundry & Ironing (per kg)', '₺80+/kg']] },
+      rows: [['Ironing (per item)', 'By photo'], ['Dry Cleaning (Dress)', 'By photo'], ['Dry Cleaning (Coat)', 'By photo'], ['Laundry & Ironing (per kg)', 'By photo']] },
   ],
   ru: [
     { icon: '✂️', title: 'Пошив одежды', keyword: 'портной Анталья · пошив по меркам Коньяалты',
       desc: 'Пошив одежды с нуля. Мужская, женская, детская — по индивидуальным меркам.',
-      rows: [['Пошив мужских брюк', '₺400+'], ['Пошив женского платья', '₺800+'], ['Вечернее / праздничное платье', '₺900+'], ['Пошив детской одежды', '₺250+']] },
+      rows: [['Пошив юбки / брюк', '€50+'], ['Пошив женского платья', '€40+'], ['Костюм жениха', '€1000+'], ['Пошив детской одежды', '€50+']] },
     { icon: '🔧', title: 'Ремонт одежды', keyword: 'ремонт одежды Анталья · ремонт молнии Коньяалты',
       desc: 'Разрывы, швы, молнии, пуговицы — самый частый ремонт повседневной одежды.',
-      rows: [['Замена молнии (брюки/джинсы)', '₺300+'], ['Замена молнии (пальто/куртка)', '₺300+'], ['Ремонт пуговиц, крючков, кнопок', '₺60+'], ['Замена подкладки', '₺300+']] },
+      rows: [['Замена молнии (брюки/джинсы)', '€20+'], ['Замена молнии (пальто/куртка)', '€15+'], ['Ремонт пуговиц, крючков, кнопок', '€10+'], ['Замена подкладки', '€10+']] },
     { icon: '📏', title: 'Подгонка одежды', keyword: 'укорачивание брюк Анталья · заужение талии Коньяалты',
       desc: 'Точная подгонка по фигуре — чтобы одежда сидела идеально.',
-      rows: [['Укорачивание (брюки/джинсы/юбка)', '₺200+'], ['Заужение талии', '₺200+'], ['Укорачивание рукавов', '₺200+'], ['Заужение платья / пиджака', '₺200+'], ['Подгонка свадебного/вечернего платья', '₺800+']] },
+      rows: [['Укорачивание (брюки/джинсы/юбка)', 'По фото'], ['Заужение талии', 'По фото'], ['Укорачивание рукавов', 'По фото'], ['Заужение платья / пиджака', 'По фото'], ['Подгонка свадебного/вечернего платья', 'По фото']] },
     { icon: '🧺', title: 'Глажка и химчистка', keyword: 'глажка Анталья · химчистка Коньяалты',
       desc: 'Профессиональная паровая глажка и химчистка.',
-      rows: [['Глажка (за вещь)', '₺80+'], ['Химчистка (платье)', '₺300+'], ['Химчистка (пальто)', '₺500+'], ['Стирка и глажка (за кг)', '₺80+/кг']] },
+      rows: [['Глажка (за вещь)', 'По фото'], ['Химчистка (платье)', 'По фото'], ['Химчистка (пальто)', 'По фото'], ['Стирка и глажка (за кг)', 'По фото']] },
   ],
   de: [
     { icon: '✂️', title: 'Schneiderdienste', keyword: 'Maßschneiderei Antalya · Konyaaltı',
       desc: 'Maßgeschneiderte Kleidung. Herren, Damen, Kinder — exakt nach Ihren Maßen entworfen und genäht.',
-      rows: [['Herrenhose maßgeschneidert', '₺400+'], ['Damenkleid maßgeschneidert', '₺800+'], ['Abendkleid / Besonderer Anlass', '₺900+'], ['Kinderkleidung', '₺250+']] },
+      rows: [['Rock / Hose maßgeschneidert', '€50+'], ['Damenkleid maßgeschneidert', '€40+'], ['Herrenanzug (Bräutigam)', '€1000+'], ['Kinderkleidung', '€50+']] },
     { icon: '🔧', title: 'Reparaturdienste', keyword: 'Kleidungsreparatur Antalya · Reißverschluss Konyaaltı',
       desc: 'Risse, Nähte, Reißverschlüsse, Knöpfe — die alltäglichen Reparaturen, die Kleidung am meisten braucht.',
-      rows: [['Reißverschluss (Hose/Jeans)', '₺300+'], ['Reißverschluss (Jacke/Mantel)', '₺300+'], ['Knopf, Haken reparieren', '₺60+'], ['Futterwechsel', '₺300+']] },
+      rows: [['Reißverschluss (Hose/Jeans)', '€20+'], ['Reißverschluss (Jacke/Mantel)', '€15+'], ['Knopf, Haken reparieren', '€10+'], ['Futterwechsel', '€10+']] },
     { icon: '📏', title: 'Änderungsschneiderei', keyword: 'Hosen kürzen Antalya · Taille Konyaaltı',
       desc: 'Präzise Passformanpassungen, damit Ihre Kleidung genau richtig an Ihrem Körper sitzt.',
-      rows: [['Kürzen (Hose/Jeans/Rock)', '₺200+'], ['Taille enger machen', '₺200+'], ['Ärmel kürzen', '₺200+'], ['Kleid / Jacke enger machen', '₺200+'], ['Braut- & Abendkleid ändern', '₺800+']] },
+      rows: [['Kürzen (Hose/Jeans/Rock)', 'Per Foto'], ['Taille enger machen', 'Per Foto'], ['Ärmel kürzen', 'Per Foto'], ['Kleid / Jacke enger machen', 'Per Foto'], ['Braut- & Abendkleid ändern', 'Per Foto']] },
     { icon: '🧺', title: 'Bügeln & Reinigung', keyword: 'Bügelservice Antalya · Reinigung Konyaaltı',
       desc: 'Professionelles Dampfbügeln und chemische Reinigung. Abholung und Lieferung vom Hotel.',
-      rows: [['Bügeln (pro Stück)', '₺80+'], ['Chemische Reinigung (Kleid)', '₺300+'], ['Chemische Reinigung (Mantel)', '₺500+'], ['Waschen & Bügeln (pro kg)', '₺80+/kg']] },
+      rows: [['Bügeln (pro Stück)', 'Per Foto'], ['Chemische Reinigung (Kleid)', 'Per Foto'], ['Chemische Reinigung (Mantel)', 'Per Foto'], ['Waschen & Bügeln (pro kg)', 'Per Foto']] },
   ],
 };
 
@@ -238,7 +238,7 @@ const PROCESS_STEPS: [string, string, string][] = [
   ['01', 'Mahallenizi Belirtin', "WhatsApp\'tan bulunduğunuz mahalleyi ve ihtiyacınızı yazın."],
   ['02', 'Ölçü & Tasarım', 'Adresinizde ölçü alınır veya atölyede tasarım detayları belirlenir.'],
   ['03', 'Dikim / Üretim', 'Tekli dikim ya da toplu üniforma/fason üretimi atölyede tamamlanır.'],
-  ['04', 'Teslimat', 'Yakın mahallelerde ücretsiz, diğer bölgeler WhatsApp\'tan sorulur.'],
+  ['04', 'Teslimat', 'Eve ve otele her bölgede ücretsiz.'],
 ];
 
 export default function KonyaaltiTailorServicePage() {
@@ -307,7 +307,7 @@ export default function KonyaaltiTailorServicePage() {
               <div className="sec-head">
                 <span className="eyebrow">📍 Konyaaltı Mahalleleri</span>
                 <h2 className="sec-h" id="nb-h">Size En Yakın Mahalleden Başlıyoruz</h2>
-                <p className="sec-sub">Atölyemize en yakın mahallelere öncelikli ve hızlı hizmet veriyoruz.</p>
+                <p className="sec-sub">Tüm bölgelere eve ve otele ücretsiz servis veriyoruz.</p>
               </div>
               <ul className="nb-grid" aria-label="Öncelikli hizmet mahalleleri">
                 {NEIGHBORHOODS.map((n: Neighborhood) => (

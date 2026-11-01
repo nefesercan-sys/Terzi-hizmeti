@@ -93,7 +93,7 @@ const jsonLd = {
       '@type': 'FAQPage', '@id': `${PAGE_URL}#faq`,
       mainEntity: [
         { '@type': 'Question', name: 'Do you come to hotels in Belek, Lara and Kemer?', acceptedAnswer: { '@type': 'Answer', text: `Yes! Our mobile tailor comes to all hotels in Belek, Lara, Kemer and Side. Share your hotel name on WhatsApp. WhatsApp: ${PHONE}` } },
-        { '@type': 'Question', name: 'Is the mobile visit free?', acceptedAnswer: { '@type': 'Answer', text: 'Hotel visits are free in every area we serve. In other districts the visit fee depends on the distance and is confirmed on WhatsApp beforehand.' } },
+        { '@type': 'Question', name: 'Is the mobile visit free?', acceptedAnswer: { '@type': 'Answer', text: 'Visits, pick-up and delivery to homes and hotels are free in every area we serve.' } },
         { '@type': 'Question', name: 'Do you offer ironing and dry cleaning too?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, professional steam ironing and dry cleaning, with pickup and delivery to your hotel or address.' } },
         { '@type': 'Question', name: 'How fast are urgent alterations?', acceptedAnswer: { '@type': 'Answer', text: `Yes, most repairs and hemming are completed the next day (urgent jobs 1–2 hours). WhatsApp: ${PHONE}` } },
         { '@type': 'Question', name: 'Do you speak English?', acceptedAnswer: { '@type': 'Answer', text: 'Yes — write to us on WhatsApp in your own language and we will reply.' } },
@@ -105,18 +105,18 @@ const jsonLd = {
 
 const PRIORITY_DISTRICTS = [
   { name: 'Konyaaltı', tag: 'Workshop', note: 'Our workshop is here' },
-  { name: 'Muratpaşa', tag: 'By distance', note: 'Mobile visit; arranged on WhatsApp' },
-  { name: 'Kepez', tag: 'By distance', note: 'Mobile visit; arranged on WhatsApp' },
-  { name: 'Lara', tag: 'By distance', note: 'Mobile visit to Lara hotels; arranged on WhatsApp' },
-  { name: 'Döşemealtı', tag: 'Nearby', note: 'Scheduled mobile visit' },
-  { name: 'Aksu', tag: 'Nearby', note: 'Scheduled mobile visit' },
+  { name: 'Muratpaşa', tag: 'Free service', note: 'Free pick-up and delivery' },
+  { name: 'Kepez', tag: 'Free service', note: 'Free pick-up and delivery' },
+  { name: 'Lara', tag: 'Free service', note: 'Free pick-up and delivery to Lara hotels' },
+  { name: 'Döşemealtı', tag: 'Free service', note: 'Free pick-up and delivery' },
+  { name: 'Aksu', tag: 'Free service', note: 'Free pick-up and delivery' },
 ];
 
 const OTHER_DISTRICTS = ['Belek', 'Kemer', 'Serik', 'Side'];
 
 const SERVICES = [
   { icon: '👔', tr: "Men's Tailoring", en: 'Shirts, trousers, jackets, suits', desc: 'Custom-fit garments made from scratch, to your exact measurements.', items: ['Shirt', 'Trousers', 'Jacket', 'Suit', 'Groom Suit'] },
-  { icon: '👗', tr: "Women's Tailoring", en: 'Dresses, blouses, skirts, gowns', desc: 'Custom design and made-to-measure sewing for any occasion.', items: ['Dress', 'Blouse', 'Skirt', 'Evening Gown', 'Wedding Dress'] },
+  { icon: '👗', tr: "Women's Tailoring", en: 'Dresses, blouses, skirts, gowns', desc: 'Custom design and made-to-measure sewing for any occasion.', items: ['Dress', 'Blouse', 'Skirt', 'Evening Gown'] },
   { icon: '🔧', tr: 'Clothing Repair', en: 'Zippers, tears, buttons', desc: 'Everyday repairs — zippers, torn seams, buttons, hooks, lining.', items: ['Zipper Replacement', 'Tear Repair', 'Button Repair', 'Lining Replacement'] },
   { icon: '📏', tr: 'Alterations', en: 'Hemming, taking in, resizing', desc: 'Precise fit adjustments so clothing sits exactly right.', items: ['Hemming', 'Waist Taking In', 'Sleeve Shortening', 'Dress Resizing'] },
   { icon: '🧺', tr: 'Ironing & Dry Cleaning', en: 'Steam ironing, dry cleaning', desc: 'Professional steam ironing and dry cleaning, picked up and delivered.', items: ['Ironing', 'Dry Cleaning', 'Laundry & Ironing'] },
@@ -136,10 +136,10 @@ const REPAIR_CATEGORIES = [
 
 const FAQS: [string, string][] = [
   ['Do you come to hotels in Belek, Lara and Kemer?', 'Yes! Our mobile tailor visits all hotels in Belek, Lara, Kemer and Side. Just share your hotel name on WhatsApp.'],
-  ['Is the mobile visit free?', 'Free in Konyaaltı. In other districts the visit fee depends on the distance; we confirm it on WhatsApp first.'],
+  ['Is the mobile visit free?', 'Yes. Pick-up and delivery to homes and hotels is free in every area we serve.'],
   ['Do you offer ironing and dry cleaning?', 'Yes — professional steam ironing and dry cleaning, with pickup and delivery to your hotel or address.'],
   ['Can I get alterations before an event?', 'Yes, most repairs and hemming are completed the next day (urgent jobs 1–2 hours).'],
-  ['Do you serve Konyaaltı and nearby districts?', 'Yes — free visits in Konyaaltı; Muratpaşa, Kepez, Lara, Döşemealtı, Belek, Kemer, Side and nearby districts by appointment, arranged on WhatsApp.'],
+  ['Do you serve Konyaaltı and nearby districts?', 'Yes — Konyaaltı, Muratpaşa, Kepez, Lara, Döşemealtı, Belek, Kemer, Side and nearby districts, all with free pick-up and delivery to homes and hotels.'],
   ['Do you speak English?', 'Yes — write to us on WhatsApp in your own language and we will reply.'],
   ...EXTRA_FAQS,
 ];

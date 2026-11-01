@@ -105,10 +105,10 @@ interface LangLabel {
 }
 
 const LANG_LABELS: Record<Lang, LangLabel> = {
-  tr: { name: 'Türkçe', flag: '🇹🇷', note: 'Otellere alım-teslim tüm bölgelerde ücretsizdir; ev adreslerinde ücretsiz servis Konyaaltı ve yakın mahallelerde, diğer bölgeler WhatsApp\'tan sorulur.' },
-  en: { name: 'English', flag: '🇬🇧', note: 'Hotel pick-up and delivery is free everywhere we serve; home addresses are free in Konyaaltı and nearby neighbourhoods; ask on WhatsApp for other areas.' },
-  ru: { name: 'Русский', flag: '🇷🇺', note: 'Забор и доставка в отели бесплатны везде; на домашние адреса — бесплатно в Коньяалты и соседних кварталах, для других районов уточняйте в WhatsApp.' },
-  de: { name: 'Deutsch', flag: '🇩🇪', note: 'Abholung und Lieferung im Hotel sind überall kostenlos; für Wohnadressen gilt das in Konyaaltı und Nachbarvierteln, sonst bitte per WhatsApp anfragen.' },
+  tr: { name: 'Türkçe', flag: '🇹🇷', note: 'Eve ve otele alım-teslim hizmet verdiğimiz tüm bölgelerde ücretsizdir.' },
+  en: { name: 'English', flag: '🇬🇧', note: 'Pick-up and delivery to homes and hotels is free in every area we serve.' },
+  ru: { name: 'Русский', flag: '🇷🇺', note: 'Забор и доставка на дом и в отели бесплатны во всех районах, которые мы обслуживаем.' },
+  de: { name: 'Deutsch', flag: '🇩🇪', note: 'Abholung und Lieferung zu Hause und im Hotel sind in allen Gebieten, die wir bedienen, kostenlos.' },
 };
 
 interface VipCategory {
@@ -270,7 +270,7 @@ export default function MobileTailorHotelPage() {
               <div className="sec-head">
                 <span className="eyebrow">₺ Hizmet Fiyatları · Pricing</span>
                 <h2 className="sec-h" id="price-h">Otel Servisi ve Ekspres Tadilat</h2>
-                <p className="sec-sub">Hizmet fiyatları, otelinizin mesafesine ve işlemin aciliyetine göre belirlenir.</p>
+                <p className="sec-sub">Eve ve otele alım-teslim ücretsizdir; yalnızca işlemin ücreti ve aciliyeti fiyatı belirler.</p>
               </div>
 
               {LANGS.map((lang: Lang) => (

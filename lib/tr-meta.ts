@@ -1,5 +1,5 @@
 // TÜRKÇE yakın bölge sayfaları için elle yazılmış başlık/açıklama/anahtar kelime.
-// Kurallar: başlık ≤60 (marka eki dahil), açıklama ≤158 (telefon dahil), ücretsiz servis yalnızca Konyaaltı, uzak bölge adı yok.
+// Kurallar: başlık ≤60 (marka eki dahil), açıklama ≤158 (telefon dahil), eve ve otele ücretsiz servis (her bölge).
 // {loc} = sayfanın yer-durum kalıbı (örn. "Meltem'de"). Yeni bölge için bu tabloya satır ekle.
 export interface TrMeta { title: string; desc: string; kw: string[] }
 const T: Record<string, { t: string; d: string; kw: string[] }> = {

@@ -95,7 +95,7 @@ const T: Record<Lang, any> = {
     faqEyebrow: 'Вопросы', faqH: 'Часто задаваемые вопросы',
     faq: (r: string) => [
       [`Вы приезжаете во все отели ${r}?`, `Да! Мы приезжаем в каждый отель района ${r} — напишите название отеля и номер комнаты в WhatsApp.`],
-      ['Выезд в отель бесплатный?', 'В Коньяалты — бесплатно. В другие районы стоимость выезда зависит от расстояния и согласуется в WhatsApp заранее; затем вы платите за саму работу.'],
+      ['Выезд в отель бесплатный?', 'Да, выезд в отель и на дом бесплатный во всех районах — вы платите только за саму работу.'],
       ['Как быстро выполняется услуга?', 'Обычные работы готовы на следующий день, срочные — за 1–2 часа.'],
       ['Вы говорите по-русски?', 'Да — напишите нам в WhatsApp на своём языке, и мы ответим.'],
     ],
@@ -131,7 +131,7 @@ const T: Record<Lang, any> = {
     faqEyebrow: 'FAQ', faqH: 'Häufig gestellte Fragen',
     faq: (r: string) => [
       [`Kommen Sie zu allen Hotels in ${r}?`, `Ja! Wir besuchen jedes Hotel in ${r} — teilen Sie Hotelname und Zimmernummer per WhatsApp mit.`],
-      ['Ist der Hotelbesuch kostenlos?', 'In Konyaaltı ja. Für andere Gebiete richtet sich das Entgelt nach der Entfernung und wird vorab per WhatsApp bestätigt; dazu zahlen Sie die eigentliche Arbeit.'],
+      ['Ist der Hotelbesuch kostenlos?', 'Ja, Abholung und Lieferung zu Hotel und nach Hause sind in allen Gebieten kostenlos – Sie zahlen nur die eigentliche Arbeit.'],
       ['Wie schnell ist der Service?', 'Normale Reparaturen sind am nächsten Tag fertig, eilige in 1–2 Stunden.'],
       ['Sprechen Sie Deutsch?', 'Ja — schreiben Sie uns per WhatsApp in Ihrer Sprache, wir antworten.'],
     ],

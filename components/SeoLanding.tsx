@@ -238,7 +238,7 @@ function serviceCopy(lang: Lang, s: Service) {
   }[lang];
   const who = { tr: 'Terzi Can Konyaaltı:', en: 'Terzi Can in Konyaaltı:', ru: 'Terzi Can в Коньяалты:', de: 'Terzi Can in Konyaaltı:' }[lang];
   const open = { tr: 'Her gün 08:00–23:00', en: 'Open daily 08:00–23:00', ru: 'Ежедневно 08:00–23:00', de: 'Täglich 08:00–23:00' }[lang];
-  const pick = { tr: 'Konyaaltı\'nda ücretsiz servis', en: 'free pick-up in Konyaaltı', ru: 'забор из отелей бесплатно', de: 'Gratis-Abholung in Konyaaltı' }[lang];
+  const pick = { tr: 'eve ve otele ücretsiz servis', en: 'free pick-up to home and hotel', ru: 'бесплатный забор на дом и в отель', de: 'Gratis-Abholung zu Hause und im Hotel' }[lang];
   const tel = `☎ ${PHONE}`;
   const priceTxt = price ? (lang === 'tr' ? `2026 fiyatı ${price}` : price) : '';
   const body = (withTime: boolean) => `${who} ${withTime ? tm : ''}${withTime && priceTxt ? ', ' : ''}${priceTxt}`.replace(/[\s,:]+$/, '');
@@ -261,24 +261,24 @@ function serviceFaq(lang: Lang, s: Service): [string, string][] {
   const time = timeOf(lang, s);
   return {
     tr: [
-      [`Antalya'da ${s.vars.tr[0]} için nereye gidebilirim?`, `Konyaaltı Hurma'daki Terzi Can atölyesine. ${s.intro.tr} Konyaaltı'da otellere servis ücretsiz, ev adresleri için WhatsApp'tan sorulur; atölye her gün 08:00–23:00 açık.`],
+      [`Antalya'da ${s.vars.tr[0]} için nereye gidebilirim?`, `Konyaaltı Hurma'daki Terzi Can atölyesine. ${s.intro.tr} Eve ve otele alım-teslim tüm bölgelerde ücretsizdir; atölye her gün 08:00–23:00 açık.`],
       [`${nm} kaç gün sürer, fiyatı nedir?`, `${time}.${price ? ' ' + price + '; net fiyat kumaşa ve işin kapsamına bağlı.' : " Fiyat için kıyafetin fotoğrafını WhatsApp'tan iletin."}`],
-      [`${nm} için otele ya da eve geliyor musunuz?`, 'Evet. Konyaaltı\'nda alım-teslim ücretsiz; Muratpaşa, Lara, Güzeloba, Kundu, Belek, Side ve Kemer gibi otel bölgelerinde otele alım-teslim de ücretsizdir.'],
+      [`${nm} için otele ya da eve geliyor musunuz?`, 'Evet. Konyaaltı, Muratpaşa, Lara, Güzeloba, Kundu, Belek, Side ve Kemer dahil tüm bölgelerde eve ve otele alım-teslim ücretsizdir.'],
     ],
     en: [
-      [`Where in Antalya can I get ${s.vars.en[0]} done?`, `At the Terzi Can workshop in Hurma, Konyaaltı. ${s.intro.en} Hotel pick-up and delivery is free everywhere we serve (home addresses: free in Konyaaltı and nearby neighbourhoods, otherwise ask on WhatsApp), and the workshop is open daily 08:00–23:00.`],
+      [`Where in Antalya can I get ${s.vars.en[0]} done?`, `At the Terzi Can workshop in Hurma, Konyaaltı. ${s.intro.en} Pick-up and delivery to homes and hotels is free everywhere we serve, and the workshop is open daily 08:00–23:00.`],
       [`How many days does ${nm.toLowerCase()} take, and what is the price?`, `${time}.${price ? ' ' + price + '; the final price depends on the fabric and the scope of work.' : ' Send a photo of the garment on WhatsApp to get a price.'}`],
-      [`Do you come to my hotel or home for ${nm.toLowerCase()}?`, 'Yes. Hotel pick-up and delivery is free everywhere we serve; in areas such as Muratpaşa, Lara, Güzeloba, Kundu, Belek and Side the service fee depends on the distance.'],
+      [`Do you come to my hotel or home for ${nm.toLowerCase()}?`, 'Yes. Pick-up and delivery to homes and hotels is free in every area we serve, including Konyaaltı, Muratpaşa, Lara, Güzeloba, Kundu, Belek and Side.'],
     ],
     ru: [
-      [`Куда в Анталье обратиться: ${s.vars.ru[0]}?`, `В мастерскую Terzi Can в Хурме (Коньяалты). ${s.intro.ru} Забор и доставка в отели бесплатны везде, где мы работаем; на домашние адреса — бесплатно в Коньяалты и соседних кварталах; мастерская открыта ежедневно с 08:00 до 23:00.`],
+      [`Куда в Анталье обратиться: ${s.vars.ru[0]}?`, `В мастерскую Terzi Can в Хурме (Коньяалты). ${s.intro.ru} Забор и доставка на дом и в отели бесплатны везде, где мы работаем; мастерская открыта ежедневно с 08:00 до 23:00.`],
       [`Сколько дней занимает «${nm}» и какая цена?`, `${time}.${price ? ' ' + price + '; окончательная цена зависит от ткани и объёма работ.' : ' Пришлите фото вещи в WhatsApp, и мы назовём цену.'}`],
-      [`Забираете ли вы вещь из отеля или с дома для услуги «${nm}»?`, 'Да. В Коньяалты забор и доставка бесплатны; в Муратпаше, Ларе, Гюзельобе, Кунду, Белеке и Сиде стоимость зависит от расстояния.'],
+      [`Забираете ли вы вещь из отеля или с дома для услуги «${nm}»?`, 'Да. Забор и доставка на дом и в отели бесплатны во всех районах: Коньяалты, Муратпаша, Лара, Гюзельоба, Кунду, Белек и Сиде.'],
     ],
     de: [
-      [`Wo in Antalya bekomme ich „${s.vars.de[0]}“?`, `In der Werkstatt von Terzi Can in Hurma, Konyaaltı. ${s.intro.de} Der Hotelservice ist überall kostenlos; für Wohnadressen gilt das in Konyaaltı und Nachbarvierteln, sonst per WhatsApp fragen, die Werkstatt ist täglich von 08:00 bis 23:00 geöffnet.`],
+      [`Wo in Antalya bekomme ich „${s.vars.de[0]}“?`, `In der Werkstatt von Terzi Can in Hurma, Konyaaltı. ${s.intro.de} Abholung und Lieferung zu Hotel und nach Hause sind überall kostenlos, die Werkstatt ist täglich von 08:00 bis 23:00 geöffnet.`],
       [`Wie viele Tage braucht „${nm}“ und was kostet es?`, `${time}.${price ? ' ' + price + '; der endgültige Preis hängt von Stoff und Aufwand ab.' : ' Schicken Sie ein Foto des Kleidungsstücks per WhatsApp, dann nennen wir den Preis.'}`],
-      [`Holen Sie die Kleidung für „${nm}“ im Hotel oder zu Hause ab?`, 'Ja. In Konyaaltı sind Abholung und Lieferung kostenlos; in Muratpaşa, Lara, Güzeloba, Kundu, Belek und Side richtet sich die Gebühr nach der Entfernung.'],
+      [`Holen Sie die Kleidung für „${nm}“ im Hotel oder zu Hause ab?`, 'Ja. Abholung und Lieferung zu Hotel und nach Hause sind in allen Gebieten kostenlos: Konyaaltı, Muratpaşa, Lara, Güzeloba, Kundu, Belek und Side.'],
     ],
   }[lang] as [string, string][];
 }

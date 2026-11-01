@@ -281,7 +281,7 @@ export const PRODUCTS: Record<ProductId, L3<ProductCopy>> = {
     de: {
       name: 'Leinenhemd',
       h1: 'Leinenhemd nach Maß in Antalya',
-      title: 'Leinenhemd nach Maß Antalya — nach Maß maßgeschneidert',
+      title: 'Leinenhemd nach Maß Antalya — maßgeschneidert',
       desc: `Maßgeschneiderte Leinen- und Baumwollhemden für Damen und Herren in Antalya. Ihre Maße, Ihr Stoff, die Dauer richtet sich nach Modell und Stückzahl fertig. Terzi Can, Konyaaltı.`,
       keywords: ['Leinenhemd nach Maß Antalya', 'Leinenhemd maßgeschneidert Türkei', 'Maßhemd Leinen Antalya Urlaub', 'Schneider Leinenhemd Antalya', 'Baumwollhemd Maßanfertigung Antalya', 'Souvenir Antalya Kleidung'],
       lead: `Ein Leinenhemd nach Maß von Terzi Can wird aus natürlichem Leinen oder Baumwolle nach Ihren eigenen Maßen gefertigt und ist die Dauer richtet sich nach Modell und Stückzahl fertig. Kommen Sie in unsere Werkstatt in Konyaaltı oder lassen Sie sich im Hotel ausmessen.`,
@@ -298,7 +298,7 @@ export const PRODUCTS: Record<ProductId, L3<ProductCopy>> = {
     ru: {
       name: 'Льняная рубашка',
       h1: 'Льняная рубашка на заказ в Анталье',
-      title: 'Льняная рубашка на заказ в Анталье — пошив на заказ',
+      title: 'Льняная рубашка на заказ в Анталье',
       desc: `Пошив льняных и хлопковых рубашек по вашим меркам в Анталье для мужчин и женщин. Срок — по модели и количеству. Ателье Terzi Can, Коньяалты.`,
       keywords: ['льняная рубашка на заказ Анталья', 'пошив рубашки из льна Анталья', 'мужская льняная рубашка по меркам Турция', 'рубашка из хлопка на заказ Анталья', 'индивидуальный пошив Анталья туристам', 'сувенир из Анталии одежда'],
       lead: `Льняная рубашка на заказ в Terzi Can шьётся по вашим меркам из натурального льна или хлопка и срок зависит от модели и количества изделий. Приходите в наше ателье в Коньяалты или пригласите нас снять мерки в отеле.`,
@@ -353,7 +353,7 @@ export const PRODUCTS: Record<ProductId, L3<ProductCopy>> = {
     ru: {
       name: 'Льняное платье',
       h1: 'Льняное платье на заказ в Анталье',
-      title: 'Льняное платье на заказ в Анталье — пошив на заказ',
+      title: 'Льняное платье на заказ в Анталье',
       desc: `Пошив льняных и хлопковых платьев по вашим меркам в Анталье: макси, миди, с запахом, пляжные. Срок — по модели и количеству. Ателье Terzi Can.`,
       keywords: ['льняное платье на заказ Анталья', 'пошив платья из льна Анталья', 'индивидуальный пошив платья Турция', 'платье макси из льна на заказ', 'пляжное платье на заказ Анталья', 'портной Анталья платье туристам', 'сувенир из Анталии платье'],
       lead: `Льняное платье на заказ в Terzi Can мы разрабатываем вместе с вами и шьём по вашим меркам из натурального льна или хлопка — срок зависит от модели и количества изделий. Принесите фото понравившегося платья или выберите пример из галереи — адаптируем под вашу фигуру.`,
@@ -408,7 +408,7 @@ export const PRODUCTS: Record<ProductId, L3<ProductCopy>> = {
     ru: {
       name: 'Льняные брюки',
       h1: 'Льняные брюки на заказ в Анталье',
-      title: 'Льняные брюки на заказ в Анталье — пошив на заказ',
+      title: 'Льняные брюки на заказ в Анталье',
       desc: `Льняные и хлопковые брюки по вашим меркам в Анталье: широкие, прямые, на завязках, шорты и комбинезоны. Срок — по модели и количеству. Terzi Can.`,
       keywords: ['льняные брюки на заказ Анталья', 'пошив брюк из льна Анталья', 'мужские льняные брюки по меркам Турция', 'широкие льняные брюки на заказ', 'льняные шорты на заказ Анталья', 'льняной комбинезон на заказ', 'индивидуальный пошив Анталья туристам'],
       lead: `Льняные брюки в Terzi Can шьются по вашим меркам — талия, бёдра, длина ноги — из натурального льна или хлопка; срок зависит от модели и количества изделий. Длина сразу выставляется точно по вашему росту, подшивать потом не нужно.`,
@@ -501,7 +501,7 @@ export const PRODUCTS: Record<ProductId, L3<ProductCopy>> = {
     de: {
       name: 'Kinder-Leinenkleidung',
       h1: 'Kinder-Leinenkleidung nach Maß in Antalya',
-      title: 'Kinder-Leinenkleidung nach Maß Antalya — nach Maß',
+      title: 'Kinder-Leinenkleidung nach Maß Antalya',
       desc: `Leinen- und Baumwollkleidung für Jungen und Mädchen nach Maß in Antalya: Hemden, Shorts, Kleider, Latzhosen, Partnerlook. Dauer nach Modell und Stückzahl.`,
       keywords: ['Kinder Leinenkleidung Antalya', 'Kinderkleidung nach Maß Türkei', 'Kinderkleid Maßanfertigung Antalya', 'Jungen Leinenhemd nach Maß', 'Partnerlook Familie Leinen Antalya', 'Mädchen Leinenkleid Schneider Antalya', 'Kinder Urlaub Schneider Antalya'],
       lead: `Terzi Can fertigt Leinen- und Baumwollkleidung für Kinder nach Maß — Hemden und Shorts für Jungen, Sommerkleider und Latzhosen für Mädchen oder Partnerlook für die ganze Familie. Die Dauer richtet sich nach Modell und Stückzahl fertig.`,
@@ -518,7 +518,7 @@ export const PRODUCTS: Record<ProductId, L3<ProductCopy>> = {
     ru: {
       name: 'Детская льняная одежда',
       h1: 'Детская одежда из льна и хлопка на заказ в Анталье',
-      title: 'Детская льняная одежда на заказ в Анталье — на заказ',
+      title: 'Детская льняная одежда на заказ в Анталье',
       desc: `Льняная и хлопковая одежда для мальчиков и девочек на заказ в Анталье: рубашки, шорты, платья, комбинезоны, семейные комплекты. Срок — по модели и количеству.`,
       keywords: ['детская льняная одежда Анталья', 'пошив детской одежды на заказ Турция', 'детское платье на заказ Анталья', 'льняная рубашка для мальчика на заказ', 'одинаковые наряды для семьи лён Анталья', 'льняное платье для девочки на заказ', 'портной Анталья детская одежда туристам'],
       lead: `Terzi Can шьёт детскую одежду из льна и хлопка по меркам — рубашки и шорты для мальчиков, летние платья и комбинезоны для девочек или одинаковые наряды для всей семьи. Срок зависит от модели и количества изделий после снятия мерок.`,
@@ -569,7 +569,7 @@ export const HUB_COPY: L3<HubCopy> = {
     related: 'Linen & cotton clothing',
   },
   de: {
-    title: `Leinenkleidung nach Maß in Antalya — nach Maß`,
+    title: `Leinenkleidung nach Maß in Antalya`,
     desc: `Leinen- & Baumwollkleidung nach Maß und in Serie in Antalya: Hemden, Kleider, Hosen, Sakkos, Kinder. Dauer nach Modell und Stückzahl. Terzi Can, Konyaaltı.`,
     keywords: ['Leinenkleidung nach Maß Antalya', 'Maßschneider Antalya Urlaub', 'Kleidung maßschneidern lassen Antalya', 'Leinenkleid Maßanfertigung Antalya', 'Leinenhemd Schneider Antalya', 'Souvenir Antalya Kleidung', 'Maßanfertigung Türkei Urlaub Leinen', 'Schneider Antalya nach Maß', 'Kleidung ändern lassen Antalya Urlaub', 'Schneider Konyaaltı', 'Naturstoff Kleidung Antalya', 'Leinen Baumwolle Schneider Antalya', 'Leinenkleidung Serienproduktion Türkei', 'Leinenkleidung Hersteller Antalya', 'Leinenkleidung Sonderanfertigung Serie', 'Leinenkleidung Hersteller Türkei', 'Leinenbekleidung Produktion Türkei', 'Schnittmuster Leinenkleidung Türkei', 'Lohnfertigung Leinen Baumwolle Türkei', 'Private Label Leinenkleidung Türkei', 'Leinenkleidung Versand Europa',
       'Damen Leinenkleid nach Maß', 'Herren Leinenhemd nach Maß', 'Leinenrock nach Maß', 'Leinenshorts nach Maß', 'Naturstoff Kleidung nach Maß',
@@ -591,7 +591,7 @@ export const HUB_COPY: L3<HubCopy> = {
     related: 'Leinen- & Baumwollkleidung',
   },
   ru: {
-    title: `Пошив из льна в Анталье на заказ — на заказ`,
+    title: `Пошив из льна в Анталье на заказ`,
     desc: `Пошив одежды из льна и хлопка на заказ и серийно в Анталье: рубашки, платья, брюки, пиджаки, дети. Срок — по модели и количеству. Terzi Can.`,
     keywords: ['пошив одежды из льна Анталья', 'индивидуальный пошив Анталья туристам', 'пошив на заказ Анталья на заказ', 'льняное платье на заказ Анталья', 'льняная рубашка на заказ Анталья', 'сувенир из Анталии одежда', 'ателье Анталья туристам', 'подгонка одежды Анталья срочно', 'портной Коньяалты', 'одежда из натуральных тканей Анталья', 'лён хлопок ателье Анталья', 'серийное производство одежды из льна Турция', 'производство льняной одежды Анталья', 'индивидуальный и серийный пошив лён', 'производитель льняной одежды Турция', 'пошив льняной одежды серийно Турция', 'лекала льняная одежда Турция', 'контрактное производство лён хлопок Турция', 'одежда из льна под своей маркой Турция', 'льняная одежда доставка в Россию',
       'мужская льняная рубашка на заказ', 'женская льняная одежда на заказ', 'льняная юбка на заказ', 'льняные шорты на заказ', 'одежда из натуральных тканей на заказ',
@@ -640,7 +640,7 @@ export const EXPRESS_COPY: L3<ExpressCopy> = {
       ['Dresses and skirts', 'Length, sides, straps and fit.'],
       ['Shirts and tops', 'Taking in, shortening and sleeve length.'],
       ['Jackets and suits', 'Sleeves, sides and fit.'],
-      ['Zippers, buttons and small tears', 'Zipper replacement.'],
+      ['Zippers and small tears', 'Zipper replacement.'],
     ],
     urgentH: 'Urgent? How it works',
     urgentSteps: [
@@ -710,7 +710,7 @@ export const EXPRESS_COPY: L3<ExpressCopy> = {
       ['Платья и юбки', 'Длина, бока, бретели и посадка.'],
       ['Рубашки и топы', 'Ушивание, укорачивание и длина рукавов.'],
       ['Пиджаки и костюмы', 'Рукава, бока и посадка.'],
-      ['Молнии, пуговицы и небольшие разрывы', 'Замена молнии.'],
+      ['Молнии и небольшие разрывы', 'Замена молнии.'],
     ],
     urgentH: 'Срочно? Как это работает',
     urgentSteps: [

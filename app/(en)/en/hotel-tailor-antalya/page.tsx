@@ -67,7 +67,7 @@ const jsonLd = {
 
 const SERVICES = [
   { icon: '📏', t: 'Alterations', d: 'Hemming, taking in, resizing — trousers, dresses, suits, skirts.' },
-  { icon: '🧵', t: 'Repairs', d: 'Zippers, tears, buttons, lining — fast, clean repair work.' },
+  { icon: '🧵', t: 'Repairs', d: 'Zippers and tears — fast, clean repair work.' },
   { icon: '👗', t: 'Wedding & Evening Wear', d: 'Careful fitting for the special occasion, scheduled on-site.' },
   { icon: '🧺', t: 'Ironing & Dry Cleaning', d: 'Steam pressing, professional dry cleaning, hotel pickup.' },
 ];

@@ -16,7 +16,7 @@ export const MAPS = 'https://www.google.com/maps?cid=6436895271281342624';
 const WA = (m: string) => `https://wa.me/905318986418?text=${encodeURIComponent(m)}`;
 
 export const PRICE_ROWS: { icon: string; rows: string[] }[] = [
-  { icon: '🔧', rows: [tryText('zipperPants'), tryText('zipperCoat'), 'Fotoğrafa göre', 'Fotoğrafa göre'] },
+  { icon: '🔧', rows: [tryText('zipperPants'), tryText('zipperCoat')] },
   { icon: '📏', rows: [tryText('hem'), tryText('waist'), tryText('sleeve'), tryText('dressAdjust'), tryText('eveningWeddingAlter')] },
   { icon: '✂️', rows: [tryText('skirtPantsSew'), tryText('dressSew'), tryText('groomSuit'), tryText('kidsSew')] },
   { icon: '🧺', rows: ['Fotoğrafa göre', 'Fotoğrafa göre', 'Fotoğrafa göre', 'Fotoğrafa göre'] },
@@ -26,7 +26,7 @@ export const PRICE_ROWS: { icon: string; rows: string[] }[] = [
 // null = fotoğrafa göre. Satır sırası PRICE_ROWS ile birebir aynıdır.
 const FOREIGN_BY_PHOTO: Record<'en' | 'de' | 'ru', string> = { en: 'By photo', de: 'Per Foto', ru: 'По фото' };
 const EUR_ROWS: { icon: string; rows: (string | null)[] }[] = [
-  { icon: '🔧', rows: [eurText('zipperPants'), eurText('zipperCoat'), null, null] },
+  { icon: '🔧', rows: [eurText('zipperPants'), eurText('zipperCoat')] },
   { icon: '📏', rows: [eurText('hem'), eurText('waist'), eurText('sleeve'), eurText('dressAdjust'), eurText('eveningWeddingAlter')] },
   { icon: '✂️', rows: [eurText('skirtPantsSew'), eurText('dressSew'), eurText('groomSuit'), eurText('kidsSew')] },
   { icon: '🧺', rows: [null, null, null, null] },
@@ -140,9 +140,7 @@ export const FT: Record<FLang, FiyatText> = {
     "priceNames": [
       [
         "Pantolon fermuarı değişimi",
-        "Mont fermuarı değişimi",
-        "Düğme, çıtçıt, kanca",
-        "Astar değişimi"
+        "Mont fermuarı değişimi"
       ],
       [
         "Paça kısaltma",
@@ -240,7 +238,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Elbisemin belini daraltmak istiyorum, ne kadar tutar?",
-        "Bel ve beden daraltma ₺200'den başlar. Kumaşa, astara ve modele göre değişir. Elbisenin fotoğrafını göndermeniz yeterli; provaya gelirseniz ölçü yerinde alınır."
+        "Bel ve beden daraltma ₺200'den başlar. Kumaşa ve modele göre değişir. Elbisenin fotoğrafını göndermeniz yeterli; provaya gelirseniz ölçü yerinde alınır."
       ],
       [
         "Pantolonumun paçasını kısaltmak istiyorum, ne kadar sürer?",
@@ -357,9 +355,7 @@ export const FT: Record<FLang, FiyatText> = {
     "priceNames": [
       [
         "Trouser zipper replacement",
-        "Coat zipper replacement",
-        "Buttons, snaps, hooks",
-        "Lining replacement"
+        "Coat zipper replacement"
       ],
       [
         "Hem shortening",
@@ -457,7 +453,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "I want to take in the waist of my dress. How much does it cost?",
-        "Waist and size reduction starts from €10 and depends on fabric, lining and model. Send a photo of the dress; if you visit for a fitting, measurements are taken on the spot."
+        "Waist and size reduction starts from €10 and depends on fabric and model. Send a photo of the dress; if you visit for a fitting, measurements are taken on the spot."
       ],
       [
         "I want to shorten my trousers. How long does it take?",
@@ -572,9 +568,7 @@ export const FT: Record<FLang, FiyatText> = {
     "priceNames": [
       [
         "Reißverschluss Hose ersetzen",
-        "Reißverschluss Mantel ersetzen",
-        "Knopf, Druckknopf, Haken",
-        "Futter ersetzen"
+        "Reißverschluss Mantel ersetzen"
       ],
       [
         "Kürzen (Saum)",
@@ -672,7 +666,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Ich möchte die Taille meines Kleides enger machen. Was kostet das?",
-        "Taillen- und Größenanpassung beginnt ab €10 und hängt von Stoff, Futter und Modell ab. Senden Sie ein Foto des Kleides; bei einer Anprobe wird vor Ort Maß genommen."
+        "Taillen- und Größenanpassung beginnt ab €10 und hängt von Stoff und Modell ab. Senden Sie ein Foto des Kleides; bei einer Anprobe wird vor Ort Maß genommen."
       ],
       [
         "Ich möchte meine Hose kürzen. Wie lange dauert das?",
@@ -787,9 +781,7 @@ export const FT: Record<FLang, FiyatText> = {
     "priceNames": [
       [
         "Замена молнии на брюках",
-        "Замена молнии на куртке",
-        "Пуговицы, кнопки, крючки",
-        "Замена подкладки"
+        "Замена молнии на куртке"
       ],
       [
         "Подшив (укорочение)",
@@ -887,7 +879,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Хочу ушить платье в талии. Сколько это стоит?",
-        "Уменьшение по талии и размеру — от €10, зависит от ткани, подкладки и модели. Пришлите фото платья; если придёте на примерку, мерки снимем на месте."
+        "Уменьшение по талии и размеру — от €10, зависит от ткани и модели. Пришлите фото платья; если придёте на примерку, мерки снимем на месте."
       ],
       [
         "Хочу укоротить брюки. Сколько времени это занимает?",

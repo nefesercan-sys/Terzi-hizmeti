@@ -67,7 +67,7 @@ const jsonLd = {
 
 const SERVICES = [
   { icon: '📏', t: 'Änderungsschneiderei', d: 'Kürzen, Enger machen, Anpassen — Hosen, Kleider, Anzüge, Röcke.' },
-  { icon: '🧵', t: 'Reparatur', d: 'Reißverschluss, Riss, Knopf, Futter — schnelle, saubere Reparatur.' },
+  { icon: '🧵', t: 'Reparatur', d: 'Reißverschluss und Riss — schnelle, saubere Reparatur.' },
   { icon: '👗', t: 'Braut- & Abendkleid', d: 'Vorsichtige Anpassung für den besonderen Anlass, mit Termin vor Ort.' },
   { icon: '🧺', t: 'Bügelservice & Reinigung', d: 'Dampfbügeln, professionelle chemische Reinigung, Abholung im Hotel.' },
 ];

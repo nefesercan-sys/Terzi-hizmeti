@@ -49,8 +49,8 @@ export const metadata: Metadata = {
 const SERVICES: { title: string; desc: string; rows: [string, string][] }[] = [
   { title: 'Änderungen', desc: 'Passform-Anpassungen, damit Kleidung genau sitzt.',
     rows: [['Hose kürzen', ''], ['Taille enger machen', ''], ['Ärmel kürzen', ''], ['Kleid / Jacke anpassen', ''], ['Brautkleid und Abendkleid', '']] },
-  { title: 'Reparatur', desc: 'Reißverschluss, Risse, Knöpfe und Futter.',
-    rows: [['Reißverschluss (Hose)', ''], ['Reißverschluss (Mantel)', ''], ['Knopf, Haken', '']] },
+  { title: 'Reparatur', desc: 'Reißverschluss und Risse.',
+    rows: [['Reißverschluss (Hose)', ''], ['Reißverschluss (Mantel)', '']] },
   { title: 'Maßanfertigung', desc: 'Kleidung nach Ihren Maßen, auch aus Leinen und Baumwolle.',
     rows: [['Herrenhose', ''], ['Damenkleid', ''], ['Abendkleid', ''], ['Kinderkleidung', '']] },
   { title: 'Bügeln und Reinigung', desc: 'Dampfbügeln und chemische Reinigung.',

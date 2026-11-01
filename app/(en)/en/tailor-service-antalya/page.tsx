@@ -89,14 +89,8 @@ const jsonLd = {
     },
     {
       '@type': 'FAQPage', '@id': `${PAGE_URL}#faq`,
-      mainEntity: [
-        { '@type': 'Question', name: 'Do you come to hotels in Belek, Lara and Kemer?', acceptedAnswer: { '@type': 'Answer', text: `Yes! Our mobile tailor comes to all hotels in Belek, Lara, Kemer and Side. Share your hotel name on WhatsApp. WhatsApp: ${PHONE}` } },
-        { '@type': 'Question', name: 'Is the mobile visit free?', acceptedAnswer: { '@type': 'Answer', text: 'Visits, pick-up and delivery to homes and hotels are free in every area we serve.' } },
-        { '@type': 'Question', name: 'Do you offer ironing and dry cleaning too?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, professional steam ironing and dry cleaning, with pickup and delivery to your hotel or address.' } },
-        { '@type': 'Question', name: 'How fast are urgent alterations?', acceptedAnswer: { '@type': 'Answer', text: `Yes, most repairs and hemming are completed the next day (urgent jobs 1–2 hours). WhatsApp: ${PHONE}` } },
-        { '@type': 'Question', name: 'Do you speak English?', acceptedAnswer: { '@type': 'Answer', text: 'Yes — write to us on WhatsApp in your own language and we will reply.' } },
-        ...EXTRA_FAQS.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
-      ],
+      // FAQS (görünür metin) ile birebir aynı kaynak; modül sırası nedeniyle getter.
+      get mainEntity() { return FAQS.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })); },
     },
   ],
 };
@@ -115,7 +109,7 @@ const OTHER_DISTRICTS = ['Belek', 'Kemer', 'Serik', 'Side'];
 const SERVICES = [
   { icon: '👔', tr: "Men's Tailoring", en: 'Shirts, trousers, jackets, suits', desc: 'Custom-fit garments made from scratch, to your exact measurements.', items: ['Shirt', 'Trousers', 'Jacket', 'Suit', 'Groom Suit'] },
   { icon: '👗', tr: "Women's Tailoring", en: 'Dresses, blouses, skirts, gowns', desc: 'Custom design and made-to-measure sewing for any occasion.', items: ['Dress', 'Blouse', 'Skirt', 'Evening Gown'] },
-  { icon: '🔧', tr: 'Clothing Repair', en: 'Zippers, tears, buttons', desc: 'Everyday repairs — zippers, torn seams, buttons, hooks, lining.', items: ['Zipper Replacement', 'Tear Repair', 'Button Repair', 'Lining Replacement'] },
+  { icon: '🔧', tr: 'Clothing Repair', en: 'Zippers, tears, seams', desc: 'Everyday repairs — zippers and torn seams.', items: ['Zipper Replacement', 'Tear Repair'] },
   { icon: '📏', tr: 'Alterations', en: 'Hemming, taking in, resizing', desc: 'Precise fit adjustments so clothing sits exactly right.', items: ['Hemming', 'Waist Taking In', 'Sleeve Shortening', 'Dress Resizing'] },
   { icon: '🧺', tr: 'Ironing & Dry Cleaning', en: 'Steam ironing, dry cleaning', desc: 'Professional steam ironing and dry cleaning, picked up and delivered.', items: ['Ironing', 'Dry Cleaning', 'Laundry & Ironing'] },
   { icon: '🚗', tr: 'Mobile / Hotel Service', en: 'We come to you', desc: 'Measurement, collection and delivery at your hotel or address.', items: ['Hotel Visit', 'Home Visit', 'Free Pickup & Delivery'] },
@@ -124,8 +118,8 @@ const SERVICES = [
 const REPAIR_CATEGORIES = [
   { icon: '✂️', title: 'Tailoring', keyword: 'custom tailoring Antalya', desc: 'Made-from-scratch garments to your exact measurements.',
     rows: [["Men's Trousers", ''], ["Women's Dress", ''], ['Evening Gown', ''], ["Children's Clothing", '']] as [string, string][] },
-  { icon: '🔧', title: 'Repair', keyword: 'clothing repair Antalya', desc: 'Zippers, tears, buttons — everyday fixes.',
-    rows: [['Zipper Replacement (Trousers)', ''], ['Zipper Replacement (Coat)', ''], ['Button, Hook Repair', ''], ['Lining Replacement', '']] as [string, string][] },
+  { icon: '🔧', title: 'Repair', keyword: 'clothing repair Antalya', desc: 'Zippers and tears — everyday fixes.',
+    rows: [['Zipper Replacement (Trousers)', ''], ['Zipper Replacement (Coat)', '']] as [string, string][] },
   { icon: '📏', title: 'Alterations', keyword: 'hemming Antalya', desc: 'Precise fit adjustments to your body.',
     rows: [['Hemming', ''], ['Waist Taking In', ''], ['Sleeve Shortening', ''], ['Dress / Jacket Resizing', ''], ['Wedding & Evening Dress', '']] as [string, string][] },
   { icon: '🧺', title: 'Ironing & Dry Cleaning', keyword: 'ironing dry cleaning Antalya', desc: 'Professional steam ironing and dry cleaning.',

@@ -48,7 +48,7 @@ export function businessNode(opts: { reviews?: boolean } = {}) {
     '@type': 'ContactPoint',
     telephone: PHONE_TEL,
     contactType: 'customer service',
-    areaServed: 'TR',
+    areaServed: ['TR', 'DE', 'RU', 'GB', 'PL', 'UA', 'NL', 'FR', 'ES', 'SA'],
     availableLanguage: ['Turkish', 'English', 'Russian', 'German', 'Polish', 'Ukrainian', 'Dutch', 'French', 'Spanish', 'Arabic'],
   }],
   sameAs: [MAPS, `https://wa.me/${PHONE_TEL.replace('+', '')}`, 'https://swaphubs.com/terzi'],

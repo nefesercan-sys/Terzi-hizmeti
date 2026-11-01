@@ -5,7 +5,7 @@ import { businessNode, OG_DEFAULT, waLink, TURIST_UPDATE } from '@/lib/turist-ke
 import { INTL, iUrl, type ILang } from '@/lib/intl';
 import { svcUrl } from '@/lib/intl-services';
 import { TOPICS, TOPIC_IDS, TOPIC_UI, topicUrl, type TopicId } from '@/lib/intl-topics';
-import { UDATA, U_IDS, uUrl } from '@/lib/uretim';
+import { UDATA, U_IDS, uUrl, ANAVERA_HOME } from '@/lib/uretim';
 import { HIZMET, HIZMET_IDS, hizmetUrl, type HizmetId } from '@/lib/intl-hizmet';
 
 const C = { green: '#2C4A3E', gold: '#D4B07A', cream: '#FAF7F2', sand: '#F2EDE4', ink: '#1C1814', muted: '#6B5F53', line: 'rgba(44,74,62,.15)' };
@@ -19,7 +19,8 @@ export function topicJsonLd(lang: ILang, t: TopicId | HizmetId, isHizmet = false
       businessNode('en'),
       { '@type': 'WebPage', '@id': `${url}#webpage`, url, name: c.title, description: c.desc, inLanguage: lang, dateModified: TURIST_UPDATE, about: { '@id': `${SITE}#business` },
         primaryImageOfPage: { '@type': 'ImageObject', url: OG_DEFAULT }, isPartOf: { '@id': `${SITE}${iUrl(lang)}#webpage` } },
-      { '@type': 'Service', '@id': `${url}#service`, name: c.h1, provider: { '@id': `${SITE}#business` }, areaServed: [{ '@type': 'Place', name: 'Antalya' }, { '@type': 'Place', name: 'Worldwide (shipping)' }], inLanguage: lang },
+      ...(!isHizmet && t === 'tekstil' ? [{ '@type': 'Brand', '@id': `${SITE}#anavera`, name: 'Anavera Tekstil', description: 'Anavera Tekstil is the serial production and export sub-brand of Terzi Can (Antalya). No minimum order; worldwide shipping.', url: `${SITE}${ANAVERA_HOME('en')}`, logo: OG_DEFAULT }] : []),
+      { '@type': 'Service', '@id': `${url}#service`, ...(!isHizmet && t === 'tekstil' ? { brand: { '@id': `${SITE}#anavera` } } : {}), name: c.h1, provider: { '@id': `${SITE}#business` }, areaServed: [{ '@type': 'Place', name: 'Antalya' }, { '@type': 'Place', name: 'Worldwide (shipping)' }], inLanguage: lang },
       { '@type': 'FAQPage', '@id': `${url}#faq`, mainEntity: c.faq.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) },
     ],
   };

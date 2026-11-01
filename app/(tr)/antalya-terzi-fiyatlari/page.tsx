@@ -122,7 +122,7 @@ const jsonLd = {
     },
     {
       '@type': 'Service', '@id': `${PAGE_URL}#service`,
-      serviceType: 'Terzi, tamir, tadilat, özel dikim, ütü ve kuru temizleme',
+      serviceType: 'Terzi, tamir, tadilat, özel dikim',
       provider: { '@type': ['LocalBusiness', 'ClothingStore'], name: 'Terzi Can', telephone: PHONE_TEL, url: SITE },
       areaServed: ['Konyaaltı', 'Muratpaşa', 'Kepez', 'Lara', 'Antalya'].map((n) => ({ '@type': 'Place', name: n })),
       hasOfferCatalog: {
@@ -199,7 +199,7 @@ export default function TerziFiyatlariPage() {
           <div className="ctr">
             <div className="sec-head">
               <span className="eyebrow">₺ Fiyat Listesi 2026</span>
-              <h2 className="sec-h ff" id="price-h">Terzi Fiyat Listesi: Tamir, Tadilat, Dikim, Ütü</h2>
+              <h2 className="sec-h ff" id="price-h">Terzi Fiyat Listesi: Tamir, Tadilat, Dikim</h2>
               <p className="sec-sub">Başlangıç fiyatlarıdır; kumaş ve işçiliğe göre netleşir. Fotoğraf gönderin, ücretsiz teklif alın.</p>
             </div>
             <div className="price-grid" id="dikim">

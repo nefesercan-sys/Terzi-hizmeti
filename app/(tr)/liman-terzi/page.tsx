@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   title: { absolute: "Liman Terzi · Paça ₺200, Fermuar ₺300 · Adrese Servis" },
   description:
     "Liman terzi: paça kısaltma ₺200, fermuar değişimi ₺300, bel daraltma, tamir tadilat. Liman'a ücretsiz servis. Her gün 08:00–23:00. ☎ " + PHONE,
-  keywords: fitKeywords(Array.from(new Set(['Liman tamir tadilat', 'Liman söküğü dikme', 'Liman yırtık tamiri', 'Liman elbise tamiri', 'Liman terzi', 'Liman mahallesi terzi', 'Liman Konyaaltı terzi', 'Liman paça kısaltma', 'Liman fermuar tamiri', 'Liman bel daraltma', 'Liman elbise dikimi', 'Liman gelinlik tadilatı', 'Liman ütü hizmeti', 'Liman kuru temizleme', 'Liman terzi fiyatları 2026', 'Konyaaltı Liman dikiş atölyesi', 'Liman fermuar değişimi', 'Liman fermuar değiştirme', 'Liman beden ayarlama', 'Liman beden ayarlaması', 'Liman beden küçültme', 'Liman beden büyütme', 'Liman pantolon daraltma', 'Liman pantolon kısaltma', 'Liman kot paçası kısaltma', 'Liman abiye tamiri', 'Liman mont fermuar değişimi', 'Liman ceket tadilatı', 'Liman gömlek daraltma', 'Liman etek daraltma', 'Liman şort kısaltma', 'Liman özel dikim', 'Liman bayan elbise dikimi', 'Liman yakınımda terzi', 'Konyaaltı Liman terzi tamir tadilat', 'Liman bay bayan elbise tamiri', 'Liman terzi', 'Liman bay bayan terzi', 'Liman dikim', 'Liman tamir tadilat', 'Liman elbise tamiri', 'Liman elbise tadilatı', 'Liman fermuar değişimi', 'Liman fermuar tamiri', 'Liman boy kısaltma', 'Liman bel daraltma', 'Liman etek boyu kısaltma', 'Liman pantolon boyu kısaltma', 'Liman paça kısaltma', 'Liman kot paçası kısaltma', 'Liman beden ölçüsüne göre elbise tadilatı', 'Liman mont tamiri', 'Liman ceket daraltma', 'Liman gömlek daraltma', 'Liman şort kısaltma', 'Liman pantolon daraltma', 'Liman etek daraltma', 'Liman elbise daraltma', 'Liman elbise dikimi']))),
+  keywords: fitKeywords(Array.from(new Set(['Liman tamir tadilat', 'Liman söküğü dikme', 'Liman yırtık tamiri', 'Liman elbise tamiri', 'Liman terzi', 'Liman mahallesi terzi', 'Liman Konyaaltı terzi', 'Liman paça kısaltma', 'Liman fermuar tamiri', 'Liman bel daraltma', 'Liman elbise dikimi', 'Liman gelinlik tadilatı', 'Liman terzi fiyatları 2026', 'Konyaaltı Liman dikiş atölyesi', 'Liman fermuar değişimi', 'Liman fermuar değiştirme', 'Liman beden ayarlama', 'Liman beden ayarlaması', 'Liman beden küçültme', 'Liman beden büyütme', 'Liman pantolon daraltma', 'Liman pantolon kısaltma', 'Liman kot paçası kısaltma', 'Liman abiye tamiri', 'Liman mont fermuar değişimi', 'Liman ceket tadilatı', 'Liman gömlek daraltma', 'Liman etek daraltma', 'Liman şort kısaltma', 'Liman özel dikim', 'Liman bayan elbise dikimi', 'Liman yakınımda terzi', 'Konyaaltı Liman terzi tamir tadilat', 'Liman bay bayan elbise tamiri', 'Liman terzi', 'Liman bay bayan terzi', 'Liman dikim', 'Liman tamir tadilat', 'Liman elbise tamiri', 'Liman elbise tadilatı', 'Liman fermuar değişimi', 'Liman fermuar tamiri', 'Liman boy kısaltma', 'Liman bel daraltma', 'Liman etek boyu kısaltma', 'Liman pantolon boyu kısaltma', 'Liman paça kısaltma', 'Liman kot paçası kısaltma', 'Liman beden ölçüsüne göre elbise tadilatı', 'Liman mont tamiri', 'Liman ceket daraltma', 'Liman gömlek daraltma', 'Liman şort kısaltma', 'Liman pantolon daraltma', 'Liman etek daraltma', 'Liman elbise daraltma', 'Liman elbise dikimi']))),
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   alternates: { canonical: PAGE_URL, languages: { tr: PAGE_URL, en: `${SITE}${DISTRICT_BASE.en}/liman`, ru: `${SITE}${DISTRICT_BASE.ru}/liman`, de: `${SITE}${DISTRICT_BASE.de}/liman`, 'x-default': PAGE_URL } },
   openGraph: {
@@ -39,8 +39,8 @@ const jsonLd = {
       '@type': 'WebPage',
       '@id': `${PAGE_URL}#webpage`,
       url: PAGE_URL,
-      name: 'Liman Terzi Konyaaltı — Dikim, Tamir, Tadilat, Ütü Hizmeti',
-      description: 'Konyaaltı Liman mahallesine terzi hizmeti. Paça kısaltma, fermuar değişimi, bel daraltma, elbise dikimi, gelinlik tadilatı, ütü ve kuru temizleme.',
+      name: 'Liman Terzi Konyaaltı — Dikim, Tamir, Tadilat',
+      description: 'Konyaaltı Liman mahallesine terzi hizmeti. Paça kısaltma, fermuar değişimi, bel daraltma, elbise dikimi, gelinlik tadilatı.',
       inLanguage: 'tr',
       isPartOf: { '@id': `${SITE}#website` },
       about: { '@id': `${SITE}#business` },
@@ -60,7 +60,7 @@ const jsonLd = {
     {
       '@type': 'Service',
       '@id': `${PAGE_URL}#service`,
-      serviceType: 'Terzi, Dikim, Tamir, Tadilat, Ütü Hizmeti',
+      serviceType: 'Terzi, Dikim, Tamir, Tadilat',
       provider: { '@id': `${SITE}#business` },
       areaServed: { '@type': 'Place', name: 'Liman, Konyaaltı, Antalya' },
       offers: {
@@ -97,7 +97,6 @@ const FIYATLAR: [string, string, string][] = [
   ['Bel Daraltma', 'Elbise, pantolon, ceket', '₺200+'],
   ['Elbise Dikimi', 'Kadın, erkek, çocuk özel dikim', '₺800+'],
   ['Gelinlik Tadilatı', 'Hassas daraltma, boy ayarı', '₺800+'],
-  ['Ütü Hizmeti', 'Buharlı ütü, otel alım-teslim', 'Fotoğrafa göre'],
 ];
 
 export default function LimanPage() {
@@ -130,7 +129,7 @@ export default function LimanPage() {
             </h1>
             <p className="hero-desc">
               Liman mahallesine terzi hizmeti. Paça kısaltma, fermuar değişimi,
-              bel daraltma, özel dikim, gelinlik tadilatı, ütü ve kuru temizleme —
+              bel daraltma, özel dikim, gelinlik tadilatı —
               ₺200'den başlayan fiyatlarla; normal işler ertesi gün, acil işler 1–2 saatte teslim.
             </p>
             <div className="hero-btns">
@@ -197,10 +196,6 @@ export default function LimanPage() {
               <div className="howto-item">
                 <div className="howto-t">Özel Dikim & Gelinlik Tadilatı</div>
                 <div className="howto-d">Kadın, erkek, çocuk kıyafet dikimi; gelinlik ve abiye hassas tadilatı.</div>
-              </div>
-              <div className="howto-item">
-                <div className="howto-t">Ütü & Kuru Temizleme</div>
-                <div className="howto-d">Buharlı ütü ve kuru temizleme, otel alım-teslimatı dahil.</div>
               </div>
             </div>
           </div>

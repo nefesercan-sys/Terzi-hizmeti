@@ -185,9 +185,6 @@ const REPAIR_CATEGORIES: Record<Lang, RepairCategory[]> = {
     { icon: '📏', title: 'Tadilat Hizmetleri', keyword: 'paça kısaltma Antalya · bel daraltma Konyaaltı',
       desc: 'Kıyafetinizi vücudunuza tam oturtan hassas ölçü ayarları.',
       rows: [['Paça Kısaltma (Pantolon/Kot/Etek)', '₺200+'], ['Bel Daraltma', '₺200+'], ['Kol Kısaltma', '₺200+'], ['Elbise / Ceket Daraltma', '₺200+'], ['Gelinlik & Abiye Tadilatı', '₺800+']] },
-    { icon: '🧺', title: 'Ütü & Kuru Temizleme', keyword: 'ütü hizmeti Antalya · kuru temizleme Konyaaltı',
-      desc: 'Profesyonel buharlı ütü ve kuru temizleme. Otel ve adreslerden alım-teslimat.',
-      rows: [['Ütü (adet)', 'Fotoğrafa göre'], ['Kuru Temizleme (Elbise)', 'Fotoğrafa göre'], ['Kuru Temizleme (Mont/Kaban)', 'Fotoğrafa göre'], ['Çamaşır & Ütü (kg)', 'Fotoğrafa göre']] },
   ],
   en: [
     { icon: '✂️', title: 'Tailoring Services', keyword: 'tailor Antalya · custom-fit sewing Konyaaltı',
@@ -199,9 +196,6 @@ const REPAIR_CATEGORIES: Record<Lang, RepairCategory[]> = {
     { icon: '📏', title: 'Alterations', keyword: 'hemming Antalya · waist taking in Konyaaltı',
       desc: 'Precise fit adjustments so your clothing sits exactly right on your body.',
       rows: [['Hemming (Trousers/Jeans/Skirt)', 'By photo'], ['Waist Taking In', 'By photo'], ['Sleeve Shortening', 'By photo'], ['Dress / Jacket Taking In', 'By photo'], ['Wedding & Evening Dress Alterations', 'By photo']] },
-    { icon: '🧺', title: 'Ironing & Dry Cleaning', keyword: 'ironing service Antalya · dry cleaning Konyaaltı',
-      desc: 'Professional steam ironing and dry cleaning.',
-      rows: [['Ironing (per item)', 'By photo'], ['Dry Cleaning (Dress)', 'By photo'], ['Dry Cleaning (Coat)', 'By photo'], ['Laundry & Ironing (per kg)', 'By photo']] },
   ],
   ru: [
     { icon: '✂️', title: 'Пошив одежды', keyword: 'портной Анталья · пошив по меркам Коньяалты',
@@ -213,9 +207,6 @@ const REPAIR_CATEGORIES: Record<Lang, RepairCategory[]> = {
     { icon: '📏', title: 'Подгонка одежды', keyword: 'укорачивание брюк Анталья · заужение талии Коньяалты',
       desc: 'Точная подгонка по фигуре — чтобы одежда сидела идеально.',
       rows: [['Укорачивание (брюки/джинсы/юбка)', 'По фото'], ['Заужение талии', 'По фото'], ['Укорачивание рукавов', 'По фото'], ['Заужение платья / пиджака', 'По фото'], ['Подгонка свадебного/вечернего платья', 'По фото']] },
-    { icon: '🧺', title: 'Глажка и химчистка', keyword: 'глажка Анталья · химчистка Коньяалты',
-      desc: 'Профессиональная паровая глажка и химчистка.',
-      rows: [['Глажка (за вещь)', 'По фото'], ['Химчистка (платье)', 'По фото'], ['Химчистка (пальто)', 'По фото'], ['Стирка и глажка (за кг)', 'По фото']] },
   ],
   de: [
     { icon: '✂️', title: 'Schneiderdienste', keyword: 'Maßschneiderei Antalya · Konyaaltı',
@@ -227,9 +218,6 @@ const REPAIR_CATEGORIES: Record<Lang, RepairCategory[]> = {
     { icon: '📏', title: 'Änderungsschneiderei', keyword: 'Hosen kürzen Antalya · Taille Konyaaltı',
       desc: 'Präzise Passformanpassungen, damit Ihre Kleidung genau richtig an Ihrem Körper sitzt.',
       rows: [['Kürzen (Hose/Jeans/Rock)', 'Per Foto'], ['Taille enger machen', 'Per Foto'], ['Ärmel kürzen', 'Per Foto'], ['Kleid / Jacke enger machen', 'Per Foto'], ['Braut- & Abendkleid ändern', 'Per Foto']] },
-    { icon: '🧺', title: 'Bügeln & Reinigung', keyword: 'Bügelservice Antalya · Reinigung Konyaaltı',
-      desc: 'Professionelles Dampfbügeln und chemische Reinigung. Abholung und Lieferung vom Hotel.',
-      rows: [['Bügeln (pro Stück)', 'Per Foto'], ['Chemische Reinigung (Kleid)', 'Per Foto'], ['Chemische Reinigung (Mantel)', 'Per Foto'], ['Waschen & Bügeln (pro kg)', 'Per Foto']] },
   ],
 };
 
@@ -362,7 +350,7 @@ export default function KonyaaltiTailorServicePage() {
             <div className="ctr">
               <div className="sec-head">
                 <span className="eyebrow">₺ Fiyatlar 2026 · Prices · Цены</span>
-                <h2 className="sec-h" id="price-h">Dikim, Tamir, Tadilat ve Ütü Hizmetleri</h2>
+                <h2 className="sec-h" id="price-h">Dikim, Tamir ve Tadilat Hizmetleri</h2>
                 <p className="sec-sub">Antalya Konyaaltı terzi fiyatları — Türkçe, İngilizce, Rusça ve Almanca. Kesin fiyat için WhatsApp&apos;tan fotoğraf gönderin.</p>
               </div>
 
@@ -401,7 +389,7 @@ export default function KonyaaltiTailorServicePage() {
               ))}
 
               <div style={{ textAlign: 'center', marginTop: '1.8rem' }}>
-                <a href={WA('Merhaba, dikim/tamir/tadilat/ütü fiyatlarını öğrenmek istiyorum. / I would like to know the prices. / Хочу узнать цены.')}
+                <a href={WA('Merhaba, dikim/tamir/tadilat fiyatlarını öğrenmek istiyorum. / I would like to know the prices. / Хочу узнать цены.')}
                   target="_blank" rel="noopener noreferrer" className="btn-primary">
                   <span aria-hidden="true">📲</span> Fiyat Sor · Get a Quote · Узнать цену
                 </a>

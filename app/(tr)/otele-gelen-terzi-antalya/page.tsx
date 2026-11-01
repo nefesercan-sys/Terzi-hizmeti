@@ -242,7 +242,7 @@ export default function MobileTailorHotelPage() {
           </section>
 
           {/* SÜREÇ ADIMLARI */}
-          <OrnekGorselSeridi konu={'otel'} lang="tr" anahtarlar={['eve-gelen-terzi', 'kuru-temizleme-utu', 'erkek-takim-olcu', 'abiye-elbise-atolye']} sayfaUrl="https://terzihizmeti.com.tr/otele-gelen-terzi-antalya" />
+          <OrnekGorselSeridi konu={'otel'} lang="tr" anahtarlar={['eve-gelen-terzi', 'erkek-takim-olcu', 'abiye-elbise-atolye']} sayfaUrl="https://terzihizmeti.com.tr/otele-gelen-terzi-antalya" />
 
           <section className="sec" style={{ background: 'rgba(0,0,0,.12)' }} aria-labelledby="proc-h">
             <div className="ctr">

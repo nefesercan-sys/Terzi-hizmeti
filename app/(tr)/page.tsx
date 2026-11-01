@@ -109,7 +109,7 @@ const jsonLd = {
         'Schneider Can Antalya', 'Änderungsschneiderei Konyaaltı',
       ],
       description:
-        'Professional tailor and clothing alteration workshop in Konyaaltı, Antalya since 2006. Services: pants hemming, zipper replacement, waist adjustment, dressmaking, wedding dress alterations, dry cleaning. Mobile tailor service to Hurma, Liman, Sarisu, Gursu, Uncali. message us on WhatsApp in your language.',
+        'Professional tailor and clothing alteration workshop in Konyaaltı, Antalya since 2006. Services: pants hemming, zipper replacement, waist adjustment, dressmaking, wedding dress alterations. Mobile tailor service to Hurma, Liman, Sarisu, Gursu, Uncali. message us on WhatsApp in your language.',
       url: SITE,
       telephone: PHONE_TEL,
       priceRange: '₺₺',
@@ -209,9 +209,8 @@ const FOTO: Record<string, string> = {
   '03': '/gorseller/bel-daraltma-manken.webp',
   '04': '/gorseller/kalip-ve-makas.webp',
   '05': '/gorseller/gelinlik-abiye.webp',
-  '06': '/gorseller/kuru-temizleme-utu.webp',
-  '07': '/gorseller/eve-gelen-terzi.webp',
-  '08': '/gorseller/uniforma.webp',
+  '06': '/gorseller/eve-gelen-terzi.webp',
+  '07': '/gorseller/uniforma.webp',
 };
 
 const SERVICES = [
@@ -220,9 +219,8 @@ const SERVICES = [
   { n:'03', title:'Bel Daraltma & Tadilat', en:'Waist Alterations', ru:'Подгонка по фигуре', sub:'Elbise · Pantolon · Ceket', desc:'Elbise, pantolon ve ceketlerde bel daraltma, vücuda tam oturan ölçü ayarı.', price:'₺200+', time:'Acil 1–2 saat', wa:WA_TR, tur:'elbise' as IlustrasyonTur },
   { n:'04', title:'Özel Elbise Dikimi', en:'Custom Tailoring', ru:'Пошив на заказ', sub:'Kadın · Erkek · Çocuk / Women & Men', desc:'Kadın elbisesi, erkek takım elbise, gömlek — ölçünüze özel sıfırdan dikim.', price:'₺800+', time:'Modele göre', wa:WA_TR, tur:'makas' as IlustrasyonTur },
   { n:'05', title:'Gelinlik & Abiye Tadilatı', en:'Wedding Dress Alterations', ru:'Ремонт свадебных платьев', sub:'Özel Gün Kıyafetleri / Evening Gowns', desc:'Özel gün kıyafetlerinde hassas daraltma, boy ayarı ve detaylı onarım.', price:'₺800+', time:'Ertesi gün', wa:WA_TR, tur:'gelinlik' as IlustrasyonTur },
-  { n:'06', title:'Kuru Temizleme & Ütü', en:'Dry Cleaning & Ironing', ru:'Химчистка и глажка', sub:'Profesyonel Bakım / Laundry', desc:'Profesyonel kuru temizleme, buharlı ütü ve pres hizmeti. Otellerden alım.', price:'Fotoğrafa göre', time:'1–2 saat', wa:WA_TR, tur:'utu' as IlustrasyonTur },
-  { n:'07', title:'Eve Gelen Terzi', en:'Mobile Tailor Pickup', ru:'Выездной портной', sub:'Eve ve Otele Ücretsiz / Free Pickup', desc:'Araçlı terzi servisi: adresinizde ölçü alma; özel dikimde süre modele ve adede göre, normal tadilat ertesi gün, acil işler 1–2 saatte teslim.', price:'Ücretsiz / Free', time:'Ertesi gün', wa:WA_TR, tur:'servis' as IlustrasyonTur },
-  { n:'08', title:'Üniforma & Seri İmalat', en:'Uniform Manufacturing', ru:'Пошив униформы', sub:'Otel · Restoran · Okul / Hotel & Uniforms', desc:'Toplu üniforma üretimi, fason tekstil, seri imalat ve nakış hizmeti.', price:'Teklif Al', time:'Proje bazlı', wa:WA_TR, tur:'gomlek' as IlustrasyonTur },
+  { n:'06', title:'Eve Gelen Terzi', en:'Mobile Tailor Pickup', ru:'Выездной портной', sub:'Eve ve Otele Ücretsiz / Free Pickup', desc:'Araçlı terzi servisi: adresinizde ölçü alma; özel dikimde süre modele ve adede göre, normal tadilat ertesi gün, acil işler 1–2 saatte teslim.', price:'Ücretsiz / Free', time:'Ertesi gün', wa:WA_TR, tur:'servis' as IlustrasyonTur },
+  { n:'07', title:'Üniforma & Seri İmalat', en:'Uniform Manufacturing', ru:'Пошив униформы', sub:'Otel · Restoran · Okul / Hotel & Uniforms', desc:'Toplu üniforma üretimi, fason tekstil, seri imalat ve nakış hizmeti.', price:'Teklif Al', time:'Proje bazlı', wa:WA_TR, tur:'gomlek' as IlustrasyonTur },
 ];
 
 // Mahalle listesi TEK kaynaktan (lib/seo-data.ts); eve ve otele servis her bölgede ücretsiz.
@@ -473,7 +471,7 @@ export default function TerziHizmetiPage() {
         {/* SUMMARY / INTRODUCTION */}
         <div style={{background:C.bg2,padding:'2.2rem 1.5rem',borderBottom:`1px solid rgba(44,74,62,.10)`}}>
           <p style={{maxWidth:920,margin:'0 auto',fontSize:'.85rem',color:C.muted,lineHeight:1.9,textAlign:'center'}}>
-            <strong style={{color:'#2C4A3E'}}>Terzi Can Antalya</strong> — Konyaaltı'da 2006'dan bu yana faaliyet gösteren profesyonel terzi atölyesidir. WhatsApp'tan kendi dilinde yazışabildiğimiz ekibimizle hem yerli hem de yabancı misafirlerimize terzilik, kıyafet tamiri, elbise dikimi, gelinlik tadilatı ve kuru temizleme hizmeti sunuyoruz. Hurma, Liman, Sarısu, Gürsu ve Uncalı başta olmak üzere Konyaaltı ve çevresi'ya araçlı terzi servisi sağlıyoruz.
+            <strong style={{color:'#2C4A3E'}}>Terzi Can Antalya</strong> — Konyaaltı'da 2006'dan bu yana faaliyet gösteren profesyonel terzi atölyesidir. WhatsApp'tan kendi dilinde yazışabildiğimiz ekibimizle hem yerli hem de yabancı misafirlerimize terzilik, kıyafet tamiri, elbise dikimi, gelinlik tadilatı hizmeti sunuyoruz. Hurma, Liman, Sarısu, Gürsu ve Uncalı başta olmak üzere Konyaaltı ve çevresi'ya araçlı terzi servisi sağlıyoruz.
           </p>
         </div>
 
@@ -547,7 +545,7 @@ export default function TerziHizmetiPage() {
                 ['01','WhatsApp\'tan Yazın / Send Message','Fotoğraf ve talebinizi iletin, anında fiyat alın / Send photo for price.'],
                 ['02','Randevu Alın / Appointment','Atölyemize gelin veya adresten alım talep edin / Visit us or request pickup.'],
                 ['03','Dikim & Tadilat / Alteration','Uzman terzimiz ölçünüze göre dikim ve tamir yapar / Precise alteration.'],
-                ['04','Teslim Alın / Delivery','Kıyafetinizi ütülenmiş teslim alın / Pick up or home delivery.'],
+                ['04','Teslim Alın / Delivery','Kıyafetinizi hazır teslim alın / Pick up or home delivery.'],
               ] as [string,string,string][]).map(([n,t,d])=>(
                 <div key={n} style={{paddingTop:'1.5rem',borderTop:`2px solid ${n==='01'?'#C9A96E':'rgba(44,74,62,.12)'}`}}>
                   <div style={{fontFamily:'var(--font-syne),sans-serif',fontSize:'2.5rem',fontWeight:800,color:'#6F7F73',lineHeight:1,marginBottom:'.5rem'}} aria-hidden="true">{n}</div>

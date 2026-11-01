@@ -1,7 +1,7 @@
 // ============================================================
 // lib/blog-yazilari.ts — Blog yazıları (tek kaynak).
 // Yeni yazı eklemek için diziye bir nesne eklemek yeterli: /blog/[slug] sayfası, blog listesi ve sitemap otomatik güncellenir.
-// Fiyatlar yalnızca sitede zaten yayınlanan başlangıç fiyatlarıdır (paça/bel ₺200, fermuar ₺300, elbise dikimi ₺800'den, kuru temizleme ₺80+).
+// Fiyatlar yalnızca sitede zaten yayınlanan başlangıç fiyatlarıdır (paça/bel ₺200, fermuar ₺300, elbise dikimi ₺800'den).
 // Teslim süreleri lib/delivery.ts ile aynıdır (acil 1–2 saat, normal ertesi gün, özel dikim modele/adede göre).
 // Görseller yapay zekâ ile üretilmiş örnek görsellerdir (gerçek iş fotoğrafı değildir).
 // ============================================================

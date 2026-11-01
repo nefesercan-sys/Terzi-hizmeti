@@ -19,7 +19,7 @@ export const PRICE_ROWS: { icon: string; rows: string[] }[] = [
   { icon: '🔧', rows: [tryText('zipperPants'), tryText('zipperCoat'), tryText('button'), tryText('lining')] },
   { icon: '📏', rows: [tryText('hem'), tryText('waist'), tryText('sleeve'), tryText('dressAdjust'), tryText('eveningWeddingAlter')] },
   { icon: '✂️', rows: [tryText('skirtPantsSew'), tryText('dressSew'), tryText('groomSuit'), tryText('kidsSew')] },
-  { icon: '🧺', rows: ['₺80+', '₺300+', '₺500+', '₺80+/kg'] },
+  { icon: '🧺', rows: ['Fotoğrafa göre', 'Fotoğrafa göre', 'Fotoğrafa göre', 'Fotoğrafa göre'] },
 ];
 
 // Yabancı dillerde fiyat EURO ve "başlangıç" fiyatıdır (sahibinin verdiği liste); fiyatı verilmeyen kalemler "fotoğrafa göre".

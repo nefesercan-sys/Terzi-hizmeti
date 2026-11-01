@@ -4,7 +4,7 @@
 // Sahibin kararları (Ekim 2026):
 //   • Eve ve otele alım-teslim TÜM hizmet bölgelerinde ücretsiz.
 //   • Gelinlik DİKİMİ yapılmaz (gelinlik/abiye TADİLATI yapılır).
-//   • Yabancı dil sayfalarında fiyat EURO; kur varsayımı ₺20 = €1 (kur değişirse yalnız TRY_PER_EUR güncellenir).
+//   • Yabancı dil sayfalarında fiyat EURO; € fiyatlar sahibin belirlediği turist başlangıç fiyatlarıdır (gerçek kurla çevrilmez; sahip kararı Kasım 2026). TRY_PER_EUR yalnız EUR_OVERRIDE'ı olmayan kalemler içindir.
 // ============================================================
 export const TRY_PER_EUR = 20;
 export const HOURS = { open: '08:00', close: '23:00', text: '08:00–23:00' } as const;

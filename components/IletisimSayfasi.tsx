@@ -29,9 +29,9 @@ const SITE_CFG = {
   } as L4,
   pricesUrl: {
     tr: '/antalya-terzi-fiyatlari',
-    en: '/en/tailor-service-antalya',
-    ru: '/ru/uslugi-portnogo-antalya',
-    de: '/de/schneiderservice-antalya',
+    en: '/en/tailor-prices-antalya',
+    ru: '/ru/ceny-portnoy-antalya',
+    de: '/de/schneider-preise-antalya',
   } as L4,
   homeUrl: { tr: '/', en: '/', ru: '/', de: '/' } as L4,
   siteName: 'Terzi Can',

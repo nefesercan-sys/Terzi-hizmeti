@@ -143,7 +143,7 @@ function getBaseSiteMap(pathname: string): SiteMap | null {
           links: [
             { href: '/en/tailor-service-antalya', label: 'Tailor Service Antalya' },
             { href: EN_BASE, label: 'Hotel Tailor Antalya' },
-            { href: '/en/tailor-service-antalya', label: 'Tailor Services Antalya' },
+            { href: '/en/tailor-prices-antalya', label: 'Tailor Prices Antalya' },
             { href: '/en/linen-cotton-tailoring', label: 'Linen & Cotton Tailoring' },
             { href: '/antalya-terzi', label: 'Antalya Terzi (Türkçe)' },
           ].filter(not),
@@ -165,7 +165,7 @@ function getBaseSiteMap(pathname: string): SiteMap | null {
           links: [
             { href: '/de/schneiderservice-antalya', label: 'Schneiderservice Antalya' },
             { href: DE_BASE, label: 'Schneider Service Hotel Antalya' },
-            { href: '/de/schneiderservice-antalya', label: 'Schneiderservice Antalya' },
+            { href: '/de/schneider-preise-antalya', label: 'Schneider Preise Antalya' },
             { href: '/de/leinen-baumwolle-schneiderei', label: 'Leinen & Baumwolle Schneiderei' },
             { href: '/antalya-terzi', label: 'Antalya Terzi (Türkçe)' },
           ].filter(not),
@@ -186,7 +186,7 @@ function getBaseSiteMap(pathname: string): SiteMap | null {
         links: [
           { href: '/ru/uslugi-portnogo-antalya', label: 'Услуги портного Анталья' },
           { href: RU_BASE, label: 'Выездной портной Анталья' },
-          { href: '/ru/uslugi-portnogo-antalya', label: 'Услуги портного Анталья' },
+          { href: '/ru/ceny-portnoy-antalya', label: 'Цены портного Анталья' },
           { href: '/ru/poshiv-lyon-hlopok', label: 'Пошив из льна и хлопка' },
           { href: '/antalya-terzi', label: 'Antalya Terzi (Türkçe)' },
         ].filter(not),

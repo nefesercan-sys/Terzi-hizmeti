@@ -557,9 +557,9 @@ const BASE: Record<Exclude<Konu, 'terziFp' | 'hizmetFp'>, Item[]> = {
    },
    "p": {
     "tr": "Paça kısaltma ve bel daraltma ₺200'den, fermuar değişimi ₺300'den, gelinlik, abiye ve elbise tadilatı ₺800'den başlar. Kuru temizleme ₺80'den başlar.",
-    "en": "Hemming and waist taking-in start from ₺200, zipper replacement from ₺300, wedding, evening and dress alterations from ₺800. Dry cleaning starts from ₺80.",
-    "de": "Saum kürzen und Bund enger machen ab ₺200, Reißverschluss-Wechsel ab ₺300, Änderungen an Braut-, Abend- und Kleidern ab ₺800. Chemische Reinigung ab ₺80.",
-    "ru": "Подшив и ушивание в талии — от ₺200, замена молнии — от ₺300, переделка свадебных, вечерних платьев — от ₺800. Химчистка — от ₺80.",
+    "en": "Hemming and waist taking-in start from €10, zipper replacement from €20, coat alterations and coat zippers from €15, leather alterations from €30. Wedding, evening and custom dresses are priced by photo.",
+    "de": "Saum kürzen und Bund enger machen ab €10, Reißverschluss-Wechsel ab €20, Manteländerungen und Mantel-Reißverschlüsse ab €15, Lederänderungen ab €30. Braut-, Abendkleider und Maßanfertigung nach Foto.",
+    "ru": "Подшив и ушивание в талии — от €10, замена молнии — от €20, переделка пальто и молний на них — от €15, переделка кожаных изделий — от €30. Свадебные, вечерние платья и пошив на заказ — по фото.",
     "es": "Bajos y cintura desde ₺200, cambio de cremallera desde ₺300, arreglos de vestidos de novia, de noche y de vestir desde ₺800. Limpieza en seco desde ₺80.",
     "fr": "Ourlet et taille dès ₺200, remplacement de fermeture dès ₺300, retouches de robes de mariée, de soirée et d’habillées dès ₺800. Nettoyage à sec dès ₺80.",
     "pl": "Nogawki i talia od ₺200, wymiana zamka od ₺300, przeróbki sukni ślubnych, wieczorowych i sukienek od ₺800. Pranie chemiczne od ₺80.",

@@ -72,6 +72,7 @@ export type PCopy = {
   makeTitle: string; makeIntro: string; items: Pair[]; makeMore: string;
   printTitle: string; printText: string; printList: string[];
   fairTitle: string; fairText: string;
+  hotelTitle: string; hotelText: string; hotelList: string[];
   flowTitle: string; flowIntro: string; steps: Pair[]; flowNote: string;
   faqTitle: string; faq: Pair[];
   ctaTitle: string; ctaText: string;
@@ -108,6 +109,9 @@ export const COPY: Record<PLang, PCopy> = {
     printList: ['Logo ya da tasarım dosyanızla başlayabilirsiniz', 'Elinizde yalnızca bir fikir olması da yeterli', 'Model, ürün ve baskı çeşidini birlikte seçeriz'],
     fairTitle: 'Fuar ve organizasyonlar için',
     fairText: 'Antalya\'daki EXPO ve diğer fuarlarda ve organizasyonlarda ihtiyaç duyulan tekstil ürünlerini üretiyoruz: ekip giyimi, uniforma, dağıtılacak çantalar ve hediyelik ürünler.',
+    hotelTitle: 'Oteller ve işletmeler için set',
+    hotelText: 'Oda ve plaj çantası, personel önlüğü ve uniforma, hoş geldin hediyesi gibi ürünleri tek teklifte, logonuzla hazırlıyoruz. Sezon başında toplu sipariş verirseniz sezon içi yenileme ve ek siparişleri de aynı modelle sürdürürüz.',
+    hotelList: ['Oda ve plaj çantası (bez çanta)', 'Personel önlüğü, tişört ve uniforma', 'Hoş geldin hediyesi ve misafir çantası'],
     flowTitle: 'Sipariş nasıl ilerler',
     flowIntro: 'Üç adımda ilerliyoruz.',
     steps: [
@@ -158,6 +162,9 @@ export const COPY: Record<PLang, PCopy> = {
     printList: ['Start with a logo or design file', 'An idea alone is enough to begin', 'We choose the model, product and print type together'],
     fairTitle: 'For fairs and events',
     fairText: 'We produce the textile products needed at fairs and events, including the EXPO and other fairs in Antalya: team wear, uniforms, bags to hand out and gift items.',
+    hotelTitle: 'Sets for hotels and businesses',
+    hotelText: 'We prepare items such as room and beach bags, staff aprons and uniforms and welcome gifts in one quote, with your logo. If you order in bulk at the start of the season, we keep top-ups and extra orders going with the same model.',
+    hotelList: ['Room and beach bags (tote bags)', 'Staff aprons, T-shirts and uniforms', 'Welcome gifts and guest bags'],
     flowTitle: 'How an order goes',
     flowIntro: 'It takes three steps.',
     steps: [
@@ -208,6 +215,9 @@ export const COPY: Record<PLang, PCopy> = {
     printList: ['Start mit einer Logo- oder Designdatei', 'Für den Anfang genügt eine Idee', 'Modell, Produkt und Druckart wählen wir gemeinsam'],
     fairTitle: 'Für Messen und Veranstaltungen',
     fairText: 'Wir stellen Textilien her, die auf Messen und Veranstaltungen gebraucht werden, darunter die EXPO und andere Messen in Antalya: Teamkleidung, Uniformen, Taschen zum Verteilen und Geschenkartikel.',
+    hotelTitle: 'Sets für Hotels und Betriebe',
+    hotelText: 'Wir fertigen Zimmer- und Strandtaschen, Personalschürzen und Uniformen sowie Willkommensgeschenke in einem Angebot mit Ihrem Logo. Bei einer Sammelbestellung zu Saisonbeginn führen wir Nachbestellungen mit demselben Modell weiter.',
+    hotelList: ['Zimmer- und Strandtaschen (Stofftaschen)', 'Personalschürzen, T-Shirts und Uniformen', 'Willkommensgeschenke und Gästetaschen'],
     flowTitle: 'So läuft eine Bestellung ab',
     flowIntro: 'In drei Schritten.',
     steps: [
@@ -258,6 +268,9 @@ export const COPY: Record<PLang, PCopy> = {
     printList: ['Можно начать с файла логотипа или макета', 'Для начала достаточно одной идеи', 'Модель, изделие и вид печати выбираем вместе'],
     fairTitle: 'Для выставок и мероприятий',
     fairText: 'Мы выпускаем текстиль, который нужен на выставках и мероприятиях, в том числе на EXPO и других выставках в Анталье: командную одежду, форму, сумки для раздачи и подарочные изделия.',
+    hotelTitle: 'Комплекты для отелей и предприятий',
+    hotelText: 'Мы готовим сумки для номера и пляжа, фартуки и форму для персонала, приветственные подарки в одном предложении, с вашим логотипом. При крупном заказе в начале сезона мы продолжаем дозаказы по той же модели.',
+    hotelList: ['Сумки для номера и пляжа (шопперы)', 'Фартуки, футболки и форма для персонала', 'Приветственные подарки и сумки для гостей'],
     flowTitle: 'Как проходит заказ',
     flowIntro: 'Всё укладывается в три шага.',
     steps: [
@@ -308,6 +321,9 @@ export const COPY: Record<PLang, PCopy> = {
     printList: ['Puede empezar con un archivo de logo o de diseño', 'Basta una idea para empezar', 'Elegimos juntos el modelo, el producto y el tipo de estampación'],
     fairTitle: 'Para ferias y eventos',
     fairText: 'Fabricamos los productos textiles que se necesitan en ferias y eventos, como la EXPO de Antalya y otras ferias: ropa de equipo, uniformes, bolsas para repartir y artículos de regalo.',
+    hotelTitle: 'Conjuntos para hoteles y negocios',
+    hotelText: 'Preparamos bolsas de habitación y de playa, delantales y uniformes del personal y regalos de bienvenida en un solo presupuesto, con su logotipo. Si hace un pedido grande al inicio de la temporada, mantenemos las reposiciones con el mismo modelo.',
+    hotelList: ['Bolsas de habitación y de playa (bolsas de tela)', 'Delantales, camisetas y uniformes del personal', 'Regalos de bienvenida y bolsas para huéspedes'],
     flowTitle: 'Cómo avanza un pedido',
     flowIntro: 'Son tres pasos.',
     steps: [
@@ -358,6 +374,9 @@ export const COPY: Record<PLang, PCopy> = {
     printList: ['Vous pouvez partir d\'un fichier de logo ou de design', 'Une simple idée suffit pour commencer', 'Nous choisissons ensemble le modèle, le produit et le type d\'impression'],
     fairTitle: 'Pour les salons et les événements',
     fairText: 'Nous fabriquons les produits textiles dont on a besoin lors des salons et des événements, comme l\'EXPO d\'Antalya et d\'autres salons : tenues d\'équipe, uniformes, sacs à distribuer et objets cadeaux.',
+    hotelTitle: 'Ensembles pour hôtels et entreprises',
+    hotelText: 'Nous préparons sacs de chambre et de plage, tabliers et uniformes du personnel et cadeaux de bienvenue dans un seul devis, avec votre logo. Si vous commandez en gros en début de saison, nous poursuivons les réassorts avec le même modèle.',
+    hotelList: ['Sacs de chambre et de plage (sacs en tissu)', 'Tabliers, tee-shirts et uniformes du personnel', 'Cadeaux de bienvenue et sacs pour les clients'],
     flowTitle: 'Le déroulement d\'une commande',
     flowIntro: 'Cela se fait en trois étapes.',
     steps: [
@@ -408,6 +427,9 @@ export const COPY: Record<PLang, PCopy> = {
     printList: ['Można zacząć od pliku z logo lub projektem', 'Na początek wystarczy sam pomysł', 'Model, produkt i rodzaj nadruku wybieramy wspólnie'],
     fairTitle: 'Na targi i wydarzenia',
     fairText: 'Wykonujemy wyroby tekstylne potrzebne na targach i wydarzeniach, takich jak EXPO w Antalyi i inne targi: odzież zespołową, mundury, torby do rozdawania i upominki.',
+    hotelTitle: 'Zestawy dla hoteli i firm',
+    hotelText: 'Przygotowujemy torby pokojowe i plażowe, fartuchy i mundury dla personelu oraz prezenty powitalne w jednej ofercie, z Państwa logo. Przy większym zamówieniu na początku sezonu kontynuujemy dozamówienia tym samym modelem.',
+    hotelList: ['Torby pokojowe i plażowe (torby materiałowe)', 'Fartuchy, koszulki i mundury dla personelu', 'Prezenty powitalne i torby dla gości'],
     flowTitle: 'Jak przebiega zamówienie',
     flowIntro: 'To trzy kroki.',
     steps: [
@@ -458,6 +480,9 @@ export const COPY: Record<PLang, PCopy> = {
     printList: ['Можна почати з файлу логотипу або макета', 'Для початку досить самої ідеї', 'Модель, виріб і вид друку обираємо разом'],
     fairTitle: 'Для виставок і заходів',
     fairText: 'Виготовляємо текстильні вироби, які потрібні на виставках і заходах, зокрема на EXPO та інших виставках в Анталії: командний одяг, уніформу, сумки для роздачі та подарункові вироби.',
+    hotelTitle: 'Комплекти для готелів і підприємств',
+    hotelText: 'Ми готуємо сумки для номера та пляжу, фартухи й форму для персоналу, вітальні подарунки в одній пропозиції, з вашим логотипом. Якщо замовити більшу партію на початку сезону, дозамовлення продовжуємо за тією ж моделлю.',
+    hotelList: ['Сумки для номера та пляжу (тканинні сумки)', 'Фартухи, футболки та форма для персоналу', 'Вітальні подарунки та сумки для гостей'],
     flowTitle: 'Як проходить замовлення',
     flowIntro: 'Усе вміщається у три кроки.',
     steps: [
@@ -508,6 +533,9 @@ export const COPY: Record<PLang, PCopy> = {
     printList: ['U kunt beginnen met een logo- of ontwerpbestand', 'Een idee is genoeg om te starten', 'Model, product en soort bedrukking kiezen we samen'],
     fairTitle: 'Voor beurzen en evenementen',
     fairText: 'Wij maken de textielproducten die op beurzen en evenementen nodig zijn, zoals de EXPO in Antalya en andere beurzen: teamkleding, uniformen, tassen om uit te delen en relatiegeschenken.',
+    hotelTitle: 'Sets voor hotels en bedrijven',
+    hotelText: 'Wij maken kamer- en strandtassen, personeelsschorten en uniformen en welkomstcadeaus in één offerte, met uw logo. Bestelt u aan het begin van het seizoen een grotere partij, dan zetten we bijbestellingen met hetzelfde model voort.',
+    hotelList: ['Kamer- en strandtassen (stoffen tassen)', 'Personeelsschorten, T-shirts en uniformen', 'Welkomstcadeaus en gastentassen'],
     flowTitle: 'Zo verloopt een bestelling',
     flowIntro: 'In drie stappen.',
     steps: [
@@ -558,6 +586,9 @@ export const COPY: Record<PLang, PCopy> = {
     printList: ['يمكنك البدء بملف شعار أو تصميم', 'تكفي فكرة للبدء', 'نختار الموديل والمنتج ونوع الطباعة معًا'],
     fairTitle: 'للمعارض والفعاليات',
     fairText: 'ننتج المنتجات النسيجية التي تلزم في المعارض والفعاليات، ومنها معرض إكسبو وغيره من المعارض في أنطاليا: ملابس الفرق والزيّ الموحّد وحقائب للتوزيع وهدايا.',
+    hotelTitle: 'مجموعات للفنادق والمنشآت',
+    hotelText: 'نجهّز حقائب الغرف والشاطئ ومآزر وأزياء الموظفين وهدايا الترحيب في عرض واحد بشعارك. وإذا طلبت كمية كبيرة في بداية الموسم فنواصل الطلبات الإضافية بالموديل نفسه.',
+    hotelList: ['حقائب الغرف والشاطئ (حقائب قماش)', 'مآزر وقمصان وأزياء الموظفين', 'هدايا الترحيب وحقائب الضيوف'],
     flowTitle: 'كيف يسير الطلب',
     flowIntro: 'في ثلاث خطوات.',
     steps: [

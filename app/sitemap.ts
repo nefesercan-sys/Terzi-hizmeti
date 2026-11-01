@@ -144,7 +144,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Otel bölgesi derinlik sayfaları (6 dil × 6 bölge): bölge başına TR/EN/RU/DE karşılıklarıyla hreflang
   const zoneSayfalari: MetadataRoute.Sitemap = ZONE_SLUGS.flatMap((z) => {
     const alt = { languages: {
-      tr: `${SITE}/otele-gelen-terzi-antalya/${z}`, en: `${SITE}/en/hotel-tailor-antalya/${z}`, ru: `${SITE}/ru/vyezdnoy-portnoy-antalya/${z}`, de: `${SITE}/de/schneider-service-hotel-antalya/${z}`,
+      tr: `${SITE}/otele-gelen-terzi-antalya${z === 'antalya' ? '' : `/${z}`}`, en: `${SITE}/en/hotel-tailor-antalya${z === 'antalya' ? '' : `/${z}`}`, ru: `${SITE}/ru/vyezdnoy-portnoy-antalya${z === 'antalya' ? '' : `/${z}`}`, de: `${SITE}/de/schneider-service-hotel-antalya${z === 'antalya' ? '' : `/${z}`}`,
       ...Object.fromEntries(ILANGS.map((x) => [INTL[x].hreflang, `${SITE}${zoneUrl(x, z)}`])), 'x-default': z === 'antalya' ? `${SITE}/otele-gelen-terzi-antalya` : `${SITE}/otele-gelen-terzi-antalya/${z}`,
     } };
     return ILANGS.map((l) => ({ url: `${SITE}${zoneUrl(l, z)}`, lastModified: new Date(LAST_UPDATE), changeFrequency: 'monthly' as const, priority: 0.65, alternates: alt }));

@@ -32,7 +32,7 @@ export {
 type L3<T = string> = Record<TLang, T>;
 
 export const OG_DEFAULT = `${SITE}/linen/og-linen-tailor-antalya.jpg`;
-export const TURIST_UPDATE = '2026-10-15'; // bu kümenin son içerik güncellemesi (sitemap + dateModified)
+export const TURIST_UPDATE = '2026-11-01'; // bu kümenin son içerik güncellemesi (sitemap + dateModified)
 
 // ── Görseller (public/linen/*) ──────────────────────────────
 export type ImgKey = 'family' | 'tea' | 'castle' | 'harbourMan' | 'jacketHarbour' | 'jacketKaleici' | 'olive'

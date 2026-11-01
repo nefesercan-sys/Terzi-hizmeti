@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { ANAVERA_URLS, translations, type AnaveraLang } from '@/components/AnaveraTekstilSayfasi';
+import { sixAlt } from '@/lib/intl-topics';
 import { fitDesc, fitKeywords } from '@/lib/meta-fit';
 
 const SITE    = 'https://terzihizmeti.com.tr';
@@ -51,6 +52,7 @@ export function buildAnaveraMetadata(lang: AnaveraLang): Metadata {
         'de': ANAVERA_URLS.de,
         'ru': ANAVERA_URLS.ru,
         'tr': ANAVERA_URLS.tr,
+        ...sixAlt('tekstil'),
         'x-default': ANAVERA_URLS.en,
       },
     },

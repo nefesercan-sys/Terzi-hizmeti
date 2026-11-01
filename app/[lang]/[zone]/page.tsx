@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import ZoneLanding from '@/components/ZoneLanding';
 import ServicesLanding from '@/components/ServicesLanding';
 import TopicLanding from '@/components/TopicLanding';
-import { TOPICS, TOPIC_IDS, parseTopic, topicUrl } from '@/lib/intl-topics';
+import { TOPICS, TOPIC_IDS, parseTopic, topicUrl, topicLanguages } from '@/lib/intl-topics';
 import PromosyonTekstilSayfasi from '@/components/PromosyonTekstilSayfasi';
 import { buildPromoMetadata } from '@/lib/promosyon-tekstil';
 import { promoSlug } from '@/lib/promosyon-paths';
@@ -41,12 +41,13 @@ export async function generateMetadata({ params }: P): Promise<Metadata> {
   const topic = parseTopic(lang, slug);
   if (topic) {
     const c = TOPICS[lang][topic]; const url = `${SITE}${topicUrl(lang, topic)}`;
-    const title = c.title.length + 12 <= 60 ? `${c.title} | Terzi Can` : c.title;
+    const brand = topic === 'tekstil' ? 'Anavera Tekstil' : 'Terzi Can';
+    const title = c.title.length + brand.length + 3 <= 60 ? `${c.title} | ${brand}` : c.title;
     return {
       metadataBase: new URL(SITE), title: { absolute: title }, description: fitDesc(c.desc),
       robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
-      alternates: { canonical: url, languages: Object.fromEntries(ILANGS.map((l) => [INTL[l].hreflang, `${SITE}${topicUrl(l, topic)}`])) },
-      openGraph: { title, description: fitDesc(c.desc), url, siteName: 'Terzi Can', locale: INTL[lang].locale, type: 'website', images: [{ url: OG_DEFAULT, width: 1200, height: 630, alt: title }] },
+      alternates: { canonical: url, languages: topicLanguages(topic) },
+      openGraph: { title, description: fitDesc(c.desc), url, siteName: topic === 'tekstil' ? 'Anavera Tekstil' : 'Terzi Can', locale: INTL[lang].locale, type: 'website', images: [{ url: OG_DEFAULT, width: 1200, height: 630, alt: title }] },
       twitter: { card: 'summary_large_image', title, description: fitDesc(c.desc), images: [OG_DEFAULT] },
       other: { 'geo.region': 'TR-07', 'geo.placename': 'Antalya' },
     };

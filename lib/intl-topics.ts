@@ -308,3 +308,20 @@ export const TOPICS: Record<ILang, Record<TopicId, TopicCopy>> = {
 
 export const topicUrl = (l: ILang, t: TopicId) => `/${l}/${TOPICS[l][t].slug}`;
 export const parseTopic = (l: ILang, slug: string): TopicId | undefined => TOPIC_IDS.find((t) => TOPICS[l][t].slug === slug);
+
+// ── 10 dilli hreflang: keten ve tekstil konularında TR/EN/DE/RU çekirdek sayfalarla karşılıklı bağ ──
+const SITE_ABS = 'https://terzihizmeti.com.tr';
+const CORE: Partial<Record<TopicId, Record<'tr' | 'en' | 'de' | 'ru', string>>> = {
+  keten: { tr: '/keten-pamuk-ozel-dikim', en: '/en/linen-cotton-tailoring', de: '/de/leinen-baumwolle-schneiderei', ru: '/ru/poshiv-lyon-hlopok' },
+  tekstil: { tr: '/anavera-tekstil', en: '/en/anavera-tekstil', de: '/de/anavera-tekstil', ru: '/ru/anavera-tekstil' },
+};
+const SIX: ILang[] = ['es', 'fr', 'pl', 'uk', 'nl', 'ar'];
+/** Yeni 6 dilin konu sayfası karşılıkları (hreflang kodu → mutlak URL). */
+export const sixAlt = (t: TopicId): Record<string, string> => Object.fromEntries(SIX.map((l) => [l, `${SITE_ABS}${topicUrl(l, t)}`]));
+/** TR/EN/DE/RU çekirdek sayfaları (yalnız keten ve tekstil için); diğer konularda boş. */
+export const coreAlt = (t: TopicId): Record<string, string> => Object.fromEntries(Object.entries(CORE[t] ?? {}).map(([l, u]) => [l, `${SITE_ABS}${u}`]));
+/** Konu sayfasının tam hreflang kümesi (+ x-default = EN çekirdek varsa o, yoksa İspanyolca değil: kümenin ilk üyesi). */
+export const topicLanguages = (t: TopicId): Record<string, string> => {
+  const m = { ...coreAlt(t), ...sixAlt(t) };
+  return CORE[t] ? { ...m, 'x-default': m.en } : m;
+};

@@ -6,7 +6,7 @@ import { TLANGS, allNewPages, hubUrl, TR_HUB, TURIST_UPDATE } from '@/lib/turist
 import { ILANGS, INTL, iUrl } from '@/lib/intl';
 import { ZONE_SLUGS, zoneUrl } from '@/lib/intl-zones';
 import { svcUrl } from '@/lib/intl-services';
-import { TOPIC_IDS, topicUrl } from '@/lib/intl-topics';
+import { TOPIC_IDS, topicUrl, topicLanguages, sixAlt } from '@/lib/intl-topics';
 import { PLANGS, promoUrl, promoAlternates, PROMO_LAST_UPDATE, PROMO_FOTOLAR } from '@/lib/promosyon-tekstil';
 
 const SITE = "https://terzihizmeti.com.tr";
@@ -110,7 +110,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     TLANGS.map((l) => ({ url: `${SITE}${pg.urlFor(l)}`, lastModified: new Date(TURIST_UPDATE), changeFrequency: 'monthly' as const, priority: pg.id === 'express' ? 0.8 : 0.77, alternates: tAlt(pg.urlFor) })),
   );
   // Hub sayfaları sabitSayfalar'da zaten var; hreflang eşleşmesi için ayrıca alternates ile aşağıda güncellenir.
-  const hubAlt = { languages: { tr: `${SITE}${TR_HUB}`, ...Object.fromEntries(TLANGS.map((l) => [l, `${SITE}${hubUrl(l)}`])), 'x-default': `${SITE}${TR_HUB}` } };
+  const hubAlt = { languages: { tr: `${SITE}${TR_HUB}`, ...Object.fromEntries(TLANGS.map((l) => [l, `${SITE}${hubUrl(l)}`])), ...sixAlt('keten'), 'x-default': `${SITE}${TR_HUB}` } };
   sabitSayfalar.forEach((e) => {
     if (e.url === `${SITE}${TR_HUB}` || TLANGS.some((l) => e.url === `${SITE}${hubUrl(l)}`)) {
       e.alternates = hubAlt;
@@ -118,6 +118,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   });
 
+  const anaveraAlt = { languages: topicLanguages('tekstil') };
+  sabitSayfalar.forEach((e) => { if (/\/anavera-tekstil$/.test(e.url)) e.alternates = anaveraAlt; });
   // 📞 9. İLETİŞİM SAYFALARI (4 dil, hreflang karşılıklı) — "terzi can telefon / iletişim / adres" aramaları
   const CONTACT: Record<'tr' | 'en' | 'ru' | 'de', string> = {
     tr: '/iletisim', en: '/en/contact-tailor-antalya', ru: '/ru/kontakty-portnoy-antalya', de: '/de/kontakt-schneider-antalya',
@@ -160,7 +162,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const gorulen = new Map<string, MetadataRoute.Sitemap[number]>();
   const konuSayfalari: MetadataRoute.Sitemap = TOPIC_IDS.flatMap((t) => ILANGS.map((l) => ({
     url: `${SITE}${topicUrl(l, t)}`, lastModified: new Date(LAST_UPDATE), changeFrequency: 'monthly' as const, priority: 0.75,
-    alternates: { languages: Object.fromEntries(ILANGS.map((x) => [INTL[x].hreflang, `${SITE}${topicUrl(x, t)}`])) },
+    alternates: { languages: topicLanguages(t) },
   })));
   const hepsi = [...sabitSayfalar, ...otelSayfalari, ...seoSayfalari, ...turistSayfalari, ...iletisimSayfalari, ...intlSayfalari, ...zoneSayfalari, ...svcSayfalari, ...konuSayfalari, ...promoSayfalari];
   for (const e of hepsi) {

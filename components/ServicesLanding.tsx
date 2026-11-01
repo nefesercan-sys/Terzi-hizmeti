@@ -81,7 +81,7 @@ export default function ServicesLanding({ lang }: { lang: ILang }) {
           ))}
         </section>
 
-        <OrnekGorselSeridi konu={'hizmet'} lang={lang} tema="acik" anahtarlar={['erkek-takim-olcu', 'abiye-elbise-atolye', 'yun-pantolon-metre', 'beyaz-gomlek-katli', 'palto-yaka-detay', 'pilili-etek']} sayfaUrl={`${SITE}${svcUrl(lang)}`} />
+        <OrnekGorselSeridi konu={'hizmetFp'} lang={lang} tema="acik" anahtarlar={['erkek-takim-olcu', 'abiye-elbise-atolye', 'yun-pantolon-metre', 'beyaz-gomlek-katli', 'palto-yaka-detay', 'pilili-etek']} sayfaUrl={`${SITE}${svcUrl(lang)}`} />
 
         <section style={{ background: C.sand, borderRadius: 8, padding: '1.3rem' }}>
           <p style={{ margin: '0 0 1rem' }}>

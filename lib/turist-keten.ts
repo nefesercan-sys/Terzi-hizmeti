@@ -17,6 +17,7 @@
 import type { Metadata } from 'next';
 import { businessNode as sharedBusinessNode } from '@/lib/business';
 import { SITE, PHONE_TEL, MAPS, abs } from '@/lib/seo-data';
+import { sixAlt } from '@/lib/intl-topics';
 
 import {
   TLANGS, TR_HUB, HUB, EXPRESS, PRICES_PAGE, ANAVERA, PRODUCT_IDS,
@@ -867,7 +868,7 @@ const langMap = (urlFor: (l: TLang) => string, xDefault: string, extra: Record<s
 export function hubMetadata(lang: TLang): Metadata {
   const c = HUB_COPY[lang];
   const tr = abs(TR_HUB);
-  return meta(lang, c.title, c.desc, c.keywords, abs(hubUrl(lang)), langMap(hubUrl, tr, { tr }), OG_DEFAULT, ALT.family[lang]);
+  return meta(lang, c.title, c.desc, c.keywords, abs(hubUrl(lang)), langMap(hubUrl, tr, { tr, ...sixAlt('keten') }), OG_DEFAULT, ALT.family[lang]);
 }
 export function productMetadata(lang: TLang, p: ProductId): Metadata {
   const c = PRODUCTS[p][lang];

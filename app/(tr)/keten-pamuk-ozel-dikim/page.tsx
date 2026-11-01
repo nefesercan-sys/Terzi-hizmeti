@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { sixAlt } from '@/lib/intl-topics';
 import KetenPamukOzelDikim, { KETEN_PAMUK_T } from '@/components/KetenPamukOzelDikim';
 import { fitKeywords } from '@/lib/meta-fit';
 
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   alternates: {
     canonical: PAGE_URL,
-    languages: { tr: PAGE_URL, en: EN_URL, ru: RU_URL, de: DE_URL, 'x-default': PAGE_URL },
+    languages: { tr: PAGE_URL, en: EN_URL, ru: RU_URL, de: DE_URL, ...sixAlt('keten'), 'x-default': PAGE_URL },
   },
   openGraph: {
     title: 'Keten & Pamuk Giyim: Özel Dikim, Kalıp, Seri Üretim — Terzi Can',

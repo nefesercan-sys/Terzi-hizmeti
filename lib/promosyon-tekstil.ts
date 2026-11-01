@@ -120,7 +120,7 @@ export const COPY: Record<PLang, PCopy> = {
     faq: [
       ['Logomu hangi ürünlere bastırabilirim?', 'Bez çanta, tişört, polar yelek, mont, pantolon, şort, önlük ve uniformaya; ayrıca diğer tekstil ürünlerine. Başka bir ürün gerekirse sormanız yeterli.'],
       ['Logom yok, yardımcı olur musunuz?', 'Evet, logo tasarımı da yapıyoruz. Yalnızca bir fikirle de başlayabilirsiniz; birlikte şekillendiririz.'],
-      ['En az kaç adet sipariş vermeliyim?', 'Modele, adede ve baskıya göre değişir. WhatsApp\'tan yazın, siparişiniz için netleştirelim.'],
+      ['En az kaç adet sipariş vermeliyim?', 'En az sipariş 50 adettir (logolu baskılı ürünlerde). Modele ve baskıya göre fiyat ve süre netleşir; WhatsApp\'tan yazın.'],
       ['Fiyat ve teslim süresi nedir?', 'İkisi de siparişe bağlıdır: model, adet ve baskı. Talebinizi WhatsApp\'tan ilettiğinizde net bir cevap verebiliriz.'],
       ['Teklif almak için ne göndermeliyim?', 'Varsa logo ya da tasarım dosyanızı, istediğiniz ürünü ve yaklaşık adedi. Bir fikir ya da örnek fotoğraf da yeterli.'],
     ],
@@ -170,7 +170,7 @@ export const COPY: Record<PLang, PCopy> = {
     faq: [
       ['Which products can carry my logo?', 'Tote bags, T-shirts, fleece vests, jackets, trousers, shorts, aprons and uniforms, along with other textile products. If you need something else, just ask.'],
       ['I do not have a logo yet. Can you help?', 'Yes, we also do logo design. You can also begin with just an idea and we will shape it with you.'],
-      ['How many pieces do I have to order?', 'It depends on the model, the quantity and the print. Write to us on WhatsApp and we will clarify it for your order.'],
+      ['How many pieces do I have to order?', 'The minimum order is 50 pieces (for logo-printed products). Price and timing depend on the model and print; write to us on WhatsApp.'],
       ['What are the price and the turnaround?', 'Both depend on the order: the model, the quantity and the print. Once you send your request on WhatsApp, we can give a clear answer.'],
       ['What should I send to get a quote?', 'Your logo or design file if you have one, the product you want and roughly how many. An idea or a reference photo is fine too.'],
     ],
@@ -220,7 +220,7 @@ export const COPY: Record<PLang, PCopy> = {
     faq: [
       ['Auf welche Produkte kann mein Logo?', 'Auf Stofftaschen, T-Shirts, Fleecewesten, Jacken, Hosen, Shorts, Schürzen und Uniformen sowie auf weitere Textilprodukte. Brauchen Sie etwas anderes, fragen Sie einfach nach.'],
       ['Ich habe noch kein Logo. Können Sie helfen?', 'Ja, wir gestalten auch Logos. Sie können auch nur mit einer Idee beginnen; wir entwickeln sie mit Ihnen weiter.'],
-      ['Wie viele Stück muss ich bestellen?', 'Das hängt vom Modell, der Stückzahl und dem Druck ab. Schreiben Sie uns per WhatsApp, dann klären wir es für Ihre Bestellung.'],
+      ['Wie viele Stück muss ich bestellen?', 'Die Mindestbestellmenge beträgt 50 Stück (bei Produkten mit Logodruck). Preis und Dauer hängen von Modell und Druck ab; schreiben Sie uns per WhatsApp.'],
       ['Wie sind Preis und Lieferzeit?', 'Beides richtet sich nach Ihrer Bestellung: Modell, Menge und Druck. Nach Ihrer Anfrage über WhatsApp können wir konkret antworten.'],
       ['Was schicke ich für ein Angebot?', 'Wenn vorhanden Ihre Logo- oder Designdatei, das gewünschte Produkt und ungefähr die Menge. Eine Idee oder ein Referenzfoto reicht ebenfalls.'],
     ],
@@ -270,7 +270,7 @@ export const COPY: Record<PLang, PCopy> = {
     faq: [
       ['На какие изделия можно нанести логотип?', 'На тканевые сумки, футболки, флисовые жилеты, куртки, брюки, шорты, фартуки и форму, а также на другие текстильные изделия. Если нужно что-то ещё, просто спросите.'],
       ['У меня нет логотипа. Вы поможете?', 'Да, мы разрабатываем и логотипы. Можно начать и с одной идеи: доработаем её вместе с вами.'],
-      ['Сколько штук нужно заказать?', 'Это зависит от модели, количества и печати. Напишите нам в WhatsApp, и мы уточним для вашего заказа.'],
+      ['Сколько штук нужно заказать?', 'Минимальный заказ — 50 штук (для изделий с логотипом). Цена и сроки зависят от модели и печати; напишите нам в WhatsApp.'],
       ['Сколько это стоит и как быстро делаете?', 'И то и другое зависит от заказа: модели, количества и печати. После вашего запроса в WhatsApp сможем ответить конкретно.'],
       ['Что отправить, чтобы получить расчёт?', 'Файл логотипа или макета, если он есть, нужное изделие и примерное количество. Подойдёт и просто идея или фото-образец.'],
     ],
@@ -320,7 +320,7 @@ export const COPY: Record<PLang, PCopy> = {
     faq: [
       ['¿En qué productos se puede poner mi logo?', 'En bolsas de tela, camisetas, chalecos polares, chaquetas, pantalones, pantalones cortos, delantales y uniformes, además de otros productos textiles. Si necesita otra cosa, pregúntenos.'],
       ['No tengo logo. ¿Pueden ayudarme?', 'Sí, también diseñamos logos. Puede empezar solo con una idea y la desarrollamos con usted.'],
-      ['¿Cuántas unidades tengo que pedir?', 'Depende del modelo, de la cantidad y de la estampación. Escríbanos por WhatsApp y lo concretamos para su pedido.'],
+      ['¿Cuántas unidades tengo que pedir?', 'El pedido mínimo es de 50 unidades (en productos con logotipo). El precio y el plazo dependen del modelo y de la estampación; escríbanos por WhatsApp.'],
       ['¿Cuánto cuesta y cuánto tarda?', 'Ambas cosas dependen del pedido: modelo, cantidad y estampación. Cuando nos envíe su consulta por WhatsApp podremos darle una respuesta concreta.'],
       ['¿Qué debo enviar para recibir un presupuesto?', 'Su archivo de logo o diseño si lo tiene, el producto que busca y una cantidad aproximada. También sirve una idea o una foto de referencia.'],
     ],
@@ -370,7 +370,7 @@ export const COPY: Record<PLang, PCopy> = {
     faq: [
       ['Sur quels produits peut-on mettre mon logo ?', 'Sur les sacs en tissu, t-shirts, gilets polaires, vestes, pantalons, shorts, tabliers et uniformes, ainsi que sur d\'autres produits textiles. Pour tout autre produit, demandez-nous.'],
       ['Je n\'ai pas de logo. Pouvez-vous m\'aider ?', 'Oui, nous créons aussi des logos. Vous pouvez partir d\'une simple idée, que nous développons avec vous.'],
-      ['Combien de pièces faut-il commander ?', 'Cela dépend du modèle, de la quantité et de l\'impression. Écrivez-nous sur WhatsApp et nous le précisons pour votre commande.'],
+      ['Combien de pièces faut-il commander ?', 'La commande minimale est de 50 pièces (pour les produits avec logo). Le prix et le délai dépendent du modèle et de l\'impression ; écrivez-nous sur WhatsApp.'],
       ['Quels sont le prix et le délai ?', 'Les deux dépendent de la commande : modèle, quantité et impression. Une fois votre demande reçue sur WhatsApp, nous pouvons répondre précisément.'],
       ['Que dois-je envoyer pour obtenir un devis ?', 'Votre fichier de logo ou de design si vous en avez un, le produit souhaité et une quantité approximative. Une idée ou une photo de référence suffit aussi.'],
     ],
@@ -420,7 +420,7 @@ export const COPY: Record<PLang, PCopy> = {
     faq: [
       ['Na jakich produktach można umieścić moje logo?', 'Na torbach materiałowych, koszulkach, kamizelkach polarowych, kurtkach, spodniach, szortach, fartuchach i mundurach, a także na innych wyrobach tekstylnych. Jeśli potrzebują Państwo czegoś innego, proszę zapytać.'],
       ['Nie mam logo. Czy mogą Państwo pomóc?', 'Tak, projektujemy także logo. Można zacząć od samego pomysłu, rozwiniemy go razem.'],
-      ['Ile sztuk trzeba zamówić?', 'To zależy od modelu, ilości i nadruku. Proszę napisać na WhatsAppie, a doprecyzujemy to dla Państwa zamówienia.'],
+      ['Ile sztuk trzeba zamówić?', 'Minimalne zamówienie to 50 sztuk (w produktach z logo). Cena i termin zależą od modelu i nadruku; proszę napisać na WhatsAppie.'],
       ['Ile to kosztuje i jak długo trwa?', 'Jedno i drugie zależy od zamówienia: modelu, ilości i nadruku. Po otrzymaniu zapytania na WhatsAppie możemy odpowiedzieć konkretnie.'],
       ['Co wysłać, żeby dostać wycenę?', 'Plik z logo lub projektem, jeśli jest, wybrany produkt i orientacyjną ilość. Wystarczy też pomysł albo zdjęcie poglądowe.'],
     ],
@@ -470,7 +470,7 @@ export const COPY: Record<PLang, PCopy> = {
     faq: [
       ['На яких виробах можна розмістити мій логотип?', 'На тканинних сумках, футболках, флісових жилетах, куртках, штанях, шортах, фартухах і уніформі, а також на інших текстильних виробах. Якщо потрібне щось інше, просто запитайте.'],
       ['У мене немає логотипу. Ви допоможете?', 'Так, ми розробляємо й логотипи. Можна почати з однієї ідеї: доопрацюємо її разом із вами.'],
-      ['Скільки штук потрібно замовити?', 'Це залежить від моделі, кількості та друку. Напишіть нам у WhatsApp, і ми уточнимо для вашого замовлення.'],
+      ['Скільки штук потрібно замовити?', 'Мінімальне замовлення — 50 штук (для виробів із логотипом). Ціна та терміни залежать від моделі та друку; напишіть нам у WhatsApp.'],
       ['Скільки це коштує і як швидко ви виконуєте?', 'І те, й інше залежить від замовлення: моделі, кількості та друку. Після вашого запиту у WhatsApp зможемо відповісти конкретно.'],
       ['Що надіслати, щоб отримати розрахунок?', 'Файл логотипу чи макета, якщо він є, потрібний виріб і приблизну кількість. Підійде й просто ідея або фото-приклад.'],
     ],
@@ -520,7 +520,7 @@ export const COPY: Record<PLang, PCopy> = {
     faq: [
       ['Op welke producten kan mijn logo?', 'Op stoffen tassen, T-shirts, fleecebodywarmers, jassen, broeken, korte broeken, schorten en uniformen, en op andere textielproducten. Heeft u iets anders nodig, vraag het gerust.'],
       ['Ik heb nog geen logo. Kunnen jullie helpen?', 'Ja, wij ontwerpen ook logo\'s. U kunt ook met alleen een idee beginnen; we werken het samen met u uit.'],
-      ['Hoeveel stuks moet ik bestellen?', 'Dat hangt af van het model, het aantal en de bedrukking. Stuur ons een bericht via WhatsApp, dan bepalen we het voor uw bestelling.'],
+      ['Hoeveel stuks moet ik bestellen?', 'De minimale bestelling is 50 stuks (bij producten met logo). Prijs en levertijd hangen af van het model en de bedrukking; stuur ons een bericht via WhatsApp.'],
       ['Wat kost het en hoe lang duurt het?', 'Beide hangen af van de bestelling: model, aantal en bedrukking. Na uw aanvraag via WhatsApp kunnen we concreet antwoord geven.'],
       ['Wat stuur ik voor een offerte?', 'Uw logo- of ontwerpbestand als u dat heeft, het gewenste product en ongeveer het aantal. Een idee of een voorbeeldfoto is ook goed.'],
     ],
@@ -570,7 +570,7 @@ export const COPY: Record<PLang, PCopy> = {
     faq: [
       ['على أي المنتجات يمكن طباعة شعاري؟', 'على حقائب القماش والقمصان وصدريات الفليس والجاكيتات والبناطيل والشورتات والمآزر والزيّ الموحّد، وعلى منتجات نسيجية أخرى. وإن احتجت شيئًا آخر فاسألنا.'],
       ['ليس لدي شعار. هل تساعدونني؟', 'نعم، نصمّم الشعارات أيضًا. يمكنك البدء بفكرة فقط ونطوّرها معك.'],
-      ['كم قطعة يجب أن أطلب؟', 'يعتمد ذلك على الموديل والكمية والطباعة. راسلنا عبر واتساب ونحدده لطلبك.'],
+      ['كم قطعة يجب أن أطلب؟', 'الحد الأدنى للطلب 50 قطعة (للمنتجات المطبوع عليها الشعار). يعتمد السعر والمدة على الموديل والطباعة؛ راسلنا عبر واتساب.'],
       ['كم السعر وكم المدة؟', 'كلاهما يعتمد على الطلب: الموديل والكمية والطباعة. بعد وصول استفسارك عبر واتساب نستطيع الإجابة بدقة.'],
       ['ماذا أرسل للحصول على عرض سعر؟', 'ملف الشعار أو التصميم إن وُجد، والمنتج المطلوب، وكمية تقريبية. وتكفي أيضًا فكرة أو صورة مرجعية.'],
     ],

@@ -48,7 +48,7 @@ const UI = {
     related: 'Related services', time: 'Turnaround', price: 'Price', photoPrice: 'Send a photo and we will quote right away',
     mahalle: 'Konyaaltı neighbourhoods (Turkish)', ctaH: 'Get in Touch', free: 'Free service to hotels and homes', paid: 'Free hotel service',
     hours: 'Open daily 08:00–23:00', since: 'Serving since 2006', where: 'Workshop: Hurma, Konyaaltı, Antalya',
-    footer: 'Terzi Can · Hurma, Konyaaltı, Antalya', pricesLink: 'Tailor prices Antalya', pricesHref: '/en/tailor-prices-antalya',
+    footer: 'Terzi Can · Hurma, Konyaaltı, Antalya', pricesLink: 'Tailor services Antalya', pricesHref: '/en/tailor-service-antalya',
   },
   ru: {
     home: '← Главная', wa: 'WHATSAPP →', waBtn: '💬 Написать в WhatsApp →', brand: 'Terzi Can', svcWord: 'Услуги',
@@ -57,7 +57,7 @@ const UI = {
     related: 'Похожие услуги', time: 'Срок', price: 'Цена', photoPrice: 'Пришлите фото — сразу назовём цену',
     mahalle: 'Районы Коньяалты (тур.)', ctaH: 'Свяжитесь с нами', free: 'Бесплатный выезд в отели и на дом', paid: 'Бесплатный выезд в отели',
     hours: 'Ежедневно 08:00–23:00', since: 'Работаем с 2006 года', where: 'Мастерская: Хурма, Коньяалты, Анталья',
-    footer: 'Terzi Can · Хурма, Коньяалты, Анталья', pricesLink: 'Цены портного Анталья', pricesHref: '/ru/ceny-portnoy-antalya',
+    footer: 'Terzi Can · Хурма, Коньяалты, Анталья', pricesLink: 'Услуги портного Анталья', pricesHref: '/ru/uslugi-portnogo-antalya',
   },
   de: {
     home: '← Startseite', wa: 'WHATSAPP →', waBtn: '💬 Per WhatsApp schreiben →', brand: 'Terzi Can', svcWord: 'Leistungen',
@@ -66,7 +66,7 @@ const UI = {
     related: 'Ähnliche Leistungen', time: 'Dauer', price: 'Preis', photoPrice: 'Foto senden, Preis sofort per WhatsApp',
     mahalle: 'Stadtteile in Konyaaltı (türk.)', ctaH: 'Kontakt aufnehmen', free: 'Kostenloser Service zu Hotels und nach Hause', paid: 'Hotelservice kostenlos',
     hours: 'Täglich 08:00–23:00', since: 'Seit 2006', where: 'Werkstatt: Hurma, Konyaaltı, Antalya',
-    footer: 'Terzi Can · Hurma, Konyaaltı, Antalya', pricesLink: 'Schneider Preise Antalya', pricesHref: '/de/schneider-preise-antalya',
+    footer: 'Terzi Can · Hurma, Konyaaltı, Antalya', pricesLink: 'Schneiderservice Antalya', pricesHref: '/de/schneiderservice-antalya',
   },
 } as const;
 

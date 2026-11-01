@@ -17,7 +17,7 @@ const TR_URL    = `${SITE}/antalya-terzi`;
 const EN_URL    = `${SITE}/en/tailor-service-antalya`;
 const RU_URL    = `${SITE}/ru/uslugi-portnogo-antalya`;
 const HOTEL_URL = `${SITE}/de/schneider-service-hotel-antalya`;
-const PRICE_URL = `${SITE}/de/schneider-preise-antalya`;
+const PRICE_URL = `${SITE}/de/schneider-leistungen`;
 const PHONE     = '+90 531 898 64 18';
 const PHONE_TEL = '+905318986418';
 const WA        = (m: string) => `https://wa.me/905318986418?text=${encodeURIComponent(m)}`;
@@ -157,7 +157,7 @@ export default function SchneiderserviceAntalya() {
               </div>
             ))}
           </div>
-          <p style={{ marginTop: '1rem', fontSize: '.92rem' }}>Die vollständige Liste: <a href={PRICE_URL}>Schneider-Preise Antalya</a></p>
+          <p style={{ marginTop: '1rem', fontSize: '.92rem' }}>Alle Leistungen: <a href={PRICE_URL}>Schneider-Leistungen Antalya</a></p>
         </section>
 
         <section style={{ ...wrap, padding: '2.5rem 1.25rem 0' }}>

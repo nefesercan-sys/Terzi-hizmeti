@@ -22,7 +22,7 @@ export const EXPRESS: L3 = {
   ru: '/ru/podgonka-odezhdy-turistam-antalya',
 };
 export const PRICES_PAGE: L3 = {
-  en: '/en/tailor-prices-antalya', de: '/de/schneider-preise-antalya', ru: '/ru/ceny-portnoy-antalya',
+  en: '/en/tailor-service-antalya', de: '/de/schneiderservice-antalya', ru: '/ru/uslugi-portnogo-antalya',
 };
 export const ANAVERA: L3 = {
   en: '/en/anavera-tekstil', de: '/de/anavera-tekstil', ru: '/ru/anavera-tekstil',

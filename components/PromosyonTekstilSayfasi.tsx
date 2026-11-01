@@ -136,6 +136,20 @@ export default function PromosyonTekstilSayfasi({ lang }: { lang: PLang }) {
         </div>
       </section>
 
+      {/* OTELLER VE İŞLETMELER İÇİN SET */}
+      <section style={{ padding: '3.5rem 1rem', backgroundColor: '#FFFFFF', borderTop: '1px solid #E2E8F0' }}>
+        <div style={{ maxWidth: 860, margin: '0 auto' }}>
+          <Head title={c.hotelTitle} desc={c.hotelText} />
+          <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'grid', gap: '.7rem' }}>
+            {c.hotelList.map((s) => (
+              <li key={s} style={{ display: 'flex', gap: '.8rem', alignItems: 'flex-start', backgroundColor: '#F8FAFC', border: '1px solid #E2E8F0', borderRadius: 10, padding: '.85rem 1.1rem', color: '#334155' }}>
+                <span aria-hidden="true" style={{ color: GOLD, fontWeight: 800 }}>✓</span><span>{s}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
       {/* SİPARİŞ NASIL İLERLER */}
       <section style={{ padding: '4rem 1rem', backgroundColor: NAVY }}>
         <div style={{ maxWidth: 1100, margin: '0 auto' }}>

@@ -9,7 +9,7 @@ const WA_DEF = `https://wa.me/905318986418?text=${encodeURIComponent('Hello, I w
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Hotel Tailor Antalya: We Come to Belek, Lara, Kemer & Side" },
-  description: "Mobile tailor to hotels in Belek, Lara, Güzeloba, Kemer, Side: alterations, repairs, ironing, dry cleaning. We come to you. ☎ +90 531 898 64 18",
+  description: "Mobile tailor to hotels in Belek, Lara, Güzeloba, Kemer, Side: alterations and repairs. We come to you. ☎ +90 531 898 64 18",
   keywords: ['hotel tailor Antalya', 'tailor Belek hotel', 'tailor Lara hotel', 'tailor Kemer hotel', 'tailor Side hotel', 'urgent clothing alteration Antalya', 'mobile tailor Antalya', 'dress alteration hotel Antalya'],
   alternates: {
     canonical: `${SITE}${BASE_PATH}`,
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   openGraph: {
     title: 'Hotel Tailor Antalya — Mobile Service',
-    description: 'We come to your hotel in Belek, Lara, Güzeloba, Kemer or Side. Alterations, repairs, ironing, dry cleaning.',
+    description: 'We come to your hotel in Belek, Lara, Güzeloba, Kemer or Side. Alterations and repairs.',
     url: `${SITE}${BASE_PATH}`, siteName: 'Terzi Can', locale: 'en_US', type: 'website',
     images: [{ url: `${SITE}/terzi-can-hero.jpg`, width: 1024, height: 1024, alt: 'Hotel Tailor Antalya' }],
   },
@@ -38,7 +38,7 @@ const jsonLd = {
       '@type': 'Service',
       '@id': `${SITE}${BASE_PATH}#service`,
       name: 'Mobile Tailor Service in Antalya Hotel Districts',
-      serviceType: 'Alterations, repairs, ironing, dry cleaning — mobile hotel service',
+      serviceType: 'Alterations and repairs — mobile hotel service',
       provider: { '@type': 'LocalBusiness', name: 'Terzi Can', telephone: '+905318986418', url: `${SITE}/antalya-terzi`,
         hasMap: 'https://www.google.com/maps?cid=6436895271281342624',
         address: {
@@ -69,7 +69,6 @@ const SERVICES = [
   { icon: '📏', t: 'Alterations', d: 'Hemming, taking in, resizing — trousers, dresses, suits, skirts.' },
   { icon: '🧵', t: 'Repairs', d: 'Zippers and tears — fast, clean repair work.' },
   { icon: '👗', t: 'Wedding & Evening Wear', d: 'Careful fitting for the special occasion, scheduled on-site.' },
-  { icon: '🧺', t: 'Ironing & Dry Cleaning', d: 'Steam pressing, professional dry cleaning, hotel pickup.' },
 ];
 
 export default function OtelBolgeleriEnHub() {
@@ -94,7 +93,7 @@ export default function OtelBolgeleriEnHub() {
             <h1 id="hub-h">Hotel Tailor — <span className="accent">Mobile Service</span></h1>
             <p className="hero-desc">
               Choose your district, share your hotel name and preferred time on WhatsApp — our tailor
-              comes to you. Alterations, repairs, ironing and dry cleaning, delivered directly to your
+              comes to you. Alterations and repairs, delivered directly to your
               hotel.
             </p>
             <div className="hero-btns">
@@ -111,7 +110,7 @@ export default function OtelBolgeleriEnHub() {
               <h2 className="sec-h ff" id="about-h">Why a Mobile Tailor on Holiday?</h2>
               <p className="sec-sub">
                 A broken zipper before a gala dinner, a dress that needs a small adjustment, or a suit
-                that needs dry cleaning — on holiday, there's rarely time to find a tailor yourself.
+                that needs altering — on holiday, there's rarely time to find a tailor yourself.
                 Terzi Can comes directly to your hotel in Belek, Lara, Güzeloba, Kemer or Side: we take
                 measurements, repair, collect and return your garment — all without you having to leave
                 the hotel. Write to us on WhatsApp in your own language, so communication is

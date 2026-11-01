@@ -19,7 +19,6 @@ export const PRICE_ROWS: { icon: string; rows: string[] }[] = [
   { icon: '🔧', rows: [tryText('zipperPants'), tryText('zipperCoat')] },
   { icon: '📏', rows: [tryText('hem'), tryText('waist'), tryText('sleeve'), tryText('dressAdjust'), tryText('eveningWeddingAlter')] },
   { icon: '✂️', rows: [tryText('skirtPantsSew'), tryText('dressSew'), tryText('groomSuit'), tryText('kidsSew')] },
-  { icon: '🧺', rows: ['Fotoğrafa göre', 'Fotoğrafa göre', 'Fotoğrafa göre', 'Fotoğrafa göre'] },
 ];
 
 // Yabancı dillerde fiyat EURO ve "başlangıç" fiyatıdır (sahibinin verdiği liste); fiyatı verilmeyen kalemler "fotoğrafa göre".
@@ -29,7 +28,6 @@ const EUR_ROWS: { icon: string; rows: (string | null)[] }[] = [
   { icon: '🔧', rows: [eurText('zipperPants'), eurText('zipperCoat')] },
   { icon: '📏', rows: [eurText('hem'), eurText('waist'), eurText('sleeve'), eurText('dressAdjust'), eurText('eveningWeddingAlter')] },
   { icon: '✂️', rows: [eurText('skirtPantsSew'), eurText('dressSew'), eurText('groomSuit'), eurText('kidsSew')] },
-  { icon: '🧺', rows: [null, null, null, null] },
 ];
 export const FOREIGN_NOTE: Record<'en' | 'de' | 'ru', string> = {
   en: 'Starting prices in euro. Leather alterations (length etc.) from €30; coat alterations from €15 and coat zippers from €20. The final price is confirmed from your photo.',
@@ -93,7 +91,7 @@ export const FT: Record<FLang, FiyatText> = {
       "Konyaaltı terzi"
     ],
     "webName": "Antalya Terzi Fiyat Listesi 2026",
-    "serviceType": "Terzi, tamir, tadilat, özel dikim, ütü ve kuru temizleme",
+    "serviceType": "Terzi, tamir, tadilat, özel dikim",
     "catalogName": "Terzi fiyat listesi 2026 (başlangıç fiyatları)",
     "heroTag": "₺ Şeffaf fiyat · Her gün 08:00–23:00 · Konyaaltı, Antalya",
     "h1a": "Antalya Terzi Fiyatları 2026",
@@ -104,7 +102,7 @@ export const FT: Record<FLang, FiyatText> = {
     "quickH": "İhtiyacınıza Göre Hızlı Cevap",
     "quickSub": "Aradığınız işi seçin; fiyatı ve ilgili sayfayı görün.",
     "priceEyebrow": "₺ Fiyat Listesi 2026",
-    "priceH": "Terzi Fiyat Listesi: Tamir, Tadilat, Dikim, Ütü",
+    "priceH": "Terzi Fiyat Listesi: Tamir, Tadilat, Dikim",
     "priceSub": "Başlangıç fiyatlarıdır; kumaş ve işçiliğe göre netleşir. Fotoğraf gönderin, ücretsiz teklif alın.",
     "priceBtn": "📲 Fiyatı Sor",
     "faqEyebrow": "Sık Sorulan Sorular",
@@ -134,8 +132,7 @@ export const FT: Record<FLang, FiyatText> = {
     "priceTitles": [
       "Tamir",
       "Tadilat",
-      "Özel dikim",
-      "Ütü & kuru temizleme"
+      "Özel dikim"
     ],
     "priceNames": [
       [
@@ -154,12 +151,6 @@ export const FT: Record<FLang, FiyatText> = {
         "Kadın elbise",
         "Damatlık",
         "Çocuk giyim"
-      ],
-      [
-        "Ütü (adet)",
-        "Kuru temizleme (elbise)",
-        "Kuru temizleme (mont)",
-        "Yıkama + ütü (kg)"
       ]
     ],
     "quick": [
@@ -308,7 +299,7 @@ export const FT: Record<FLang, FiyatText> = {
       "clothing manufacturer Turkey sample bulk production"
     ],
     "webName": "Tailor Prices Antalya 2026",
-    "serviceType": "Tailoring, repair, alterations, custom sewing, ironing and dry cleaning",
+    "serviceType": "Tailoring, repair, alterations, custom sewing",
     "catalogName": "Tailor price list 2026 (starting prices)",
     "heroTag": "€ Prices · Open every day 08:00–23:00 · Konyaaltı, Antalya",
     "h1a": "Tailor Prices in Antalya 2026",
@@ -319,7 +310,7 @@ export const FT: Record<FLang, FiyatText> = {
     "quickH": "Quick Answers for Your Situation",
     "quickSub": "Pick your job to see the price and the right page.",
     "priceEyebrow": "€ Price List 2026",
-    "priceH": "Tailor Price List: Repair, Alterations, Custom Sewing, Ironing",
+    "priceH": "Tailor Price List: Repair, Alterations, Custom Sewing",
     "priceSub": "Starting prices; the final price depends on fabric and workmanship. Send a photo for a free quote.",
     "priceBtn": "📲 Ask the Price",
     "faqEyebrow": "FAQ",
@@ -349,8 +340,7 @@ export const FT: Record<FLang, FiyatText> = {
     "priceTitles": [
       "Repair",
       "Alterations",
-      "Custom sewing",
-      "Ironing & dry cleaning"
+      "Custom sewing"
     ],
     "priceNames": [
       [
@@ -369,12 +359,6 @@ export const FT: Record<FLang, FiyatText> = {
         "Women's dress",
         "Groom suit",
         "Children's clothing"
-      ],
-      [
-        "Ironing (per item)",
-        "Dry cleaning (dress)",
-        "Dry cleaning (coat)",
-        "Wash + iron (per kg)"
       ]
     ],
     "quick": [
@@ -521,7 +505,7 @@ export const FT: Record<FLang, FiyatText> = {
       "Bekleidungshersteller Türkei Muster Serienproduktion"
     ],
     "webName": "Schneider Preise Antalya 2026",
-    "serviceType": "Schneiderei, Reparatur, Änderungen, Maßanfertigung, Bügelservice und chemische Reinigung",
+    "serviceType": "Schneiderei, Reparatur, Änderungen, Maßanfertigung",
     "catalogName": "Schneider-Preisliste 2026 (Ab-Preise)",
     "heroTag": "€ Preise · Täglich 08:00–23:00 geöffnet · Konyaaltı, Antalya",
     "h1a": "Schneider Preise in Antalya 2026",
@@ -532,7 +516,7 @@ export const FT: Record<FLang, FiyatText> = {
     "quickH": "Schnelle Antworten für Ihren Fall",
     "quickSub": "Wählen Sie Ihre Arbeit; Sie sehen Preis und passende Seite.",
     "priceEyebrow": "€ Preisliste 2026",
-    "priceH": "Schneider-Preisliste: Reparatur, Änderungen, Maßanfertigung, Bügeln",
+    "priceH": "Schneider-Preisliste: Reparatur, Änderungen, Maßanfertigung",
     "priceSub": "Ab-Preise; der Endpreis hängt von Stoff und Aufwand ab. Foto senden für ein kostenloses Angebot.",
     "priceBtn": "📲 Preis erfragen",
     "faqEyebrow": "FAQ",
@@ -562,8 +546,7 @@ export const FT: Record<FLang, FiyatText> = {
     "priceTitles": [
       "Reparatur",
       "Änderungen",
-      "Maßanfertigung",
-      "Bügeln & chemische Reinigung"
+      "Maßanfertigung"
     ],
     "priceNames": [
       [
@@ -582,12 +565,6 @@ export const FT: Record<FLang, FiyatText> = {
         "Damenkleid",
         "Herrenanzug (Bräutigam)",
         "Kinderkleidung"
-      ],
-      [
-        "Bügeln (pro Stück)",
-        "Reinigung (Kleid)",
-        "Reinigung (Mantel)",
-        "Waschen + Bügeln (pro kg)"
       ]
     ],
     "quick": [
@@ -734,7 +711,7 @@ export const FT: Record<FLang, FiyatText> = {
       "производство одежды Турция образец серия"
     ],
     "webName": "Цены портного в Анталье 2026",
-    "serviceType": "Пошив, ремонт, подгонка одежды, глажка и химчистка",
+    "serviceType": "Пошив, ремонт, подгонка одежды",
     "catalogName": "Прайс-лист портного 2026 (цены «от»)",
     "heroTag": "€ Цены · Ежедневно 08:00–23:00 · Коньяалты, Анталья",
     "h1a": "Цены портного в Анталье 2026",
@@ -745,7 +722,7 @@ export const FT: Record<FLang, FiyatText> = {
     "quickH": "Быстрые ответы по вашей задаче",
     "quickSub": "Выберите работу — увидите цену и нужную страницу.",
     "priceEyebrow": "€ Прайс-лист 2026",
-    "priceH": "Прайс-лист портного: ремонт, подгонка, пошив, глажка",
+    "priceH": "Прайс-лист портного: ремонт, подгонка, пошив",
     "priceSub": "Цены «от»; итоговая цена зависит от ткани и сложности. Пришлите фото — расчёт бесплатный.",
     "priceBtn": "📲 Узнать цену",
     "faqEyebrow": "Вопросы и ответы",
@@ -775,8 +752,7 @@ export const FT: Record<FLang, FiyatText> = {
     "priceTitles": [
       "Ремонт",
       "Подгонка",
-      "Пошив на заказ",
-      "Глажка и химчистка"
+      "Пошив на заказ"
     ],
     "priceNames": [
       [
@@ -795,12 +771,6 @@ export const FT: Record<FLang, FiyatText> = {
         "Женское платье",
         "Костюм жениха",
         "Детская одежда"
-      ],
-      [
-        "Глажка (за вещь)",
-        "Химчистка (платье)",
-        "Химчистка (пальто)",
-        "Стирка + глажка (за кг)"
       ]
     ],
     "quick": [

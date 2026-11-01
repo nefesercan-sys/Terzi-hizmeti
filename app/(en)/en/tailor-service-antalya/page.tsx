@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Tailor in Antalya: Repairs, Alterations, Custom | Terzi Can" },
   // SEO Optimizasyonu: Google'da kesilmemesi için ~150 karaktere optimize edildi
-  description: 'Mobile tailor, repair, alterations, and ironing service across Konyaaltı and nearby districts. We visit your hotel in Belek, Lara, Kemer, and Side.',
+  description: 'Mobile tailor, repair and alterations service across Konyaaltı and nearby districts. We visit your hotel in Belek, Lara, Kemer, and Side.',
   keywords: ['tailor Antalya', 'tailor service Antalya', 'hotel tailor Antalya', 'urgent clothing alteration Antalya', 'tailor Konyaaltı', 'clothing repair Antalya', 'trouser hemming Antalya', 'tailor open Sunday Antalya'],
   authors: [{ name: 'Terzi Can', url: SITE }],
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Tailor Service Antalya · Mobile Tailor to Your Hotel',
-    description: 'Tailoring, repair, alterations and ironing across Konyaaltı and nearby districts. We come to you.',
+    description: 'Tailoring, repair and alterations across Konyaaltı and nearby districts. We come to you.',
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'en_US', alternateLocale: ['tr_TR'], type: 'website',
     images: [{ url: OG, width: 1024, height: 1024, alt: 'Tailor Service Antalya', type: 'image/jpeg' }],
   },
@@ -57,7 +57,7 @@ const jsonLd = {
   '@graph': [
     {
       '@type': 'WebPage', '@id': `${PAGE_URL}#webpage`, url: PAGE_URL,
-      name: 'Tailor Service Antalya — Mobile Tailor, Repair, Alterations, Ironing',
+      name: 'Tailor Service Antalya — Mobile Tailor, Repair, Alterations',
       description: 'Mobile tailor service across Konyaaltı and nearby districts, hotels and addresses.',
       inLanguage: 'en', dateModified: LAST_MOD,
       breadcrumb: { '@id': `${PAGE_URL}#breadcrumb` },
@@ -72,13 +72,13 @@ const jsonLd = {
     },
     {
       '@type': 'Service', '@id': `${PAGE_URL}#service`,
-      serviceType: 'Mobile Tailoring, Repair, Alterations and Ironing Service',
+      serviceType: 'Mobile Tailoring, Repair and Alterations Service',
       provider: { '@type': 'ClothingStore', name: 'Terzi Can', telephone: PHONE_TEL, url: SITE },
       areaServed: [
         'Konyaaltı', 'Muratpaşa', 'Kepez', 'Lara', 'Döşemealtı', 'Aksu', 'Belek', 'Kemer',
         'Serik', 'Side', ].map((n) => ({ '@type': 'Place', name: n })),
       hasOfferCatalog: {
-        '@type': 'OfferCatalog', name: 'Tailoring, Repair, Alterations and Ironing',
+        '@type': 'OfferCatalog', name: 'Tailoring, Repair and Alterations',
         itemListElement: [
           { '@type': 'Offer', price: '10', priceCurrency: 'EUR', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Hemming' } },
           { '@type': 'Offer', price: '15', priceCurrency: 'EUR', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Zipper Replacement' } },
@@ -111,7 +111,6 @@ const SERVICES = [
   { icon: '👗', tr: "Women's Tailoring", en: 'Dresses, blouses, skirts, gowns', desc: 'Custom design and made-to-measure sewing for any occasion.', items: ['Dress', 'Blouse', 'Skirt', 'Evening Gown'] },
   { icon: '🔧', tr: 'Clothing Repair', en: 'Zippers, tears, seams', desc: 'Everyday repairs — zippers and torn seams.', items: ['Zipper Replacement', 'Tear Repair'] },
   { icon: '📏', tr: 'Alterations', en: 'Hemming, taking in, resizing', desc: 'Precise fit adjustments so clothing sits exactly right.', items: ['Hemming', 'Waist Taking In', 'Sleeve Shortening', 'Dress Resizing'] },
-  { icon: '🧺', tr: 'Ironing & Dry Cleaning', en: 'Steam ironing, dry cleaning', desc: 'Professional steam ironing and dry cleaning, picked up and delivered.', items: ['Ironing', 'Dry Cleaning', 'Laundry & Ironing'] },
   { icon: '🚗', tr: 'Mobile / Hotel Service', en: 'We come to you', desc: 'Measurement, collection and delivery at your hotel or address.', items: ['Hotel Visit', 'Home Visit', 'Free Pickup & Delivery'] },
 ];
 
@@ -122,14 +121,11 @@ const REPAIR_CATEGORIES = [
     rows: [['Zipper Replacement (Trousers)', ''], ['Zipper Replacement (Coat)', '']] as [string, string][] },
   { icon: '📏', title: 'Alterations', keyword: 'hemming Antalya', desc: 'Precise fit adjustments to your body.',
     rows: [['Hemming', ''], ['Waist Taking In', ''], ['Sleeve Shortening', ''], ['Dress / Jacket Resizing', ''], ['Wedding & Evening Dress', '']] as [string, string][] },
-  { icon: '🧺', title: 'Ironing & Dry Cleaning', keyword: 'ironing dry cleaning Antalya', desc: 'Professional steam ironing and dry cleaning.',
-    rows: [['Ironing (per item)', ''], ['Dry Cleaning (Dress)', ''], ['Dry Cleaning (Coat)', ''], ['Laundry & Ironing (per kg)', '']] as [string, string][] },
 ];
 
 const FAQS: [string, string][] = [
   ['Do you come to hotels in Belek, Lara and Kemer?', 'Yes! Our mobile tailor visits all hotels in Belek, Lara, Kemer and Side. Just share your hotel name on WhatsApp.'],
   ['Is the mobile visit free?', 'Yes. Pick-up and delivery to homes and hotels is free in every area we serve.'],
-  ['Do you offer ironing and dry cleaning?', 'Yes — professional steam ironing and dry cleaning, with pickup and delivery to your hotel or address.'],
   ['Can I get alterations before an event?', 'Yes, most repairs and hemming are completed the next day (urgent jobs 1–2 hours).'],
   ['Do you serve Konyaaltı and nearby districts?', 'Yes — Konyaaltı, Muratpaşa, Kepez, Lara, Döşemealtı, Belek, Kemer, Side and nearby districts, all with free pick-up and delivery to homes and hotels.'],
   ['Do you speak English?', 'Yes — write to us on WhatsApp in your own language and we will reply.'],
@@ -186,7 +182,7 @@ export default function TailorServiceAntalyaPage() {
           <div className="seo-intro-wrap">
             <p className="seo-intro" id="seo-intro">
               <strong style={{ color: '#C9A96E' }}>Antalya Tailor Service</strong> — Terzi Can serves all
-              districts of Antalya with tailoring, repair, alterations, ironing and dry cleaning. Our mobile
+              districts of Antalya with tailoring, repair and alterations. Our mobile
               tailor visits hotels and addresses in Belek, Lara, Kemer, Side and every other
               district, in addition to our Konyaaltı workshop.
             </p>
@@ -223,7 +219,7 @@ export default function TailorServiceAntalyaPage() {
             <div className="ctr">
               <div className="sec-head">
                 <span className="eyebrow">Tailoring & Repair Workshop</span>
-                <h2 className="sec-h" id="wk-h">Tailoring · Repair · Alterations · Ironing</h2>
+                <h2 className="sec-h" id="wk-h">Tailoring · Repair · Alterations</h2>
                 <p className="sec-sub">A full-capacity textile workshop, from custom garments to urgent repairs.</p>
               </div>
               <div className="wk-grid">
@@ -251,7 +247,7 @@ export default function TailorServiceAntalyaPage() {
             <div className="ctr">
               <div className="sec-head">
                 <span className="eyebrow">Prices</span>
-                <h2 className="sec-h" id="price-h">Tailoring, Repair, Alterations & Ironing</h2>
+                <h2 className="sec-h" id="price-h">Tailoring, Repair & Alterations</h2>
                 <p className="sec-sub">Send a photo on WhatsApp and we quote the exact price.</p>
               </div>
               <div className="price-grid">
@@ -274,7 +270,7 @@ export default function TailorServiceAntalyaPage() {
                 The price depends on the fabric and the work; we confirm it on WhatsApp before we start.
               </p>
               <div style={{ textAlign: 'center', marginTop: '1.8rem' }}>
-                <a href={WA('Hello, I would like to know your tailoring/repair/ironing prices.')} target="_blank" rel="noopener noreferrer" className="btn-primary">
+                <a href={WA('Hello, I would like to know your tailoring/repair prices.')} target="_blank" rel="noopener noreferrer" className="btn-primary">
                   <span aria-hidden="true">📲</span> Ask for a Price
                 </a>
               </div>
@@ -337,7 +333,7 @@ export default function TailorServiceAntalyaPage() {
             <a href="/en/anavera-tekstil">B2B Clothing Manufacturer (Anavera Tekstil)</a>
           </nav>
           <p style={{ marginTop: '1rem', fontSize: '.68rem', color: 'rgba(255,255,255,.45)', lineHeight: 1.8 }}>
-            Antalya Tailor Service — tailoring, repair, alterations and ironing across Konyaaltı and nearby districts:
+            Antalya Tailor Service — tailoring, repair and alterations across Konyaaltı and nearby districts:
             Konyaaltı, Muratpaşa, Kepez, Lara, Belek, Kemer, Side and more. Mobile tailor to
             your hotel or address. {PHONE}
           </p>

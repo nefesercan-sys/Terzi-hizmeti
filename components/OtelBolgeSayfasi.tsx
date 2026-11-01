@@ -8,7 +8,7 @@ import { areaIntro, areaNeeds, NEEDS_H, pickVariant } from '@/lib/area-profiles'
 import { findDistrict } from '@/lib/seo-data';
 
 // Fiyatlar tek kaynaktan (fiyat sayfası bileşeni)
-const mkP = (l: FLang) => { const R = priceRowsFor(l); return { hem: R[1].rows[0], zip: R[0].rows[0], alter: R[1].rows[3], wedding: R[1].rows[4], iron: R[3].rows[0], dry: R[3].rows[1] }; };
+const mkP = (l: FLang) => { const R = priceRowsFor(l); return { hem: R[1].rows[0], zip: R[0].rows[0], alter: R[1].rows[3], wedding: R[1].rows[4] }; };
 const P_tr = mkP('tr'), P_en = mkP('en'), P_ru = mkP('ru'), P_de = mkP('de');
 
 const PHONE = '+90 531 898 64 18';
@@ -41,15 +41,14 @@ const T: Record<Lang, any> = {
     aboutH: (r: string) => `About ${r}`, travelLabel: 'Travel time:',
     hotelsH: (r: string) => `Hotels in the ${r} Area`, hotelsSub: 'We can reach you at any hotel in this district — just share your hotel name on WhatsApp and we\'ll confirm.',
     otherHotelsNote: 'Staying somewhere else in this district? We can still reach you — just ask.',
-    servicesEyebrow: 'Tailoring & Repair Workshop', servicesH: 'Tailoring · Repair · Alterations · Ironing', servicesSub: 'A full-capacity textile workshop, delivered to your hotel.',
+    servicesEyebrow: 'Tailoring & Repair Workshop', servicesH: 'Tailoring · Repair · Alterations', servicesSub: 'A full-capacity textile workshop, delivered to your hotel.',
     services: [
       { icon: '👔', tr: 'Tailoring', en: 'Custom-fit clothing', desc: 'Custom-fit garments made to your exact measurements.', items: ['Shirt', 'Trousers', 'Suit', 'Dress'] },
       { icon: '🔧', tr: 'Repair', en: 'Zippers, tears, seams', desc: 'Everyday repairs — zippers and torn seams.', items: ['Zipper Replacement', 'Tear Repair'] },
       { icon: '📏', tr: 'Alterations', en: 'Hemming, taking in', desc: 'Precise fit adjustments so clothing sits exactly right.', items: ['Hemming', 'Waist Taking In', 'Sleeve Shortening'] },
-      { icon: '🧺', tr: 'Ironing & Dry Cleaning', en: 'Steam press, dry cleaning', desc: 'Professional steam ironing and dry cleaning, picked up and delivered.', items: ['Ironing', 'Dry Cleaning'] },
     ],
     priceEyebrow: 'Pricing', priceH: 'Prices', priceSub: 'Hotel pick-up and delivery is free — you only pay for the work.',
-    priceRows: [['Hotel Visit', 'FREE'], ['Hemming', (P_en.hem)], ['Zipper Replacement', (P_en.zip)], ['Dress / Suit Alteration', (P_en.alter)], ['Wedding Dress Alteration', (P_en.wedding)], ['Ironing (per item)', (P_en.iron)], ['Dry Cleaning', (P_en.dry)]],
+    priceRows: [['Hotel Visit', 'FREE'], ['Hemming', (P_en.hem)], ['Zipper Replacement', (P_en.zip)], ['Dress / Suit Alteration', (P_en.alter)], ['Wedding Dress Alteration', (P_en.wedding)]],
     procEyebrow: 'Process', procH: 'How It Works',
     steps: [
       ['01', 'Share Hotel & Room', `Send hotel name and room number to ${PHONE}`],
@@ -77,15 +76,14 @@ const T: Record<Lang, any> = {
     aboutH: (r: string) => `О районе ${r}`, travelLabel: 'Время в пути:',
     hotelsH: (r: string) => `Отели в районе ${r}`, hotelsSub: 'Мы можем приехать в любой отель этого района — просто напишите название отеля в WhatsApp, и мы подтвердим.',
     otherHotelsNote: 'Остановились в другом отеле этого района? Мы всё равно можем приехать — просто спросите.',
-    servicesEyebrow: 'Мастерская пошива и ремонта', servicesH: 'Пошив · Ремонт · Подгонка · Глажка', servicesSub: 'Полноценная текстильная мастерская с доставкой в ваш отель.',
+    servicesEyebrow: 'Мастерская пошива и ремонта', servicesH: 'Пошив · Ремонт · Подгонка', servicesSub: 'Полноценная текстильная мастерская с доставкой в ваш отель.',
     services: [
       { icon: '👔', tr: 'Пошив', en: 'Одежда по меркам', desc: 'Пошив одежды по вашим точным меркам.', items: ['Рубашка', 'Брюки', 'Костюм', 'Платье'] },
       { icon: '🔧', tr: 'Ремонт', en: 'Молнии, разрывы, швы', desc: 'Повседневный ремонт — молнии и швы.', items: ['Замена молнии', 'Ремонт разрыва'] },
       { icon: '📏', tr: 'Подгонка', en: 'Укорачивание, заужение', desc: 'Точная подгонка по фигуре.', items: ['Укорачивание', 'Заужение талии', 'Укорачивание рукавов'] },
-      { icon: '🧺', tr: 'Глажка и химчистка', en: 'Паровая глажка, химчистка', desc: 'Профессиональная глажка и химчистка с забором и доставкой.', items: ['Глажка', 'Химчистка'] },
     ],
     priceEyebrow: 'Стоимость', priceH: 'Цены', priceSub: 'Забор и доставка в отель бесплатны — вы платите только за работу.',
-    priceRows: [['Выезд в отель', 'БЕСПЛАТНО'], ['Укорачивание', ('от ' + P_ru.hem.replace('+', ''))], ['Замена молнии', ('от ' + P_ru.zip.replace('+', ''))], ['Подгонка платья/костюма', ('от ' + P_ru.alter.replace('+', ''))], ['Подгонка свадебного платья', ('от ' + P_ru.wedding.replace('+', ''))], ['Глажка (за вещь)', ('от ' + P_ru.iron.replace('+', ''))], ['Химчистка', ('от ' + P_ru.dry.replace('+', ''))]],
+    priceRows: [['Выезд в отель', 'БЕСПЛАТНО'], ['Укорачивание', ('от ' + P_ru.hem.replace('+', ''))], ['Замена молнии', ('от ' + P_ru.zip.replace('+', ''))], ['Подгонка платья/костюма', ('от ' + P_ru.alter.replace('+', ''))], ['Подгонка свадебного платья', ('от ' + P_ru.wedding.replace('+', ''))]],
     procEyebrow: 'Процесс', procH: 'Как мы работаем',
     steps: [
       ['01', 'Отель и номер', `Отправьте название отеля и номер комнаты на ${PHONE}`],
@@ -113,15 +111,14 @@ const T: Record<Lang, any> = {
     aboutH: (r: string) => `Über ${r}`, travelLabel: 'Anfahrtszeit:',
     hotelsH: (r: string) => `Hotels im Gebiet ${r}`, hotelsSub: 'Wir erreichen Sie in jedem Hotel dieses Bezirks — teilen Sie einfach Ihren Hotelnamen per WhatsApp mit, wir bestätigen den Termin.',
     otherHotelsNote: 'Wohnen Sie in einem anderen Hotel dieses Bezirks? Wir erreichen Sie trotzdem — fragen Sie einfach nach.',
-    servicesEyebrow: 'Schneider- und Reparaturwerkstatt', servicesH: 'Schneiderei · Reparatur · Änderungen · Bügelservice', servicesSub: 'Eine voll ausgestattete Textilwerkstatt, geliefert in Ihr Hotel.',
+    servicesEyebrow: 'Schneider- und Reparaturwerkstatt', servicesH: 'Schneiderei · Reparatur · Änderungen', servicesSub: 'Eine voll ausgestattete Textilwerkstatt, geliefert in Ihr Hotel.',
     services: [
       { icon: '👔', tr: 'Schneiderei', en: 'Maßgeschneiderte Kleidung', desc: 'Maßanfertigung nach Ihren genauen Maßen.', items: ['Hemd', 'Hose', 'Anzug', 'Kleid'] },
       { icon: '🔧', tr: 'Reparatur', en: 'Reißverschlüsse, Risse, Nähte', desc: 'Alltägliche Reparaturen — Reißverschlüsse und Nähte.', items: ['Reißverschluss ersetzen', 'Riss reparieren'] },
       { icon: '📏', tr: 'Änderungen', en: 'Kürzen, enger machen', desc: 'Präzise Passform-Anpassungen für perfekten Sitz.', items: ['Kürzen', 'Taille enger machen', 'Ärmel kürzen'] },
-      { icon: '🧺', tr: 'Bügelservice & Reinigung', en: 'Dampfbügeln, Reinigung', desc: 'Professionelles Bügeln und chemische Reinigung mit Abholung und Lieferung.', items: ['Bügeln', 'Chemische Reinigung'] },
     ],
     priceEyebrow: 'Kosten', priceH: 'Preise', priceSub: 'Abholung und Lieferung im Hotel sind kostenlos — Sie zahlen nur die Arbeit.',
-    priceRows: [['Hotelbesuch', 'KOSTENLOS'], ['Kürzen', ('ab ' + P_de.hem.replace('+', ''))], ['Reißverschluss ersetzen', ('ab ' + P_de.zip.replace('+', ''))], ['Kleid-/Anzugänderung', ('ab ' + P_de.alter.replace('+', ''))], ['Brautkleid ändern', ('ab ' + P_de.wedding.replace('+', ''))], ['Bügeln (pro Stück)', ('ab ' + P_de.iron.replace('+', ''))], ['Chemische Reinigung', ('ab ' + P_de.dry.replace('+', ''))]],
+    priceRows: [['Hotelbesuch', 'KOSTENLOS'], ['Kürzen', ('ab ' + P_de.hem.replace('+', ''))], ['Reißverschluss ersetzen', ('ab ' + P_de.zip.replace('+', ''))], ['Kleid-/Anzugänderung', ('ab ' + P_de.alter.replace('+', ''))], ['Brautkleid ändern', ('ab ' + P_de.wedding.replace('+', ''))]],
     procEyebrow: 'Ablauf', procH: 'So funktioniert es',
     steps: [
       ['01', 'Hotel & Zimmer angeben', `Senden Sie Hotelname und Zimmernummer an ${PHONE}`],
@@ -149,15 +146,14 @@ const T: Record<Lang, any> = {
     aboutH: (r: string) => `${r} Hakkında`, travelLabel: 'Ulaşım süresi:',
     hotelsH: (r: string) => `${r} Bölgesindeki Oteller`, hotelsSub: 'Bu bölgedeki her otele ulaşabiliyoruz — otel adınızı WhatsApp\'tan iletin, size dönelim.',
     otherHotelsNote: 'Bu bölgede başka bir otelde mi kalıyorsunuz? Yine de ulaşabiliriz — sorun yeter.',
-    servicesEyebrow: 'Dikim & Tamir Atölyesi', servicesH: 'Dikim · Tamir · Tadilat · Ütü', servicesSub: 'Tam kapasiteli bir tekstil atölyesi, otelinize kadar geliyor.',
+    servicesEyebrow: 'Dikim & Tamir Atölyesi', servicesH: 'Dikim · Tamir · Tadilat', servicesSub: 'Tam kapasiteli bir tekstil atölyesi, otelinize kadar geliyor.',
     services: [
       { icon: '👔', tr: 'Dikim', en: 'Özel ölçü kıyafet', desc: 'Tam ölçünüze göre özel dikim kıyafet.', items: ['Gömlek', 'Pantolon', 'Takım Elbise', 'Elbise'] },
       { icon: '🔧', tr: 'Tamir', en: 'Fermuar, yırtık, sökük', desc: 'Günlük tamirler — fermuar ve sökük dikiş.', items: ['Fermuar Değişimi', 'Yırtık Tamiri'] },
       { icon: '📏', tr: 'Tadilat', en: 'Boy kısaltma, daraltma', desc: 'Kıyafetin tam oturması için hassas ölçü ayarı.', items: ['Boy Kısaltma', 'Bel Daraltma', 'Kol Kısaltma'] },
-      { icon: '🧺', tr: 'Ütü & Kuru Temizleme', en: 'Buharlı ütü, kuru temizleme', desc: 'Profesyonel buharlı ütü ve kuru temizleme, alım-teslimatlı.', items: ['Ütü', 'Kuru Temizleme'] },
     ],
     priceEyebrow: '₺ Fiyatlar', priceH: 'Fiyatlar', priceSub: 'Otele alım-teslim ücretsiz — yalnızca yapılan iş ücretlendirilir.',
-    priceRows: [['Otel Ziyareti', 'ÜCRETSİZ'], ['Boy Kısaltma', (P_tr.hem)], ['Fermuar Değişimi', (P_tr.zip)], ['Elbise / Takım Tadilatı', (P_tr.alter)], ['Gelinlik Tadilatı', (P_tr.wedding)], ['Ütü (adet başı)', (P_tr.iron)], ['Kuru Temizleme', (P_tr.dry)]],
+    priceRows: [['Otel Ziyareti', 'ÜCRETSİZ'], ['Boy Kısaltma', (P_tr.hem)], ['Fermuar Değişimi', (P_tr.zip)], ['Elbise / Takım Tadilatı', (P_tr.alter)], ['Gelinlik Tadilatı', (P_tr.wedding)]],
     procEyebrow: 'Süreç', procH: 'Nasıl Çalışır',
     steps: [
       ['01', 'Otel & Oda Bilginizi Gönderin', `Otel adı ve oda numaranızı ${PHONE} numarasına iletin`],
@@ -290,7 +286,7 @@ export default function OtelBolgeSayfasi({ lang, region, allRegions, basePath, m
           </div>
         </section>
 
-        <OrnekGorselSeridi konu="bolge" yer={region.name} lang={lang} anahtarlar={['eve-gelen-terzi', 'kuru-temizleme-utu', 'erkek-takim-olcu']} sayfaUrl={`https://terzihizmeti.com.tr${basePath}/${region.slug}`} />
+        <OrnekGorselSeridi konu="bolge" yer={region.name} lang={lang} anahtarlar={['eve-gelen-terzi', 'erkek-takim-olcu']} sayfaUrl={`https://terzihizmeti.com.tr${basePath}/${region.slug}`} />
 
         <section className="sec" style={{ background: 'rgba(0,0,0,.12)' }} aria-labelledby="faq-h">
           <div className="ctr" style={{ maxWidth: 740 }}>

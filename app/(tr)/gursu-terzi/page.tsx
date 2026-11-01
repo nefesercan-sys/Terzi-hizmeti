@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   title: { absolute: "Gürsu Terzi · Pantolon, Ceket, Mont · Paça ₺200" },
   description:
     "Gürsu terzi: pantolon, ceket, mont tadilatı, paça ₺200, fermuar ₺300. Gürsu'ya ücretsiz servis. Her gün 08:00–23:00. ☎ " + PHONE,
-  keywords: fitKeywords(Array.from(new Set(['Gürsu tamir tadilat', 'Gürsu söküğü dikme', 'Gürsu yırtık tamiri', 'Gürsu elbise tamiri', 'Gürsu terzi', 'Gürsu mahallesi terzi', 'Gürsu Konyaaltı terzi', 'Gürsu paça kısaltma', 'Gürsu fermuar tamiri', 'Gürsu bel daraltma', 'Gürsu elbise dikimi', 'Gürsu gelinlik tadilatı', 'Gürsu ütü hizmeti', 'Gürsu kuru temizleme', 'Gürsu terzi fiyatları 2026', 'Konyaaltı Gürsu dikiş atölyesi', 'Gürsu pantolon kısaltma', 'Gürsu pantolon daraltma', 'Gürsu kot paçası kısaltma', 'Gürsu şort kısaltma', 'Gürsu ceket tadilatı', 'Gürsu ceket daraltma', 'Gürsu mont kısaltma', 'Gürsu mont tamiri', 'Gürsu mont fermuar değişimi', 'Gürsu gömlek daraltma', 'Gürsu gömlek kısaltma', 'Gürsu etek kısaltma', 'Gürsu fermuar değişimi', 'Gürsu beden ayarlama', 'Gürsu erkek terzi', 'Gürsu bay bayan terzi', 'Gürsu ölçüye göre özel dikim', 'Gürsu özel dikim', 'Gürsu abiye tamiri', 'Gürsu yakınımda terzi', 'Konyaaltı Gürsu terzi tamir tadilat', 'Gürsu bay bayan elbise tamiri', 'Gürsu terzi', 'Gürsu bay bayan terzi', 'Gürsu dikim', 'Gürsu tamir tadilat', 'Gürsu elbise tamiri', 'Gürsu elbise tadilatı', 'Gürsu fermuar değişimi', 'Gürsu fermuar tamiri', 'Gürsu boy kısaltma', 'Gürsu bel daraltma', 'Gürsu etek boyu kısaltma', 'Gürsu pantolon boyu kısaltma', 'Gürsu paça kısaltma', 'Gürsu kot paçası kısaltma', 'Gürsu beden ölçüsüne göre elbise tadilatı', 'Gürsu mont tamiri', 'Gürsu ceket daraltma', 'Gürsu gömlek daraltma', 'Gürsu şort kısaltma', 'Gürsu pantolon daraltma', 'Gürsu etek daraltma', 'Gürsu elbise daraltma', 'Gürsu elbise dikimi']))),
+  keywords: fitKeywords(Array.from(new Set(['Gürsu tamir tadilat', 'Gürsu söküğü dikme', 'Gürsu yırtık tamiri', 'Gürsu elbise tamiri', 'Gürsu terzi', 'Gürsu mahallesi terzi', 'Gürsu Konyaaltı terzi', 'Gürsu paça kısaltma', 'Gürsu fermuar tamiri', 'Gürsu bel daraltma', 'Gürsu elbise dikimi', 'Gürsu gelinlik tadilatı', 'Gürsu terzi fiyatları 2026', 'Konyaaltı Gürsu dikiş atölyesi', 'Gürsu pantolon kısaltma', 'Gürsu pantolon daraltma', 'Gürsu kot paçası kısaltma', 'Gürsu şort kısaltma', 'Gürsu ceket tadilatı', 'Gürsu ceket daraltma', 'Gürsu mont kısaltma', 'Gürsu mont tamiri', 'Gürsu mont fermuar değişimi', 'Gürsu gömlek daraltma', 'Gürsu gömlek kısaltma', 'Gürsu etek kısaltma', 'Gürsu fermuar değişimi', 'Gürsu beden ayarlama', 'Gürsu erkek terzi', 'Gürsu bay bayan terzi', 'Gürsu ölçüye göre özel dikim', 'Gürsu özel dikim', 'Gürsu abiye tamiri', 'Gürsu yakınımda terzi', 'Konyaaltı Gürsu terzi tamir tadilat', 'Gürsu bay bayan elbise tamiri', 'Gürsu terzi', 'Gürsu bay bayan terzi', 'Gürsu dikim', 'Gürsu tamir tadilat', 'Gürsu elbise tamiri', 'Gürsu elbise tadilatı', 'Gürsu fermuar değişimi', 'Gürsu fermuar tamiri', 'Gürsu boy kısaltma', 'Gürsu bel daraltma', 'Gürsu etek boyu kısaltma', 'Gürsu pantolon boyu kısaltma', 'Gürsu paça kısaltma', 'Gürsu kot paçası kısaltma', 'Gürsu beden ölçüsüne göre elbise tadilatı', 'Gürsu mont tamiri', 'Gürsu ceket daraltma', 'Gürsu gömlek daraltma', 'Gürsu şort kısaltma', 'Gürsu pantolon daraltma', 'Gürsu etek daraltma', 'Gürsu elbise daraltma', 'Gürsu elbise dikimi']))),
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   alternates: { canonical: PAGE_URL, languages: { tr: PAGE_URL, en: `${SITE}${DISTRICT_BASE.en}/gursu`, ru: `${SITE}${DISTRICT_BASE.ru}/gursu`, de: `${SITE}${DISTRICT_BASE.de}/gursu`, 'x-default': PAGE_URL } },
   openGraph: {
@@ -39,8 +39,8 @@ const jsonLd = {
       '@type': 'WebPage',
       '@id': `${PAGE_URL}#webpage`,
       url: PAGE_URL,
-      name: 'Gürsu Terzi Konyaaltı — Dikim, Tamir, Tadilat, Ütü Hizmeti',
-      description: 'Konyaaltı Gürsu mahallesine terzi hizmeti. Paça kısaltma, fermuar değişimi, bel daraltma, elbise dikimi, gelinlik tadilatı, ütü ve kuru temizleme.',
+      name: 'Gürsu Terzi Konyaaltı — Dikim, Tamir, Tadilat',
+      description: 'Konyaaltı Gürsu mahallesine terzi hizmeti. Paça kısaltma, fermuar değişimi, bel daraltma, elbise dikimi, gelinlik tadilatı.',
       inLanguage: 'tr',
       isPartOf: { '@id': `${SITE}#website` },
       about: { '@id': `${SITE}#business` },
@@ -60,7 +60,7 @@ const jsonLd = {
     {
       '@type': 'Service',
       '@id': `${PAGE_URL}#service`,
-      serviceType: 'Terzi, Dikim, Tamir, Tadilat, Ütü Hizmeti',
+      serviceType: 'Terzi, Dikim, Tamir, Tadilat',
       provider: { '@id': `${SITE}#business` },
       areaServed: { '@type': 'Place', name: 'Gürsu, Konyaaltı, Antalya' },
       offers: {
@@ -97,7 +97,6 @@ const FIYATLAR: [string, string, string][] = [
   ['Bel Daraltma', 'Elbise, pantolon, ceket', '₺200+'],
   ['Elbise Dikimi', 'Kadın, erkek, çocuk özel dikim', '₺800+'],
   ['Gelinlik Tadilatı', 'Hassas daraltma, boy ayarı', '₺800+'],
-  ['Ütü Hizmeti', 'Buharlı ütü, otel alım-teslim', 'Fotoğrafa göre'],
 ];
 
 export default function GursuPage() {
@@ -130,7 +129,7 @@ export default function GursuPage() {
             </h1>
             <p className="hero-desc">
               Gürsu mahallesine terzi hizmeti. Paça kısaltma, fermuar değişimi,
-              bel daraltma, özel dikim, gelinlik tadilatı, ütü ve kuru temizleme —
+              bel daraltma, özel dikim, gelinlik tadilatı —
               ₺200'den başlayan fiyatlarla; normal işler ertesi gün, acil işler 1–2 saatte teslim.
             </p>
             <div className="hero-btns">
@@ -197,10 +196,6 @@ export default function GursuPage() {
               <div className="howto-item">
                 <div className="howto-t">Özel Dikim & Gelinlik Tadilatı</div>
                 <div className="howto-d">Kadın, erkek, çocuk kıyafet dikimi; gelinlik ve abiye hassas tadilatı.</div>
-              </div>
-              <div className="howto-item">
-                <div className="howto-t">Ütü & Kuru Temizleme</div>
-                <div className="howto-d">Buharlı ütü ve kuru temizleme, otel alım-teslimatı dahil.</div>
               </div>
             </div>
           </div>

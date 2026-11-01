@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Портной Анталья · Выездной портной в отель',
-    description: 'Пошив, ремонт, подгонка и глажка во всех районах Антальи. Мы приедем к вам.',
+    description: 'Пошив, ремонт и подгонка во всех районах Антальи. Мы приедем к вам.',
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'ru_RU', alternateLocale: ['tr_TR'], type: 'website',
     images: [{ url: OG, width: 1024, height: 1024, alt: 'Портной Анталья', type: 'image/jpeg' }],
   },
@@ -57,7 +57,7 @@ const jsonLd = {
   '@graph': [
     {
       '@type': 'WebPage', '@id': `${PAGE_URL}#webpage`, url: PAGE_URL,
-      name: 'Портной Анталья — Выездной портной, ремонт, подгонка, глажка',
+      name: 'Портной Анталья — Выездной портной, ремонт, подгонка',
       description: 'Выездной портной во всех районах Антальи, в отелях и по адресам.',
       inLanguage: 'ru', dateModified: TODAY,
       breadcrumb: { '@id': `${PAGE_URL}#breadcrumb` },
@@ -72,13 +72,13 @@ const jsonLd = {
     },
     {
       '@type': 'Service', '@id': `${PAGE_URL}#service`,
-      serviceType: 'Выездной пошив, ремонт, подгонка и глажка одежды',
+      serviceType: 'Выездной пошив, ремонт, подгонка одежды',
       provider: { '@type': 'ClothingStore', name: 'Terzi Can', telephone: PHONE_TEL, url: SITE },
       areaServed: [
         'Konyaaltı', 'Muratpaşa', 'Kepez', 'Lara', 'Döşemealtı', 'Aksu', 'Belek', 'Kemer',
         'Serik', 'Side', ].map((n) => ({ '@type': 'Place', name: n })),
       hasOfferCatalog: {
-        '@type': 'OfferCatalog', name: 'Пошив, ремонт, подгонка и глажка',
+        '@type': 'OfferCatalog', name: 'Пошив, ремонт и подгонка',
         itemListElement: [
           { '@type': 'Offer', price: '10', priceCurrency: 'EUR', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Укорачивание' } },
           { '@type': 'Offer', price: '15', priceCurrency: 'EUR', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Замена молнии' } },
@@ -111,7 +111,6 @@ const SERVICES = [
   { icon: '👗', tr: 'Пошив женской одежды', en: 'Платья, блузы, юбки', desc: 'Индивидуальный дизайн и пошив по меркам на любой случай.', items: ['Платье', 'Блуза', 'Юбка', 'Вечернее платье', 'Свадебное платье'] },
   { icon: '🔧', tr: 'Ремонт одежды', en: 'Молнии, разрывы, швы', desc: 'Повседневный ремонт — молнии и разорванные швы.', items: ['Замена молнии', 'Ремонт разрыва'] },
   { icon: '📏', tr: 'Подгонка одежды', en: 'Укорачивание, заужение', desc: 'Точная подгонка по фигуре — идеальная посадка.', items: ['Укорачивание', 'Заужение талии', 'Укорачивание рукавов', 'Изменение размера платья'] },
-  { icon: '🧺', tr: 'Глажка и химчистка', en: 'Паровая глажка, химчистка', desc: 'Профессиональная паровая глажка и химчистка с забором и доставкой.', items: ['Глажка', 'Химчистка', 'Стирка и глажка'] },
   { icon: '🚗', tr: 'Выездной сервис / в отель', en: 'Мы приедем к вам', desc: 'Снятие мерок, забор и доставка в ваш отель или по адресу.', items: ['Выезд в отель', 'Выезд на дом', 'Бесплатный забор и доставка'] },
 ];
 
@@ -122,14 +121,11 @@ const REPAIR_CATEGORIES = [
     rows: [['Замена молнии (брюки)', ''], ['Замена молнии (пальто)', '']] as [string, string][] },
   { icon: '📏', title: 'Подгонка', keyword: 'укорачивание брюк Анталья', desc: 'Точная подгонка по фигуре.',
     rows: [['Укорачивание', ''], ['Заужение талии', ''], ['Укорачивание рукавов', ''], ['Изменение размера платья', ''], ['Свадебное/вечернее платье', '']] as [string, string][] },
-  { icon: '🧺', title: 'Глажка и химчистка', keyword: 'глажка химчистка Анталья', desc: 'Профессиональная паровая глажка и химчистка.',
-    rows: [['Глажка (за вещь)', ''], ['Химчистка (платье)', ''], ['Химчистка (пальто)', ''], ['Стирка и глажка (за кг)', '']] as [string, string][] },
 ];
 
 const FAQS: [string, string][] = [
   ['Вы приезжаете в отели Белека, Лары и Кемера?', 'Да! Наш выездной портной приезжает во все отели Белека, Лары, Кемера и Сиде. Просто напишите название отеля в WhatsApp.'],
   ['Выезд портного бесплатный?', 'Да. Забор и доставка на дом и в отели бесплатны во всех районах, которые мы обслуживаем.'],
-  ['Вы делаете глажку и химчистку?', 'Да — профессиональная паровая глажка и химчистка, с забором и доставкой в отель или по адресу.'],
   ['Можно сделать срочный ремонт перед мероприятием?', 'Да, большинство работ по ремонту и подгонке выполняются на следующий день, срочно — за 1–2 часа.'],
   ['Вы обслуживаете ближайшие районы Антальи?', 'Да — Коньяалты, Муратпаша, Кепез, Лара, Дёшемеалты, Белек, Кемер, Сиде и ближайшие районы; забор и доставка на дом и в отели везде бесплатны.'],
   ['Вы говорите по-русски?', 'Да — напишите нам в WhatsApp на своём языке, и мы ответим.'],
@@ -184,7 +180,7 @@ export default function UslugiPortnogoAntalyaPage() {
           <div className="seo-intro-wrap">
             <p className="seo-intro" id="seo-intro">
               <strong style={{ color: '#C9A96E' }}>Портной Анталья</strong> — Terzi Can обслуживает все районы
-              Антальи: пошив, ремонт, подгонка, глажка и химчистка. Наш выездной портной приезжает в отели и
+              Антальи: пошив, ремонт и подгонка. Наш выездной портной приезжает в отели и
               по адресам в Белеке, Ларе, Кемере, Сиде и других районах, помимо нашей
               мастерской в Коньяалты.
             </p>
@@ -218,7 +214,7 @@ export default function UslugiPortnogoAntalyaPage() {
             <div className="ctr">
               <div className="sec-head">
                 <span className="eyebrow">Мастерская пошива и ремонта</span>
-                <h2 className="sec-h" id="wk-h">Пошив · Ремонт · Подгонка · Глажка</h2>
+                <h2 className="sec-h" id="wk-h">Пошив · Ремонт · Подгонка</h2>
                 <p className="sec-sub">Полноценная текстильная мастерская — от пошива на заказ до срочного ремонта.</p>
               </div>
               <div className="wk-grid">
@@ -246,7 +242,7 @@ export default function UslugiPortnogoAntalyaPage() {
             <div className="ctr">
               <div className="sec-head">
                 <span className="eyebrow">Цены</span>
-                <h2 className="sec-h" id="price-h">Пошив, ремонт, подгонка и глажка</h2>
+                <h2 className="sec-h" id="price-h">Пошив, ремонт и подгонка</h2>
                 <p className="sec-sub">Отправьте фото в WhatsApp для точной цены.</p>
               </div>
               <div className="price-grid">
@@ -269,7 +265,7 @@ export default function UslugiPortnogoAntalyaPage() {
                 Цена зависит от ткани и сложности работы; перед началом мы подтверждаем её в WhatsApp.
               </p>
               <div style={{ textAlign: 'center', marginTop: '1.8rem' }}>
-                <a href={WA('Здравствуйте, хочу узнать цены на пошив/ремонт/глажку.')} target="_blank" rel="noopener noreferrer" className="btn-primary">
+                <a href={WA('Здравствуйте, хочу узнать цены на пошив/ремонт.')} target="_blank" rel="noopener noreferrer" className="btn-primary">
                   <span aria-hidden="true">📲</span> Узнать цену
                 </a>
               </div>
@@ -332,7 +328,7 @@ export default function UslugiPortnogoAntalyaPage() {
             <a href="/ru/anavera-tekstil">Производитель одежды B2B (Anavera Tekstil)</a>
           </nav>
           <p style={{ marginTop: '1rem', fontSize: '.68rem', color: 'rgba(255,255,255,.45)', lineHeight: 1.8 }}>
-            Портной Анталья — пошив, ремонт, подгонка и глажка во всех районах Антальи: Коньяалты, Муратпаша,
+            Портной Анталья — пошив, ремонт и подгонка во всех районах Антальи: Коньяалты, Муратпаша,
             Кепез, Лара, Белек, Кемер, Сиде и другие. Выездной портной в отель или по адресу. {PHONE}
           </p>
         </footer>

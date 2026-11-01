@@ -53,8 +53,6 @@ const SERVICES: { title: string; desc: string; rows: [string, string][] }[] = [
     rows: [['Reißverschluss (Hose)', ''], ['Reißverschluss (Mantel)', '']] },
   { title: 'Maßanfertigung', desc: 'Kleidung nach Ihren Maßen, auch aus Leinen und Baumwolle.',
     rows: [['Herrenhose', ''], ['Damenkleid', ''], ['Abendkleid', ''], ['Kinderkleidung', '']] },
-  { title: 'Bügeln und Reinigung', desc: 'Dampfbügeln und chemische Reinigung.',
-    rows: [['Bügeln (pro Stück)', ''], ['Reinigung (Kleid)', ''], ['Reinigung (Mantel)', '']] },
 ];
 
 const FREE_DISTRICTS = ['Konyaaltı'];

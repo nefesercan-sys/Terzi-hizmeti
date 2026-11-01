@@ -9,7 +9,7 @@ const WA_DEF = `https://wa.me/905318986418?text=${encodeURIComponent('Hallo, ich
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: 'Schneider im Hotel Antalya · Mobiler Service',
-  description: 'Mobiler Schneider zu Hotels in Belek, Lara, Güzeloba, Kemer, Side: Änderungen, Reparatur, Bügeln, Reinigung. Wir kommen zu Ihnen. ☎ +90 531 898 64 18',
+  description: 'Mobiler Schneider zu Hotels in Belek, Lara, Güzeloba, Kemer, Side: Änderungen und Reparatur. Wir kommen zu Ihnen. ☎ +90 531 898 64 18',
   keywords: ['Schneider Hotel Antalya', 'mobiler Schneider Antalya', 'Schneider Belek Hotel', 'Schneider Lara Hotel', 'Schneider Kemer Hotel', 'Schneider Side Hotel', 'Kleidung ändern Antalya eilig', 'Änderungsschneiderei Hotel Antalya'],
   alternates: {
     canonical: `${SITE}${BASE_PATH}`,
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   openGraph: {
     title: 'Schneider im Hotel Antalya — Mobiler Service',
-    description: 'Wir kommen zu Ihrem Hotel in Belek, Lara, Güzeloba, Kemer oder Side. Änderungen, Reparaturen, Bügelservice, chemische Reinigung.',
+    description: 'Wir kommen zu Ihrem Hotel in Belek, Lara, Güzeloba, Kemer oder Side. Änderungen und Reparaturen.',
     url: `${SITE}${BASE_PATH}`, siteName: 'Terzi Can', locale: 'de_DE', type: 'website',
     images: [{ url: `${SITE}/terzi-can-hero.jpg`, width: 1024, height: 1024, alt: 'Schneider im Hotel Antalya' }],
   },
@@ -38,7 +38,7 @@ const jsonLd = {
       '@type': 'Service',
       '@id': `${SITE}${BASE_PATH}#service`,
       name: 'Mobiler Schneiderservice in Antalyas Hotelbezirken',
-      serviceType: 'Änderungsschneiderei, Reparatur, Bügelservice, chemische Reinigung — mobiler Hotelservice',
+      serviceType: 'Änderungsschneiderei und Reparatur — mobiler Hotelservice',
       provider: { '@type': 'LocalBusiness', name: 'Terzi Can', telephone: '+905318986418', url: `${SITE}/antalya-terzi`,
         hasMap: 'https://www.google.com/maps?cid=6436895271281342624',
         address: {
@@ -69,7 +69,6 @@ const SERVICES = [
   { icon: '📏', t: 'Änderungsschneiderei', d: 'Kürzen, Enger machen, Anpassen — Hosen, Kleider, Anzüge, Röcke.' },
   { icon: '🧵', t: 'Reparatur', d: 'Reißverschluss und Riss — schnelle, saubere Reparatur.' },
   { icon: '👗', t: 'Braut- & Abendkleid', d: 'Vorsichtige Anpassung für den besonderen Anlass, mit Termin vor Ort.' },
-  { icon: '🧺', t: 'Bügelservice & Reinigung', d: 'Dampfbügeln, professionelle chemische Reinigung, Abholung im Hotel.' },
 ];
 
 export default function OtelBolgeleriDeHub() {
@@ -95,7 +94,7 @@ export default function OtelBolgeleriDeHub() {
             <h1 id="hub-h">Schneider im Hotel — <span className="accent">Mobiler Service</span></h1>
             <p className="hero-desc">
               Wählen Sie Ihren Bezirk, teilen Sie Hotelname und Zeitpunkt per WhatsApp mit — unser
-              Schneider kommt zu Ihnen. Änderungen, Reparaturen, Bügelservice und chemische Reinigung,
+              Schneider kommt zu Ihnen. Änderungen und Reparaturen,
               direkt vor Ort in Ihrem Hotel.
             </p>
             <div className="hero-btns">
@@ -113,7 +112,7 @@ export default function OtelBolgeleriDeHub() {
               <h2 className="sec-h ff" id="about-h">Warum ein mobiler Schneider im Urlaub?</h2>
               <p className="sec-sub">
                 Ein gerissener Reißverschluss vor dem Galadinner, ein Kleid, das eine kleine Anpassung
-                braucht, oder ein Anzug, der eine chemische Reinigung nötig hat — im Urlaub bleibt
+                braucht, oder ein Anzug, der angepasst werden muss — im Urlaub bleibt
                 selten Zeit, selbst eine Änderungsschneiderei zu finden. Terzi Can kommt direkt zu
                 Ihrem Hotel in Belek, Lara, Güzeloba, Kemer oder Side: Maßnehmen, Reparieren, Abholen
                 und Zurückbringen — alles ohne dass Sie Ihr Hotel verlassen müssen. Schreiben Sie uns

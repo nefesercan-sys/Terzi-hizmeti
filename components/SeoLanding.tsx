@@ -99,7 +99,7 @@ const _alternatesForOld = (lang: Lang, urlFor: (l: Lang) => string) => ({
 const capFirst = (lang: Lang, t: string) => (t ? t.charAt(0).toLocaleUpperCase(lang === 'tr' ? 'tr-TR' : lang) + t.slice(1) : t);
 const pickFit = (list: string[], max: number) => list.find((c) => c.length <= max) ?? list[list.length - 1];
 const priceShortOf = (lang: Lang, s: Service) =>
-  s.priceFrom ? (lang === 'tr' ? `₺${s.priceFrom}'den` : lang === 'en' ? `from ₺${s.priceFrom}` : lang === 'ru' ? `от ₺${s.priceFrom}` : `ab ₺${s.priceFrom}`) : '';
+  s.priceFrom && lang === 'tr' ? `₺${s.priceFrom}'den` : ''; // yabancı dillerde fiyat yazılmaz
 const TIME_SHORT: Record<Lang, Record<'same' | 'next' | 'three' | 'none', string>> = {
   tr: { same: 'Ertesi Gün', next: 'Ertesi Gün', three: 'Ölçüye Göre', none: 'Yakınınızda' },
   en: { same: 'Next Day', next: 'Next Day', three: 'Made to Measure', none: 'Near You' },
@@ -139,29 +139,29 @@ function _districtCopy(lang: Lang, d: District) {
     tr: [`${loc} terzi arıyorsanız: Terzi Can Konyaaltı. Paça kısaltma ₺200'den, fermuar değişimi ₺300'den, elbise tamiri. Her gün 08:00–23:00. ${PH}`,
          `${loc} terzi: paça ₺200'den, fermuar ₺300'den, elbise tamiri. Her gün 08:00–23:00, otel ve eve ücretsiz alım. ${PH}`,
          `${loc} terzi ${PH}: paça, fermuar, elbise dikimi ve tamiri. Her gün 08:00–23:00.`],
-    en: [`Tailor ${loc}? Terzi Can, Konyaaltı: hemming from ₺200, zipper replacement from ₺300, dress repair. Open daily 08:00–23:00. ${PH}`,
-         `Tailor ${loc}: hemming from ₺200, zippers from ₺300, dress repair. Open daily 08:00–23:00, free hotel pick-up. ${PH}`,
+    en: [`Tailor ${loc}? Terzi Can, Konyaaltı: hemming, zipper replacement, dress repair. Open daily 08:00–23:00. ${PH}`,
+         `Tailor ${loc}: hemming, zippers, dress repair. Open daily 08:00–23:00, free hotel pick-up. ${PH}`,
          `Tailor ${loc} ${PH}: hemming, zippers, dress repair. Open daily 08:00–23:00.`],
-    ru: [`Портной ${loc}? Terzi Can, Коньяалты: подшив от ₺200, замена молнии от ₺300, ремонт платьев. Ежедневно 08:00–23:00. ${PH}`,
-         `Портной ${loc}: подшив от ₺200, молния от ₺300, ремонт платьев. Ежедневно 08:00–23:00, забор из отелей бесплатно. ${PH}`,
+    ru: [`Портной ${loc}? Terzi Can, Коньяалты: подшив, замена молнии, ремонт платьев. Ежедневно 08:00–23:00. ${PH}`,
+         `Портной ${loc}: подшив, молния, ремонт платьев. Ежедневно 08:00–23:00, забор из отелей бесплатно. ${PH}`,
          `Портной ${loc} ${PH}: подшив, молнии, ремонт платьев. Ежедневно 08:00–23:00.`],
-    de: [`Schneider ${loc}? Terzi Can, Konyaaltı: Hose kürzen ab ₺200, Reißverschluss ab ₺300, Kleid ändern. Täglich 08:00–23:00. ${PH}`,
-         `Schneider ${loc}: Kürzen ab ₺200, Reißverschluss ab ₺300, Kleider ändern. Täglich 08:00–23:00, Hotelabholung gratis. ${PH}`,
+    de: [`Schneider ${loc}? Terzi Can, Konyaaltı: Hose kürzen, Reißverschluss, Kleid ändern. Täglich 08:00–23:00. ${PH}`,
+         `Schneider ${loc}: Kürzen, Reißverschluss, Kleider ändern. Täglich 08:00–23:00, Hotelabholung gratis. ${PH}`,
          `Schneider ${loc} ${PH}: Kürzen, Reißverschlüsse, Kleider ändern. Täglich 08:00–23:00.`],
   }[lang];
   const priT: string[] = lang === 'tr'
     ? (TR_PRI.includes(d.slug) ? (d.slug === 'konyaalti' ? [`Konyaaltı Terzi: Hurma, Uncalı, Liman, Gürsu | Terzi Can`, `Konyaaltı Terzi: Paça ₺200, Fermuar ₺300 | Terzi Can`] : [`${n} Terzi: Paça ₺200, Fermuar ₺300 | Terzi Can`, `${n} Terzi | Terzi Can`]) : [])
     : (FG_PRI.includes(d.slug) ? ({
-      en: [`Tailor in ${n}: Hotel Pick-up, Hemming ₺200 | Terzi Can`, `Tailor in ${n}, Antalya · Hotel Pick-up | Terzi Can`],
-      ru: [`Портной ${n}: забор из отеля, подшив ₺200 | Terzi Can`, `Портной ${n}, Анталья · из отеля | Terzi Can`],
-      de: [`Schneider ${n}: Hotelabholung, Kürzen ab ₺200 | Terzi Can`, `Schneider ${n}, Antalya · Hotelabholung | Terzi Can`],
+      en: [`Tailor in ${n}: Hotel Pick-up, Hemming | Terzi Can`, `Tailor in ${n}, Antalya · Hotel Pick-up | Terzi Can`],
+      ru: [`Портной ${n}: забор из отеля, подшив | Terzi Can`, `Портной ${n}, Анталья · из отеля | Terzi Can`],
+      de: [`Schneider ${n}: Hotelabholung, Kürzen | Terzi Can`, `Schneider ${n}, Antalya · Hotelabholung | Terzi Can`],
     } as Record<string, string[]>)[lang] : []);
   const priD: string[] = lang === 'tr'
     ? (TR_PRI.includes(d.slug) ? (d.slug === 'konyaalti' ? [`Konyaaltı, Hurma, Liman, Uncalı, Gürsu ve Öğretmenevleri'nde terzi arıyorsanız: paça ₺200'den, fermuar ₺300'den. Her gün 08:00–23:00, adrese servis. ${PH}`, `Konyaaltı terzi: Hurma, Liman, Uncalı, Gürsu. Paça ₺200'den, fermuar ₺300'den. Her gün 08:00–23:00. ${PH}`] : [`${loc} terzi: paça kısaltma ücreti ₺200'den, fermuar değişimi ₺300'den. Otel ve eve ücretsiz servis, her gün 08:00–23:00. ${PH}`, `${loc} terzi: paça ₺200'den, fermuar ₺300'den. Her gün 08:00–23:00. ${PH}`]) : [])
     : (FG_PRI.includes(d.slug) ? ({
-      en: [`Staying ${loc}? We collect from your hotel: hemming from ₺200, zippers from ₺300. message us on WhatsApp in your language. Daily 08:00–23:00. ${PH}`, `Staying ${loc}? Hotel pick-up: hemming from ₺200, zippers from ₺300. Daily 08:00–23:00. ${PH}`],
-      ru: [`Отдыхаете ${loc}? Заберём вещи из отеля: подшив от ₺200, молния от ₺300. Говорим по-русски. Ежедневно 08:00–23:00. ${PH}`, `Отдыхаете ${loc}? Забор из отеля: подшив от ₺200, молния от ₺300. Ежедневно 08:00–23:00. ${PH}`],
-      de: [`Urlaub ${loc}? Wir holen im Hotel ab: Kürzen ab ₺200, Reißverschluss ab ₺300. schreiben Sie uns per WhatsApp. Täglich 08:00–23:00. ${PH}`, `Urlaub ${loc}? Hotelabholung: Kürzen ab ₺200, Reißverschluss ab ₺300. Täglich 08:00–23:00. ${PH}`],
+      en: [`Staying ${loc}? We collect from your hotel: hemming, zippers. message us on WhatsApp in your language. Daily 08:00–23:00. ${PH}`, `Staying ${loc}? Hotel pick-up: hemming, zippers. Daily 08:00–23:00. ${PH}`],
+      ru: [`Отдыхаете ${loc}? Заберём вещи из отеля: подшив, молния. Говорим по-русски. Ежедневно 08:00–23:00. ${PH}`, `Отдыхаете ${loc}? Забор из отеля: подшив, молния. Ежедневно 08:00–23:00. ${PH}`],
+      de: [`Urlaub ${loc}? Wir holen im Hotel ab: Kürzen, Reißverschluss. schreiben Sie uns per WhatsApp. Täglich 08:00–23:00. ${PH}`, `Urlaub ${loc}? Hotelabholung: Kürzen, Reißverschluss. Täglich 08:00–23:00. ${PH}`],
     } as Record<string, string[]>)[lang] : []);
   if (priT.length) title = pickFit([...priT, ...titles], 60);
   desc = pickFit([...priD, ...descs], 158);
@@ -361,9 +361,9 @@ export function serviceMetadata(lang: Lang, s: Service): Metadata {
 export function hubMetadata(lang: Lang): Metadata {
   const title = {
     tr: 'Tamir Tadilat Terzi Antalya · Paça ₺200, Fermuar ₺300',
-    en: 'Clothing Repair & Alterations Antalya · Hemming ₺200',
-    ru: 'Ремонт и подшив одежды в Анталье · подшив ₺200',
-    de: 'Kleidung ändern & reparieren Antalya · Kürzen ab ₺200',
+    en: 'Clothing Repair & Alterations Antalya · Hemming',
+    ru: 'Ремонт и подшив одежды в Анталье · подшив',
+    de: 'Kleidung ändern & reparieren Antalya · Kürzen',
   }[lang];
   const description = {
     tr: `Bay bayan tamir tadilat: söküğü, yırtığı dikme, paça ve etek kısaltma, fermuar değişimi. Konyaaltı Hurma, Liman, Uncalı, Gürsu. ☎ ${PHONE}`,
@@ -658,11 +658,12 @@ const HIZMET_GORSEL: Record<string, GorselAnahtar[]> = {
   'elbise-dikim': ['abiye-elbise-atolye', 'keten-blazer-atolye', 'manken-bej-ceket'], 'ozel-dikim': ['abiye-elbise-atolye', 'keten-blazer-atolye', 'manken-bej-ceket'],
   'elbise-tamir': ['abiye-elbise-atolye', 'abiye-askida'], 'gece-kiyafeti': ['abiye-elbise-atolye', 'abiye-askida'], 'gelinlik-abiye': ['abiye-askida', 'abiye-elbise-atolye'],
   takim: ['erkek-takim-olcu', 'manken-palto-takim'], mont: ['erkek-palto-atolye', 'palto-yaka-detay', 'kadin-trenckot-atolye'],
+  abiye: ['abiye-elbise-atolye', 'abiye-askida', 'manken-bej-ceket'], pantolon: ['yun-pantolon-metre', 'keten-pantolon-katli'], kol: ['erkek-takim-olcu', 'beyaz-gomlek-katli', 'palto-yaka-detay'],
   gomlek: ['beyaz-gomlek-katli', 'erkek-gomlek-atolye'], tisort: ['sweatshirt-katli'], etek: ['pilili-etek'],
   'kiyafet-tamiri': ['erkek-takim-olcu', 'beyaz-gomlek-katli', 'pilili-etek'], beden: ['erkek-takim-olcu', 'beyaz-gomlek-katli', 'pilili-etek'],
 };
 
-const HIZMET_KONU: Record<string, 'paca' | 'fermuar' | 'gelinlik' | 'hizmet'> = { paca: 'paca', kot: 'paca', fermuar: 'fermuar', 'gelinlik-abiye': 'gelinlik', 'elbise-dikim': 'gelinlik', 'elbise-tamir': 'gelinlik', 'gece-kiyafeti': 'gelinlik' };
+const HIZMET_KONU: Record<string, 'paca' | 'fermuar' | 'gelinlik' | 'hizmet'> = { paca: 'paca', kot: 'paca', pantolon: 'paca', abiye: 'gelinlik', fermuar: 'fermuar', 'gelinlik-abiye': 'gelinlik', 'elbise-dikim': 'gelinlik', 'elbise-tamir': 'gelinlik', 'gece-kiyafeti': 'gelinlik' };
 
 export function ServicePage({ lang, s }: { lang: Lang; s: Service }) {
   const u = UI[lang];

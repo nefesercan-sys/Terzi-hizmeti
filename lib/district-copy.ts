@@ -60,15 +60,15 @@ const POOL: { id: string; f: Record<Lang, (loc: string, n: string, d: District) 
   } },
   { id: 'hem', f: {
     tr: (loc) => [`${loc} paça kısaltma ne kadar sürer?`, `${DELIVERY.tr.normal} ${DELIVERY.tr.urgent} Paça kısaltma ₺200'den başlar.`],
-    en: (loc) => [`How long does trouser hemming take ${loc}?`, `${DELIVERY.en.normal} ${DELIVERY.en.urgent} Hemming starts from ₺200.`],
-    ru: (loc) => [`Сколько занимает подшив брюк ${loc}?`, `${DELIVERY.ru.normal} ${DELIVERY.ru.urgent} Подшив — от ₺200.`],
-    de: (loc) => [`Wie lange dauert das Hosenkürzen ${loc}?`, `${DELIVERY.de.normal} ${DELIVERY.de.urgent} Kürzen ab ₺200.`],
+    en: (loc) => [`How long does trouser hemming take ${loc}?`, `${DELIVERY.en.normal} ${DELIVERY.en.urgent}`],
+    ru: (loc) => [`Сколько занимает подшив брюк ${loc}?`, `${DELIVERY.ru.normal} ${DELIVERY.ru.urgent}`],
+    de: (loc) => [`Wie lange dauert das Hosenkürzen ${loc}?`, `${DELIVERY.de.normal} ${DELIVERY.de.urgent}`],
   } },
   { id: 'zip', f: {
     tr: (loc) => [`${loc} fermuar değişimi ne kadar tutar?`, `Fermuar değişimi ₺300'den başlar; fermuarın türüne ve kıyafete göre net fiyatı fotoğraf üzerinden söyleriz. ${DELIVERY.tr.normal}`],
-    en: (loc) => [`How much does zipper replacement cost ${loc}?`, `Zipper replacement starts from ₺300; we give the exact price from a photo, depending on the zipper type and garment. ${DELIVERY.en.normal}`],
-    ru: (loc) => [`Сколько стоит замена молнии ${loc}?`, `Замена молнии — от ₺300; точную цену называем по фото, в зависимости от типа молнии и вещи. ${DELIVERY.ru.normal}`],
-    de: (loc) => [`Was kostet ein Reißverschlusswechsel ${loc}?`, `Ein Reißverschlusswechsel kostet ab ₺300; den genauen Preis nennen wir anhand eines Fotos, je nach Typ und Kleidungsstück. ${DELIVERY.de.normal}`],
+    en: (loc) => [`How much does zipper replacement cost ${loc}?`, `We give the exact price for zipper replacement from a photo, depending on the zipper type and garment. ${DELIVERY.en.normal}`],
+    ru: (loc) => [`Сколько стоит замена молнии ${loc}?`, `Точную цену замены молнии называем по фото, в зависимости от типа молнии и вещи. ${DELIVERY.ru.normal}`],
+    de: (loc) => [`Was kostet ein Reißverschlusswechsel ${loc}?`, `Den genauen Preis für den Reißverschlusswechsel nennen wir anhand eines Fotos, je nach Typ und Kleidungsstück. ${DELIVERY.de.normal}`],
   } },
   { id: 'home', f: {
     tr: (loc, n, d) => [`${loc} eve servis var mı?`, isFreeService(d.slug) ? `Evet. ${n} çevresinde ev adreslerinde de alım-teslim ücretsizdir; gün ve saati WhatsApp'tan birlikte belirleriz.` : `Otellere servis ücretsizdir. ${n} içindeki ev adresleri için servis durumunu WhatsApp'tan sorabilirsiniz; Konyaaltı'ndaki atölyeye de getirebilirsiniz.`],
@@ -84,9 +84,9 @@ const POOL: { id: string; f: Record<Lang, (loc: string, n: string, d: District) 
   } },
   { id: 'wedding', f: {
     tr: (loc) => [`${loc} gelinlik veya abiye tadilatı yapılıyor mu?`, `Evet. Gelinlik tadilatı ₺800'den, abiye tadilatı ₺800'den başlar; kesin fiyat fotoğrafa ve işin kapsamına göre verilir. Abiye tadilatı ertesi gün teslim edilir, gelinlikte süre işin kapsamına göre netleşir.`],
-    en: (loc) => [`Do you alter wedding or evening dresses ${loc}?`, 'Yes. Wedding dress alterations start from ₺800 and evening dress alterations from ₺800; the exact price depends on a photo and the scope of work. Evening dresses are ready the next day; for wedding dresses the time depends on the work.'],
-    ru: (loc) => [`Подгоняете ли вы свадебные и вечерние платья ${loc}?`, 'Да. Подгонка свадебного платья — от ₺800, вечернего — от ₺800; точная цена зависит от фото и объёма работ. Вечерние платья готовы на следующий день, для свадебных срок зависит от работы.'],
-    de: (loc) => [`Ändern Sie ${loc} auch Braut- und Abendkleider?`, 'Ja. Änderungen am Brautkleid beginnen bei ₺800, am Abendkleid bei ₺800; der genaue Preis hängt von Foto und Aufwand ab. Abendkleider sind am nächsten Tag fertig, beim Brautkleid richtet sich die Dauer nach dem Umfang.'],
+    en: (loc) => [`Do you alter wedding or evening dresses ${loc}?`, 'Yes. We alter evening dresses and wedding dresses; the exact price depends on a photo and the scope of work. Evening dresses are ready the next day; for wedding dresses the time depends on the work.'],
+    ru: (loc) => [`Подгоняете ли вы свадебные и вечерние платья ${loc}?`, 'Да. Мы подгоняем вечерние и свадебные платья; точная цена зависит от фото и объёма работ. Вечерние платья готовы на следующий день, для свадебных срок зависит от работы.'],
+    de: (loc) => [`Ändern Sie ${loc} auch Braut- und Abendkleider?`, 'Ja. Wir ändern Abend- und Brautkleider; der genaue Preis hängt von Foto und Aufwand ab. Abendkleider sind am nächsten Tag fertig, beim Brautkleid richtet sich die Dauer nach dem Umfang.'],
   } },
   { id: 'tourist', f: {
     tr: (loc) => [`Turist olarak ${loc} terzi bulabilir miyim?`, `Evet. WhatsApp'tan kendi dilinizde yazabilirsiniz; Türkçe, İngilizce, Rusça ve Almanca ile hizmet veriyoruz. Otellere alım-teslim ücretsizdir. Fotoğrafı gönderin, fiyatı söyleyelim.`],
@@ -108,9 +108,9 @@ const POOL: { id: string; f: Record<Lang, (loc: string, n: string, d: District) 
   } },
   { id: 'price', f: {
     tr: (loc) => [`${loc} terzi fiyatı nasıl öğrenilir?`, `Kıyafetin ve sorunun fotoğrafını WhatsApp'tan gönderin; net fiyatı ve süreyi söyleyelim. Başlangıç fiyatları: paça kısaltma ₺200, fermuar değişimi ₺300.`],
-    en: (loc) => [`How do I get a tailor's price ${loc}?`, 'Send a photo of the garment and the problem on WhatsApp and we will give the exact price and time. Starting prices: hemming ₺200, zipper replacement ₺300.'],
-    ru: (loc) => [`Как узнать цену у портного ${loc}?`, 'Пришлите в WhatsApp фото вещи и проблемы — назовём точную цену и срок. Стартовые цены: подшив ₺200, замена молнии ₺300.'],
-    de: (loc) => [`Wie erfahre ich ${loc} den Preis beim Schneider?`, 'Senden Sie ein Foto von Kleidungsstück und Problem per WhatsApp, wir nennen Preis und Dauer. Startpreise: Kürzen ₺200, Reißverschluss wechseln ₺300.'],
+    en: (loc) => [`How do I get a tailor's price ${loc}?`, 'Send a photo of the garment and the problem on WhatsApp and we will give the exact price and time.'],
+    ru: (loc) => [`Как узнать цену у портного ${loc}?`, 'Пришлите в WhatsApp фото вещи и проблемы — назовём точную цену и срок.'],
+    de: (loc) => [`Wie erfahre ich ${loc} den Preis beim Schneider?`, 'Senden Sie ein Foto von Kleidungsstück und Problem per WhatsApp, wir nennen Preis und Dauer.'],
   } },
 ];
 

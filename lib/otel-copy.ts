@@ -41,8 +41,8 @@ const POOL = (lang: L, r: string): { id: string; q: string; a: string }[] => {
     { id: 'come', q: `Will a tailor come to my hotel in ${r}?`, a: `Yes. We collect and deliver for hotels in ${r}; send your hotel name and room number on WhatsApp.` },
     { id: 'free', q: `Is the hotel service in ${r} free?`, a: 'Yes. Hotel pick-up and delivery is free in every area we serve; you only pay for the repair, alteration or sewing itself.' },
     { id: 'urgent', q: `Is there an urgent tailor for hotels in ${r}?`, a: `Yes. ${D.urgent} Send a photo and your hotel name on WhatsApp.` },
-    { id: 'hem', q: `How long does hemming take for a hotel guest in ${r}?`, a: `${D.normal} ${D.urgent} Hemming starts from ₺200.` },
-    { id: 'dress', q: `Can you adjust a dress or suit for dinner while I stay in ${r}?`, a: 'Yes; evening dress and suit alterations are ready the next day like standard alterations, or in 1–2 hours when urgent. Wedding and evening dress alterations start from ₺800.' },
+    { id: 'hem', q: `How long does hemming take for a hotel guest in ${r}?`, a: `${D.normal} ${D.urgent}` },
+    { id: 'dress', q: `Can you adjust a dress or suit for dinner while I stay in ${r}?`, a: 'Yes; evening dress and suit alterations are ready the next day like standard alterations, or in 1–2 hours when urgent.' },
     { id: 'custom', q: `Can I have clothes made to measure during my holiday in ${r}?`, a: `Yes; we sew to measure in linen, cotton and other summer fabrics. ${D.custom} Tell us your departure date on WhatsApp.` },
     { id: 'lang', q: `Can I talk to the tailor in my own language in ${r}?`, a: 'Yes. Write to us on WhatsApp in Turkish, English, Russian or German.' },
   ];
@@ -50,8 +50,8 @@ const POOL = (lang: L, r: string): { id: string; q: string; a: string }[] => {
     { id: 'come', q: `Приедет ли портной в мой отель в районе ${r}?`, a: `Да. Мы забираем и возвращаем вещи для отелей района ${r}; пришлите в WhatsApp название отеля и номер комнаты.` },
     { id: 'free', q: `Бесплатен ли выезд в отели района ${r}?`, a: 'Да. Забор и доставка в отели бесплатны во всех районах, которые мы обслуживаем; оплачивается только ремонт, подгонка или пошив.' },
     { id: 'urgent', q: `Есть ли срочный портной для отелей района ${r}?`, a: `Да. ${D.urgent} Пришлите фото и название отеля в WhatsApp.` },
-    { id: 'hem', q: `Сколько занимает подшив брюк для гостя отеля в районе ${r}?`, a: `${D.normal} ${D.urgent} Подшив — от ₺200.` },
-    { id: 'dress', q: `Можно ли подогнать платье или костюм к ужину, пока я живу в районе ${r}?`, a: 'Да; вечерние платья и костюмы готовы на следующий день, как обычная подгонка, а при срочности — за 1–2 часа. Подгонка свадебных и вечерних платьев — от ₺800.' },
+    { id: 'hem', q: `Сколько занимает подшив брюк для гостя отеля в районе ${r}?`, a: `${D.normal} ${D.urgent}` },
+    { id: 'dress', q: `Можно ли подогнать платье или костюм к ужину, пока я живу в районе ${r}?`, a: 'Да; вечерние платья и костюмы готовы на следующий день, как обычная подгонка, а при срочности — за 1–2 часа.' },
     { id: 'custom', q: `Можно ли заказать пошив по меркам во время отпуска в районе ${r}?`, a: `Да; шьём по меркам из льна, хлопка и других летних тканей. ${D.custom} Сообщите дату отъезда в WhatsApp.` },
     { id: 'lang', q: `Могу ли я общаться с портным на своём языке в районе ${r}?`, a: 'Да. Пишите в WhatsApp на турецком, английском, русском или немецком.' },
   ];
@@ -59,8 +59,8 @@ const POOL = (lang: L, r: string): { id: string; q: string; a: string }[] => {
     { id: 'come', q: `Kommt der Schneider in mein Hotel in ${r}?`, a: `Ja. Wir holen und liefern für Hotels in ${r}; senden Sie Hotelname und Zimmernummer per WhatsApp.` },
     { id: 'free', q: `Ist der Hotelservice in ${r} kostenlos?`, a: 'Ja. Abholung und Lieferung im Hotel sind in allen Gebieten, die wir bedienen, kostenlos; Sie zahlen nur Reparatur, Änderung oder Näharbeit.' },
     { id: 'urgent', q: `Gibt es einen Schneider für Eilaufträge in Hotels in ${r}?`, a: `Ja. ${D.urgent} Schicken Sie Foto und Hotelnamen per WhatsApp.` },
-    { id: 'hem', q: `Wie lange dauert das Kürzen für Hotelgäste in ${r}?`, a: `${D.normal} ${D.urgent} Kürzen ab ₺200.` },
-    { id: 'dress', q: `Können Sie ein Kleid oder einen Anzug für das Abendessen in ${r} anpassen?`, a: 'Ja; Abendkleid- und Anzugänderungen sind wie normale Änderungen am nächsten Tag fertig, bei Eilaufträgen in 1–2 Stunden. Brautkleid- und Abendkleid-Änderungen ab ₺800.' },
+    { id: 'hem', q: `Wie lange dauert das Kürzen für Hotelgäste in ${r}?`, a: `${D.normal} ${D.urgent}` },
+    { id: 'dress', q: `Können Sie ein Kleid oder einen Anzug für das Abendessen in ${r} anpassen?`, a: 'Ja; Abendkleid- und Anzugänderungen sind wie normale Änderungen am nächsten Tag fertig, bei Eilaufträgen in 1–2 Stunden.' },
     { id: 'custom', q: `Kann ich im Urlaub in ${r} Kleidung nach Maß nähen lassen?`, a: `Ja; wir nähen nach Maß aus Leinen, Baumwolle und anderen Sommerstoffen. ${D.custom} Nennen Sie uns Ihr Abreisedatum per WhatsApp.` },
     { id: 'lang', q: `Kann ich in ${r} mit dem Schneider in meiner Sprache sprechen?`, a: 'Ja. Schreiben Sie uns per WhatsApp auf Türkisch, Englisch, Russisch oder Deutsch.' },
   ];

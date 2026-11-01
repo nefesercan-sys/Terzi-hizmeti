@@ -47,7 +47,7 @@ export const AREA_NOTES: Record<string, AreaNote> = {
   ),
   ogretmenevleri: n(
     ['Öğretmenevleri, Konyaaltı ilçesine bağlı bir mahalle.', 'Öğretmenevleri is a neighbourhood of Konyaaltı district.', 'Огретменевлери — квартал района Коньяалты.', 'Öğretmenevleri ist ein Viertel im Bezirk Konyaaltı.'],
-    ['Mont, ceket ve deri ceket tadilatı, fermuar değişimi (₺300\'den). Alım-teslim ücretsiz.', 'Coat, jacket and leather jacket alterations, zipper replacement (from ₺300). Collection and delivery are free.', 'Подгонка пальто, курток и кожаных курток, замена молнии (от ₺300). Забор и доставка бесплатны.', 'Mantel-, Jacken- und Lederjackenänderungen, Reißverschluss wechseln (ab ₺300). Abholung und Lieferung sind kostenlos.'],
+    ['Mont, ceket ve deri ceket tadilatı, fermuar değişimi (₺300\'den). Alım-teslim ücretsiz.', 'Coat, jacket and leather jacket alterations, zipper replacement. Collection and delivery are free.', 'Подгонка пальто, курток и кожаных курток, замена молнии. Забор и доставка бесплатны.', 'Mantel-, Jacken- und Lederjackenänderungen, Reißverschluss wechseln. Abholung und Lieferung sind kostenlos.'],
   ),
   altinkum: n(
     ['Altınkum, Konyaaltı ilçesine bağlı bir mahalle.', 'Altınkum is a neighbourhood of Konyaaltı district.', 'Алтынкум — квартал района Коньяалты.', 'Altınkum ist ein Viertel im Bezirk Konyaaltı.'],

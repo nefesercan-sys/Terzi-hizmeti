@@ -476,23 +476,23 @@ export const EK_METIN: Record<string, Record<EkLang, [string, string]>> = {
   ],
   "fr": [
    "Revers de manteau et détail de couture",
-   "Réparation des revers, manches et doublures de manteaux et vestes en laine."
+   "Réparation des revers et manches de manteaux et vestes en laine."
   ],
   "pl": [
    "Kołnierz płaszcza i detal szwu",
-   "Naprawa kołnierzy, rękawów i podszewek w wełnianych płaszczach i marynarkach."
+   "Naprawa kołnierzy i rękawów w wełnianych płaszczach i marynarkach."
   ],
   "uk": [
    "Лацкан пальто й деталі строчки",
-   "Ремонт лацканів, рукавів і підкладки шерстяних пальто й піджаків."
+   "Ремонт лацканів і рукавів шерстяних пальто й піджаків."
   ],
   "nl": [
    "Revers en naaddetail van een jas",
-   "Reparatie van revers, mouwen en voering bij wollen jassen en jasjes."
+   "Reparatie van revers en mouwen bij wollen jassen en jasjes."
   ],
   "ar": [
    "ياقة المعطف وتفاصيل الخياطة",
-   "إصلاح الياقات والأكمام والبطانة في المعاطف والجاكيتات الصوفية."
+   "إصلاح الياقات والأكمام في المعاطف والجاكيتات الصوفية."
   ]
  },
  "polar-yelek": {

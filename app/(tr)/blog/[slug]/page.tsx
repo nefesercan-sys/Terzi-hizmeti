@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const og = `${SITE}${y.gorsel}`;
   return {
     metadataBase: new URL(SITE),
-    title: { absolute: `${y.baslik} | Terzi Can Antalya` },
+    title: { absolute: `${y.baslik} | Terzi Can Antalya`.length > 60 ? y.baslik : `${y.baslik} | Terzi Can Antalya` },
     description: fitDesc(y.ozet),
     alternates: { canonical: url },
     robots: { index: true, follow: true },

@@ -23,7 +23,7 @@ import {
   type Lang, type District, type Service,
   isTrNear, isIndexable, TR_NEAR_SLUGS, trExtraKeywords, isFreeService,
 } from '@/lib/seo-data';
-import { angleFor, angleTitles, angleDescs, angleKeywords, unfreeDeep, unfree } from '@/lib/seo-angles';
+import { angleFor, angleTitles, angleDescs, angleKeywords } from '@/lib/seo-angles';
 import { fgNearDistrict, fgServiceMeta, eurFromText, EUR_FROM } from '@/lib/fg-meta';
 import { trNearDistrict } from '@/lib/tr-meta';
 import { fitDesc, fitKeywords } from '@/lib/meta-fit';
@@ -122,7 +122,7 @@ function sortD(lang: Lang, list: District[]): District[] {
 // ── Metin üreticileri ───────────────────────────────────────
 function districtCopy(lang: Lang, d: District) {
   const r = _districtCopy(lang, d);
-  return isFreeService(d.slug) ? r : unfreeDeep(lang, r);
+  return r;
 }
 function _districtCopy(lang: Lang, d: District) {
   const n = d.name[lang];
@@ -198,9 +198,9 @@ function _districtCopy(lang: Lang, d: District) {
         `${n} şort kısaltma`, `${n} mont tamiri`, `${n} ceket daraltma`, `${n} ceket kısaltma`, `${n} elbise dikimi`, `${n} elbise daraltma`,
         `${n} abiye tamiri`, `${n} özel dikim`, `${n} bana yakın terzi`);
     }
-    return metaOverride({ n, loc, kw, title, desc: isFreeService(d.slug) ? desc : unfree(lang, desc) });
+    return metaOverride({ n, loc, kw, title, desc });
   }
-  return metaOverride({ n, loc, kw, title, desc: isFreeService(d.slug) ? desc : unfree(lang, desc) });
+  return metaOverride({ n, loc, kw, title, desc });
 
   function metaOverride(r: { n: string; loc: string; kw: string[]; title: string; desc: string }) {
     const o = lang === 'tr' ? trNearDistrict(d.slug, n, r.loc, PHONE, 'Terzi Can') : fgNearDistrict(lang, d.slug, n); // elle yazılmış meta (TR yakın bölgeler + EN/RU/DE)

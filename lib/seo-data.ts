@@ -27,10 +27,6 @@ export const LAST_UPDATE = '2026-11-01';
 // noindex olur, sitemap'ten, iç linklerden ve hreflang'dan çıkar. Yabancı dil (EN/RU/DE) sayfaları TÜM bölgelerde açıktır.
 // Bir bölgeyi Türkçede açmak/kapatmak için bu listeyi değiştirmek yeterli.
 export const TR_NEAR_SLUGS = ['konyaalti', 'hurma', 'liman', 'gursu', 'uluc', 'altinkum', 'ogretmenevleri', 'arapsuyu', 'siteler', 'uncali', 'sarisu', 'meltem', 'muratpasa', 'fener', 'sirinyali', 'toros', 'manavgat', 'serik'];
-/** Otellere alım-teslim TÜM hizmet bölgelerinde ücretsizdir (sahibinin kararı). */
-export const HOTEL_SERVICE_FREE = true;
-/** Eski mahalle listesi (kullanılmıyor): eve ve otele ücretsiz servis her bölgede geçerlidir. */
-export const FREE_SERVICE_SLUGS = ['konyaalti', 'hurma', 'sarisu', 'liman', 'uncali', 'altinkum', 'ogretmenevleri', 'siteler', 'arapsuyu', 'gursu', 'uluc', 'meltem'];
 export const isFreeService = (_slug: string): boolean => true; // Eve ve otele ücretsiz servis: her bölgede (sahibin kararı)
 export const isTrNear = (slug: string): boolean => TR_NEAR_SLUGS.includes(slug);
 // ── Türkçe yakın bölge sayfaları için ek anahtar kelime katmanı ─────────────────────────────
@@ -328,10 +324,10 @@ export const SERVICES: Service[] = [
     name: { tr: 'Abiye Tadilatı, Gece Kıyafetleri ve Özel Kıyafetler', en: 'Evening Dress, Formal & Special-Occasion Wear Alteration', ru: 'Подгонка вечерних платьев и нарядов для особых случаев', de: 'Abendkleid, Festmode und besondere Kleidung ändern' },
     q: { tr: 'abiye tadilatı', en: 'evening dress alteration', ru: 'подгонка вечернего платья', de: 'Abendkleid ändern' },
     intro: {
-      tr: 'Abiye, gece kıyafeti ve özel gün kıyafetlerinde daraltma, genişletme, boy kısaltma, askı, fermuar ve astar ayarı yaparız; ölçü kıyafet üzerinizdeyken alınır, gerekirse prova yapılır. Normal işte ertesi gün, acil işte 1–2 saatte teslim edilir.',
-      en: 'For evening dresses, formal wear and special-occasion outfits we take in, let out, shorten, adjust straps and zippers and fix linings; we measure while you wear the garment and do a fitting when needed. Normal jobs are ready the next day, urgent ones in 1–2 hours.',
-      ru: 'Вечерние платья, нарядная одежда и наряды для особых случаев: ушиваем, расширяем, укорачиваем, подгоняем бретели, молнии и подкладку; мерки снимаем, пока вещь на вас, при необходимости делаем примерку. Обычные работы готовы на следующий день, срочные — за 1–2 часа.',
-      de: 'Bei Abendkleidern, Festmode und Kleidung für besondere Anlässe machen wir enger oder weiter, kürzen, passen Träger, Reißverschluss und Futter an; wir messen am getragenen Kleidungsstück und machen bei Bedarf eine Anprobe. Normale Arbeiten sind am nächsten Tag fertig, eilige in 1–2 Stunden.',
+      tr: 'Abiye, gece kıyafeti ve özel gün kıyafetlerinde daraltma, genişletme, boy kısaltma, askı, fermuar ayarı yaparız; ölçü kıyafet üzerinizdeyken alınır, gerekirse prova yapılır. Normal işte ertesi gün, acil işte 1–2 saatte teslim edilir.',
+      en: 'For evening dresses, formal wear and special-occasion outfits we take in, let out, shorten, adjust straps and zippers; we measure while you wear the garment and do a fitting when needed. Normal jobs are ready the next day, urgent ones in 1–2 hours.',
+      ru: 'Вечерние платья, нарядная одежда и наряды для особых случаев: ушиваем, расширяем, укорачиваем, подгоняем бретели и молнии; мерки снимаем, пока вещь на вас, при необходимости делаем примерку. Обычные работы готовы на следующий день, срочные — за 1–2 часа.',
+      de: 'Bei Abendkleidern, Festmode und Kleidung für besondere Anlässe machen wir enger oder weiter, kürzen, passen Träger und Reißverschluss an; wir messen am getragenen Kleidungsstück und machen bei Bedarf eine Anprobe. Normale Arbeiten sind am nächsten Tag fertig, eilige in 1–2 Stunden.',
     },
     extra: { href: '/antalya-gelinlik-tadilati', label: { tr: 'Gelinlik tadilatı sayfası', en: 'Wedding dress page (Turkish)', ru: 'Страница о свадебных платьях (тур.)', de: 'Brautkleid-Seite (türkisch)' } },
     vars: {
@@ -407,10 +403,10 @@ export const SERVICES: Service[] = [
     name: { tr: 'Mont ve Palto Tadilatı', en: 'Coat & Jacket Alteration', ru: 'Подгонка курток и пальто', de: 'Mantel und Jacke ändern' },
     q: { tr: 'mont tadilatı', en: 'coat alteration', ru: 'подгонка куртки', de: 'Mantel ändern' },
     intro: {
-      tr: 'Mont, kaban ve paltoda daraltma, kısaltma, kol ve fermuar işleri yaparız. Astarlı ve kalın kumaşlar için bu işe uygun makine ve iplik kullanırız.',
-      en: 'Coats and padded jackets: we take in, shorten and handle sleeve and zipper work, using machines and thread suited to lined, thick fabrics.',
-      ru: 'Куртки, пальто и пуховики: ушиваем, укорачиваем, работаем с рукавами и молниями на машинах и нитках, подходящих для подкладки и плотных тканей.',
-      de: 'Mäntel und Steppjacken: Wir machen sie enger, kürzen und erledigen Ärmel- und Reißverschlussarbeiten mit Maschinen und Garn für gefütterte, dicke Stoffe.',
+      tr: 'Mont, kaban ve paltoda daraltma, kısaltma, kol ve fermuar işleri yaparız. Kalın kumaşlar için bu işe uygun makine ve iplik kullanırız.',
+      en: 'Coats and padded jackets: we take in, shorten and handle sleeve and zipper work, using machines and thread suited to thick fabrics.',
+      ru: 'Куртки, пальто и пуховики: ушиваем, укорачиваем, работаем с рукавами и молниями на машинах и нитках, подходящих для плотных тканей.',
+      de: 'Mäntel und Steppjacken: Wir machen sie enger, kürzen und erledigen Ärmel- und Reißverschlussarbeiten mit Maschinen und Garn für dicke Stoffe.',
     },
     vars: {
       tr: ['mont tadilatı', 'mont daraltma', 'mont kısaltma', 'palto tadilatı', 'kaban daraltma', 'mont kol kısaltma', 'mont tamiri'],
@@ -479,10 +475,10 @@ export const SERVICES: Service[] = [
     name: { tr: 'Etek Kısaltma ve Daraltma', en: 'Skirt Hemming & Alteration', ru: 'Подгонка и укорачивание юбок', de: 'Rock kürzen und ändern' },
     q: { tr: 'etek kısaltma', en: 'skirt hemming', ru: 'подшить юбку', de: 'Rock kürzen' },
     intro: {
-      tr: 'Etek boyu kısaltma, bel daraltma ve genişletme, astar ve fermuar onarımı yapıyoruz. Fotoğraf gönderin, fiyatı WhatsApp\'tan söyleyelim.',
-      en: 'We shorten skirts, take in or let out the waist, and repair linings and zippers. Send a photo and we will quote on WhatsApp.',
-      ru: 'Укорачиваем юбки, ушиваем и расширяем пояс, чиним подкладку и молнии. Пришлите фото — назовём цену в WhatsApp.',
-      de: 'Wir kürzen Röcke, machen den Bund enger oder weiter und reparieren Futter und Reißverschlüsse. Foto senden, Preis per WhatsApp.',
+      tr: 'Etek boyu kısaltma, bel daraltma ve genişletme, fermuar onarımı yapıyoruz. Fotoğraf gönderin, fiyatı WhatsApp\'tan söyleyelim.',
+      en: 'We shorten skirts, take in or let out the waist, and repair zippers. Send a photo and we will quote on WhatsApp.',
+      ru: 'Укорачиваем юбки, ушиваем и расширяем пояс, чиним молнии. Пришлите фото — назовём цену в WhatsApp.',
+      de: 'Wir kürzen Röcke, machen den Bund enger oder weiter und reparieren Reißverschlüsse. Foto senden, Preis per WhatsApp.',
     },
     vars: {
       tr: ['etek kısaltma', 'etek daraltma', 'etek tadilatı', 'etek bel daraltma', 'etek fermuar değişimi', 'etek boyu kısaltma'],
@@ -515,10 +511,10 @@ export const SERVICES: Service[] = [
     name: { tr: 'Kıyafet Tamiri ve Onarımı', en: 'Clothing Repair & Mending', ru: 'Ремонт одежды', de: 'Kleidung reparieren' },
     q: { tr: 'kıyafet tamiri', en: 'clothing repair', ru: 'ремонт одежды', de: 'Kleidung reparieren' },
     intro: {
-      tr: 'Söküklerin dikilmesi, yırtık onarımı, düğme ve fermuar değişimi, astar tamiri: pantolon, gömlek, etek, elbise, mont ve kotta kıyafet tamiri yapıyoruz. Fotoğraf gönderin, fiyatı söyleyelim.',
-      en: 'Open seams, tears, buttons, zippers and linings: we repair trousers, shirts, skirts, dresses, coats and jeans. Send a photo and we will quote on WhatsApp.',
-      ru: 'Распоровшиеся швы, разрывы, пуговицы, молнии и подкладка: ремонтируем брюки, рубашки, юбки, платья, куртки и джинсы. Пришлите фото — назовём цену в WhatsApp.',
-      de: 'Aufgegangene Nähte, Risse, Knöpfe, Reißverschlüsse und Futter: Wir reparieren Hosen, Hemden, Röcke, Kleider, Mäntel und Jeans. Foto senden, Preis per WhatsApp.',
+      tr: 'Söküklerin dikilmesi, yırtık onarımı ve fermuar değişimi: pantolon, gömlek, etek, elbise, mont ve kotta kıyafet tamiri yapıyoruz. Fotoğraf gönderin, fiyatı söyleyelim.',
+      en: 'Open seams, tears and zippers: we repair trousers, shirts, skirts, dresses, coats and jeans. Send a photo and we will quote on WhatsApp.',
+      ru: 'Распоровшиеся швы, разрывы и молнии: ремонтируем брюки, рубашки, юбки, платья, куртки и джинсы. Пришлите фото — назовём цену в WhatsApp.',
+      de: 'Aufgegangene Nähte, Risse und Reißverschlüsse: Wir reparieren Hosen, Hemden, Röcke, Kleider, Mäntel und Jeans. Foto senden, Preis per WhatsApp.',
     },
     vars: {
       tr: ['kıyafet tamiri', 'kıyafet onarımı', 'elbise onarımı', 'pantolon tamiri', 'gömlek tamiri', 'kot tamiri', 'mont tamiri', 'söküğü dikme'],

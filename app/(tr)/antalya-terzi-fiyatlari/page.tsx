@@ -83,7 +83,7 @@ const FAQS: [string, string][] = [
   ['Elbisem yırtıldı, tamir edilir mi?',
    'Evet. Yırtık ve sökülen dikişler onarılır; fiyat işe göre değişir. Yırtığın fotoğrafını WhatsApp\'tan gönderirseniz net fiyat ve süre söyleriz. Normal onarım ertesi gün, acil onarım 1–2 saatte teslim edilir.'],
   ['Elbisemin belini daraltmak istiyorum, ne kadar tutar?',
-   'Bel ve beden daraltma ₺200\'den başlar. Kumaşa, astara ve modele göre değişir. Elbisenin fotoğrafını göndermeniz yeterli; provaya gelirseniz ölçü yerinde alınır.'],
+   'Bel ve beden daraltma ₺200\'den başlar. Kumaşa ve modele göre değişir. Elbisenin fotoğrafını göndermeniz yeterli; provaya gelirseniz ölçü yerinde alınır.'],
   ['Pantolonumun paçasını kısaltmak istiyorum, ne kadar sürer?',
    'Paça kısaltma ₺200\'den başlar; kot ve kumaş pantolonlarda normal işte ertesi gün, acilde 1–2 saatte teslim edilir. Ayrıntı: /konyaalti-paca-kisaltma'],
   ['Kendime elbise diktirmek istiyorum, nasıl ilerliyor?',

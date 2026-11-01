@@ -115,7 +115,7 @@ const NEEDS: Record<'konut' | 'sahil' | 'otel' | 'dis', L4[]> = {
     { tr: 'Kilo değişimi sonrası bel ve beden ayarı', en: 'Waist and size adjustments after a change in weight', ru: 'Подгонка талии и размера после изменения веса', de: 'Bund und Größe nach einer Gewichtsveränderung anpassen' },
     { tr: 'Çocuk okul kıyafetlerinde paça ve kol ayarı', en: 'Hem and sleeve adjustments on children\'s school clothes', ru: 'Подгонка низа и рукавов на детской школьной одежде', de: 'Saum und Ärmel bei Schulkleidung der Kinder anpassen' },
     { tr: 'Davet ve düğün öncesi elbise ve takım tadilatı', en: 'Dress and suit alterations before invitations and weddings', ru: 'Подгонка платьев и костюмов перед приглашениями и свадьбами', de: 'Kleider und Anzüge vor Einladungen und Hochzeiten ändern' },
-    { tr: 'Bozulan fermuar ve düğme gibi küçük onarımlar', en: 'Small repairs such as broken zippers and buttons', ru: 'Мелкий ремонт: сломанные молнии и пуговицы', de: 'Kleine Reparaturen wie defekte Reißverschlüsse und Knöpfe' },
+    { tr: 'Bozulan fermuar gibi küçük onarımlar', en: 'Small repairs such as broken zippers', ru: 'Мелкий ремонт: сломанные молнии', de: 'Kleine Reparaturen wie defekte Reißverschlüsse' },
   ],
   sahil: [
     { tr: 'Yazlık kıyafetlerde — şort, keten pantolon, elbise — boy ve bel ayarı', en: 'Length and waist adjustments on summer clothes such as shorts, linen trousers and dresses', ru: 'Подгонка длины и талии летней одежды: шорты, льняные брюки, платья', de: 'Länge und Bund bei Sommerkleidung wie Shorts, Leinenhosen und Kleidern anpassen' },

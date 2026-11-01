@@ -129,11 +129,11 @@ export const BLOG_YAZILARI: BlogYazi[] = [
   {
     slug: 'tatilde-kiyafet-tadilati-antalya',
     baslik: 'Antalya\'da Tatilde Kıyafet Tadilatı: Acil Durumda Ne Yapmalı?',
-    ozet: 'Tatilde fermuar patladı, elbise uzun geldi, düğmeler koptu: Antalya\'da turistler için acil tadilat ve otele gelen terzi rehberi.',
+    ozet: 'Tatilde fermuar patladı, elbise uzun geldi: Antalya\'da turistler için acil tadilat ve otele gelen terzi rehberi.',
     tarih: '2026-10-31',
     gorsel: '/gorseller/eve-gelen-terzi.webp',
     gorselAlt: 'Terzi, elbise kılıfı ve ölçü şeridi ile otel ziyareti (örnek görsel)',
-    giris: 'Tatil valizine ne koyarsanız koyun, bir kıyafet mutlaka sorun çıkarır: fermuar patlar, pantolon uzun gelir, bir düğme düşer. Antalya\'da tatil yapıyorsanız bunun için şehir merkezine kadar gitmenize gerek yok. Bu yazı, tatilde acil tadilat ihtiyacını nasıl çözebileceğinizi anlatıyor.',
+    giris: 'Tatil valizine ne koyarsanız koyun, bir kıyafet mutlaka sorun çıkarır: fermuar patlar, pantolon uzun gelir. Antalya\'da tatil yapıyorsanız bunun için şehir merkezine kadar gitmenize gerek yok. Bu yazı, tatilde acil tadilat ihtiyacını nasıl çözebileceğinizi anlatıyor.',
     bolumler: [
       {
         h: 'Tatilde en sık karşılaşılan tadilat işleri',
@@ -141,7 +141,7 @@ export const BLOG_YAZILARI: BlogYazi[] = [
         liste: [
           'Düğün, nişan veya özel akşam yemeği için elbise/takım elbise boy ve bel ayarı.',
           'Bavulda bozulan fermuarlar (pantolon, mont, çanta, valiz).',
-          'Düşen düğme, sökülen dikiş, yırtık.',
+          'Sökülen dikiş, yırtık.',
           'Plajda veya havuzda zarar gören kıyafetler.',
         ],
       },

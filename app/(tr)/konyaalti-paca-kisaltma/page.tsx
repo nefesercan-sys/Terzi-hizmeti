@@ -158,7 +158,7 @@ export default function PacaKisaltmaPage() {
                 <p className="price-desc">Klasik kumaş pantolon, keten, gabardin.</p>
                 <table className="price-table"><tbody>
                   <tr><td>Standart Paça Kısaltma</td><td>₺200+</td></tr>
-                  <tr><td>Orijinal Astar Korumalı</td><td>₺200+</td></tr>
+                  <tr><td>Orijinal paça dikişi korumalı</td><td>₺200+</td></tr>
                 </tbody></table>
               </div>
               <div className="price-card">

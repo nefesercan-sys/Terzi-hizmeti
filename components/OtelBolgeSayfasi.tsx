@@ -44,7 +44,7 @@ const T: Record<Lang, any> = {
     servicesEyebrow: 'Tailoring & Repair Workshop', servicesH: 'Tailoring · Repair · Alterations · Ironing', servicesSub: 'A full-capacity textile workshop, delivered to your hotel.',
     services: [
       { icon: '👔', tr: 'Tailoring', en: 'Custom-fit clothing', desc: 'Custom-fit garments made to your exact measurements.', items: ['Shirt', 'Trousers', 'Suit', 'Dress'] },
-      { icon: '🔧', tr: 'Repair', en: 'Zippers, tears, buttons', desc: 'Everyday repairs — zippers, torn seams, buttons, lining.', items: ['Zipper Replacement', 'Tear Repair', 'Lining Replacement'] },
+      { icon: '🔧', tr: 'Repair', en: 'Zippers, tears, seams', desc: 'Everyday repairs — zippers and torn seams.', items: ['Zipper Replacement', 'Tear Repair'] },
       { icon: '📏', tr: 'Alterations', en: 'Hemming, taking in', desc: 'Precise fit adjustments so clothing sits exactly right.', items: ['Hemming', 'Waist Taking In', 'Sleeve Shortening'] },
       { icon: '🧺', tr: 'Ironing & Dry Cleaning', en: 'Steam press, dry cleaning', desc: 'Professional steam ironing and dry cleaning, picked up and delivered.', items: ['Ironing', 'Dry Cleaning'] },
     ],
@@ -80,7 +80,7 @@ const T: Record<Lang, any> = {
     servicesEyebrow: 'Мастерская пошива и ремонта', servicesH: 'Пошив · Ремонт · Подгонка · Глажка', servicesSub: 'Полноценная текстильная мастерская с доставкой в ваш отель.',
     services: [
       { icon: '👔', tr: 'Пошив', en: 'Одежда по меркам', desc: 'Пошив одежды по вашим точным меркам.', items: ['Рубашка', 'Брюки', 'Костюм', 'Платье'] },
-      { icon: '🔧', tr: 'Ремонт', en: 'Молнии, разрывы, пуговицы', desc: 'Повседневный ремонт — молнии, швы, пуговицы, подкладка.', items: ['Замена молнии', 'Ремонт разрыва', 'Замена подкладки'] },
+      { icon: '🔧', tr: 'Ремонт', en: 'Молнии, разрывы, швы', desc: 'Повседневный ремонт — молнии и швы.', items: ['Замена молнии', 'Ремонт разрыва'] },
       { icon: '📏', tr: 'Подгонка', en: 'Укорачивание, заужение', desc: 'Точная подгонка по фигуре.', items: ['Укорачивание', 'Заужение талии', 'Укорачивание рукавов'] },
       { icon: '🧺', tr: 'Глажка и химчистка', en: 'Паровая глажка, химчистка', desc: 'Профессиональная глажка и химчистка с забором и доставкой.', items: ['Глажка', 'Химчистка'] },
     ],
@@ -116,7 +116,7 @@ const T: Record<Lang, any> = {
     servicesEyebrow: 'Schneider- und Reparaturwerkstatt', servicesH: 'Schneiderei · Reparatur · Änderungen · Bügelservice', servicesSub: 'Eine voll ausgestattete Textilwerkstatt, geliefert in Ihr Hotel.',
     services: [
       { icon: '👔', tr: 'Schneiderei', en: 'Maßgeschneiderte Kleidung', desc: 'Maßanfertigung nach Ihren genauen Maßen.', items: ['Hemd', 'Hose', 'Anzug', 'Kleid'] },
-      { icon: '🔧', tr: 'Reparatur', en: 'Reißverschlüsse, Risse, Knöpfe', desc: 'Alltägliche Reparaturen — Reißverschlüsse, Nähte, Knöpfe, Futter.', items: ['Reißverschluss ersetzen', 'Riss reparieren', 'Futter ersetzen'] },
+      { icon: '🔧', tr: 'Reparatur', en: 'Reißverschlüsse, Risse, Nähte', desc: 'Alltägliche Reparaturen — Reißverschlüsse und Nähte.', items: ['Reißverschluss ersetzen', 'Riss reparieren'] },
       { icon: '📏', tr: 'Änderungen', en: 'Kürzen, enger machen', desc: 'Präzise Passform-Anpassungen für perfekten Sitz.', items: ['Kürzen', 'Taille enger machen', 'Ärmel kürzen'] },
       { icon: '🧺', tr: 'Bügelservice & Reinigung', en: 'Dampfbügeln, Reinigung', desc: 'Professionelles Bügeln und chemische Reinigung mit Abholung und Lieferung.', items: ['Bügeln', 'Chemische Reinigung'] },
     ],
@@ -152,7 +152,7 @@ const T: Record<Lang, any> = {
     servicesEyebrow: 'Dikim & Tamir Atölyesi', servicesH: 'Dikim · Tamir · Tadilat · Ütü', servicesSub: 'Tam kapasiteli bir tekstil atölyesi, otelinize kadar geliyor.',
     services: [
       { icon: '👔', tr: 'Dikim', en: 'Özel ölçü kıyafet', desc: 'Tam ölçünüze göre özel dikim kıyafet.', items: ['Gömlek', 'Pantolon', 'Takım Elbise', 'Elbise'] },
-      { icon: '🔧', tr: 'Tamir', en: 'Fermuar, yırtık, düğme', desc: 'Günlük tamirler — fermuar, sökük dikiş, düğme, astar.', items: ['Fermuar Değişimi', 'Yırtık Tamiri', 'Astar Değişimi'] },
+      { icon: '🔧', tr: 'Tamir', en: 'Fermuar, yırtık, sökük', desc: 'Günlük tamirler — fermuar ve sökük dikiş.', items: ['Fermuar Değişimi', 'Yırtık Tamiri'] },
       { icon: '📏', tr: 'Tadilat', en: 'Boy kısaltma, daraltma', desc: 'Kıyafetin tam oturması için hassas ölçü ayarı.', items: ['Boy Kısaltma', 'Bel Daraltma', 'Kol Kısaltma'] },
       { icon: '🧺', tr: 'Ütü & Kuru Temizleme', en: 'Buharlı ütü, kuru temizleme', desc: 'Profesyonel buharlı ütü ve kuru temizleme, alım-teslimatlı.', items: ['Ütü', 'Kuru Temizleme'] },
     ],

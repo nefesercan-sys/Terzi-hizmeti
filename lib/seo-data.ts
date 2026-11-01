@@ -9,6 +9,7 @@
 // ============================================================
 
 import { DELIVERY } from '@/lib/delivery';
+import { eurFromText } from '@/lib/fg-meta';
 
 export type Lang = 'tr' | 'en' | 'ru' | 'de';
 export const LANGS: Lang[] = ['tr', 'en', 'ru', 'de'];
@@ -568,4 +569,6 @@ export const TIME_TEXT: Record<TimeKey, L4> = {
 };
 export const timeOf = (lang: Lang, s: Service) => (s.timeText ? s.timeText[lang] : TIME_TEXT[s.time][lang]);
 export const priceOf = (lang: Lang, s: Service) =>
-  s.priceText ? s.priceText[lang] : s.priceFrom && lang === 'tr' ? `₺${s.priceFrom}'den başlar` : null; // yabancı dil sayfalarında fiyat yazılmaz
+  lang !== 'tr' && eurFromText(lang, s.id)
+    ? eurFromText(lang, s.id)
+    : s.priceText ? s.priceText[lang] : s.priceFrom && lang === 'tr' ? `₺${s.priceFrom}'den başlar` : null; // yabancı dilde: EUR başlangıç fiyatı (varsa), yoksa fotoğrafla

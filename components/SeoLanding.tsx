@@ -24,7 +24,7 @@ import {
   isTrNear, isIndexable, TR_NEAR_SLUGS, trExtraKeywords, isFreeService,
 } from '@/lib/seo-data';
 import { angleFor, angleTitles, angleDescs, angleKeywords, unfreeDeep, unfree } from '@/lib/seo-angles';
-import { fgNearDistrict, fgServiceMeta } from '@/lib/fg-meta';
+import { fgNearDistrict, fgServiceMeta, eurFromText, EUR_FROM } from '@/lib/fg-meta';
 import { trNearDistrict } from '@/lib/tr-meta';
 import { fitDesc, fitKeywords } from '@/lib/meta-fit';
 
@@ -101,7 +101,7 @@ const _alternatesForOld = (lang: Lang, urlFor: (l: Lang) => string) => ({
 const capFirst = (lang: Lang, t: string) => (t ? t.charAt(0).toLocaleUpperCase(lang === 'tr' ? 'tr-TR' : lang) + t.slice(1) : t);
 const pickFit = (list: string[], max: number) => list.find((c) => c.length <= max) ?? list[list.length - 1];
 const priceShortOf = (lang: Lang, s: Service) =>
-  s.priceFrom && lang === 'tr' ? `₺${s.priceFrom}'den` : ''; // yabancı dillerde fiyat yazılmaz
+  lang === 'tr' ? (s.priceFrom ? `₺${s.priceFrom}'den` : '') : eurFromText(lang, s.id).toLowerCase();
 const TIME_SHORT: Record<Lang, Record<'same' | 'next' | 'three' | 'none', string>> = {
   tr: { same: 'Ertesi Gün', next: 'Ertesi Gün', three: 'Ölçüye Göre', none: 'Yakınınızda' },
   en: { same: 'Next Day', next: 'Next Day', three: 'Made to Measure', none: 'Near You' },
@@ -703,7 +703,7 @@ export function ServicePage({ lang, s }: { lang: Lang; s: Service }) {
         '@type': 'Service', '@id': `${url}#service`, name: s.name[lang], description: s.intro[lang], serviceType: s.name[lang],
         provider: { '@id': `${SITE}#business` },
         areaServed: DISTRICTS.map((d) => ({ '@type': 'Place', name: `${d.name.en}, Antalya` })),
-        ...(s.priceFrom ? { offers: { '@type': 'Offer', priceCurrency: 'TRY', price: String(s.priceFrom), priceSpecification: { '@type': 'PriceSpecification', priceCurrency: 'TRY', minPrice: String(s.priceFrom) } } } : {}),
+        ...(lang === 'tr' ? (s.priceFrom ? { offers: { '@type': 'Offer', priceCurrency: 'TRY', price: String(s.priceFrom), priceSpecification: { '@type': 'PriceSpecification', priceCurrency: 'TRY', minPrice: String(s.priceFrom) } } } : {}) : (EUR_FROM[s.id] ? { offers: { '@type': 'Offer', priceCurrency: 'EUR', price: String(EUR_FROM[s.id]), priceSpecification: { '@type': 'PriceSpecification', priceCurrency: 'EUR', minPrice: String(EUR_FROM[s.id]) } } } : {})),
       },
       {
         '@type': 'FAQPage', '@id': `${url}#faq`,

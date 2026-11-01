@@ -4,6 +4,7 @@ import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
 import { PHONE, PHONE_TEL, MAPS, SITE } from '@/lib/seo-data';
 import { ILANGS, INTL, NB, NB_DISTRICT, ZONES, iUrl, type ILang } from '@/lib/intl';
 import { SVC, svcUrl } from '@/lib/intl-services';
+import { FIYAT, fiyatUrl } from '@/lib/intl-fiyat';
 import { ZCOPY, ZONE_SLUGS, zoneData, zoneUrl } from '@/lib/intl-zones';
 import { eurText } from '@/lib/facts';
 import { waLink, businessNode, OG_DEFAULT } from '@/lib/turist-keten';
@@ -107,6 +108,7 @@ export default function IntlLanding({ lang }: { lang: ILang }) {
           <li>{PRICE_T[lang].sew}: {eurText('skirtPantsSew')}</li>
         </ul>
         <p style={{ margin: '.8rem 0 0', color: C.muted, fontSize: '.92rem' }}>{PRICE_T[lang].note}</p>
+        <p style={{ margin: '.5rem 0 0', fontSize: '.92rem' }}><Link href={fiyatUrl(lang)} style={{ color: C.green }}>{FIYAT[lang].h1}</Link></p>
       </Block>
 
       <Block><H2>{c.faqTitle}</H2>

@@ -9,6 +9,8 @@ import PromosyonTekstilSayfasi from '@/components/PromosyonTekstilSayfasi';
 import { buildPromoMetadata } from '@/lib/promosyon-tekstil';
 import { promoSlug } from '@/lib/promosyon-paths';
 import { SVC, isSvcSlug, svcUrl } from '@/lib/intl-services';
+import FiyatLanding from '@/components/FiyatLanding';
+import { FIYAT, isFiyatSlug, fiyatUrl } from '@/lib/intl-fiyat';
 import { ILANGS, INTL, isILang } from '@/lib/intl';
 import { ZCOPY, ZONE_SLUGS, parseZone, zoneData, zoneSlug, zoneUrl } from '@/lib/intl-zones';
 import { SITE } from '@/lib/seo-data';
@@ -20,7 +22,7 @@ import { UDATA, U_IDS, parseU, uMetadata } from '@/lib/uretim';
 // Yalnızca tanımlı otel bölgesi sayfaları üretilir; diğer iki-segmentli yollar 404 olur.
 export const dynamicParams = false;
 export function generateStaticParams() {
-  return ILANGS.flatMap((lang) => [...U_IDS.map((u) => ({ lang, zone: UDATA[lang][u].slug })), { lang, zone: SVC[lang].slug }, { lang, zone: promoSlug(lang) }, ...TOPIC_IDS.map((t) => ({ lang, zone: TOPICS[lang][t].slug })), ...HIZMET_IDS.map((h) => ({ lang, zone: HIZMET[lang][h].slug })), ...ZONE_SLUGS.map((z) => ({ lang, zone: zoneSlug(lang, z) }))]);
+  return ILANGS.flatMap((lang) => [...U_IDS.map((u) => ({ lang, zone: UDATA[lang][u].slug })), { lang, zone: SVC[lang].slug }, { lang, zone: FIYAT[lang].slug }, { lang, zone: promoSlug(lang) }, ...TOPIC_IDS.map((t) => ({ lang, zone: TOPICS[lang][t].slug })), ...HIZMET_IDS.map((h) => ({ lang, zone: HIZMET[lang][h].slug })), ...ZONE_SLUGS.map((z) => ({ lang, zone: zoneSlug(lang, z) }))]);
 }
 
 type P = { params: Promise<{ lang: string; zone: string }> };
@@ -31,6 +33,18 @@ export async function generateMetadata({ params }: P): Promise<Metadata> {
   const uid = parseU(lang, slug);
   if (uid) return uMetadata(lang, uid);
   if (slug === promoSlug(lang)) return buildPromoMetadata(lang);
+  if (isFiyatSlug(lang, slug)) {
+    const c = FIYAT[lang]; const url = `${SITE}${fiyatUrl(lang)}`;
+    const title = c.title.length + 12 <= 60 ? `${c.title} | Terzi Can` : c.title;
+    return {
+      metadataBase: new URL(SITE), title: { absolute: title }, description: fitDesc(c.desc),
+      robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
+      alternates: { canonical: url, languages: Object.fromEntries(ILANGS.map((l) => [INTL[l].hreflang, `${SITE}${fiyatUrl(l)}`])) },
+      openGraph: { title, description: fitDesc(c.desc), url, siteName: 'Terzi Can', locale: INTL[lang].locale, type: 'website', images: [{ url: OG_DEFAULT, width: 1200, height: 630, alt: title }] },
+      twitter: { card: 'summary_large_image', title, description: fitDesc(c.desc), images: [OG_DEFAULT] },
+      other: { 'geo.region': 'TR-07', 'geo.placename': 'Antalya' },
+    };
+  }
   if (isSvcSlug(lang, slug)) {
     const c = SVC[lang]; const url = `${SITE}${svcUrl(lang)}`;
     const title = c.title.length + 12 <= 60 ? `${c.title} | Terzi Can` : c.title;
@@ -105,6 +119,7 @@ export default async function Page({ params }: P) {
   const uid = parseU(lang, slug);
   if (uid) return <UretimLanding lang={lang} id={uid} />;
   if (slug === promoSlug(lang)) return <PromosyonTekstilSayfasi lang={lang} />;
+  if (isFiyatSlug(lang, slug)) return <FiyatLanding lang={lang} />;
   if (isSvcSlug(lang, slug)) return <ServicesLanding lang={lang} />;
   const hz = parseHizmet(lang, slug);
   if (hz) return <TopicLanding lang={lang} hizmet={hz} />;

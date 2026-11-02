@@ -11,7 +11,7 @@ import { PRODUCT_IDS, LINK_NAMES, productUrl, expressUrl, hubUrl, type TLang } f
 export type Lang = 'tr' | 'en' | 'de' | 'ru';
 export type MapLink = { href: string; label: string };
 export type MapSection = { title: string; links: MapLink[] };
-export type SiteMap = { lang: Lang; heading: string; sections: MapSection[] };
+export type SiteMap = { lang: string; heading: string; sections: MapSection[] };
 export type Crumb = { name: string; href: string };
 
 const BASE_URL = 'https://terzihizmeti.com.tr';
@@ -31,6 +31,31 @@ const TR_SERVICES: MapLink[] = [
   { href: '/keten-pamuk-ozel-dikim', label: 'Keten ve pamuk özel dikim' },
   { href: '/blog', label: 'Blog' },
 ];
+
+// Toptan/fason (B2B) sayfaları ve genel sayfalar: haritaya dahil (iç bağlantı için)
+const TR_B2B: MapLink[] = [
+  { href: '/giyim-uretici-antalya', label: 'Giyim üretici Antalya' },
+  { href: '/numune-uretimi-antalya', label: 'Numune üretimi' },
+  { href: '/seri-imalat-antalya', label: 'Seri imalat' },
+  { href: '/markaniza-ozel-uretim-antalya', label: 'Markanıza özel üretim' },
+  { href: '/yurt-disi-gonderim-uretim', label: 'Yurt dışı gönderim ve üretim' },
+];
+const TR_GENEL: MapLink[] = [
+  { href: '/terzi-hizmetleri', label: 'Terzi hizmetleri' },
+  { href: '/iletisim', label: 'İletişim' },
+];
+const TR_EXTRA = new Set<string>(['/', ...TR_B2B.map((l) => l.href), ...TR_GENEL.map((l) => l.href)]);
+
+// es/fr/pl/uk/nl/ar: slug'lar lib/intl-fiyat.ts ve lib/intl-iletisim.ts ile aynı olmalı (istemci paketini şişirmemek için burada kopya).
+const INTL_MAP: Record<string, { heading: string; fiyat: [string, string]; iletisim: [string, string]; promo: string }> = {
+  es: { heading: 'Más páginas', fiyat: ['precios-sastre-antalya', 'Precios'], iletisim: ['contacto-sastre-antalya', 'Contacto'], promo: 'Textil promocional' },
+  fr: { heading: 'Autres pages', fiyat: ['tarifs-couturier-antalya', 'Tarifs'], iletisim: ['contact-couturier-antalya', 'Contact'], promo: 'Textile promotionnel' },
+  pl: { heading: 'Więcej stron', fiyat: ['ceny-krawiec-antalya', 'Cennik'], iletisim: ['kontakt-krawiec-antalya', 'Kontakt'], promo: 'Tekstylia reklamowe' },
+  uk: { heading: 'Інші сторінки', fiyat: ['tsiny-kravets-antaliya', 'Ціни'], iletisim: ['kontakty-kravets-antaliya', 'Контакти'], promo: 'Рекламний текстиль' },
+  nl: { heading: 'Meer pagina’s', fiyat: ['prijzen-kleermaker-antalya', 'Prijzen'], iletisim: ['contact-kleermaker-antalya', 'Contact'], promo: 'Promotietextiel' },
+  ar: { heading: 'صفحات أخرى', fiyat: ['asaar-khayyat-antalya', 'الأسعار'], iletisim: ['ittisal-khayyat-antalya', 'اتصل بنا'], promo: 'منسوجات دعائية' },
+};
+const INTL_CODES = Object.keys(INTL_MAP);
 
 const TR_MAHALLELER: MapLink[] = [
   { href: '/hurma-terzi', label: 'Hurma terzi' },
@@ -86,7 +111,7 @@ const SEO_TITLES: Record<Lang, { svc: string; dist: string }> = {
 
 export function getLang(pathname: string): Lang | null {
   const p = norm(pathname);
-  if (p === '/anavera-tekstil' || p === PROMO_PATH.tr) return 'tr';
+  if (p === '/anavera-tekstil' || p === PROMO_PATH.tr || TR_EXTRA.has(p)) return 'tr';
   if (p.startsWith('/en/')) return 'en';
   if (p.startsWith('/de/')) return 'de';
   if (p.startsWith('/ru/')) return 'ru';
@@ -97,7 +122,23 @@ export function getLang(pathname: string): Lang | null {
 }
 
 // ── Sayfa sonu içerik haritası ───────────────────────────────────────────────
+function getIntlMap(pathname: string): SiteMap | null {
+  const p = norm(pathname);
+  const code = INTL_CODES.find((c) => p === `/${c}` || p.startsWith(`/${c}/`));
+  if (!code) return null;
+  const m = INTL_MAP[code];
+  const links: MapLink[] = [
+    { href: `/${code}`, label: code.toUpperCase() },
+    { href: `/${code}/${m.fiyat[0]}`, label: m.fiyat[1] },
+    { href: `/${code}/${m.iletisim[0]}`, label: m.iletisim[1] },
+    { href: PROMO_PATH[code as keyof typeof PROMO_PATH], label: m.promo },
+  ].filter((l) => l.href !== p);
+  return { lang: code, heading: m.heading, sections: [{ title: 'Antalya', links }] };
+}
+
 export function getSiteMap(pathname: string): SiteMap | null {
+  const intl = getIntlMap(pathname);
+  if (intl) return intl;
   const base = getBaseSiteMap(pathname);
   if (!base) return null;
   const p = norm(pathname);
@@ -112,7 +153,7 @@ export function getSiteMap(pathname: string): SiteMap | null {
   };
 }
 
-function getBaseSiteMap(pathname: string): SiteMap | null {
+function getBaseSiteMap(pathname: string): (Omit<SiteMap, 'lang'> & { lang: Lang }) | null {
   const p = norm(pathname);
   const lang = getLang(p);
   if (!lang) return null;
@@ -123,8 +164,8 @@ function getBaseSiteMap(pathname: string): SiteMap | null {
       lang,
       heading: 'İlgili sayfalar',
       sections: [
-        { title: 'Toptan ve fason tekstil üretimi (B2B)', links: [{ href: '/anavera-tekstil', label: 'Anavera Tekstil — hazır giyim üretimi ve ihracat' }, { href: PROMO_PATH.tr, label: PROMO_NAME.tr }].filter(not) },
-        { title: 'Terzi hizmetleri', links: TR_SERVICES.filter(not) },
+        { title: 'Toptan ve fason tekstil üretimi (B2B)', links: [{ href: '/anavera-tekstil', label: 'Anavera Tekstil — hazır giyim üretimi ve ihracat' }, { href: PROMO_PATH.tr, label: PROMO_NAME.tr }, ...TR_B2B].filter(not) },
+        { title: 'Terzi hizmetleri', links: [...TR_SERVICES, ...TR_GENEL].filter(not) },
         { title: 'Konyaaltı mahalleleri', links: TR_MAHALLELER.filter(not) },
         { title: 'Otele gelen terzi — bölgeler', links: regionLinks(TR_BASE, 'tr', (n) => `${n} otele gelen terzi`).filter(not) },
         { title: 'Diğer diller', links: OTHER_LANG_HUBS },

@@ -151,7 +151,7 @@ const jsonLd = {
           { '@type': 'Offer', name: 'Pants Hemming / Paça Kısaltma / Укоротить брюки', price: '200', priceCurrency: 'TRY', priceValidUntil: '2027-12-31', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Pants & Jeans Hemming', description: 'Hemming for pants, jeans, skirts, dresses. Same-day service, urgent jobs 1–2 hours.' } },
           { '@type': 'Offer', name: 'Zipper Replacement / Fermuar Değişimi / Замена молнии', price: '300', priceCurrency: 'TRY', priceValidUntil: '2027-12-31', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Zipper Repair & Replacement', description: 'Zipper replacement for jackets, pants, coats, bags.' } },
           { '@type': 'Offer', name: 'Waist & Dress Alterations / Bel Daraltma / Подгонка по фигуре', price: '200', priceCurrency: 'TRY', priceValidUntil: '2027-12-31', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Clothing Alterations', description: 'Resizing dresses, coats, suits, pants.' } },
-          { '@type': 'Offer', name: 'Custom Dressmaking / Özel Elbise Dikimi / Индивидуальный пошив', price: '800', priceCurrency: 'TRY', priceValidUntil: '2027-12-31', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Custom Tailoring', description: 'Custom dresses, suits, shirts made to measure.' } },
+          { '@type': 'Offer', name: 'Custom Dressmaking / Özel Elbise Dikimi / Индивидуальный пошив', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Custom Tailoring', description: 'Custom dresses, suits, shirts made to measure.' } },
           { '@type': 'Offer', name: 'Wedding Dress Alterations / Gelinlik Tadilatı / Ремонт свадебных платьев', price: '800', priceCurrency: 'TRY', priceValidUntil: '2027-12-31', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Wedding Dress Alterations', description: 'Precision fitting and repairs for wedding and evening dresses.' } },
           { '@type': 'Offer', name: 'Mobile Tailor Service / Eve Gelen Terzi / Выездной портной', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Mobile Pickup & Delivery Tailor', description: 'Home pickup and delivery service in Konyaalti (Hurma, Liman, Sarisu free).' } },
         ],
@@ -217,7 +217,7 @@ const SERVICES = [
   { n:'01', title:'Paça Kısaltma', en:'Pants Hemming', ru:'Укоротить брюки', sub:'Pantolon · Etek · Kot / Pants · Skirts', desc:'Erkek ve bayan pantolon, kot, etek paça kısaltma — temiz, görünmez dikiş.', price:'₺200+', time:'Acil 1–2 saat', wa:WA_TR, tur:'pantolon' as IlustrasyonTur },
   { n:'02', title:'Fermuar Değişimi', en:'Zipper Replacement', ru:'Замена молнии', sub:'Pantolon · Mont · Ceket · Çanta', desc:'Pantolon, mont, ceket, sweatshirt ve çanta fermuar değişimi, sıkışan fermuar tamiri.', price:'₺300+', time:'Acil 1–2 saat', wa:WA_TR, tur:'fermuar' as IlustrasyonTur },
   { n:'03', title:'Bel Daraltma & Tadilat', en:'Waist Alterations', ru:'Подгонка по фигуре', sub:'Elbise · Pantolon · Ceket', desc:'Elbise, pantolon ve ceketlerde bel daraltma, vücuda tam oturan ölçü ayarı.', price:'₺200+', time:'Acil 1–2 saat', wa:WA_TR, tur:'elbise' as IlustrasyonTur },
-  { n:'04', title:'Özel Elbise Dikimi', en:'Custom Tailoring', ru:'Пошив на заказ', sub:'Kadın · Erkek · Çocuk / Women & Men', desc:'Kadın elbisesi, erkek takım elbise, gömlek — ölçünüze özel sıfırdan dikim.', price:'₺800+', time:'Modele göre', wa:WA_TR, tur:'makas' as IlustrasyonTur },
+  { n:'04', title:'Özel Elbise Dikimi', en:'Custom Tailoring', ru:'Пошив на заказ', sub:'Kadın · Erkek · Çocuk / Women & Men', desc:'Kadın elbisesi, erkek takım elbise, gömlek — ölçünüze özel sıfırdan dikim.', price:'Fotoğrafa ve istediğiniz modele göre', time:'Modele göre', wa:WA_TR, tur:'makas' as IlustrasyonTur },
   { n:'05', title:'Gelinlik & Abiye Tadilatı', en:'Wedding Dress Alterations', ru:'Ремонт свадебных платьев', sub:'Özel Gün Kıyafetleri / Evening Gowns', desc:'Özel gün kıyafetlerinde hassas daraltma, boy ayarı ve detaylı onarım.', price:'₺800+', time:'Aynı gün', wa:WA_TR, tur:'gelinlik' as IlustrasyonTur },
   { n:'06', title:'Eve Gelen Terzi', en:'Mobile Tailor Pickup', ru:'Выездной портной', sub:'Eve ve Otele Ücretsiz / Free Pickup', desc:'Araçlı terzi servisi: adresinizde ölçü alma; özel dikimde süre modele ve adede göre, normal tadilat aynı gün, acil işler 1–2 saatte teslim.', price:'Ücretsiz / Free', time:'Aynı gün', wa:WA_TR, tur:'servis' as IlustrasyonTur },
   { n:'07', title:'Üniforma & Seri İmalat', en:'Uniform Manufacturing', ru:'Пошив униформы', sub:'Otel · Restoran · Okul / Hotel & Uniforms', desc:'Toplu üniforma üretimi, fason tekstil, seri imalat ve nakış hizmeti.', price:'Teklif Al', time:'Proje bazlı', wa:WA_TR, tur:'gomlek' as IlustrasyonTur },
@@ -424,7 +424,7 @@ export default function TerziHizmetiPage() {
                 <div className="lang-card-head">
                   <span className="lang-flag">🇹🇷 Türkçe</span>
                 </div>
-                <div className="lang-text">Konyaaltı'da hızlı terzi, tamir, tadilat ve adrese teslim terzi servisi.</div>
+                <div className="lang-text">Konyaaltı'nda hızlı terzi, tamir, tadilat ve adrese teslim terzi servisi.</div>
                 <a href={WA_TR} target="_blank" rel="noopener noreferrer" className="lang-btn">WhatsApp'tan Yazın →</a>
               </div>
             </div>
@@ -471,7 +471,7 @@ export default function TerziHizmetiPage() {
         {/* SUMMARY / INTRODUCTION */}
         <div style={{background:C.bg2,padding:'2.2rem 1.5rem',borderBottom:`1px solid rgba(44,74,62,.10)`}}>
           <p style={{maxWidth:920,margin:'0 auto',fontSize:'.85rem',color:C.muted,lineHeight:1.9,textAlign:'center'}}>
-            <strong style={{color:'#2C4A3E'}}>Terzi Can Antalya</strong> — Konyaaltı'da 2006'dan bu yana faaliyet gösteren profesyonel terzi atölyesidir. WhatsApp'tan kendi dilinde yazışabildiğimiz ekibimizle hem yerli hem de yabancı misafirlerimize terzilik, kıyafet tamiri, elbise dikimi, gelinlik tadilatı hizmeti sunuyoruz. Hurma, Liman, Sarısu, Gürsu ve Uncalı başta olmak üzere Konyaaltı ve çevresi'ya araçlı terzi servisi sağlıyoruz.
+            <strong style={{color:'#2C4A3E'}}>Terzi Can Antalya</strong> — Konyaaltı'nda 2006'dan bu yana faaliyet gösteren profesyonel terzi atölyesidir. WhatsApp'tan kendi dilinde yazışabildiğimiz ekibimizle hem yerli hem de yabancı misafirlerimize terzilik, kıyafet tamiri, elbise dikimi, gelinlik tadilatı hizmeti sunuyoruz. Hurma, Liman, Sarısu, Gürsu ve Uncalı başta olmak üzere Konyaaltı ve çevresi'ya araçlı terzi servisi sağlıyoruz.
           </p>
         </div>
 
@@ -517,7 +517,7 @@ export default function TerziHizmetiPage() {
             <div className="sec-head" style={{marginBottom:'1.8rem'}}>
               <span className="eyebrow">DİKİMDEN TESLİME / FROM SEWING TO DELIVERY</span>
               <h2 className="sec-h ff" id="gallery-h" style={{fontSize:'clamp(1.5rem,3.2vw,2.1rem)'}}>Dikimden Teslime Kaliteli Hizmet</h2>
-              <p className="sec-sub">Konyaaltı'daki atölyemizde her kıyafet özenle işlenir ve giyime hazır teslim edilir.</p>
+              <p className="sec-sub">Konyaaltı'ndaki atölyemizde her kıyafet özenle işlenir ve giyime hazır teslim edilir.</p>
             </div>
             <div className="gallery-grid">
               {[
@@ -563,7 +563,7 @@ export default function TerziHizmetiPage() {
             <div className="sec-head">
               <span className="eyebrow">📍 HİZMET BÖLGELERİ / SERVICE AREAS</span>
               <h2 className="sec-h ff" id="dist-h">Konyaaltı & Antalya<br/>Terzi Servis Bölgeleri</h2>
-              <p className="sec-sub">Hurma, Sarısu ve Liman'a <strong style={{color:'#3F6B45'}}>ücretsiz</strong> adresten alım ve teslimat. Free pickup in Hurma, Liman, Sarisu!</p>
+              <p className="sec-sub">Otel ve ev adreslerine her bölgede <strong style={{color:'#3F6B45'}}>ücretsiz</strong> alım ve teslimat. Free pick-up and delivery to hotels and homes in every area!</p>
             </div>
             <div className="dist-grid">
               {DISTRICTS.map(d=>(
@@ -597,7 +597,7 @@ export default function TerziHizmetiPage() {
         {/* FINAL CALL TO ACTION */}
         <section className="cta-final" aria-label="Contact Section">
           <h2 className="cta-h ff">Terziniz Kapınızda,<br/>Normal Tadilat Aynı Gün, Acil 1–2 Saat</h2>
-          <p className="cta-sub">Free Pickup in Hurma, Sarisu, Liman · Бесплатный выезд в Хурму и Лиман.<br/>WhatsApp üzerinden hemen iletişime geçin.</p>
+          <p className="cta-sub">Free pick-up and delivery to homes and hotels in every area · Бесплатный забор и доставка на дом и в отели в любом районе.<br/>WhatsApp üzerinden hemen iletişime geçin.</p>
           <div className="cta-btns">
             <a href={WA_TR} target="_blank" rel="noopener noreferrer" className="btn-white">💬 WhatsApp'tan Yazın</a>
             <a href={MAPS} target="_blank" rel="noopener noreferrer" className="btn-outline-white">📍 Google Haritalar</a>

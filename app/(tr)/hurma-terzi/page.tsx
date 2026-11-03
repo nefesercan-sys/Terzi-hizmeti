@@ -72,7 +72,6 @@ const jsonLd = {
           { '@type': 'Offer', name: 'Paça Kısaltma', price: '200', priceCurrency: 'TRY', priceValidUntil: '2027-12-31' },
           { '@type': 'Offer', name: 'Fermuar Değişimi', price: '300', priceCurrency: 'TRY', priceValidUntil: '2027-12-31' },
           { '@type': 'Offer', name: 'Bel Daraltma', price: '200', priceCurrency: 'TRY', priceValidUntil: '2027-12-31' },
-          { '@type': 'Offer', name: 'Elbise Dikimi', price: '800', priceCurrency: 'TRY', priceValidUntil: '2027-12-31' },
           { '@type': 'Offer', name: 'Gelinlik Tadilatı', price: '800', priceCurrency: 'TRY', priceValidUntil: '2027-12-31' },
         ],
       },
@@ -82,8 +81,8 @@ const jsonLd = {
       '@id': `${PAGE_URL}#faq`,
       mainEntity: [
         { '@type': 'Question', name: 'Hurma mahallesine terzi servisi geliyor mu?', acceptedAnswer: { '@type': 'Answer', text: `Evet! Hurma mahallesine ücretsiz adrese servis veriyoruz. Kıyafetinizi adresinizden alıp normal tamir ve tadilatta aynı gün, acil işlerde 1–2 saatte teslim ediyoruz; özel dikimde süre modele ve adede göre belirlenir. ☎ ${PHONE}` } },
-        { '@type': 'Question', name: 'Hurma terzi fiyatları ne kadar 2026?', acceptedAnswer: { '@type': 'Answer', text: `Paça kısaltma ₺200'den, fermuar değişimi ₺300'den, bel daraltma ₺200'den, elbise dikimi ₺800'den, gelinlik tadilatı ₺800'den, abiye tadilatı ₺800'den. ☎ ${PHONE}` } },
-        { '@type': 'Question', name: 'Hurma sahil bölgesindeki otellere terzi servisi var mı?', acceptedAnswer: { '@type': 'Answer', text: `Evet, Hurma sahil şeridindeki otellere ücretsiz alım-teslimatlı tadilat, onarım ve dikim hizmeti veriyoruz. ☎ ${PHONE}` } },
+        { '@type': 'Question', name: 'Hurma terzi fiyatları ne kadar 2026?', acceptedAnswer: { '@type': 'Answer', text: `Paça kısaltma ₺200'den, fermuar değişimi ₺300'den, bel daraltma ₺200'den, elbise dikimi fotoğrafa ve istediğiniz modele göre, gelinlik tadilatı ₺800'den, abiye tadilatı ₺800'den. ☎ ${PHONE}` } },
+        { '@type': 'Question', name: 'Hurma sahil bölgesindeki otellere terzi servisi var mı?', acceptedAnswer: { '@type': 'Answer', text: `Evet, Hurma sahil şeridindeki otellere ücretsiz alım-teslimatlı tadilat, onarım ve dikim hizmeti veriyoruz; ev adreslerine de her bölgede ücretsizdir. ☎ ${PHONE}` } },
         { '@type': 'Question', name: 'Hurma\'da acil tadilat ne kadar sürer?', acceptedAnswer: { '@type': 'Answer', text: 'Paça kısaltma, fermuar değişimi ve bel daraltma gibi standart işlemler aynı gün, acil olanlar 1–2 saatte teslim edilir.' } },
       ],
     },
@@ -94,7 +93,7 @@ const FIYATLAR: [string, string, string][] = [
   ['Paça Kısaltma', 'Pantolon, kot, etek — görünmez dikiş', '₺200+'],
   ['Fermuar Değişimi', 'Pantolon, mont, ceket fermuarı', '₺300+'],
   ['Bel Daraltma', 'Elbise, pantolon, ceket', '₺200+'],
-  ['Elbise Dikimi', 'Kadın, erkek, çocuk özel dikim', '₺800+'],
+  ['Elbise Dikimi', 'Kadın, erkek, çocuk özel dikim', 'Fotoğrafa ve istediğiniz modele göre'],
   ['Gelinlik Tadilatı', 'Hassas daraltma, boy ayarı', '₺800+'],
 ];
 
@@ -203,7 +202,7 @@ export default function HurmaTerziPage() {
               </div>
               <div className="howto-item">
                 <div className="howto-t">Otele Servis</div>
-                <div className="howto-d">Hurma sahilindeki otellere ücretsiz alım-teslimatlı tadilat ve onarım.</div>
+                <div className="howto-d">Hurma sahilindeki otellere ve ev adreslerine ücretsiz alım-teslimatlı tadilat ve onarım.</div>
               </div>
             </div>
           </div>
@@ -218,7 +217,7 @@ export default function HurmaTerziPage() {
             </div>
             {[
               ['Hurma mahallesine terzi servisi geliyor mu?', 'Evet! Hurma mahallesine ücretsiz adrese servis veriyoruz. Kıyafetinizi adresinizden alıp normal tamir ve tadilatta aynı gün, acil işlerde 1–2 saatte teslim ediyoruz; özel dikimde süre modele ve adede göre belirlenir.'],
-              ['Hurma terzi fiyatları ne kadar 2026?', 'Paça kısaltma ₺200\'den, fermuar değişimi ₺300\'den, bel daraltma ₺200\'den, elbise dikimi ₺800\'den, gelinlik tadilatı ₺800\'den, abiye tadilatı ₺800\'den.'],
+              ['Hurma terzi fiyatları ne kadar 2026?', 'Paça kısaltma ₺200\'den, fermuar değişimi ₺300\'den, bel daraltma ₺200\'den, elbise dikimi fotoğrafa ve istediğiniz modele göre, gelinlik tadilatı ₺800\'den, abiye tadilatı ₺800\'den.'],
               ['Hurma sahil bölgesindeki otellere terzi servisi var mı?'],
               ['Hurma\'da acil tadilat ne kadar sürer?', 'Paça kısaltma, fermuar değişimi ve bel daraltma gibi standart işlemler aynı gün, acil olanlar 1–2 saatte teslim edilir.'],
             ].map(([q, a]) => (

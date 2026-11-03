@@ -232,16 +232,16 @@ const BASE: Record<Exclude<Konu, 'terziFp' | 'hizmetFp'>, Item[]> = {
     "ar": "خياطة فساتين السهرة والتفصيل الخاص"
    },
    "p": {
-    "tr": "Abiye ve elbise dikimi ₺800'den başlar. Özel dikimde süre ve fiyat modele, kumaşa ve adede göre belirlenir.",
-    "en": "Evening and dress sewing starts from €40. For custom tailoring, time and price depend on the model, fabric and quantity.",
-    "de": "Das Nähen von Abend- und Kleidern beginnt ab €40. Bei Maßanfertigung hängen Dauer und Preis von Modell, Stoff und Menge ab.",
-    "ru": "Пошив вечерних платьев и платьев — от €40. При индивидуальном пошиве срок и цена зависят от модели, ткани и количества.",
-    "es": "La confección de vestidos de noche y de vestir empieza desde €40. En la confección a medida, plazo y precio dependen del modelo, la tela y la cantidad.",
-    "fr": "La couture de robes de soirée commence à €40. Pour le sur mesure, délai et prix dépendent du modèle, du tissu et de la quantité.",
-    "pl": "Szycie sukienek wieczorowych zaczyna się od €40. Przy szyciu na miarę czas i cena zależą od modelu, tkaniny i ilości.",
-    "uk": "Пошив вечірніх суконь і суконь — від €40. При індивідуальному пошиві строк і ціна залежать від моделі, тканини та кількості.",
-    "nl": "Het maken van avond- en gewone jurken begint vanaf €40. Bij maatwerk hangen tijd en prijs af van model, stof en aantal.",
-    "ar": "تبدأ خياطة فساتين السهرة والفساتين من €40. وفي التفصيل الخاص تعتمد المدة والسعر على الموديل والقماش والكمية."
+    "tr": "Abiye ve elbise dikiminde sabit fiyat yoktur: fiyat fotoğrafa ve istediğiniz modele göre belirlenir. Özel dikimde süre modele, kumaşa ve adede göre belirlenir.",
+    "en": "Evening and dress sewing has no fixed price: it is quoted by photo and the model you want. For custom tailoring, time depends on the model, fabric and quantity.",
+    "de": "Das Nähen von Abend- und Kleidern hat keinen Festpreis: Er richtet sich nach Foto und gewünschtem Modell. Bei Maßanfertigung hängt die Dauer von Modell, Stoff und Menge ab.",
+    "ru": "У пошива вечерних платьев и платьев нет фиксированной цены: она определяется по фото и желаемой модели. При индивидуальном пошиве срок зависит от модели, ткани и количества.",
+    "es": "La confección de vestidos de noche y de vestir no tiene precio fijo: se indica según la foto y el modelo que desee. En la confección a medida, el plazo depende del modelo, la tela y la cantidad.",
+    "fr": "La couture de robes de soirée n’a pas de prix fixe : il est établi selon la photo et le modèle souhaité. Pour le sur mesure, le délai dépend du modèle, du tissu et de la quantité.",
+    "pl": "Szycie sukienek wieczorowych nie ma stałej ceny: ustalamy ją według zdjęcia i wybranego modelu. Przy szyciu na miarę czas zależy od modelu, tkaniny i ilości.",
+    "uk": "Пошив вечірніх суконь і суконь не має фіксованої ціни: її визначають за фото та бажаною моделлю. При індивідуальному пошиві строк залежить від моделі, тканини та кількості.",
+    "nl": "Het maken van avond- en gewone jurken heeft geen vaste prijs: die wordt bepaald op basis van foto en gewenst model. Bij maatwerk hangt de tijd af van model, stof en aantal.",
+    "ar": "لا يوجد سعر ثابت لخياطة فساتين السهرة والفساتين: يُحدَّد السعر حسب الصورة والموديل المطلوب. وفي التفصيل الخاص تعتمد المدة على الموديل والقماش والكمية."
    }
   }
  ],
@@ -556,16 +556,16 @@ const BASE: Record<Exclude<Konu, 'terziFp' | 'hizmetFp'>, Item[]> = {
     "ar": "أسعار الخياطة في {y}: التقصير والسحّاب والخصر وفستان الزفاف"
    },
    "p": {
-    "tr": "Paça kısaltma ve bel daraltma ₺200'den, fermuar değişimi ₺300'den, gelinlik, abiye ve elbise tadilatı ₺800'den başlar.",
-    "en": "Hemming and waist taking-in start from €10, zipper replacement from €15, coat alterations from €15 and coat zippers from €20, leather alterations from €30. Wedding, evening and custom dresses are priced by photo.",
-    "de": "Saum kürzen und Bund enger machen ab €10, Reißverschluss-Wechsel ab €15, Manteländerungen ab €15 und Mantel-Reißverschlüsse ab €20, Lederänderungen ab €30. Braut-, Abendkleider und Maßanfertigung nach Foto.",
-    "ru": "Подшив и ушивание в талии — от €10, замена молнии — от €15, переделка пальто — от €15, молний на пальто — от €20, переделка кожаных изделий — от €30. Свадебные, вечерние платья и пошив на заказ — по фото.",
-    "es": "Bajos y cintura desde €10, cambio de cremallera desde €15, arreglos de vestidos de novia, de noche y de vestir desde €40.",
-    "fr": "Ourlet et taille dès €10, remplacement de fermeture dès €15, retouches de robes de mariée, de soirée et d’habillées dès €40.",
-    "pl": "Nogawki i talia od €10, wymiana zamka od €15, przeróbki sukni ślubnych, wieczorowych i sukienek od €40.",
-    "uk": "Підшивання й звуження в талії — від €10, заміна блискавки — від €15, переробка весільних і вечірніх суконь — від €40.",
-    "nl": "Zoom en taille innemen vanaf €10, ritsvervanging vanaf €15, aanpassingen van bruids-, avond- en gewone jurken vanaf €40.",
-    "ar": "التقصير وتضييق الخصر من €10، واستبدال السحّاب من €15، وتعديل فساتين الزفاف والسهرة من €40."
+    "tr": "Paça kısaltma ve bel daraltma ₺200'den, fermuar değişimi ₺300'den, gelinlik, abiye ve elbise tadilatı ₺800'den başlar. Dikimde sabit fiyat yoktur: fotoğrafa ve istediğiniz modele göre belirlenir.",
+    "en": "Hemming and waist taking-in start from €10, trouser zipper replacement from €15, coat zippers from €20, leather alterations from €20. Custom sewing is priced by photo and the model you want.",
+    "de": "Saum kürzen und Bund enger machen ab €10, Hosen-Reißverschluss ab €15, Mantel-Reißverschlüsse ab €20, Lederänderungen ab €20. Maßanfertigung nach Foto und gewünschtem Modell.",
+    "ru": "Подшив и ушивание в талии — от €10, замена молнии на брюках — от €15, молний на пальто — от €20, переделка кожаных изделий — от €20. Пошив — по фото и желаемой модели.",
+    "es": "Bajos y cintura desde €10, cambio de cremallera desde €15, arreglos de vestidos de novia, de noche y de vestir desde €40. La confección a medida se presupuesta según la foto y el modelo que desee.",
+    "fr": "Ourlet et taille dès €10, remplacement de fermeture dès €15, retouches de robes de mariée, de soirée et d’habillées dès €40. La couture sur mesure est établie selon la photo et le modèle souhaité.",
+    "pl": "Nogawki i talia od €10, wymiana zamka od €15, przeróbki sukni ślubnych, wieczorowych i sukienek od €40. Szycie na miarę wyceniamy według zdjęcia i wybranego modelu.",
+    "uk": "Підшивання й звуження в талії — від €10, заміна блискавки — від €15, переробка весільних і вечірніх суконь — від €40. Пошив на замовлення — за фото та бажаною моделлю.",
+    "nl": "Zoom en taille innemen vanaf €10, ritsvervanging vanaf €15, aanpassingen van bruids-, avond- en gewone jurken vanaf €40. Maatwerk wordt geprijsd op basis van foto en gewenst model.",
+    "ar": "التقصير وتضييق الخصر من €10، واستبدال السحّاب من €15، وتعديل فساتين الزفاف والسهرة من €40. ويُحدَّد سعر التفصيل حسب الصورة والموديل المطلوب."
    }
   },
   {

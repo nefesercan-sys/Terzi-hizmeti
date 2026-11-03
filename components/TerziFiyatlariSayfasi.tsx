@@ -6,7 +6,7 @@
 // böylece 4 dilde fiyat tutarsızlığı olması mümkün olmaz.
 
 import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
-import { tryText, eurText } from '@/lib/facts';
+import { tryText, eurText, BY_PHOTO_MODEL, byPhotoModelCap } from '@/lib/facts';
 export type FLang = 'tr' | 'en' | 'de' | 'ru';
 
 export const SITE = 'https://terzihizmeti.com.tr';
@@ -18,21 +18,21 @@ const WA = (m: string) => `https://wa.me/905318986418?text=${encodeURIComponent(
 export const PRICE_ROWS: { icon: string; rows: string[] }[] = [
   { icon: '🔧', rows: [tryText('zipperPants'), tryText('zipperCoat')] },
   { icon: '📏', rows: [tryText('hem'), tryText('waist'), tryText('sleeve'), tryText('dressAdjust'), tryText('eveningWeddingAlter')] },
-  { icon: '✂️', rows: [tryText('skirtPantsSew'), tryText('dressSew'), tryText('groomSuit'), tryText('kidsSew')] },
+  { icon: '✂️', rows: [byPhotoModelCap('tr'), byPhotoModelCap('tr'), byPhotoModelCap('tr'), byPhotoModelCap('tr')] }, // dikimde sabit fiyat yok (sahip kararı)
 ];
 
 // Yabancı dillerde fiyat EURO ve "başlangıç" fiyatıdır (sahibinin verdiği liste); fiyatı verilmeyen kalemler "fotoğrafa göre".
 // null = fotoğrafa göre. Satır sırası PRICE_ROWS ile birebir aynıdır.
-const FOREIGN_BY_PHOTO: Record<'en' | 'de' | 'ru', string> = { en: 'By photo', de: 'Per Foto', ru: 'По фото' };
+const FOREIGN_BY_PHOTO: Record<'en' | 'de' | 'ru', string> = { en: byPhotoModelCap('en'), de: byPhotoModelCap('de'), ru: byPhotoModelCap('ru') };
 const EUR_ROWS: { icon: string; rows: (string | null)[] }[] = [
   { icon: '🔧', rows: [eurText('zipperPants'), eurText('zipperCoat')] },
   { icon: '📏', rows: [eurText('hem'), eurText('waist'), eurText('sleeve'), eurText('dressAdjust'), eurText('eveningWeddingAlter')] },
-  { icon: '✂️', rows: [eurText('skirtPantsSew'), eurText('dressSew'), eurText('groomSuit'), eurText('kidsSew')] },
+  { icon: '✂️', rows: [null, null, null, null] }, // dikimde sabit fiyat yok: FOREIGN_BY_PHOTO yazılır
 ];
 export const FOREIGN_NOTE: Record<'en' | 'de' | 'ru', string> = {
-  en: 'Starting prices in euro. Leather alterations (length etc.) from €30; coat alterations from €15 and coat zippers from €20. The final price is confirmed from your photo.',
-  de: 'Ab-Preise in Euro. Lederänderungen (z. B. Länge) ab €30; Manteländerungen ab €15 und Mantel-Reißverschlüsse ab €20. Der Endpreis wird anhand Ihres Fotos bestätigt.',
-  ru: 'Цены указаны «от», в евро. Переделка кожаных изделий (длина и др.) — от €30; переделка пальто и курток — от €15, замена молний на пальто — от €20. Итоговая цена подтверждается по фото.',
+  en: 'Starting prices in euro. Leather alterations (length etc.) from €20; coat and leather-jacket zippers from €20. Custom sewing has no fixed price: it is quoted by photo and the model you want. The final price is confirmed from your photo.',
+  de: 'Ab-Preise in Euro. Lederänderungen (z. B. Länge) ab €20; Reißverschlüsse für Mäntel und Lederjacken ab €20. Maßanfertigung hat keinen Festpreis: Der Preis richtet sich nach Foto und gewünschtem Modell. Der Endpreis wird anhand Ihres Fotos bestätigt.',
+  ru: 'Цены указаны «от», в евро. Переделка кожаных изделий (длина и др.) — от €20; замена молний на пальто, куртках и кожаных куртках — от €20. У пошива нет фиксированной цены: она определяется по фото и желаемой модели. Итоговая цена подтверждается по фото.',
 };
 /** Dile göre fiyat tablosu: tr → ₺ (PRICE_ROWS), en/de/ru → € (EUR_ROWS). */
 export function priceRowsFor(lang: FLang): { icon: string; rows: string[] }[] {
@@ -62,9 +62,9 @@ export const FT: Record<FLang, FiyatText> = {
     "htmlLang": "tr",
     "locale": "tr_TR",
     "metaTitle": "Antalya Terzi Fiyat Listesi 2026 — Tüm Hizmetler Tek Sayfada",
-    "metaDesc": "Antalya terzi fiyatları 2026: paça kısaltma ₺200, bel daraltma ₺200, fermuar değişimi ₺300, elbise dikimi ₺800'den. Fotoğrafı WhatsApp'tan gönderin, net fiyatı öğrenin. Adrese ve otele gelen terzi. Her gün 08:00–23:00.",
+    "metaDesc": "Antalya terzi fiyatları 2026: paça kısaltma ₺200, bel daraltma ₺200, fermuar değişimi ₺300, elbise dikimi fotoğrafa ve istediğiniz modele göre. Fotoğrafı WhatsApp'tan gönderin, net fiyatı öğrenin. Adrese ve otele gelen terzi. Her gün 08:00–23:00.",
     "ogTitle": "Antalya Terzi Fiyat Listesi 2026 — Fotoğraf Gönderin, Fiyatı Öğrenin",
-    "ogDesc": "Paça ₺200, bel daraltma ₺200, fermuar ₺300, elbise dikimi ₺800'den. Adrese ve otele gelen terzi.",
+    "ogDesc": "Paça ₺200, bel daraltma ₺200, fermuar ₺300; dikim fotoğrafa ve istediğiniz modele göre. Adrese ve otele gelen terzi.",
     "keywords": [
       "Antalya terzi",
       "terzi fiyatları",
@@ -96,7 +96,7 @@ export const FT: Record<FLang, FiyatText> = {
     "heroTag": "₺ Şeffaf fiyat · Her gün 08:00–23:00 · Konyaaltı, Antalya",
     "h1a": "Antalya Terzi Fiyatları 2026",
     "h1b": "Fotoğrafı Gönderin, Fiyatı Öğrenin",
-    "heroDesc": "Paça kısaltma ₺200, bel daraltma ₺200, fermuar değişimi ₺300, elbise dikimi ₺800'den. Elbise tadilatı, yırtık onarımı, özel dikim, adrese ve otele gelen terzi. İşin fotoğrafını WhatsApp'tan gönderin, net fiyat ve süreyi öğrenin.",
+    "heroDesc": "Paça kısaltma ₺200, bel daraltma ₺200, fermuar değişimi ₺300; elbise dikimi fotoğrafa ve istediğiniz modele göre. Elbise tadilatı, yırtık onarımı, özel dikim, adrese ve otele gelen terzi. İşin fotoğrafını WhatsApp'tan gönderin, net fiyat ve süreyi öğrenin.",
     "btnPhoto": "💬 Fotoğraf Gönderin →",
     "quickEyebrow": "Sorununuz ne?",
     "quickH": "İhtiyacınıza Göre Hızlı Cevap",
@@ -185,7 +185,7 @@ export const FT: Record<FLang, FiyatText> = {
       {
         "q": "Elbise diktirmek / kendime elbise dikmek",
         "a": "Ölçü, model ve kumaş seçimi, prova ve teslim. Fotoğrafını gönderin.",
-        "price": "₺800'den",
+        "price": "Fotoğrafa ve istediğiniz modele göre",
         "href": "#dikim",
         "cta": "Özel dikim"
       },
@@ -199,7 +199,7 @@ export const FT: Record<FLang, FiyatText> = {
       {
         "q": "Adrese veya otele gelen terzi",
         "a": "Ölçüyü adresinizde alırız, işi atölyede yapar, geri teslim ederiz.",
-        "price": "Otellere ücretsiz; ev adresi WhatsApp'tan",
+        "price": "Ev ve otele her bölgede ücretsiz",
         "href": "/otele-gelen-terzi-antalya",
         "cta": "Otele gelen terzi"
       },
@@ -237,7 +237,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Kendime elbise diktirmek istiyorum, nasıl ilerliyor?",
-        "Beğendiğiniz modelin fotoğrafını WhatsApp'tan gönderirsiniz. Ölçü alınır, kumaş ve model netleşir, gerekirse prova yapılır, sonra teslim edilir. Kadın elbise dikimi ₺800'den, etek ve pantolon dikimi ₺1000'den, çocuk kıyafeti ₺1000'den, damatlık ₺20.000'den başlar; fiyat kumaş ve işçiliğe göre netleşir."
+        "Beğendiğiniz modelin fotoğrafını WhatsApp'tan gönderirsiniz. Ölçü alınır, kumaş ve model netleşir, gerekirse prova yapılır, sonra teslim edilir. Elbise, etek, pantolon, çocuk kıyafeti ve damatlık dikiminde sabit fiyat yoktur: fiyat fotoğrafa ve istediğiniz modele göre belirlenir."
       ],
       [
         "Fermuar değişimi yapan, hafta sonu ve pazar günü açık bir terzi var mı?",
@@ -245,7 +245,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Adrese veya otele gelen terzi var mı?",
-        "Evet. Ölçü ve teslim adresinizde ya da otelinizde yapılır, iş atölyede tamamlanır. Eve ve otele ziyaret hizmet verilen tüm bölgelerde ücretsizdir. Ayrıntı: /otele-gelen-terzi-antalya"
+        "Evet. Ölçü ve teslim adresinizde ya da otelinizde yapılır, iş atölyede tamamlanır. Eve ve otele alım-teslim hizmet verilen her bölgede ücretsizdir. Ayrıntı: /otele-gelen-terzi-antalya"
       ],
       [
         "Terzi fiyatlarını nasıl öğrenirim?",
@@ -257,7 +257,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Bana yakın terzi nerede?",
-        "Atölye Konyaaltı'ndadır; Eve ve otele her bölgede ücretsiz servis yapılır. Konum: Google Haritalar'da \"TERZİ Can Antalya Tailor Service\"."
+        "Atölye Konyaaltı'ndadır; Ev ve otel adreslerine her bölgede ücretsiz servis yapılır. Konum: Google Haritalar'da \"TERZİ Can Antalya Tailor Service\"."
       ],
       [
         "Pamuklu, doğal kumaştan dikim yapıyor musunuz?",
@@ -304,7 +304,7 @@ export const FT: Record<FLang, FiyatText> = {
     "heroTag": "€ Prices · Open every day 08:00–23:00 · Konyaaltı, Antalya",
     "h1a": "Tailor Prices in Antalya 2026",
     "h1b": "Send a Photo, Get Your Price",
-    "heroDesc": "Hemming €10, taking in a waist €10, zipper replacement €15, repairs from €10, coat alterations from €15, leather from €30. Clothing repair, alterations, custom sewing, and a tailor who comes to your hotel or address. Send a photo of the job on WhatsApp and get an exact price and time.",
+    "heroDesc": "Hemming €10, taking in a waist €10, zipper replacement €15, repairs from €10, leather from €20. Custom sewing by photo and the model you want. Clothing repair, alterations, custom sewing, and a tailor who comes to your hotel or address. Send a photo of the job on WhatsApp and get an exact price and time.",
     "btnPhoto": "💬 Send a Photo →",
     "quickEyebrow": "What do you need?",
     "quickH": "Quick Answers for Your Situation",
@@ -386,14 +386,14 @@ export const FT: Record<FLang, FiyatText> = {
       {
         "q": "Zipper replacement",
         "a": "Trousers, jeans, skirts, coats and bags.",
-        "price": "from €10",
+        "price": "from €15",
         "href": "/en/tailor-service-antalya",
         "cta": "Tailor service"
       },
       {
         "q": "I want a dress made for me",
         "a": "Measurements, model and fabric choice, fitting and delivery. Send a photo of the design.",
-        "price": "By photo",
+        "price": "By photo and the model you want",
         "href": "#dikim",
         "cta": "Custom sewing"
       },
@@ -407,7 +407,7 @@ export const FT: Record<FLang, FiyatText> = {
       {
         "q": "A tailor who comes to my hotel or address",
         "a": "We take measurements at your hotel or address, do the work in our workshop and deliver it back.",
-        "price": "0",
+        "price": "Free",
         "href": "/en/hotel-tailor-antalya",
         "cta": "Hotel tailor"
       },
@@ -433,7 +433,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "My dress is torn. Can it be repaired?",
-        "Yes. Tears and open seams are repaired; the price depends on the damage. Send a photo of the damage on WhatsApp for an exact price and time. Most repairs are done the the same day (urgent jobs 1–2 hours)."
+        "Yes. Tears and open seams are repaired; the price depends on the damage. Send a photo of the damage on WhatsApp for an exact price and time. Most repairs are done the same day (urgent jobs 1–2 hours)."
       ],
       [
         "I want to take in the waist of my dress. How much does it cost?",
@@ -445,11 +445,11 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "I want to have a dress made for me. How does it work?",
-        "Send a photo of the model you like on WhatsApp. Measurements are taken, fabric and model are confirmed, a fitting is done if needed, then it is delivered. Custom sewing is priced by model, fabric and workmanship; send a photo for a quote."
+        "Send a photo of the model you like on WhatsApp. Measurements are taken, fabric and model are confirmed, a fitting is done if needed, then it is delivered. Custom sewing has no fixed price: it is quoted by photo and the model you want."
       ],
       [
         "Is there a tailor open on weekends and Sundays for zipper replacement?",
-        "Terzi Can is open every day of the week, including Saturday and Sunday, from 08:00to23:00. Outside these hours you can leave photos and messages on WhatsApp. Zipper replacement starts from €15."
+        "Terzi Can is open every day of the week, including Saturday and Sunday, from 08:00–23:00. Outside these hours you can leave photos and messages on WhatsApp. Zipper replacement starts from €15."
       ],
       [
         "Does a tailor come to my hotel or address?",
@@ -510,7 +510,7 @@ export const FT: Record<FLang, FiyatText> = {
     "heroTag": "€ Preise · Täglich 08:00–23:00 geöffnet · Konyaaltı, Antalya",
     "h1a": "Schneider Preise in Antalya 2026",
     "h1b": "Foto senden, Preis erfahren",
-    "heroDesc": "Hose kürzen ab €10, Taille enger machen ab €10, Reißverschluss wechseln ab €15, Reparaturen ab €10, Manteländerungen ab €15, Leder ab €30. Kleidung reparieren, Änderungen, Maßanfertigung und ein Schneider, der zu Ihrem Hotel oder Ihrer Adresse kommt. Senden Sie ein Foto per WhatsApp und erfahren Sie Preis und Dauer.",
+    "heroDesc": "Hose kürzen ab €10, Taille enger machen ab €10, Reißverschluss wechseln ab €15, Reparaturen ab €10, Leder ab €20. Maßanfertigung nach Foto und gewünschtem Modell. Kleidung reparieren, Änderungen, Maßanfertigung und ein Schneider, der zu Ihrem Hotel oder Ihrer Adresse kommt. Senden Sie ein Foto per WhatsApp und erfahren Sie Preis und Dauer.",
     "btnPhoto": "💬 Foto senden →",
     "quickEyebrow": "Was brauchen Sie?",
     "quickH": "Schnelle Antworten für Ihren Fall",
@@ -592,14 +592,14 @@ export const FT: Record<FLang, FiyatText> = {
       {
         "q": "Reißverschluss wechseln",
         "a": "Hose, Jeans, Rock, Mantel und Tasche.",
-        "price": "ab €10",
+        "price": "ab €15",
         "href": "/de/schneiderservice-antalya",
         "cta": "Schneiderservice"
       },
       {
         "q": "Ich möchte ein Kleid nach Maß",
         "a": "Maßnehmen, Modell- und Stoffwahl, Anprobe und Lieferung. Senden Sie ein Foto des Modells.",
-        "price": "Per Foto",
+        "price": "Nach Foto und gewünschtem Modell",
         "href": "#dikim",
         "cta": "Maßanfertigung"
       },
@@ -613,7 +613,7 @@ export const FT: Record<FLang, FiyatText> = {
       {
         "q": "Schneider, der ins Hotel oder an meine Adresse kommt",
         "a": "Wir nehmen Maß in Ihrem Hotel oder an Ihrer Adresse, arbeiten in der Werkstatt und liefern zurück.",
-        "price": "Kostenlos in Konyaaltı; Wohnadressen andernorts per WhatsApp",
+        "price": "Zu Hause und im Hotel in jedem Gebiet kostenlos",
         "href": "/de/schneider-service-hotel-antalya",
         "cta": "Schneider im Hotel"
       },
@@ -651,11 +651,11 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Ich möchte mir ein Kleid schneidern lassen. Wie läuft das ab?",
-        "Senden Sie per WhatsApp ein Foto des gewünschten Modells. Es wird Maß genommen, Stoff und Modell werden festgelegt, bei Bedarf gibt es eine Anprobe, dann folgt die Lieferung. Der Preis hängt von Modell, Stoff und Aufwand ab; senden Sie ein Foto für ein Angebot."
+        "Senden Sie per WhatsApp ein Foto des gewünschten Modells. Es wird Maß genommen, Stoff und Modell werden festgelegt, bei Bedarf gibt es eine Anprobe, dann folgt die Lieferung. Maßanfertigung hat keinen Festpreis: Der Preis richtet sich nach Foto und gewünschtem Modell."
       ],
       [
         "Gibt es einen Schneider für Reißverschlüsse, der am Wochenende und sonntags geöffnet ist?",
-        "Terzi Can hat an allen 7 Tagen der Woche geöffnet, auch samstags und sonntags, von 08:00bis23:00 Uhr. Außerhalb dieser Zeiten können Sie Fotos und Nachrichten per WhatsApp senden. Reißverschluss wechseln ab €15."
+        "Terzi Can hat an allen 7 Tagen der Woche geöffnet, auch samstags und sonntags, von 08:00–23:00 Uhr. Außerhalb dieser Zeiten können Sie Fotos und Nachrichten per WhatsApp senden. Reißverschluss wechseln ab €15."
       ],
       [
         "Kommt ein Schneider in mein Hotel oder an meine Adresse?",
@@ -716,7 +716,7 @@ export const FT: Record<FLang, FiyatText> = {
     "heroTag": "€ Цены · Ежедневно 08:00–23:00 · Коньяалты, Анталья",
     "h1a": "Цены портного в Анталье 2026",
     "h1b": "Пришлите фото — узнайте цену",
-    "heroDesc": "Подшив брюк от €10, ушить в талии от €10, замена молнии от €15, ремонт от €10, переделка пальто и курток от €15, кожа от €30. Ремонт и подгонка одежды, пошив на заказ и портной, который приедет в ваш отель или по адресу. Пришлите фото работы в WhatsApp — назовём точную цену и срок.",
+    "heroDesc": "Подшив брюк от €10, ушить в талии от €10, замена молнии от €15, ремонт от €10, кожа от €20. Пошив — по фото и желаемой модели. Ремонт и подгонка одежды, пошив на заказ и портной, который приедет в ваш отель или по адресу. Пришлите фото работы в WhatsApp — назовём точную цену и срок.",
     "btnPhoto": "💬 Отправить фото →",
     "quickEyebrow": "Что вам нужно?",
     "quickH": "Быстрые ответы по вашей задаче",
@@ -798,14 +798,14 @@ export const FT: Record<FLang, FiyatText> = {
       {
         "q": "Замена молнии",
         "a": "Брюки, джинсы, юбки, куртки и сумки.",
-        "price": "от €10",
+        "price": "от €15",
         "href": "/ru/uslugi-portnogo-antalya",
         "cta": "Услуги портного"
       },
       {
         "q": "Хочу платье на заказ",
         "a": "Мерки, выбор модели и ткани, примерка и выдача. Пришлите фото модели.",
-        "price": "По фото",
+        "price": "По фото и желаемой модели",
         "href": "#dikim",
         "cta": "Пошив на заказ"
       },
@@ -819,7 +819,7 @@ export const FT: Record<FLang, FiyatText> = {
       {
         "q": "Портной, который приедет в отель или по адресу",
         "a": "Снимаем мерки в отеле или по адресу, работаем в мастерской и привозим обратно.",
-        "price": "Бесплатно в Коньяалты; домашние адреса в других районах — через WhatsApp",
+        "price": "На дом и в отель бесплатно, в любом районе",
         "href": "/ru/vyezdnoy-portnoy-antalya",
         "cta": "Портной в отель"
       },
@@ -857,11 +857,11 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Хочу платье на заказ. Как это происходит?",
-        "Пришлите в WhatsApp фото понравившейся модели. Снимаем мерки, согласуем ткань и модель, при необходимости делаем примерку, затем выдаём готовое. Пошив оценивается по модели, ткани и работе; пришлите фото для расчёта."
+        "Пришлите в WhatsApp фото понравившейся модели. Снимаем мерки, согласуем ткань и модель, при необходимости делаем примерку, затем выдаём готовое. У пошива нет фиксированной цены: она определяется по фото и желаемой модели."
       ],
       [
         "Есть ли портной для замены молнии, который работает в выходные и в воскресенье?",
-        "Terzi Can работает все 7 дней в неделю, включая субботу и воскресенье, с 08:00до23:00. Вне этого времени можно оставить фото и сообщение в WhatsApp. Замена молнии — от €15."
+        "Terzi Can работает все 7 дней в неделю, включая субботу и воскресенье, с 08:00–23:00. Вне этого времени можно оставить фото и сообщение в WhatsApp. Замена молнии — от €15."
       ],
       [
         "Приедет ли портной в мой отель или по адресу?",

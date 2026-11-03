@@ -1,6 +1,6 @@
 // ============================================================
 // lib/district-copy.ts — bölge sayfaları için doğrudan cevap paragrafı + doğal soru kalıplı SSS havuzu (tr/en/ru/de)
-// Süreler lib/delivery.ts'ten; fiyatlar sitede zaten yayınlanan başlangıç fiyatlarıdır (₺200 / ₺300 / ₺800).
+// Süreler lib/delivery.ts'ten; fiyatlar sitede zaten yayınlanan başlangıç fiyatlarıdır (₺200 / ₺300 / ₺800 tadilat); DİKİMDE sabit fiyat yoktur (lib/facts.ts BY_PHOTO_MODEL).
 // Eve ve otele alım-teslim her bölgede ücretsiz (isFreeService her zaman true).
 // SSS bölgeye göre seçilir (slug karması) → sayfalar aynı 5 soruyu tekrarlamaz.
 // ============================================================
@@ -9,13 +9,13 @@ import { PHONE, isFreeService, type Lang, type District } from '@/lib/seo-data';
 import { pickVariant } from '@/lib/area-profiles';
 
 const HOME: Record<Lang, { free: string; ask: string }> = {
-  tr: { free: 'Ev adreslerinde de alım-teslim ücretsizdir.', ask: "Ev adresleri için servis durumunu WhatsApp'tan sorabilirsiniz." },
-  en: { free: 'Home addresses here are free as well.', ask: 'For home addresses, please ask on WhatsApp.' },
-  ru: { free: 'Домашние адреса здесь тоже обслуживаются бесплатно.', ask: 'По домашним адресам уточняйте в WhatsApp.' },
-  de: { free: 'Auch Wohnadressen werden hier kostenlos bedient.', ask: 'Für Wohnadressen fragen Sie bitte per WhatsApp.' },
+  tr: { free: 'Ev adreslerinde de alım-teslim ücretsizdir.', ask: 'Ev adreslerinde de alım-teslim ücretsizdir.' },
+  en: { free: 'Home addresses here are free as well.', ask: 'Home addresses here are free as well.' },
+  ru: { free: 'Домашние адреса здесь тоже обслуживаются бесплатно.', ask: 'Домашние адреса здесь тоже обслуживаются бесплатно.' },
+  de: { free: 'Auch Wohnadressen werden hier kostenlos bedient.', ask: 'Auch Wohnadressen werden hier kostenlos bedient.' },
 };
 const HOTEL_FREE: Record<Lang, string> = {
-  tr: 'Otellere alım-teslim ücretsizdir.', en: 'Hotel pick-up and delivery is free.', ru: 'Забор и доставка в отели бесплатны.', de: 'Abholung und Lieferung im Hotel sind kostenlos.',
+  tr: 'Eve ve otele alım-teslim ücretsizdir.', en: 'Pick-up and delivery to homes and hotels is free.', ru: 'Забор и доставка на дом и в отели бесплатны.', de: 'Abholung und Lieferung zu Hause und im Hotel sind kostenlos.',
 };
 
 /** 1–2 cümlelik doğrudan cevap (sesli asistan dostu): kim, ne, nerede, nasıl ulaşılır, süre. */
@@ -26,8 +26,8 @@ export function districtAnswer(lang: Lang, d: District): string {
   const v = pickVariant(d.slug, 2, 'ans');
   if (lang === 'tr') {
     return v === 0
-      ? `Terzi Can, ${loc} paça kısaltma, daraltma, fermuar değişimi ve elbise tadilatı yapar; atölye Konyaaltı Hurma'dadır ve her gün 08:00–23:00 WhatsApp ile telefondan (${PHONE}) ulaşılır. ${D.urgent} ${D.normal} ${HOTEL_FREE.tr} ${home}`
-      : `${loc} terzi arıyorsanız Terzi Can'a ${PHONE} numarasından, her gün 08:00–23:00 arası WhatsApp veya telefonla ulaşabilirsiniz; atölye Hurma, Konyaaltı'dadır. ${D.urgent} ${D.normal} ${HOTEL_FREE.tr} ${home}`;
+      ? `Terzi Can, ${loc} paça kısaltma, daraltma, fermuar değişimi ve elbise tadilatı yapar; atölye Konyaaltı'nda, Hurma'dadır ve her gün 08:00–23:00 WhatsApp ile telefondan (${PHONE}) ulaşılır. ${D.urgent} ${D.normal} ${HOTEL_FREE.tr} ${home}`
+      : `${loc} terzi arıyorsanız Terzi Can'a ${PHONE} numarasından, her gün 08:00–23:00 arası WhatsApp veya telefonla ulaşabilirsiniz; atölye Hurma, Konyaaltı'ndadır. ${D.urgent} ${D.normal} ${HOTEL_FREE.tr} ${home}`;
   }
   if (lang === 'en') {
     return v === 0
@@ -71,16 +71,16 @@ const POOL: { id: string; f: Record<Lang, (loc: string, n: string, d: District) 
     de: (loc) => [`Was kostet ein Reißverschlusswechsel ${loc}?`, `Den genauen Preis für den Reißverschlusswechsel nennen wir anhand eines Fotos, je nach Typ und Kleidungsstück. ${DELIVERY.de.normal}`],
   } },
   { id: 'home', f: {
-    tr: (loc, n, d) => [`${loc} eve servis var mı?`, isFreeService(d.slug) ? `Evet. ${n} çevresinde ev adreslerinde de alım-teslim ücretsizdir; gün ve saati WhatsApp'tan birlikte belirleriz.` : `Otellere servis ücretsizdir. ${n} içindeki ev adresleri için servis durumunu WhatsApp'tan sorabilirsiniz; Konyaaltı'ndaki atölyeye de getirebilirsiniz.`],
-    en: (loc, n, d) => [`Is there home pick-up ${loc}?`, isFreeService(d.slug) ? `Yes. Home pick-up and delivery around ${n} is free as well; we agree the day and time on WhatsApp.` : `Hotel service is free. For home addresses in ${n}, please ask on WhatsApp; you can also bring clothes to our workshop in Konyaaltı.`],
-    ru: (loc, n, d) => [`Есть ли забор вещей на дом ${loc}?`, isFreeService(d.slug) ? `Да. В районе ${n} забор и доставка на дом тоже бесплатны; день и время согласуем в WhatsApp.` : `В отели выезд бесплатный. По домашним адресам в районе ${n} уточняйте в WhatsApp; вещи можно принести и в мастерскую в Коньяалты.`],
-    de: (loc, n, d) => [`Gibt es ${loc} eine Abholung nach Hause?`, isFreeService(d.slug) ? `Ja. Auch Wohnadressen rund um ${n} werden kostenlos abgeholt und beliefert; Tag und Uhrzeit klären wir per WhatsApp.` : `Der Hotelservice ist kostenlos. Für Wohnadressen in ${n} fragen Sie bitte per WhatsApp; Sie können die Kleidung auch in unsere Werkstatt in Konyaaltı bringen.`],
+    tr: (loc, n, d) => [`${loc} eve servis var mı?`, isFreeService(d.slug) ? `Evet. ${n} çevresinde ev adreslerinde de alım-teslim ücretsizdir; gün ve saati WhatsApp'tan birlikte belirleriz.` : `Evet. Ev ve otel adreslerine alım-teslim her bölgede ücretsizdir.`],
+    en: (loc, n, d) => [`Is there home pick-up ${loc}?`, isFreeService(d.slug) ? `Yes. Home pick-up and delivery around ${n} is free as well; we agree the day and time on WhatsApp.` : `Yes. Pick-up and delivery to homes and hotels is free in every area.`],
+    ru: (loc, n, d) => [`Есть ли забор вещей на дом ${loc}?`, isFreeService(d.slug) ? `Да. В районе ${n} забор и доставка на дом тоже бесплатны; день и время согласуем в WhatsApp.` : `Да. Забор и доставка на дом и в отели бесплатны в любом районе.`],
+    de: (loc, n, d) => [`Gibt es ${loc} eine Abholung nach Hause?`, isFreeService(d.slug) ? `Ja. Auch Wohnadressen rund um ${n} werden kostenlos abgeholt und beliefert; Tag und Uhrzeit klären wir per WhatsApp.` : `Ja. Abholung und Lieferung zu Hause und im Hotel sind in jedem Gebiet kostenlos.`],
   } },
   { id: 'custom', f: {
-    tr: (loc) => [`${loc} özel dikim yaptırabilir miyim?`, `Evet. Ölçünüze göre elbise, gömlek, pantolon ve etek dikiyoruz; keten ve pamuk yazlık kumaşlarda model ve ölçüyü birlikte belirleriz. ${DELIVERY.tr.custom} Fiyat işe göre WhatsApp'tan netleşir.`],
-    en: (loc) => [`Can I get clothes made to measure ${loc}?`, `Yes. We sew dresses, shirts, trousers and skirts to your measurements; for linen and cotton summer fabrics we agree the model and size with you. ${DELIVERY.en.custom} The price is confirmed on WhatsApp.`],
-    ru: (loc) => [`Можно ли заказать индивидуальный пошив ${loc}?`, `Да. Шьём платья, рубашки, брюки и юбки по вашим меркам; для летних тканей из льна и хлопка модель и размер согласуем с вами. ${DELIVERY.ru.custom} Цену уточняем в WhatsApp.`],
-    de: (loc) => [`Kann ich ${loc} Kleidung nach Maß nähen lassen?`, `Ja. Wir nähen Kleider, Hemden, Hosen und Röcke nach Ihren Maßen; bei Sommerstoffen aus Leinen und Baumwolle legen wir Modell und Größe gemeinsam fest. ${DELIVERY.de.custom} Den Preis klären wir per WhatsApp.`],
+    tr: (loc) => [`${loc} özel dikim yaptırabilir miyim?`, `Evet. Ölçünüze göre elbise, gömlek, pantolon ve etek dikiyoruz; keten ve pamuk yazlık kumaşlarda model ve ölçüyü birlikte belirleriz. ${DELIVERY.tr.custom} Dikimde sabit fiyat yoktur: fiyat fotoğrafa ve istediğiniz modele göre belirlenir.`],
+    en: (loc) => [`Can I get clothes made to measure ${loc}?`, `Yes. We sew dresses, shirts, trousers and skirts to your measurements; for linen and cotton summer fabrics we agree the model and size with you. ${DELIVERY.en.custom} Custom sewing has no fixed price: it is quoted by photo and the model you want.`],
+    ru: (loc) => [`Можно ли заказать индивидуальный пошив ${loc}?`, `Да. Шьём платья, рубашки, брюки и юбки по вашим меркам; для летних тканей из льна и хлопка модель и размер согласуем с вами. ${DELIVERY.ru.custom} У пошива нет фиксированной цены: она определяется по фото и желаемой модели.`],
+    de: (loc) => [`Kann ich ${loc} Kleidung nach Maß nähen lassen?`, `Ja. Wir nähen Kleider, Hemden, Hosen und Röcke nach Ihren Maßen; bei Sommerstoffen aus Leinen und Baumwolle legen wir Modell und Größe gemeinsam fest. ${DELIVERY.de.custom} Maßanfertigung hat keinen Festpreis: Der Preis richtet sich nach Foto und gewünschtem Modell.`],
   } },
   { id: 'wedding', f: {
     tr: (loc) => [`${loc} gelinlik veya abiye tadilatı yapılıyor mu?`, `Evet. Gelinlik tadilatı ₺800'den, abiye tadilatı ₺800'den başlar; kesin fiyat fotoğrafa ve işin kapsamına göre verilir. Abiye tadilatı aynı gün teslim edilir, gelinlikte süre işin kapsamına göre netleşir.`],
@@ -89,10 +89,10 @@ const POOL: { id: string; f: Record<Lang, (loc: string, n: string, d: District) 
     de: (loc) => [`Ändern Sie ${loc} auch Braut- und Abendkleider?`, 'Ja. Wir ändern Abend- und Brautkleider; der genaue Preis hängt von Foto und Aufwand ab. Abendkleider sind am selben Tag fertig, beim Brautkleid richtet sich die Dauer nach dem Umfang.'],
   } },
   { id: 'tourist', f: {
-    tr: (loc) => [`Turist olarak ${loc} terzi bulabilir miyim?`, `Evet. WhatsApp'tan kendi dilinizde yazabilirsiniz; Türkçe, İngilizce, Rusça ve Almanca ile hizmet veriyoruz. Otellere alım-teslim ücretsizdir. Fotoğrafı gönderin, fiyatı söyleyelim.`],
-    en: (loc) => [`Can tourists find a tailor ${loc}?`, 'Yes. Write to us on WhatsApp in your own language; we serve in Turkish, English, Russian and German. Hotel pick-up and delivery is free. Send a photo and we will quote.'],
-    ru: (loc) => [`Может ли турист найти портного ${loc}?`, 'Да. Пишите в WhatsApp на своём языке; мы работаем на турецком, английском, русском и немецком. Забор и доставка в отели бесплатны. Пришлите фото — назовём цену.'],
-    de: (loc) => [`Finden Touristen ${loc} einen Schneider?`, 'Ja. Schreiben Sie uns per WhatsApp in Ihrer Sprache; wir bedienen auf Türkisch, Englisch, Russisch und Deutsch. Abholung und Lieferung im Hotel sind kostenlos. Foto senden, wir nennen den Preis.'],
+    tr: (loc) => [`Turist olarak ${loc} terzi bulabilir miyim?`, `Evet. WhatsApp'tan kendi dilinizde yazabilirsiniz; Türkçe, İngilizce, Rusça ve Almanca ile hizmet veriyoruz. Eve ve otele alım-teslim ücretsizdir. Fotoğrafı gönderin, fiyatı söyleyelim.`],
+    en: (loc) => [`Can tourists find a tailor ${loc}?`, 'Yes. Write to us on WhatsApp in your own language; we serve in Turkish, English, Russian and German. Pick-up and delivery to homes and hotels is free. Send a photo and we will quote.'],
+    ru: (loc) => [`Может ли турист найти портного ${loc}?`, 'Да. Пишите в WhatsApp на своём языке; мы работаем на турецком, английском, русском и немецком. Забор и доставка на дом и в отели бесплатны. Пришлите фото — назовём цену.'],
+    de: (loc) => [`Finden Touristen ${loc} einen Schneider?`, 'Ja. Schreiben Sie uns per WhatsApp in Ihrer Sprache; wir bedienen auf Türkisch, Englisch, Russisch und Deutsch. Abholung und Lieferung zu Hause und im Hotel sind kostenlos. Foto senden, wir nennen den Preis.'],
   } },
   { id: 'hours', f: {
     tr: (loc) => [`${loc} terzi akşam ve hafta sonu açık mı?`, `Evet. Terzi Can haftanın 7 günü, Cumartesi ve Pazar dahil, 08:00–23:00 arası açıktır. Mesai dışında WhatsApp'tan fotoğraf ve mesaj bırakabilirsiniz.`],

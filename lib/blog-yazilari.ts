@@ -1,7 +1,7 @@
 // ============================================================
 // lib/blog-yazilari.ts — Blog yazıları (tek kaynak).
 // Yeni yazı eklemek için diziye bir nesne eklemek yeterli: /blog/[slug] sayfası, blog listesi ve sitemap otomatik güncellenir.
-// Fiyatlar yalnızca sitede zaten yayınlanan başlangıç fiyatlarıdır (paça/bel ₺200, fermuar ₺300, elbise dikimi ₺800'den).
+// Fiyatlar yalnızca sitede zaten yayınlanan başlangıç fiyatlarıdır (paça/bel ₺200, fermuar ₺300, dikimde sabit fiyat yok: fotoğrafa ve istediğiniz modele göre).
 // Teslim süreleri lib/delivery.ts ile aynıdır (acil 1–2 saat, normal aynı gün, özel dikim modele/adede göre).
 // Görseller yapay zekâ ile üretilmiş örnek görsellerdir (gerçek iş fotoğrafı değildir).
 // ============================================================
@@ -251,7 +251,7 @@ export const BLOG_YAZILARI: BlogYazi[] = [
       },
       {
         h: 'Sipariş süreci',
-        p: ['Özel dikimde süre modele ve adede göre belirlenir. Elbise dikimi ₺800\'den başlar; kumaş türüne, modele ve işçiliğe göre net fiyat WhatsApp\'tan ya da ölçü sırasında verilir.'],
+        p: ['Özel dikimde süre modele ve adede göre belirlenir. Dikimde sabit fiyat yoktur: fiyat fotoğrafa ve istediğiniz modele göre belirlenir; WhatsApp\'tan fotoğrafı gönderebilirsiniz.'],
       },
     ],
     sss: [

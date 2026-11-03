@@ -6,7 +6,7 @@
 // böylece 4 dilde fiyat tutarsızlığı olması mümkün olmaz.
 
 import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
-import { tryText, eurText, BY_PHOTO_MODEL, byPhotoModelCap } from '@/lib/facts';
+import { tryText, eurText, BY_PHOTO_MODEL, byPhotoModelCap, byPhotoOrJobCap, PAYMENT_NOTE } from '@/lib/facts';
 export type FLang = 'tr' | 'en' | 'de' | 'ru';
 
 export const SITE = 'https://terzihizmeti.com.tr';
@@ -17,7 +17,7 @@ const WA = (m: string) => `https://wa.me/905318986418?text=${encodeURIComponent(
 
 export const PRICE_ROWS: { icon: string; rows: string[] }[] = [
   { icon: '🔧', rows: [tryText('zipperPants'), tryText('zipperCoat')] },
-  { icon: '📏', rows: [tryText('hem'), tryText('waist'), tryText('sleeve'), tryText('dressAdjust'), tryText('eveningWeddingAlter')] },
+  { icon: '📏', rows: [tryText('hem'), tryText('waist'), tryText('sleeve'), tryText('dressAdjust'), byPhotoOrJobCap('tr')] },
   { icon: '✂️', rows: [byPhotoModelCap('tr'), byPhotoModelCap('tr'), byPhotoModelCap('tr'), byPhotoModelCap('tr')] }, // dikimde sabit fiyat yok (sahip kararı)
 ];
 
@@ -26,7 +26,7 @@ export const PRICE_ROWS: { icon: string; rows: string[] }[] = [
 const FOREIGN_BY_PHOTO: Record<'en' | 'de' | 'ru', string> = { en: byPhotoModelCap('en'), de: byPhotoModelCap('de'), ru: byPhotoModelCap('ru') };
 const EUR_ROWS: { icon: string; rows: (string | null)[] }[] = [
   { icon: '🔧', rows: [eurText('zipperPants'), eurText('zipperCoat')] },
-  { icon: '📏', rows: [eurText('hem'), eurText('waist'), eurText('sleeve'), eurText('dressAdjust'), eurText('eveningWeddingAlter')] },
+  { icon: '📏', rows: [eurText('hem'), eurText('waist'), eurText('sleeve'), eurText('dressAdjust'), '@job'] },
   { icon: '✂️', rows: [null, null, null, null] }, // dikimde sabit fiyat yok: FOREIGN_BY_PHOTO yazılır
 ];
 export const FOREIGN_NOTE: Record<'en' | 'de' | 'ru', string> = {
@@ -37,7 +37,7 @@ export const FOREIGN_NOTE: Record<'en' | 'de' | 'ru', string> = {
 /** Dile göre fiyat tablosu: tr → ₺ (PRICE_ROWS), en/de/ru → € (EUR_ROWS). */
 export function priceRowsFor(lang: FLang): { icon: string; rows: string[] }[] {
   if (lang === 'tr') return PRICE_ROWS;
-  return EUR_ROWS.map((g) => ({ icon: g.icon, rows: g.rows.map((r) => r ?? FOREIGN_BY_PHOTO[lang]) }));
+  return EUR_ROWS.map((g) => ({ icon: g.icon, rows: g.rows.map((r) => r === '@job' ? byPhotoOrJobCap(lang) : (r ?? FOREIGN_BY_PHOTO[lang])) }));
 }
 
 export interface QuickItem { q: string; a: string; price: string; href: string; cta: string }
@@ -192,7 +192,7 @@ export const FT: Record<FLang, FiyatText> = {
       {
         "q": "Gelinlik ve abiye tadilatı",
         "a": "Hassas daraltma, boy ve askı ayarı; prova randevusu.",
-        "price": "₺800'den",
+        "price": "Fotoğrafa göre",
         "href": "/antalya-gelinlik-tadilati",
         "cta": "Gelinlik tadilatı"
       },
@@ -968,7 +968,7 @@ export default function TerziFiyatlariSayfasi({ lang }: { lang: FLang }) {
               </article>
             ))}
           </div>
-          {lang !== 'tr' && <p style={{ textAlign: 'center', marginTop: '1.2rem', fontSize: '.95rem' }}>{FOREIGN_NOTE[lang]}</p>}
+          <p style={{ textAlign: 'center', marginTop: '1.2rem', fontSize: '.95rem' }}>{lang !== 'tr' ? FOREIGN_NOTE[lang] + ' ' : ''}{PAYMENT_NOTE[lang]}</p>
           <div style={{ textAlign: 'center', marginTop: '1.8rem' }}>
             <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-primary">{T.priceBtn}</a>
           </div>

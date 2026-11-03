@@ -294,7 +294,7 @@ export const BLOG_YAZILARI: BlogYazi[] = [
       },
       {
         h: 'Fiyat',
-        p: ['Bel daraltma ₺200\'den başlar; elbise ve abiyede işin kapsamına göre fiyat değişir. Gelinlik ve abiye tadilatında fiyatlar ₺800\'den başlar.'],
+        p: ['Bel daraltma ₺200\'den başlar; elbise ve abiyede işin kapsamına göre fiyat değişir. Gelinlik ve abiye tadilatında fiyat fotoğrafa veya işin detayına göre belirlenir.'],
       },
     ],
     sss: [

@@ -72,7 +72,6 @@ const jsonLd = {
           { '@type': 'Offer', name: 'Paça Kısaltma', price: '200', priceCurrency: 'TRY', priceValidUntil: '2027-12-31' },
           { '@type': 'Offer', name: 'Fermuar Değişimi', price: '300', priceCurrency: 'TRY', priceValidUntil: '2027-12-31' },
           { '@type': 'Offer', name: 'Bel Daraltma', price: '200', priceCurrency: 'TRY', priceValidUntil: '2027-12-31' },
-          { '@type': 'Offer', name: 'Gelinlik Tadilatı', price: '800', priceCurrency: 'TRY', priceValidUntil: '2027-12-31' },
         ],
       },
     },
@@ -81,9 +80,9 @@ const jsonLd = {
       '@id': `${PAGE_URL}#faq`,
       mainEntity: [
         { '@type': 'Question', name: "Atölyeniz Liman'da mı?", acceptedAnswer: { '@type': 'Answer', text: 'Evet, atölyemiz Liman mahallesinde yer alıyor. Bu sayede Liman içindeki teslimatlar genellikle diğer mahallelere göre daha hızlı tamamlanır.' } },
-        { '@type': 'Question', name: 'Liman terzi fiyatları ne kadar 2026?', acceptedAnswer: { '@type': 'Answer', text: `Paça kısaltma ₺200'den, fermuar değişimi ₺300'den, bel daraltma ₺200'den, elbise dikimi fotoğrafa ve istediğiniz modele göre, gelinlik tadilatı ₺800'den, abiye tadilatı ₺800'den. ☎ ${PHONE}` } },
+        { '@type': 'Question', name: 'Liman terzi fiyatları ne kadar 2026?', acceptedAnswer: { '@type': 'Answer', text: `Paça kısaltma ₺200'den, fermuar değişimi ₺300'den, bel daraltma ₺200'den, elbise dikimi fotoğrafa ve istediğiniz modele göre, gelinlik ve abiye tadilatı fotoğrafa veya işin detayına göre. ☎ ${PHONE}` } },
         { '@type': 'Question', name: 'Liman\'da acil tadilat ne kadar sürer?', acceptedAnswer: { '@type': 'Answer', text: 'Paça kısaltma, fermuar değişimi ve bel daraltma gibi standart işlemler aynı gün, acil olanlar 1–2 saatte teslim edilir.' } },
-        { '@type': 'Question', name: 'Gelinlik ve abiye tadilatı yapıyor musunuz?', acceptedAnswer: { '@type': 'Answer', text: `Evet, gelinlik ve abiye tadilatında uzmanız. Gelinlik tadilatı ₺800'den, abiye tadilatı ₺800'den başlar. ☎ ${PHONE}` } },
+        { '@type': 'Question', name: 'Gelinlik ve abiye tadilatı yapıyor musunuz?', acceptedAnswer: { '@type': 'Answer', text: `Evet, gelinlik ve abiye tadilatında uzmanız. Fiyat fotoğrafa veya işin detayına göre belirlenir. ☎ ${PHONE}` } },
       ],
     },
   ],
@@ -94,7 +93,7 @@ const FIYATLAR: [string, string, string][] = [
   ['Fermuar Değişimi', 'Pantolon, mont, ceket fermuarı', '₺300+'],
   ['Bel Daraltma', 'Elbise, pantolon, ceket', '₺200+'],
   ['Elbise Dikimi', 'Kadın, erkek, çocuk özel dikim', 'Fotoğrafa ve istediğiniz modele göre'],
-  ['Gelinlik Tadilatı', 'Hassas daraltma, boy ayarı', '₺800+'],
+  ['Gelinlik Tadilatı', 'Hassas daraltma, boy ayarı', 'Fotoğrafa göre'],
 ];
 
 export default function LimanPage() {
@@ -207,9 +206,9 @@ export default function LimanPage() {
             </div>
             {[
               ["Atölyeniz Liman'da mı?", 'Evet, atölyemiz Liman mahallesinde yer alıyor. Bu sayede Liman içindeki teslimatlar genellikle diğer mahallelere göre daha hızlı tamamlanır.'],
-              ['Liman terzi fiyatları ne kadar 2026?', 'Paça kısaltma ₺200\'den, fermuar değişimi ₺300\'den, bel daraltma ₺200\'den, elbise dikimi fotoğrafa ve istediğiniz modele göre, gelinlik tadilatı ₺800\'den, abiye tadilatı ₺800\'den.'],
+              ['Liman terzi fiyatları ne kadar 2026?', 'Paça kısaltma ₺200\'den, fermuar değişimi ₺300\'den, bel daraltma ₺200\'den, elbise dikimi fotoğrafa ve istediğiniz modele göre, gelinlik ve abiye tadilatı fotoğrafa veya işin detayına göre.'],
               ['Liman\'da acil tadilat ne kadar sürer?', 'Paça kısaltma, fermuar değişimi ve bel daraltma gibi standart işlemler aynı gün, acil olanlar 1–2 saatte teslim edilir.'],
-              ['Gelinlik ve abiye tadilatı yapıyor musunuz?', 'Evet, gelinlik ve abiye tadilatında uzmanız. Gelinlik tadilatı ₺800\'den, abiye tadilatı ₺800\'den başlar.'],
+              ['Gelinlik ve abiye tadilatı yapıyor musunuz?', 'Evet, gelinlik ve abiye tadilatında uzmanız. Fiyat fotoğrafa veya işin detayına göre belirlenir.'],
             ].map(([q, a]) => (
               <div key={q} className="faq-item">
                 <div className="faq-q">{q}</div>

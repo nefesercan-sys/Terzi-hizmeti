@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Gelinlik & Abiye Tadilatı Antalya — Prova ile" },
   description:
-    'Antalya\'da gelinlik ve abiye tadilatı. Hassas daraltma, boy ayarı, detaylı onarım. ₺800\'den, randevulu ve özenli hizmet. Konyaaltı merkezli atölye.',
+    'Antalya\'da gelinlik ve abiye tadilatı. Hassas daraltma, boy ayarı, detaylı onarım. Fiyat fotoğrafa veya işin detayına göre; randevulu ve özenli hizmet. Konyaaltı merkezli atölye.',
   keywords: fitKeywords([
     'gelinlik tadilatı Antalya', 'abiye tadilatı Antalya', 'gelinlik daraltma Antalya',
     'gelinlik boy ayarı Konyaaltı', 'düğün kıyafeti tadilatı', 'nişanlık tadilatı Antalya',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Gelinlik Tadilatı Antalya — Hassas Daraltma ve Boy Ayarı',
-    description: 'Gelinlik ve abiye tadilatı. ₺800\'den başlayan fiyatlar. ☎ ' + PHONE,
+    description: 'Gelinlik ve abiye tadilatı. Fiyat fotoğrafa veya işin detayına göre. ☎ ' + PHONE,
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'tr_TR', type: 'website',
     images: [{ url: `${SITE}/terzi-can-hero.jpg`, width: 1024, height: 1024, alt: 'Gelinlik Tadilatı Antalya' }],
   },
@@ -65,18 +65,6 @@ const jsonLd = {
       serviceType: 'Gelinlik ve Abiye Tadilatı',
       provider: { '@id': `${SITE}#business` },
       areaServed: ['Konyaaltı', 'Muratpaşa', 'Kepez', 'Antalya', 'Lara', 'Belek'].map(n => ({ '@type': 'Place', name: n })),
-      offers: {
-        '@type': 'AggregateOffer',
-        priceCurrency: 'TRY',
-        lowPrice: '800',
-        offerCount: 4,
-        offers: [
-          { '@type': 'Offer', name: 'Gelinlik Bel Daraltma', price: '800', priceCurrency: 'TRY', priceValidUntil: '2027-12-31' },
-          { '@type': 'Offer', name: 'Gelinlik Boy Ayarı', price: '800', priceCurrency: 'TRY', priceValidUntil: '2027-12-31' },
-          { '@type': 'Offer', name: 'Abiye Tadilatı', price: '800', priceCurrency: 'TRY', priceValidUntil: '2027-12-31' },
-          { '@type': 'Offer', name: 'Korse / Kapama Onarımı', price: '800', priceCurrency: 'TRY', priceValidUntil: '2027-12-31' },
-        ],
-      },
     },
     {
       '@type': 'HowTo',
@@ -84,7 +72,6 @@ const jsonLd = {
       name: 'Antalya\'da Gelinlik Tadilatı Nasıl Yaptırılır?',
       description: 'Gelinlik veya abiye tadilatı için adım adım süreç.',
       totalTime: 'P2D',
-      estimatedCost: { '@type': 'MonetaryAmount', currency: 'TRY', value: '800' },
       step: [
         { '@type': 'HowToStep', name: 'Randevu Alın', text: 'WhatsApp\'tan gelinlik/abiye fotoğrafı ve düğün tarihini paylaşarak randevu oluşturun.' },
         { '@type': 'HowToStep', name: 'İlk Prova', text: 'Atölyede ilk provada daraltılacak/kısaltılacak bölgeler işaretlenir.' },
@@ -97,7 +84,7 @@ const jsonLd = {
       '@id': `${PAGE_URL}#faq`,
       mainEntity: [
         { '@type': 'Question', name: 'Gelinlik tadilatı ne kadar sürede tamamlanır?', acceptedAnswer: { '@type': 'Answer', text: 'Basit boy ayarı normal tadilat gibi aynı gün teslim edilir; kapsamlı bel daraltma ve korse onarımında süre işin kapsamına göre WhatsApp\'ta netleşir. Düğün tarihine göre öncelikli randevu ayarlanır.' } },
-        { '@type': 'Question', name: 'Gelinlik tadilatı fiyatı ne kadar?', acceptedAnswer: { '@type': 'Answer', text: 'Boy ayarı ₺800\'den, bel daraltma ₺800\'den, korse/kapama onarımı ₺800\'den başlar. Abiye tadilatı ₺800\'den başlar.' } },
+        { '@type': 'Question', name: 'Gelinlik tadilatı fiyatı ne kadar?', acceptedAnswer: { '@type': 'Answer', text: 'Gelinlik ve abiye tadilatında sabit fiyat yazmıyoruz: fiyat fotoğrafa veya işin detayına göre belirlenir. Fotoğrafı WhatsApp\'tan gönderin, net fiyatı hemen söyleyelim. Fiyatlara KDV dahil değildir.' } },
         { '@type': 'Question', name: 'Dantel ve tül kumaşlarla çalışıyor musunuz?', acceptedAnswer: { '@type': 'Answer', text: 'Evet, dantel, tül, saten, organze gibi hassas gelinlik kumaşlarında uzman işçiliğimiz var. Desen bütünlüğü bozulmadan tadilat yapılır.' } },
         { '@type': 'Question', name: 'Son dakika gelinlik tadilatı yapıyor musunuz?', acceptedAnswer: { '@type': 'Answer', text: 'Düğününüze az kaldıysa bize hemen ulaşın, ekspres randevu için elimizden geleni yaparız. Erken randevu her zaman önerilir.' } },
       ],
@@ -135,8 +122,8 @@ export default function GelinlikTadilatiPage() {
             </h1>
             <p className="hero-desc">
               Gelinlik ve abiye tadilatında bel daraltma, boy ayarı, korse onarımı.
-              Dantel, tül, saten gibi hassas kumaşlarda uzman işçilik. ₺800'den
-              başlayan fiyatlarla, randevulu çalışıyoruz.
+              Dantel, tül, saten gibi hassas kumaşlarda uzman işçilik. Fiyat fotoğrafa veya işin detayına göre
+              belirlenir; randevulu çalışıyoruz.
             </p>
             <div className="hero-btns">
               <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-primary">💬 Randevu Alın →</a>
@@ -161,9 +148,9 @@ export default function GelinlikTadilatiPage() {
                 </div>
                 <p className="price-desc">Bel daraltma, boy ayarı, korse onarımı.</p>
                 <table className="price-table"><tbody>
-                  <tr><td>Boy Ayarı</td><td>₺800+</td></tr>
-                  <tr><td>Bel Daraltma</td><td>₺800+</td></tr>
-                  <tr><td>Korse / Kapama Onarımı</td><td>₺800+</td></tr>
+                  <tr><td>Boy Ayarı</td><td>Fotoğrafa göre</td></tr>
+                  <tr><td>Bel Daraltma</td><td>Fotoğrafa göre</td></tr>
+                  <tr><td>Korse / Kapama Onarımı</td><td>Fotoğrafa göre</td></tr>
                 </tbody></table>
               </div>
               <div className="price-card">
@@ -173,7 +160,7 @@ export default function GelinlikTadilatiPage() {
                 </div>
                 <p className="price-desc">Özel gün kıyafetlerinde detaylı tadilat.</p>
                 <table className="price-table"><tbody>
-                  <tr><td>Abiye Tadilatı</td><td>₺800+</td></tr>
+                  <tr><td>Abiye Tadilatı</td><td>Fotoğrafa göre</td></tr>
                   <tr><td>Nişanlık Daraltma</td><td>Fotoğrafa göre</td></tr>
                   <tr><td>Askı / Omuz Ayarı</td><td>Fotoğrafa göre</td></tr>
                 </tbody></table>
@@ -186,7 +173,7 @@ export default function GelinlikTadilatiPage() {
                 <p className="price-desc">Dantel, tül, saten kumaşlarda özel dikiş.</p>
                 <table className="price-table"><tbody>
                   <tr><td>Dantel Deseni Bütünlüğü Koruma</td><td>₺300+</td></tr>
-                  <tr><td>Kuyruk Kısaltma</td><td>₺800+</td></tr>
+                  <tr><td>Kuyruk Kısaltma</td><td>Fotoğrafa göre</td></tr>
                 </tbody></table>
               </div>
             </div>
@@ -235,7 +222,7 @@ export default function GelinlikTadilatiPage() {
             </div>
             {[
               ['Gelinlik tadilatı ne kadar sürede tamamlanır?', 'Basit boy ayarı normal tadilat gibi aynı gün teslim edilir; kapsamlı bel daraltma ve korse onarımında süre işin kapsamına göre WhatsApp\'ta netleşir. Düğün tarihine göre öncelikli randevu ayarlanır.'],
-              ['Gelinlik tadilatı fiyatı ne kadar?', 'Boy ayarı ₺800\'den, bel daraltma ₺800\'den, korse/kapama onarımı ₺800\'den başlar. Abiye tadilatı ₺800\'den başlar.'],
+              ['Gelinlik tadilatı fiyatı ne kadar?', 'Gelinlik ve abiye tadilatında sabit fiyat yazmıyoruz: fiyat fotoğrafa veya işin detayına göre belirlenir. Fotoğrafı WhatsApp\'tan gönderin, net fiyatı hemen söyleyelim. Fiyatlara KDV dahil değildir.'],
               ['Dantel ve tül kumaşlarla çalışıyor musunuz?', 'Evet, dantel, tül, saten, organze gibi hassas gelinlik kumaşlarında uzman işçiliğimiz var. Desen bütünlüğü bozulmadan tadilat yapılır.'],
               ['Son dakika gelinlik tadilatı yapıyor musunuz?', 'Düğününüze az kaldıysa bize hemen ulaşın, ekspres randevu için elimizden geleni yaparız. Erken randevu her zaman önerilir.'],
             ].map(([q, a]) => (

@@ -3,7 +3,7 @@
 // Bölge × hizmet arama sorguları için TEK veri kaynağı (TR/EN/RU/DE).
 // Kurallar:
 //  - Sadece doğrulanmış bilgi: tek atölye (Hurma, Konyaaltı), 2006'dan beri, her gün 08:00–23:00,
-//    eve ve otele her bölgede ücretsiz servis, teslim süreleri lib/delivery.ts'ten (acil 1–2 saat / normal aynı gün / özel dikim modele ve adede göre), gelinlik ve abiye TADİLATI ₺800+; dikimde sabit fiyat yok.
+//    eve ve otele her bölgede ücretsiz servis, teslim süreleri lib/delivery.ts'ten (acil 1–2 saat / normal aynı gün / özel dikim modele ve adede göre), gelinlik ve abiye TADİLATI sabit fiyatsız (fotoğrafa veya işin detayına göre); dikimde sabit fiyat yok.
 //  - Mesafe/dakika, puan, müşteri sayısı, sahte vaat YOK.
 //  - Yeni bölge/hizmet eklemek için sadece bu dosyaya satır ekle; sayfalar, sitemap ve iç linkler otomatik oluşur.
 // ============================================================
@@ -291,7 +291,7 @@ export const SERVICES: Service[] = [
     name: { tr: 'Abiye ve Gelinlik Tadilatı', en: 'Evening & Wedding Dress Alteration', ru: 'Подгонка вечерних и свадебных платьев', de: 'Abendkleid und Brautkleid ändern' },
     q: { tr: 'abiye ve gelinlik tadilatı', en: 'evening dress alteration', ru: 'подгонка вечернего платья', de: 'Abendkleid ändern' },
     priceText: {
-      tr: 'Abiye tadilatı ₺800\'den, gelinlik tadilatı ₺800\'den başlar.',
+      tr: 'Abiye ve gelinlik tadilatı fotoğrafa veya işin detayına göre fiyatlanır.',
       en: 'Evening dress and wedding dress alterations; the price is confirmed on WhatsApp from a photo.',
       ru: 'Подгонка вечерних и свадебных платьев; цена уточняется в WhatsApp по фото.',
       de: 'Abendkleid- und Brautkleid-Änderung; der Preis wird per WhatsApp anhand eines Fotos bestätigt.',
@@ -318,7 +318,7 @@ export const SERVICES: Service[] = [
   },
   {
     id: 'abiye', icon: '👗', time: 'next', priceFrom: 800, priceText: {
-      tr: 'Abiye tadilatı ₺800\'den başlar.', en: 'Evening dress alterations; the price is confirmed on WhatsApp from a photo.',
+      tr: 'Abiye tadilatı fotoğrafa veya işin detayına göre fiyatlanır.', en: 'Evening dress alterations; the price is confirmed on WhatsApp from a photo.',
       ru: 'Подгонка вечерних платьев; цена уточняется в WhatsApp по фото.', de: 'Abendkleid-Änderung; der Preis wird per WhatsApp anhand eines Fotos bestätigt.',
     },
     slug: { tr: 'abiye-tadilati-gece-kiyafetleri', en: 'evening-dress-alteration-formal-wear', ru: 'podgonka-vechernih-platev-narjadov', de: 'abendkleid-festmode-aendern' },

@@ -4,6 +4,7 @@ import { PHONE, PHONE_TEL, MAPS, SITE } from '@/lib/seo-data';
 import { businessNode, OG_DEFAULT, waLink, TURIST_UPDATE } from '@/lib/turist-keten';
 import { INTL, iUrl, type ILang } from '@/lib/intl';
 import { FIYAT, FIYAT_KEYS, FIYAT_SPLIT, fiyatDeger, fiyatUrl } from '@/lib/intl-fiyat';
+import { PAYMENT_NOTE } from '@/lib/facts';
 import { svcUrl } from '@/lib/intl-services';
 
 const C = { green: '#2C4A3E', gold: '#D4B07A', cream: '#FAF7F2', sand: '#F2EDE4', ink: '#1C1814', muted: '#6B5F53', line: 'rgba(44,74,62,.15)' };
@@ -58,7 +59,7 @@ export default function FiyatLanding({ lang }: { lang: ILang }) {
       <article style={{ maxWidth: 820, margin: '0 auto', padding: '2rem 1.25rem' }}>
         <Table title={c.t1} from={0} to={FIYAT_SPLIT} />
         <Table title={c.t2} from={FIYAT_SPLIT} to={FIYAT_KEYS.length} />
-        <p style={{ margin: '0 0 1.8rem', color: C.muted, fontSize: '.95rem' }}>{c.note}</p>
+        <p style={{ margin: '0 0 1.8rem', color: C.muted, fontSize: '.95rem' }}>{c.note} {PAYMENT_NOTE[lang]}</p>
 
         <section style={{ marginBottom: '1.8rem' }}>
           <H2>{c.faqT}</H2>

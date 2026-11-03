@@ -264,20 +264,28 @@ function serviceFaq(lang: Lang, s: Service): [string, string][] {
       [`Antalya'da ${s.vars.tr[0]} için nereye gidebilirim?`, `Konyaaltı Hurma'daki Terzi Can atölyesine. ${s.intro.tr} Eve ve otele alım-teslim tüm bölgelerde ücretsizdir; atölye her gün 08:00–23:00 açık.`],
       [`${nm} kaç gün sürer, fiyatı nedir?`, `${time}.${price ? ' ' + price + '; net fiyat kumaşa ve işin kapsamına bağlı.' : " Fiyat için kıyafetin fotoğrafını WhatsApp'tan iletin."}`],
       [`${nm} için otele ya da eve geliyor musunuz?`, 'Evet. Konyaaltı, Muratpaşa, Lara, Güzeloba, Kundu, Belek, Side ve Kemer dahil tüm bölgelerde eve ve otele alım-teslim ücretsizdir.'],
+      [`${nm} kaç TL, ücreti nedir?`, price ? `${price}. Net fiyat kumaşa ve işin kapsamına göre, fotoğrafla WhatsApp'tan söylenir.` : "Fiyat işe göre değişir; kıyafetin fotoğrafını WhatsApp'tan gönderin, net fiyatı söyleyelim."],
+      [`${nm} ne zaman teslim edilir?`, `${time}.`],
     ],
     en: [
       [`Where in Antalya can I get ${s.vars.en[0]} done?`, `At the Terzi Can workshop in Hurma, Konyaaltı. ${s.intro.en} Pick-up and delivery to homes and hotels is free everywhere we serve, and the workshop is open daily 08:00–23:00.`],
       [`How many days does ${nm.toLowerCase()} take, and what is the price?`, `${time}.${price ? ' ' + price + '; the final price depends on the fabric and the scope of work.' : ' Send a photo of the garment on WhatsApp to get a price.'}`],
+      [`How much does ${nm.toLowerCase()} cost?`, price ? `${price}. The final price depends on the fabric and the scope of work; we confirm it from a photo on WhatsApp.` : 'The price depends on the work; send a photo on WhatsApp and we will confirm it.'],
+      [`When will my ${nm.toLowerCase()} be ready?`, `${time}.`],
       [`Do you come to my hotel or home for ${nm.toLowerCase()}?`, 'Yes. Pick-up and delivery to homes and hotels is free in every area we serve, including Konyaaltı, Muratpaşa, Lara, Güzeloba, Kundu, Belek and Side.'],
     ],
     ru: [
       [`Куда в Анталье обратиться: ${s.vars.ru[0]}?`, `В мастерскую Terzi Can в Хурме (Коньяалты). ${s.intro.ru} Забор и доставка на дом и в отели бесплатны везде, где мы работаем; мастерская открыта ежедневно с 08:00 до 23:00.`],
       [`Сколько дней занимает «${nm}» и какая цена?`, `${time}.${price ? ' ' + price + '; окончательная цена зависит от ткани и объёма работ.' : ' Пришлите фото вещи в WhatsApp, и мы назовём цену.'}`],
+      [`Сколько стоит «${nm}»?`, price ? `${price}. Окончательная цена зависит от ткани и объёма работы; подтверждаем по фото в WhatsApp.` : 'Цена зависит от работы; отправьте фото в WhatsApp, и мы подтвердим цену.'],
+      [`Когда будет готова услуга «${nm}»?`, `${time}.`],
       [`Забираете ли вы вещь из отеля или с дома для услуги «${nm}»?`, 'Да. Забор и доставка на дом и в отели бесплатны во всех районах: Коньяалты, Муратпаша, Лара, Гюзельоба, Кунду, Белек и Сиде.'],
     ],
     de: [
       [`Wo in Antalya bekomme ich „${s.vars.de[0]}“?`, `In der Werkstatt von Terzi Can in Hurma, Konyaaltı. ${s.intro.de} Abholung und Lieferung zu Hotel und nach Hause sind überall kostenlos, die Werkstatt ist täglich von 08:00 bis 23:00 geöffnet.`],
       [`Wie viele Tage braucht „${nm}“ und was kostet es?`, `${time}.${price ? ' ' + price + '; der endgültige Preis hängt von Stoff und Aufwand ab.' : ' Schicken Sie ein Foto des Kleidungsstücks per WhatsApp, dann nennen wir den Preis.'}`],
+      [`Was kostet „${nm}“?`, price ? `${price}. Der endgültige Preis hängt von Stoff und Aufwand ab; wir bestätigen ihn per Foto auf WhatsApp.` : 'Der Preis hängt von der Arbeit ab; senden Sie ein Foto per WhatsApp, wir bestätigen ihn.'],
+      [`Wann ist „${nm}“ fertig?`, `${time}.`],
       [`Holen Sie die Kleidung für „${nm}“ im Hotel oder zu Hause ab?`, 'Ja. Abholung und Lieferung zu Hotel und nach Hause sind in allen Gebieten kostenlos: Konyaaltı, Muratpaşa, Lara, Güzeloba, Kundu, Belek und Side.'],
     ],
   }[lang] as [string, string][];

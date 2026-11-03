@@ -39,7 +39,7 @@ const jsonLd = {
       '@id': `${PAGE_URL}#webpage`,
       url: PAGE_URL,
       name: 'Paça Kısaltma Konyaaltı — Acil Pantolon Kısaltma',
-      description: 'Konyaaltı\'da paça kısaltma hizmeti. Pantolon, kot, etek kısaltma.',
+      description: 'Konyaaltı\'nda paça kısaltma hizmeti. Pantolon, kot, etek kısaltma.',
       inLanguage: 'tr',
       isPartOf: { '@id': `${SITE}#website` },
       about: { '@id': `${SITE}#business` },
@@ -76,7 +76,7 @@ const jsonLd = {
     {
       '@type': 'HowTo',
       '@id': `${PAGE_URL}#howto`,
-      name: 'Konyaaltı\'da Paça Kısaltma Nasıl Yaptırılır?',
+      name: 'Konyaaltı\'nda Paça Kısaltma Nasıl Yaptırılır?',
       description: 'Pantolon veya etek paça kısaltma için adım adım süreç.',
       totalTime: 'PT1H',
       estimatedCost: { '@type': 'MonetaryAmount', currency: 'TRY', value: '200' },

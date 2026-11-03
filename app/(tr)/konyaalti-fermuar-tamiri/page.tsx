@@ -51,7 +51,7 @@ const jsonLd = {
       '@id': `${PAGE_URL}#webpage`,
       url: PAGE_URL,
       name: 'Fermuar Tamiri Konyaaltı — Aynı Gün Fermuar Değişimi',
-      description: 'Konyaaltı\'da fermuar tamiri ve değişimi hizmeti. Pantolon, mont, ceket, çanta fermuarı.',
+      description: 'Konyaaltı\'nda fermuar tamiri ve değişimi hizmeti. Pantolon, mont, ceket, çanta fermuarı.',
       inLanguage: 'tr',
       isPartOf: { '@id': `${SITE}#website` },
       about: { '@id': `${SITE}#business` },
@@ -90,7 +90,7 @@ const jsonLd = {
     {
       '@type': 'HowTo',
       '@id': `${PAGE_URL}#howto`,
-      name: 'Konyaaltı\'da Fermuar Tamiri Nasıl Yaptırılır?',
+      name: 'Konyaaltı\'nda Fermuar Tamiri Nasıl Yaptırılır?',
       description: 'Fermuar tamiri veya değişimi için adım adım süreç.',
       totalTime: 'PT2H',
       estimatedCost: { '@type': 'MonetaryAmount', currency: 'TRY', value: '300' },
@@ -105,7 +105,7 @@ const jsonLd = {
       '@type': 'FAQPage',
       '@id': `${PAGE_URL}#faq`,
       mainEntity: [
-        { '@type': 'Question', name: 'Konyaaltı\'da fermuar tamiri ne kadar sürer?', acceptedAnswer: { '@type': 'Answer', text: 'Normal fermuar tamiri ve değişimi aynı gün teslim edilir; acil işler 1–2 saatte tamamlanır.' } },
+        { '@type': 'Question', name: 'Konyaaltı\'nda fermuar tamiri ne kadar sürer?', acceptedAnswer: { '@type': 'Answer', text: 'Normal fermuar tamiri ve değişimi aynı gün teslim edilir; acil işler 1–2 saatte tamamlanır.' } },
         { '@type': 'Question', name: 'Fermuar değişimi fiyatı ne kadar?', acceptedAnswer: { '@type': 'Answer', text: 'Pantolon/kot fermuarı ₺300\'den, mont/ceket fermuarı ₺300\'den, çanta fermuarı ₺300\'den başlar.' } },
         { '@type': 'Question', name: 'Çanta fermuarı tamiri yapıyor musunuz, fiyatı ne kadar?', acceptedAnswer: { '@type': 'Answer', text: 'Evet. Çanta fermuarı değişimi ₺300\'den başlar; sıkışan fermuarın onarımı fotoğrafa göre netleşir. Çantanın fotoğrafını WhatsApp\'tan gönderin, net fiyat ve süreyi söyleyelim. Normal iş aynı gün, acil iş 1–2 saatte teslim edilir.' } },
         { '@type': 'Question', name: 'Her tür fermuarı değiştiriyor musunuz?', acceptedAnswer: { '@type': 'Answer', text: 'Evet — metal, plastik, sarmal (YKK dahil) her tip fermuarı değiştiriyoruz. Su geçirmez montlar için özel fermuar da temin ediyoruz.' } },
@@ -248,7 +248,7 @@ export default function FermuarTamiriPage() {
               <h2 className="sec-h ff" id="faq-h">Fermuar Tamiri Hakkında Sık Sorulan Sorular</h2>
             </div>
             {[
-              ['Konyaaltı\'da fermuar tamiri ne kadar sürer?', 'Normal fermuar tamiri ve değişimi aynı gün teslim edilir; acil işler 1–2 saatte tamamlanır.'],
+              ['Konyaaltı\'nda fermuar tamiri ne kadar sürer?', 'Normal fermuar tamiri ve değişimi aynı gün teslim edilir; acil işler 1–2 saatte tamamlanır.'],
               ['Fermuar değişimi fiyatı ne kadar?', 'Pantolon/kot fermuarı ₺300\'den, mont/ceket fermuarı ₺300\'den, çanta fermuarı ₺300\'den başlar.'],
               ['Çanta fermuarı tamiri yapıyor musunuz, fiyatı ne kadar?', 'Evet. Çanta fermuarı değişimi ₺300\'den başlar; sıkışan fermuarın onarımı fotoğrafa göre netleşir. Çantanın fotoğrafını WhatsApp\'tan gönderin, net fiyat ve süreyi söyleyelim. Normal iş aynı gün, acil iş 1–2 saatte teslim edilir.'],
               ['Her tür fermuarı değiştiriyor musunuz?', 'Evet — metal, plastik, sarmal (YKK dahil) her tip fermuarı değiştiriyoruz. Su geçirmez montlar için özel fermuar da temin ediyoruz.'],

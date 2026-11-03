@@ -77,8 +77,8 @@ export const OTEL_BOLGELERI: OtelBolgesi[] = [
     blurb: {
       tr: 'Konyaaltı, atölyemizin de bulunduğu bölge — sahil şeridi boyunca sıralanan otel ve apart-otellere ev sahipliği yapıyor.',
       en: 'Konyaaltı, where our own workshop is based, is home to hotels and aparthotels lined along the coastline.',
-      ru: 'Коньяалты, где расположена наша мастерская, — район с отелями и апарт-отелями вдоль 7-километровой береговой линии.',
-      de: 'Konyaaltı, wo sich unsere eigene Werkstatt befindet, beherbergt Hotels und Aparthotels entlang eines 7 km langen Küstenabschnitts.',
+      ru: 'Коньяалты, где расположена наша мастерская, — район с отелями и апарт-отелями вдоль береговой линии.',
+      de: 'Konyaaltı, wo sich unsere eigene Werkstatt befindet, beherbergt Hotels und Aparthotels entlang der Küste.',
     },
   },
   {

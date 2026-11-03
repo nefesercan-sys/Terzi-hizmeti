@@ -36,9 +36,9 @@ export default function FiyatLanding({ lang }: { lang: ILang }) {
       <table style={{ width: '100%', borderCollapse: 'collapse', background: '#fff', border: `1px solid ${C.line}` }}>
         <tbody>
           {FIYAT_KEYS.slice(from, to).map((k, j) => (
-            <tr key={k} style={{ borderTop: j ? `1px solid ${C.line}` : undefined }}>
+            <tr key={j} style={{ borderTop: j ? `1px solid ${C.line}` : undefined }}>
               <td style={{ padding: '.6rem .9rem' }}>{c.rows[from + j]}</td>
-              <td style={{ padding: '.6rem .9rem', fontWeight: 700, whiteSpace: 'nowrap', textAlign: 'end' }} dir="ltr">{fiyatDeger(from + j)}</td>
+              <td style={{ padding: '.6rem .9rem', fontWeight: 700, whiteSpace: k ? 'nowrap' : 'normal', textAlign: 'end' }} dir={k ? 'ltr' : undefined}>{fiyatDeger(from + j, lang)}</td>
             </tr>
           ))}
         </tbody>

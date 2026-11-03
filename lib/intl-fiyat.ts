@@ -4,16 +4,17 @@
 // Kurallar: € fiyatlar "başlangıç" fiyatıdır (sahip kararı); gelinlik DİKİMİ yok; deri/kot yalnız tamir; eve ve otele alım-teslim ücretsiz.
 // ============================================================
 import type { ILang } from '@/lib/intl';
-import { eurText } from '@/lib/facts';
+import { eurText, BY_PHOTO_MODEL } from '@/lib/facts';
 
 export type FiyatCopy = {
   slug: string; title: string; desc: string; h1: string; lead: string; back: string; t1: string; t2: string;
   rows: string[]; note: string; faqT: string; faq: [string, string][]; cta: string; wa: string; info: string; all: string;
 };
 /** rows sırası ile birebir: hangi fiyat anahtarı hangi satıra denk gelir. */
-export const FIYAT_KEYS = ['hem', 'waist', 'sleeve', 'zipperPants', 'zipperCoat', 'eveningWeddingAlter', 'dressSew', 'skirtPantsSew', 'kidsSew', 'groomSuit'] as const;
-export const FIYAT_SPLIT = 6; // ilk 6 satır tadilat, kalanı dikim
-export const fiyatDeger = (i: number): string => eurText(FIYAT_KEYS[i]);
+/** İlk 6 satır tadilat (sabit başlangıç fiyatı), kalan 4 satır dikim: fiyat YAZILMAZ (null). */
+export const FIYAT_KEYS = ['hem', 'waist', 'sleeve', 'zipperPants', 'zipperCoat', 'eveningWeddingAlter', null, null, null, null] as const;
+export const FIYAT_SPLIT = 6;
+export const fiyatDeger = (i: number, lang: ILang): string => { const k = FIYAT_KEYS[i]; return k ? eurText(k) : BY_PHOTO_MODEL[lang]; };
 
 export const FIYAT: Record<ILang, FiyatCopy> = {
   es: {
@@ -26,7 +27,7 @@ export const FIYAT: Record<ILang, FiyatCopy> = {
     t1: 'Arreglos y reparaciones',
     t2: 'Confección a medida',
     rows: ['Acortar dobladillo (pantalón, vaquero)', 'Estrechar cintura', 'Acortar mangas', 'Cambiar cremallera de pantalón', 'Cambiar cremallera de abrigo', 'Arreglo de vestido de noche o de novia', 'Vestido a medida', 'Falda o pantalón a medida', 'Ropa infantil a medida', 'Traje de novio a medida'],
-    note: 'Desde: el precio final depende de la tela y del trabajo. Arreglos en cuero desde €30. No confeccionamos vestidos de novia (solo arreglos); cuero y vaqueros: solo reparación y ajuste.',
+    note: 'Desde: el precio final depende de la tela y del trabajo. Arreglos en cuero desde €20. No confeccionamos vestidos de novia (solo arreglos); cuero y vaqueros: solo reparación y ajuste.',
     faqT: 'Preguntas frecuentes',
     faq: [['¿Los precios son fijos?', 'Son precios «desde». Envíe una foto por WhatsApp y le confirmamos el precio exacto antes de empezar.'], ['¿Recogen y entregan en el hotel?', 'Sí. La recogida y la entrega en hoteles y domicilios son gratuitas en todas las zonas que atendemos.'], ['¿En cuánto tiempo está listo?', 'Los trabajos urgentes en 1–2 horas y los normales el mismo día; la ropa a medida depende del modelo y la cantidad.']],
     cta: 'Enviar foto por WhatsApp',
@@ -44,7 +45,7 @@ export const FIYAT: Record<ILang, FiyatCopy> = {
     t1: 'Retouches et réparations',
     t2: 'Couture sur mesure',
     rows: ['Raccourcir l’ourlet (pantalon, jean)', 'Reprendre la taille', 'Raccourcir les manches', 'Changer la fermeture d’un pantalon', 'Changer la fermeture d’un manteau', 'Retouche de robe de soirée ou de mariée', 'Robe sur mesure', 'Jupe ou pantalon sur mesure', 'Vêtement d’enfant sur mesure', 'Costume de marié sur mesure'],
-    note: 'À partir de : le prix final dépend du tissu et du travail. Retouches en cuir dès €30. Nous ne confectionnons pas de robes de mariée (retouches uniquement) ; cuir et jean : réparation et ajustement seulement.',
+    note: 'À partir de : le prix final dépend du tissu et du travail. Retouches en cuir dès €20. Nous ne confectionnons pas de robes de mariée (retouches uniquement) ; cuir et jean : réparation et ajustement seulement.',
     faqT: 'Questions fréquentes',
     faq: [['Les prix sont-ils fixes ?', 'Ce sont des prix « à partir de ». Envoyez une photo sur WhatsApp et nous confirmons le prix exact avant de commencer.'], ['Récupérez-vous les vêtements à l’hôtel ?', 'Oui. La prise en charge et la livraison à l’hôtel ou à domicile sont gratuites dans toutes les zones que nous desservons.'], ['Quel est le délai ?', 'Les travaux urgents en 1 à 2 heures, les autres le jour même ; le sur-mesure dépend du modèle et de la quantité.']],
     cta: 'Envoyer une photo sur WhatsApp',
@@ -62,7 +63,7 @@ export const FIYAT: Record<ILang, FiyatCopy> = {
     t1: 'Poprawki i naprawy',
     t2: 'Szycie na miarę',
     rows: ['Skrócenie nogawek (spodnie, jeansy)', 'Zwężenie talii', 'Skrócenie rękawów', 'Wymiana zamka w spodniach', 'Wymiana zamka w płaszczu', 'Przeróbka sukni wieczorowej lub ślubnej', 'Sukienka na miarę', 'Spódnica lub spodnie na miarę', 'Ubranie dziecięce na miarę', 'Garnitur pana młodego na miarę'],
-    note: 'Od: cena końcowa zależy od materiału i pracy. Poprawki skórzane od €30. Nie szyjemy sukien ślubnych (tylko przeróbki); skóra i jeans: wyłącznie naprawy i poprawki.',
+    note: 'Od: cena końcowa zależy od materiału i pracy. Poprawki skórzane od €20. Nie szyjemy sukien ślubnych (tylko przeróbki); skóra i jeans: wyłącznie naprawy i poprawki.',
     faqT: 'Najczęstsze pytania',
     faq: [['Czy ceny są stałe?', 'To ceny „od”. Wyślij zdjęcie na WhatsApp, a potwierdzimy dokładną cenę przed rozpoczęciem pracy.'], ['Czy odbieracie ubrania z hotelu?', 'Tak. Odbiór i dostawa do hotelu lub domu są bezpłatne we wszystkich obsługiwanych rejonach.'], ['Jak szybko będzie gotowe?', 'Pilne prace w 1–2 godziny, zwykłe tego samego dnia; szycie na miarę zależy od modelu i ilości.']],
     cta: 'Wyślij zdjęcie na WhatsApp',
@@ -80,7 +81,7 @@ export const FIYAT: Record<ILang, FiyatCopy> = {
     t1: 'Підгонка та ремонт',
     t2: 'Пошив на замовлення',
     rows: ['Підшити низ (штани, джинси)', 'Зменшити талію', 'Вкоротити рукави', 'Замінити блискавку на штанах', 'Замінити блискавку на пальті чи куртці', 'Підгонка вечірньої чи весільної сукні', 'Сукня на замовлення', 'Спідниця або штани на замовлення', 'Дитячий одяг на замовлення', 'Костюм нареченого на замовлення'],
-    note: '«Від»: остаточна ціна залежить від тканини та роботи. Підгонка шкіряних виробів від €30. Весільні сукні не шиємо (лише підгонка); шкіра та джинси — тільки ремонт і підгонка.',
+    note: '«Від»: остаточна ціна залежить від тканини та роботи. Підгонка шкіряних виробів від €20. Весільні сукні не шиємо (лише підгонка); шкіра та джинси — тільки ремонт і підгонка.',
     faqT: 'Часті запитання',
     faq: [['Чи є ціни фіксованими?', 'Це ціни «від». Надішліть фото у WhatsApp — ми підтвердимо точну ціну до початку роботи.'], ['Чи забираєте речі з готелю?', 'Так. Забір і доставка до готелю чи додому безкоштовні в усіх районах, які ми обслуговуємо.'], ['Як швидко буде готово?', 'Термінові роботи — за 1–2 години, звичайні — того ж дня; пошив на замовлення залежить від моделі та кількості.']],
     cta: 'Надіслати фото у WhatsApp',
@@ -98,7 +99,7 @@ export const FIYAT: Record<ILang, FiyatCopy> = {
     t1: 'Aanpassingen en reparaties',
     t2: 'Maatwerk',
     rows: ['Zoom inkorten (broek, jeans)', 'Taille innemen', 'Mouwen inkorten', 'Rits van een broek vervangen', 'Rits van een jas vervangen', 'Aanpassing avond- of trouwjurk', 'Jurk op maat', 'Rok of broek op maat', 'Kinderkleding op maat', 'Bruidegomspak op maat'],
-    note: 'Vanaf: de eindprijs hangt af van stof en werk. Leeraanpassingen vanaf €30. Trouwjurken maken we niet (alleen aanpassingen); leer en jeans: alleen reparatie en aanpassing.',
+    note: 'Vanaf: de eindprijs hangt af van stof en werk. Leeraanpassingen vanaf €20. Trouwjurken maken we niet (alleen aanpassingen); leer en jeans: alleen reparatie en aanpassing.',
     faqT: 'Veelgestelde vragen',
     faq: [['Zijn de prijzen vast?', 'Het zijn vanafprijzen. Stuur een foto via WhatsApp en we bevestigen de exacte prijs voordat we beginnen.'], ['Halen jullie kleding op bij het hotel?', 'Ja. Ophalen en bezorgen bij hotels en woonadressen is gratis in alle gebieden waar we werken.'], ['Hoe snel is het klaar?', 'Spoedwerk in 1–2 uur, gewoon werk dezelfde dag; maatwerk hangt af van model en aantal.']],
     cta: 'Foto sturen via WhatsApp',
@@ -116,7 +117,7 @@ export const FIYAT: Record<ILang, FiyatCopy> = {
     t1: 'التعديل والإصلاح',
     t2: 'التفصيل حسب المقاس',
     rows: ['تقصير الحاشية (بنطلون، جينز)', 'تضييق الخصر', 'تقصير الأكمام', 'استبدال سحّاب البنطلون', 'استبدال سحّاب المعطف', 'تعديل فستان سهرة أو زفاف', 'فستان حسب المقاس', 'تنورة أو بنطلون حسب المقاس', 'ملابس أطفال حسب المقاس', 'بدلة عريس حسب المقاس'],
-    note: 'ابتداءً من: السعر النهائي يعتمد على القماش والعمل. تعديلات الجلد ابتداءً من €30. لا نفصّل فساتين الزفاف (تعديل فقط)؛ الجلد والجينز: إصلاح وتعديل فقط.',
+    note: 'ابتداءً من: السعر النهائي يعتمد على القماش والعمل. تعديلات الجلد ابتداءً من €20. لا نفصّل فساتين الزفاف (تعديل فقط)؛ الجلد والجينز: إصلاح وتعديل فقط.',
     faqT: 'أسئلة شائعة',
     faq: [['هل الأسعار ثابتة؟', 'هذه أسعار «ابتداءً من». أرسل صورة عبر واتساب ونؤكد لك السعر الدقيق قبل البدء.'], ['هل تستلمون الملابس من الفندق؟', 'نعم. الاستلام والتسليم إلى الفنادق والمنازل مجاني في جميع المناطق التي نخدمها.'], ['كم تستغرق المدة؟', 'الأعمال العاجلة خلال ساعة إلى ساعتين والعادية في اليوم نفسه؛ والتفصيل يعتمد على الموديل والكمية.']],
     cta: 'أرسل صورة عبر واتساب',

@@ -225,7 +225,7 @@ const REPAIR_CATEGORIES: Record<Lang, RepairCategory[]> = {
 const PROCESS_STEPS: [string, string, string][] = [
   ['01', 'Mahallenizi Belirtin', "WhatsApp\'tan bulunduğunuz mahalleyi ve ihtiyacınızı yazın."],
   ['02', 'Ölçü & Tasarım', 'Adresinizde ölçü alınır veya atölyede tasarım detayları belirlenir.'],
-  ['03', 'Dikim / Üretim', 'Tekli dikim ya da toplu üniforma/fason üretimi atölyede tamamlanır.'],
+  ['03', 'Dikim / Üretim', 'Tekli dikim atölyede tamamlanır; toplu üniforma ve fason üretim ayrı sayfamızda.'],
   ['04', 'Teslimat', 'Eve ve otele her bölgede ücretsiz.'],
 ];
 
@@ -263,8 +263,8 @@ export default function KonyaaltiTailorServicePage() {
             <span className="hero-tag">📍 Hurma · Liman · Sarısu · Uncalı · Gürsu Öncelikli</span>
             <span className="hero-eng">Konyaaltı Tailor Service</span>
             <h1 id="hero-h">
-              Konyaaltı&apos;da Terzi, <span className="accent">Dikim Atölyesi</span><br />
-              ve Fason İmalat Merkezi
+              Konyaaltı&apos;nda Terzi: <span className="accent">Kısaltma, Daraltma,</span><br />
+              Tamir, Tadilat
             </h1>
             <p className="hero-desc" id="hero-desc">
               Antalya'da terzi arıyorsanız Terzi Can, Konyaaltı Hurma'daki atölyesinden bay, bayan ve çocuk kıyafetlerinde tamir, tadilat ve özel dikim yapar; Hurma, Liman, Sarısu, Uncalı, Gürsu ve çevresine, ayrıca Lara, Belek, Side ve Kemer otellerine hizmet verir. {DELIVERY.tr.urgent} {DELIVERY.tr.normal} Otellere alım-teslim ücretsizdir.
@@ -285,8 +285,7 @@ export default function KonyaaltiTailorServicePage() {
             <p className="seo-intro" id="seo-intro">
               <strong style={{ color: '#C9A96E' }}>Konyaaltı Tailor Service</strong> — Hurma, Liman, Sarısu,
               Uncalı, Gürsu, Öğretmenevleri, Ahatlı ve Toros mahallelerine hizmet veren terzi ve
-              dikiş atölyesi. Bay kıyafet dikimi, bayan kıyafet dikimi, çocuk kıyafeti, üniforma
-              üretimi, fason imalat ve kişiye özel tasarım. Antalya&apos;nın Muratpaşa, Kepez, Lara dahil yakın ilçelerine terzi hizmeti sağlıyoruz.
+              dikiş atölyesi. Bay kıyafet dikimi, bayan kıyafet dikimi, çocuk kıyafeti ve kişiye özel dikim (fotoğrafa ve istediğiniz modele göre). Üniforma ve fason imalat için ayrı sayfamıza bakın: <a href="/antalya-uniforma-imalati">Antalya üniforma ve fason imalat</a>. Antalya&apos;nın Muratpaşa, Kepez, Lara dahil yakın ilçelerine terzi hizmeti sağlıyoruz.
             </p>
           </div>
 
@@ -475,7 +474,7 @@ export default function KonyaaltiTailorServicePage() {
 
         <section className="cta-final" aria-label="İletişime geç">
           <h2 className="cta-h">Konyaaltı&apos;nın Her Mahallesinden<br />Terzi Can&apos;a Ulaşın</h2>
-          <p className="cta-sub">Bay, bayan, çocuk kıyafeti, üniforma veya fason imalat — mahallenizi söyleyin.</p>
+          <p className="cta-sub">Bay, bayan ve çocuk kıyafeti tamir, tadilat, dikim — mahallenizi söyleyin.</p>
           <div className="cta-btns">
             <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-white">
               <span aria-hidden="true">💬</span> WhatsApp&apos;tan Yazın
@@ -501,7 +500,7 @@ export default function KonyaaltiTailorServicePage() {
           </nav>
           <p style={{ marginTop: '1rem', fontSize: '.68rem', color: 'rgba(255,255,255,.45)', lineHeight: 1.8 }}>
             Konyaaltı Tailor Service — Hurma, Liman, Sarısu, Uncalı, Gürsu, Öğretmenevleri, Ahatlı,
-            Toros terzi ve dikiş atölyesi. Bay, bayan, çocuk kıyafeti, üniforma üretimi, fason imalat.
+            Toros terzi ve dikiş atölyesi. Bay, bayan, çocuk kıyafeti.
             Belek, Lara, Güzeloba, Kemer, Side otel bölgelerine otele gelen terzi servisi. Antalya tüm ilçeler. {PHONE}
           </p>
         </footer>

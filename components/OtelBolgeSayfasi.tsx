@@ -6,6 +6,8 @@ import type { OtelBolgesi } from '@/lib/otel-bolgeleri';
 import { regionAnswer, regionFaq } from '@/lib/otel-copy';
 import { areaIntro, areaNeeds, NEEDS_H, pickVariant } from '@/lib/area-profiles';
 import { findDistrict } from '@/lib/seo-data';
+import { bolgeMatrisi } from '@/lib/bolge-hizmet-matrisi';
+import { bolgeMatrisiI18n } from '@/lib/bolge-hizmet-matrisi-i18n';
 
 // Fiyatlar tek kaynaktan (fiyat sayfası bileşeni)
 const mkP = (l: FLang) => { const R = priceRowsFor(l); return { hem: R[1].rows[0], zip: R[0].rows[0], alter: R[1].rows[3], wedding: R[1].rows[4] }; };
@@ -238,6 +240,20 @@ export default function OtelBolgeSayfasi({ lang, region, allRegions, basePath, m
             <p className="sec-sub" style={{ marginTop: '.8rem', fontSize: '.85rem' }}>{t.noPartner}</p>
           </div>
         </section>
+
+        {(() => {
+          const mx = lang === 'tr' ? bolgeMatrisi(region.slug, region.name, region.name) : bolgeMatrisiI18n(lang, region.slug, region.name, region.name);
+          return (
+            <section className="sec" aria-labelledby="mx-h">
+              <div className="ctr" style={{ maxWidth: 760 }}>
+                <h2 className="sec-h" id="mx-h">{mx.title}</h2>
+                <p className="sec-sub" style={{ marginBottom: '1rem' }}>{mx.lead}</p>
+                {mx.groups.map((g) => (<div key={g.id}><h3 style={{ color: '#C9A96E', margin: '1rem 0 .3rem', fontSize: '1.05rem', fontWeight: 600 }}>{g.heading}</h3><p className="sec-sub" style={{ fontSize: '.92rem' }}>{g.text}</p></div>))}
+                <p className="sec-sub" style={{ marginTop: '1rem', fontSize: '.88rem' }}>{mx.price}</p>
+              </div>
+            </section>
+          );
+        })()}
 
         <section className="sec" aria-labelledby="wk-h">
           <div className="ctr">

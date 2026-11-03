@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Deri Ceket Tadilatı Fiyatı ₺400 · Pantolon, Yelek · Antalya" },
   description:
-    "Deri ceket, deri pantolon ve deri yelek tamir ve tadilatı ₺400'den. Daraltma, kol kısaltma, onarım. Önce fotoğraf, sonra net fiyat. Eve ve otele ücretsiz servis. ☎ " + PHONE,
+    "Deri ceket, pantolon ve yelek tamir ve tadilatı ₺400'den. Daraltma, kol kısaltma, onarım; net fiyat fotoğrafla. Eve ve otele ücretsiz. ☎ " + PHONE,
   keywords: fitKeywords([
     'deri ceket tadilatı', 'deri ceket tadilatı fiyat', 'deri ceket daraltma', 'deri ceket kol kısaltma', 'deri ceket tamiri', 'deri pantolon tadilatı', 'deri yelek tamiri', 'deri mont terzi', 'Antalya deri ceket terzi',
   ]),

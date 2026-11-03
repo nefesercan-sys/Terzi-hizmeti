@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { zoneAlt } from '@/lib/intl-zones';
-import { OTEL_BOLGELERI } from '@/lib/otel-bolgeleri';
+import { OTEL_BOLGELERI, OTEL_AD_RU } from '@/lib/otel-bolgeleri';
 
 const SITE = 'https://terzihizmeti.com.tr';
 const BASE_PATH = '/ru/vyezdnoy-portnoy-antalya';
@@ -50,7 +50,7 @@ const jsonLd = {
           addressCountry: 'TR',
         },
         geo: { '@type': 'GeoCoordinates', latitude: 36.857466, longitude: 30.596987 } },
-      areaServed: OTEL_BOLGELERI.map((r) => ({ '@type': 'Place', name: r.name })),
+      areaServed: OTEL_BOLGELERI.map((r) => ({ '@type': 'Place', name: OTEL_AD_RU[r.slug] ?? r.name })),
       availableLanguage: ['ru', 'en', 'de', 'tr', 'pl', 'uk', 'nl', 'fr', 'es', 'ar'],
     },
     {
@@ -146,7 +146,7 @@ export default function OtelBolgeleriRuHub() {
             <div className="wk-grid">
               {OTEL_BOLGELERI.map((r) => (
                 <a key={r.slug} href={`${BASE_PATH}/${r.slug}`} className="wk-card" style={{ textDecoration: 'none', color: 'inherit' }}>
-                  <div className="wk-tr">{r.name}</div>
+                  <div className="wk-tr">{OTEL_AD_RU[r.slug] ?? r.name}</div>
                   <p className="wk-d">{r.blurb.ru}</p>
                 </a>
               ))}

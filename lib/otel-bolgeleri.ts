@@ -106,3 +106,15 @@ export const OTEL_BOLGELERI: OtelBolgesi[] = [
 export function bulOtelBolgesi(slug: string) {
   return OTEL_BOLGELERI.find((b) => b.slug === slug);
 }
+
+/** RU sayfalarında bölge adı Kiril yazılır (Latin ad metinde kalmasın). */
+export const OTEL_AD_RU: Record<string, string> = {
+  belek: 'Белек', lara: 'Лара', guzeloba: 'Гюзельоба', kemer: 'Кемер', side: 'Сиде',
+  kundu: 'Кунду', konyaalti: 'Коньяалты', goynuk: 'Гёйнюк', muratpasa: 'Муратпаша',
+};
+/** Dile göre yerelleştirilmiş bölge nesnesi: RU'da name Kiril, diğer dillerde değişmez. */
+export function bulOtelBolgesiLang(lang: 'tr' | 'en' | 'ru' | 'de', slug: string): OtelBolgesi | undefined {
+  const r = bulOtelBolgesi(slug);
+  if (!r) return undefined;
+  return lang === 'ru' ? { ...r, name: OTEL_AD_RU[r.slug] ?? r.name } : r;
+}

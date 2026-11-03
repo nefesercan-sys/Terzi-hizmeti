@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { zoneAlt } from '@/lib/intl-zones';
-import { OTEL_BOLGELERI, bulOtelBolgesi } from '@/lib/otel-bolgeleri';
+import { OTEL_BOLGELERI, bulOtelBolgesiLang } from '@/lib/otel-bolgeleri';
 import OtelBolgeSayfasi from '@/components/OtelBolgeSayfasi';
 import { regionJsonLd } from '@/lib/otel-copy';
 import { BUSINESS_ID } from '@/lib/seo-data';
@@ -23,7 +23,7 @@ export async function generateStaticParams() {
 // (bkz. DE eşdeğerindeki aynı bug için detaylı açıklama).
 export async function generateMetadata({ params }: { params: Promise<{ region: string }> }): Promise<Metadata> {
   const { region } = await params;
-  const r = bulOtelBolgesi(region);
+  const r = bulOtelBolgesiLang('ru', region);
   if (!r) return {};
 
   const url = `${SITE}${BASE_PATH}/${r.slug}`;
@@ -56,7 +56,7 @@ export async function generateMetadata({ params }: { params: Promise<{ region: s
 // Next.js 14 için düzeltilmiş params yapısı
 export default async function OtelBolgeRuPage({ params }: { params: Promise<{ region: string }> }) {
   const { region } = await params;
-  const r = bulOtelBolgesi(region);
+  const r = bulOtelBolgesiLang('ru', region);
   if (!r) notFound();
 
   const url = `${SITE}${BASE_PATH}/${r.slug}`;
@@ -65,7 +65,7 @@ export default async function OtelBolgeRuPage({ params }: { params: Promise<{ re
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <OtelBolgeSayfasi lang="ru" region={r} allRegions={OTEL_BOLGELERI} basePath={BASE_PATH} maps={MAPS} />
+      <OtelBolgeSayfasi lang="ru" region={r} allRegions={OTEL_BOLGELERI.map((x) => bulOtelBolgesiLang('ru', x.slug)!)} basePath={BASE_PATH} maps={MAPS} />
     </>
   );
 }

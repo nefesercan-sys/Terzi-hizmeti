@@ -8,6 +8,7 @@ import { ZONE_SLUGS, zoneUrl } from '@/lib/intl-zones';
 import { U_IDS, UL_LIST, uUrl, uLanguages } from '@/lib/uretim';
 import { svcUrl } from '@/lib/intl-services';
 import { fiyatUrl } from '@/lib/intl-fiyat';
+import { hreflangFiyat, hreflangIletisim, hreflangSvc } from '@/lib/hreflang';
 import { iletisimUrl } from '@/lib/intl-iletisim';
 import { HIZMET_IDS, hizmetUrl, hizmetLanguages, sixForService } from '@/lib/intl-hizmet';
 import { TOPIC_IDS, topicUrl, topicLanguages, sixAlt } from '@/lib/intl-topics';
@@ -137,7 +138,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const CONTACT: Record<'tr' | 'en' | 'ru' | 'de', string> = {
     tr: '/iletisim', en: '/en/contact-tailor-antalya', ru: '/ru/kontakty-portnoy-antalya', de: '/de/kontakt-schneider-antalya',
   };
-  const contactAlt = { languages: { ...Object.fromEntries((Object.keys(CONTACT) as (keyof typeof CONTACT)[]).map((l) => [l, `${SITE}${CONTACT[l]}`])), 'x-default': `${SITE}${CONTACT.tr}` } };
+  const contactAlt = { languages: hreflangIletisim() }; // 4 + 6 dil tek küme (lib/hreflang.ts)
   const iletisimSayfalari: MetadataRoute.Sitemap = (Object.keys(CONTACT) as (keyof typeof CONTACT)[]).map((l) => ({
     url: `${SITE}${CONTACT[l]}`, lastModified: new Date(LAST_UPDATE), changeFrequency: 'monthly' as const, priority: l === 'tr' ? 0.85 : 0.8, alternates: contactAlt,
   }));
@@ -162,11 +163,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   });
 
   // Hizmetler ve kumaşlar sayfası (6 dil, kendi hreflang kümesi)
-  const svcAlt = { languages: Object.fromEntries(ILANGS.map((x) => [INTL[x].hreflang, `${SITE}${svcUrl(x)}`])) };
+  const svcAlt = { languages: hreflangSvc() };
   const svcSayfalari: MetadataRoute.Sitemap = ILANGS.map((l) => ({ url: `${SITE}${svcUrl(l)}`, lastModified: new Date(LAST_UPDATE), changeFrequency: 'monthly' as const, priority: 0.75, alternates: svcAlt }));
-  const fiyatAlt = { languages: Object.fromEntries(ILANGS.map((x) => [INTL[x].hreflang, `${SITE}${fiyatUrl(x)}`])) };
+  const fiyatAlt = { languages: hreflangFiyat() }; // 4 dilli + 6 dilli fiyat sayfaları tek 10 dilli küme, x-default TR
+  const fiyat4 = new Set([`${SITE}/antalya-terzi-fiyatlari`, `${SITE}/en/tailor-prices-antalya`, `${SITE}/de/schneider-preise-antalya`, `${SITE}/ru/ceny-portnoy-antalya`]);
+  sabitSayfalar.forEach((e) => { if (fiyat4.has(e.url)) e.alternates = fiyatAlt; });
   const fiyatSayfalari: MetadataRoute.Sitemap = ILANGS.map((l) => ({ url: `${SITE}${fiyatUrl(l)}`, lastModified: new Date(LAST_UPDATE), changeFrequency: 'monthly' as const, priority: 0.75, alternates: fiyatAlt }));
-  const iletAlt = { languages: Object.fromEntries(ILANGS.map((x) => [INTL[x].hreflang, `${SITE}${iletisimUrl(x)}`])) };
+  const iletAlt = { languages: hreflangIletisim() };
   const iletSayfalari: MetadataRoute.Sitemap = ILANGS.map((l) => ({ url: `${SITE}${iletisimUrl(l)}`, lastModified: new Date(LAST_UPDATE), changeFrequency: 'monthly' as const, priority: 0.7, alternates: iletAlt }));
 
   // Promosyon / reklam tekstili ve baskılı bez çanta imalatı (10 dil, hreflang karşılıklı; x-default: EN)

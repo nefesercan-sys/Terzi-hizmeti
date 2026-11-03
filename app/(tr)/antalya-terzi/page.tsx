@@ -355,7 +355,7 @@ export default function KonyaaltiTailorServicePage() {
               </div>
 
               {LANGS.map((lang: Lang) => (
-                <div key={lang} style={{ marginBottom: lang !== 'de' ? '3rem' : 0 }}>
+                <div key={lang} lang={lang} style={{ marginBottom: lang !== 'de' ? '3rem' : 0 }}>
                   <h3 style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: '1.2rem', fontFamily: 'var(--font-syne)', fontSize: '1.05rem', fontWeight: 700, color: '#C9A96E' }}>
                     <span aria-hidden="true">{LANG_LABELS[lang].flag}</span>
                     {LANG_LABELS[lang].name}

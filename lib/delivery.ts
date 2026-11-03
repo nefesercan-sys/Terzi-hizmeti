@@ -1,8 +1,8 @@
 // ============================================================
 // lib/delivery.ts — TESLİM SÜRESİ İÇİN TEK KAYNAK (10 dil)
-// İşletme sahibinin onayladığı süreler (Ekim 2026):
+// İşletme sahibinin onayladığı süreler (Kasım 2026):
 //   • ACİL tamir/tadilat      : 1–2 saat
-//   • NORMAL tamir/tadilat    : ertesi gün teslim
+//   • NORMAL tamir/tadilat    : aynı gün, işin durumuna göre ("ertesi gün / 24–48 saat / dakika / km" YAZILMAZ)
 //   • ÖZEL DİKİM              : süre modele ve adede göre belirlenir (gün sayısı yazılmaz)
 // Sitedeki hiçbir metin bu süreleri ("aynı gün", "2–4 saat", "24–48 saat", "3 gün" vb.) kendi başına yazmamalı;
 // bu dosyadaki cümleler kullanılmalı. Fiyat rakamları buraya ait değildir.

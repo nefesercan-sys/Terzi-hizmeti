@@ -5,6 +5,7 @@
 // Tek doğruluk kaynağı: lib/seo-data.ts (SITE, PHONE, PHONE_TEL, MAPS, SERVICES, serviceUrl...).
 // Siteye özgü ayarlar yalnızca aşağıdaki SITE_CFG bloğundadır.
 // ============================================================
+import { hreflangIletisim } from '@/lib/hreflang';
 import type { Metadata } from 'next';
 import { businessNode } from '@/lib/business';
 import {
@@ -241,10 +242,7 @@ function needUrl(lang: Lang, k: NeedKey): string {
 
 const alternates = () => ({
   canonical: abs(SITE_CFG.contactUrl.tr),
-  languages: {
-    tr: abs(SITE_CFG.contactUrl.tr), en: abs(SITE_CFG.contactUrl.en), ru: abs(SITE_CFG.contactUrl.ru), de: abs(SITE_CFG.contactUrl.de),
-    'x-default': abs(SITE_CFG.contactUrl.tr),
-  },
+  languages: hreflangIletisim(),
 });
 
 export function iletisimMetadata(lang: Lang): Metadata {

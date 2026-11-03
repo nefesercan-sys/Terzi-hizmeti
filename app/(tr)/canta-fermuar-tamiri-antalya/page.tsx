@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Çanta Fermuar Tamiri Fiyatı ₺300 · Aynı Gün · Antalya" },
   description:
-    "Çanta fermuarı değişimi ₺300'den. Sırt çantası, el çantası ve valiz fermuarı. Normal iş aynı gün, acil 1–2 saat. Eve ve otele ücretsiz servis. ☎ " + PHONE,
+    "Çanta, sırt çantası ve valiz fermuarı değişimi ₺300'den. Normal iş aynı gün, acil 1–2 saat. Eve ve otele ücretsiz servis. ☎ " + PHONE,
   keywords: fitKeywords([
     'çanta fermuar tamiri fiyat', 'çanta fermuarı değiştirme', 'çanta fermuarı tamiri Antalya', 'sırt çantası fermuar tamiri', 'valiz fermuar tamiri', 'çanta fermuarı ne kadar', 'çanta fermuarı kaç TL', 'Konyaaltı çanta fermuarı',
   ]),

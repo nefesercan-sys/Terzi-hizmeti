@@ -3,7 +3,7 @@
 import { altMetinler, type Konu } from '@/lib/alt-basliklar';
 import { GORSELLER, gorselMetin, ORNEK_ETIKET, ORNEK_BASLIK, ORNEK_NOT, ORNEK_BASE, type GLang, type GorselAnahtar } from '@/lib/ornek-gorseller';
 
-export default function OrnekGorselSeridi({ lang = 'tr', anahtarlar, tema = 'koyu', baslik, sayfaUrl, konu, yer = 'Antalya' }: {
+export default function OrnekGorselSeridi({ lang = 'tr', anahtarlar, tema = 'koyu', baslik, sayfaUrl, konu, yer }: {
   lang?: GLang; anahtarlar: GorselAnahtar[]; tema?: 'koyu' | 'acik'; baslik?: string; sayfaUrl?: string; konu?: Konu | Konu[]; yer?: string;
 }) {
   const koyu = tema === 'koyu';

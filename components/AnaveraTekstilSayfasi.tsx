@@ -495,7 +495,7 @@ export default function AnaveraTekstilSayfasi({ lang }: { lang: AnaveraLang }) {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(230px, 1fr))', gap: '1rem' }}>
           {t.highlights.map((h) => (
             <div key={h.title} style={{ ...card, borderTop: `3px solid ${GOLD}`, boxShadow: '0 8px 24px rgba(15,23,42,.08)' }}>
-              <h3 style={{ fontSize: '1.02rem', fontWeight: 800, margin: '0 0 .4rem' }}>{h.title}</h3>
+              <h2 style={{ fontSize: '1.02rem', fontWeight: 800, margin: '0 0 .4rem' }}>{h.title}</h2>
               <p style={{ fontSize: '.9rem', color: '#64748B', lineHeight: 1.55, margin: 0 }}>{h.desc}</p>
             </div>
           ))}
@@ -631,13 +631,13 @@ export default function AnaveraTekstilSayfasi({ lang }: { lang: AnaveraLang }) {
             <p style={{ fontSize: '.92rem', lineHeight: 1.7, color: '#64748B', margin: 0 }}>{t.footDesc}</p>
           </div>
           <div>
-            <h4 style={{ color: '#F8FAFC', fontSize: '1.02rem', fontWeight: 800, margin: '0 0 1rem' }}>{t.footContact}</h4>
+            <h3 style={{ color: '#F8FAFC', fontSize: '1.02rem', fontWeight: 800, margin: '0 0 1rem' }}>{t.footContact}</h3>
             <p style={{ fontSize: '.92rem', margin: '0 0 .6rem' }}>WhatsApp: <a href={WA_LINK} style={{ color: '#38BDF8', textDecoration: 'none' }}>{PHONE}</a></p>
             <p style={{ fontSize: '.92rem', margin: '0 0 .6rem' }}>{t.footBase}</p>
             <p style={{ fontSize: '.92rem', margin: 0 }}><a href={SITE} style={{ color: '#94A3B8', textDecoration: 'none' }}>terzihizmeti.com.tr</a></p>
           </div>
           <div>
-            <h4 style={{ color: '#F8FAFC', fontSize: '1.02rem', fontWeight: 800, margin: '0 0 1rem' }}>{t.footMarkets}</h4>
+            <h3 style={{ color: '#F8FAFC', fontSize: '1.02rem', fontWeight: 800, margin: '0 0 1rem' }}>{t.footMarkets}</h3>
             <p style={{ fontSize: '.92rem', lineHeight: 1.7, margin: 0 }}>{t.footMarketsText}</p>
           </div>
         </div>

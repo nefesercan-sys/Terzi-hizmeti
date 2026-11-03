@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Kot Pantolon Daraltma ₺200 · Bacak ve Bel Daraltma · Antalya" },
   description:
-    "Kot pantolon bacak daraltma ve bel daraltma ₺200'den. Ölçü üzerinizde alınır. Normal iş aynı gün, acil 1–2 saat. Eve ve otele ücretsiz servis. ☎ " + PHONE,
+    "Kot pantolon bacak ve bel daraltma ₺200'den; ölçü üzerinizde alınır. Normal iş aynı gün, acil 1–2 saat. Eve ve otele ücretsiz. ☎ " + PHONE,
   keywords: fitKeywords([
     'kot pantolon daraltma', 'kot daraltma fiyat', 'kot pantolon bacak daraltma', 'kot bel daraltma', 'kot pantolon daraltma Antalya', 'jean daraltma terzi', 'kot pantolon dar paça yapma',
   ]),

@@ -43,6 +43,26 @@ This file lists the main pages of the site for AI assistants and answer engines.
 - [Original denim hem (Turkish)](https://terzihizmeti.com.tr/orijinal-kot-paca-yapimi-antalya): orijinal paça görünümüyle kısaltma, from ₺200
 - [Denim jacket alteration (Turkish)](https://terzihizmeti.com.tr/kot-ceket-mont-tadilati-antalya): kot ceket ve mont kısaltma, daraltma, from ₺200
 - [Denim skirt hemming (Turkish)](https://terzihizmeti.com.tr/kot-etek-kisaltma-daraltma-antalya): kot etek kısaltma ve daraltma, from ₺200
+- [Trouser Hemming (Turkish)](https://terzihizmeti.com.tr/terzi-hizmetleri/pantolon-paca-kisaltma): Pantolon Paça Kısaltma
+- [Jeans Hemming & Taking In (Turkish)](https://terzihizmeti.com.tr/terzi-hizmetleri/kot-pantolon-paca-kisaltma): Kot Pantolon Daraltma ve Kısaltma
+- [Waist Taking-in & Letting-out (Turkish)](https://terzihizmeti.com.tr/terzi-hizmetleri/bel-daraltma): Bel Daraltma ve Genişletme
+- [Zipper Repair & Replacement (Turkish)](https://terzihizmeti.com.tr/terzi-hizmetleri/fermuar-degisimi-tamiri): Fermuar Değişimi ve Tamiri
+- [Custom Dress Making (Turkish)](https://terzihizmeti.com.tr/terzi-hizmetleri/elbise-dikimi): Elbise Dikimi (Ölçüye Göre)
+- [Custom Tailoring (Made to Measure) (Turkish)](https://terzihizmeti.com.tr/terzi-hizmetleri/ozel-dikim-antalya): Özel Dikim (Ölçüye Göre)
+- [Dress Repair & Alteration (Turkish)](https://terzihizmeti.com.tr/terzi-hizmetleri/elbise-tamiri-tadilati): Elbise Tamiri ve Tadilatı
+- [Evening & Wedding Dress Alteration (Turkish)](https://terzihizmeti.com.tr/terzi-hizmetleri/gelinlik-abiye-tadilati): Abiye ve Gelinlik Tadilatı
+- [Evening Dress, Formal & Special-Occasion Wear Alteration (Turkish)](https://terzihizmeti.com.tr/terzi-hizmetleri/abiye-tadilati-gece-kiyafetleri): Abiye Tadilatı, Gece Kıyafetleri ve Özel Kıyafetler
+- [Trouser Alteration (Turkish)](https://terzihizmeti.com.tr/terzi-hizmetleri/pantolon-tadilati): Pantolon Tadilatı
+- [Sleeve Shortening (Turkish)](https://terzihizmeti.com.tr/terzi-hizmetleri/kol-boyu-kisaltma): Kol Boyu Kısaltma
+- [Suit & Jacket Alteration (Turkish)](https://terzihizmeti.com.tr/terzi-hizmetleri/takim-elbise-ceket-tadilati): Takım Elbise ve Ceket Tadilatı
+- [Coat & Jacket Alteration (Turkish)](https://terzihizmeti.com.tr/terzi-hizmetleri/mont-palto-tadilati): Mont ve Palto Tadilatı
+- [Shirt Alteration (Turkish)](https://terzihizmeti.com.tr/terzi-hizmetleri/gomlek-daraltma-kisaltma): Gömlek Daraltma ve Kısaltma
+- [Leather Jacket & Leather Trousers Alteration (Turkish)](https://terzihizmeti.com.tr/terzi-hizmetleri/deri-ceket-pantolon-tadilati): Deri Ceket ve Deri Pantolon Tadilatı
+- [T-shirt & Shorts Alteration (Turkish)](https://terzihizmeti.com.tr/terzi-hizmetleri/tisort-sort-tadilati): Tişört ve Şort Tadilatı
+- [Skirt Hemming & Alteration (Turkish)](https://terzihizmeti.com.tr/terzi-hizmetleri/etek-kisaltma-daraltma): Etek Kısaltma ve Daraltma
+- [Evening Wear Making & Alteration (Turkish)](https://terzihizmeti.com.tr/terzi-hizmetleri/gece-kiyafeti-dikimi-tadilati): Gece Kıyafeti Dikimi ve Tadilatı
+- [Clothing Repair & Mending (Turkish)](https://terzihizmeti.com.tr/terzi-hizmetleri/kiyafet-tamiri-onarimi): Kıyafet Tamiri ve Onarımı
+- [Fit Adjustment to Your Measurements (Turkish)](https://terzihizmeti.com.tr/terzi-hizmetleri/olcuye-gore-beden-ayarlama): Ölçüye Göre Beden Ayarlama
 - [Wedding dress alterations](https://terzihizmeti.com.tr/antalya-gelinlik-tadilati): gelinlik ve abiye tadilatı
 - [Uniform manufacturing](https://terzihizmeti.com.tr/antalya-uniforma-imalati): hotel, restaurant and school uniforms
 - [Linen and cotton custom tailoring (Turkish)](https://terzihizmeti.com.tr/keten-pamuk-ozel-dikim): made to measure in natural fabrics

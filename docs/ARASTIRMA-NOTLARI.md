@@ -55,6 +55,7 @@ Aktiviteler: plaj (Konyaaltı, Lara), tarihi (Kaleiçi, Perge, Aspendos, Myra, O
 ## 6. Sitelerde dikkat edilecek kurallar (sahip kararları, Kasım 2026)
 - Ev ve otele alım-teslim her bölgede ücretsiz (tek genel kural). 08:00–23:00, her gün. WhatsApp +90 531 898 64 18.
 - Hizmet YOK: gelinlik dikimi (sadece tadilat), düğme ve astar hizmeti, kuru temizleme/ütü/çamaşır (şimdilik), ilan/pazar/bal (gizli).
-- Hizmet var: tadilat (paça/bel/kol ₺200+, fermuar ₺300+ pantolon; mont fermuarı €20 / pantolon €15), abiye-gelinlik TADİLATI ₺800+, elbise dikimi ₺800+, etek/pantolon dikimi ₺1000+, çocuk kıyafeti dikimi ₺1000+, damatlık ₺20.000+, deri/kot tamiri, seri üretim (Anavera Tekstil, alt marka; minimum adet yok; dünyaya gönderim).
-- Teslim: acil 1–2 saat, normal ertesi gün, özel dikim modele/adede göre.
+- Hizmet var: tadilat (paça/bel/kol/boy kısaltma-daraltma ₺200'den = €10; fermuar ₺300'den: pantolon/standart €15, mont/ceket/deri fermuarı €20; deri ceket/pantolon/yelek ₺400'den = €20; kot ~₺200'den), abiye-gelinlik TADİLATI ₺800+ (sahibe teyit sorulacak), seri üretim (Anavera Tekstil, alt marka; minimum adet yok; dünyaya gönderim).
+- DİKİM işlerinde (elbise, abiye, etek, pantolon, çocuk, damatlık/takım, özel dikim, yelek/tulum/bluz/eşofman dikimi) SABİT FİYAT YAZILMAZ: "fotoğrafa ve istediğiniz modele göre" (EN: by photo and the model you want; RU: по фото и желаемой модели; DE: nach Foto und gewünschtem Modell). Tek kaynak: lib/facts.ts BY_PHOTO_MODEL. Eski ₺800/₺1000/₺20.000 ve €40/€50/€1000 dikim fiyatları KALDIRILDI.
+- Teslim: acil 1–2 saat, normal işler aynı gün (işin durumuna göre), özel dikim modele/adede göre. "Ertesi gün / 24–48 saat / dakika / km" yazılmaz. Süre cümleleri lib/delivery.ts'ten.
 - Açık sorular: ana dil dışı 6 dilin yerel okuması, Rusya tekstil verisi.

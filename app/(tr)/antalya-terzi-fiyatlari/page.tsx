@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { fitKeywords } from '@/lib/meta-fit';
+import { hreflangFiyat } from '@/lib/hreflang';
 import { FT, PRICE_ROWS } from '@/components/TerziFiyatlariSayfasi';
 
 // Bu sayfa, insanların (ve yapay zeka asistanlarının) doğal dilde sorduğu sorulara
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Antalya Terzi Fiyatları 2026 · Paça ₺200, Fermuar ₺300" },
   description:
-    "Antalya terzi fiyat listesi 2026: paça ₺200, bel daraltma ₺200, fermuar ₺300, abiye-gelinlik tadilatı ₺800'den; dikim fotoğrafa ve istediğiniz modele göre. Fotoğraf at, net fiyat. ☎ " + PHONE,
+    "Antalya terzi fiyatları 2026: paça ₺200, bel ₺200, fermuar ₺300, abiye-gelinlik tadilatı ₺800'den; dikim fotoğrafa ve modele göre. ☎ " + PHONE,
   keywords: fitKeywords([
     'Antalya terzi', 'terzi fiyatları', 'terzi fiyat listesi 2026', 'Antalya terzi fiyatları',
     'elbise diktirmek', 'elbise tadilatı', 'elbisem yırtıldı', 'bel daraltma', 'paça kısaltma fiyatı',
@@ -37,13 +38,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   alternates: {
     canonical: PAGE_URL,
-    languages: {
-      'tr': PAGE_URL,
-      'en': `${SITE}/en/tailor-prices-antalya`,
-      'de': `${SITE}/de/schneider-preise-antalya`,
-      'ru': `${SITE}/ru/ceny-portnoy-antalya`,
-      'x-default': PAGE_URL,
-    },
+    languages: hreflangFiyat(),
   },
   openGraph: {
     title: 'Antalya Terzi Fiyat Listesi 2026 — Fotoğraf Gönderin, Fiyatı Öğrenin',

@@ -9,7 +9,7 @@
 //   • Ekspres    : turistlerin satın aldığı kıyafetlerin tadilatı (aynı gün / acilde 1–2 saat)
 //
 // Kurallar (sitenin diğer dosyalarıyla aynı):
-//  - Sadece işletme sahibinin verdiği bilgiler: 2006'dan beri, her gün 08:00–23:00, otellere ücretsiz servis,
+//  - Sadece işletme sahibinin verdiği bilgiler: 2006'dan beri, her gün 08:00–23:00, eve ve otele her bölgede ücretsiz servis,
 //    süreler lib/delivery.ts'ten (acil 1–2 saat, normal aynı gün, özel dikim modele ve adede göre).
 //  - Süre sözleri "genellikle/usually" ile yazılır; kesin gün/saat WhatsApp'ta netleşir (kesin garanti YOK).
 //  - Görseller örnek/stil görselidir (müşteri fotoğrafı gibi sunulmaz) — sayfada bu not yer alır.

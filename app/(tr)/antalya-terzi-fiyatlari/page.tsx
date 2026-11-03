@@ -61,6 +61,8 @@ const QUICK: { q: string; a: string; price: string; href: string; cta: string }[
   { q: 'Elbisenin belini daraltmak istiyorum', a: 'Bel ve beden daraltma, normal işte aynı gün.', price: '₺200\'den', href: '#fiyatlar', cta: 'Fiyat listesi' },
   { q: 'Pantolonumun paçasını kısaltmak istiyorum', a: 'Kot ve kumaş pantolon paça kısaltma, normal işte aynı gün; acilde 1–2 saat.', price: '₺200\'den', href: '/konyaalti-paca-kisaltma', cta: 'Paça kısaltma' },
   { q: 'Fermuar değişimi', a: 'Pantolon, kot, etek, mont ve çanta fermuarı.', price: '₺300\'den', href: '/konyaalti-fermuar-tamiri', cta: 'Fermuar tamiri' },
+  { q: 'Deri ceket, pantolon veya yelek tamiri', a: 'Daraltma, kısaltma ve onarım; net fiyat fotoğrafa göre.', price: '₺400\'den', href: '/deri-ceket-tadilati-antalya', cta: 'Deri tadilat' },
+  { q: 'Kot paça, kot ceket veya kot etek kısaltma', a: 'Orijinal paça görünümü korunur; daraltma ve kısaltma.', price: '₺200\'den', href: '/kot-pantolon-paca-kisaltma-antalya', cta: 'Kot tadilat' },
   { q: 'Elbise diktirmek / kendime elbise dikmek', a: 'Ölçü, model ve kumaş seçimi, prova ve teslim. Fotoğrafını gönderin.', price: '₺800\'den', href: '#dikim', cta: 'Özel dikim' },
   { q: 'Gelinlik ve abiye tadilatı', a: 'Hassas daraltma, boy ve askı ayarı; prova randevusu.', price: '₺800\'den', href: '/antalya-gelinlik-tadilati', cta: 'Gelinlik tadilatı' },
   { q: 'Adrese veya otele gelen terzi', a: 'Ölçüyü adresinizde alırız, işi atölyede yapar, geri teslim ederiz.', price: 'Otellere ücretsiz; ev adresi WhatsApp\'tan', href: '/otele-gelen-terzi-antalya', cta: 'Otele gelen terzi' },

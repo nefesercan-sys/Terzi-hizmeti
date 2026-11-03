@@ -182,7 +182,7 @@ export const SERVICES: Service[] = [
     name: { tr: 'Kot Pantolon Daraltma ve Kısaltma', en: 'Jeans Hemming & Taking In', ru: 'Подшив и ушивание джинсов', de: 'Jeans kürzen und enger machen' },
     q: { tr: 'kot pantolon kısaltma', en: 'jeans hemming', ru: 'подшив джинсов', de: 'Jeans kürzen' },
     intro: {
-      tr: 'Kalın kot kumaşa uygun makine ve iplikle kot paçasını kısaltır, bacak genişliğini daraltırız. Paça boyu ve genişlik ölçünüze göre ayarlanır.',
+      tr: 'Kalın kot kumaşa uygun makine ve iplikle kot paçasını kısaltır (orijinal paça görünümünü koruyacak şekilde), bacak genişliğini daraltırız. Kot mont, kot ceket ve kot etekte de kısaltma ve daraltma yaparız. Ölçü ve genişlik size göre ayarlanır.',
       en: 'Jeans too long or too wide? We shorten the hem and taper the legs using machines and thread built for heavy denim, adjusting length and width to your measurements.',
       ru: 'Джинсы длинны или широки? Укорачиваем низ и сужаем штанины на машине и нитках для плотного денима, длину и ширину подгоняем по вашим меркам.',
       de: 'Jeans zu lang oder zu weit? Wir kürzen den Saum und verengen die Beine mit Maschinen und Garn für dicken Denim, Länge und Weite richten sich nach Ihren Maßen.',
@@ -435,12 +435,12 @@ export const SERVICES: Service[] = [
     },
   },
   {
-    id: 'deri', icon: '🧤', time: 'none',
+    id: 'deri', icon: '🧤', time: 'none', priceFrom: 400,
     slug: { tr: 'deri-ceket-pantolon-tadilati', en: 'leather-jacket-alteration', ru: 'remont-kozhanoy-odezhdy', de: 'lederjacke-lederhose-aendern' },
     name: { tr: 'Deri Ceket ve Deri Pantolon Tadilatı', en: 'Leather Jacket & Leather Trousers Alteration', ru: 'Ремонт и подгонка кожаной одежды', de: 'Lederjacke und Lederhose ändern' },
     q: { tr: 'deri ceket tadilatı', en: 'leather jacket alteration', ru: 'ремонт кожаной куртки', de: 'Lederjacke ändern' },
     intro: {
-      tr: 'Deri ceket ve deri pantolonda daraltma, kısaltma ve onarımdan önce fotoğraf isteriz. Deri cinsi görüldükten sonra yapılabilecek işlem ve fiyat netleşir.',
+      tr: 'Deri ceket, deri pantolon ve deri yelekte tamir ve tadilat ₺400’den başlar. Daraltma, kısaltma ve onarımdan önce fotoğraf isteriz; deri cinsi görüldükten sonra yapılabilecek işlem ve net fiyat söylenir.',
       en: 'For leather jackets and trousers we ask for a photo before any taking-in, shortening or repair; once we see the type of leather, the possible work and price are confirmed.',
       ru: 'Для кожаных курток и брюк перед ушиванием, укорочением или ремонтом просим фото; когда видим тип кожи, уточняем возможные работы и цену.',
       de: 'Bei Lederjacken und Lederhosen bitten wir vor Enger machen, Kürzen oder Reparatur um ein Foto; sobald wir die Lederart sehen, stehen mögliche Arbeiten und Preis fest.',

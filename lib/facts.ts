@@ -14,7 +14,7 @@ export const MIN_ORDER_SERIAL: number | null = null; // seri üretimde minimum a
 /** Başlangıç fiyatları (₺, "+" = başlayan). */
 export const TRY_FROM = {
   hem: 200, waist: 200, sleeve: 200, dressAdjust: 200,
-  zipperPants: 300, zipperCoat: 300,
+  zipperPants: 300, zipperCoat: 300, leather: 400,
   skirtPantsSew: 1000, dressSew: 800, kidsSew: 1000, groomSuit: 20000,
   eveningWeddingAlter: 800,
 } as const;

@@ -199,7 +199,7 @@ export default function Page() {
               </div>
             ))}
             <p style={{ marginTop: '1.2rem' }}>
-              Kot mont ve ceket için <a href="/kot-ceket-mont-tadilati-antalya">kot ceket ve mont tadilatı</a>, kot etek için <a href="/kot-etek-kisaltma-daraltma-antalya">kot etek sayfasına</a>, genel fiyatlar için <a href="/antalya-terzi-fiyatlari">terzi fiyat listesine</a> bakabilirsiniz.
+              Ayrıntılı sayfalar: <a href="/kot-pantolon-daraltma-antalya">kot pantolon daraltma</a> ve <a href="/orijinal-kot-paca-yapimi-antalya">orijinal kot paça</a>. Kot mont ve ceket için <a href="/kot-ceket-mont-tadilati-antalya">kot ceket ve mont tadilatı</a>, kot etek için <a href="/kot-etek-kisaltma-daraltma-antalya">kot etek sayfasına</a>, genel fiyatlar için <a href="/antalya-terzi-fiyatlari">terzi fiyat listesine</a> bakabilirsiniz.
             </p>
           </div>
         </section>

@@ -29,6 +29,8 @@ const TR_SERVICES: MapLink[] = [
   { href: '/canta-fermuar-tamiri-antalya', label: 'Çanta fermuar tamiri' },
   { href: '/deri-ceket-tadilati-antalya', label: 'Deri ceket tadilatı' },
   { href: '/kot-pantolon-paca-kisaltma-antalya', label: 'Kot pantolon paça kısaltma' },
+  { href: '/kot-pantolon-daraltma-antalya', label: 'Kot pantolon daraltma' },
+  { href: '/orijinal-kot-paca-yapimi-antalya', label: 'Orijinal kot paça yapımı' },
   { href: '/kot-ceket-mont-tadilati-antalya', label: 'Kot ceket ve mont tadilatı' },
   { href: '/kot-etek-kisaltma-daraltma-antalya', label: 'Kot etek kısaltma ve daraltma' },
   { href: '/antalya-gelinlik-tadilati', label: 'Gelinlik tadilatı' },

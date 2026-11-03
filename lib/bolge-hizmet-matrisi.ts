@@ -35,9 +35,9 @@ const GROUPS: { id: string; label: string; ops: string[]; heads: ((n: string, l:
     heads: [(n) => `${n} yelek, tulum, eşofman tadilatı`, (n) => `${n} şort kısaltma, tulum daraltma`, (n, l) => `${l} yelek ve eşofman tamiri, dikimi`],
     intros: [(l, n, o) => `${l} yelek, tulum, eşofman ve şort için: ${o}.`, (l, n, o) => `${n} çevresinde ${o} yapıyoruz.`, (l, n, o) => `Yelek, tulum, eşofman ve şortta ${o}; ${n} için fotoğrafla fiyat alın.`] },
   { id: 'fermuar-dugme', label: 'fermuar, düğme ve astar',
-    ops: ['pantolon, mont, ceket ve çanta fermuarı değişimi', 'sıkışan fermuar tamiri', 'düğme değişimi', 'astar değişimi (kazak ve hırka hariç)', 'sökük ve yırtık onarımı'],
+    ops: ['pantolon fermuarı değişimi', 'mont ve ceket fermuarı değişimi', 'kaban ve palto fermuarı değişimi', 'çanta fermuarı değişimi', 'sıkışan fermuar tamiri', 'düğme değişimi', 'astar değişimi (kazak ve hırka hariç)', 'sökük ve yırtık onarımı'],
     heads: [(n) => `${n} fermuar değişimi ve tamiri`, (n) => `${n} fermuar, düğme, astar değişimi`, (n, l) => `${l} fermuarı bozulan kıyafet`],
-    intros: [(l, n, o) => `${l} fermuar, düğme ve astar işleri: ${o}.`, (l, n, o) => `Fermuarı bozulan, düğmesi düşen ya da astarı yırtılan kıyafetiniz için ${l} ${o}.`, (l, n, o) => `${n} için: ${o}.`] },
+    intros: [(l, n, o) => `${l} fermuar, düğme ve astar işleri: ${o}.`, (l, n, o) => `Fermuarı bozulan, düğmesi düşen ya da astarı yırtılan kıyafetiniz için ${l} ${o}.`, (l, n, o) => `${n} için: ${o}.`, (l, n, o) => `Fermuar işlerinde ${l} şunları yapıyoruz: ${o}.`, (l, n, o) => `${n} çevresinde fermuar ve düğme sorunlarınıza çözüm: ${o}.`] },
   { id: 'deri', label: 'deri ceket, pantolon ve yelek',
     ops: ['deri ceket yaka değiştirme', 'deri ceket kol kısaltma', 'deri ceket boy kısaltma', 'deri ceket daraltma', 'deri pantolon bel daraltma', 'deri pantolon boy kısaltma', 'deri pantolon fermuar değişimi', 'deri yelek tamir ve tadilatı', 'deri fermuar tamiri'],
     heads: [(n) => `${n} deri ceket, pantolon, yelek tadilatı`, (n) => `${n} deri ceket yaka ve kol değişimi`, (n, l) => `${l} deri pantolon bel daraltma, boy kısaltma`],
@@ -45,7 +45,7 @@ const GROUPS: { id: string; label: string; ops: string[]; heads: ((n: string, l:
   { id: 'kot', label: 'kot pantolon, ceket, mont, etek ve şort',
     ops: ['kot pantolon paça kısaltma', 'kot pantolon orijinal paça yapımı', 'kot pantolon bel daraltma', 'kot pantolon bacak daraltma', 'kot ceket kol ve boy kısaltma', 'kot ceket daraltma', 'kot mont kısaltma ve daraltma', 'kot etek boy kısaltma ve bel daraltma', 'kot şort boy kısaltma', 'kot fermuar ve düğme değişimi', 'kot yırtık ve sökük onarımı'],
     heads: [(n) => `${n} kot pantolon, ceket, mont tadilatı`, (n) => `${n} kot paça kısaltma ve orijinal paça`, (n, l) => `${l} kot etek ve kot şort kısaltma, daraltma`],
-    intros: [(l, n, o) => `${l} kot giysilerde ${o}; kot işleri ₺200'den başlar.`, (l, n, o) => `Kot pantolon, ceket, mont, etek ve şort için ${l} ${o}. Fiyat ₺200'den başlar.`, (l, n, o) => `${n} çevresinde kot ürünlerinize: ${o}.`] },
+    intros: [(l, n, o) => `${l} kot giysilerde ${o}; kot işleri ₺200'den başlar.`, (l, n, o) => `Kot pantolon, ceket, mont, etek ve şort için ${l} ${o}. Fiyat ₺200'den başlar.`, (l, n, o) => `${n} çevresinde kot ürünlerinize: ${o}.`, (l, n, o) => `Kotunuz uzun, dar ya da yırtıksa ${l} şu işler yapılır: ${o}. Kot işleri ₺200'den başlar.`, (l, n, o) => `${n} için kot tadilatı: ${o}; net fiyat fotoğraftan söylenir.`] },
 ];
 
 const TITLES: ((loc: string, n: string) => string)[] = [
@@ -64,15 +64,36 @@ const PRICES: ((n: string) => string)[] = [
   (n) => `Fiyatlar başlangıç fiyatıdır: kısaltma ve daraltma ₺200, fermuar ₺300, deri ürünler ₺400. Düğme, astar, yelek, tulum ve dikim işlerinin fiyatını fotoğraf ya da modelle netleştiriyoruz (${n}).`,
 ];
 
+// Her grup metnine bölgeye göre seçilen kısa, doğrulanmış bir kapanış cümlesi (sayfalar arası tekrarı azaltır)
+const CLOSERS: ((n: string) => string)[] = [
+  (n) => `Fotoğrafı WhatsApp'tan gönderin, ${n} için fiyatı hemen söyleyelim.`,
+  (n) => `${n} için eve ve otele alım-teslim ücretsizdir.`,
+  () => `Normal işler aynı gün teslim edilir.`,
+  () => `Net fiyatı işe başlamadan önce fotoğraftan veriyoruz.`,
+  () => `Acil işlerde 1–2 saatlik teslim mümkündür; süre işin durumuna göre değişir.`,
+  () => `Ödeme tüm para birimleriyle, nakit veya kartla yapılabilir.`,
+  () => `2006'dan beri Antalya'da terzilik yapıyoruz.`,
+  (n) => `${n} çevresinde giysinizi evden ya da otelden alıp işi bitince geri getiriyoruz.`,
+];
+
 const rot = <T,>(a: T[], k: number): T[] => a.map((_, i) => a[(i + k) % a.length]);
+// Deterministik karıştırma (tohuma göre aynı sonuç): işlem listeleri bölgeler arasında aynı sırayla tekrar etmesin
+const shuffle = <T,>(a: T[], seed: string): T[] =>
+  a.map((x, i) => {
+    let k = hashStr(i + ':' + seed);
+    k = Math.imul(k ^ (k >>> 15), 2246822507); k = Math.imul(k ^ (k >>> 13), 3266489909); k = (k ^ (k >>> 16)) >>> 0;
+    return { x, k, i };
+  }).sort((p, q) => p.k - q.k || p.i - q.i).map((p) => p.x);
+
+const shuffleIdx = (seed: string, len: number): number => shuffle(Array.from({ length: len }, (_, i) => i), seed)[0];
 
 export function bolgeMatrisi(slug: string, n: string, loc: string): Matris {
   const h = (s: string) => hashStr(slug + ':' + s);
   const order = rot(GROUPS, h('g') % GROUPS.length);
   const groups: MatrisGroup[] = order.map((g, gi) => {
     // Tüm işlemler her sayfada yer alır; yalnızca sıra döner (her işlem bağımsız bir ad öbeği olduğu için cümle bozulmaz)
-    const ops = rot(g.ops, h('o' + g.id) % g.ops.length);
-    const text = g.intros[h('i' + g.id) % g.intros.length](loc, n, ops.join(', '));
+    const ops = shuffle(g.ops, slug + ':o' + g.id);
+    const text = g.intros[h('i' + g.id) % g.intros.length](loc, n, ops.join(', ')) + ' ' + CLOSERS[shuffleIdx(slug + ':c' + g.id, CLOSERS.length)](n);
     return { id: g.id, heading: g.heads[(h('h' + g.id) + gi) % g.heads.length](n, loc), text };
   });
   return {

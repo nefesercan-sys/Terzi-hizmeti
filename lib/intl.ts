@@ -2,9 +2,9 @@
 // terzihizmeti.com.tr — lib/intl.ts
 // Ek turist dilleri (ES/FR/PL/UK/NL/AR): her dil için TEK kısa tanıtım sayfası (/es, /fr, /pl, /uk, /nl, /ar).
 // Yalnızca işletme sahibinin doğruladığı bilgiler: Hurma/Konyaaltı atölye, 2006'dan beri, her gün 08:00–23:00,
-// süreler lib/delivery.ts'ten, WhatsApp'tan fotoğrafla fiyat. Eve ve otele alım-teslim tüm hizmet bölgelerinde ücretsiz;
-// ev adreslerinde de ücretsiz (tüm hizmet bölgeleri).
-// Fiyat yazılmaz.
+// süreler lib/delivery.ts'ten, WhatsApp'tan fotoğrafla fiyat. Eve ve otele alım-teslim her hizmet bölgesinde ücretsiz.
+// Bu dosyadaki tanıtım metinlerinde rakam yazılmaz; başlangıç fiyatları lib/facts.ts üzerinden (IntlLanding, intl-fiyat) gösterilir.
+// Dikimde sabit fiyat YOKTUR: "fotoğrafa ve istediğiniz modele göre" (lib/facts.ts BY_PHOTO_MODEL).
 // ============================================================
 import { DELIVERY } from '@/lib/delivery';
 export type ILang = 'es' | 'fr' | 'pl' | 'uk' | 'nl' | 'ar';
@@ -173,7 +173,7 @@ export const INTL: Record<ILang, ICopy> = {
     servicesTitle: 'ماذا نفعل',
     services: ['تقصير البناطيل والجينز والتنانير والفساتين', 'تضييق الخصر والجوانب والأكمام', 'استبدال السحّابات المعطّلة', 'إصلاح الدرز والتمزقات', 'تعديل فساتين الزفاف والسهرة', 'تفصيل من الكتان والقطن'],
     hotelTitle: 'الاستلام والتسليم في فندقك',
-    hotelText: 'نستلم ملابسك من فندقك ونعيدها إليه. الخدمة مجانية للفنادق في جميع المناطق التي نخدمها (كونيالتي ولارا وبليك وسيدة وكمر وغيرها). راسلنا على واتساب باسم الفندق لنتفق على الاستلام.',
+    hotelText: 'نستلم ملابسك من فندقك ونعيدها إليه. الخدمة مجانية للفنادق في جميع المناطق التي نخدمها (كونيالتي ولارا وبيليك وسيدي وكيمر وغيرها). راسلنا على واتساب باسم الفندق لنتفق على الاستلام.',
     zonesLabel: 'المناطق الفندقية التي نخدمها',
     faqTitle: 'الأسئلة الشائعة',
     faq: [
@@ -193,7 +193,7 @@ export const NB: Record<ILang, { title: string; text: string }> = {
   es: { title: 'Recogida y entrega gratis a domicilio y en hoteles', text: 'Recogida y entrega gratuitas a domicilio y en hotel en todas las zonas que atendemos (Konyaaltı, Muratpaşa, Lara, Belek, Side, Kemer…). Todos los días de 08:00 a 23:00. Solo paga el trabajo.' },
   fr: { title: 'Prise en charge et livraison gratuites à domicile et à l\'hôtel', text: 'Prise en charge et livraison gratuites à domicile et à l\'hôtel dans toutes les zones desservies (Konyaaltı, Muratpaşa, Lara, Belek, Side, Kemer…). Tous les jours de 08h00 à 23h00. Vous ne payez que le travail.' },
   pl: { title: 'Bezpłatny odbiór i dowóz do domu i hotelu', text: 'Bezpłatny odbiór i dowóz do domu i do hotelu we wszystkich obsługiwanych rejonach (Konyaaltı, Muratpaşa, Lara, Belek, Side, Kemer…). Codziennie 08:00–23:00. Płacisz tylko za usługę.' },
-  uk: { title: 'Безкоштовний забір і доставка додому та в готель', text: 'Безкоштовний забір і доставка додому та в готель у всіх районах, які ми обслуговуємо (Konyaaltı, Muratpaşa, Lara, Belek, Side, Kemer…). Щодня 08:00–23:00. Ви платите лише за роботу.' },
+  uk: { title: 'Безкоштовний забір і доставка додому та в готель', text: 'Безкоштовний забір і доставка додому та в готель у всіх районах, які ми обслуговуємо (Коньяалти, Муратпаша, Лара, Белек, Сіде, Кемер…). Щодня 08:00–23:00. Ви платите лише за роботу.' },
   nl: { title: 'Gratis ophalen en terugbrengen aan huis en in het hotel', text: 'Gratis ophalen en terugbrengen aan huis en in het hotel in alle gebieden die we bedienen (Konyaaltı, Muratpaşa, Lara, Belek, Side, Kemer…). Dagelijks 08:00–23:00. U betaalt alleen voor het werk.' },
   ar: { title: 'استلام وتسليم مجاني للمنازل والفنادق', text: 'استلام وتسليم مجاني للمنازل والفنادق في جميع المناطق التي نخدمها (Konyaaltı, Muratpaşa, Lara, Belek, Side, Kemer…). يوميًا من 08:00 إلى 23:00. تدفع فقط مقابل العمل.' },
 };
@@ -201,8 +201,8 @@ export const NB: Record<ILang, { title: string; text: string }> = {
 export const NB_DISTRICT: Record<ILang, { title: string; text: string }> = {
   es: { title: 'Barrios por distrito', text: 'Distrito de Konyaaltı: Hurma (donde está el taller), Liman, Sarısu, Gürsu, Uluç, Uncalı, Siteler, Öğretmenevleri, Altınkum, Arapsuyu. Distrito de Muratpaşa: Meltem, Şirinyalı, Fener, Güzeloba.' },
   fr: { title: 'Quartiers par district', text: "District de Konyaaltı : Hurma (où se trouve l'atelier), Liman, Sarısu, Gürsu, Uluç, Uncalı, Siteler, Öğretmenevleri, Altınkum, Arapsuyu. District de Muratpaşa : Meltem, Şirinyalı, Fener, Güzeloba." },
-  pl: { title: 'Osiedla według dystryktu', text: 'Dystrykt Konyaaltı: Hurma (tu jest pracownia), Liman, Sarısu, Gürsu, Uluç, Uncalı, Siteler, Öğretmenevleri, Altınkum, Arapsuyu. Dystrykt Muratpaşa: Meltem, Şirinyalı, Fener, Güzeloba.' },
-  uk: { title: 'Мікрорайони за районами', text: 'Район Коньяалти: Hurma (тут ательє), Liman, Sarısu, Gürsu, Uluç, Uncalı, Siteler, Öğretmenevleri, Altınkum, Arapsuyu. Район Муратпаша: Meltem, Şirinyalı, Fener, Güzeloba.' },
+  pl: { title: 'Osiedla według dzielnic', text: 'Dzielnica Konyaaltı: Hurma (tu jest pracownia), Liman, Sarısu, Gürsu, Uluç, Uncalı, Siteler, Öğretmenevleri, Altınkum, Arapsuyu. Dzielnica Muratpaşa: Meltem, Şirinyalı, Fener, Güzeloba.' },
+  uk: { title: 'Мікрорайони за районами', text: 'Район Коньяалти: Хурма (тут ательє), Ліман, Сарису, Гюрсу, Улуч, Унджали, Сітелер, Огретменевлері, Алтинкум, Арапсую. Район Муратпаша: Мелтем, Ширінялы, Фенер, Гюзельоба.' },
   nl: { title: 'Wijken per district', text: 'District Konyaaltı: Hurma (hier staat het atelier), Liman, Sarısu, Gürsu, Uluç, Uncalı, Siteler, Öğretmenevleri, Altınkum, Arapsuyu. District Muratpaşa: Meltem, Şirinyalı, Fener, Güzeloba.' },
   ar: { title: 'الأحياء حسب المنطقة', text: 'منطقة Konyaaltı: Hurma (حيث الورشة)، Liman, Sarısu, Gürsu, Uluç, Uncalı, Siteler, Öğretmenevleri, Altınkum, Arapsuyu. منطقة Muratpaşa: Meltem, Şirinyalı, Fener, Güzeloba.' },
 };

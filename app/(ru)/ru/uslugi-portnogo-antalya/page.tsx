@@ -250,7 +250,7 @@ export default function UslugiPortnogoAntalyaPage() {
                   <article className="price-card" key={cat.title}>
                     <div className="price-head">
                       <span className="price-icon" aria-hidden="true">{cat.icon}</span>
-                      <div><h4 className="price-tr">{cat.title}</h4><span className="price-kw">{cat.keyword}</span></div>
+                      <div><h3 className="price-tr">{cat.title}</h3><span className="price-kw">{cat.keyword}</span></div>
                     </div>
                     <p className="price-desc">{cat.desc}</p>
                     <table className="price-table" aria-label={cat.title}>

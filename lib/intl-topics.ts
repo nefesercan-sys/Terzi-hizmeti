@@ -2,7 +2,7 @@
 // terzihizmeti.com.tr — lib/intl-topics.ts
 // ES/FR/PL/UK/NL/AR için konu sayfaları: tamir-tadilat, özel dikim, keten-pamuk, tekstil üretimi. (Promosyon: lib/promosyon-tekstil.ts)
 // Kurallar: fiyat YAZILMAZ (WhatsApp'tan fotoğrafla); deri/kot yalnız tamir-tadilat; süreler lib/delivery.ts'ten;
-// 2006'dan beri, her gün 08:00–23:00, otellere ücretsiz alım-teslim, yurt dışına online ölçü + kargo.
+// 2006'dan beri, her gün 08:00–23:00, eve ve otele her bölgede ücretsiz alım-teslim, yurt dışına online ölçü + kargo.
 // ============================================================
 import { DELIVERY } from '@/lib/delivery';
 import type { ILang } from '@/lib/intl';

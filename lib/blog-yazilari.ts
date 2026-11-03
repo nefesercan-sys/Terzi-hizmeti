@@ -128,7 +128,7 @@ export const BLOG_YAZILARI: BlogYazi[] = [
   },
   {
     slug: 'tatilde-kiyafet-tadilati-antalya',
-    baslik: 'Antalya\'da Tatilde Kıyafet Tadilatı: Acil Durumda Ne Yapmalı?',
+    baslik: 'Antalya\'da Tatilde Kıyafet Tadilatı: Acilde Ne Yapmalı?',
     ozet: 'Tatilde fermuar patladı, elbise uzun geldi: Antalya\'da turistler için acil tadilat ve otele gelen terzi rehberi.',
     tarih: '2026-10-31',
     gorsel: '/gorseller/eve-gelen-terzi.webp',

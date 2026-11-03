@@ -15,7 +15,7 @@ const TODAY     = '2026-11-03';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Kot Pantolon Paça Kısaltma ₺200 · Orijinal Paça · Aynı Gün · Antalya" },
+  title: { absolute: "Kot Pantolon Paça Kısaltma ₺200 · Aynı Gün · Antalya" },
   description:
     "Kot pantolon paça kısaltma, orijinal paça yapımı ve daraltma ₺200'den. Normal iş aynı gün, acil 1–2 saat. Eve ve otele ücretsiz servis. ☎ " + PHONE,
   keywords: fitKeywords([

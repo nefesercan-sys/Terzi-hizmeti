@@ -3,7 +3,7 @@
 // Bölge × hizmet arama sorguları için TEK veri kaynağı (TR/EN/RU/DE).
 // Kurallar:
 //  - Sadece doğrulanmış bilgi: tek atölye (Hurma, Konyaaltı), 2006'dan beri, her gün 08:00–23:00,
-//    otellere ücretsiz servis, teslim süreleri lib/delivery.ts'ten (acil 1–2 saat / normal aynı gün / özel dikim modele ve adede göre), gelinlik ₺800+, abiye ₺800+.
+//    eve ve otele her bölgede ücretsiz servis, teslim süreleri lib/delivery.ts'ten (acil 1–2 saat / normal aynı gün / özel dikim modele ve adede göre), gelinlik ve abiye TADİLATI ₺800+; dikimde sabit fiyat yok.
 //  - Mesafe/dakika, puan, müşteri sayısı, sahte vaat YOK.
 //  - Yeni bölge/hizmet eklemek için sadece bu dosyaya satır ekle; sayfalar, sitemap ve iç linkler otomatik oluşur.
 // ============================================================

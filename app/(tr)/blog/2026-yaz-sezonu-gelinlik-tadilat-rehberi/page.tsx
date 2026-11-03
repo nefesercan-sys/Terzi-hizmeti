@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "2026 Yaz Sezonu Gelinlik Tadilat Rehberi | Antalya" },
   description:
-    fitDesc('Yaz düğün sezonunda gelinlik tadilatı nasıl planlanır? Randevu zamanlaması, kumaş seçimi, sıcak ve nemli havada gelinlik bakımı — Terzi Can\'dan pratik rehber.'),
+    fitDesc('Yaz düğün sezonunda gelinlik tadilatı nasıl planlanır? Randevu zamanlaması, kumaş seçimi ve sıcak, nemli havada gelinlik bakımı için pratik rehber.'),
   alternates: { canonical: PAGE_URL },
   robots: { index: true, follow: true },
   openGraph: {
@@ -25,6 +25,14 @@ export const metadata: Metadata = {
   },
   twitter: { card: 'summary_large_image', title: '2026 Yaz Sezonu Gelinlik Tadilat Rehberi', images: [OG] },
 };
+
+// SSS: görünür bölüm ve FAQPage şeması AYNI diziden üretilir.
+const FAQS: [string, string][] = [
+  ['Yaz düğünü için gelinlik tadilatına ne zaman başlamalıyım?', 'Haziran-Eylül arası yoğun düğün sezonunda randevular hızla doluyor. Gelinliğinizi elinize aldıktan sonra, düğün tarihinden en az 3-4 hafta önce ilk prova için randevu almanızı öneririz. Son dakika hafif düzeltmeler mümkün olsa da, korse ve bel daraltma gibi hassas işlemler için erken planlama en iyi sonucu verir.'],
+  ['Antalya\'nın sıcak ve nemli havası gelinlik kumaşını etkiler mi?', 'Evet. Saten ve ipek karışımlı kumaşlar nem oranı yüksek günlerde hafifçe gevşeyebilir, tül ve dantel katmanları ise terleme ve nem nedeniyle vücuda daha farklı oturabilir. Bu yüzden yaz düğünlerinde son prova, mümkünse düğüne yakın bir tarihte ve günün sıcak saatlerinde yapılmalı.'],
+  ['2026 yılında gelinlik tadilatı fiyatları ne kadar?', `Boy ayarı ₺800'den, bel daraltma ₺800'den, korse/kapama onarımı ₺800'den, abiye tadilatı ₺800'den başlıyor. Kesin fiyat kumaşa ve yapılacak işleme göre ilk provada netleşir. ☎ ${PHONE}`],
+  ['Gelinliği düğünden hemen önce mi, yoksa aylar önce mi tadilata götürmeliyim?', 'İdeali iki aşamalı gitmek: kilo ve vücut ölçüsü değişikliklerine karşı ilk provayı düğüne 4-6 hafta kala, son (kesin) provayı ise düğüne 5-10 gün kala yapmak. Böylece hem yeterli düzeltme payı kalır hem de gelinlik son haliyle vücuda tam oturur.'],
+];
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -57,28 +65,7 @@ const jsonLd = {
     },
     {
       '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Yaz düğünü için gelinlik tadilatına ne zaman başlamalıyım?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Haziran-Eylül arası yoğun düğün sezonunda randevular hızla doluyor. Gelinliğinizi elinize aldıktan sonra, düğün tarihinden en az 3-4 hafta önce ilk prova için randevu almanızı öneririz. Son dakika hafif düzeltmeler mümkün olsa da, korse ve bel daraltma gibi hassas işlemler için erken planlama en iyi sonucu verir.' },
-        },
-        {
-          '@type': 'Question',
-          name: 'Antalya\'nın sıcak ve nemli havası gelinlik kumaşını etkiler mi?',
-          acceptedAnswer: { '@type': 'Answer', text: 'Evet. Saten ve ipek karışımlı kumaşlar nem oranı yüksek günlerde hafifçe gevşeyebilir, tül ve dantel katmanları ise terleme ve nem nedeniyle vücuda daha farklı oturabilir. Bu yüzden yaz düğünlerinde son prova, mümkünse düğüne yakın bir tarihte ve günün sıcak saatlerinde yapılmalı.' },
-        },
-        {
-          '@type': 'Question',
-          name: '2026 yılında gelinlik tadilatı fiyatları ne kadar?',
-          acceptedAnswer: { '@type': 'Answer', text: `Boy ayarı ₺800'den, bel daraltma ₺800'den, korse/kapama onarımı ₺800'den, abiye tadilatı ₺800'den başlıyor. Kesin fiyat kumaşa ve yapılacak işleme göre ilk provada netleşir. ☎ ${PHONE}` },
-        },
-        {
-          '@type': 'Question',
-          name: 'Gelinliği düğünden hemen önce mi, yoksa aylar önce mi tadilata götürmeliyim?',
-          acceptedAnswer: { '@type': 'Answer', text: 'İdeali iki aşamalı gitmek: kilo ve vücut ölçüsü değişikliklerine karşı ilk provayı düğüne 4-6 hafta kala, son (kesin) provayı ise düğüne 5-10 gün kala yapmak. Böylece hem yeterli düzeltme payı kalır hem de gelinlik son haliyle vücuda tam oturur.' },
-        },
-      ],
+      mainEntity: FAQS.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
     },
   ],
 };
@@ -175,6 +162,16 @@ export default function BlogPost() {
           </a>{' '}
           faydalanabilirsiniz.
         </p>
+
+        <h2 style={{ fontSize: '1.3rem', fontWeight: 700, marginTop: '2rem', color: '#2C4A3E' }}>
+          5. Sık sorulan sorular
+        </h2>
+        {FAQS.map(([q, a]) => (
+          <div key={q}>
+            <h3 style={{ fontSize: '1.05rem', fontWeight: 700, margin: '1.2rem 0 .3rem', color: '#2C4A3E' }}>{q}</h3>
+            <p style={{ margin: 0 }}>{a}</p>
+          </div>
+        ))}
 
         <div style={{ marginTop: '2.5rem', padding: '1.5rem', background: '#f6f4ee', borderRadius: 14 }}>
           <p style={{ margin: 0, fontWeight: 600 }}>

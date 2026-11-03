@@ -32,6 +32,12 @@ const ANTALYA_ILCELER = [
   'Kundu','Boğazkent','Kadriye','Beldibi','Göynük','Tekirova',
 ].map(name => ({ '@type': 'City', name }));
 
+// SSS: görünür bölüm ve FAQPage şeması AYNI diziden üretilir.
+const FAQS: [string, string][] = [
+  ['Antalya özel tasarım ve logolu üniforma yaptırabilir miyiz?', `Evet, otel, restoran, okul, hastane ve güvenlik firmaları için firmanıza özel logo nakışlı veya baskılı üniforma üretimi yapıyoruz. WhatsApp: ${PHONE}`],
+  ['Üniforma imalatında minimum sipariş adedi var mı?', `Adet projeye göre belirlenir; az adetli özel siparişler ve yüksek adetli seri imalatlar proje bazında fiyatlandırılır. WhatsApp: ${PHONE}`],
+];
+
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -64,24 +70,7 @@ const jsonLd = {
     {
       '@type': 'FAQPage',
       '@id': `${SITE_URL}#faq`,
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Antalya özel tasarım ve logolu üniforma yaptırabilir miyiz?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: `Evet, otel, restoran, okul, hastane ve güvenlik firmaları için firmanıza özel logo nakışlı veya baskılı üniforma üretimi yapıyoruz. WhatsApp: ${PHONE}`,
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Üniforma imalatında minimum sipariş adedi var mı?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: `Adet projeye göre belirlenir; az adetli özel siparişler ve yüksek adetli seri imalatlar proje bazında fiyatlandırılır. WhatsApp: ${PHONE}`,
-          },
-        },
-      ],
+      mainEntity: FAQS.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
     },
   ],
 };
@@ -141,6 +130,15 @@ export default function UniformaImalatiPage() {
         <p className="text-lg text-gray-700 leading-relaxed mb-6">
           Terzi Can olarak Konyaaltı ve çevresindeki oteller, restoranlar, hastaneler, okullar ve güvenlik şirketleri için yüksek kaliteli kumaşlar ve özelleştirilebilir tasarımlarla profesyonel üniforma imalatı hizmeti sunuyoruz.
         </p>
+        <section aria-labelledby="sss-h" className="mb-8">
+          <h2 id="sss-h" className="text-2xl font-bold mb-4">Sık Sorulan Sorular</h2>
+          {FAQS.map(([q, a]) => (
+            <div key={q} className="mb-4">
+              <h3 className="text-lg font-semibold mb-1">{q}</h3>
+              <p className="text-gray-700 leading-relaxed">{a}</p>
+            </div>
+          ))}
+        </section>
       <OrnekGorselSeridi konu={'uniforma'} lang="tr" tema="acik" anahtarlar={['sef-mutfak-uniforma', 'erkek-gomlek-atolye', 'polar-yelek', 'sweatshirt-katli']} sayfaUrl="https://terzihizmeti.com.tr/antalya-uniforma-imalati" />
       <ReviewsBlock lang="tr" />
       </main>

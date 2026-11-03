@@ -19,6 +19,7 @@ import { zoneSeoTitles } from '@/lib/bolge-hizmet-matrisi-turist';
 import { SITE } from '@/lib/seo-data';
 import { OG_DEFAULT } from '@/lib/turist-keten';
 import { fitDesc } from '@/lib/meta-fit';
+import { hreflangFiyat, hreflangIletisim, hreflangSvc } from '@/lib/hreflang';
 import UretimLanding from '@/components/UretimLanding';
 import { UDATA, U_IDS, parseU, uMetadata } from '@/lib/uretim';
 
@@ -42,7 +43,7 @@ export async function generateMetadata({ params }: P): Promise<Metadata> {
     return {
       metadataBase: new URL(SITE), title: { absolute: title }, description: fitDesc(c.desc),
       robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
-      alternates: { canonical: url, languages: Object.fromEntries(ILANGS.map((l) => [INTL[l].hreflang, `${SITE}${fiyatUrl(l)}`])) },
+      alternates: { canonical: url, languages: hreflangFiyat() },
       openGraph: { title, description: fitDesc(c.desc), url, siteName: 'Terzi Can', locale: INTL[lang].locale, type: 'website', images: [{ url: OG_DEFAULT, width: 1200, height: 630, alt: title }] },
       twitter: { card: 'summary_large_image', title, description: fitDesc(c.desc), images: [OG_DEFAULT] },
       other: { 'geo.region': 'TR-07', 'geo.placename': 'Antalya' },
@@ -54,7 +55,7 @@ export async function generateMetadata({ params }: P): Promise<Metadata> {
     return {
       metadataBase: new URL(SITE), title: { absolute: title }, description: fitDesc(c.desc),
       robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
-      alternates: { canonical: url, languages: Object.fromEntries(ILANGS.map((l) => [INTL[l].hreflang, `${SITE}${iletisimUrl(l)}`])) },
+      alternates: { canonical: url, languages: hreflangIletisim() },
       openGraph: { title, description: fitDesc(c.desc), url, siteName: 'Terzi Can', locale: INTL[lang].locale, type: 'website', images: [{ url: OG_DEFAULT, width: 1200, height: 630, alt: title }] },
       twitter: { card: 'summary_large_image', title, description: fitDesc(c.desc), images: [OG_DEFAULT] },
       other: { 'geo.region': 'TR-07', 'geo.placename': 'Antalya' },
@@ -66,7 +67,7 @@ export async function generateMetadata({ params }: P): Promise<Metadata> {
     return {
       metadataBase: new URL(SITE), title: { absolute: title }, description: fitDesc(c.desc),
       robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
-      alternates: { canonical: url, languages: Object.fromEntries(ILANGS.map((l) => [INTL[l].hreflang, `${SITE}${svcUrl(l)}`])) },
+      alternates: { canonical: url, languages: hreflangSvc() },
       openGraph: { title, description: fitDesc(c.desc), url, siteName: 'Terzi Can', locale: INTL[lang].locale, type: 'website', images: [{ url: OG_DEFAULT, width: 1200, height: 630, alt: title }] },
       twitter: { card: 'summary_large_image', title, description: fitDesc(c.desc), images: [OG_DEFAULT] },
       other: { 'geo.region': 'TR-07', 'geo.placename': 'Antalya' },

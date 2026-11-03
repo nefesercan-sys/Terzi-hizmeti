@@ -692,7 +692,7 @@ const HIZMET_GORSEL: Record<string, GorselAnahtar[]> = {
   'kiyafet-tamiri': ['erkek-takim-olcu', 'beyaz-gomlek-katli', 'pilili-etek'], beden: ['erkek-takim-olcu', 'beyaz-gomlek-katli', 'pilili-etek'],
 };
 
-const HIZMET_KONU: Record<string, 'paca' | 'fermuar' | 'gelinlik' | 'hizmet'> = { paca: 'paca', kot: 'paca', pantolon: 'paca', abiye: 'gelinlik', fermuar: 'fermuar', 'gelinlik-abiye': 'gelinlik', 'elbise-dikim': 'gelinlik', 'elbise-tamir': 'gelinlik', 'gece-kiyafeti': 'gelinlik' };
+const HIZMET_KONU: Record<string, 'paca' | 'kot' | 'fermuar' | 'gelinlik' | 'hizmet'> = { paca: 'paca', kot: 'kot', pantolon: 'paca', abiye: 'gelinlik', fermuar: 'fermuar', 'gelinlik-abiye': 'gelinlik', 'elbise-dikim': 'gelinlik', 'elbise-tamir': 'gelinlik', 'gece-kiyafeti': 'gelinlik' };
 
 export function ServicePage({ lang, s }: { lang: Lang; s: Service }) {
   const u = UI[lang];

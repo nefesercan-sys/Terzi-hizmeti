@@ -15,9 +15,9 @@ const TODAY     = '2026-11-03';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Mont Tamiri ve Tadilatı ₺200 · Kısaltma, Daraltma, Fermuar · Antalya" },
+  title: { absolute: "Mont Tamiri ve Tadilatı ₺200 · Fermuar · Antalya" },
   description:
-    "Mont tamiri ve tadilatı: boy ve kol kısaltma, daraltma ₺200'den, fermuar değişimi ₺300'den. Normal iş aynı gün, acil 1–2 saat. Eve ve otele ücretsiz servis. ☎ " + PHONE,
+    "Mont boy ve kol kısaltma, daraltma ₺200'den; fermuar değişimi ₺300'den. Normal iş aynı gün, acil 1–2 saat. Eve ve otele ücretsiz. ☎ " + PHONE,
   keywords: fitKeywords([
     'mont tamiri', 'mont tadilatı', 'mont kısaltma', 'mont daraltma', 'mont kol kısaltma', 'mont tamiri Antalya', 'mont tadilatı fiyat', 'mont fermuarı değişimi', 'kaban tadilatı',
   ]),

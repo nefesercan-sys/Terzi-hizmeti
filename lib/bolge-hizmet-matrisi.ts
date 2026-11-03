@@ -35,7 +35,7 @@ const GROUPS: { id: string; label: string; ops: string[]; heads: ((n: string, l:
     heads: [(n) => `${n} yelek, tulum, eşofman tadilatı`, (n) => `${n} şort kısaltma, tulum daraltma`, (n, l) => `${l} yelek ve eşofman tamiri, dikimi`],
     intros: [(l, n, o) => `${l} yelek, tulum, eşofman ve şort için: ${o}.`, (l, n, o) => `${n} çevresinde ${o} yapıyoruz.`, (l, n, o) => `Yelek, tulum, eşofman ve şortta ${o}; ${n} için fotoğrafla fiyat alın.`] },
   { id: 'fermuar-dugme', label: 'fermuar, düğme ve astar',
-    ops: ['pantolon, mont, ceket ve çanta fermuarı değişimi (fermuarlı ve fermuarsız modeller)', 'sıkışan fermuar tamiri', 'düğme değişimi', 'astar değişimi (kazak ve hırka hariç)', 'sökük ve yırtık onarımı'],
+    ops: ['pantolon, mont, ceket ve çanta fermuarı değişimi', 'sıkışan fermuar tamiri', 'düğme değişimi', 'astar değişimi (kazak ve hırka hariç)', 'sökük ve yırtık onarımı'],
     heads: [(n) => `${n} fermuar değişimi ve tamiri`, (n) => `${n} fermuar, düğme, astar değişimi`, (n, l) => `${l} fermuarı bozulan kıyafet`],
     intros: [(l, n, o) => `${l} fermuar, düğme ve astar işleri: ${o}.`, (l, n, o) => `Fermuarı bozulan, düğmesi düşen ya da astarı yırtılan kıyafetiniz için ${l} ${o}.`, (l, n, o) => `${n} için: ${o}.`] },
   { id: 'deri', label: 'deri ceket, pantolon ve yelek',

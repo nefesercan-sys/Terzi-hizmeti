@@ -396,7 +396,7 @@ export default function TerziHizmetiPage() {
 
             {/* YABANCI MÜŞTERİ HIZLI ERİŞİM KARTLARI */}
             <div className="lang-cards-grid" id="foreign-lang-cards" aria-label="Language selection">
-              <div className="lang-card">
+              <div className="lang-card" lang="en">
                 <div className="lang-card-head">
                   <span className="lang-flag">🇬🇧 English</span>
                 </div>
@@ -404,7 +404,7 @@ export default function TerziHizmetiPage() {
                 <a href={WA_EN} target="_blank" rel="noopener noreferrer" className="lang-btn">Chat in English →</a>
               </div>
 
-              <div className="lang-card">
+              <div className="lang-card" lang="ru">
                 <div className="lang-card-head">
                   <span className="lang-flag">🇷🇺 Русский</span>
                 </div>
@@ -412,7 +412,7 @@ export default function TerziHizmetiPage() {
                 <a href={WA_RU} target="_blank" rel="noopener noreferrer" className="lang-btn">Написать по-русски →</a>
               </div>
 
-              <div className="lang-card">
+              <div className="lang-card" lang="de">
                 <div className="lang-card-head">
                   <span className="lang-flag">🇩🇪 Deutsch</span>
                 </div>
@@ -420,7 +420,7 @@ export default function TerziHizmetiPage() {
                 <a href={WA_DE} target="_blank" rel="noopener noreferrer" className="lang-btn">Auf Deutsch schreiben →</a>
               </div>
 
-              <div className="lang-card">
+              <div className="lang-card" lang="tr">
                 <div className="lang-card-head">
                   <span className="lang-flag">🇹🇷 Türkçe</span>
                 </div>

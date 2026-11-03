@@ -65,7 +65,7 @@ const BLURB: Record<ILang, Record<ZoneSlug, string>> = {
     kemer: 'Kemer to nadmorskie miasteczko, w którym góry Taurus opadają do morza, znane z mariny i kompleksów hotelowych. W skład rejonu wchodzą też Beldibi, Göynük i Çamyuva.',
     konyaalti: 'Konyaaltı, gdzie mieści się nasza pracownia, to hotele i aparthotele ułożone wzdłuż wybrzeża.',
     kundu: 'Kundu (Aksu), tuż na wschód od Lary, to strefa hotelowa z wieloma pięciogwiazdkowymi kompleksami all inclusive.',
-    muratpasa: 'Muratpaşa to centralny dystrykt Antalyi: obejmuje Kaleiçi, hotele w centrum, osiedle Meltem i część rejonu Lara. W Meltem odbiór i dowóz są bezpłatne.',
+    muratpasa: 'Muratpaşa to centralna dzielnica Antalyi: obejmuje Kaleiçi, hotele w centrum, osiedle Meltem i część rejonu Lara. W Meltem odbiór i dowóz są bezpłatne.',
     goynuk: 'Göynük, na północ od Kemer, to spokojny pas hoteli nad morzem, blisko kanionu Göynük.',
     antalya: 'Antalya ma strefy hotelowe na całym wybrzeżu: Konyaaltı, Lara, Kundu, Belek, Side, Kemer i Göynük. Obsługujemy hotele we wszystkich tych rejonach.',
   },

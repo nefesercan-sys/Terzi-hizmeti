@@ -1,10 +1,39 @@
 // Sayfa alt başlıkları (H2) + kısa açıklamalar, 10 dilde. {y} = yer adı (varsayılan: Antalya).
-// Yalnızca doğrulanmış bilgiler: paça/bel ₺200+, fermuar ₺300+, gelinlik/abiye ₺800+, acil 1–2 saat, normal aynı gün,
-// özel dikim modele/adede göre, her gün 08:00–23:00, WhatsApp'tan fotoğrafla fiyat, hizmet verilen bölgelerde ücretsiz otel alım-teslim.
+// Yalnızca doğrulanmış bilgiler: paça/bel ₺200+, fermuar ₺300+, gelinlik/abiye TADİLATI ₺800+, acil 1–2 saat, normal aynı gün,
+// özel dikim modele/adede göre (dikimde sabit fiyat yok: fotoğrafa ve istediğiniz modele göre), her gün 08:00–23:00,
+// WhatsApp'tan fotoğrafla fiyat, eve ve otele alım-teslim her bölgede ücretsiz.
 export type L10 = 'tr' | 'en' | 'de' | 'ru' | 'es' | 'fr' | 'pl' | 'uk' | 'nl' | 'ar';
-export type Konu = 'genel' | 'paca' | 'fermuar' | 'gelinlik' | 'keten' | 'uniforma' | 'promo' | 'otel' | 'terzi' | 'fiyat' | 'hizmet' | 'bolge' | 'terziFp' | 'hizmetFp';
+export type Konu = 'genel' | 'paca' | 'kot' | 'fermuar' | 'gelinlik' | 'keten' | 'uniforma' | 'promo' | 'otel' | 'terzi' | 'fiyat' | 'hizmet' | 'bolge' | 'terziFp' | 'hizmetFp';
 type Item = { h: Record<L10, string>; p: Record<L10, string> };
 const BASE: Record<Exclude<Konu, 'terziFp' | 'hizmetFp'>, Item[]> = {
+ "kot": [
+  {
+   "h": {
+    "tr": "{y} kot paça kısaltma fiyatı ve süresi",
+    "en": "Jeans hemming in {y}: price and time",
+    "de": "Jeans kürzen in {y}: Preis und Dauer",
+    "ru": "Подшив джинсов в {y}: цена и срок",
+    "es": "Acortar vaqueros en {y}: precio y plazo",
+    "fr": "Ourlet de jean à {y} : prix et délai",
+    "pl": "Skracanie jeansów w {y}: cena i czas",
+    "uk": "Підшивання джинсів у {y}: ціна й строк",
+    "nl": "Spijkerbroek korter maken in {y}: prijs en tijd",
+    "ar": "تقصير الجينز في {y}: السعر والمدة"
+   },
+   "p": {
+    "tr": "Kot paça kısaltma ₺200'den başlar; istenirse orijinal paça görünümü korunur. Acil işler 1–2 saatte, normal işler aynı gün teslim edilir.",
+    "en": "Jeans hemming starts from €10; the original hem can be kept on request. Urgent jobs are ready in 1–2 hours, normal jobs the same day.",
+    "de": "Jeans kürzen beginnt ab €10; auf Wunsch bleibt der Originalsaum erhalten. Eilige Aufträge sind in 1–2 Stunden fertig, normale am selben Tag.",
+    "ru": "Подшив джинсов — от €10; по желанию сохраняем оригинальный низ. Срочные заказы — за 1–2 часа, обычные — в тот же день.",
+    "es": "Acortar vaqueros cuesta desde €10; si lo desea, se conserva el bajo original. Los trabajos urgentes están listos en 1–2 horas y los normales el mismo día.",
+    "fr": "Le raccourcissement d’un jean commence à €10 ; l’ourlet d’origine peut être conservé. Les travaux urgents sont prêts en 1 à 2 heures, les autres le jour même.",
+    "pl": "Skracanie jeansów zaczyna się od €10; na życzenie zachowujemy oryginalny dół. Pilne zlecenia są gotowe w 1–2 godziny, zwykłe tego samego dnia.",
+    "uk": "Підшивання джинсів — від €10; за бажанням зберігаємо оригінальний низ. Термінові замовлення — за 1–2 години, звичайні — того ж дня.",
+    "nl": "Een spijkerbroek korter maken begint vanaf €10; op verzoek blijft de originele zoom behouden. Spoedwerk is klaar in 1–2 uur, gewoon werk dezelfde dag.",
+    "ar": "يبدأ تقصير الجينز من €10؛ ويمكن الإبقاء على الحاشية الأصلية عند الطلب. الأعمال العاجلة جاهزة خلال ساعة إلى ساعتين والعادية في اليوم نفسه."
+   }
+  }
+ ],
  "paca": [
   {
    "h": {
@@ -457,7 +486,7 @@ const BASE: Record<Exclude<Konu, 'terziFp' | 'hizmetFp'>, Item[]> = {
     "pl": "W obsługiwanych rejonach (Konyaaltı, Lara, Belek, Kemer, Side i okolice) odbiór i dostawa w hotelu są bezpłatne.",
     "uk": "У районах обслуговування (Коньяалти, Лара, Белек, Кемер, Сіде та околиці) забір і доставка в готель безкоштовні.",
     "nl": "In de gebieden waar we werken (Konyaaltı, Lara, Belek, Kemer, Side en omgeving) zijn ophalen en bezorgen in het hotel gratis.",
-    "ar": "في المناطق التي نخدمها (كونيالتي، لارا، بلك، كمر، سيدي والمناطق المحيطة) الاستلام والتسليم في الفندق مجاني."
+    "ar": "في المناطق التي نخدمها (كونيالتي، لارا، بيليك، كيمر، سيدي والمناطق المحيطة) الاستلام والتسليم في الفندق مجاني."
    }
   },
   {
@@ -753,7 +782,7 @@ const BASE: Record<Exclude<Konu, 'terziFp' | 'hizmetFp'>, Item[]> = {
     "pl": "W obsługiwanych rejonach (Konyaaltı, Lara, Belek, Kemer, Side i okolice) odbiór i dostawa w hotelu są bezpłatne.",
     "uk": "У районах обслуговування (Коньяалти, Лара, Белек, Кемер, Сіде та околиці) забір і доставка в готель безкоштовні.",
     "nl": "In de gebieden waar we werken (Konyaaltı, Lara, Belek, Kemer, Side en omgeving) zijn ophalen en bezorgen in het hotel gratis.",
-    "ar": "في المناطق التي نخدمها (كونيالتي، لارا، بلك، كمر، سيدي والمناطق المحيطة) الاستلام والتسليم في الفندق مجاني."
+    "ar": "في المناطق التي نخدمها (كونيالتي، لارا، بيليك، كيمر، سيدي والمناطق المحيطة) الاستلام والتسليم في الفندق مجاني."
    }
   },
   {
@@ -811,10 +840,25 @@ const YENI_FP = {
   "ar": "تقصير البنطلون واستبدال السحّاب وتضييق الخصر وتعديل فساتين الزفاف والسهرة والتفصيل الخاص. الأعمال العاجلة خلال ساعة إلى ساعتين والعادية في اليوم نفسه؛ ويُؤكَّد السعر عبر واتساب."
  }
 };
-export const ALT_BASLIKLAR: Record<Konu, Item[]> = { ...BASE, terziFp: [YENI_FP, BASE.terzi[1]], hizmetFp: [YENI_FP, BASE.hizmet[1]] };
+// kot sayfaları: kendi başlığı + paca[1] (boy ayarı) — "Подшив брюк" gibi yanlış hizmet adı çıkmasın
+const KOT_ITEMS: Item[] = [BASE.kot[0], BASE.paca[1]];
+export const ALT_BASLIKLAR: Record<Konu, Item[]> = { ...BASE, kot: KOT_ITEMS, terziFp: [YENI_FP, BASE.terzi[1]], hizmetFp: [YENI_FP, BASE.hizmet[1]] };
+
+/** Varsayılan yer adı (yalın hal). RU/UK şablonlarında {y} yalnızca "в/у {y}" kalıbında geçer; bu yüzden yer/locative tablosu kullanılır. */
+const YER_VARSAYILAN: Partial<Record<L10, string>> = { ru: 'Анталья', uk: 'Анталія', ar: 'أنطاليا' };
+/** RU/UK: yer adının "в/у ..." kalıbına uygun hali (yalın ad -> bulunma hali). Tabloda olmayan ad olduğu gibi kalır (çekimsiz adlar). */
+const YER_LOC: Partial<Record<L10, Record<string, string>>> = {
+  ru: { 'Анталья': 'Анталье', 'Белек': 'Белеке', 'Лара': 'Ларе', 'Гюзельоба': 'Гюзельобе', 'Кемер': 'Кемере', 'Сиде': 'Сиде', 'Кунду': 'Кунду', 'Коньяалты': 'Коньяалты', 'Гёйнюк': 'Гёйнюке', 'Гейнюк': 'Гёйнюке', 'Муратпаша': 'Муратпаше', 'Хурма': 'Хурме', 'Лиман': 'Лимане', 'Гюрсу': 'Гюрсу', 'Унджалы': 'Унджалы' },
+  uk: { 'Анталія': 'Анталії', 'Белек': 'Белеку', 'Лара': 'Ларі', 'Гюзельоба': 'Гюзельобі', 'Кемер': 'Кемері', 'Сіде': 'Сіде', 'Кунду': 'Кунду', 'Коньяалти': 'Коньяалти', 'Гейнюк': 'Гейнюку', 'Муратпаша': 'Муратпаші' },
+};
+const yerFormu = (lang: L10, yer?: string): string => {
+  const y = !yer || yer === 'Antalya' ? (YER_VARSAYILAN[lang] ?? 'Antalya') : yer;
+  return YER_LOC[lang]?.[y] ?? y;
+};
 
 /** Konuya ait alt başlıkları döndürür. Türkçe dışındaki dillerde fiyat (₺) içeren cümleler çıkarılır; yer adı {y} yerleştirilir. */
-export function altMetinler(konu: Konu | Konu[], lang: L10, yer = 'Antalya') {
+export function altMetinler(konu: Konu | Konu[], lang: L10, yerAd?: string) {
+  const yer = yerFormu(lang, yerAd);
   const konular = Array.isArray(konu) ? konu : [konu];
   const fiyatSayfasi = konular.includes('fiyat');
   return konular.flatMap((k) => ALT_BASLIKLAR[k]).map((a) => {

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Mont Fermuarı Değişimi Fiyatları ₺300 · Aynı Gün · Antalya" },
   description:
-    "Mont, kaban ve ceket fermuarı değişimi ₺300'den. Kalın ve su geçirmez montlar dahil. Normal iş aynı gün, acil 1–2 saat. Eve ve otele ücretsiz servis. ☎ " + PHONE,
+    "Mont, kaban ve ceket fermuarı değişimi ₺300'den; kalın ve su geçirmez montlar dahil. Normal iş aynı gün, acil 1–2 saat. ☎ " + PHONE,
   keywords: fitKeywords([
     'mont fermuarı değiştirme', 'mont fermuarı değişimi fiyatları', 'mont fermuar tamiri Antalya',
     'kaban fermuarı değişimi', 'ceket fermuarı değişimi', 'su geçirmez mont fermuarı',

@@ -58,6 +58,13 @@ export const metadata: Metadata = {
   },
 };
 
+const FAQS: [string, string][] = [
+  ['Do you speak English or Russian?', 'Yes — write to us on WhatsApp in English, Russian or German and we will reply.'],
+  ['Otelin içine girebiliyor musunuz? Lobide ölçü alınır mı?', 'Otel güvenliği ile mutabık kalınması şartıyla lobiye veya resepsiyona kadar gelip ölçünüzü alabiliriz. Odaya çıkış kuralları otelinize bağlıdır.'],
+  ['Kıyafetlerimi ne zaman teslim edersiniz? (Express service?)', 'Paça kısaltma, yırtık onarımı gibi basit tadilatlar için acil servis (1–2 saat) seçeneğimiz vardır. İhtiyacınıza göre WhatsApp\'tan süre teyidi alabilirsiniz.'],
+  ['Sadece tadilat mı yoksa sıfırdan ölçüye göre dikim yapıyor musunuz?', 'Tadilat (Alterations) hizmetlerinin yanı sıra, eğer Antalya tatiliniz süresince özel tasarım takım elbise veya abiye istiyorsanız sıfırdan dikim (Bespoke Tailoring) hizmetimiz de mevcuttur.'],
+];
+
 const jsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -73,9 +80,7 @@ const jsonLd = {
     {
       '@type': 'FAQPage',
       '@id': `${PAGE_URL}#faq`,
-      mainEntity: [
-        { '@type': 'Question', name: 'Otelin lobisine gelip ölçü alabiliyor musunuz?', acceptedAnswer: { '@type': 'Answer', text: 'Evet, Belek, Lara, Kundu ve Kemer bölgelerindeki otellerin lobisinde veya resepsiyonunda ölçü alımı yapıyoruz.' } },
-      ],
+      mainEntity: FAQS.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
     }
   ],
 };
@@ -314,22 +319,12 @@ export default function MobileTailorHotelPage() {
                 <span className="eyebrow">SSS / FAQ</span>
                 <h2 className="sec-h" id="faq-h">Sıkça Sorulan Sorular</h2>
               </div>
-              <details className="faq-item">
-                <summary className="faq-q">Do you speak English or Russian?</summary>
-                <p className="faq-a">Yes — write to us on WhatsApp in English, Russian or German and we will reply.</p>
-              </details>
-              <details className="faq-item">
-                <summary className="faq-q">Otelin içine girebiliyor musunuz? Lobide ölçü alınır mı?</summary>
-                <p className="faq-a">Otel güvenliği ile mutabık kalınması şartıyla lobiye veya resepsiyona kadar gelip ölçünüzü alabiliriz. Odaya çıkış kuralları otelinize bağlıdır.</p>
-              </details>
-              <details className="faq-item">
-                <summary className="faq-q">Kıyafetlerimi ne zaman teslim edersiniz? (Express service?)</summary>
-                <p className="faq-a">Paça kısaltma, yırtık onarımı gibi basit tadilatlar için acil servis (1–2 saat) seçeneğimiz vardır. İhtiyacınıza göre WhatsApp'tan süre teyidi alabilirsiniz.</p>
-              </details>
-              <details className="faq-item">
-                <summary className="faq-q">Sadece tadilat mı yoksa sıfırdan ölçüye göre dikim yapıyor musunuz?</summary>
-                <p className="faq-a">Tadilat (Alterations) hizmetlerinin yanı sıra, eğer Antalya tatiliniz süresince özel tasarım takım elbise veya abiye istiyorsanız sıfırdan dikim (Bespoke Tailoring) hizmetimiz de mevcuttur.</p>
-              </details>
+              {FAQS.map(([q, a]) => (
+                <details className="faq-item" key={q}>
+                  <summary className="faq-q">{q}</summary>
+                  <p className="faq-a">{a}</p>
+                </details>
+              ))}
             </div>
           </section>
         </main>

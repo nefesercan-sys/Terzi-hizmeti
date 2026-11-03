@@ -219,7 +219,7 @@ export default function MontFermuarPage() {
               </div>
             ))}
             <p style={{ marginTop: '1.2rem' }}>
-              Pantolon, kot ve çanta fermuarı için <a href="/konyaalti-fermuar-tamiri">fermuar tamiri sayfamıza</a>, genel fiyatlar için <a href="/antalya-terzi-fiyatlari">terzi fiyat listesine</a> bakabilirsiniz.
+              Mont kısaltma, daraltma ve tamir için <a href="/mont-tamiri-tadilati-antalya">mont tamiri ve tadilatı</a>; pantolon, kot ve çanta fermuarı için <a href="/konyaalti-fermuar-tamiri">fermuar tamiri sayfamıza</a>, genel fiyatlar için <a href="/antalya-terzi-fiyatlari">terzi fiyat listesine</a> bakabilirsiniz.
             </p>
           </div>
         </section>

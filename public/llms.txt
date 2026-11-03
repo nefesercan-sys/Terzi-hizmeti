@@ -34,6 +34,7 @@ This file lists the main pages of the site for AI assistants and answer engines.
 - [All services (German)](https://terzihizmeti.com.tr/de/schneider-leistungen): hub in German
 - [Trouser hemming in Konyaaltı](https://terzihizmeti.com.tr/konyaalti-paca-kisaltma): paça kısaltma
 - [Zipper repair in Konyaaltı](https://terzihizmeti.com.tr/konyaalti-fermuar-tamiri): fermuar değişimi ve tamiri
+- [Coat and jacket repair and alteration (Turkish)](https://terzihizmeti.com.tr/mont-tamiri-tadilati-antalya): mont kısaltma, daraltma, tamir, fermuar, from ₺200
 - [Coat and jacket zipper replacement (Turkish)](https://terzihizmeti.com.tr/mont-fermuar-degisimi-antalya): mont, kaban ve ceket fermuarı değişimi, from ₺300
 - [Bag zipper repair (Turkish)](https://terzihizmeti.com.tr/canta-fermuar-tamiri-antalya): çanta, sırt çantası ve valiz fermuarı, from ₺300
 - [Leather jacket, trousers and vest repair (Turkish)](https://terzihizmeti.com.tr/deri-ceket-tadilati-antalya): deri ceket, pantolon, yelek tadilatı, from ₺400

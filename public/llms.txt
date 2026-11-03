@@ -36,7 +36,10 @@ This file lists the main pages of the site for AI assistants and answer engines.
 - [Zipper repair in Konyaaltı](https://terzihizmeti.com.tr/konyaalti-fermuar-tamiri): fermuar değişimi ve tamiri
 - [Coat and jacket zipper replacement (Turkish)](https://terzihizmeti.com.tr/mont-fermuar-degisimi-antalya): mont, kaban ve ceket fermuarı değişimi, from ₺300
 - [Bag zipper repair (Turkish)](https://terzihizmeti.com.tr/canta-fermuar-tamiri-antalya): çanta, sırt çantası ve valiz fermuarı, from ₺300
-- [Leather jacket alteration (Turkish)](https://terzihizmeti.com.tr/deri-ceket-tadilati-antalya): deri ceket daraltma, kol kısaltma, onarım; price by photo
+- [Leather jacket, trousers and vest repair (Turkish)](https://terzihizmeti.com.tr/deri-ceket-tadilati-antalya): deri ceket, pantolon, yelek tadilatı, from ₺400
+- [Denim trouser hemming (Turkish)](https://terzihizmeti.com.tr/kot-pantolon-paca-kisaltma-antalya): kot paça kısaltma, orijinal paça, daraltma, from ₺200
+- [Denim jacket alteration (Turkish)](https://terzihizmeti.com.tr/kot-ceket-mont-tadilati-antalya): kot ceket ve mont kısaltma, daraltma, from ₺200
+- [Denim skirt hemming (Turkish)](https://terzihizmeti.com.tr/kot-etek-kisaltma-daraltma-antalya): kot etek kısaltma ve daraltma, from ₺200
 - [Wedding dress alterations](https://terzihizmeti.com.tr/antalya-gelinlik-tadilati): gelinlik ve abiye tadilatı
 - [Uniform manufacturing](https://terzihizmeti.com.tr/antalya-uniforma-imalati): hotel, restaurant and school uniforms
 - [Linen and cotton custom tailoring (Turkish)](https://terzihizmeti.com.tr/keten-pamuk-ozel-dikim): made to measure in natural fabrics

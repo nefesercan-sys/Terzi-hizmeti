@@ -1,6 +1,6 @@
 // ============================================================
 // lib/district-copy.ts — bölge sayfaları için doğrudan cevap paragrafı + doğal soru kalıplı SSS havuzu (tr/en/ru/de)
-// Süreler lib/delivery.ts'ten; fiyatlar sitede zaten yayınlanan başlangıç fiyatlarıdır (₺200 / ₺300 / ₺800 tadilat); DİKİMDE sabit fiyat yoktur (lib/facts.ts BY_PHOTO_MODEL).
+// Süreler lib/delivery.ts'ten; fiyatlar sitede zaten yayınlanan başlangıç fiyatlarıdır (₺200 / ₺300 tadilat; abiye/gelinlik tadilatı fotoğrafa veya işin detayına göre); DİKİMDE sabit fiyat yoktur (lib/facts.ts BY_PHOTO_MODEL).
 // Eve ve otele alım-teslim her bölgede ücretsiz (isFreeService her zaman true).
 // SSS bölgeye göre seçilir (slug karması) → sayfalar aynı 5 soruyu tekrarlamaz.
 // ============================================================
@@ -83,7 +83,7 @@ const POOL: { id: string; f: Record<Lang, (loc: string, n: string, d: District) 
     de: (loc) => [`Kann ich ${loc} Kleidung nach Maß nähen lassen?`, `Ja. Wir nähen Kleider, Hemden, Hosen und Röcke nach Ihren Maßen; bei Sommerstoffen aus Leinen und Baumwolle legen wir Modell und Größe gemeinsam fest. ${DELIVERY.de.custom} Maßanfertigung hat keinen Festpreis: Der Preis richtet sich nach Foto und gewünschtem Modell.`],
   } },
   { id: 'wedding', f: {
-    tr: (loc) => [`${loc} gelinlik veya abiye tadilatı yapılıyor mu?`, `Evet. Gelinlik tadilatı ₺800'den, abiye tadilatı ₺800'den başlar; kesin fiyat fotoğrafa ve işin kapsamına göre verilir. Abiye tadilatı aynı gün teslim edilir, gelinlikte süre işin kapsamına göre netleşir.`],
+    tr: (loc) => [`${loc} gelinlik veya abiye tadilatı yapılıyor mu?`, `Evet. Fiyat fotoğrafa veya işin detayına göre belirlenir (KDV dahil değildir). Gelinlik ve abiye tadilatı aynı gün veya duruma göre 1–2 günde teslim edilir.`],
     en: (loc) => [`Do you alter wedding or evening dresses ${loc}?`, 'Yes. We alter evening dresses and wedding dresses; the exact price depends on a photo and the scope of work. Evening dresses are ready the same day; for wedding dresses the time depends on the work.'],
     ru: (loc) => [`Подгоняете ли вы свадебные и вечерние платья ${loc}?`, 'Да. Мы подгоняем вечерние и свадебные платья; точная цена зависит от фото и объёма работ. Вечерние платья готовы в тот же день, для свадебных срок зависит от работы.'],
     de: (loc) => [`Ändern Sie ${loc} auch Braut- und Abendkleider?`, 'Ja. Wir ändern Abend- und Brautkleider; der genaue Preis hängt von Foto und Aufwand ab. Abendkleider sind am selben Tag fertig, beim Brautkleid richtet sich die Dauer nach dem Umfang.'],

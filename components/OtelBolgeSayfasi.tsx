@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { HOTEL_NOTE, PAYMENT_NOTE } from '@/lib/facts';
 import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
 import { priceRowsFor, type FLang } from '@/components/TerziFiyatlariSayfasi';
 import Link from 'next/link';
@@ -301,6 +302,8 @@ export default function OtelBolgeSayfasi({ lang, region, allRegions, basePath, m
             </ol>
           </div>
         </section>
+
+        <p style={{ textAlign: 'center', margin: '1rem auto', maxWidth: 740, fontSize: '.95rem', padding: '0 1rem' }}>{HOTEL_NOTE[lang]} {PAYMENT_NOTE[lang]}</p>
 
         <OrnekGorselSeridi konu="bolge" yer={region.name} lang={lang} anahtarlar={['eve-gelen-terzi', 'erkek-takim-olcu']} sayfaUrl={`https://terzihizmeti.com.tr${basePath}/${region.slug}`} />
 

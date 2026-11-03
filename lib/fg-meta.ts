@@ -2,7 +2,7 @@
 // EN / RU / DE sayfalar için bölge ve hizmet başına ELLE yazılmış, birbirinden FARKLI başlık / açıklama / anahtar kelime.
 // Her yakın bölge ayrı bir ihtiyaca odaklanır (tamir-tadilat, abiye/gelinlik, takım elbise, yırtık onarımı, keten-pamuk özel dikim,
 // kot/paça, mont/deri...). Hem tamir-tadilat hem özel dikim (keten, pamuk; bay, bayan) kapsanır.
-// Yalnızca doğrulanmış bilgi: paça ₺200'den, fermuar ₺300'den, abiye ve gelinlik tadilatı ₺800'den; dikimde sabit fiyat yok (fotoğrafa ve modele göre); eve ve otele her bölgede ücretsiz servis.
+// Yalnızca doğrulanmış bilgi: paça ₺200'den, fermuar ₺300'den, abiye ve gelinlik tadilatı fotoğrafa veya işin detayına göre; dikimde sabit fiyat yok (fotoğrafa ve modele göre); eve ve otele her bölgede ücretsiz servis.
 // Bölgede kayıt yoksa sayfa lib/seo-angles.ts şablonuna döner.
 // ============================================================
 

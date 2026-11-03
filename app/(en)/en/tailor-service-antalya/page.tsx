@@ -83,7 +83,6 @@ const jsonLd = {
           { '@type': 'Offer', price: '10', priceCurrency: 'EUR', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Hemming' } },
           { '@type': 'Offer', price: '15', priceCurrency: 'EUR', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Zipper Replacement' } },
           { '@type': 'Offer', price: '10', priceCurrency: 'EUR', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Waist Taking In' } },
-          { '@type': 'Offer', price: '40', priceCurrency: 'EUR', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Wedding & Evening Dress Alterations' } },
         ],
       },
     },

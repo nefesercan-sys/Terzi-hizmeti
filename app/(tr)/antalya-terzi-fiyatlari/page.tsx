@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Antalya Terzi Fiyatları 2026 · Paça ₺200, Fermuar ₺300" },
   description:
-    "Antalya terzi fiyatları 2026: paça ₺200, bel ₺200, fermuar ₺300, abiye-gelinlik tadilatı ₺800'den; dikim fotoğrafa ve modele göre. ☎ " + PHONE,
+    "Antalya terzi fiyatları 2026: paça ₺200, bel ₺200, fermuar ₺300, abiye-gelinlik tadilatı fotoğrafa veya işin detayına göre; dikim fotoğrafa ve modele göre. ☎ " + PHONE,
   keywords: fitKeywords([
     'Antalya terzi', 'terzi fiyatları', 'terzi fiyat listesi 2026', 'Antalya terzi fiyatları',
     'elbise diktirmek', 'elbise tadilatı', 'elbisem yırtıldı', 'bel daraltma', 'paça kısaltma fiyatı',
@@ -59,7 +59,7 @@ const QUICK: { q: string; a: string; price: string; href: string; cta: string }[
   { q: 'Deri ceket, pantolon veya yelek tamiri', a: 'Daraltma, kısaltma ve onarım; net fiyat fotoğrafa göre.', price: '₺400\'den', href: '/deri-ceket-tadilati-antalya', cta: 'Deri tadilat' },
   { q: 'Kot paça, kot ceket veya kot etek kısaltma', a: 'Orijinal paça görünümü korunur; daraltma ve kısaltma.', price: '₺200\'den', href: '/kot-pantolon-paca-kisaltma-antalya', cta: 'Kot tadilat' },
   { q: 'Elbise diktirmek / kendime elbise dikmek', a: 'Ölçü, model ve kumaş seçimi, prova ve teslim. Fotoğrafını gönderin.', price: 'Fotoğrafa ve istediğiniz modele göre', href: '#dikim', cta: 'Özel dikim' },
-  { q: 'Gelinlik ve abiye tadilatı', a: 'Hassas daraltma, boy ve askı ayarı; prova randevusu.', price: '₺800\'den', href: '/antalya-gelinlik-tadilati', cta: 'Gelinlik tadilatı' },
+  { q: 'Gelinlik ve abiye tadilatı', a: 'Hassas daraltma, boy ve askı ayarı; prova randevusu.', price: 'Fotoğrafa göre', href: '/antalya-gelinlik-tadilati', cta: 'Gelinlik tadilatı' },
   { q: 'Adrese veya otele gelen terzi', a: 'Ölçüyü adresinizde alırız, işi atölyede yapar, geri teslim ederiz.', price: 'Ev ve otele her bölgede ücretsiz', href: '/otele-gelen-terzi-antalya', cta: 'Otele gelen terzi' },
   { q: 'Pamuklu, doğal kumaştan dikim', a: 'Keten ve pamuktan özel dikim ve seri üretim yapılır.', price: 'Fotoğrafa göre', href: '/keten-pamuk-ozel-dikim', cta: 'Keten & pamuk' },
   { q: 'Model, tasarım, dikim atölyesi, seri imalat', a: 'Önce numune, onaydan sonra seri imalat ve üretim takibi (adet: modele göre teklif, proje bazında netleşir).', price: 'Teklif', href: '/anavera-tekstil', cta: 'Anavera Tekstil' },

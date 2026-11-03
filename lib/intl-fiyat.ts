@@ -4,7 +4,7 @@
 // Kurallar: € fiyatlar "başlangıç" fiyatıdır (sahip kararı); gelinlik DİKİMİ yok; deri/kot yalnız tamir; eve ve otele alım-teslim ücretsiz.
 // ============================================================
 import type { ILang } from '@/lib/intl';
-import { eurText, BY_PHOTO_MODEL } from '@/lib/facts';
+import { eurText, BY_PHOTO_MODEL, BY_PHOTO_OR_JOB } from '@/lib/facts';
 
 export type FiyatCopy = {
   slug: string; title: string; desc: string; h1: string; lead: string; back: string; t1: string; t2: string;
@@ -12,9 +12,9 @@ export type FiyatCopy = {
 };
 /** rows sırası ile birebir: hangi fiyat anahtarı hangi satıra denk gelir. */
 /** İlk 6 satır tadilat (sabit başlangıç fiyatı), kalan 4 satır dikim: fiyat YAZILMAZ (null). */
-export const FIYAT_KEYS = ['hem', 'waist', 'sleeve', 'zipperPants', 'zipperCoat', 'eveningWeddingAlter', null, null, null, null] as const;
+export const FIYAT_KEYS = ['hem', 'waist', 'sleeve', 'zipperPants', 'zipperCoat', null, null, null, null, null] as const;
 export const FIYAT_SPLIT = 6;
-export const fiyatDeger = (i: number, lang: ILang): string => { const k = FIYAT_KEYS[i]; return k ? eurText(k) : BY_PHOTO_MODEL[lang]; };
+export const fiyatDeger = (i: number, lang: ILang): string => { const k = FIYAT_KEYS[i]; if (i === 5) return BY_PHOTO_OR_JOB[lang]; return k ? eurText(k) : BY_PHOTO_MODEL[lang]; };
 
 export const FIYAT: Record<ILang, FiyatCopy> = {
   es: {

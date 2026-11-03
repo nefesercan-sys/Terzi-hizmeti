@@ -7,7 +7,7 @@ import { SVC, svcUrl } from '@/lib/intl-services';
 import { FIYAT, fiyatUrl } from '@/lib/intl-fiyat';
 import { ILETISIM, iletisimUrl } from '@/lib/intl-iletisim';
 import { ZCOPY, ZONE_SLUGS, zoneData, zoneUrl } from '@/lib/intl-zones';
-import { eurText, BY_PHOTO_MODEL } from '@/lib/facts';
+import { eurText, BY_PHOTO_MODEL, BY_PHOTO_OR_JOB } from '@/lib/facts';
 import { waLink, businessNode, OG_DEFAULT } from '@/lib/turist-keten';
 
 const C = { green: '#2C4A3E', gold: '#D4B07A', cream: '#FAF7F2', sand: '#F2EDE4', ink: '#1C1814', muted: '#6B5F53', line: 'rgba(44,74,62,.15)' };
@@ -105,7 +105,7 @@ export default function IntlLanding({ lang }: { lang: ILang }) {
           <li>{PRICE_T[lang].hem}: {eurText('hem')}</li>
           <li>{PRICE_T[lang].zipP}: {eurText('zipperPants')}</li>
           <li>{PRICE_T[lang].zipC}: {eurText('zipperCoat')}</li>
-          <li>{PRICE_T[lang].dress}: {eurText('eveningWeddingAlter')}</li>
+          <li>{PRICE_T[lang].dress}: {BY_PHOTO_OR_JOB[lang]}</li>
           <li>{PRICE_T[lang].sew}: {BY_PHOTO_MODEL[lang]}</li>
         </ul>
         <p style={{ margin: '.8rem 0 0', color: C.muted, fontSize: '.92rem' }}>{PRICE_T[lang].note}</p>

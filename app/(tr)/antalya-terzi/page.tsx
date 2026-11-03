@@ -160,10 +160,10 @@ interface LangLabel {
 }
 
 const LANG_LABELS: Record<Lang, LangLabel> = {
-  tr: { name: 'Türkçe', flag: '🇹🇷', note: 'Fiyatlar başlangıç fiyatıdır, kumaş ve işçilik durumuna göre değişebilir. KDV dahildir.' },
-  en: { name: 'English', flag: '🇬🇧', note: 'Prices are starting prices and may vary depending on fabric and workmanship. VAT included.' },
-  ru: { name: 'Русский', flag: '🇷🇺', note: 'Цены указаны от, могут меняться в зависимости от ткани и сложности работы. НДС включён.' },
-  de: { name: 'Deutsch', flag: '🇩🇪', note: 'Die Preise sind ab-Preise, können je nach Stoff und Arbeitsaufwand variieren. Inklusive MwSt.' },
+  tr: { name: 'Türkçe', flag: '🇹🇷', note: 'Fiyatlar başlangıç fiyatıdır, kumaş ve işçilik durumuna göre değişebilir. KDV dahil değildir. Ödeme: tüm para birimleriyle, nakit veya kartla.' },
+  en: { name: 'English', flag: '🇬🇧', note: 'Prices are starting prices and may vary depending on fabric and workmanship. VAT not included. Payment in any currency, cash or card.' },
+  ru: { name: 'Русский', flag: '🇷🇺', note: 'Цены указаны от, могут меняться в зависимости от ткани и сложности работы. НДС не включён. Оплата в любой валюте, наличными или картой.' },
+  de: { name: 'Deutsch', flag: '🇩🇪', note: 'Die Preise sind ab-Preise, können je nach Stoff und Arbeitsaufwand variieren. MwSt. nicht inklusive. Zahlung in jeder Währung, bar oder mit Karte.' },
 };
 
 interface RepairCategory {
@@ -184,7 +184,7 @@ const REPAIR_CATEGORIES: Record<Lang, RepairCategory[]> = {
       rows: [['Fermuar Değişimi (Pantolon/Kot)', '₺300+'], ['Fermuar Değişimi (Mont/Ceket)', '₺300+']] },
     { icon: '📏', title: 'Tadilat Hizmetleri', keyword: 'paça kısaltma Antalya · bel daraltma Konyaaltı',
       desc: 'Kıyafetinizi vücudunuza tam oturtan hassas ölçü ayarları.',
-      rows: [['Paça Kısaltma (Pantolon/Kot/Etek)', '₺200+'], ['Bel Daraltma', '₺200+'], ['Kol Kısaltma', '₺200+'], ['Elbise / Ceket Daraltma', '₺200+'], ['Gelinlik & Abiye Tadilatı', '₺800+']] },
+      rows: [['Paça Kısaltma (Pantolon/Kot/Etek)', '₺200+'], ['Bel Daraltma', '₺200+'], ['Kol Kısaltma', '₺200+'], ['Elbise / Ceket Daraltma', '₺200+'], ['Gelinlik & Abiye Tadilatı', 'Fotoğrafa göre']] },
   ],
   en: [
     { icon: '✂️', title: 'Tailoring Services', keyword: 'tailor Antalya · custom-fit sewing Konyaaltı',
@@ -440,7 +440,7 @@ export default function KonyaaltiTailorServicePage() {
                   <div className="wk-icon" aria-hidden="true">💍</div>
                   <h3 className="wk-tr">Gelinlik Tadilatı Antalya</h3>
                   <span className="wk-en">Wedding Dress Alterations</span>
-                  <p className="wk-desc">Hassas daraltma, boy ayarı, korse onarımı — ₺800&apos;den.</p>
+                  <p className="wk-desc">Hassas daraltma, boy ayarı, korse onarımı — fiyat fotoğrafa veya işin detayına göre.</p>
                   <span style={{ fontSize: '.76rem', color: '#C9A96E', fontWeight: 700 }}>Fiyatları Gör <span aria-hidden="true">→</span></span>
                 </a>
                 <a href="/antalya-uniforma-imalati" className="wk-card" style={{ display: 'block' }}>

@@ -83,7 +83,6 @@ const jsonLd = {
           { '@type': 'Offer', price: '10', priceCurrency: 'EUR', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Укорачивание' } },
           { '@type': 'Offer', price: '15', priceCurrency: 'EUR', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Замена молнии' } },
           { '@type': 'Offer', price: '10', priceCurrency: 'EUR', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Заужение талии' } },
-          { '@type': 'Offer', price: '40', priceCurrency: 'EUR', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Подгонка свадебного/вечернего платья' } },
         ],
       },
     },

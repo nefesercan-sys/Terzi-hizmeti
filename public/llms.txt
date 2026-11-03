@@ -4,6 +4,8 @@
 
 This file lists the main pages of the site for AI assistants and answer engines. The main pages exist in Turkish, English, Russian and German; short landing pages also exist in Spanish, French, Polish, Ukrainian, Dutch and Arabic (listed at the end). Prefer the page in the user's language. A longer question-and-answer guide with verified facts is in llms-full.txt.
 
+Payment is accepted in all currencies, in cash or by card. Prices do not include VAT (KDV dahil değildir). Terzi Can has no partnership with any hotel; it serves all hotels in Antalya (Otellerle ortaklığımız yoktur; Antalya'daki tüm otellere hizmet veriyoruz).
+
 ## Main pages
 
 - [Homepage (Turkish)](https://terzihizmeti.com.tr/): Terzi Can overview, services, contact

@@ -204,7 +204,7 @@ export default function Page() {
               </div>
             ))}
             <p style={{ marginTop: '1.2rem' }}>
-              Fermuar için <a href="/mont-fermuar-degisimi-antalya">mont fermuarı değişimi</a>, kot mont için <a href="/kot-ceket-mont-tadilati-antalya">kot ceket ve mont</a>, deri için <a href="/deri-ceket-tadilati-antalya">deri ceket tadilatı</a>, genel fiyatlar için <a href="/antalya-terzi-fiyatlari">terzi fiyat listesine</a> bakabilirsiniz.
+              Fermuar için <a href="/mont-fermuar-degisimi-antalya">mont fermuarı değişimi</a>, uzun kaban için <a href="/kaban-palto-tadilati-antalya">kaban ve palto tadilatı</a>, <a href="/yelek-tamiri-tadilati-antalya">yelek tamiri</a>, kot mont için <a href="/kot-ceket-mont-tadilati-antalya">kot ceket ve mont</a>, deri için <a href="/deri-ceket-tadilati-antalya">deri ceket tadilatı</a>, genel fiyatlar için <a href="/antalya-terzi-fiyatlari">terzi fiyat listesine</a> bakabilirsiniz.
             </p>
           </div>
         </section>

@@ -1,9 +1,10 @@
 // lib/value-props.ts
-// Slogan, rozet ve hazır WhatsApp mesajlarının TEK kaynağı (4 dil).
+// Slogan, rozet ve hazır WhatsApp mesajlarının TEK kaynağı (10 dil; es/fr/pl/uk/nl/ar çevirileri ana dili konuşan biri tarafından gözden geçirilmelidir).
 // Kural: burada gerçek olmayan hiçbir vaat yok (7/24, "2 dakikada fiyat", "1–2 günde teslim"
 // gibi süre garantileri çıkarıldı). Bir vaadi doğru yapabiliyorsan buraya yazabilirsin.
 
-export type Lang = 'tr' | 'en' | 'de' | 'ru';
+export type Lang = 'tr' | 'en' | 'de' | 'ru' | 'es' | 'fr' | 'pl' | 'uk' | 'nl' | 'ar';
+export const INTL6 = ['es', 'fr', 'pl', 'uk', 'nl', 'ar'] as const;
 
 export interface ValueProp {
   id: 'photo-quote' | 'hotel' | 'doorstep';
@@ -49,6 +50,54 @@ export const VALUE_PROPS: Record<Lang, ValueProp[]> = {
     { id: 'doorstep', slogan: 'Заберём одежду и вернём по вашему адресу', badge: 'Выездной сервис', actionText: 'Заказать забор вещей',
       waTemplate: 'Здравствуйте, хочу, чтобы одежду забрали с моего адреса и вернули после ремонта.' },
   ],
+  es: [
+    { id: 'photo-quote', slogan: 'Envíe una foto por WhatsApp y le decimos el precio', badge: 'Precio por foto', actionText: 'Enviar foto, pedir precio',
+      waTemplate: 'Hola, le envío una foto de mi prenda. ¿Puede indicarme el precio del arreglo necesario?' },
+    { id: 'hotel', slogan: 'Llame a un sastre a su hotel: prueba en el lugar', badge: 'Sastre al hotel', actionText: 'Sastre a mi hotel',
+      waTemplate: 'Hola, quiero que un sastre venga a mi hotel en Antalya. Le envío el nombre y la ubicación.' },
+    { id: 'doorstep', slogan: 'Recogida y entrega de la prenda en su dirección', badge: 'Servicio a domicilio', actionText: 'Pedir recogida',
+      waTemplate: 'Hola, quiero que recojan mi prenda en mi dirección y me la entreguen después del arreglo.' },
+  ],
+  fr: [
+    { id: 'photo-quote', slogan: 'Envoyez une photo sur WhatsApp, recevez le prix', badge: 'Prix sur photo', actionText: 'Envoyer la photo',
+      waTemplate: 'Bonjour, je vous envoie une photo de mon vêtement. Pouvez-vous m\'indiquer le prix de la retouche ?' },
+    { id: 'hotel', slogan: 'Un tailleur à votre hôtel : essayage sur place', badge: 'Tailleur à l\'hôtel', actionText: 'Tailleur à mon hôtel',
+      waTemplate: 'Bonjour, je souhaite qu\'un tailleur vienne à mon hôtel à Antalya. Je vous envoie le nom et l\'adresse.' },
+    { id: 'doorstep', slogan: 'Collecte et livraison du vêtement à votre adresse', badge: 'Service à domicile', actionText: 'Demander la collecte',
+      waTemplate: 'Bonjour, je souhaite que mon vêtement soit collecté à mon adresse puis livré après la retouche.' },
+  ],
+  pl: [
+    { id: 'photo-quote', slogan: 'Wyślij zdjęcie na WhatsApp, podamy cenę', badge: 'Cena po zdjęciu', actionText: 'Wyślij zdjęcie',
+      waTemplate: 'Dzień dobry, wysyłam zdjęcie mojej odzieży. Jaka będzie cena poprawki?' },
+    { id: 'hotel', slogan: 'Krawiec w Twoim hotelu: przymiarka na miejscu', badge: 'Krawiec do hotelu', actionText: 'Krawiec do mojego hotelu',
+      waTemplate: 'Dzień dobry, chcę wezwać krawca do mojego hotelu w Antalyi. Wyślę nazwę i lokalizację.' },
+    { id: 'doorstep', slogan: 'Odbiór i dostawa odzieży pod Twój adres', badge: 'Serwis pod adres', actionText: 'Zamów odbiór',
+      waTemplate: 'Dzień dobry, chcę, aby odzież została odebrana z mojego adresu i dostarczona po poprawce.' },
+  ],
+  uk: [
+    { id: 'photo-quote', slogan: 'Надішліть фото у WhatsApp: швидко назвемо ціну', badge: 'Ціна за фото', actionText: 'Надіслати фото',
+      waTemplate: 'Добрий день, надсилаю фото одягу. Скільки коштуватиме потрібна робота?' },
+    { id: 'hotel', slogan: 'Кравець до вашого готелю: примірка на місці', badge: 'Кравець до готелю', actionText: 'Кравець до мого готелю',
+      waTemplate: 'Добрий день, хочу викликати кравця до мого готелю в Анталії. Надішлю назву та локацію.' },
+    { id: 'doorstep', slogan: 'Заберемо одяг і повернемо за вашою адресою', badge: 'Виїзний сервіс', actionText: 'Замовити забір речей',
+      waTemplate: 'Добрий день, хочу, щоб одяг забрали з моєї адреси та повернули після переробки.' },
+  ],
+  nl: [
+    { id: 'photo-quote', slogan: 'Stuur een foto via WhatsApp en ontvang snel een prijs', badge: 'Prijs via foto', actionText: 'Foto sturen, prijs vragen',
+      waTemplate: 'Hallo, ik stuur een foto van mijn kledingstuk. Wat kost de benodigde aanpassing?' },
+    { id: 'hotel', slogan: 'Kleermaker naar uw hotel: passen ter plaatse', badge: 'Kleermaker aan huis (hotel)', actionText: 'Kleermaker naar mijn hotel',
+      waTemplate: 'Hallo, ik wil een kleermaker laten komen naar mijn hotel in Antalya. Ik stuur de hotelnaam en locatie.' },
+    { id: 'doorstep', slogan: 'Ophalen en terugbezorgen op uw adres', badge: 'Ophaalservice', actionText: 'Ophalen aanvragen',
+      waTemplate: 'Hallo, ik wil dat mijn kledingstuk op mijn adres wordt opgehaald en na de aanpassing wordt teruggebracht.' },
+  ],
+  ar: [
+    { id: 'photo-quote', slogan: 'أرسل صورة عبر واتساب واعرف السعر بسرعة', badge: 'السعر بالصورة', actionText: 'أرسل الصورة واسأل عن السعر',
+      waTemplate: 'مرحباً، أرسل صورة لملابسي. هل يمكنكم إخباري بسعر التعديل المطلوب؟' },
+    { id: 'hotel', slogan: 'خياط إلى فندقك: القياس في مكانك', badge: 'خياط إلى الفندق', actionText: 'اطلب خياطاً إلى فندقي',
+      waTemplate: 'مرحباً، أريد استدعاء خياط إلى فندقي في أنطاليا. سأرسل اسم الفندق وموقعه.' },
+    { id: 'doorstep', slogan: 'استلام الملابس وتسليمها إلى عنوانك', badge: 'خدمة التوصيل', actionText: 'اطلب الاستلام',
+      waTemplate: 'مرحباً، أريد استلام ملابسي من عنواني وتسليمها بعد التعديل.' },
+  ],
 };
 
 // 3 adımlı basit akış (süre sözü yok)
@@ -77,10 +126,46 @@ export const STEPS: Record<Lang, { heading: string; steps: { title: string; desc
       { title: 'Узнайте цену', desc: 'Мы ответим стоимостью и сроком выполнения.' },
       { title: 'Получите вещь', desc: 'Заберите в ателье или закажите доставку в отель или по адресу.' },
     ] },
+  es: { heading: 'Cómo funciona', cta: 'Empezar por WhatsApp',
+    steps: [
+      { title: 'Envíe una foto', desc: 'Envíe por WhatsApp una foto de la prenda y del arreglo que necesita.' },
+      { title: 'Reciba el precio', desc: 'Le respondemos con el precio y el plazo del trabajo.' },
+      { title: 'Recíbala', desc: 'Recójala en el taller o pida la entrega en su hotel o dirección.' },
+    ] },
+  fr: { heading: 'Comment ça marche', cta: 'Commencer sur WhatsApp',
+    steps: [
+      { title: 'Envoyez une photo', desc: 'Envoyez sur WhatsApp une photo du vêtement et de la retouche souhaitée.' },
+      { title: 'Recevez le prix', desc: 'Nous vous répondons avec le prix et le délai du travail.' },
+      { title: 'Récupérez-le', desc: 'Passez le chercher à l\'atelier ou demandez la livraison à votre hôtel ou adresse.' },
+    ] },
+  pl: { heading: 'Jak to działa', cta: 'Zacznij na WhatsApp',
+    steps: [
+      { title: 'Wyślij zdjęcie', desc: 'Wyślij na WhatsApp zdjęcie odzieży i potrzebnej poprawki.' },
+      { title: 'Poznaj cenę', desc: 'Odpowiemy z ceną i terminem wykonania.' },
+      { title: 'Odbierz', desc: 'Odbierz w pracowni albo poproś o dostawę do hotelu lub pod adres.' },
+    ] },
+  uk: { heading: 'Як це працює', cta: 'Почати у WhatsApp',
+    steps: [
+      { title: 'Надішліть фото', desc: 'Надішліть у WhatsApp фото речі та потрібної роботи.' },
+      { title: 'Дізнайтеся ціну', desc: 'Ми відповімо ціною та строком виконання.' },
+      { title: 'Отримайте річ', desc: 'Заберіть в ательє або замовте доставку до готелю чи за адресою.' },
+    ] },
+  nl: { heading: 'Hoe werkt het', cta: 'Start via WhatsApp',
+    steps: [
+      { title: 'Stuur een foto', desc: 'Stuur via WhatsApp een foto van het kledingstuk en de gewenste aanpassing.' },
+      { title: 'Ontvang de prijs', desc: 'Wij antwoorden met de prijs en de doorlooptijd.' },
+      { title: 'Ontvang het', desc: 'Haal het op in het atelier of vraag levering aan uw hotel of adres.' },
+    ] },
+  ar: { heading: 'كيف تعمل الخدمة', cta: 'ابدأ عبر واتساب',
+    steps: [
+      { title: 'أرسل صورة', desc: 'أرسل عبر واتساب صورة للقطعة والتعديل المطلوب.' },
+      { title: 'اعرف السعر', desc: 'نرد عليك بالسعر ومدة التنفيذ.' },
+      { title: 'استلم القطعة', desc: 'استلمها من الورشة أو اطلب التوصيل إلى فندقك أو عنوانك.' },
+    ] },
 };
 
 // Sayfaya özel hazır WhatsApp mesajı: o sayfadaki hizmete göre
-const PAGE_MSG: { match: RegExp; msg: Record<Lang, string> }[] = [
+const PAGE_MSG: { match: RegExp; msg: Partial<Record<Lang, string>> }[] = [
   // Turist ekspres tadilat sayfaları (en: tourist-clothing-alterations, de: kleidung-aendern-urlaub, ru: podgonka-odezhdy-turistam)
   { match: /tourist-clothing-alterations|kleidung-aendern-urlaub|podgonka-odezhdy-turistam/i, msg: {
     tr: 'Merhaba, turistim; satın aldığım kıyafet için tadilat gerekiyor. Fotoğraf gönderiyorum, acil mi, fiyat nedir?',
@@ -116,11 +201,11 @@ const PAGE_MSG: { match: RegExp; msg: Record<Lang, string> }[] = [
   { match: /otel|hotel|vyezdnoy/i, msg: VALUE_PROP_HOTEL() },
 ];
 
-function VALUE_PROP_HOTEL(): Record<Lang, string> {
-  return { tr: VALUE_PROPS.tr[1].waTemplate, en: VALUE_PROPS.en[1].waTemplate, de: VALUE_PROPS.de[1].waTemplate, ru: VALUE_PROPS.ru[1].waTemplate };
+function VALUE_PROP_HOTEL(): Partial<Record<Lang, string>> {
+  return Object.fromEntries((Object.keys(VALUE_PROPS) as Lang[]).map((l) => [l, VALUE_PROPS[l][1].waTemplate]));
 }
 
 export function pageWaMessage(pathname: string, lang: Lang): string | null {
-  for (const r of PAGE_MSG) if (r.match.test(pathname)) return r.msg[lang];
+  for (const r of PAGE_MSG) if (r.match.test(pathname)) return r.msg[lang] ?? null;
   return null;
 }

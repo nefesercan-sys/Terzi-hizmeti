@@ -37,7 +37,7 @@ const GROUPS: Record<ILang, G[]> = {
       heads: [(n) => `${n} waistcoat, jumpsuit and tracksuit alterations`, (n) => `Shorts shortening and jumpsuit taking-in: ${n}`, (n, l) => `Waistcoat and tracksuit repair and sewing ${l}`],
       intros: [(l, n, o) => `Waistcoats, jumpsuits, tracksuits and shorts ${l}: ${o}.`, (l, n, o) => `Near ${n} we do ${o}.`, (l, n, o) => `For waistcoats, jumpsuits, tracksuits and shorts: ${o}. Get a price by photo for ${n}.`] },
     { id: 'fermuar-dugme',
-      ops: ['zipper replacement on trousers, coats, jackets and bags', 'repair of stuck zippers', 'button replacement', 'lining replacement (not on sweaters and cardigans)', 'repair of rips and open seams'],
+      ops: ['trouser zipper replacement', 'coat and jacket zipper replacement', 'overcoat zipper replacement', 'bag zipper replacement', 'repair of stuck zippers', 'button replacement', 'lining replacement (not on sweaters and cardigans)', 'repair of rips and open seams'],
       heads: [(n) => `${n} zipper replacement and repair`, (n) => `Zipper, button and lining replacement: ${n}`, (n, l) => `Broken zipper? Clothes repair ${l}`],
       intros: [(l, n, o) => `Zippers, buttons and linings ${l}: ${o}.`, (l, n, o) => `Broken zipper, missing button or torn lining? In ${n} we do ${o}.`, (l, n, o) => `For ${n}: ${o}.`] },
     { id: 'deri',
@@ -47,7 +47,7 @@ const GROUPS: Record<ILang, G[]> = {
     { id: 'kot',
       ops: ['jeans hem shortening', 'jeans hem shortening with the original hem kept', 'jeans waist taking-in', 'jeans leg tapering', 'denim jacket sleeve and length shortening', 'denim jacket taking-in', 'denim coat shortening and taking-in', 'denim skirt hem shortening and waist taking-in', 'denim shorts shortening', 'denim zipper and button replacement', 'repair of rips in denim'],
       heads: [(n) => `${n} jeans, denim jacket and denim coat alterations`, (n) => `Jeans hem and original hem: ${n}`, (n, l) => `Denim skirt and denim shorts shortening ${l}`],
-      intros: [(l, n, o) => `Denim ${l}: ${o}. Denim work starts from ${e('hem')}.`, (l, n, o) => `For jeans, denim jackets, coats, skirts and shorts near ${n}: ${o}.`] },
+      intros: [(l, n, o) => `Denim ${l}: ${o}. Denim work starts from ${e('hem')}.`, (l, n, o) => `For jeans, denim jackets, coats, skirts and shorts near ${n}: ${o}.`, (l, n, o) => `Jeans too long, too tight or ripped ${l}? We do ${o}. Denim work starts from ${e('hem')}.`, (l, n, o) => `Denim alterations for ${n}: ${o}; the exact price comes from your photo.`] },
   ],
   ru: [
     { id: 'pantolon',
@@ -71,7 +71,7 @@ const GROUPS: Record<ILang, G[]> = {
       heads: [(n) => `${n}: жилеты, комбинезоны, спортивные брюки`, (n) => `${n}: укоротить шорты, ушить комбинезон`, (n, l) => `Ремонт и пошив жилетов и спортивных костюмов ${l}`],
       intros: [(l, n, o) => `Жилеты, комбинезоны, спортивные костюмы и шорты ${l}: ${o}.`, (l, n, o) => `Рядом с районом ${n} делаем: ${o}.`, (l, n, o) => `Жилеты, комбинезоны, спортивные брюки и шорты: ${o}. Цену назовём по фото (${n}).`] },
     { id: 'fermuar-dugme',
-      ops: ['замена молнии на брюках, куртках, пальто и сумках', 'ремонт заевшей молнии', 'замена пуговиц', 'замена подкладки (кроме свитеров и кардиганов)', 'ремонт дыр и распоров'],
+      ops: ['замена молнии на брюках', 'замена молнии на куртках', 'замена молнии на пальто', 'замена молнии на сумках', 'ремонт заевшей молнии', 'замена пуговиц', 'замена подкладки (кроме свитеров и кардиганов)', 'ремонт дыр и распоров'],
       heads: [(n) => `${n}: замена и ремонт молнии`, (n) => `${n}: молния, пуговицы, подкладка`, (n, l) => `Сломалась молния? Ремонт одежды ${l}`],
       intros: [(l, n, o) => `Молнии, пуговицы и подкладка ${l}: ${o}.`, (l, n, o) => `Сломалась молния, оторвалась пуговица или порвалась подкладка? Район ${n}: ${o}.`, (l, n, o) => `${n}: ${o}.`] },
     { id: 'deri',
@@ -105,7 +105,7 @@ const GROUPS: Record<ILang, G[]> = {
       heads: [(n) => `${n}: Westen, Overalls, Jogginghosen`, (n) => `${n}: Shorts kürzen, Overall enger machen`, (n, l) => `Westen und Jogginganzüge reparieren und nähen ${l}`],
       intros: [(l, n, o) => `Westen, Overalls, Jogginganzüge und Shorts ${l}: ${o}.`, (l, n, o) => `In der Nähe von ${n}: ${o}.`, (l, n, o) => `Westen, Overalls, Jogginghosen und Shorts: ${o}. Preis per Foto (${n}).`] },
     { id: 'fermuar-dugme',
-      ops: ['Reißverschluss an Hosen, Mänteln, Jacken und Taschen wechseln', 'klemmende Reißverschlüsse reparieren', 'Knöpfe ersetzen', 'Futter erneuern (nicht bei Pullovern und Strickjacken)', 'Risse und offene Nähte reparieren'],
+      ops: ['Reißverschluss an Hosen wechseln', 'Reißverschluss an Jacken wechseln', 'Reißverschluss an Mänteln wechseln', 'Reißverschluss an Taschen wechseln', 'klemmende Reißverschlüsse reparieren', 'Knöpfe ersetzen', 'Futter erneuern (nicht bei Pullovern und Strickjacken)', 'Risse und offene Nähte reparieren'],
       heads: [(n) => `${n}: Reißverschluss wechseln und reparieren`, (n) => `${n}: Reißverschluss, Knopf, Futter`, (n, l) => `Reißverschluss kaputt? Kleidung reparieren ${l}`],
       intros: [(l, n, o) => `Reißverschlüsse, Knöpfe und Futter ${l}: ${o}.`, (l, n, o) => `Reißverschluss kaputt, Knopf ab oder Futter gerissen? Raum ${n}: ${o}.`, (l, n, o) => `${n}: ${o}.`] },
     { id: 'deri',
@@ -157,18 +157,60 @@ const PRICES: Record<ILang, ((n: string) => string)[]> = {
   ],
 };
 
+// Her grup metnine bölgeye göre seçilen kısa, doğrulanmış bir kapanış cümlesi (sayfalar arası tekrarı azaltır)
+const CLOSERS: Record<ILang, ((n: string) => string)[]> = {
+  en: [
+    (n) => `Send a photo on WhatsApp and we quote the price for ${n} right away.`,
+    (n) => `Pickup and delivery to your home or hotel in ${n} is free.`,
+    () => `Normal jobs are ready the same day.`,
+    () => `We give the exact price from your photo before any work starts.`,
+    () => `Urgent jobs can be ready in 1–2 hours, depending on the job.`,
+    () => `You can pay in any currency, in cash or by card.`,
+    () => `We have been tailoring in Antalya since 2006.`,
+    (n) => `Around ${n} we collect the garment from your home or hotel and bring it back when it is done.`,
+  ],
+  ru: [
+    (n) => `Пришлите фото в WhatsApp, и мы сразу назовём цену для района ${n}.`,
+    (n) => `Забор и доставка домой или в отель в районе ${n} бесплатны.`,
+    () => `Обычные работы готовы в тот же день.`,
+    () => `Точную цену называем по фото до начала работы.`,
+    () => `Срочные работы можно сделать за 1–2 часа, в зависимости от задачи.`,
+    () => `Оплата в любой валюте, наличными или картой.`,
+    () => `Мы шьём и ремонтируем одежду в Анталье с 2006 года.`,
+    (n) => `В районе ${n} мы заберём вещь из дома или отеля и вернём готовой.`,
+  ],
+  de: [
+    (n) => `Schicken Sie ein Foto per WhatsApp, wir nennen sofort den Preis für ${n}.`,
+    (n) => `Abholung und Lieferung zu Ihnen nach Hause oder ins Hotel in ${n} sind kostenlos.`,
+    () => `Normale Arbeiten sind am selben Tag fertig.`,
+    () => `Den genauen Preis nennen wir per Foto, bevor wir anfangen.`,
+    () => `Eilige Arbeiten können je nach Aufwand in 1–2 Stunden fertig sein.`,
+    () => `Bezahlung in jeder Währung, bar oder mit Karte.`,
+    () => `Wir schneidern und reparieren in Antalya seit 2006.`,
+    (n) => `Rund um ${n} holen wir das Kleidungsstück zu Hause oder im Hotel ab und bringen es zurück.`,
+  ],
+};
+const shuffleIdx = (seed: string, len: number): number => shuffle(Array.from({ length: len }, (_, i) => i), seed)[0];
+
 const rot = <T,>(a: T[], k: number): T[] => a.map((_, i) => a[(i + k) % a.length]);
+// Deterministik karıştırma (tohuma göre aynı sonuç): işlem listeleri bölgeler arasında aynı sırayla tekrar etmesin
+const shuffle = <T,>(a: T[], seed: string): T[] =>
+  a.map((x, i) => {
+    let k = hashStr(i + ':' + seed);
+    k = Math.imul(k ^ (k >>> 15), 2246822507); k = Math.imul(k ^ (k >>> 13), 3266489909); k = (k ^ (k >>> 16)) >>> 0;
+    return { x, k, i };
+  }).sort((p, q) => p.k - q.k || p.i - q.i).map((p) => p.x);
 
 export function bolgeMatrisiI18n(lang: ILang, slug: string, n: string, loc: string): Matris {
   const h = (s: string) => hashStr(slug + ':' + lang + ':' + s);
   const gs = GROUPS[lang];
   const order = rot(gs, h('g') % gs.length);
   const groups: MatrisGroup[] = order.map((g, gi) => {
-    const ops = rot(g.ops, h('o' + g.id) % g.ops.length); // tüm işlemler kalır, yalnızca sıra döner
+    const ops = shuffle(g.ops, slug + ':' + (typeof lang === 'string' ? lang : '') + ':o' + g.id); // tüm işlemler kalır, sıra bölgeye göre karışır
     return {
       id: g.id,
       heading: g.heads[(h('h' + g.id) + gi) % g.heads.length](n, loc),
-      text: g.intros[h('i' + g.id) % g.intros.length](loc, n, ops.join(', ')),
+      text: g.intros[h('i' + g.id) % g.intros.length](loc, n, ops.join(', ')) + ' ' + CLOSERS[lang][shuffleIdx(slug + ':' + lang + ':c' + g.id, CLOSERS[lang].length)](n),
     };
   });
   const T = TITLES[lang]; const L = LEADS[lang]; const P = PRICES[lang];

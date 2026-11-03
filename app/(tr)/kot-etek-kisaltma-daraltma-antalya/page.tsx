@@ -153,7 +153,7 @@ export default function Page() {
                 <table className="price-table"><tbody>
                   <tr><td>Kot Etek Boy Kısaltma</td><td>₺200+</td></tr>
                   <tr><td>Kot Etek Bel Daraltma</td><td>₺200+</td></tr>
-                  <tr><td>Orijinal Etek Ucu</td><td>Fotoğrafa göre</td></tr>
+                  <tr><td>Orijinal Etek Ucu</td><td>₺200+</td></tr>
                 </tbody></table>
               </div>
             </div>

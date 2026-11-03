@@ -78,7 +78,6 @@ const jsonLd = {
         '@type': 'AggregateOffer',
         priceCurrency: 'TRY',
         lowPrice: '300',
-        highPrice: '350',
         offerCount: 3,
         offers: [
           { '@type': 'Offer', name: 'Pantolon / Kot Fermuarı', price: '300', priceCurrency: 'TRY', priceValidUntil: '2027-12-31' },
@@ -94,7 +93,7 @@ const jsonLd = {
       name: 'Konyaaltı\'da Fermuar Tamiri Nasıl Yaptırılır?',
       description: 'Fermuar tamiri veya değişimi için adım adım süreç.',
       totalTime: 'PT2H',
-      estimatedCost: { '@type': 'MonetaryAmount', currency: 'TRY', value: '200-350' },
+      estimatedCost: { '@type': 'MonetaryAmount', currency: 'TRY', value: '300' },
       step: [
         { '@type': 'HowToStep', name: 'Fotoğraf Gönderin', text: 'WhatsApp\'tan bozuk fermuarın fotoğrafını gönderin, anında ön fiyat alın.' },
         { '@type': 'HowToStep', name: 'Kıyafeti Teslim Edin', text: 'Atölyeye getirin veya eve/otele ücretsiz alım-teslim isteyin.' },
@@ -204,6 +203,7 @@ export default function FermuarTamiriPage() {
                 </tbody></table>
               </div>
             </div>
+            <p style={{ marginTop: '1rem' }}>Mont ve kaban fermuarı için ayrıntılı bilgi: <a href="/mont-fermuar-degisimi-antalya">mont fermuarı değişimi</a>.</p>
             <p style={{ fontSize: '.76rem', color: 'rgba(255,255,255,.4)', marginTop: '1.4rem', fontStyle: 'italic' }}>
               * Fiyatlar başlangıç fiyatıdır, fermuar kalitesi ve kumaş türüne göre değişebilir.
             </p>

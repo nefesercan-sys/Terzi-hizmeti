@@ -34,6 +34,7 @@ This file lists the main pages of the site for AI assistants and answer engines.
 - [All services (German)](https://terzihizmeti.com.tr/de/schneider-leistungen): hub in German
 - [Trouser hemming in Konyaaltı](https://terzihizmeti.com.tr/konyaalti-paca-kisaltma): paça kısaltma
 - [Zipper repair in Konyaaltı](https://terzihizmeti.com.tr/konyaalti-fermuar-tamiri): fermuar değişimi ve tamiri
+- [Coat and jacket zipper replacement (Turkish)](https://terzihizmeti.com.tr/mont-fermuar-degisimi-antalya): mont, kaban ve ceket fermuarı değişimi, from ₺300
 - [Wedding dress alterations](https://terzihizmeti.com.tr/antalya-gelinlik-tadilati): gelinlik ve abiye tadilatı
 - [Uniform manufacturing](https://terzihizmeti.com.tr/antalya-uniforma-imalati): hotel, restaurant and school uniforms
 - [Linen and cotton custom tailoring (Turkish)](https://terzihizmeti.com.tr/keten-pamuk-ozel-dikim): made to measure in natural fabrics

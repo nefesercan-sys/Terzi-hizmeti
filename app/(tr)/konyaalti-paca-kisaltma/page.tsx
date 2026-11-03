@@ -65,7 +65,6 @@ const jsonLd = {
         '@type': 'AggregateOffer',
         priceCurrency: 'TRY',
         lowPrice: '200',
-        highPrice: '220',
         offerCount: 3,
         offers: [
           { '@type': 'Offer', name: 'Kumaş Pantolon Paçası', price: '200', priceCurrency: 'TRY', priceValidUntil: '2027-12-31' },

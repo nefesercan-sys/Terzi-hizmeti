@@ -69,7 +69,6 @@ const jsonLd = {
         '@type': 'AggregateOffer',
         priceCurrency: 'TRY',
         lowPrice: '800',
-        highPrice: '900',
         offerCount: 4,
         offers: [
           { '@type': 'Offer', name: 'Gelinlik Bel Daraltma', price: '800', priceCurrency: 'TRY', priceValidUntil: '2027-12-31' },
@@ -85,7 +84,7 @@ const jsonLd = {
       name: 'Antalya\'da Gelinlik Tadilatı Nasıl Yaptırılır?',
       description: 'Gelinlik veya abiye tadilatı için adım adım süreç.',
       totalTime: 'P2D',
-      estimatedCost: { '@type': 'MonetaryAmount', currency: 'TRY', value: '400-900' },
+      estimatedCost: { '@type': 'MonetaryAmount', currency: 'TRY', value: '800' },
       step: [
         { '@type': 'HowToStep', name: 'Randevu Alın', text: 'WhatsApp\'tan gelinlik/abiye fotoğrafı ve düğün tarihini paylaşarak randevu oluşturun.' },
         { '@type': 'HowToStep', name: 'İlk Prova', text: 'Atölyede ilk provada daraltılacak/kısaltılacak bölgeler işaretlenir.' },

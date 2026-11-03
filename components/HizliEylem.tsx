@@ -11,7 +11,7 @@
 import { usePathname } from 'next/navigation';
 import { getLang } from '@/lib/icerik-haritasi';
 import { isPromoPath } from '@/lib/promosyon-paths';
-import { STEPS, VALUE_PROPS, pageWaMessage, waUrl, type Lang } from '@/lib/value-props';
+import { INTL6, STEPS, VALUE_PROPS, pageWaMessage, waUrl, type Lang } from '@/lib/value-props';
 
 const SITE = 'https://terzihizmeti.com.tr';
 
@@ -20,7 +20,9 @@ function useCtx(): { lang: Lang; path: string } | null {
   if (path.includes('anavera-tekstil') || isPromoPath(path)) return null; // B2B / promosyon tekstil sayfası: bireysel terzi bandı yok
   if (path === '/') return { lang: 'tr', path };
   const lang = getLang(path);
-  return lang ? { lang, path } : null;
+  if (lang) return { lang, path };
+  const seg = path.split('/')[1] as (typeof INTL6)[number];
+  return (INTL6 as readonly string[]).includes(seg) ? { lang: seg, path } : null; // es/fr/pl/uk/nl/ar
 }
 
 export function HizliEylemBandi() {
@@ -55,7 +57,7 @@ export function HizliEylemBandi() {
   };
 
   return (
-    <div id="hizli-eylem" lang={lang} style={{ background: '#2C4A3E', color: '#fff', padding: '.55rem 1rem', fontFamily: 'inherit' }}>
+    <div id="hizli-eylem" lang={lang} dir={lang === 'ar' ? 'rtl' : undefined} style={{ background: '#2C4A3E', color: '#fff', padding: '.55rem 1rem', fontFamily: 'inherit' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div style={{ maxWidth: 1100, margin: '0 auto', display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center', gap: '.6rem 1rem', textAlign: 'center' }}>
         <span className="hero-slogan" style={{ fontSize: '.92rem', fontWeight: 700 }}>
@@ -79,7 +81,7 @@ export function HizliAkis() {
   const extra = VALUE_PROPS[lang].slice(1);
 
   return (
-    <section aria-label={s.heading} lang={lang}
+    <section aria-label={s.heading} lang={lang} dir={lang === 'ar' ? 'rtl' : undefined}
       style={{ maxWidth: 1040, margin: '0 auto', padding: '2.5rem 1.25rem 0', fontFamily: 'inherit' }}>
       <h2 style={{ fontSize: '1.15rem', fontWeight: 800, margin: '0 0 1rem' }}>{s.heading}</h2>
       <ol style={{ listStyle: 'none', margin: 0, padding: 0, display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(210px, 1fr))', gap: '.9rem' }}>

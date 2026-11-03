@@ -5,6 +5,7 @@ import { PHONE, PHONE_TEL, MAPS, SITE } from '@/lib/seo-data';
 import { businessNode, OG_DEFAULT, waLink, TURIST_UPDATE } from '@/lib/turist-keten';
 import { INTL, iUrl, type ILang } from '@/lib/intl';
 import { ZONE_VARIANTS, ZONE_H1, zoneVariantIndex } from '@/lib/zone-variants';
+import { bolgeMatrisiTurist, bolgeEkSssTurist } from '@/lib/bolge-hizmet-matrisi-turist';
 import { ZCOPY, ZONE_SLUGS, zoneData, zoneUrl, type ZoneSlug } from '@/lib/intl-zones';
 
 const C = { green: '#2C4A3E', gold: '#D4B07A', cream: '#FAF7F2', sand: '#F2EDE4', ink: '#1C1814', muted: '#6B5F53', line: 'rgba(44,74,62,.15)' };
@@ -30,7 +31,7 @@ export function zoneJsonLd(lang: ILang, zone: ZoneSlug) {
       },
       {
         '@type': 'FAQPage', '@id': `${url}#faq`,
-        mainEntity: c.faq(z.name, z.home).map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
+        mainEntity: [...c.faq(z.name, z.home), ...bolgeEkSssTurist(lang, zone, z.name)].map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
       },
     ],
   };
@@ -40,6 +41,8 @@ export default function ZoneLanding({ lang, zone }: { lang: ILang; zone: ZoneSlu
   const g = INTL[lang]; const c = ZCOPY[lang]; const z = zoneData(lang, zone);
   const vi = zoneVariantIndex(zone); const V = ZONE_VARIANTS[lang];
   const leadText = vi === 0 ? c.lead(z.name) : V.lead[vi - 1](z.name);
+  const matris = bolgeMatrisiTurist(lang, zone, z.name);
+  const faqAll = [...c.faq(z.name, z.home), ...bolgeEkSssTurist(lang, zone, z.name)];
   const howText = vi === 0 ? c.how(z.name, z.home) : V.how[vi - 1](z.name);
   return (
     <main lang={lang} dir={g.dir} style={{ fontFamily: 'system-ui,sans-serif', background: C.cream, color: '#3A3028', minHeight: '100vh', lineHeight: 1.7 }}>
@@ -68,8 +71,20 @@ export default function ZoneLanding({ lang, zone }: { lang: ILang; zone: ZoneSlu
         </section>
 
         <section style={{ marginBottom: '1.8rem' }}>
+          <H2>{matris.title}</H2>
+          <p style={{ margin: '0 0 1rem' }}>{matris.lead}</p>
+          {matris.groups.map((g) => (
+            <div key={g.id} style={{ marginBottom: '1rem' }}>
+              <h3 style={{ fontSize: '1.02rem', color: C.ink, margin: '0 0 .25rem' }}>{g.heading}</h3>
+              <p style={{ margin: 0 }}>{g.text}</p>
+            </div>
+          ))}
+          <p style={{ margin: '.8rem 0 0', fontSize: '.9rem', color: C.muted }}>{matris.price}</p>
+        </section>
+
+        <section style={{ marginBottom: '1.8rem' }}>
           <H2>{c.faqTitle}</H2>
-          {c.faq(z.name, z.home).map(([q, a]) => (
+          {faqAll.map(([q, a]) => (
             <div key={q} style={{ marginBottom: '1rem' }}>
               <h3 style={{ fontSize: '1.02rem', color: C.ink, margin: '0 0 .25rem' }}>{q}</h3>
               <p style={{ margin: 0 }}>{a}</p>

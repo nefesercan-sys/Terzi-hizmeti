@@ -14,6 +14,7 @@ import ReviewsBlock from '@/components/ReviewsBlock';
 import { AREA_NOTES, AREA_NOTE_UI } from '@/lib/district-facts';
 import { districtAnswer, districtFaqPool, SERVICE_PICK } from '@/lib/district-copy';
 import { bolgeMatrisi, bolgeEkSss, trDistrictTitles } from '@/lib/bolge-hizmet-matrisi';
+import { bolgeMatrisiI18n, bolgeEkSssI18n, intlDistrictTitles } from '@/lib/bolge-hizmet-matrisi-i18n';
 import { areaIntro, areaNeeds, NEEDS_H, AREA_PROFILES } from '@/lib/area-profiles';
 import { businessNode as sharedBusinessNode } from '@/lib/business';
 import { OTEL_BOLGELERI } from '@/lib/otel-bolgeleri';
@@ -205,8 +206,8 @@ function _districtCopy(lang: Lang, d: District) {
 
   function metaOverride(r: { n: string; loc: string; kw: string[]; title: string; desc: string }) {
     const o = lang === 'tr' ? trNearDistrict(d.slug, n, r.loc, PHONE, 'Terzi Can') : fgNearDistrict(lang, d.slug, n); // elle yazılmış meta (TR yakın bölgeler + EN/RU/DE)
-    if (!o) return { ...r, title: pickFit(({ tr: trDistrictTitles(d.slug, n, DISTRICTS.filter((x) => isIndexable('tr', x.slug)).findIndex((x) => x.slug === d.slug)), en: [`Tailor ${n}, Antalya: Dressmaking, Repairs, Alterations`, `Tailor ${n} Antalya · Dress Making & Alterations`, `Tailor ${n}, Antalya · Repairs, Alterations`, `Tailor in ${n}, Antalya`], ru: [`Портной ${n}, Анталья: пошив, ремонт, переделка одежды`, `Портной ${n}: пошив, ремонт, переделка`, `Портной ${n}, Анталья`], de: [`Schneider ${n}, Antalya: Nähen, Reparatur, Änderung`, `Schneider ${n}: Kleider nähen, ändern`, `Schneider ${n}, Antalya`] } as Record<string, string[]>)[lang], 60) };
-    return { n: r.n, loc: r.loc, kw: Array.from(new Set([...o.kw, ...r.kw])), title: pickFit(({ tr: trDistrictTitles(d.slug, n, DISTRICTS.filter((x) => isIndexable('tr', x.slug)).findIndex((x) => x.slug === d.slug)), en: [`Tailor ${n}, Antalya: Dressmaking, Repairs, Alterations`, `Tailor ${n} Antalya · Dress Making & Alterations`, `Tailor ${n}, Antalya · Repairs, Alterations`, `Tailor in ${n}, Antalya`], ru: [`Портной ${n}, Анталья: пошив, ремонт, переделка одежды`, `Портной ${n}: пошив, ремонт, переделка`, `Портной ${n}, Анталья`], de: [`Schneider ${n}, Antalya: Nähen, Reparatur, Änderung`, `Schneider ${n}: Kleider nähen, ändern`, `Schneider ${n}, Antalya`] } as Record<string, string[]>)[lang], 60), desc: o.desc };
+    if (!o) return { ...r, title: pickFit(({ tr: trDistrictTitles(d.slug, n, DISTRICTS.filter((x) => isIndexable('tr', x.slug)).findIndex((x) => x.slug === d.slug)), en: intlDistrictTitles('en', n, DISTRICTS.findIndex((x) => x.slug === d.slug)), ru: intlDistrictTitles('ru', n, DISTRICTS.findIndex((x) => x.slug === d.slug)), de: intlDistrictTitles('de', n, DISTRICTS.findIndex((x) => x.slug === d.slug)) } as Record<string, string[]>)[lang], 60) };
+    return { n: r.n, loc: r.loc, kw: Array.from(new Set([...o.kw, ...r.kw])), title: pickFit(({ tr: trDistrictTitles(d.slug, n, DISTRICTS.filter((x) => isIndexable('tr', x.slug)).findIndex((x) => x.slug === d.slug)), en: intlDistrictTitles('en', n, DISTRICTS.findIndex((x) => x.slug === d.slug)), ru: intlDistrictTitles('ru', n, DISTRICTS.findIndex((x) => x.slug === d.slug)), de: intlDistrictTitles('de', n, DISTRICTS.findIndex((x) => x.slug === d.slug)) } as Record<string, string[]>)[lang], 60), desc: o.desc };
   }
 }
 
@@ -492,8 +493,8 @@ export function DistrictPage({ lang, d }: { lang: Lang; d: District }) {
   const c = districtCopy(lang, d);
   const url = abs(districtUrl(lang, d));
   const idx = DISTRICTS.findIndex((x) => x.slug === d.slug);
-  const matris = lang === 'tr' ? bolgeMatrisi(d.slug, d.name.tr, d.loc.tr) : null;
-  const faq = lang === 'tr' ? [...districtFaqPool(lang, d), ...bolgeEkSss(d.slug, d.name.tr, d.loc.tr)] : districtFaqPool(lang, d);
+  const matris = lang === 'tr' ? bolgeMatrisi(d.slug, d.name.tr, d.loc.tr) : bolgeMatrisiI18n(lang, d.slug, d.name[lang], d.loc[lang]);
+  const faq = lang === 'tr' ? [...districtFaqPool(lang, d), ...bolgeEkSss(d.slug, d.name.tr, d.loc.tr)] : [...districtFaqPool(lang, d), ...bolgeEkSssI18n(lang, d.slug, d.name[lang], d.loc[lang])];
   const waMsg = {
     tr: `Merhaba, ${c.loc} terzi hizmeti almak istiyorum.`,
     en: `Hello, I need a tailor ${c.loc}.`,

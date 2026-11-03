@@ -170,7 +170,7 @@ export default function MontFermuarPage() {
                   <span className="price-icon" aria-hidden="true">🧶</span>
                   <div><div className="price-tr">Ceket & Yelek Fermuarı</div></div>
                 </div>
-                <p className="price-desc">Daha hafif kumaşlar için aynı aynı gün teslim.</p>
+                <p className="price-desc">Daha hafif kumaşlar için aynı gün teslim.</p>
                 <table className="price-table"><tbody>
                   <tr><td>Ceket Fermuarı</td><td>₺300+</td></tr>
                   <tr><td>Yelek Fermuarı</td><td>₺300+</td></tr>

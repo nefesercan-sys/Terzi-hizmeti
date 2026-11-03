@@ -111,6 +111,9 @@ const jsonLd = {
         { '@type': 'Question', name: 'Çanta fermuarı tamiri yapıyor musunuz, fiyatı ne kadar?', acceptedAnswer: { '@type': 'Answer', text: 'Evet. Çanta fermuarı değişimi ₺300\'den başlar; sıkışan fermuarın onarımı fotoğrafa göre netleşir. Çantanın fotoğrafını WhatsApp\'tan gönderin, net fiyat ve süreyi söyleyelim. Normal iş ertesi gün, acil iş 1–2 saatte teslim edilir.' } },
         { '@type': 'Question', name: 'Her tür fermuarı değiştiriyor musunuz?', acceptedAnswer: { '@type': 'Answer', text: 'Evet — metal, plastik, sarmal (YKK dahil) her tip fermuarı değiştiriyoruz. Su geçirmez montlar için özel fermuar da temin ediyoruz.' } },
         { '@type': 'Question', name: 'Fermuar sıkıştı, kırılmadı — tamir edilebilir mi?', acceptedAnswer: { '@type': 'Answer', text: 'Evet, çoğu zaman sıkışan fermuar değişim gerektirmeden onarılabilir. Fotoğraf gönderirseniz değerlendirip size bilgi veririz.' } },
+        { '@type': 'Question', name: 'Mont fermuarı değiştirme fiyatı ne kadar?', acceptedAnswer: { '@type': 'Answer', text: 'Mont ve ceket fermuarı değişimi ₺300\'den başlar. Net fiyat fermuarın boyuna ve türüne göre fotoğrafla söylenir.' } },
+        { '@type': 'Question', name: 'Fermuar değişimi ne kadar, kaç TL?', acceptedAnswer: { '@type': 'Answer', text: 'Fermuar değişimi ₺300\'den başlar: pantolon, kot, mont, ceket ve çanta fermuarı için geçerli başlangıç fiyatıdır.' } },
+        { '@type': 'Question', name: 'Terzide fermuar dikimi ne kadar sürer ve ne kadar tutar?', acceptedAnswer: { '@type': 'Answer', text: 'Fermuar dikimi ve değişimi ₺300\'den başlar; normal işlemler ertesi gün teslim edilir, acil işler 1–2 saat.' } },
       ],
     },
   ],
@@ -147,6 +150,7 @@ export default function FermuarTamiriPage() {
               Eve ve otele ücretsiz servis. ₺300'den başlayan
               net fiyatla, normal işlemler ertesi gün, acil işler 1–2 saatte tamamlanır.
             </p>
+            <p className="hero-desc"><strong>Kısa cevap:</strong> Fermuar değişimi ve tamiri ₺300'den başlar; normal işler ertesi gün, acil işler 1–2 saatte tamamlanır.</p>
             <div className="hero-btns">
               <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-primary">💬 Fotoğraf Gönderin →</a>
               <a href={`tel:${PHONE_TEL}`} className="btn-secondary">📞 {PHONE}</a>
@@ -249,6 +253,9 @@ export default function FermuarTamiriPage() {
               ['Çanta fermuarı tamiri yapıyor musunuz, fiyatı ne kadar?', 'Evet. Çanta fermuarı değişimi ₺300\'den başlar; sıkışan fermuarın onarımı fotoğrafa göre netleşir. Çantanın fotoğrafını WhatsApp\'tan gönderin, net fiyat ve süreyi söyleyelim. Normal iş ertesi gün, acil iş 1–2 saatte teslim edilir.'],
               ['Her tür fermuarı değiştiriyor musunuz?', 'Evet — metal, plastik, sarmal (YKK dahil) her tip fermuarı değiştiriyoruz. Su geçirmez montlar için özel fermuar da temin ediyoruz.'],
               ['Fermuar sıkıştı, kırılmadı — tamir edilebilir mi?', 'Evet, çoğu zaman sıkışan fermuar değişim gerektirmeden onarılabilir. Fotoğraf gönderirseniz değerlendirip bilgi veririz.'],
+              ['Mont fermuarı değiştirme fiyatı ne kadar?', 'Mont ve ceket fermuarı değişimi ₺300\'den başlar. Net fiyat fermuarın boyuna ve türüne göre fotoğrafla söylenir.'],
+              ['Fermuar değişimi ne kadar, kaç TL?', 'Fermuar değişimi ₺300\'den başlar: pantolon, kot, mont, ceket ve çanta fermuarı için geçerli başlangıç fiyatıdır.'],
+              ['Terzide fermuar dikimi ne kadar sürer ve ne kadar tutar?', 'Fermuar dikimi ve değişimi ₺300\'den başlar; normal işlemler ertesi gün teslim edilir, acil işler 1–2 saat.'],
             ].map(([q, a]) => (
               <div key={q} className="faq-item">
                 <div className="faq-q">{q}</div>

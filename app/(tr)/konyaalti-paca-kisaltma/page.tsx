@@ -96,6 +96,9 @@ const jsonLd = {
         { '@type': 'Question', name: 'Paça kısaltma fiyatı ne kadar?', acceptedAnswer: { '@type': 'Answer', text: 'Kumaş pantolon ₺200\'den, kot pantolon ₺200\'den, etek kısaltma ₺200\'den başlar.' } },
         { '@type': 'Question', name: 'Orijinal dikişi bozmadan kısaltma yapıyor musunuz?', acceptedAnswer: { '@type': 'Answer', text: 'Evet, görünmez dikiş tekniğiyle çalışıyoruz — orijinal paça görünümü korunur, özellikle kot pantolonlarda orijinal dikiş izi bile taklit edilebilir.' } },
         { '@type': 'Question', name: 'Prova gerekiyor mu?', acceptedAnswer: { '@type': 'Answer', text: 'En doğru sonuç için prova önerilir ama net ölçü verirseniz provasız da yapabiliriz. Adrese gelen servisimizle yerinde ölçü de alabiliriz.' } },
+        { '@type': 'Question', name: 'Pantolon paçası kısaltma kaç TL?', acceptedAnswer: { '@type': 'Answer', text: 'Pantolon paçası kısaltma ₺200\'den başlar. Kumaş pantolon, kot ve etek aynı başlangıç fiyatıyla yapılır; net fiyat işin fotoğrafına göre WhatsApp\'tan söylenir.' } },
+        { '@type': 'Question', name: 'Kot paça kısaltma ne kadar?', acceptedAnswer: { '@type': 'Answer', text: 'Kot paça kısaltma ₺200\'den başlar. Kotun orijinal paça dikişi korunacak şekilde yapılır.' } },
+        { '@type': 'Question', name: 'Paça kısaltma fiyatları 2026\'da ne kadar?', acceptedAnswer: { '@type': 'Answer', text: '2026 güncel başlangıç fiyatı: pantolon, kot ve etek paça kısaltma ₺200\'den. Fiyat işin durumuna göre değişebilir; fotoğraf göndererek net fiyatı öğrenebilirsiniz.' } },
       ],
     },
   ],
@@ -134,6 +137,7 @@ export default function PacaKisaltmaPage() {
               orijinal görünümü koruyarak. Eve ve otele
               ücretsiz servis.
             </p>
+            <p className="hero-desc"><strong>Kısa cevap:</strong> Pantolon, kot ve etek paça kısaltma ₺200'den başlar; normal işler ertesi gün, acil işler 1–2 saatte teslim edilir.</p>
             <div className="hero-btns">
               <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-primary">💬 Ölçü Gönderin →</a>
               <a href={`tel:${PHONE_TEL}`} className="btn-secondary">📞 {PHONE}</a>
@@ -232,6 +236,9 @@ export default function PacaKisaltmaPage() {
               ['Paça kısaltma fiyatı ne kadar?', 'Kumaş pantolon ₺200\'den, kot pantolon ₺200\'den, etek kısaltma ₺200\'den başlar.'],
               ['Orijinal dikişi bozmadan kısaltma yapıyor musunuz?', 'Evet, görünmez dikiş tekniğiyle çalışıyoruz — orijinal paça görünümü korunur, kot pantolonlarda orijinal dikiş izi bile taklit edilebilir.'],
               ['Prova gerekiyor mu?', 'En doğru sonuç için prova önerilir ama net ölçü verirseniz provasız da yapabiliriz. Adrese gelen servisimizle yerinde ölçü de alabiliriz.'],
+              ['Pantolon paçası kısaltma kaç TL?', 'Pantolon paçası kısaltma ₺200\'den başlar. Kumaş pantolon, kot ve etek aynı başlangıç fiyatıyla yapılır; net fiyat işin fotoğrafına göre WhatsApp\'tan söylenir.'],
+              ['Kot paça kısaltma ne kadar?', 'Kot paça kısaltma ₺200\'den başlar. Kotun orijinal paça dikişi korunacak şekilde yapılır.'],
+              ['Paça kısaltma fiyatları 2026\'da ne kadar?', '2026 güncel başlangıç fiyatı: pantolon, kot ve etek paça kısaltma ₺200\'den. Fiyat işin durumuna göre değişebilir; fotoğraf göndererek net fiyatı öğrenebilirsiniz.'],
             ].map(([q, a]) => (
               <div key={q} className="faq-item">
                 <div className="faq-q">{q}</div>

@@ -18,12 +18,12 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Paça Kısaltma Fiyatları 2026 · ₺200 · Konyaaltı Terzi" },
   description:
-    fitDesc("Pantolon, kot, etek paça kısaltma ₺200'den, normal iş ertesi gün, acil 1–2 saat. Eve ve otele ücretsiz servis. Her gün 08:00–23:00. ☎ " + PHONE),
+    fitDesc("Pantolon, kot, etek paça kısaltma ₺200'den, aynı gün teslim, acil 1–2 saat. Eve ve otele ücretsiz servis. Her gün 08:00–23:00. ☎ " + PHONE),
   keywords: ['paça kısaltma Konyaaltı', 'pantolon kısaltma Antalya', 'kot paça kısaltma', 'etek kısaltma Antalya', 'acil paça kısaltma', 'paça kısaltma fiyatı', 'Konyaaltı terzi', 'Antalya terzi'],
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Paça Kısaltma Konyaaltı — Ertesi Gün Teslim',
+    title: 'Paça Kısaltma Konyaaltı — Aynı Gün Teslim',
     description: 'Pantolon, kot, etek kısaltma. ₺200\'den başlayan fiyatlar. ☎ ' + PHONE,
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'tr_TR', type: 'website',
     images: [{ url: `${SITE}/terzi-can-hero.jpg`, width: 1024, height: 1024, alt: 'Paça Kısaltma Konyaaltı' }],
@@ -84,14 +84,14 @@ const jsonLd = {
         { '@type': 'HowToStep', name: 'İstediğiniz Boyu Belirtin', text: 'WhatsApp\'tan pantolon/etek fotoğrafını ve kısaltmak istediğiniz miktarı belirtin.' },
         { '@type': 'HowToStep', name: 'Ölçü Kontrolü', text: 'Mümkünse atölyede prova ile en doğru boy belirlenir; adrese gelen servis de mevcuttur.' },
         { '@type': 'HowToStep', name: 'Dikim Yapılır', text: 'Görünmez dikiş tekniğiyle paça kısaltılır — orijinal görünüm korunur.' },
-        { '@type': 'HowToStep', name: 'Ertesi Gün Teslim', text: 'Normal paça kısaltma ertesi gün, acil olanlar 1–2 saatte teslim edilir.' },
+        { '@type': 'HowToStep', name: 'Aynı Gün Teslim', text: 'Paça kısaltma aynı gün teslim edilir, acil olanlar 1–2 saatte.' },
       ],
     },
     {
       '@type': 'FAQPage',
       '@id': `${PAGE_URL}#faq`,
       mainEntity: [
-        { '@type': 'Question', name: 'Paça kısaltma ne kadar sürer?', acceptedAnswer: { '@type': 'Answer', text: 'Normal paça kısaltma ertesi gün teslim edilir; acil işlerde 1–2 saat.' } },
+        { '@type': 'Question', name: 'Paça kısaltma ne kadar sürer?', acceptedAnswer: { '@type': 'Answer', text: 'Paça kısaltma aynı gün teslim edilir; acil işlerde 1–2 saat.' } },
         { '@type': 'Question', name: 'Paça kısaltma fiyatı ne kadar?', acceptedAnswer: { '@type': 'Answer', text: 'Kumaş pantolon ₺200\'den, kot pantolon ₺200\'den, etek kısaltma ₺200\'den başlar.' } },
         { '@type': 'Question', name: 'Orijinal dikişi bozmadan kısaltma yapıyor musunuz?', acceptedAnswer: { '@type': 'Answer', text: 'Evet, görünmez dikiş tekniğiyle çalışıyoruz — orijinal paça görünümü korunur, özellikle kot pantolonlarda orijinal dikiş izi bile taklit edilebilir.' } },
         { '@type': 'Question', name: 'Prova gerekiyor mu?', acceptedAnswer: { '@type': 'Answer', text: 'En doğru sonuç için prova önerilir ama net ölçü verirseniz provasız da yapabiliriz. Adrese gelen servisimizle yerinde ölçü de alabiliriz.' } },
@@ -129,14 +129,14 @@ export default function PacaKisaltmaPage() {
             <span className="hero-tag">📏 Acil Paça Kısaltma · Konyaaltı</span>
             <h1 id="hero-h">
               Paça Kısaltma <span className="accent">Konyaaltı</span><br />
-              ₺200'den, Ertesi Gün Teslim
+              ₺200'den, Aynı Gün Teslim
             </h1>
             <p className="hero-desc">
               Pantolon, kot, etek paça kısaltma — görünmez dikiş tekniğiyle,
               orijinal görünümü koruyarak. Eve ve otele
               ücretsiz servis.
             </p>
-            <p className="hero-desc"><strong>Kısa cevap:</strong> Pantolon, kot ve etek paça kısaltma ₺200'den başlar; normal işler ertesi gün, acil işler 1–2 saatte teslim edilir.</p>
+            <p className="hero-desc"><strong>Kısa cevap:</strong> Pantolon, kot ve etek paça kısaltma ₺200'den başlar; işler aynı gün, acil işler 1–2 saatte teslim edilir.</p>
             <div className="hero-btns">
               <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-primary">💬 Ölçü Gönderin →</a>
               <a href={`tel:${PHONE_TEL}`} className="btn-secondary">📞 {PHONE}</a>
@@ -214,8 +214,8 @@ export default function PacaKisaltmaPage() {
                 <div className="howto-d">Görünmez dikiş tekniğiyle paça kısaltılır — orijinal görünüm korunur.</div>
               </div>
               <div className="howto-item">
-                <div className="howto-t">Ertesi Gün Teslim</div>
-                <div className="howto-d">Normal paça kısaltma ertesi gün, acil olanlar 1–2 saatte teslim edilir.</div>
+                <div className="howto-t">Aynı Gün Teslim</div>
+                <div className="howto-d">Paça kısaltma aynı gün teslim edilir, acil olanlar 1–2 saatte.</div>
               </div>
             </div>
           </div>
@@ -231,7 +231,7 @@ export default function PacaKisaltmaPage() {
               <h2 className="sec-h ff" id="faq-h">Paça Kısaltma Hakkında Sık Sorulan Sorular</h2>
             </div>
             {[
-              ['Paça kısaltma ne kadar sürer?', 'Normal paça kısaltma ertesi gün teslim edilir; acil işlerde 1–2 saat.'],
+              ['Paça kısaltma ne kadar sürer?', 'Paça kısaltma aynı gün teslim edilir; acil işlerde 1–2 saat.'],
               ['Paça kısaltma fiyatı ne kadar?', 'Kumaş pantolon ₺200\'den, kot pantolon ₺200\'den, etek kısaltma ₺200\'den başlar.'],
               ['Orijinal dikişi bozmadan kısaltma yapıyor musunuz?', 'Evet, görünmez dikiş tekniğiyle çalışıyoruz — orijinal paça görünümü korunur, kot pantolonlarda orijinal dikiş izi bile taklit edilebilir.'],
               ['Prova gerekiyor mu?', 'En doğru sonuç için prova önerilir ama net ölçü verirseniz provasız da yapabiliriz. Adrese gelen servisimizle yerinde ölçü de alabiliriz.'],
@@ -249,7 +249,7 @@ export default function PacaKisaltmaPage() {
 
         <section className="cta-final" aria-label="İletişime geç">
           <h2 className="cta-h ff">Pantolonunuz Uzun mu Geldi?</h2>
-          <p className="cta-sub">Fotoğraf gönderin, ertesi gün teslim alın.</p>
+          <p className="cta-sub">Fotoğraf gönderin, aynı gün teslim alın.</p>
           <div className="cta-btns">
             <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-white">💬 WhatsApp'tan Yazın</a>
             <a href={MAPS} target="_blank" rel="noopener noreferrer" className="btn-outline-white">📍 Google Haritalar</a>

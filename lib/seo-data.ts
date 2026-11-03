@@ -159,14 +159,15 @@ export interface Service {
 export const SERVICES: Service[] = [
   {
     id: 'paca', icon: '📏', time: 'same', priceFrom: 200,
+    timeText: { tr: 'Aynı gün teslim; acilde 1–2 saat', en: 'Same-day delivery; urgent 1–2 hours', ru: 'В тот же день; срочно 1–2 часа', de: 'Am selben Tag fertig; eilig 1–2 Stunden' },
     slug: { tr: 'pantolon-paca-kisaltma', en: 'trouser-hemming', ru: 'podshiv-bryuk', de: 'hosen-kuerzen' },
     name: { tr: 'Pantolon Paça Kısaltma', en: 'Trouser Hemming', ru: 'Подшив брюк', de: 'Hosen kürzen' },
     q: { tr: 'paça kısaltma', en: 'trouser hemming', ru: 'подшив брюк', de: 'Hosen kürzen' },
     intro: {
-      tr: 'Pantolon, takım pantolonu ve etek paçası için boyu üzerinizde işaretleyip Konyaaltı atölyemizde kısaltıyoruz. Normal işte ertesi gün, acil işte 1–2 saatte teslim edilir; tatilde ya da yoğun bir haftada vaktiniz kısıtlıysa uygundur.',
-      en: 'Trousers, suit trousers or a skirt too long? We mark the length on you and hem it in our Konyaaltı workshop, with next-day delivery (urgent jobs 1–2 hours), which suits a holiday or a tight week.',
-      ru: 'Брюки, брюки от костюма или юбка длинноваты? Отмечаем длину на вас и подшиваем в нашей мастерской в Коньяалты, на следующий день (срочно — за 1–2 часа) — удобно в отпуске или в плотном графике.',
-      de: 'Hose, Anzughose oder Rock zu lang? Wir stecken die Länge an Ihnen ab und kürzen in unserer Werkstatt in Konyaaltı, am nächsten Tag fertig (eilig in 1–2 Stunden) – praktisch im Urlaub oder bei knapper Zeit.',
+      tr: 'Pantolon, takım pantolonu ve etek paçası için boyu üzerinizde işaretleyip Konyaaltı atölyemizde kısaltıyoruz. Aynı gün teslim, acil işte 1–2 saatte; tatilde ya da yoğun bir haftada vaktiniz kısıtlıysa uygundur.',
+      en: 'Trousers, suit trousers or a skirt too long? We mark the length on you and hem it in our Konyaaltı workshop, with same-day delivery (urgent jobs 1–2 hours), which suits a holiday or a tight week.',
+      ru: 'Брюки, брюки от костюма или юбка длинноваты? Отмечаем длину на вас и подшиваем в нашей мастерской в Коньяалты, в тот же день (срочно — за 1–2 часа) — удобно в отпуске или в плотном графике.',
+      de: 'Hose, Anzughose oder Rock zu lang? Wir stecken die Länge an Ihnen ab und kürzen in unserer Werkstatt in Konyaaltı, am selben Tag fertig (eilig in 1–2 Stunden) – praktisch im Urlaub oder bei knapper Zeit.',
     },
     vars: {
       tr: ['pantolon paça kısaltma', 'etek boy kısaltma', 'etek kısaltma', 'etek daraltma', 'paça kısaltma terzi', 'kumaş pantolon boy kısaltma', 'pantolon boyu kısaltma', 'paça tadilatı', 'yakınımdaki terzi paça kısaltma', 'acil paça kısaltma'],

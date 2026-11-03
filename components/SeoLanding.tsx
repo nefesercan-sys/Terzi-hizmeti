@@ -13,6 +13,7 @@ import Image from 'next/image';
 import ReviewsBlock from '@/components/ReviewsBlock';
 import { AREA_NOTES, AREA_NOTE_UI } from '@/lib/district-facts';
 import { districtAnswer, districtFaqPool, SERVICE_PICK } from '@/lib/district-copy';
+import { bolgeMatrisi, bolgeEkSss, trDistrictTitles } from '@/lib/bolge-hizmet-matrisi';
 import { areaIntro, areaNeeds, NEEDS_H, AREA_PROFILES } from '@/lib/area-profiles';
 import { businessNode as sharedBusinessNode } from '@/lib/business';
 import { OTEL_BOLGELERI } from '@/lib/otel-bolgeleri';
@@ -204,8 +205,8 @@ function _districtCopy(lang: Lang, d: District) {
 
   function metaOverride(r: { n: string; loc: string; kw: string[]; title: string; desc: string }) {
     const o = lang === 'tr' ? trNearDistrict(d.slug, n, r.loc, PHONE, 'Terzi Can') : fgNearDistrict(lang, d.slug, n); // elle yazılmış meta (TR yakın bölgeler + EN/RU/DE)
-    if (!o) return { ...r, title: pickFit(({ tr: [`${n} Terzi · Elbise Dikimi, Tamiri, Tadilatı | Antalya`, `${n} Terzi: Elbise Dikimi, Tamir, Tadilat | Antalya`, `${n} Terzi · Dikim, Tamir, Tadilat | Antalya`, `${n} Terzi | Antalya`], en: [`Tailor ${n}, Antalya: Dressmaking, Repairs, Alterations`, `Tailor ${n} Antalya · Dress Making & Alterations`, `Tailor ${n}, Antalya · Repairs, Alterations`, `Tailor in ${n}, Antalya`], ru: [`Портной ${n}, Анталья: пошив, ремонт, переделка одежды`, `Портной ${n}: пошив, ремонт, переделка`, `Портной ${n}, Анталья`], de: [`Schneider ${n}, Antalya: Nähen, Reparatur, Änderung`, `Schneider ${n}: Kleider nähen, ändern`, `Schneider ${n}, Antalya`] } as Record<string, string[]>)[lang], 60) };
-    return { n: r.n, loc: r.loc, kw: Array.from(new Set([...o.kw, ...r.kw])), title: pickFit(({ tr: [`${n} Terzi · Elbise Dikimi, Tamiri, Tadilatı | Antalya`, `${n} Terzi: Elbise Dikimi, Tamir, Tadilat | Antalya`, `${n} Terzi · Dikim, Tamir, Tadilat | Antalya`, `${n} Terzi | Antalya`], en: [`Tailor ${n}, Antalya: Dressmaking, Repairs, Alterations`, `Tailor ${n} Antalya · Dress Making & Alterations`, `Tailor ${n}, Antalya · Repairs, Alterations`, `Tailor in ${n}, Antalya`], ru: [`Портной ${n}, Анталья: пошив, ремонт, переделка одежды`, `Портной ${n}: пошив, ремонт, переделка`, `Портной ${n}, Анталья`], de: [`Schneider ${n}, Antalya: Nähen, Reparatur, Änderung`, `Schneider ${n}: Kleider nähen, ändern`, `Schneider ${n}, Antalya`] } as Record<string, string[]>)[lang], 60), desc: o.desc };
+    if (!o) return { ...r, title: pickFit(({ tr: trDistrictTitles(d.slug, n, DISTRICTS.filter((x) => isIndexable('tr', x.slug)).findIndex((x) => x.slug === d.slug)), en: [`Tailor ${n}, Antalya: Dressmaking, Repairs, Alterations`, `Tailor ${n} Antalya · Dress Making & Alterations`, `Tailor ${n}, Antalya · Repairs, Alterations`, `Tailor in ${n}, Antalya`], ru: [`Портной ${n}, Анталья: пошив, ремонт, переделка одежды`, `Портной ${n}: пошив, ремонт, переделка`, `Портной ${n}, Анталья`], de: [`Schneider ${n}, Antalya: Nähen, Reparatur, Änderung`, `Schneider ${n}: Kleider nähen, ändern`, `Schneider ${n}, Antalya`] } as Record<string, string[]>)[lang], 60) };
+    return { n: r.n, loc: r.loc, kw: Array.from(new Set([...o.kw, ...r.kw])), title: pickFit(({ tr: trDistrictTitles(d.slug, n, DISTRICTS.filter((x) => isIndexable('tr', x.slug)).findIndex((x) => x.slug === d.slug)), en: [`Tailor ${n}, Antalya: Dressmaking, Repairs, Alterations`, `Tailor ${n} Antalya · Dress Making & Alterations`, `Tailor ${n}, Antalya · Repairs, Alterations`, `Tailor in ${n}, Antalya`], ru: [`Портной ${n}, Анталья: пошив, ремонт, переделка одежды`, `Портной ${n}: пошив, ремонт, переделка`, `Портной ${n}, Анталья`], de: [`Schneider ${n}, Antalya: Nähen, Reparatur, Änderung`, `Schneider ${n}: Kleider nähen, ändern`, `Schneider ${n}, Antalya`] } as Record<string, string[]>)[lang], 60), desc: o.desc };
   }
 }
 
@@ -491,7 +492,8 @@ export function DistrictPage({ lang, d }: { lang: Lang; d: District }) {
   const c = districtCopy(lang, d);
   const url = abs(districtUrl(lang, d));
   const idx = DISTRICTS.findIndex((x) => x.slug === d.slug);
-  const faq = districtFaqPool(lang, d);
+  const matris = lang === 'tr' ? bolgeMatrisi(d.slug, d.name.tr, d.loc.tr) : null;
+  const faq = lang === 'tr' ? [...districtFaqPool(lang, d), ...bolgeEkSss(d.slug, d.name.tr, d.loc.tr)] : districtFaqPool(lang, d);
   const waMsg = {
     tr: `Merhaba, ${c.loc} terzi hizmeti almak istiyorum.`,
     en: `Hello, I need a tailor ${c.loc}.`,
@@ -628,6 +630,22 @@ export function DistrictPage({ lang, d }: { lang: Lang; d: District }) {
             {hotel && (<p style={{ marginTop: '1.2rem', fontSize: '.84rem' }}><a href={hotel} style={{ color: '#C9A96E', fontWeight: 700 }}>{u.hotelLink} →</a></p>)}
           </div>
         </section>
+
+        {matris && (
+          <section className="sec" aria-labelledby="matris-h">
+            <div className="ctr" style={{ maxWidth: 860 }}>
+              <div className="sec-head"><h2 className="sec-h ff" id="matris-h">{matris.title}</h2></div>
+              <p style={{ fontSize: '.92rem', lineHeight: 1.8, margin: '.5rem 0 1rem' }}>{matris.lead}</p>
+              {matris.groups.map((g) => (
+                <div key={g.id} style={{ margin: '0 0 1rem' }}>
+                  <h3 style={{ fontSize: '1rem', margin: '0 0 .25rem' }}>{g.heading}</h3>
+                  <p style={{ fontSize: '.9rem', lineHeight: 1.75, margin: 0, opacity: .9 }}>{g.text}</p>
+                </div>
+              ))}
+              <p style={{ fontSize: '.84rem', lineHeight: 1.7, marginTop: '1rem', opacity: .75 }}>{matris.price}</p>
+            </div>
+          </section>
+        )}
 
         {AREA_NOTES[d.slug] && isFreeService(d.slug) && (
           <section className="sec" aria-labelledby="area-h">

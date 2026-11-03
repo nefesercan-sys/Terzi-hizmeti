@@ -66,8 +66,7 @@ const jsonLd = {
       offers: {
         '@type': 'AggregateOffer',
         priceCurrency: 'TRY',
-        lowPrice: '80',
-        highPrice: '600',
+        lowPrice: '200',
         offerCount: 6,
         offers: [
           { '@type': 'Offer', name: 'Paça Kısaltma', price: '200', priceCurrency: 'TRY', priceValidUntil: '2027-12-31' },

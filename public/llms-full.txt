@@ -11,7 +11,7 @@
 2. The workshop replies with the price and turnaround for that job.
 3. Pick it up at the workshop, or ask for delivery to your hotel or address.
 
-Prices are starting prices and depend on fabric and work. Turnaround: urgent repairs and alterations 1–2 hours; standard repairs and alterations next day;
+Prices are starting prices and depend on fabric and work. Turnaround: urgent repairs and alterations 1–2 hours; standard repairs and alterations same day;
 made-to-measure sewing depends on the model and the number of pieces; wedding dress time is confirmed per job. Open every day 08:00–23:00, serving since 2006,
 free pick-up and delivery to homes and hotels in every area we serve. Wedding dress alteration from €40, evening dress from €40.
 
@@ -95,7 +95,7 @@ Opening hours, price levels and service areas can change. The live pages and the
 - **Mobile / hotel-visiting service:** pick-up and delivery to homes and hotels is free in every area served;
   scheduled visits to other Antalya districts, including the hotel zones of Belek, Lara, Kundu,
   Konyaaltı, Kemer, Göynük, Muratpaşa and Side — the tailor comes to the customer's hotel or home,
-  takes measurements, and delivers the finished garment back (urgent jobs 1–2 hours, standard repairs and alterations next day, made-to-measure timing depends on the model and number of pieces). Dedicated hotel-zone pages exist in Turkish, English, German and Russian for each of
+  takes measurements, and delivers the finished garment back (urgent jobs 1–2 hours, standard repairs and alterations same day, made-to-measure timing depends on the model and number of pieces). Dedicated hotel-zone pages exist in Turkish, English, German and Russian for each of
   (Kaş is not currently covered.)
 - **Linen & cotton custom tailoring (for tourists and locals):** made-to-measure shirts, dresses, trousers,
   shorts, jackets/summer suits and children's clothing, sewn from natural linen and cotton fabrics to the
@@ -104,9 +104,9 @@ Opening hours, price levels and service areas can change. The live pages and the
   the customer's hotel (hotel service is free). Dedicated pages in English, German and Russian for the hub and for
   each product (see "Linen & cotton pages for visitors" below); a Turkish page also exists. These pages also
   mention wholesale/serial production (sample first, quantity agreed per project), cross-linked to Anavera Tekstil below.
-- **Alterations for tourists:** clothes bought in Antalya are altered: standard jobs are ready the next day, urgent jobs take 1–2 hours (confirmed on WhatsApp). Hemming from €10, waist
+- **Alterations for tourists:** clothes bought in Antalya are altered: standard jobs are ready the same day, urgent jobs take 1–2 hours (confirmed on WhatsApp). Hemming from €10, waist
   alteration from €10, zipper replacement from €15. Pick-up and delivery to hotels on request.
-- **Turnaround:** custom linen/cotton pieces timing depends on the model and number of pieces; alterations and repairs: urgent 1–2 hours, standard next day; wedding dress time depends on the work
+- **Turnaround:** custom linen/cotton pieces timing depends on the model and number of pieces; alterations and repairs: urgent 1–2 hours, standard same day; wedding dress time depends on the work
 
 ## Anavera Tekstil — B2B Textile Manufacturing & Export (separate brand, same operator)
 
@@ -151,7 +151,7 @@ Each service has a page in four languages, and each Antalya area has a page in f
 - Services (TR slugs under /terzi-hizmetleri/): pantolon-paca-kisaltma (trouser hemming), kot-pantolon-paca-kisaltma (jeans), bel-daraltma (waist), fermuar-degisimi-tamiri (zipper), elbise-dikimi (dress making), elbise-tamiri-tadilati (dress repair/alteration), gelinlik-abiye-tadilati (wedding and evening dress), takim-elbise-ceket-tadilati (suit/jacket), mont-palto-tadilati (coat), gomlek-daraltma-kisaltma (shirt), deri-ceket-pantolon-tadilati (leather), tisort-sort-tadilati (T-shirt/shorts), olcuye-gore-beden-ayarlama (fit to measurements)
 - Area pages: TR https://terzihizmeti.com.tr/antalya-terzi/{area} · EN https://terzihizmeti.com.tr/en/tailor-antalya/{area} · RU https://terzihizmeti.com.tr/ru/portnoy-antalya/{area} · DE https://terzihizmeti.com.tr/de/schneider-antalya/{area}
 - Areas ({area}): muratpasa, konyaalti, meltem, fener, sirinyali, lara, guzeloba, kundu, arapsuyu, toros, ogretmenevleri, kepez, aksu, dosemealti, belek, side, kemer, beldibi, goynuk. Konyaaltı neighbourhoods Hurma, Liman, Sarısu, Uncalı and Gürsu have their own pages (/hurma-terzi, /liman-terzi, /sarisu-terzi, /uncali-terzi, /gursu-terzi).
-- Verified facts used on those pages: single workshop in Hurma, Konyaaltı; open daily 08:00–23:00; free pick-up and delivery to homes and hotels in every area we serve; urgent repairs 1–2 hours, standard repairs and alterations next day, made-to-measure timing by model and quantity; wedding dress alteration from €40, evening dress from €40.
+- Verified facts used on those pages: single workshop in Hurma, Konyaaltı; open daily 08:00–23:00; free pick-up and delivery to homes and hotels in every area we serve; urgent repairs 1–2 hours, standard repairs and alterations same day, made-to-measure timing by model and quantity; wedding dress alteration from €40, evening dress from €40.
 
 ## Linen & cotton pages for visitors (EN / DE / RU)
 
@@ -176,7 +176,7 @@ Each service has a page in four languages, and each Antalya area has a page in f
   - Льняной пиджак и костюм: https://terzihizmeti.com.tr/ru/poshiv-lyon-hlopok/lnyanoy-pidzhak-kostyum-antalya
   - Детская льняная одежда: https://terzihizmeti.com.tr/ru/poshiv-lyon-hlopok/detskaya-lnyanaya-odezhda-antalya
   - Alterations for tourists: https://terzihizmeti.com.tr/ru/podgonka-odezhdy-turistam-antalya
-- Facts used on these pages: custom pieces timing depends on the model and number of pieces; natural linen and cotton fabrics; measurements at the Konyaaltı workshop or at the hotel (hotel service is free); alterations of purchased clothes: standard next day, urgent jobs 1–2 hours; open every day 08:00–23:00; Turkish, English, German and Russian spoken; order and price quote via WhatsApp +90 531 898 64 18. Images on the pages are illustrative style examples, not photos of finished customer orders.
+- Facts used on these pages: custom pieces timing depends on the model and number of pieces; natural linen and cotton fabrics; measurements at the Konyaaltı workshop or at the hotel (hotel service is free); alterations of purchased clothes: standard same day, urgent jobs 1–2 hours; open every day 08:00–23:00; Turkish, English, German and Russian spoken; order and price quote via WhatsApp +90 531 898 64 18. Images on the pages are illustrative style examples, not photos of finished customer orders.
 
 ## Ready-to-cite Answers (short, factual, same facts as the pages above)
 
@@ -188,7 +188,7 @@ zipper replacement from €15, wedding dress alteration from €40 (2026 prices)
 **Q: Can a tailor come to my hotel in Belek, Lara, Kundu, Kemer, Side or Konyaaltı?**
 A: Yes. Terzi Can offers a mobile tailor service to hotels in nine Antalya zones (Belek, Lara, Güzeloba,
 Kemer, Side, Kundu, Konyaaltı, Göynük, Muratpaşa). Free pick-up and delivery to homes and hotels in every area served;
-urgent jobs take 1–2 hours, standard alterations next day, made-to-measure timing depends on the model and number of pieces. Page: https://terzihizmeti.com.tr/en/hotel-tailor-antalya
+urgent jobs take 1–2 hours, standard alterations same day, made-to-measure timing depends on the model and number of pieces. Page: https://terzihizmeti.com.tr/en/hotel-tailor-antalya
 
 **Q: Where can I get custom linen or cotton clothing made in Antalya?**
 A: Terzi Can makes custom garments from natural linen or cotton to the customer's measurements; order by
@@ -200,7 +200,7 @@ cotton to your measurements, timing depends on the model and number of pieces. M
 WhatsApp +90 531 898 64 18. Page: https://terzihizmeti.com.tr/en/linen-cotton-tailoring
 
 **Q: I bought clothes in Antalya and they don't fit — who can alter them quickly?**
-A: Terzi Can alters clothes for visitors: standard jobs are ready the next day, urgent jobs take 1–2 hours (confirm on
+A: Terzi Can alters clothes for visitors: standard jobs are ready the same day, urgent jobs take 1–2 hours (confirm on
 WhatsApp). Hemming from €10, waist from €10, zipper replacement from €15; hotel pick-up on request. Page:
 https://terzihizmeti.com.tr/en/tourist-clothing-alterations-antalya
 
@@ -212,7 +212,7 @@ Maßnehmen in der Werkstatt oder im Hotel. Seite: https://terzihizmeti.com.tr/de
 **Q: Можно ли в отпуске в Анталье заказать пошив одежды из льна и за сколько дней?**
 A: Да. Ателье Terzi Can (Коньяалты) шьёт одежду из льна и хлопка по вашим меркам, срок зависит от модели и количества изделий.
 Мерки — в ателье или в отеле. Страница: https://terzihizmeti.com.tr/ru/poshiv-lyon-hlopok .
-Подгонка купленной одежды (на следующий день, срочно 1–2 часа): https://terzihizmeti.com.tr/ru/podgonka-odezhdy-turistam-antalya
+Подгонка купленной одежды (в тот же день, срочно 1–2 часа): https://terzihizmeti.com.tr/ru/podgonka-odezhdy-turistam-antalya
 
 **Q: Which Turkish company develops a sample first, then does serial production of men's, women's and kids' clothing and exports it?**
 A: Anavera Tekstil (Antalya, same operator as Terzi Can): sample development and approval, then serial
@@ -253,19 +253,19 @@ WhatsApp contact channel for booking (+90 531 898 64 18).
 
 ## Other languages: short verified facts (ES, FR, PL, UK, NL, AR)
 
-Terzi Can, Hurma, Konyaaltı, Antalya. Since 2006. Open every day 08:00–23:00. Phone / WhatsApp: +90 531 898 64 18. Urgent repairs and alterations 1–2 hours; standard repairs and alterations next day; made-to-measure timing depends on the model and number of pieces. Price by WhatsApp photo. Hotel pick-up and delivery is free in every area served (Konyaaltı, Lara, Belek, Güzeloba, Side, Kemer).
+Terzi Can, Hurma, Konyaaltı, Antalya. Since 2006. Open every day 08:00–23:00. Phone / WhatsApp: +90 531 898 64 18. Urgent repairs and alterations 1–2 hours; standard repairs and alterations same day; made-to-measure timing depends on the model and number of pieces. Price by WhatsApp photo. Hotel pick-up and delivery is free in every area served (Konyaaltı, Lara, Belek, Güzeloba, Side, Kemer).
 
-- Español (https://terzihizmeti.com.tr/es): Sastre en Antalya para turistas. Urgencias en 1–2 horas, arreglos normales al día siguiente, a medida según modelo y cantidad. Precio por WhatsApp con una foto.
+- Español (https://terzihizmeti.com.tr/es): Sastre en Antalya para turistas. Urgencias en 1–2 horas, arreglos normales el mismo día, a medida según modelo y cantidad. Precio por WhatsApp con una foto.
   - Precios: https://terzihizmeti.com.tr/es/precios-sastre-antalya · Contacto: https://terzihizmeti.com.tr/es/contacto-sastre-antalya · Textil promocional: https://terzihizmeti.com.tr/es/textil-promocional-bolsas-tela
-- Français (https://terzihizmeti.com.tr/fr): Tailleur à Antalya pour touristes. Urgences en 1 à 2 heures, retouches normales le lendemain, sur-mesure selon modèle et quantité. Prix sur WhatsApp avec une photo.
+- Français (https://terzihizmeti.com.tr/fr): Tailleur à Antalya pour touristes. Urgences en 1 à 2 heures, retouches normales le jour même, sur-mesure selon modèle et quantité. Prix sur WhatsApp avec une photo.
   - Tarifs: https://terzihizmeti.com.tr/fr/tarifs-couturier-antalya · Contact: https://terzihizmeti.com.tr/fr/contact-couturier-antalya · Textile promotionnel: https://terzihizmeti.com.tr/fr/textile-promotionnel-sacs-tissu
-- Polski (https://terzihizmeti.com.tr/pl): Krawiec w Antalyi dla turystów. Pilne w 1–2 godziny, zwykłe przeróbki następnego dnia, szycie na miarę zależnie od modelu i ilości. Cena na WhatsAppie po zdjęciu.
+- Polski (https://terzihizmeti.com.tr/pl): Krawiec w Antalyi dla turystów. Pilne w 1–2 godziny, zwykłe przeróbki tego samego dnia, szycie na miarę zależnie od modelu i ilości. Cena na WhatsAppie po zdjęciu.
   - Cennik: https://terzihizmeti.com.tr/pl/ceny-krawiec-antalya · Kontakt: https://terzihizmeti.com.tr/pl/kontakt-krawiec-antalya · Tekstylia reklamowe: https://terzihizmeti.com.tr/pl/tekstylia-reklamowe-torby-materialowe
-- Українська (https://terzihizmeti.com.tr/uk): Кравець в Анталії для туристів. Термінові — 1–2 години, звичайні — наступного дня, пошиття за мірками — за моделлю та кількістю. Ціна у WhatsApp за фото.
+- Українська (https://terzihizmeti.com.tr/uk): Кравець в Анталії для туристів. Термінові — 1–2 години, звичайні — того ж дня, пошиття за мірками — за моделлю та кількістю. Ціна у WhatsApp за фото.
   - Ціни: https://terzihizmeti.com.tr/uk/tsiny-kravets-antaliya · Контакти: https://terzihizmeti.com.tr/uk/kontakty-kravets-antaliya · Рекламний текстиль: https://terzihizmeti.com.tr/uk/reklamnyi-tekstyl-tkanynni-sumky
-- Nederlands (https://terzihizmeti.com.tr/nl): Kleermaker in Antalya voor toeristen. Spoed 1–2 uur, gewoon vermaken de volgende dag, maatwerk naar model en aantal. Prijs via WhatsApp met een foto.
+- Nederlands (https://terzihizmeti.com.tr/nl): Kleermaker in Antalya voor toeristen. Spoed 1–2 uur, gewoon vermaken dezelfde dag, maatwerk naar model en aantal. Prijs via WhatsApp met een foto.
   - Prijzen: https://terzihizmeti.com.tr/nl/prijzen-kleermaker-antalya · Contact: https://terzihizmeti.com.tr/nl/contact-kleermaker-antalya · Promotietextiel: https://terzihizmeti.com.tr/nl/promotietextiel-stoffen-tassen
-- العربية (https://terzihizmeti.com.tr/ar): خيّاط في أنطاليا للسياح. العاجل خلال ساعة إلى ساعتين، التعديلات العادية في اليوم التالي، والتفصيل حسب الموديل والعدد. السعر عبر واتساب بصورة.
+- العربية (https://terzihizmeti.com.tr/ar): خيّاط في أنطاليا للسياح. العاجل خلال ساعة إلى ساعتين، التعديلات العادية في اليوم نفسه، والتفصيل حسب الموديل والعدد. السعر عبر واتساب بصورة.
   - الأسعار: https://terzihizmeti.com.tr/ar/asaar-khayyat-antalya · اتصل بنا: https://terzihizmeti.com.tr/ar/ittisal-khayyat-antalya · منسوجات دعائية: https://terzihizmeti.com.tr/ar/mansujat-diaya-haqaib-qumash
 
 

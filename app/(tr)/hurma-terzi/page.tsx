@@ -81,10 +81,10 @@ const jsonLd = {
       '@type': 'FAQPage',
       '@id': `${PAGE_URL}#faq`,
       mainEntity: [
-        { '@type': 'Question', name: 'Hurma mahallesine terzi servisi geliyor mu?', acceptedAnswer: { '@type': 'Answer', text: `Evet! Hurma mahallesine ücretsiz adrese servis veriyoruz. Kıyafetinizi adresinizden alıp normal tamir ve tadilatta ertesi gün, acil işlerde 1–2 saatte teslim ediyoruz; özel dikimde süre modele ve adede göre belirlenir. ☎ ${PHONE}` } },
+        { '@type': 'Question', name: 'Hurma mahallesine terzi servisi geliyor mu?', acceptedAnswer: { '@type': 'Answer', text: `Evet! Hurma mahallesine ücretsiz adrese servis veriyoruz. Kıyafetinizi adresinizden alıp normal tamir ve tadilatta aynı gün, acil işlerde 1–2 saatte teslim ediyoruz; özel dikimde süre modele ve adede göre belirlenir. ☎ ${PHONE}` } },
         { '@type': 'Question', name: 'Hurma terzi fiyatları ne kadar 2026?', acceptedAnswer: { '@type': 'Answer', text: `Paça kısaltma ₺200'den, fermuar değişimi ₺300'den, bel daraltma ₺200'den, elbise dikimi ₺800'den, gelinlik tadilatı ₺800'den, abiye tadilatı ₺800'den. ☎ ${PHONE}` } },
         { '@type': 'Question', name: 'Hurma sahil bölgesindeki otellere terzi servisi var mı?', acceptedAnswer: { '@type': 'Answer', text: `Evet, Hurma sahil şeridindeki otellere ücretsiz alım-teslimatlı tadilat, onarım ve dikim hizmeti veriyoruz. ☎ ${PHONE}` } },
-        { '@type': 'Question', name: 'Hurma\'da acil tadilat ne kadar sürer?', acceptedAnswer: { '@type': 'Answer', text: 'Paça kısaltma, fermuar değişimi ve bel daraltma gibi standart işlemler ertesi gün, acil olanlar 1–2 saatte teslim edilir.' } },
+        { '@type': 'Question', name: 'Hurma\'da acil tadilat ne kadar sürer?', acceptedAnswer: { '@type': 'Answer', text: 'Paça kısaltma, fermuar değişimi ve bel daraltma gibi standart işlemler aynı gün, acil olanlar 1–2 saatte teslim edilir.' } },
       ],
     },
   ],
@@ -129,7 +129,7 @@ export default function HurmaTerziPage() {
             <p className="hero-desc">
               Hurma mahallesine özel adrese servisli terzi hizmeti. Paça kısaltma, fermuar
               değişimi, bel daraltma, özel dikim, gelinlik tadilatı —
-              ₺200'den başlayan fiyatlarla; normal işler ertesi gün, acil işler 1–2 saatte teslim.
+              ₺200'den başlayan fiyatlarla; normal işler aynı gün, acil işler 1–2 saatte teslim.
             </p>
             <div className="hero-btns">
               <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-primary">💬 WhatsApp'tan Yazın →</a>
@@ -148,7 +148,7 @@ export default function HurmaTerziPage() {
                 Konyaaltı'nın sahil şeridindeki Hurma mahallesi, hem yerleşik hem tatilci
                 nüfusuyla terzi hizmetine sürekli ihtiyaç duyan bir bölge. Hurma sınırları
                 içinde — sahil şeridi, iç mahalle sokakları ve site/apartman bölgelerinin
-                tamamına — kıyafetinizi adresinizden alıp normal işte ertesi gün, acil işte 1–2 saatte teslim ediyoruz.
+                tamamına — kıyafetinizi adresinizden alıp normal işte aynı gün, acil işte 1–2 saatte teslim ediyoruz.
               </p>
             </div>
           </div>
@@ -191,7 +191,7 @@ export default function HurmaTerziPage() {
             <div className="howto-list">
               <div className="howto-item">
                 <div className="howto-t">Paça Kısaltma & Bel Daraltma</div>
-                <div className="howto-d">Pantolon, kot, etek kısaltma; elbise, ceket ve pantolonda bel daraltma. ₺200'den, ertesi gün teslim.</div>
+                <div className="howto-d">Pantolon, kot, etek kısaltma; elbise, ceket ve pantolonda bel daraltma. ₺200'den, aynı gün teslim.</div>
               </div>
               <div className="howto-item">
                 <div className="howto-t">Fermuar Değişimi</div>
@@ -217,10 +217,10 @@ export default function HurmaTerziPage() {
               <h2 className="sec-h ff" id="faq-h">Hurma Terzi Hakkında Sık Sorulan Sorular</h2>
             </div>
             {[
-              ['Hurma mahallesine terzi servisi geliyor mu?', 'Evet! Hurma mahallesine ücretsiz adrese servis veriyoruz. Kıyafetinizi adresinizden alıp normal tamir ve tadilatta ertesi gün, acil işlerde 1–2 saatte teslim ediyoruz; özel dikimde süre modele ve adede göre belirlenir.'],
+              ['Hurma mahallesine terzi servisi geliyor mu?', 'Evet! Hurma mahallesine ücretsiz adrese servis veriyoruz. Kıyafetinizi adresinizden alıp normal tamir ve tadilatta aynı gün, acil işlerde 1–2 saatte teslim ediyoruz; özel dikimde süre modele ve adede göre belirlenir.'],
               ['Hurma terzi fiyatları ne kadar 2026?', 'Paça kısaltma ₺200\'den, fermuar değişimi ₺300\'den, bel daraltma ₺200\'den, elbise dikimi ₺800\'den, gelinlik tadilatı ₺800\'den, abiye tadilatı ₺800\'den.'],
               ['Hurma sahil bölgesindeki otellere terzi servisi var mı?'],
-              ['Hurma\'da acil tadilat ne kadar sürer?', 'Paça kısaltma, fermuar değişimi ve bel daraltma gibi standart işlemler ertesi gün, acil olanlar 1–2 saatte teslim edilir.'],
+              ['Hurma\'da acil tadilat ne kadar sürer?', 'Paça kısaltma, fermuar değişimi ve bel daraltma gibi standart işlemler aynı gün, acil olanlar 1–2 saatte teslim edilir.'],
             ].map(([q, a]) => (
               <div key={q} className="faq-item">
                 <div className="faq-q">{q}</div>
@@ -232,7 +232,7 @@ export default function HurmaTerziPage() {
 
         <section className="cta-final" aria-label="İletişime geç">
           <h2 className="cta-h ff">Hurma'da Terziye mi İhtiyacınız Var?</h2>
-          <p className="cta-sub">Fotoğraf gönderin, adresinizden alalım, ertesi gün teslim edelim.</p>
+          <p className="cta-sub">Fotoğraf gönderin, adresinizden alalım, aynı gün teslim edelim.</p>
           <div className="cta-btns">
             <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-white">💬 WhatsApp'tan Yazın</a>
             <a href={MAPS} target="_blank" rel="noopener noreferrer" className="btn-outline-white">📍 Google Haritalar</a>

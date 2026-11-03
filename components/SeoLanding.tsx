@@ -103,10 +103,10 @@ const pickFit = (list: string[], max: number) => list.find((c) => c.length <= ma
 const priceShortOf = (lang: Lang, s: Service) =>
   lang === 'tr' ? (s.priceFrom ? `₺${s.priceFrom}'den` : '') : eurFromText(lang, s.id).toLowerCase();
 const TIME_SHORT: Record<Lang, Record<'same' | 'next' | 'three' | 'none', string>> = {
-  tr: { same: 'Ertesi Gün', next: 'Ertesi Gün', three: 'Ölçüye Göre', none: 'Yakınınızda' },
-  en: { same: 'Next Day', next: 'Next Day', three: 'Made to Measure', none: 'Near You' },
-  ru: { same: 'На следующий день', next: 'На следующий день', three: 'На заказ', none: 'Рядом' },
-  de: { same: 'Am nächsten Tag', next: 'Am nächsten Tag', three: 'Nach Maß', none: 'In der Nähe' },
+  tr: { same: 'Aynı Gün', next: 'Aynı Gün', three: 'Ölçüye Göre', none: 'Yakınınızda' },
+  en: { same: 'Same Day', next: 'Same Day', three: 'Made to Measure', none: 'Near You' },
+  ru: { same: 'В тот же день', next: 'В тот же день', three: 'На заказ', none: 'Рядом' },
+  de: { same: 'Am selben Tag', next: 'Am selben Tag', three: 'Nach Maß', none: 'In der Nähe' },
 };
 
 // ── Bölge önceliği: TR'de yerel mahalleler, yabancı dilde tatil bölgeleri öne ──
@@ -547,25 +547,25 @@ export function DistrictPage({ lang, d }: { lang: Lang; d: District }) {
     tr: [
       (<>{d.name.tr} <span className="accent">Terzi</span><br />Paça Kısaltma, Bel Daraltma, Fermuar Değişimi</>),
       (<>{d.loc.tr} <span className="accent">Terzi Hizmeti</span><br />Pantolon paça, fermuar ve elbise tadilatı</>),
-      (<>{d.loc.tr} <span className="accent">Kıyafet Tadilatı</span><br />Acil işler 1–2 saatte, normal işler ertesi gün</>),
+      (<>{d.loc.tr} <span className="accent">Kıyafet Tadilatı</span><br />Acil işler 1–2 saatte, normal işler aynı gün</>),
       (<>{d.name.tr} İçin <span className="accent">Terzi</span><br />Fotoğrafı WhatsApp'tan gönderin, fiyatı öğrenin</>),
     ],
     en: [
       (<>Tailor in <span className="accent">{d.name.en}</span><br />Hemming, Waist Taking-in, Zipper Replacement</>),
       (<><span className="accent">{d.name.en}</span> Tailor Service<br />Trouser hemming, zipper repair and dress alterations</>),
-      (<>Clothing Alterations {d.loc.en}<br /><span className="accent">Urgent jobs in 1–2 hours, normal jobs next day</span></>),
+      (<>Clothing Alterations {d.loc.en}<br /><span className="accent">Urgent jobs in 1–2 hours, normal jobs same day</span></>),
       (<>Your Tailor {d.loc.en}<br /><span className="accent">Send a photo on WhatsApp and get a price</span></>),
     ],
     ru: [
       (<>Портной <span className="accent">{d.name.ru}</span><br />Подшив брюк, ушивание в талии, замена молнии</>),
       (<>Услуги портного {d.loc.ru}<br /><span className="accent">Подшив брюк, замена молний, переделка платьев</span></>),
-      (<>Подгонка одежды {d.loc.ru}<br /><span className="accent">Срочно — за 1–2 часа, обычно — на следующий день</span></>),
+      (<>Подгонка одежды {d.loc.ru}<br /><span className="accent">Срочно — за 1–2 часа, обычно — в тот же день</span></>),
       (<>Ваш портной {d.loc.ru}<br /><span className="accent">Пришлите фото в WhatsApp — назовём цену</span></>),
     ],
     de: [
       (<>Schneider <span className="accent">{d.name.de}</span><br />Hose kürzen, Taille enger, Reißverschluss wechseln</>),
       (<>Schneiderservice {d.loc.de}<br /><span className="accent">Hosen kürzen, Reißverschluss wechseln, Kleider ändern</span></>),
-      (<>Kleidung ändern {d.loc.de}<br /><span className="accent">Eilig in 1–2 Stunden, normal am nächsten Tag</span></>),
+      (<>Kleidung ändern {d.loc.de}<br /><span className="accent">Eilig in 1–2 Stunden, normal am selben Tag</span></>),
       (<>Ihr Schneider {d.loc.de}<br /><span className="accent">Foto per WhatsApp senden und Preis erfahren</span></>),
     ],
   }[lang][hv];

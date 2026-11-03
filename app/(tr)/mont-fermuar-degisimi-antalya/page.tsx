@@ -15,9 +15,9 @@ const TODAY     = '2026-11-03';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Mont Fermuarı Değişimi Fiyatları ₺300 · Ertesi Gün · Antalya" },
+  title: { absolute: "Mont Fermuarı Değişimi Fiyatları ₺300 · Aynı Gün · Antalya" },
   description:
-    "Mont, kaban ve ceket fermuarı değişimi ₺300'den. Kalın ve su geçirmez montlar dahil. Normal iş ertesi gün, acil 1–2 saat. Eve ve otele ücretsiz servis. ☎ " + PHONE,
+    "Mont, kaban ve ceket fermuarı değişimi ₺300'den. Kalın ve su geçirmez montlar dahil. Normal iş aynı gün, acil 1–2 saat. Eve ve otele ücretsiz servis. ☎ " + PHONE,
   keywords: fitKeywords([
     'mont fermuarı değiştirme', 'mont fermuarı değişimi fiyatları', 'mont fermuar tamiri Antalya',
     'kaban fermuarı değişimi', 'ceket fermuarı değişimi', 'su geçirmez mont fermuarı',
@@ -26,8 +26,8 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   alternates: { canonical: PAGE_URL },
   openGraph: {
-    title: 'Mont Fermuarı Değişimi Antalya — Ertesi Gün Teslim',
-    description: 'Mont, kaban, ceket fermuarı değişimi. Normal iş ertesi gün, acil 1–2 saat. ☎ ' + PHONE,
+    title: 'Mont Fermuarı Değişimi Antalya — Aynı Gün Teslim',
+    description: 'Mont, kaban, ceket fermuarı değişimi. Normal iş aynı gün, acil 1–2 saat. ☎ ' + PHONE,
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'tr_TR', type: 'website',
     images: [{ url: `${SITE}/terzi-can-hero.jpg`, width: 1024, height: 1024, alt: 'Mont fermuarı değişimi Antalya' }],
   },
@@ -41,7 +41,7 @@ const jsonLd = {
       '@type': 'WebPage',
       '@id': `${PAGE_URL}#webpage`,
       url: PAGE_URL,
-      name: 'Mont Fermuarı Değişimi Antalya — Ertesi Gün Teslim',
+      name: 'Mont Fermuarı Değişimi Antalya — Aynı Gün Teslim',
       description: 'Antalya\'da mont, kaban ve ceket fermuarı değişimi. Kalın ve su geçirmez montlar dahil.',
       inLanguage: 'tr',
       isPartOf: { '@id': `${SITE}#website` },
@@ -86,7 +86,7 @@ const jsonLd = {
       step: [
         { '@type': 'HowToStep', name: 'Fotoğraf Gönderin', text: 'WhatsApp\'tan montun ve bozuk fermuarın fotoğrafını gönderin, ön fiyat alın.' },
         { '@type': 'HowToStep', name: 'Montu Teslim Edin', text: 'Atölyeye getirin veya eve/otele ücretsiz alım-teslim isteyin.' },
-        { '@type': 'HowToStep', name: 'Fermuar Değiştirilir', text: 'Kalın kumaşa uygun fermuar seçilir ve dikilir — normal işte ertesi gün, acilde 1–2 saatte.' },
+        { '@type': 'HowToStep', name: 'Fermuar Değiştirilir', text: 'Kalın kumaşa uygun fermuar seçilir ve dikilir — normal işte aynı gün, acilde 1–2 saatte.' },
         { '@type': 'HowToStep', name: 'Teslim Alın', text: 'Mont test edilip kontrol edildikten sonra teslim edilir.' },
       ],
     },
@@ -95,7 +95,7 @@ const jsonLd = {
       '@id': `${PAGE_URL}#faq`,
       mainEntity: [
         { '@type': 'Question', name: 'Mont fermuarı değiştirme fiyatı ne kadar?', acceptedAnswer: { '@type': 'Answer', text: 'Mont fermuarı değişimi ₺300\'den başlar. Net fiyat fermuarın boyuna ve türüne göre, fotoğrafla WhatsApp\'tan söylenir.' } },
-        { '@type': 'Question', name: 'Mont fermuarı değişimi ne kadar sürer?', acceptedAnswer: { '@type': 'Answer', text: 'Normal işlemler ertesi gün teslim edilir; acil işler 1–2 saatte tamamlanır.' } },
+        { '@type': 'Question', name: 'Mont fermuarı değişimi ne kadar sürer?', acceptedAnswer: { '@type': 'Answer', text: 'Normal işlemler aynı gün teslim edilir; acil işler 1–2 saatte tamamlanır.' } },
         { '@type': 'Question', name: 'Kalın ve su geçirmez montların fermuarı değişir mi?', acceptedAnswer: { '@type': 'Answer', text: 'Evet. Kalın kumaşa uygun makine ve iplikle çalışıyoruz; su geçirmez montlar için özel fermuar da temin ediyoruz.' } },
         { '@type': 'Question', name: 'Kaban ve palto fermuarı da değişiyor mu?', acceptedAnswer: { '@type': 'Answer', text: 'Evet. Mont, kaban, palto ve ceket fermuarı değişimi ₺300\'den başlar.' } },
         { '@type': 'Question', name: 'Fermuar sıkıştı, tamamen bozulmadı; tamir edilebilir mi?', acceptedAnswer: { '@type': 'Answer', text: 'Çoğu zaman sıkışan fermuar değişim gerektirmeden onarılabilir. Fotoğraf gönderirseniz değerlendirip bilgi veririz.' } },
@@ -130,12 +130,12 @@ export default function MontFermuarPage() {
           <div className="hero-content">
             <span className="hero-tag">🧥 Mont Fermuarı Değişimi · Antalya</span>
             <h1 id="hero-h">
-              Mont Fermuarı Değişimi <span className="accent">Antalya</span><br />₺300'den, Ertesi Gün Teslim</h1>
+              Mont Fermuarı Değişimi <span className="accent">Antalya</span><br />₺300'den, Aynı Gün Teslim</h1>
             <p className="hero-desc">
               Mont, kaban, ceket ve yelek fermuarı değişimi ve tamiri. Kalın kumaş ve su geçirmez montlar dahil.
-              Eve ve otele ücretsiz servis; normal işler ertesi gün, acil işler 1–2 saatte tamamlanır.
+              Eve ve otele ücretsiz servis; normal işler aynı gün, acil işler 1–2 saatte tamamlanır.
             </p>
-            <p className="hero-desc"><strong>Kısa cevap:</strong> Mont fermuarı değişimi ₺300'den başlar; normal işler ertesi gün, acil işler 1–2 saatte teslim edilir.</p>
+            <p className="hero-desc"><strong>Kısa cevap:</strong> Mont fermuarı değişimi ₺300'den başlar; normal işler aynı gün, acil işler 1–2 saatte teslim edilir.</p>
             <div className="hero-btns">
               <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-primary">💬 Fotoğraf Gönderin →</a>
               <a href={`tel:${PHONE_TEL}`} className="btn-secondary">📞 {PHONE}</a>
@@ -170,7 +170,7 @@ export default function MontFermuarPage() {
                   <span className="price-icon" aria-hidden="true">🧶</span>
                   <div><div className="price-tr">Ceket & Yelek Fermuarı</div></div>
                 </div>
-                <p className="price-desc">Daha hafif kumaşlar için aynı ertesi gün teslim.</p>
+                <p className="price-desc">Daha hafif kumaşlar için aynı aynı gün teslim.</p>
                 <table className="price-table"><tbody>
                   <tr><td>Ceket Fermuarı</td><td>₺300+</td></tr>
                   <tr><td>Yelek Fermuarı</td><td>₺300+</td></tr>
@@ -193,7 +193,7 @@ export default function MontFermuarPage() {
             <div className="howto-list">
               <div className="howto-item"><div className="howto-t">Fotoğraf Gönderin</div><div className="howto-d">WhatsApp'tan montun ve bozuk fermuarın fotoğrafını gönderin, ön fiyat alın.</div></div>
               <div className="howto-item"><div className="howto-t">Montu Teslim Edin</div><div className="howto-d">Atölyeye getirin veya eve/otele ücretsiz alım-teslim isteyin.</div></div>
-              <div className="howto-item"><div className="howto-t">Fermuar Değiştirilir</div><div className="howto-d">Kalın kumaşa uygun fermuar seçilir ve dikilir. Normal işte ertesi gün, acilde 1–2 saat.</div></div>
+              <div className="howto-item"><div className="howto-t">Fermuar Değiştirilir</div><div className="howto-d">Kalın kumaşa uygun fermuar seçilir ve dikilir. Normal işte aynı gün, acilde 1–2 saat.</div></div>
               <div className="howto-item"><div className="howto-t">Teslim Alın</div><div className="howto-d">Mont test edilip kontrol edildikten sonra teslim edilir.</div></div>
             </div>
           </div>
@@ -207,7 +207,7 @@ export default function MontFermuarPage() {
             </div>
             {[
               ['Mont fermuarı değiştirme fiyatı ne kadar?', 'Mont fermuarı değişimi ₺300\'den başlar. Net fiyat fermuarın boyuna ve türüne göre, fotoğrafla WhatsApp\'tan söylenir.'],
-              ['Mont fermuarı değişimi ne kadar sürer?', 'Normal işlemler ertesi gün teslim edilir; acil işler 1–2 saatte tamamlanır.'],
+              ['Mont fermuarı değişimi ne kadar sürer?', 'Normal işlemler aynı gün teslim edilir; acil işler 1–2 saatte tamamlanır.'],
               ['Kalın ve su geçirmez montların fermuarı değişir mi?', 'Evet. Kalın kumaşa uygun makine ve iplikle çalışıyoruz; su geçirmez montlar için özel fermuar da temin ediyoruz.'],
               ['Kaban ve palto fermuarı da değişiyor mu?', 'Evet. Mont, kaban, palto ve ceket fermuarı değişimi ₺300\'den başlar.'],
               ['Fermuar sıkıştı, tamamen bozulmadı; tamir edilebilir mi?', 'Çoğu zaman sıkışan fermuar değişim gerektirmeden onarılabilir. Fotoğraf gönderirseniz değerlendirip bilgi veririz.'],
@@ -226,7 +226,7 @@ export default function MontFermuarPage() {
 
         <section className="cta-final" aria-label="İletişime geç">
           <h2 className="cta-h ff">Montunuzun Fermuarı mı Bozuldu?</h2>
-          <p className="cta-sub">Fotoğrafını gönderin, kısa sürede fiyat alın; normal işte ertesi gün teslim.</p>
+          <p className="cta-sub">Fotoğrafını gönderin, kısa sürede fiyat alın; normal işte aynı gün teslim.</p>
           <div className="cta-btns">
             <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-white">💬 WhatsApp'tan Yazın</a>
             <a href={MAPS} target="_blank" rel="noopener noreferrer" className="btn-outline-white">📍 Google Haritalar</a>

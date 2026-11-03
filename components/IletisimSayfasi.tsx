@@ -69,7 +69,7 @@ const T = {
     stepsH: 'Nasıl çalışıyoruz?',
     steps: [
       ['1', 'Fotoğraf gönderin', 'WhatsApp\'tan kıyafetin ve istediğiniz işlemin fotoğrafını yollayın.'],
-      ['2', 'Fiyat ve süre', 'Size fiyatı ve teslim süresini bildiririz. Normal işler ertesi gün, acil işler 1–2 saatte hazırdır.'],
+      ['2', 'Fiyat ve süre', 'Size fiyatı ve teslim süresini bildiririz. Normal işler aynı gün, acil işler 1–2 saatte hazırdır.'],
       ['3', 'Gelin ya da biz gelelim', 'Atölyemize uğrayın veya otel/eve alım-teslim isteyin (her bölgede ücretsiz).'],
     ] as [string, string, string][],
     faqH: 'Sık sorulan sorular',
@@ -113,7 +113,7 @@ const T = {
     stepsH: 'How it works',
     steps: [
       ['1', 'Send a photo', 'Send a photo of the garment and what you need on WhatsApp.'],
-      ['2', 'Price and time', 'We reply with the price and turnaround. Hemming, waist and zipper jobs are ready the next day (urgent jobs 1–2 hours).'],
+      ['2', 'Price and time', 'We reply with the price and turnaround. Hemming, waist and zipper jobs are ready the same day (urgent jobs 1–2 hours).'],
       ['3', 'Visit us or we come to you', 'Drop in at our workshop or ask for hotel/home pick-up and delivery (hotel service is free).'],
     ] as [string, string, string][],
     faqH: 'Frequently asked questions',
@@ -141,7 +141,7 @@ const T = {
     desc: `Портной Terzi Can, Анталья: звоните или пишите в WhatsApp ${PHONE}. Хурма, Коньяалты. Ежедневно 08:00–23:00. Пришлите фото, цену скажем сразу.`,
     tag: 'Анталья · Коньяалты · Ежедневно 08:00–23:00',
     h1: 'Контакты Terzi Can — портной в Анталье',
-    lead: 'Телефон, WhatsApp и адрес. Позвоните или напишите: пришлите фото и на следующий день узнайте цену и срок.',
+    lead: 'Телефон, WhatsApp и адрес. Позвоните или напишите: пришлите фото и в тот же день узнайте цену и срок.',
     call: 'Позвонить', wa: 'Написать в WhatsApp', maps: 'Маршрут (Google Maps)', dirH: 'Как нас найти', dirP: 'Наша мастерская находится в районе Хурма (07130 Коньяалты / Анталья). Кнопка ниже откроет маршрут к нам; на Google Картах нас можно найти как «TERZİ Can». Позвоните или напишите в WhatsApp перед визитом — так будет быстрее.', dirBtn: 'Открыть маршрут', dirMap: 'Показать на карте',
     infoH: 'Контактная информация',
     rows: [
@@ -157,7 +157,7 @@ const T = {
     stepsH: 'Как это работает',
     steps: [
       ['1', 'Пришлите фото', 'Отправьте в WhatsApp фото вещи и напишите, что нужно сделать.'],
-      ['2', 'Цена и срок', 'Мы ответим с ценой и сроком. Подшив, талия и молния чаще всего готовы на следующий день.'],
+      ['2', 'Цена и срок', 'Мы ответим с ценой и сроком. Подшив, талия и молния чаще всего готовы в тот же день.'],
       ['3', 'Приходите или мы приедем', 'Заходите в мастерскую или закажите забор и доставку в отель или на дом (для отелей бесплатно).'],
     ] as [string, string, string][],
     faqH: 'Частые вопросы',
@@ -201,7 +201,7 @@ const T = {
     stepsH: 'So funktioniert es',
     steps: [
       ['1', 'Foto senden', 'Schicken Sie per WhatsApp ein Foto des Kleidungsstücks und Ihren Wunsch.'],
-      ['2', 'Preis und Zeit', 'Wir nennen Preis und Fertigstellungszeit. Kürzen, Taille und Reißverschluss sind am nächsten Tag fertig (eilig in 1–2 Stunden).'],
+      ['2', 'Preis und Zeit', 'Wir nennen Preis und Fertigstellungszeit. Kürzen, Taille und Reißverschluss sind am selben Tag fertig (eilig in 1–2 Stunden).'],
       ['3', 'Kommen Sie vorbei oder wir kommen', 'Besuchen Sie unsere Werkstatt oder fragen Sie die Abholung und Lieferung ins Hotel oder nach Hause an (Hotelservice kostenlos).'],
     ] as [string, string, string][],
     faqH: 'Häufige Fragen',

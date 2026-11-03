@@ -2,7 +2,7 @@
 // lib/blog-yazilari.ts — Blog yazıları (tek kaynak).
 // Yeni yazı eklemek için diziye bir nesne eklemek yeterli: /blog/[slug] sayfası, blog listesi ve sitemap otomatik güncellenir.
 // Fiyatlar yalnızca sitede zaten yayınlanan başlangıç fiyatlarıdır (paça/bel ₺200, fermuar ₺300, elbise dikimi ₺800'den).
-// Teslim süreleri lib/delivery.ts ile aynıdır (acil 1–2 saat, normal ertesi gün, özel dikim modele/adede göre).
+// Teslim süreleri lib/delivery.ts ile aynıdır (acil 1–2 saat, normal aynı gün, özel dikim modele/adede göre).
 // Görseller yapay zekâ ile üretilmiş örnek görsellerdir (gerçek iş fotoğrafı değildir).
 // ============================================================
 export interface BlogBolum { h: string; p: string[]; liste?: string[] }
@@ -52,7 +52,7 @@ export const BLOG_YAZILARI: BlogYazi[] = [
       {
         h: 'Ne kadar sürer, kaça yapılır?',
         p: [
-          'Atölyemizde pantolon paça kısaltma ₺200\'den başlar; kumaşa ve paça tipine göre kesin fiyat ölçü sırasında netleşir. Acil tamir ve tadilat 1–2 saatte, normal tadilat ertesi gün teslim edilir.',
+          'Atölyemizde pantolon paça kısaltma ₺200\'den başlar; kumaşa ve paça tipine göre kesin fiyat ölçü sırasında netleşir. Acil tamir ve tadilat 1–2 saatte, normal tadilat aynı gün teslim edilir.',
         ],
       },
       {
@@ -112,12 +112,12 @@ export const BLOG_YAZILARI: BlogYazi[] = [
       },
       {
         h: 'Teslim süresi',
-        p: ['Acil fermuar işleri 1–2 saatte, normal işler ertesi gün teslim edilir. Tatilde bavul veya mont fermuarı bozulan misafirler için acil teslim seçeneği vardır.'],
+        p: ['Acil fermuar işleri 1–2 saatte, normal işler aynı gün teslim edilir. Tatilde bavul veya mont fermuarı bozulan misafirler için acil teslim seçeneği vardır.'],
       },
     ],
     sss: [
       { q: 'Fermuarın sadece sürgüsünü değiştirmek yeterli olur mu?', a: 'Dişler sağlam ve şerit yırtık değilse evet. Dişlerde kopma veya şeritte yırtık varsa fermuarın tamamı değişir. Kesin karar fotoğraf veya ürün üzerinde verilir.' },
-      { q: 'Mont fermuarı ne kadar sürede değişir?', a: 'Acil işler 1–2 saatte, normal işler ertesi gün teslim edilir.' },
+      { q: 'Mont fermuarı ne kadar sürede değişir?', a: 'Acil işler 1–2 saatte, normal işler aynı gün teslim edilir.' },
       { q: 'Fermuar fiyatı neye göre değişir?', a: 'Fermuarın boyu, türü (pantolon, mont, çanta) ve kumaşın zorluğuna göre değişir. Başlangıç fiyatı ₺300\'dür; ürünün fotoğrafını WhatsApp\'tan gönderip net fiyat alabilirsiniz.' },
     ],
     linkler: [
@@ -153,7 +153,7 @@ export const BLOG_YAZILARI: BlogYazi[] = [
       },
       {
         h: 'Ne kadar sürede teslim edilir?',
-        p: ['Acil tamir ve tadilat 1–2 saatte, normal tamir ve tadilat ertesi gün teslim edilir. Özel dikimde süre modele ve adede göre belirlenir. Randevu için WhatsApp\'tan yazmanız yeterli; çalışma saatlerimiz her gün 08:00–23:00.'],
+        p: ['Acil tamir ve tadilat 1–2 saatte, normal tamir ve tadilat aynı gün teslim edilir. Özel dikimde süre modele ve adede göre belirlenir. Randevu için WhatsApp\'tan yazmanız yeterli; çalışma saatlerimiz her gün 08:00–23:00.'],
       },
       {
         h: 'Başvururken hızlandıran ipuçları',
@@ -204,7 +204,7 @@ export const BLOG_YAZILARI: BlogYazi[] = [
       },
       {
         h: '5. Acil mi, normal mi?',
-        p: ['Acil işler 1–2 saatte, normal tadilat ertesi gün teslim edilir. Özel dikimde süre modele ve adede göre belirlenir. Teslim saatinizi baştan söyleyin.'],
+        p: ['Acil işler 1–2 saatte, normal tadilat aynı gün teslim edilir. Özel dikimde süre modele ve adede göre belirlenir. Teslim saatinizi baştan söyleyin.'],
       },
       {
         h: '6. Teslimde mutlaka deneyin',
@@ -290,7 +290,7 @@ export const BLOG_YAZILARI: BlogYazi[] = [
       },
       {
         h: 'Prova şart mı?',
-        p: ['Kıyafeti üzerinizde işaretlemek en doğru sonucu verir. Fotoğrafla ön fikir alınabilir ama kesin ölçü için deneme gerekir. Acil tadilat 1–2 saatte, normal tadilat ertesi gün teslim edilir.'],
+        p: ['Kıyafeti üzerinizde işaretlemek en doğru sonucu verir. Fotoğrafla ön fikir alınabilir ama kesin ölçü için deneme gerekir. Acil tadilat 1–2 saatte, normal tadilat aynı gün teslim edilir.'],
       },
       {
         h: 'Fiyat',

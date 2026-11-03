@@ -427,14 +427,14 @@ export default function KonyaaltiTailorServicePage() {
                   <div className="wk-icon" aria-hidden="true">🔧</div>
                   <h3 className="wk-tr">Fermuar Tamiri Konyaaltı</h3>
                   <span className="wk-en">Zipper Repair</span>
-                  <p className="wk-desc">Pantolon, mont, ceket, çanta fermuarı — ertesi gün teslim (acil 1–2 saat), ₺300&apos;den.</p>
+                  <p className="wk-desc">Pantolon, mont, ceket, çanta fermuarı — aynı gün teslim (acil 1–2 saat), ₺300&apos;den.</p>
                   <span style={{ fontSize: '.76rem', color: '#C9A96E', fontWeight: 700 }}>Fiyatları Gör <span aria-hidden="true">→</span></span>
                 </a>
                 <a href="/konyaalti-paca-kisaltma" className="wk-card" style={{ display: 'block' }}>
                   <div className="wk-icon" aria-hidden="true">📏</div>
                   <h3 className="wk-tr">Paça Kısaltma Konyaaltı</h3>
                   <span className="wk-en">Hemming</span>
-                  <p className="wk-desc">Pantolon, kot, etek kısaltma — ertesi gün teslim (acil 1–2 saat), ₺200&apos;den.</p>
+                  <p className="wk-desc">Pantolon, kot, etek kısaltma — aynı gün teslim (acil 1–2 saat), ₺200&apos;den.</p>
                   <span style={{ fontSize: '.76rem', color: '#C9A96E', fontWeight: 700 }}>Fiyatları Gör <span aria-hidden="true">→</span></span>
                 </a>
                 <a href="/antalya-gelinlik-tadilati" className="wk-card" style={{ display: 'block' }}>

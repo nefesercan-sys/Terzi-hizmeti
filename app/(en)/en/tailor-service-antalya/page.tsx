@@ -45,10 +45,10 @@ export const metadata: Metadata = {
 
 // AI/özet aramalarında en çok sorulan sorular (kısa, doğrudan cevaplar)
 const EXTRA_FAQS: [string, string][] = [
-  ['Where can I get trousers hemmed near me in Antalya?', 'At Terzi Can in Hurma, Konyaaltı, open every day 08:00–23:00. Hemming (trousers, jeans) is ready the next day (urgent jobs 1–2 hours). WhatsApp: ' + PHONE],
+  ['Where can I get trousers hemmed near me in Antalya?', 'At Terzi Can in Hurma, Konyaaltı, open every day 08:00–23:00. Hemming (trousers, jeans) is ready the same day (urgent jobs 1–2 hours). WhatsApp: ' + PHONE],
   ['How much does hemming and zipper replacement cost in Antalya?', 'The price depends on the garment and the work: hemming, waist taking-in, zipper replacement, evening and wedding dress alterations. Send a photo on WhatsApp for an exact quote.'],
   ['Can you alter a jacket, coat, shirt, skirt or shorts?', 'Yes. We alter and repair jackets, coats, shirts, skirts, shorts, dresses and trousers for men and women. Send a photo of the garment on WhatsApp and we will quote the price and time.'],
-  ['I am a hotel guest staying only a few days. Is that enough time?', 'Yes. Most hemming and repairs are ready the next day (urgent jobs 1–2 hours), and we can pick up and return clothes to your hotel (free for hotels).'],
+  ['I am a hotel guest staying only a few days. Is that enough time?', 'Yes. Most hemming and repairs are ready the same day (urgent jobs 1–2 hours), and we can pick up and return clothes to your hotel (free for hotels).'],
   ['What are your opening hours and how do I contact you?', 'Every day 08:00–23:00. Call or WhatsApp ' + PHONE + '. The workshop is in Hurma, Konyaaltı, Antalya.'],
 ];
 
@@ -126,7 +126,7 @@ const REPAIR_CATEGORIES = [
 const FAQS: [string, string][] = [
   ['Do you come to hotels in Belek, Lara and Kemer?', 'Yes! Our mobile tailor visits all hotels in Belek, Lara, Kemer and Side. Just share your hotel name on WhatsApp.'],
   ['Is the mobile visit free?', 'Yes. Pick-up and delivery to homes and hotels is free in every area we serve.'],
-  ['Can I get alterations before an event?', 'Yes, most repairs and hemming are completed the next day (urgent jobs 1–2 hours).'],
+  ['Can I get alterations before an event?', 'Yes, most repairs and hemming are completed the same day (urgent jobs 1–2 hours).'],
   ['Do you serve Konyaaltı and nearby districts?', 'Yes — Konyaaltı, Muratpaşa, Kepez, Lara, Döşemealtı, Belek, Kemer, Side and nearby districts, all with free pick-up and delivery to homes and hotels.'],
   ['Do you speak English?', 'Yes — write to us on WhatsApp in your own language and we will reply.'],
   ...EXTRA_FAQS,

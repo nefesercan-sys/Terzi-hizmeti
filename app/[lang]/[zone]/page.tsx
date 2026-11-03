@@ -15,6 +15,7 @@ import IletisimLanding from '@/components/IletisimLanding';
 import { ILETISIM, isIletisimSlug, iletisimUrl } from '@/lib/intl-iletisim';
 import { ILANGS, INTL, isILang } from '@/lib/intl';
 import { ZCOPY, ZONE_SLUGS, parseZone, zoneData, zoneSlug, zoneUrl } from '@/lib/intl-zones';
+import { zoneSeoTitles } from '@/lib/bolge-hizmet-matrisi-turist';
 import { SITE } from '@/lib/seo-data';
 import { OG_DEFAULT } from '@/lib/turist-keten';
 import { fitDesc } from '@/lib/meta-fit';
@@ -102,7 +103,8 @@ export async function generateMetadata({ params }: P): Promise<Metadata> {
   if (!zone) return {};
   const z = zoneData(lang, zone);
   const zc = ZCOPY[lang];
-  const base = zc.title(z.name);
+  const seoT = zone === 'antalya' ? [] : zoneSeoTitles(lang, z.name, ZONE_SLUGS.indexOf(zone)); // bölgeye göre farklı, hizmet kelimeli başlık
+  const base = seoT.find((t) => t.length <= 60) ?? zc.title(z.name);
   const title = base.length + 12 <= 60 ? `${base} | Terzi Can` : base;
   const description = fitDesc(zc.desc(z.name));
   const url = `${SITE}${zoneUrl(lang, zone)}`;

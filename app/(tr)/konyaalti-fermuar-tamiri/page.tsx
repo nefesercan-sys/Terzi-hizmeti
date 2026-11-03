@@ -203,7 +203,7 @@ export default function FermuarTamiriPage() {
                 </tbody></table>
               </div>
             </div>
-            <p style={{ marginTop: '1rem' }}>Mont ve kaban fermuarı için ayrıntılı bilgi: <a href="/mont-fermuar-degisimi-antalya">mont fermuarı değişimi</a>.</p>
+            <p style={{ marginTop: '1rem' }}>Mont ve kaban fermuarı için ayrıntılı bilgi: <a href="/mont-fermuar-degisimi-antalya">mont fermuarı değişimi</a>. Çanta ve valiz için: <a href="/canta-fermuar-tamiri-antalya">çanta fermuar tamiri</a>.</p>
             <p style={{ fontSize: '.76rem', color: 'rgba(255,255,255,.4)', marginTop: '1.4rem', fontStyle: 'italic' }}>
               * Fiyatlar başlangıç fiyatıdır, fermuar kalitesi ve kumaş türüne göre değişebilir.
             </p>

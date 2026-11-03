@@ -26,6 +26,8 @@ const TR_SERVICES: MapLink[] = [
   { href: '/konyaalti-paca-kisaltma', label: 'Konyaaltı paça kısaltma' },
   { href: '/konyaalti-fermuar-tamiri', label: 'Konyaaltı fermuar tamiri' },
   { href: '/mont-fermuar-degisimi-antalya', label: 'Mont fermuarı değişimi' },
+  { href: '/canta-fermuar-tamiri-antalya', label: 'Çanta fermuar tamiri' },
+  { href: '/deri-ceket-tadilati-antalya', label: 'Deri ceket tadilatı' },
   { href: '/antalya-gelinlik-tadilati', label: 'Gelinlik tadilatı' },
   { href: '/antalya-terzi-fiyatlari', label: 'Terzi fiyatları 2026' },
   { href: '/antalya-uniforma-imalati', label: 'Üniforma imalatı' },

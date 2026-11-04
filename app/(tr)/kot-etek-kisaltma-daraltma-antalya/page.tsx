@@ -15,7 +15,7 @@ const TODAY     = '2026-11-03';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Kot Etek Kısaltma ve Daraltma ₺200 · Antalya" },
+  title: { absolute: "Kot Etek Kısaltma ve Daraltma ₺200'den · Antalya" },
   description:
     "Kot etek boyu kısaltma, bel daraltma ve orijinal etek ucu ₺200'den. Normal iş aynı gün, acil 1–2 saat. Eve ve otele ücretsiz. ☎ " + PHONE,
   keywords: fitKeywords([
@@ -30,6 +30,28 @@ export const metadata: Metadata = {
     images: [{ url: `${SITE}/terzi-can-hero.jpg`, width: 1024, height: 1024, alt: "Kot Etek Kısaltma ve Daraltma Antalya" }],
   },
 };
+
+// Görünen SSS ve FAQPage şeması tek diziden üretilir (tutarlılık).
+const FAQ: [string, string][] = [
+  ['Kot etek kısaltma fiyatı ne kadar?', 'Kot etek boy kısaltma ₺200\'den başlar. Net fiyat fotoğrafla WhatsApp\'tan söylenir.'],
+  ['Kot etek orijinal ucuyla kısaltılır mı?', 'Evet, kot eteğin orijinal etek ucu görünümünü koruyacak şekilde kısaltma yapıyoruz. Fotoğraf gönderirseniz yapılabilecek işlemi söyleriz.'],
+  ['Kot etek daraltma ve bel daraltma yapıyor musunuz?', 'Evet. Kot etekte bel ve kalça daraltma ₺200\'den başlar; net fiyat fotoğrafa göre söylenir.'],
+  ['Kot etek tadilatı ne kadar sürer?', 'Etek tadilatı çoğunlukla aynı gün biter; acil işlerde 1–2 saat.'],
+  ['Kot ürününü eve veya otele gelip alıyor musunuz?', 'Evet, eteği evinizden veya otelinizden ücretsiz alırız; Konyaaltı, Muratpaşa ve çevresinde geçerlidir.'],
+  ["Kot eteğin yırtmacı varsa kısaltma yapılır mı?", "Evet. Yırtmaçlı kot etek kısaltılırken yırtmaç boyu da yeni boya göre ayarlanır; aksi halde yırtmaç yüksek ya da kısa kalır."],
+  ["Midi kot eteği mini yapabilir misiniz?", "Boy kısaltma yapılabilir, ancak eteğin kalıbı değişmez. A kesimli ya da düz bir eteği çok kısaltmadan önce fotoğrafa bakıp uygun boyu birlikte belirleriz."],
+  ["Kot etekte fermuar değişimi de yapılıyor mu?", "Evet. Bozulan fermuar değiştirilebilir; fermuar değişimi ₺300'den başlar. Kısaltma veya daraltmayla aynı işlemde yapılabilir."],
+  ["Kot etek bel daraltma kalıbı bozar mı?", "Makul bir daraltma kalıbı bozmaz. Çok fazla daraltma gerekiyorsa etkisini işlemden önce fotoğraf ve ölçüye bakarak söyleriz."],
+];
+
+// Sayfaya özgü rehber içeriği (kot kümesinde sayfaları farklı niyetlere ayırır).
+const GUIDE: [string, string][] = [
+  ["Mini, midi ya da uzun: boy nasıl seçilir?", "Kot etek tadilatında en sık istenen iş boy kısaltmadır. Etek ucu, dizin üstünde mi altında mı duracağına göre, ayakta ve düz durarak işaretlenir. Midi bir eteği mini boya indirirken eteğin A kesimi ya da düz kalıbı değişmeyeceği için kalıba uygun bir boy seçmek gerekir. Fotoğrafta eteği giyerek önden çekilmiş boy görüntüsü işimizi kolaylaştırır."],
+  ["Etek ucunun orijinal görünümü", "Kot eteklerde etek ucu çoğunlukla kalın bir dikiş ve çoğu zaman sökük bir saçak ya da kıvrımla biter. Kısaltırken bu detayı korumak mümkünse etek ucunun yakın fotoğrafını bekleriz. Detay yoksa sade kıvırma dikişiyle bitiririz. Hangisinin uygun olduğunu fotoğrafa göre söyleriz."],
+  ["Yırtmaç, cep ve fermuarlı etekler", "Yırtmaçlı bir kot eteği kısaltırken yırtmaç boyu da yeni boya göre ayarlanır, aksi halde yırtmaç eteğin ucuna kadar çıkmaz ya da fazla yüksek kalır. Ön ya da yan fermuarlı eteklerde bel daraltırken fermuar yeri değişmez. Fermuar bozulduysa değişimi de aynı işlemde yapılabilir; fermuar değişimi fiyatı ₺300'den başlar."],
+  ["Bel ve kalça daraltma", "Kot etekte bel bolsa arka ortadan ya da yan dikişlerden pay alınır. Kalça ve oturma yeri bol ise yan dikişler birlikte ayarlanır. Büyük eteği çok küçültmek kalıbı bozabilir, bu yüzden en fazla ne kadar daraltılabileceğini fotoğraf ve ölçüye bakarak söyleriz."],
+  ["Fiyat ve teslim", "Kot etek boy kısaltma, bel ve kalça daraltma ₺200'den başlar; net fiyat fotoğrafa göre söylenir. Normal işler aynı gün, acil işler 1–2 saatte teslim edilir. Fiyatlara KDV dahil değildir. Eve ve otele alım-teslim ücretsizdir."],
+];
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -80,21 +102,15 @@ const jsonLd = {
       description: "Kot Etek Nasıl Kısaltılır?",
       step: [
         { '@type': 'HowToStep', name: 'Fotoğraf Gönderin', text: 'WhatsApp\'tan kot eteğin fotoğrafını gönderin, ön fiyat alın.' },
-        { '@type': 'HowToStep', name: 'Teslim Edin', text: 'Atölyeye getirin veya eve/otele ücretsiz alım-teslim isteyin.' },
-        { '@type': 'HowToStep', name: 'Ölçü ve Dikiş', text: 'Ölçü üzerinizde işaretlenir; kalın kot kumaşa uygun makine ve iplikle dikilir. Normal işte aynı gün, acilde 1–2 saat.' },
-        { '@type': 'HowToStep', name: 'Teslim Alın', text: 'Kontrol edilip teslim edilir.' },
+        { '@type': 'HowToStep', name: 'Teslim Edin', text: 'Eteği atölyeye bırakın veya adresten ücretsiz teslim alalım.' },
+        { '@type': 'HowToStep', name: 'Ölçü ve Dikiş', text: 'Boy ve bel ölçüsü üzerinizde işaretlenir, etek ucu yeniden dikilir. Aynı gün; acilde 1–2 saat.' },
+        { '@type': 'HowToStep', name: 'Teslim Alın', text: 'Boy ve bel kontrol edilerek teslim edilir.' },
       ],
     },
     {
       '@type': 'FAQPage',
       '@id': `${PAGE_URL}#faq`,
-      mainEntity: [
-        { '@type': 'Question', name: 'Kot etek kısaltma fiyatı ne kadar?', acceptedAnswer: { '@type': 'Answer', text: 'Kot etek boy kısaltma ₺200\'den başlar. Net fiyat fotoğrafla WhatsApp\'tan söylenir.' } },
-        { '@type': 'Question', name: 'Kot etek orijinal ucuyla kısaltılır mı?', acceptedAnswer: { '@type': 'Answer', text: 'Evet, kot eteğin orijinal etek ucu görünümünü koruyacak şekilde kısaltma yapıyoruz. Fotoğraf gönderirseniz yapılabilecek işlemi söyleriz.' } },
-        { '@type': 'Question', name: 'Kot etek daraltma ve bel daraltma yapıyor musunuz?', acceptedAnswer: { '@type': 'Answer', text: 'Evet. Kot etekte bel ve kalça daraltma ₺200\'den başlar; net fiyat fotoğrafa göre söylenir.' } },
-        { '@type': 'Question', name: 'Kot etek tadilatı ne kadar sürer?', acceptedAnswer: { '@type': 'Answer', text: 'Normal işler aynı gün teslim edilir; acil işler 1–2 saatte tamamlanır.' } },
-        { '@type': 'Question', name: 'Kot ürününü eve veya otele gelip alıyor musunuz?', acceptedAnswer: { '@type': 'Answer', text: 'Evet. Konyaaltı, Muratpaşa ve çevresinde eve ve otele alım-teslim ücretsizdir.' } },
-      ],
+      mainEntity: FAQ.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
     },
   ],
 };
@@ -126,7 +142,7 @@ export default function Page() {
             <h1 id="hero-h">
               Kot Etek Kısaltma <span className="accent">Antalya</span><br />₺200'den, Aynı Gün Teslim</h1>
             <p className="hero-desc">
-              Kot etek boy kısaltma, bel daraltma ve orijinal etek ucu yapımı. Kalın kot kumaşa uygun makine ve iplik; eve ve otele ücretsiz servis.
+              Kot etek boy kısaltma, bel daraltma ve orijinal etek ucu yapımı. Kalın kot kumaşa uygun dikişle çalışıyoruz; eve ve otele ücretsiz servis.
             </p>
             <p className="hero-desc"><strong>Kısa cevap:</strong> Kot etek kısaltma ve daraltma ₺200'den başlar; orijinal etek ucu görünümü korunur, normal işler aynı gün teslim edilir.</p>
             <div className="hero-btns">
@@ -149,7 +165,7 @@ export default function Page() {
                   <span className="price-icon" aria-hidden="true">👗</span>
                   <div><div className="price-tr">Kot Etek</div></div>
                 </div>
-                <p className="price-desc">Kalın kot kumaşa uygun makine ve iplik.</p>
+                <p className="price-desc">Etek ucu ve yırtmaç yapısına göre belirlenir.</p>
                 <table className="price-table"><tbody>
                   <tr><td>Kot Etek Boy Kısaltma</td><td>₺200+</td></tr>
                   <tr><td>Kot Etek Bel Daraltma</td><td>₺200+</td></tr>
@@ -158,7 +174,7 @@ export default function Page() {
               </div>
             </div>
             <p style={{ fontSize: '.76rem', color: 'rgba(255,255,255,.4)', marginTop: '1.4rem', fontStyle: 'italic' }}>
-              * Fiyatlar başlangıç fiyatıdır; kumaş kalınlığına ve işin kapsamına göre değişebilir.
+              * Fiyatlar başlangıç fiyatıdır; yırtmaç, astar ve kalıp yapısına göre değişebilir. KDV dahil değildir.
             </p>
           </div>
         </section>
@@ -171,10 +187,27 @@ export default function Page() {
             </div>
             <div className="howto-list">
               <div className="howto-item"><div className="howto-t">Fotoğraf Gönderin</div><div className="howto-d">WhatsApp'tan kot eteğin fotoğrafını gönderin, ön fiyat alın.</div></div>
-              <div className="howto-item"><div className="howto-t">Teslim Edin</div><div className="howto-d">Atölyeye getirin veya eve/otele ücretsiz alım-teslim isteyin.</div></div>
-              <div className="howto-item"><div className="howto-t">Ölçü ve Dikiş</div><div className="howto-d">Ölçü üzerinizde işaretlenir; kalın kot kumaşa uygun makine ve iplikle dikilir. Normal işte aynı gün, acilde 1–2 saat.</div></div>
-              <div className="howto-item"><div className="howto-t">Teslim Alın</div><div className="howto-d">Kontrol edilip teslim edilir.</div></div>
+              <div className="howto-item"><div className="howto-t">Teslim Edin</div><div className="howto-d">Eteği atölyeye bırakın veya adresten ücretsiz teslim alalım.</div></div>
+              <div className="howto-item"><div className="howto-t">Ölçü ve Dikiş</div><div className="howto-d">Boy ve bel ölçüsü üzerinizde işaretlenir, etek ucu yeniden dikilir. Aynı gün; acilde 1–2 saat.</div></div>
+              <div className="howto-item"><div className="howto-t">Teslim Alın</div><div className="howto-d">Boy ve bel kontrol edilerek teslim edilir.</div></div>
             </div>
+          </div>
+        </section>
+
+        <section className="sec" aria-labelledby="guide-h">
+          <div className="ctr" style={{ maxWidth: 720 }}>
+            <div className="sec-head">
+              <span className="eyebrow">Rehber</span>
+              <h2 className="sec-h ff" id="guide-h">Kot Etek Tadilatında Boy, Bel ve Yırtmaç</h2>
+            </div>
+            <div className="howto-list">
+              {GUIDE.map(([t, x]) => (
+                <div key={t} className="howto-item"><div className="howto-t">{t}</div><div className="howto-d">{x}</div></div>
+              ))}
+            </div>
+            <p style={{ marginTop: '1.2rem' }}>
+              Aynı kumaştan pantolon için <a href="/kot-pantolon-paca-kisaltma-antalya">kot paça kısaltma</a> ve <a href="/kot-pantolon-daraltma-antalya">kot pantolon daraltma</a>, kot ceket için <a href="/kot-ceket-mont-tadilati-antalya">kot ceket ve mont tadilatı</a>, kumaş etek kısaltma için <a href="/konyaalti-paca-kisaltma">Konyaaltı paça kısaltma</a> sayfalarına bakabilirsiniz.
+            </p>
           </div>
         </section>
 
@@ -184,13 +217,7 @@ export default function Page() {
               <span className="eyebrow">SSS</span>
               <h2 className="sec-h ff" id="faq-h">Kot Etek Hakkında Sık Sorulan Sorular</h2>
             </div>
-            {[
-              ['Kot etek kısaltma fiyatı ne kadar?', 'Kot etek boy kısaltma ₺200\'den başlar. Net fiyat fotoğrafla WhatsApp\'tan söylenir.'],
-              ['Kot etek orijinal ucuyla kısaltılır mı?', 'Evet, kot eteğin orijinal etek ucu görünümünü koruyacak şekilde kısaltma yapıyoruz. Fotoğraf gönderirseniz yapılabilecek işlemi söyleriz.'],
-              ['Kot etek daraltma ve bel daraltma yapıyor musunuz?', 'Evet. Kot etekte bel ve kalça daraltma ₺200\'den başlar; net fiyat fotoğrafa göre söylenir.'],
-              ['Kot etek tadilatı ne kadar sürer?', 'Normal işler aynı gün teslim edilir; acil işler 1–2 saatte tamamlanır.'],
-              ['Kot ürününü eve veya otele gelip alıyor musunuz?', 'Evet. Konyaaltı, Muratpaşa ve çevresinde eve ve otele alım-teslim ücretsizdir.'],
-            ].map(([q, a]) => (
+            {FAQ.map(([q, a]) => (
               <div key={q} className="faq-item">
                 <div className="faq-q">{q}</div>
                 <div className="faq-a">{a}</div>
@@ -204,7 +231,7 @@ export default function Page() {
 
         <section className="cta-final" aria-label="İletişime geç">
           <h2 className="cta-h ff">Kot Eteğiniz mi Uzun?</h2>
-          <p className="cta-sub">Fotoğrafını gönderin, kısa sürede fiyat alın; normal işte aynı gün teslim.</p>
+          <p className="cta-sub">Eteğin boy fotoğrafını gönderin, kısaltma fiyatını öğrenin.</p>
           <div className="cta-btns">
             <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-white">💬 WhatsApp'tan Yazın</a>
             <a href={MAPS} target="_blank" rel="noopener noreferrer" className="btn-outline-white">📍 Google Haritalar</a>

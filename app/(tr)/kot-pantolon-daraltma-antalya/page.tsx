@@ -15,7 +15,7 @@ const TODAY     = '2026-11-03';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Kot Pantolon Daraltma ₺200 · Bacak ve Bel Daraltma · Antalya" },
+  title: { absolute: "Kot Daraltma ₺200'den · Bacak, Bel, Kalça · Antalya" },
   description:
     "Kot pantolon bacak ve bel daraltma ₺200'den; ölçü üzerinizde alınır. Normal iş aynı gün, acil 1–2 saat. Eve ve otele ücretsiz. ☎ " + PHONE,
   keywords: fitKeywords([
@@ -30,6 +30,29 @@ export const metadata: Metadata = {
     images: [{ url: `${SITE}/terzi-can-hero.jpg`, width: 1024, height: 1024, alt: "Kot Pantolon Daraltma Antalya — Aynı Gün" }],
   },
 };
+
+// Görünen SSS ve FAQPage şeması tek diziden üretilir (tutarlılık).
+const FAQ: [string, string][] = [
+  ['Kot pantolon daraltma ne kadar?', 'Kot pantolon daraltma ₺200\'den başlar. Net fiyat daraltılacak yere ve işin kapsamına göre, fotoğrafla WhatsApp\'tan söylenir.'],
+  ['Bacak mı bel mi daraltılır?', 'İkisi de yapılır. Bacak daraltma pantolonu dar paçalı hale getirir, bel daraltma ise bele oturmasını sağlar. İhtiyacınızı fotoğrafla birlikte yazmanız yeterli.'],
+  ['Kot pantolon daraltma için ne göndermeliyim?', 'Pantolonun önden ve arkadan fotoğrafını, hangi yeri daraltmak istediğinizi ve varsa istediğiniz ölçüyü WhatsApp\'tan gönderin.'],
+  ['Kot pantolon daraltma ne kadar sürer?', 'Çoğu daraltma aynı gün biter; acil işlerde 1–2 saat içinde teslim ederiz.'],
+  ['Daraltırken paçanın orijinal görünümü korunur mu?', 'Evet, paçanın orijinal görünümünü koruyacak şekilde çalışıyoruz. Fotoğraf gönderirseniz yapılabilecek işlemi söyleriz.'],
+  ['Kot pantolonu eve veya otele gelip alıyor musunuz?', 'Evet, pantolonu eve veya otele gelip ücretsiz alırız; Konyaaltı, Muratpaşa ve çevresinde geçerlidir.'],
+  ["Kot pantolonun kalçası bolsa daraltılır mı?", "Evet. Kalça ve oturma yeri bolluğu da daraltılır; arkadan çekilmiş bir fotoğraf göndermeniz yeterlidir. Net fiyat işin kapsamına göre söylenir."],
+  ["Geniş paçalı kotu dar paçalı yapabilir misiniz?", "Evet, bacak daraltmayla geniş ya da düz kesim bir kot daha dar bir kalıba getirilebilir. Referans olarak sevdiğiniz bir pantolonun ölçüsünü yazarsanız daha doğru sonuç alırız."],
+  ["Streç kotu fazla daraltırsam sıkar mı?", "Esnek kumaşta çok fazla daraltma sıkabilir. Bu yüzden ölçüyü üzerinizde kontrol etmeyi ve gerekirse payı sınırlı tutmayı öneririz."],
+  ["Daraltma ile paça kısaltmayı aynı anda yaptırabilir miyim?", "Evet, iki işlem birlikte planlanır. Fiyat her işlem için ₺200'den başlar; toplamı fotoğrafa göre söyleriz."],
+];
+
+// Sayfaya özgü rehber içeriği (kot kümesinde sayfaları farklı niyetlere ayırır).
+const GUIDE: [string, string][] = [
+  ["Bel mi bol, kalça mı, bacak mı?", "Kot pantolon bol geldiğinde sorunun nerede olduğunu doğru bulmak işin yarısıdır. Bel bol ise pantolon kemersiz düşer; kalça ve oturma yeri bol ise arkada kumaş birikir; bacak bol ise pantolon dar kesim gibi durmaz. Üç yer ayrı ayrı daraltılabilir. Önden ve arkadan çekilmiş fotoğraf, hangisine ihtiyacınız olduğunu anlamamızı kolaylaştırır."],
+  ["Dar paça ve slim kesim isteyenler için", "Geniş veya düz kesim bir kotu daha dar bir kalıba çevirmek mümkündür; bunun için bacak dikişleri yeniden ayarlanır. Dar kesim istiyorsanız, mevcut kotun baldır ve diz genişliğini biliyorsanız yazın ya da en sevdiğiniz bir pantolonu referans olarak gösterin. Böylece ölçü tahmine kalmadan belirlenir."],
+  ["Streç oranı daraltma payını değiştirir", "Esnek içerikli kotta kumaş vücuda uyum sağladığı için daraltma payı sınırlı tutulur; sert denimde ise pay daha rahat belirlenir. Etiketteki kumaş içeriğini mesaja eklemeniz işimizi kolaylaştırır. Çok daraltma yapılırsa oturma ve diz hareketi sıkışabileceği için ölçüyü üzerinizde kontrol etmeyi öneririz."],
+  ["Daraltırken nelere dikkat edilir?", "Kotun cep yerleşimi, arkadaki dikiş çizgileri ve paça şekli daraltma sırasında bozulmamalıdır. Bu yüzden her kotta önce mevcut dikiş yapısına bakılır, sonra hangi dikişten pay alınacağına karar verilir. Paça kısmı da kısalacaksa iki işlem birlikte planlanır; kısaltma ayrıntıları için kot paça kısaltma sayfamıza bakabilirsiniz."],
+  ["Fiyat ve teslim", "Kot pantolon bacak veya bel daraltma ₺200'den başlar. Net fiyat daraltılacak yer sayısına ve kumaşa göre fotoğrafla söylenir. Normal işler aynı gün, acil işler 1–2 saatte teslim edilir; eve ve otele alım-teslim ücretsizdir. Fiyatlara KDV dahil değildir."],
+];
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -80,22 +103,15 @@ const jsonLd = {
       description: "Kot Pantolon Nasıl Daraltılır?",
       step: [
         { '@type': 'HowToStep', name: 'Fotoğraf Gönderin', text: 'WhatsApp\'tan kot pantolonun önden ve arkadan fotoğrafını, daraltmak istediğiniz yeri belirterek gönderin.' },
-        { '@type': 'HowToStep', name: 'Teslim Edin', text: 'Atölyeye getirin veya eve/otele ücretsiz alım-teslim isteyin.' },
-        { '@type': 'HowToStep', name: 'Ölçü ve Dikiş', text: 'Ölçü üzerinizde işaretlenir; kalın kot kumaşa uygun makine ve iplikle dikilir. Normal işte aynı gün, acilde 1–2 saat.' },
-        { '@type': 'HowToStep', name: 'Teslim Alın', text: 'Kontrol edilip teslim edilir.' },
+        { '@type': 'HowToStep', name: 'Teslim Edin', text: 'Pantolonu getirin veya adresinizden ücretsiz alım talep edin.' },
+        { '@type': 'HowToStep', name: 'Ölçü ve Dikiş', text: 'Daraltılacak yer üzerinizde iğnelenir, dikişler yeniden kurulur. Aynı gün; acilde 1–2 saat.' },
+        { '@type': 'HowToStep', name: 'Teslim Alın', text: 'Oturuş kontrol edilir; isterseniz deneyip teslim alırsınız.' },
       ],
     },
     {
       '@type': 'FAQPage',
       '@id': `${PAGE_URL}#faq`,
-      mainEntity: [
-        { '@type': 'Question', name: 'Kot pantolon daraltma ne kadar?', acceptedAnswer: { '@type': 'Answer', text: 'Kot pantolon daraltma ₺200\'den başlar. Net fiyat daraltılacak yere ve işin kapsamına göre, fotoğrafla WhatsApp\'tan söylenir.' } },
-        { '@type': 'Question', name: 'Bacak mı bel mi daraltılır?', acceptedAnswer: { '@type': 'Answer', text: 'İkisi de yapılır. Bacak daraltma pantolonu dar paçalı hale getirir, bel daraltma ise bele oturmasını sağlar. İhtiyacınızı fotoğrafla birlikte yazmanız yeterli.' } },
-        { '@type': 'Question', name: 'Kot pantolon daraltma için ne göndermeliyim?', acceptedAnswer: { '@type': 'Answer', text: 'Pantolonun önden ve arkadan fotoğrafını, hangi yeri daraltmak istediğinizi ve varsa istediğiniz ölçüyü WhatsApp\'tan gönderin.' } },
-        { '@type': 'Question', name: 'Kot pantolon daraltma ne kadar sürer?', acceptedAnswer: { '@type': 'Answer', text: 'Normal işler aynı gün teslim edilir; acil işler 1–2 saatte tamamlanır.' } },
-        { '@type': 'Question', name: 'Daraltırken paçanın orijinal görünümü korunur mu?', acceptedAnswer: { '@type': 'Answer', text: 'Evet, paçanın orijinal görünümünü koruyacak şekilde çalışıyoruz. Fotoğraf gönderirseniz yapılabilecek işlemi söyleriz.' } },
-        { '@type': 'Question', name: 'Kot pantolonu eve veya otele gelip alıyor musunuz?', acceptedAnswer: { '@type': 'Answer', text: 'Evet. Konyaaltı, Muratpaşa ve çevresinde eve ve otele alım-teslim ücretsizdir.' } },
-      ],
+      mainEntity: FAQ.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
     },
   ],
 };
@@ -127,7 +143,7 @@ export default function Page() {
             <h1 id="hero-h">
               Kot Pantolon Daraltma <span className="accent">Antalya</span><br />₺200'den, Aynı Gün Teslim</h1>
             <p className="hero-desc">
-              Kot pantolonda bacak daraltma ve bel daraltma. Kalın kot kumaşa uygun makine ve iplikle çalışıyoruz; eve ve otele ücretsiz servis.
+              Kot pantolonda bacak daraltma ve bel daraltma. Kalın kot kumaşa uygun dikişle çalışıyoruz; eve ve otele ücretsiz servis veriyoruz.
             </p>
             <p className="hero-desc"><strong>Kısa cevap:</strong> Kot pantolon bacak ve bel daraltma ₺200'den başlar; ölçü üzerinizde alınır, normal işler aynı gün, acil işler 1–2 saatte teslim edilir.</p>
             <div className="hero-btns">
@@ -150,7 +166,7 @@ export default function Page() {
                   <span className="price-icon" aria-hidden="true">📐</span>
                   <div><div className="price-tr">Kot Pantolon Daraltma</div></div>
                 </div>
-                <p className="price-desc">Kalın kot kumaşa uygun makine ve iplik.</p>
+                <p className="price-desc">Dikiş payı kumaşın kalınlığına ve streç oranına göre belirlenir.</p>
                 <table className="price-table"><tbody>
                   <tr><td>Bacak Daraltma</td><td>₺200+</td></tr>
                   <tr><td>Bel Daraltma</td><td>₺200+</td></tr>
@@ -158,7 +174,7 @@ export default function Page() {
               </div>
             </div>
             <p style={{ fontSize: '.76rem', color: 'rgba(255,255,255,.4)', marginTop: '1.4rem', fontStyle: 'italic' }}>
-              * Fiyatlar başlangıç fiyatıdır; kumaş kalınlığına ve işin kapsamına göre değişebilir.
+              * Fiyatlar başlangıç fiyatıdır; daraltılacak yer sayısına ve streç oranına göre değişebilir. KDV dahil değildir.
             </p>
           </div>
         </section>
@@ -171,10 +187,27 @@ export default function Page() {
             </div>
             <div className="howto-list">
               <div className="howto-item"><div className="howto-t">Fotoğraf Gönderin</div><div className="howto-d">WhatsApp'tan kot pantolonun önden ve arkadan fotoğrafını, daraltmak istediğiniz yeri belirterek gönderin.</div></div>
-              <div className="howto-item"><div className="howto-t">Teslim Edin</div><div className="howto-d">Atölyeye getirin veya eve/otele ücretsiz alım-teslim isteyin.</div></div>
-              <div className="howto-item"><div className="howto-t">Ölçü ve Dikiş</div><div className="howto-d">Ölçü üzerinizde işaretlenir; kalın kot kumaşa uygun makine ve iplikle dikilir. Normal işte aynı gün, acilde 1–2 saat.</div></div>
-              <div className="howto-item"><div className="howto-t">Teslim Alın</div><div className="howto-d">Kontrol edilip teslim edilir.</div></div>
+              <div className="howto-item"><div className="howto-t">Teslim Edin</div><div className="howto-d">Pantolonu getirin veya adresinizden ücretsiz alım talep edin.</div></div>
+              <div className="howto-item"><div className="howto-t">Ölçü ve Dikiş</div><div className="howto-d">Daraltılacak yer üzerinizde iğnelenir, dikişler yeniden kurulur. Aynı gün; acilde 1–2 saat.</div></div>
+              <div className="howto-item"><div className="howto-t">Teslim Alın</div><div className="howto-d">Oturuş kontrol edilir; isterseniz deneyip teslim alırsınız.</div></div>
             </div>
+          </div>
+        </section>
+
+        <section className="sec" aria-labelledby="guide-h">
+          <div className="ctr" style={{ maxWidth: 720 }}>
+            <div className="sec-head">
+              <span className="eyebrow">Rehber</span>
+              <h2 className="sec-h ff" id="guide-h">Kot Pantolon Daraltmada Bel, Kalça ve Bacak Farkı</h2>
+            </div>
+            <div className="howto-list">
+              {GUIDE.map(([t, x]) => (
+                <div key={t} className="howto-item"><div className="howto-t">{t}</div><div className="howto-d">{x}</div></div>
+              ))}
+            </div>
+            <p style={{ marginTop: '1.2rem' }}>
+              Daraltmayla birlikte boyu da kısaltmak istiyorsanız <a href="/kot-pantolon-paca-kisaltma-antalya">kot paça kısaltma</a>, paça dikişinin kalması için <a href="/orijinal-kot-paca-yapimi-antalya">orijinal kot paça yapımı</a>, kot etek için <a href="/kot-etek-kisaltma-daraltma-antalya">kot etek tadilatı</a> sayfalarına geçebilirsiniz.
+            </p>
           </div>
         </section>
 
@@ -184,14 +217,7 @@ export default function Page() {
               <span className="eyebrow">SSS</span>
               <h2 className="sec-h ff" id="faq-h">Kot Pantolon Daraltma Hakkında Sık Sorulan Sorular</h2>
             </div>
-            {[
-              ['Kot pantolon daraltma ne kadar?', 'Kot pantolon daraltma ₺200\'den başlar. Net fiyat daraltılacak yere ve işin kapsamına göre, fotoğrafla WhatsApp\'tan söylenir.'],
-              ['Bacak mı bel mi daraltılır?', 'İkisi de yapılır. Bacak daraltma pantolonu dar paçalı hale getirir, bel daraltma ise bele oturmasını sağlar. İhtiyacınızı fotoğrafla birlikte yazmanız yeterli.'],
-              ['Kot pantolon daraltma için ne göndermeliyim?', 'Pantolonun önden ve arkadan fotoğrafını, hangi yeri daraltmak istediğinizi ve varsa istediğiniz ölçüyü WhatsApp\'tan gönderin.'],
-              ['Kot pantolon daraltma ne kadar sürer?', 'Normal işler aynı gün teslim edilir; acil işler 1–2 saatte tamamlanır.'],
-              ['Daraltırken paçanın orijinal görünümü korunur mu?', 'Evet, paçanın orijinal görünümünü koruyacak şekilde çalışıyoruz. Fotoğraf gönderirseniz yapılabilecek işlemi söyleriz.'],
-              ['Kot pantolonu eve veya otele gelip alıyor musunuz?', 'Evet. Konyaaltı, Muratpaşa ve çevresinde eve ve otele alım-teslim ücretsizdir.'],
-            ].map(([q, a]) => (
+            {FAQ.map(([q, a]) => (
               <div key={q} className="faq-item">
                 <div className="faq-q">{q}</div>
                 <div className="faq-a">{a}</div>
@@ -205,7 +231,7 @@ export default function Page() {
 
         <section className="cta-final" aria-label="İletişime geç">
           <h2 className="cta-h ff">Kot Pantolonunuz mu Bol?</h2>
-          <p className="cta-sub">Fotoğrafını gönderin, kısa sürede fiyat alın; normal işte aynı gün teslim.</p>
+          <p className="cta-sub">Önden ve arkadan fotoğraf gönderin, daraltma fiyatını öğrenin.</p>
           <div className="cta-btns">
             <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-white">💬 WhatsApp'tan Yazın</a>
             <a href={MAPS} target="_blank" rel="noopener noreferrer" className="btn-outline-white">📍 Google Haritalar</a>

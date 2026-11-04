@@ -15,7 +15,7 @@ const TODAY     = '2026-11-03';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Kot Pantolon Paça Kısaltma ₺200 · Aynı Gün · Antalya" },
+  title: { absolute: "Kot Pantolon Paça Kısaltma ₺200'den · Aynı Gün · Antalya" },
   description:
     "Kot pantolon paça kısaltma, orijinal paça yapımı ve daraltma ₺200'den. Normal iş aynı gün, acil 1–2 saat. Eve ve otele ücretsiz servis. ☎ " + PHONE,
   keywords: fitKeywords([
@@ -30,6 +30,29 @@ export const metadata: Metadata = {
     images: [{ url: `${SITE}/terzi-can-hero.jpg`, width: 1024, height: 1024, alt: "Kot Pantolon Paça Kısaltma Antalya — Aynı Gün" }],
   },
 };
+
+// Görünen SSS ve FAQPage şeması tek diziden üretilir (tutarlılık).
+const FAQ: [string, string][] = [
+  ['Kot pantolon paça kısaltma fiyatı ne kadar?', 'Kot pantolon paça kısaltma ₺200\'den başlar. Net fiyat fotoğrafla WhatsApp\'tan söylenir.'],
+  ['Kot paçası orijinal paça gibi yapılır mı?', 'Evet, kot paçasının orijinal paça görünümünü koruyacak şekilde kısaltma yapıyoruz. Fotoğraf gönderirseniz yapılabilecek işlemi ve fiyatı söyleriz.'],
+  ['Kot pantolon daraltma yapıyor musunuz?', 'Evet. Kot pantolonda bacak ve bel daraltma ₺200\'den başlar; net fiyat fotoğrafa göre söylenir.'],
+  ['Kot pantolon paça kısaltma ne kadar sürer?', 'Genelde aynı gün; acil işlerde 1–2 saat içinde teslim ederiz.'],
+  ['Kot paçası uzatılır mı veya genişletilir mi?', 'Fotoğraf gönderirseniz kumaş payına bakıp yapılıp yapılamayacağını söyleriz.'],
+  ['Kot ürününü eve veya otele gelip alıyor musunuz?', 'Evet, kotunuzu evinizden veya otelinizden ücretsiz alırız; Konyaaltı, Muratpaşa ve çevresinde geçerlidir.'],
+  ["Kot paçasını kısaltırken ayakkabıyla mı ölçüyorsunuz?", "Evet. Kot, giyeceğiniz ayakkabıyla birlikte ve normal bel hizasında dururken işaretlenir. Uzaktan çalışıyorsanız hangi ayakkabıyla giyeceğinizi WhatsApp'tan yazmanız yeterli."],
+  ["Streç kot ile sert kot aynı fiyata mı kısalır?", "Kot paça kısaltma her ikisinde de ₺200'den başlar. Kumaşın kalınlığı ve işin kapsamı kesin tutarı etkileyebilir; fotoğrafla net fiyat söylenir."],
+  ["Kısaltma sonrası kotun duruşu bozulur mu?", "Makul bir kısaltmada bozulmaz. Çok fazla kısaltma gerekiyorsa diz ve baldır hizasındaki kalıbın etkilenebileceğini, fotoğrafa bakarak önceden söyleriz."],
+  ["Ödemeyi hangi para birimleriyle yapabilirim?", "Tüm para birimleriyle ödeme kabul ediyoruz; nakit veya kartla ödeyebilirsiniz. Fiyatlara KDV dahil değildir."],
+];
+
+// Sayfaya özgü rehber içeriği (kot kümesinde sayfaları farklı niyetlere ayırır).
+const GUIDE: [string, string][] = [
+  ["Boyu hangi ayakkabıyla ölçeceğiz?", "Kot paçası, günlük giyeceğiniz ayakkabıyla birlikte ve pantolon normal bel hizasında dururken işaretlenir. Spor ayakkabıyla giyeceğiniz bir kotun boyu ile bot veya topuklu ayakkabıyla giyeceğiniz kotun boyu birbirinden farklıdır. Uzaktan gönderdiğiniz fotoğrafta da hangi ayakkabıyla giyeceğinizi yazarsanız boyu daha doğru önerebiliriz. Eve veya otele gelen servisimizle ölçüyü üzerinizde almamız da mümkündür."],
+  ["Sert denim ile streç kot aynı şekilde mi kısalır?", "Hayır. Sert, kalın denimde paça kıvrımı dik durur ve dikiş yerinde kumaş kalınlığı artar; bu yüzden kalın kota uygun makine ve iplikle çalışırız. Streç kotta ise kumaş esnediği için dikişin de esnemeye uyması gerekir. Fotoğrafta kumaşın cinsini görebiliyorsak ya da etiketteki içerik bilgisini yazarsanız işlemi ona göre planlarız."],
+  ["Ne kadar kısaltılabilir?", "Paçada kıvrılacak pay yeterliyse birkaç santimden çok daha fazlası kısaltılabilir. Fakat çok fazla kısaltma, kotun diz ve baldır hizasındaki kalıbını bozabilir; bu durumda pantolonun formu bozulmadan hangi boya kadar inileceğini fotoğrafa bakarak söyleriz. Kısaltma sonrası paçanın geniş kalması hâlinde daraltma da yapılır."],
+  ["Hangi durumda başka bir işlem gerekir?", "Paça dikiş izini aynen korumak istiyorsanız orijinal kot paça yapımı sayfamıza bakın. Kotun bacak veya bel kısmı da bolsa kot pantolon daraltma sayfamızdaki seçenekler size daha uygundur. Kotunuzun paçası yırtıldıysa ya da yıprandıysa kısaltmayla birlikte onarım yapılabilir; bunun için paçanın yakın fotoğrafı yeterlidir."],
+  ["Fiyat nasıl belirlenir?", "Kot paça kısaltma ₺200'den başlar. Kumaşın kalınlığı ve işin kapsamı fiyatı etkiler; kesin tutarı fotoğrafı gördükten sonra WhatsApp'tan söyleriz. Fiyatlara KDV dahil değildir; ödemeyi tüm para birimleriyle, nakit veya kartla yapabilirsiniz."],
+];
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -80,22 +103,15 @@ const jsonLd = {
       description: "Kot Paça Nasıl Kısaltılır?",
       step: [
         { '@type': 'HowToStep', name: 'Fotoğraf Gönderin', text: 'WhatsApp\'tan kot pantolonun fotoğrafını gönderin, ön fiyat alın.' },
-        { '@type': 'HowToStep', name: 'Teslim Edin', text: 'Atölyeye getirin veya eve/otele ücretsiz alım-teslim isteyin.' },
-        { '@type': 'HowToStep', name: 'Ölçü ve Dikiş', text: 'Ölçü üzerinizde işaretlenir; kalın kot kumaşa uygun makine ve iplikle dikilir. Normal işte aynı gün, acilde 1–2 saat.' },
-        { '@type': 'HowToStep', name: 'Teslim Alın', text: 'Kontrol edilip teslim edilir.' },
+        { '@type': 'HowToStep', name: 'Teslim Edin', text: 'Kotu atölyeye bırakın ya da adresinizden ücretsiz alalım.' },
+        { '@type': 'HowToStep', name: 'Ölçü ve Dikiş', text: 'Boy ayakkabınızla işaretlenir, paça kalın kota uygun iplikle kapatılır. Aynı gün; acilde 1–2 saat.' },
+        { '@type': 'HowToStep', name: 'Teslim Alın', text: 'Paça dikişi kontrol edilerek teslim edilir.' },
       ],
     },
     {
       '@type': 'FAQPage',
       '@id': `${PAGE_URL}#faq`,
-      mainEntity: [
-        { '@type': 'Question', name: 'Kot pantolon paça kısaltma fiyatı ne kadar?', acceptedAnswer: { '@type': 'Answer', text: 'Kot pantolon paça kısaltma ₺200\'den başlar. Net fiyat fotoğrafla WhatsApp\'tan söylenir.' } },
-        { '@type': 'Question', name: 'Kot paçası orijinal paça gibi yapılır mı?', acceptedAnswer: { '@type': 'Answer', text: 'Evet, kot paçasının orijinal paça görünümünü koruyacak şekilde kısaltma yapıyoruz. Fotoğraf gönderirseniz yapılabilecek işlemi ve fiyatı söyleriz.' } },
-        { '@type': 'Question', name: 'Kot pantolon daraltma yapıyor musunuz?', acceptedAnswer: { '@type': 'Answer', text: 'Evet. Kot pantolonda bacak ve bel daraltma ₺200\'den başlar; net fiyat fotoğrafa göre söylenir.' } },
-        { '@type': 'Question', name: 'Kot pantolon paça kısaltma ne kadar sürer?', acceptedAnswer: { '@type': 'Answer', text: 'Normal işler aynı gün teslim edilir; acil işler 1–2 saatte tamamlanır.' } },
-        { '@type': 'Question', name: 'Kot paçası uzatılır mı veya genişletilir mi?', acceptedAnswer: { '@type': 'Answer', text: 'Fotoğraf gönderirseniz kumaş payına bakıp yapılıp yapılamayacağını söyleriz.' } },
-        { '@type': 'Question', name: 'Kot ürününü eve veya otele gelip alıyor musunuz?', acceptedAnswer: { '@type': 'Answer', text: 'Evet. Konyaaltı, Muratpaşa ve çevresinde eve ve otele alım-teslim ücretsizdir.' } },
-      ],
+      mainEntity: FAQ.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
     },
   ],
 };
@@ -127,7 +143,7 @@ export default function Page() {
             <h1 id="hero-h">
               Kot Pantolon Paça Kısaltma <span className="accent">Antalya</span><br />₺200'den, Aynı Gün Teslim</h1>
             <p className="hero-desc">
-              Kot pantolon paça kısaltma, orijinal paça yapımı ve daraltma. Kalın kot kumaşa uygun makine ve iplikle çalışıyoruz; eve ve otele ücretsiz servis.
+              Kot pantolon paça kısaltma, orijinal paça yapımı ve daraltma. Kalın denime uygun iplik ve iğneyle çalışıyoruz; adresinize ücretsiz servis veriyoruz.
             </p>
             <p className="hero-desc"><strong>Kısa cevap:</strong> Kot pantolon paça kısaltma ve daraltma ₺200'den başlar; orijinal paça görünümü korunur, normal işler aynı gün teslim edilir.</p>
             <div className="hero-btns">
@@ -150,7 +166,7 @@ export default function Page() {
                   <span className="price-icon" aria-hidden="true">👖</span>
                   <div><div className="price-tr">Kot Pantolon</div></div>
                 </div>
-                <p className="price-desc">Kalın kot kumaşa uygun makine ve iplik.</p>
+                <p className="price-desc">Kalın denime uygun iplik ve iğneyle, paçanın kalınlığına göre ayarlanmış dikiş.</p>
                 <table className="price-table"><tbody>
                   <tr><td>Kot Paça Kısaltma</td><td>₺200+</td></tr>
                   <tr><td>Kot Pantolon Daraltma</td><td>₺200+</td></tr>
@@ -159,7 +175,7 @@ export default function Page() {
               </div>
             </div>
             <p style={{ fontSize: '.76rem', color: 'rgba(255,255,255,.4)', marginTop: '1.4rem', fontStyle: 'italic' }}>
-              * Fiyatlar başlangıç fiyatıdır; kumaş kalınlığına ve işin kapsamına göre değişebilir.
+              * Fiyatlar başlangıç fiyatıdır; kumaş kalınlığına ve kaç santim kısaltılacağına göre değişebilir. KDV dahil değildir.
             </p>
           </div>
         </section>
@@ -172,10 +188,27 @@ export default function Page() {
             </div>
             <div className="howto-list">
               <div className="howto-item"><div className="howto-t">Fotoğraf Gönderin</div><div className="howto-d">WhatsApp'tan kot pantolonun fotoğrafını gönderin, ön fiyat alın.</div></div>
-              <div className="howto-item"><div className="howto-t">Teslim Edin</div><div className="howto-d">Atölyeye getirin veya eve/otele ücretsiz alım-teslim isteyin.</div></div>
-              <div className="howto-item"><div className="howto-t">Ölçü ve Dikiş</div><div className="howto-d">Ölçü üzerinizde işaretlenir; kalın kot kumaşa uygun makine ve iplikle dikilir. Normal işte aynı gün, acilde 1–2 saat.</div></div>
-              <div className="howto-item"><div className="howto-t">Teslim Alın</div><div className="howto-d">Kontrol edilip teslim edilir.</div></div>
+              <div className="howto-item"><div className="howto-t">Teslim Edin</div><div className="howto-d">Kotu atölyeye bırakın ya da adresinizden ücretsiz alalım.</div></div>
+              <div className="howto-item"><div className="howto-t">Ölçü ve Dikiş</div><div className="howto-d">Boy ayakkabınızla işaretlenir, paça kalın kota uygun iplikle kapatılır. Aynı gün; acilde 1–2 saat.</div></div>
+              <div className="howto-item"><div className="howto-t">Teslim Alın</div><div className="howto-d">Paça dikişi kontrol edilerek teslim edilir.</div></div>
             </div>
+          </div>
+        </section>
+
+        <section className="sec" aria-labelledby="guide-h">
+          <div className="ctr" style={{ maxWidth: 720 }}>
+            <div className="sec-head">
+              <span className="eyebrow">Rehber</span>
+              <h2 className="sec-h ff" id="guide-h">Kot Paça Kısaltmadan Önce Bilmeniz Gerekenler</h2>
+            </div>
+            <div className="howto-list">
+              {GUIDE.map(([t, x]) => (
+                <div key={t} className="howto-item"><div className="howto-t">{t}</div><div className="howto-d">{x}</div></div>
+              ))}
+            </div>
+            <p style={{ marginTop: '1.2rem' }}>
+              Paça izi korunsun istiyorsanız <a href="/orijinal-kot-paca-yapimi-antalya">orijinal kot paça yapımı</a>, bacak ve bel bolsa <a href="/kot-pantolon-daraltma-antalya">kot pantolon daraltma</a>, kot ceket ve mont için <a href="/kot-ceket-mont-tadilati-antalya">kot ceket tadilatı</a>, etek için <a href="/kot-etek-kisaltma-daraltma-antalya">kot etek kısaltma</a> sayfalarımıza bakabilirsiniz. Kumaş pantolon ve etek paçası için <a href="/konyaalti-paca-kisaltma">Konyaaltı paça kısaltma</a> sayfamız var.
+            </p>
           </div>
         </section>
 
@@ -185,14 +218,7 @@ export default function Page() {
               <span className="eyebrow">SSS</span>
               <h2 className="sec-h ff" id="faq-h">Kot Paça Kısaltma Hakkında Sık Sorulan Sorular</h2>
             </div>
-            {[
-              ['Kot pantolon paça kısaltma fiyatı ne kadar?', 'Kot pantolon paça kısaltma ₺200\'den başlar. Net fiyat fotoğrafla WhatsApp\'tan söylenir.'],
-              ['Kot paçası orijinal paça gibi yapılır mı?', 'Evet, kot paçasının orijinal paça görünümünü koruyacak şekilde kısaltma yapıyoruz. Fotoğraf gönderirseniz yapılabilecek işlemi ve fiyatı söyleriz.'],
-              ['Kot pantolon daraltma yapıyor musunuz?', 'Evet. Kot pantolonda bacak ve bel daraltma ₺200\'den başlar; net fiyat fotoğrafa göre söylenir.'],
-              ['Kot pantolon paça kısaltma ne kadar sürer?', 'Normal işler aynı gün teslim edilir; acil işler 1–2 saatte tamamlanır.'],
-              ['Kot paçası uzatılır mı veya genişletilir mi?', 'Fotoğraf gönderirseniz kumaş payına bakıp yapılıp yapılamayacağını söyleriz.'],
-              ['Kot ürününü eve veya otele gelip alıyor musunuz?', 'Evet. Konyaaltı, Muratpaşa ve çevresinde eve ve otele alım-teslim ücretsizdir.'],
-            ].map(([q, a]) => (
+            {FAQ.map(([q, a]) => (
               <div key={q} className="faq-item">
                 <div className="faq-q">{q}</div>
                 <div className="faq-a">{a}</div>
@@ -206,7 +232,7 @@ export default function Page() {
 
         <section className="cta-final" aria-label="İletişime geç">
           <h2 className="cta-h ff">Kot Pantolonunuz Uzun mu?</h2>
-          <p className="cta-sub">Fotoğrafını gönderin, kısa sürede fiyat alın; normal işte aynı gün teslim.</p>
+          <p className="cta-sub">Paçanın fotoğrafını gönderin, net fiyatı hemen öğrenin.</p>
           <div className="cta-btns">
             <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-white">💬 WhatsApp'tan Yazın</a>
             <a href={MAPS} target="_blank" rel="noopener noreferrer" className="btn-outline-white">📍 Google Haritalar</a>

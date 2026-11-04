@@ -501,7 +501,10 @@ export function DistrictPage({ lang, d }: { lang: Lang; d: District }) {
     ru: `Здравствуйте, нужен портной ${c.loc}.`,
     de: `Hallo, ich brauche einen Schneider ${c.loc}.`,
   }[lang];
-  const nearby = DISTRICTS.filter((x) => x.slug !== d.slug && x.kind === d.kind && isIndexable(lang, x.slug)).slice(0, 8);
+  const nearbyAll = DISTRICTS.filter((x) => x.slug !== d.slug && isIndexable(lang, x.slug));
+  let nearby = nearbyAll.filter((x) => x.kind === d.kind).slice(0, 8);
+  // Aynı türden az bölge varsa (ör. Türkçede Beldibi) diğer açık bölgelerle tamamla; iç link ağı boş kalmasın.
+  if (nearby.length < 3) nearby = [...nearby, ...nearbyAll.filter((x) => x.kind !== d.kind).slice(0, 4)];
   const hotel = d.hotelSlug && OTEL_BOLGELERI.some((r) => r.slug === d.hotelSlug) ? `${HOTEL_BASE[lang]}/${d.hotelSlug}` : null;
   // Aynı bölge için farklı yazılışlar: her bölge hizmet varyantlarının farklı bir dilimini gösterir
   const popular = SERVICES.map((s, i) => {

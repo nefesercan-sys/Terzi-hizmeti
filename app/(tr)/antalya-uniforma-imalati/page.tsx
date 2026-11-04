@@ -9,7 +9,6 @@ import { fitDesc, fitKeywords } from '@/lib/meta-fit';
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  maximumScale: 1,
   themeColor: '#ffffff',
 };
 

@@ -26,7 +26,7 @@ const OG        = `${SITE}/terzi-can-hero.jpg`;
 // ─── METADATA ─────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Terzi Can Antalya — Tamir Tadilat, Paça ₺200, Fermuar ₺300" },
+  title: { absolute: "Terzi Can Antalya · Paça ₺200'den, Fermuar ₺300'den" },
   description:
     "Konyaaltı Hurma, Liman, Uncalı, Gürsu'da bay bayan tamir tadilat: söküğü dikme, paça ₺200, fermuar değişimi ₺300. Her gün 08:00–23:00. ☎ 0531 898 64 18",
   keywords: ['Antalya terzi', 'Konyaaltı terzi', 'otele gelen terzi Antalya', 'acil terzi Antalya', 'paça kısaltma Konyaaltı', 'fermuar değişimi Antalya', 'gelinlik tadilatı Antalya', 'özel dikim Antalya'],
@@ -470,7 +470,7 @@ export default function TerziHizmetiPage() {
         {/* SUMMARY / INTRODUCTION */}
         <div style={{background:C.bg2,padding:'2.2rem 1.5rem',borderBottom:`1px solid rgba(44,74,62,.10)`}}>
           <p style={{maxWidth:920,margin:'0 auto',fontSize:'.85rem',color:C.muted,lineHeight:1.9,textAlign:'center'}}>
-            <strong style={{color:'#2C4A3E'}}>Terzi Can Antalya</strong> — Konyaaltı'nda 2006'dan bu yana faaliyet gösteren profesyonel terzi atölyesidir. WhatsApp'tan kendi dilinde yazışabildiğimiz ekibimizle hem yerli hem de yabancı misafirlerimize terzilik, kıyafet tamiri, elbise dikimi, gelinlik tadilatı hizmeti sunuyoruz. Hurma, Liman, Sarısu, Gürsu ve Uncalı başta olmak üzere Konyaaltı ve çevresi'ya araçlı terzi servisi sağlıyoruz.
+            <strong style={{color:'#2C4A3E'}}>Terzi Can Antalya</strong> — Konyaaltı'nda 2006'dan bu yana, 26 yıllık deneyimle faaliyet gösteren profesyonel terzi atölyesidir. WhatsApp'tan kendi dilinde yazışabildiğimiz ekibimizle hem yerli hem de yabancı misafirlerimize terzilik, kıyafet tamiri, elbise dikimi, gelinlik tadilatı hizmeti sunuyoruz. Hurma, Liman, Sarısu, Gürsu ve Uncalı başta olmak üzere Konyaaltı ve çevresi'ya araçlı terzi servisi sağlıyoruz.
           </p>
         </div>
 

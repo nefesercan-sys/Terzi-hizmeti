@@ -36,7 +36,6 @@ const h1Varyant = (lang: string, slug: string, r: string) => {
 
 const T: Record<Lang, any> = {
   en: {
-    noPartner: 'We do not work for or represent any hotel; the region name only tells you where we can come.',
     homeLabel: '← Home', tag: (r: string) => `📍 ${r} Hotel Zone · Mobile Tailor`,
     h1: (r: string) => <>Hotel Tailor<br /><span className="accent">{r}</span></>,
     heroDesc: (_r: string, answer: string) => answer,
@@ -60,18 +59,11 @@ const T: Record<Lang, any> = {
       ['04', 'Same-Day Delivery', 'Finished garment delivered back to your room'],
     ],
     faqEyebrow: 'FAQ', faqH: 'Frequently Asked Questions',
-    faq: (r: string) => [
-      [`Do you come to all hotels in ${r}?`, `Yes! We visit every hotel in ${r} — share your hotel name and room number on WhatsApp.`],
-      ['Is the hotel visit free?', 'Hotel pick-up and delivery is free in every area we serve; we confirm the time on WhatsApp before we come; you then pay for the tailoring or repair work.'],
-      ['How fast is the service?', 'Standard repairs and hemming are ready the same day; urgent jobs take 1–2 hours.'],
-      ['Do you speak English?', 'Yes — write to us on WhatsApp in your own language and we will reply.'],
-    ],
     ctaH: (r: string) => <>Hotel Tailor in {r}<br />We Come to You</>, ctaSub: 'Share your hotel name — time confirmed on WhatsApp.',
     waBtn: 'Message on WhatsApp', mapsBtn: 'Google Maps',
     footTitle: 'Related', related: [] as [string, string][],
   },
   ru: {
-    noPartner: 'Мы не представляем ни один отель; название района лишь показывает, куда мы можем приехать.',
     homeLabel: '← Главная', tag: (r: string) => `📍 Отельная зона ${r} · Выездной портной`,
     h1: (r: string) => <>Портной в отеле<br /><span className="accent">{r}</span></>,
     heroDesc: (_r: string, answer: string) => answer,
@@ -95,18 +87,11 @@ const T: Record<Lang, any> = {
       ['04', 'Готово в тот же день', 'Готовая вещь доставляется обратно в номер'],
     ],
     faqEyebrow: 'Вопросы', faqH: 'Часто задаваемые вопросы',
-    faq: (r: string) => [
-      [`Вы приезжаете во все отели ${r}?`, `Да! Мы приезжаем в каждый отель района ${r} — напишите название отеля и номер комнаты в WhatsApp.`],
-      ['Выезд в отель бесплатный?', 'Да, выезд в отель и на дом бесплатный во всех районах — вы платите только за саму работу.'],
-      ['Как быстро выполняется услуга?', 'Обычные работы готовы в тот же день, срочные — за 1–2 часа.'],
-      ['Вы говорите по-русски?', 'Да — напишите нам в WhatsApp на своём языке, и мы ответим.'],
-    ],
     ctaH: (r: string) => <>Портной в отеле {r}<br />Мы приедем к вам</>, ctaSub: 'Отправьте название отеля — время согласуем в WhatsApp.',
     waBtn: 'Написать в WhatsApp', mapsBtn: 'Google Maps',
     footTitle: 'Похожие', related: [] as [string, string][],
   },
   de: {
-    noPartner: 'Wir arbeiten nicht für ein bestimmtes Hotel; der Gebietsname zeigt nur, wohin wir kommen können.',
     homeLabel: '← Startseite', tag: (r: string) => `📍 Hotelzone ${r} · Mobiler Schneider`,
     h1: (r: string) => <>Schneider im Hotel<br /><span className="accent">{r}</span></>,
     heroDesc: (_r: string, answer: string) => answer,
@@ -130,18 +115,11 @@ const T: Record<Lang, any> = {
       ['04', 'Am selben Tag fertig', 'Fertiges Kleidungsstück wird zurück auf Ihr Zimmer geliefert'],
     ],
     faqEyebrow: 'FAQ', faqH: 'Häufig gestellte Fragen',
-    faq: (r: string) => [
-      [`Kommen Sie zu allen Hotels in ${r}?`, `Ja! Wir besuchen jedes Hotel in ${r} — teilen Sie Hotelname und Zimmernummer per WhatsApp mit.`],
-      ['Ist der Hotelbesuch kostenlos?', 'Ja, Abholung und Lieferung zu Hotel und nach Hause sind in allen Gebieten kostenlos – Sie zahlen nur die eigentliche Arbeit.'],
-      ['Wie schnell ist der Service?', 'Normale Reparaturen sind am selben Tag fertig, eilige in 1–2 Stunden.'],
-      ['Sprechen Sie Deutsch?', 'Ja — schreiben Sie uns per WhatsApp in Ihrer Sprache, wir antworten.'],
-    ],
     ctaH: (r: string) => <>Schneider im Hotel {r}<br />Wir kommen zu Ihnen</>, ctaSub: 'Hotelnamen senden — Zeit per WhatsApp klären.',
     waBtn: 'Auf WhatsApp schreiben', mapsBtn: 'Google Maps',
     footTitle: 'Ähnlich', related: [] as [string, string][],
   },
   tr: {
-    noPartner: 'Belirli bir otelle ortaklığımız yoktur; bölge adı yalnızca hizmet verdiğimiz yeri gösterir.',
     homeLabel: '← Ana Sayfa', tag: (r: string) => `📍 ${r} Otel Bölgesi · Otele Gelen Terzi`,
     h1: (r: string) => <>Otele Gelen Terzi<br /><span className="accent">{r}</span></>,
     heroDesc: (_r: string, answer: string) => answer,
@@ -165,12 +143,6 @@ const T: Record<Lang, any> = {
       ['04', 'Aynı Gün Teslim', 'Tamamlanan kıyafet odanıza geri teslim edilir'],
     ],
     faqEyebrow: 'SSS', faqH: 'Sık Sorulan Sorular',
-    faq: (r: string) => [
-      [`${r} bölgesindeki tüm otellere geliyor musunuz?`, `Evet! ${r} bölgesindeki her otele ulaşabiliyoruz — otel adınızı ve oda numaranızı WhatsApp\'tan iletin.`],
-      ['Otel ziyareti ücretsiz mi?', 'Otele alım-teslim hizmet verilen tüm bölgelerde ücretsizdir; gelmeden önce saat WhatsApp\'tan netleştirilir; ayrıca dikim/tamir işi için ödeme yaparsınız.'],
-      ['Hizmet ne kadar sürede tamamlanır?', 'Normal tamir ve boy kısaltma aynı gün, acil işler 1–2 saatte teslim edilir.'],
-      ['Türkçe dışında dil konuşuyor musunuz?', 'Evet — WhatsApp\'tan kendi dilinizde yazın, size aynı dilde yanıt veriyoruz.'],
-    ],
     ctaH: (r: string) => <>{r} Bölgesinde Otele Gelen Terzi<br />Size Geliyoruz</>, ctaSub: 'Otel adınızı gönderin — randevunuz WhatsApp\'tan netleşsin.',
     waBtn: 'WhatsApp\'tan Yazın', mapsBtn: 'Google Haritalar',
     footTitle: 'İlgili', related: [] as [string, string][],
@@ -238,7 +210,6 @@ export default function OtelBolgeSayfasi({ lang, region, allRegions, basePath, m
             <ul style={{ fontSize: '.92rem', lineHeight: 1.8, paddingLeft: '1.2rem' }}>
               {areaNeeds(lang, region.slug).map((x) => (<li key={x}>{x}</li>))}
             </ul>
-            <p className="sec-sub" style={{ marginTop: '.8rem', fontSize: '.85rem' }}>{t.noPartner}</p>
           </div>
         </section>
 

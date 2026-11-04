@@ -15,7 +15,7 @@ const TODAY     = '2026-11-03';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Kot Ceket ve Mont Tadilatı ₺200 · Kısaltma · Antalya" },
+  title: { absolute: "Kot Ceket ve Mont Tadilatı ₺200'den · Kol, Boy, Beden" },
   description:
     "Kot ceket ve kot mont kol, boy kısaltma ve daraltma ₺200'den; orijinal görünümde dikiş. Normal iş aynı gün, acil 1–2 saat. ☎ " + PHONE,
   keywords: fitKeywords([
@@ -30,6 +30,29 @@ export const metadata: Metadata = {
     images: [{ url: `${SITE}/terzi-can-hero.jpg`, width: 1024, height: 1024, alt: "Kot Ceket ve Kot Mont Tadilatı Antalya" }],
   },
 };
+
+// Görünen SSS ve FAQPage şeması tek diziden üretilir (tutarlılık).
+const FAQ: [string, string][] = [
+  ['Kot ceket kısaltma ve daraltma fiyatı ne kadar?', 'Kot ceket ve kot mont kol/boy kısaltma ve daraltma ₺200\'den başlar. Net fiyat fotoğrafla WhatsApp\'tan söylenir.'],
+  ['Kot ceketin kolu kısaltılır mı?', 'Evet. Kol boyu ceket üzerinizdeyken işaretlenir; kot ceket ve kot mont kol kısaltma ₺200\'den başlar.'],
+  ['Kot ceket veya mont daraltılır mı?', 'Evet. Beden ve kol daraltma yapıyoruz; kumaş payına göre yapılabilecek işlem fotoğraftan değerlendirilir.'],
+  ['Orijinal dikiş görünümü korunur mu?', 'Kot ceket ve mont tadilatında orijinal dikiş görünümünü koruyacak şekilde çalışıyoruz. Fotoğraf gönderirseniz yapılabilecek işlemi söyleriz.'],
+  ['Kot mont tadilatı ne kadar sürer?', 'Kot ceket işleri çoğunlukla aynı gün biter; acil işlerde 1–2 saat.'],
+  ['Kot ürününü eve veya otele gelip alıyor musunuz?', 'Evet, ceket veya montu adresinizden ücretsiz alırız; Konyaaltı, Muratpaşa ve çevresinde geçerlidir.'],
+  ["Kot ceketin kolu manşetli ise kısaltma yapılır mı?", "Evet. Manşetli kollarda kısaltma manşetin altından ya da omuz tarafından yapılabilir; hangisinin uygun olduğuna fotoğrafa bakarak karar veririz."],
+  ["Omuzu bol olan kot ceket dar yapılabilir mi?", "Omuz çizgisi büyük ölçüde değiştirilemez. Yan dikişlerden yapılan beden daraltma mümkündür ama omuza oturmayan bir ceket için tadilatın sınırlı kalacağını önceden söyleriz."],
+  ["Kot montun fermuarı da değişiyor mu?", "Evet. Kot mont fermuar değişimi ₺300'den başlar; kısaltma veya daraltmayla aynı işlemde yapılabilir."],
+  ["Kot ceketin düğmesi düştü, takılır mı?", "Evet. Düşen ya da bozulan düğme ve çıtçıtlar yenilenir. Fotoğraf göndermeniz ve yenisinin neye benzemesi gerektiğini yazmanız yeterlidir."],
+];
+
+// Sayfaya özgü rehber içeriği (kot kümesinde sayfaları farklı niyetlere ayırır).
+const GUIDE: [string, string][] = [
+  ["Kol kısaltma nasıl yapılır?", "Kot ceketin kolu, ceket üzerinizdeyken ve kol rahat dururken işaretlenir. Kolun ağız kısmında düğmeli bir manşet varsa kısaltma manşetin altından ya da omuz tarafından yapılır; hangisinin uygun olduğu manşet yapısına bağlıdır. Kol ağzı kalın dikişli kotlarda orijinal görünümü korumak için manşetten yapılan kısaltma tercih edilir."],
+  ["Boy kısaltma ve cep hizası", "Ceket boyunu kısaltırken etek ucundaki kalın dikiş ve bel hizasındaki cepler birlikte düşünülür. Boy çok kısalırsa cep ağızları ceketin ucuna fazla yaklaşır; bu yüzden en uygun boyu fotoğrafa bakarak söyleriz. Kot montta bu kural daha da önemlidir, çünkü mont ceketten daha uzundur ve kaban gibi kullanılır."],
+  ["Beden daraltmada sınırlar", "Yan dikişlerden yapılan beden daraltma çoğu kot ceket ve montta mümkündür. Omuz çizgisi ise büyük ölçüde değiştirilemez; omuza oturmayan bir ceketi tadilatla kurtarmak zor olur. Bu nedenle satın alırken omza uyan bedeni seçip bolluğu tadilatla almak en sağlıklı yoldur."],
+  ["Düğme ve fermuar", "Kot ceketlerde düşen ya da bozulan düğmeler ve kot montlarda bozulan fermuarlar tadilatla birlikte yenilenebilir. Mont fermuar değişimi ₺300'den başlar. Düğme ve çıtçıt işi için fotoğraf göndermeniz ve yenisinin neye benzemesi gerektiğini yazmanız yeterlidir."],
+  ["Fiyat ve teslim", "Kot ceket ve mont kol, boy kısaltma ve daraltma ₺200'den başlar; net fiyat fotoğrafa göre söylenir. Fiyatlara KDV dahil değildir. Normal işler aynı gün, acil işler 1–2 saatte teslim edilir; eve ve otele alım-teslim ücretsizdir."],
+];
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -81,22 +104,15 @@ const jsonLd = {
       description: "Kot Ceket Tadilatı Nasıl Yapılır?",
       step: [
         { '@type': 'HowToStep', name: 'Fotoğraf Gönderin', text: 'WhatsApp\'tan kot ceketin veya montun fotoğrafını gönderin, ön fiyat alın.' },
-        { '@type': 'HowToStep', name: 'Teslim Edin', text: 'Atölyeye getirin veya eve/otele ücretsiz alım-teslim isteyin.' },
-        { '@type': 'HowToStep', name: 'Ölçü ve Dikiş', text: 'Ölçü üzerinizde işaretlenir; kalın kot kumaşa uygun makine ve iplikle dikilir. Normal işte aynı gün, acilde 1–2 saat.' },
-        { '@type': 'HowToStep', name: 'Teslim Alın', text: 'Kontrol edilip teslim edilir.' },
+        { '@type': 'HowToStep', name: 'Teslim Edin', text: 'Ceketi getirin ya da evinizden veya otelinizden ücretsiz alalım.' },
+        { '@type': 'HowToStep', name: 'Ölçü ve Dikiş', text: 'Kol, boy ve beden ceket üzerinizdeyken işaretlenir; ilgili dikişler yeniden kurulur. Aynı gün; acilde 1–2 saat.' },
+        { '@type': 'HowToStep', name: 'Teslim Alın', text: 'Kol ve boy kontrol edilerek teslim edilir.' },
       ],
     },
     {
       '@type': 'FAQPage',
       '@id': `${PAGE_URL}#faq`,
-      mainEntity: [
-        { '@type': 'Question', name: 'Kot ceket kısaltma ve daraltma fiyatı ne kadar?', acceptedAnswer: { '@type': 'Answer', text: 'Kot ceket ve kot mont kol/boy kısaltma ve daraltma ₺200\'den başlar. Net fiyat fotoğrafla WhatsApp\'tan söylenir.' } },
-        { '@type': 'Question', name: 'Kot ceketin kolu kısaltılır mı?', acceptedAnswer: { '@type': 'Answer', text: 'Evet. Kol boyu ceket üzerinizdeyken işaretlenir; kot ceket ve kot mont kol kısaltma ₺200\'den başlar.' } },
-        { '@type': 'Question', name: 'Kot ceket veya mont daraltılır mı?', acceptedAnswer: { '@type': 'Answer', text: 'Evet. Beden ve kol daraltma yapıyoruz; kumaş payına göre yapılabilecek işlem fotoğraftan değerlendirilir.' } },
-        { '@type': 'Question', name: 'Orijinal dikiş görünümü korunur mu?', acceptedAnswer: { '@type': 'Answer', text: 'Kot ceket ve mont tadilatında orijinal dikiş görünümünü koruyacak şekilde çalışıyoruz. Fotoğraf gönderirseniz yapılabilecek işlemi söyleriz.' } },
-        { '@type': 'Question', name: 'Kot mont tadilatı ne kadar sürer?', acceptedAnswer: { '@type': 'Answer', text: 'Normal işler aynı gün teslim edilir; acil işler 1–2 saatte tamamlanır.' } },
-        { '@type': 'Question', name: 'Kot ürününü eve veya otele gelip alıyor musunuz?', acceptedAnswer: { '@type': 'Answer', text: 'Evet. Konyaaltı, Muratpaşa ve çevresinde eve ve otele alım-teslim ücretsizdir.' } },
-      ],
+      mainEntity: FAQ.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
     },
   ],
 };
@@ -151,7 +167,7 @@ export default function Page() {
                   <span className="price-icon" aria-hidden="true">🧥</span>
                   <div><div className="price-tr">Kot Ceket ve Mont</div></div>
                 </div>
-                <p className="price-desc">Kalın kot kumaşa uygun makine ve iplik.</p>
+                <p className="price-desc">Kol ağzı, etek ucu ve beden dikişleri ayrı ayrı değerlendirilir.</p>
                 <table className="price-table"><tbody>
                   <tr><td>Kol Kısaltma</td><td>₺200+</td></tr>
                   <tr><td>Boy Kısaltma</td><td>₺200+</td></tr>
@@ -160,7 +176,7 @@ export default function Page() {
               </div>
             </div>
             <p style={{ fontSize: '.76rem', color: 'rgba(255,255,255,.4)', marginTop: '1.4rem', fontStyle: 'italic' }}>
-              * Fiyatlar başlangıç fiyatıdır; kumaş kalınlığına ve işin kapsamına göre değişebilir.
+              * Fiyatlar başlangıç fiyatıdır; yapılacak işlem sayısına ve kumaşa göre değişebilir. KDV dahil değildir.
             </p>
           </div>
         </section>
@@ -173,10 +189,27 @@ export default function Page() {
             </div>
             <div className="howto-list">
               <div className="howto-item"><div className="howto-t">Fotoğraf Gönderin</div><div className="howto-d">WhatsApp'tan kot ceketin veya montun fotoğrafını gönderin, ön fiyat alın.</div></div>
-              <div className="howto-item"><div className="howto-t">Teslim Edin</div><div className="howto-d">Atölyeye getirin veya eve/otele ücretsiz alım-teslim isteyin.</div></div>
-              <div className="howto-item"><div className="howto-t">Ölçü ve Dikiş</div><div className="howto-d">Ölçü üzerinizde işaretlenir; kalın kot kumaşa uygun makine ve iplikle dikilir. Normal işte aynı gün, acilde 1–2 saat.</div></div>
-              <div className="howto-item"><div className="howto-t">Teslim Alın</div><div className="howto-d">Kontrol edilip teslim edilir.</div></div>
+              <div className="howto-item"><div className="howto-t">Teslim Edin</div><div className="howto-d">Ceketi getirin ya da evinizden veya otelinizden ücretsiz alalım.</div></div>
+              <div className="howto-item"><div className="howto-t">Ölçü ve Dikiş</div><div className="howto-d">Kol, boy ve beden ceket üzerinizdeyken işaretlenir; ilgili dikişler yeniden kurulur. Aynı gün; acilde 1–2 saat.</div></div>
+              <div className="howto-item"><div className="howto-t">Teslim Alın</div><div className="howto-d">Kol ve boy kontrol edilerek teslim edilir.</div></div>
             </div>
+          </div>
+        </section>
+
+        <section className="sec" aria-labelledby="guide-h">
+          <div className="ctr" style={{ maxWidth: 720 }}>
+            <div className="sec-head">
+              <span className="eyebrow">Rehber</span>
+              <h2 className="sec-h ff" id="guide-h">Kot Ceket ve Montta Kol, Boy ve Beden Ayarı</h2>
+            </div>
+            <div className="howto-list">
+              {GUIDE.map(([t, x]) => (
+                <div key={t} className="howto-item"><div className="howto-t">{t}</div><div className="howto-d">{x}</div></div>
+              ))}
+            </div>
+            <p style={{ marginTop: '1.2rem' }}>
+              Kot pantolon için <a href="/kot-pantolon-paca-kisaltma-antalya">kot paça kısaltma</a> ve <a href="/kot-pantolon-daraltma-antalya">kot pantolon daraltma</a>, kot etek için <a href="/kot-etek-kisaltma-daraltma-antalya">kot etek tadilatı</a>, kışlık kaban ve paltolar için <a href="/kaban-palto-tadilati-antalya">kaban ve palto tadilatı</a> sayfalarına bakabilirsiniz.
+            </p>
           </div>
         </section>
 
@@ -186,14 +219,7 @@ export default function Page() {
               <span className="eyebrow">SSS</span>
               <h2 className="sec-h ff" id="faq-h">Kot Ceket ve Mont Tadilatı Hakkında Sık Sorulan Sorular</h2>
             </div>
-            {[
-              ['Kot ceket kısaltma ve daraltma fiyatı ne kadar?', 'Kot ceket ve kot mont kol/boy kısaltma ve daraltma ₺200\'den başlar. Net fiyat fotoğrafla WhatsApp\'tan söylenir.'],
-              ['Kot ceketin kolu kısaltılır mı?', 'Evet. Kol boyu ceket üzerinizdeyken işaretlenir; kot ceket ve kot mont kol kısaltma ₺200\'den başlar.'],
-              ['Kot ceket veya mont daraltılır mı?', 'Evet. Beden ve kol daraltma yapıyoruz; kumaş payına göre yapılabilecek işlem fotoğraftan değerlendirilir.'],
-              ['Orijinal dikiş görünümü korunur mu?', 'Kot ceket ve mont tadilatında orijinal dikiş görünümünü koruyacak şekilde çalışıyoruz. Fotoğraf gönderirseniz yapılabilecek işlemi söyleriz.'],
-              ['Kot mont tadilatı ne kadar sürer?', 'Normal işler aynı gün teslim edilir; acil işler 1–2 saatte tamamlanır.'],
-              ['Kot ürününü eve veya otele gelip alıyor musunuz?', 'Evet. Konyaaltı, Muratpaşa ve çevresinde eve ve otele alım-teslim ücretsizdir.'],
-            ].map(([q, a]) => (
+            {FAQ.map(([q, a]) => (
               <div key={q} className="faq-item">
                 <div className="faq-q">{q}</div>
                 <div className="faq-a">{a}</div>
@@ -207,7 +233,7 @@ export default function Page() {
 
         <section className="cta-final" aria-label="İletişime geç">
           <h2 className="cta-h ff">Kot Ceketiniz mi Büyük?</h2>
-          <p className="cta-sub">Fotoğrafını gönderin, kısa sürede fiyat alın; normal işte aynı gün teslim.</p>
+          <p className="cta-sub">Ceketin önden ve kol fotoğrafını gönderin, tadilat fiyatını öğrenin.</p>
           <div className="cta-btns">
             <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-white">💬 WhatsApp'tan Yazın</a>
             <a href={MAPS} target="_blank" rel="noopener noreferrer" className="btn-outline-white">📍 Google Haritalar</a>

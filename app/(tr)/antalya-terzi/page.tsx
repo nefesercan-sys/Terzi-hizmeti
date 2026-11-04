@@ -22,7 +22,7 @@ const OG        = `${SITE}/terzi-can-hero.jpg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Antalya Terzi · Paça ₺200, Fermuar ₺300 · Her Gün Açık" },
+  title: { absolute: "Antalya Terzi · Paça ₺200'den, Fermuar ₺300'den · 08–23" },
   description: "Antalya'da bay bayan terzi: paça kısaltma ₺200, fermuar ₺300, bel daraltma ₺200. Eve ve otele ücretsiz servis. 08:00–23:00. ☎ " + PHONE,
   keywords: ['Antalya terzi', 'Konyaaltı terzi', 'Hurma terzi', 'Liman terzi', 'Uncalı terzi', 'Gürsu terzi', 'otele gelen terzi Antalya', 'acil terzi Antalya'],
   authors: [{ name: BIZ, url: SITE }],

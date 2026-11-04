@@ -15,7 +15,7 @@ const TODAY     = '2026-11-03';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Orijinal Kot Paça Yapımı ₺200 · Paça Kısaltma · Antalya" },
+  title: { absolute: "Orijinal Kot Paça Yapımı ₺200'den · Dikiş İzi Korunur" },
   description:
     "Kot paçayı kısaltırken orijinal paça görünümünü koruyoruz, ₺200'den. Boy ayakkabıyla işaretlenir. Normal iş aynı gün, acil 1–2 saat. ☎ " + PHONE,
   keywords: fitKeywords([
@@ -30,6 +30,28 @@ export const metadata: Metadata = {
     images: [{ url: `${SITE}/terzi-can-hero.jpg`, width: 1024, height: 1024, alt: "Orijinal Kot Paça Yapımı Antalya — Aynı Gün" }],
   },
 };
+
+// Görünen SSS ve FAQPage şeması tek diziden üretilir (tutarlılık).
+const FAQ: [string, string][] = [
+  ['Orijinal kot paça yapımı ne kadar?', 'Orijinal paça görünümünü koruyarak kot paça kısaltma ₺200\'den başlar. Net fiyat fotoğrafla WhatsApp\'tan söylenir.'],
+  ['Orijinal paça yapımı nedir?', 'Kot pantolon kısaltılırken paçanın orijinal paça görünümünü koruyacak şekilde dikilmesidir.'],
+  ['Boy nasıl belirlenir?', 'Boy, pantolonu ve giyeceğiniz ayakkabıyı giyerken üzerinizde işaretlenir. Uzaktan ise paçanın yakın fotoğrafını ve istediğiniz boyu WhatsApp\'tan gönderin.'],
+  ['Orijinal paça yapımı ne kadar sürer?', 'Orijinal paça işleri de çoğunlukla aynı gün biter; acilde 1–2 saat.'],
+  ['Kot pantolonu eve veya otele gelip alıyor musunuz?', 'Evet, kotu adresinizden ücretsiz alıp teslim ederiz; Konyaaltı, Muratpaşa ve çevresinde geçerlidir.'],
+  ["Orijinal paça yapımı sıradan kısaltmadan nasıl ayrılır?", "Sıradan kısaltmada paça kesilip yeniden dikilir; orijinal paça yapımında ise kıvrım ve dikiş görünümü fabrika paçasına yakın kalacak şekilde çalışılır. Sonuç, kotun kısaltıldığının daha az belli olmasıdır."],
+  ["Hangi kotlarda orijinal paça önerirsiniz?", "Paça detayı belirgin olan, ham ya da koyu denimli ve markalı kotlarda orijinal paça görünümünü korumayı öneririz. Sade paçalı kotlarda standart kısaltma yeterli olabilir."],
+  ["Çok kısaltma gerekirse orijinal görünüm korunur mu?", "Çok fazla kısaltma gerekirse orijinal izin bir kısmı kesilebilir. Bunu işlemden önce söyler, alternatifi birlikte seçeriz."],
+  ["Orijinal paça için fotoğrafta neye dikkat edilmeli?", "Paçanın yakın fotoğrafı gün ışığında, dikiş izi görünecek şekilde çekilmeli. Paçanın iç yüzünü ve kotu giydiğiniz bir boy fotoğrafını da eklemeniz işlemi önceden değerlendirmemizi kolaylaştırır."],
+];
+
+// Sayfaya özgü rehber içeriği (kot kümesinde sayfaları farklı niyetlere ayırır).
+const GUIDE: [string, string][] = [
+  ["Orijinal paça görünümü neyi ifade eder?", "Fabrikadan çıkan bir kotun paçasında kendine özgü bir kıvrım, dikiş sırası ve çoğu zaman solmuş bir kenar izi bulunur. Pantolon sade bir şekilde kesilip tekrar dikildiğinde bu görünüm kaybolur ve kot bir bakışta kısaltılmış gibi durur. Orijinal paça yapımında amaç, kısaltmadan sonra da paçanın ilk hâline yakın görünmesini sağlamaktır."],
+  ["Hangi kotlarda daha çok önemli?", "Paça detayı belirgin olan kotlarda, özellikle ham veya koyu denimde, solmuş kenar ve dikiş izi pantolonun karakterinin parçasıdır. Markalı ya da çok sevdiğiniz kotlarda bu detayı korumak ister, kısaltmanın anlaşılmamasını beklersiniz. Paça çok sade bir kotta ise standart kısaltma çoğu zaman yeterlidir."],
+  ["Fotoğrafı nasıl çekmelisiniz?", "Paçanın yakın bir fotoğrafını gün ışığında, dikiş izi görünecek şekilde çekin. Mümkünse paçanın iç yüzünü ve kotu giydiğiniz hâlde boy fotoğrafını da ekleyin. Bu görüntülerden paçanın nasıl yapıldığını ve orijinal görünümün korunup korunamayacağını önceden değerlendiririz."],
+  ["Her kotta aynen korunabilir mi?", "Kumaşın kalınlığına, paçadaki payın genişliğine ve ne kadar kısaltılacağına göre değişir. Çok fazla kısaltma gerekiyorsa orijinal izin bir kısmı kesilebilir; bunu işlemden önce size açıkça söyleriz ve alternatifi birlikte seçeriz. Net sonucu fotoğrafa bakmadan vaat etmeyiz."],
+  ["Fiyat ve teslim", "Orijinal paça görünümünü koruyarak kot paça kısaltma ₺200'den başlar. Net fiyat fotoğrafa göre söylenir ve fiyatlara KDV dahil değildir. Normal işler aynı gün, acil işler 1–2 saatte teslim edilir; eve ve otele alım-teslim ücretsizdir."],
+];
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -79,21 +101,15 @@ const jsonLd = {
       description: "Orijinal Paça Nasıl Yapılır?",
       step: [
         { '@type': 'HowToStep', name: 'Fotoğraf Gönderin', text: 'WhatsApp\'tan kot pantolonun paçasının yakın fotoğrafını ve boyunu gönderin.' },
-        { '@type': 'HowToStep', name: 'Teslim Edin', text: 'Atölyeye getirin veya eve/otele ücretsiz alım-teslim isteyin.' },
+        { '@type': 'HowToStep', name: 'Teslim Edin', text: 'Atölyeye uğrayın ya da ücretsiz servisimizi çağırın.' },
         { '@type': 'HowToStep', name: 'Ölçü ve Dikiş', text: 'Boy giyeceğiniz ayakkabıyla işaretlenir; paçanın orijinal görünümünü koruyacak şekilde dikilir. Normal işte aynı gün, acilde 1–2 saat.' },
-        { '@type': 'HowToStep', name: 'Teslim Alın', text: 'Kontrol edilip teslim edilir.' },
+        { '@type': 'HowToStep', name: 'Teslim Alın', text: 'Paça görünümü kontrol edilir ve teslim edilir.' },
       ],
     },
     {
       '@type': 'FAQPage',
       '@id': `${PAGE_URL}#faq`,
-      mainEntity: [
-        { '@type': 'Question', name: 'Orijinal kot paça yapımı ne kadar?', acceptedAnswer: { '@type': 'Answer', text: 'Orijinal paça görünümünü koruyarak kot paça kısaltma ₺200\'den başlar. Net fiyat fotoğrafla WhatsApp\'tan söylenir.' } },
-        { '@type': 'Question', name: 'Orijinal paça yapımı nedir?', acceptedAnswer: { '@type': 'Answer', text: 'Kot pantolon kısaltılırken paçanın orijinal paça görünümünü koruyacak şekilde dikilmesidir.' } },
-        { '@type': 'Question', name: 'Boy nasıl belirlenir?', acceptedAnswer: { '@type': 'Answer', text: 'Boy, pantolonu ve giyeceğiniz ayakkabıyı giyerken üzerinizde işaretlenir. Uzaktan ise paçanın yakın fotoğrafını ve istediğiniz boyu WhatsApp\'tan gönderin.' } },
-        { '@type': 'Question', name: 'Orijinal paça yapımı ne kadar sürer?', acceptedAnswer: { '@type': 'Answer', text: 'Normal işler aynı gün teslim edilir; acil işler 1–2 saatte tamamlanır.' } },
-        { '@type': 'Question', name: 'Kot pantolonu eve veya otele gelip alıyor musunuz?', acceptedAnswer: { '@type': 'Answer', text: 'Evet. Konyaaltı, Muratpaşa ve çevresinde eve ve otele alım-teslim ücretsizdir.' } },
-      ],
+      mainEntity: FAQ.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
     },
   ],
 };
@@ -125,7 +141,7 @@ export default function Page() {
             <h1 id="hero-h">
               Orijinal Kot Paça Yapımı <span className="accent">Antalya</span><br />₺200'den, Aynı Gün Teslim</h1>
             <p className="hero-desc">
-              Kot pantolonun paçasını kısaltırken orijinal paça görünümünü koruyoruz. Kalın kot kumaşa uygun makine ve iplik; eve ve otele ücretsiz servis.
+              Kot pantolonun paçasını kısaltırken orijinal paça görünümünü koruyoruz. Kalın denimde çalışırken paçanın karakterini göz önünde tutuyoruz; eve ve otele ücretsiz servis.
             </p>
             <p className="hero-desc"><strong>Kısa cevap:</strong> Orijinal paça görünümünü koruyarak kot paça kısaltma ₺200'den başlar; boy ayakkabıyla işaretlenir, normal işler aynı gün teslim edilir.</p>
             <div className="hero-btns">
@@ -148,14 +164,14 @@ export default function Page() {
                   <span className="price-icon" aria-hidden="true">🧵</span>
                   <div><div className="price-tr">Orijinal Paça</div></div>
                 </div>
-                <p className="price-desc">Kalın kot kumaşa uygun makine ve iplik.</p>
+                <p className="price-desc">Paçanın kıvrımı ve dikiş izi göz önünde tutularak kısaltılır.</p>
                 <table className="price-table"><tbody>
                   <tr><td>Orijinal Paça ile Kısaltma</td><td>₺200+</td></tr>
                 </tbody></table>
               </div>
             </div>
             <p style={{ fontSize: '.76rem', color: 'rgba(255,255,255,.4)', marginTop: '1.4rem', fontStyle: 'italic' }}>
-              * Fiyatlar başlangıç fiyatıdır; kumaş kalınlığına ve işin kapsamına göre değişebilir.
+              * Fiyat başlangıç fiyatıdır; paçanın yapısına ve ne kadar kısaltılacağına göre değişebilir. KDV dahil değildir.
             </p>
           </div>
         </section>
@@ -168,10 +184,27 @@ export default function Page() {
             </div>
             <div className="howto-list">
               <div className="howto-item"><div className="howto-t">Fotoğraf Gönderin</div><div className="howto-d">WhatsApp'tan kot pantolonun paçasının yakın fotoğrafını ve boyunu gönderin.</div></div>
-              <div className="howto-item"><div className="howto-t">Teslim Edin</div><div className="howto-d">Atölyeye getirin veya eve/otele ücretsiz alım-teslim isteyin.</div></div>
+              <div className="howto-item"><div className="howto-t">Teslim Edin</div><div className="howto-d">Atölyeye uğrayın ya da ücretsiz servisimizi çağırın.</div></div>
               <div className="howto-item"><div className="howto-t">Ölçü ve Dikiş</div><div className="howto-d">Boy giyeceğiniz ayakkabıyla işaretlenir; paçanın orijinal görünümünü koruyacak şekilde dikilir. Normal işte aynı gün, acilde 1–2 saat.</div></div>
-              <div className="howto-item"><div className="howto-t">Teslim Alın</div><div className="howto-d">Kontrol edilip teslim edilir.</div></div>
+              <div className="howto-item"><div className="howto-t">Teslim Alın</div><div className="howto-d">Paça görünümü kontrol edilir ve teslim edilir.</div></div>
             </div>
+          </div>
+        </section>
+
+        <section className="sec" aria-labelledby="guide-h">
+          <div className="ctr" style={{ maxWidth: 720 }}>
+            <div className="sec-head">
+              <span className="eyebrow">Rehber</span>
+              <h2 className="sec-h ff" id="guide-h">Orijinal Paça Görünümü Nedir, Nasıl Korunur?</h2>
+            </div>
+            <div className="howto-list">
+              {GUIDE.map(([t, x]) => (
+                <div key={t} className="howto-item"><div className="howto-t">{t}</div><div className="howto-d">{x}</div></div>
+              ))}
+            </div>
+            <p style={{ marginTop: '1.2rem' }}>
+              Standart kısaltma yeterliyse <a href="/kot-pantolon-paca-kisaltma-antalya">kot pantolon paça kısaltma</a>, bacak ve bel bolsa <a href="/kot-pantolon-daraltma-antalya">kot pantolon daraltma</a>, kot eteğin etek ucu için <a href="/kot-etek-kisaltma-daraltma-antalya">kot etek kısaltma</a> sayfalarına bakın.
+            </p>
           </div>
         </section>
 
@@ -181,13 +214,7 @@ export default function Page() {
               <span className="eyebrow">SSS</span>
               <h2 className="sec-h ff" id="faq-h">Orijinal Kot Paça Hakkında Sık Sorulan Sorular</h2>
             </div>
-            {[
-              ['Orijinal kot paça yapımı ne kadar?', 'Orijinal paça görünümünü koruyarak kot paça kısaltma ₺200\'den başlar. Net fiyat fotoğrafla WhatsApp\'tan söylenir.'],
-              ['Orijinal paça yapımı nedir?', 'Kot pantolon kısaltılırken paçanın orijinal paça görünümünü koruyacak şekilde dikilmesidir.'],
-              ['Boy nasıl belirlenir?', 'Boy, pantolonu ve giyeceğiniz ayakkabıyı giyerken üzerinizde işaretlenir. Uzaktan ise paçanın yakın fotoğrafını ve istediğiniz boyu WhatsApp\'tan gönderin.'],
-              ['Orijinal paça yapımı ne kadar sürer?', 'Normal işler aynı gün teslim edilir; acil işler 1–2 saatte tamamlanır.'],
-              ['Kot pantolonu eve veya otele gelip alıyor musunuz?', 'Evet. Konyaaltı, Muratpaşa ve çevresinde eve ve otele alım-teslim ücretsizdir.'],
-            ].map(([q, a]) => (
+            {FAQ.map(([q, a]) => (
               <div key={q} className="faq-item">
                 <div className="faq-q">{q}</div>
                 <div className="faq-a">{a}</div>
@@ -201,7 +228,7 @@ export default function Page() {
 
         <section className="cta-final" aria-label="İletişime geç">
           <h2 className="cta-h ff">Paçanın Orijinal Kalmasını mı İstiyorsunuz?</h2>
-          <p className="cta-sub">Fotoğrafını gönderin, kısa sürede fiyat alın; normal işte aynı gün teslim.</p>
+          <p className="cta-sub">Paçanın yakın fotoğrafını gönderin, orijinal görünümün korunup korunamayacağını söyleyelim.</p>
           <div className="cta-btns">
             <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-white">💬 WhatsApp'tan Yazın</a>
             <a href={MAPS} target="_blank" rel="noopener noreferrer" className="btn-outline-white">📍 Google Haritalar</a>

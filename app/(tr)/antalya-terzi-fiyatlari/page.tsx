@@ -21,7 +21,7 @@ const OG        = `${SITE}/terzi-can-hero.jpg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Antalya Terzi Fiyatları 2026 · Paça ₺200, Fermuar ₺300" },
+  title: { absolute: "Terzi Fiyatları 2026 · Paça ₺200'den, Fermuar ₺300'den" },
   description:
     "Antalya terzi fiyatları 2026: paça ₺200, bel ₺200, fermuar ₺300, abiye-gelinlik tadilatı fotoğrafa veya işin detayına göre; dikim fotoğrafa ve modele göre. ☎ " + PHONE,
   keywords: fitKeywords([

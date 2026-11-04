@@ -21,7 +21,7 @@ const TODAY     = '2026-10-04';
 // sayfaları genel sayfalara göre daha hızlı ve yüksek sıralar.
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Fermuar Değişimi Fiyatları ₺300 · Aynı Gün · Konyaaltı" },
+  title: { absolute: "Fermuar Değişimi ₺300'den · Aynı Gün · Konyaaltı" },
   description:
     "Pantolon, mont, ceket ve çanta fermuarı ₺300'den. Normal iş aynı gün, acil 1–2 saat. Eve ve otele ücretsiz servis. ☎ " + PHONE,
   keywords: fitKeywords([
@@ -41,6 +41,18 @@ export const metadata: Metadata = {
     images: [{ url: `${SITE}/terzi-can-hero.jpg`, width: 1024, height: 1024, alt: 'Fermuar Tamiri Konyaaltı' }],
   },
 };
+
+// Görünen SSS ve FAQPage şeması tek diziden üretilir (tutarlılık).
+const FAQ: [string, string][] = [
+    ['Konyaaltı\'nda fermuar tamiri ne kadar sürer?', 'Normal fermuar tamiri ve değişimi aynı gün teslim edilir; acil işler 1–2 saatte tamamlanır.'],
+    ['Fermuar değişimi fiyatı ne kadar?', 'Pantolon/kot fermuarı ₺300\'den, mont/ceket fermuarı ₺300\'den, çanta fermuarı ₺300\'den başlar.'],
+    ['Çanta fermuarı tamiri yapıyor musunuz, fiyatı ne kadar?', 'Evet. Çanta fermuarı değişimi ₺300\'den başlar; sıkışan fermuarın onarımı fotoğrafa göre netleşir. Çantanın fotoğrafını WhatsApp\'tan gönderin, net fiyat ve süreyi söyleyelim. Normal iş aynı gün, acil iş 1–2 saatte teslim edilir.'],
+    ['Her tür fermuarı değiştiriyor musunuz?', 'Evet — metal, plastik, sarmal (YKK dahil) her tip fermuarı değiştiriyoruz. Su geçirmez montlar için özel fermuar da temin ediyoruz.'],
+    ['Fermuar sıkıştı, kırılmadı — tamir edilebilir mi?', 'Evet, çoğu zaman sıkışan fermuar değişim gerektirmeden onarılabilir. Fotoğraf gönderirseniz değerlendirip bilgi veririz.'],
+    ['Mont fermuarı değiştirme fiyatı ne kadar?', 'Mont ve ceket fermuarı değişimi ₺300\'den başlar. Net fiyat fermuarın boyuna ve türüne göre fotoğrafla söylenir.'],
+    ['Fermuar değişimi ne kadar, kaç TL?', 'Fermuar değişimi ₺300\'den başlar: pantolon, kot, mont, ceket ve çanta fermuarı için geçerli başlangıç fiyatıdır.'],
+    ['Terzide fermuar dikimi ne kadar sürer ve ne kadar tutar?', 'Fermuar dikimi ve değişimi ₺300\'den başlar; normal işlemler aynı gün teslim edilir, acil işler 1–2 saat.'],
+];
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -104,16 +116,7 @@ const jsonLd = {
     {
       '@type': 'FAQPage',
       '@id': `${PAGE_URL}#faq`,
-      mainEntity: [
-        { '@type': 'Question', name: 'Konyaaltı\'nda fermuar tamiri ne kadar sürer?', acceptedAnswer: { '@type': 'Answer', text: 'Normal fermuar tamiri ve değişimi aynı gün teslim edilir; acil işler 1–2 saatte tamamlanır.' } },
-        { '@type': 'Question', name: 'Fermuar değişimi fiyatı ne kadar?', acceptedAnswer: { '@type': 'Answer', text: 'Pantolon/kot fermuarı ₺300\'den, mont/ceket fermuarı ₺300\'den, çanta fermuarı ₺300\'den başlar.' } },
-        { '@type': 'Question', name: 'Çanta fermuarı tamiri yapıyor musunuz, fiyatı ne kadar?', acceptedAnswer: { '@type': 'Answer', text: 'Evet. Çanta fermuarı değişimi ₺300\'den başlar; sıkışan fermuarın onarımı fotoğrafa göre netleşir. Çantanın fotoğrafını WhatsApp\'tan gönderin, net fiyat ve süreyi söyleyelim. Normal iş aynı gün, acil iş 1–2 saatte teslim edilir.' } },
-        { '@type': 'Question', name: 'Her tür fermuarı değiştiriyor musunuz?', acceptedAnswer: { '@type': 'Answer', text: 'Evet — metal, plastik, sarmal (YKK dahil) her tip fermuarı değiştiriyoruz. Su geçirmez montlar için özel fermuar da temin ediyoruz.' } },
-        { '@type': 'Question', name: 'Fermuar sıkıştı, kırılmadı — tamir edilebilir mi?', acceptedAnswer: { '@type': 'Answer', text: 'Evet, çoğu zaman sıkışan fermuar değişim gerektirmeden onarılabilir. Fotoğraf gönderirseniz değerlendirip size bilgi veririz.' } },
-        { '@type': 'Question', name: 'Mont fermuarı değiştirme fiyatı ne kadar?', acceptedAnswer: { '@type': 'Answer', text: 'Mont ve ceket fermuarı değişimi ₺300\'den başlar. Net fiyat fermuarın boyuna ve türüne göre fotoğrafla söylenir.' } },
-        { '@type': 'Question', name: 'Fermuar değişimi ne kadar, kaç TL?', acceptedAnswer: { '@type': 'Answer', text: 'Fermuar değişimi ₺300\'den başlar: pantolon, kot, mont, ceket ve çanta fermuarı için geçerli başlangıç fiyatıdır.' } },
-        { '@type': 'Question', name: 'Terzide fermuar dikimi ne kadar sürer ve ne kadar tutar?', acceptedAnswer: { '@type': 'Answer', text: 'Fermuar dikimi ve değişimi ₺300\'den başlar; normal işlemler aynı gün teslim edilir, acil işler 1–2 saat.' } },
-      ],
+      mainEntity: FAQ.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
     },
   ],
 };
@@ -247,16 +250,7 @@ export default function FermuarTamiriPage() {
               <span className="eyebrow">SSS</span>
               <h2 className="sec-h ff" id="faq-h">Fermuar Tamiri Hakkında Sık Sorulan Sorular</h2>
             </div>
-            {[
-              ['Konyaaltı\'nda fermuar tamiri ne kadar sürer?', 'Normal fermuar tamiri ve değişimi aynı gün teslim edilir; acil işler 1–2 saatte tamamlanır.'],
-              ['Fermuar değişimi fiyatı ne kadar?', 'Pantolon/kot fermuarı ₺300\'den, mont/ceket fermuarı ₺300\'den, çanta fermuarı ₺300\'den başlar.'],
-              ['Çanta fermuarı tamiri yapıyor musunuz, fiyatı ne kadar?', 'Evet. Çanta fermuarı değişimi ₺300\'den başlar; sıkışan fermuarın onarımı fotoğrafa göre netleşir. Çantanın fotoğrafını WhatsApp\'tan gönderin, net fiyat ve süreyi söyleyelim. Normal iş aynı gün, acil iş 1–2 saatte teslim edilir.'],
-              ['Her tür fermuarı değiştiriyor musunuz?', 'Evet — metal, plastik, sarmal (YKK dahil) her tip fermuarı değiştiriyoruz. Su geçirmez montlar için özel fermuar da temin ediyoruz.'],
-              ['Fermuar sıkıştı, kırılmadı — tamir edilebilir mi?', 'Evet, çoğu zaman sıkışan fermuar değişim gerektirmeden onarılabilir. Fotoğraf gönderirseniz değerlendirip bilgi veririz.'],
-              ['Mont fermuarı değiştirme fiyatı ne kadar?', 'Mont ve ceket fermuarı değişimi ₺300\'den başlar. Net fiyat fermuarın boyuna ve türüne göre fotoğrafla söylenir.'],
-              ['Fermuar değişimi ne kadar, kaç TL?', 'Fermuar değişimi ₺300\'den başlar: pantolon, kot, mont, ceket ve çanta fermuarı için geçerli başlangıç fiyatıdır.'],
-              ['Terzide fermuar dikimi ne kadar sürer ve ne kadar tutar?', 'Fermuar dikimi ve değişimi ₺300\'den başlar; normal işlemler aynı gün teslim edilir, acil işler 1–2 saat.'],
-            ].map(([q, a]) => (
+            {FAQ.map(([q, a]) => (
               <div key={q} className="faq-item">
                 <div className="faq-q">{q}</div>
                 <div className="faq-a">{a}</div>

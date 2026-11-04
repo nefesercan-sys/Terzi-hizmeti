@@ -26,7 +26,7 @@ export const LAST_UPDATE = '2026-11-04';
 // Türkçe sayfalar yalnızca atölyeye (Konyaaltı/Hurma) yakın bölgelerde aramaya açık; uzak bölgelerin Türkçe sayfaları
 // noindex olur, sitemap'ten, iç linklerden ve hreflang'dan çıkar. Yabancı dil (EN/RU/DE) sayfaları TÜM bölgelerde açıktır.
 // Bir bölgeyi Türkçede açmak/kapatmak için bu listeyi değiştirmek yeterli.
-export const TR_NEAR_SLUGS = ['konyaalti', 'hurma', 'liman', 'gursu', 'uluc', 'altinkum', 'ogretmenevleri', 'arapsuyu', 'siteler', 'uncali', 'sarisu', 'meltem', 'muratpasa', 'fener', 'sirinyali', 'toros', 'manavgat', 'serik'];
+export const TR_NEAR_SLUGS = ['konyaalti', 'hurma', 'liman', 'gursu', 'uluc', 'altinkum', 'ogretmenevleri', 'arapsuyu', 'siteler', 'uncali', 'sarisu', 'meltem', 'muratpasa', 'fener', 'sirinyali', 'toros', 'manavgat', 'serik', 'aksu', 'beldibi'];
 export const isFreeService = (_slug: string): boolean => true; // Eve ve otele ücretsiz servis: her bölgede (sahibin kararı)
 export const isTrNear = (slug: string): boolean => TR_NEAR_SLUGS.includes(slug);
 // ── Türkçe yakın bölge sayfaları için ek anahtar kelime katmanı ─────────────────────────────

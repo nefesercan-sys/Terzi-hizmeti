@@ -24,8 +24,8 @@ export const KARGO_UPDATED = '2026-11-06';
 
 export const KARGO: Record<KLang, KargoCopy> = {
   tr: {
-    slug: 'foto-ile-terzi-kargoyla-antalya',
-    title: 'Online Terzi Servisi Antalya: Fotoğrafla Fiyat, Otele-Eve ve Kargoyla',
+    slug: 'online-terzi-servisi',
+    title: 'Online Terzi Servisi: Elbise Tamiri, Tadilat, Dikim, Kargoyla',
     desc: "Antalya'da otelinize ve evinize ücretsiz alım-teslim, fotoğraftan fiyat. Antalya içi ve yurt dışından kargoyla da olur. Paça ₺200'den.",
     h1: 'Online Terzi Servisi: Antalya\'da Otelinize ve Evinize Gelir, Kargoyla da Olur',
     lead: "Konyaaltı'ndaki atölyemiz 2006'dan beri her gün 08:00–23:00 açık. Kıyafetin fotoğrafını WhatsApp'tan gönderin, fiyatı söyleyelim; Antalya'da eve ve otele ücretsiz alım-teslim yapıyoruz. Kargoyla göndermek isteyenler için ikinci bir yol da var: Antalya içi ve yurt dışı.",
@@ -74,8 +74,8 @@ export const KARGO: Record<KLang, KargoCopy> = {
     cta: 'WhatsApp: fotoğraf at, fiyat al', back: '← Terzi Can, Antalya', faqTitle: 'Sık sorulan sorular', crumb: 'Online terzi servisi', hubTitle: 'Diğer sayfalar', locale: 'tr_TR', dir: 'ltr',
   },
   en: {
-    slug: 'photo-quote-tailor-courier-antalya',
-    title: 'Online Tailor Service in Antalya: Photo Quote, Hotel Pick-up, Courier',
+    slug: 'online-tailor-antalya',
+    title: 'Online Tailor Service Antalya: Repair & Alterations',
     desc: 'Tailor in Antalya: price from a photo, free pick-up and delivery to hotel or home. Courier service for Antalya and from abroad. Hemming from ₺200.',
     h1: 'Online Tailor Service in Antalya: We Come to Your Hotel or Home, and Courier Works Too',
     lead: 'Our Konyaaltı workshop has been open since 2006, every day 08:00–23:00. Send a photo of the garment on WhatsApp and we quote the price; pick-up and delivery to your hotel or home in Antalya is free. A second route is available if you prefer to ship: courier within Antalya and from abroad.',
@@ -123,8 +123,8 @@ export const KARGO: Record<KLang, KargoCopy> = {
     cta: 'WhatsApp: send a photo, get a price', back: '← Terzi Can, Antalya', faqTitle: 'Frequently asked questions', crumb: 'Online tailor service', hubTitle: 'More pages', locale: 'en_US', dir: 'ltr',
   },
   ru: {
-    slug: 'portnoy-po-foto-antalya-dostavka',
-    title: 'Онлайн-портной в Анталье: цена по фото, в отель и с доставкой',
+    slug: 'onlayn-portnoy-antalya',
+    title: 'Онлайн-портной в Анталии: ремонт и подгонка одежды',
     desc: 'Портной в Анталье: цена по фото, бесплатный забор и доставка в отель и домой. Услуга с отправкой по Анталье и из-за границы. Подшить от ₺200.',
     h1: 'Онлайн-портной в Анталье: приедем в отель или домой, можно и с отправкой',
     lead: 'Наша мастерская в Коньяалты работает с 2006 года, ежедневно с 08:00 до 23:00. Пришлите фото вещи в WhatsApp, мы назовём цену; в Анталье мы бесплатно заберём и привезём вещь в отель или домой. Есть и второй путь, если удобнее отправить вещь: по Анталье и из-за границы.',
@@ -172,8 +172,8 @@ export const KARGO: Record<KLang, KargoCopy> = {
     cta: 'WhatsApp: пришлите фото, узнайте цену', back: '← Terzi Can, Анталья', faqTitle: 'Частые вопросы', crumb: 'Цена по фото и доставка', hubTitle: 'Другие страницы', locale: 'ru_RU', dir: 'ltr',
   },
   de: {
-    slug: 'schneider-per-foto-antalya-paket',
-    title: 'Online-Schneiderservice Antalya: Preis per Foto, Hotel und Paket',
+    slug: 'online-schneider-antalya',
+    title: 'Online-Schneider Antalya: Reparatur & Änderungen',
     desc: 'Schneider in Antalya: Preis per Foto, kostenlose Abholung und Lieferung ins Hotel oder nach Hause. Paketservice in Antalya und aus dem Ausland. Kürzen ab ₺200.',
     h1: 'Online-Schneiderservice in Antalya: Wir kommen ins Hotel oder nach Hause, Paket geht auch',
     lead: 'Unsere Werkstatt in Konyaaltı ist seit 2006 jeden Tag von 08:00 bis 23:00 geöffnet. Senden Sie ein Foto per WhatsApp, wir nennen den Preis; Abholung und Lieferung ins Hotel oder nach Hause in Antalya sind kostenlos. Als zweite Möglichkeit gibt es den Versand per Paketdienst: innerhalb von Antalya und aus dem Ausland.',
@@ -221,8 +221,8 @@ export const KARGO: Record<KLang, KargoCopy> = {
     cta: 'WhatsApp: Foto senden, Preis erfahren', back: '← Terzi Can, Antalya', faqTitle: 'Häufige Fragen', crumb: 'Preis per Foto und Paket', hubTitle: 'Weitere Seiten', locale: 'de_DE', dir: 'ltr',
   },
   es: {
-    slug: 'sastre-por-foto-antalya-mensajeria',
-    title: 'Servicio de sastrería online en Antalya: precio por foto, hotel y mensajería',
+    slug: 'sastre-online-antalya',
+    title: 'Sastre online en Antalya: arreglos y ajustes de ropa',
     desc: 'Sastre en Antalya: precio por foto, recogida y entrega gratis en su hotel o casa. Mensajería dentro de Antalya y desde el extranjero. Bajos desde ₺200.',
     h1: 'Sastrería online en Antalya: vamos a su hotel o casa, y también por mensajería',
     lead: 'Nuestro taller de Konyaaltı abre desde 2006, cada día de 08:00 a 23:00. Envíe una foto de la prenda por WhatsApp y le decimos el precio; la recogida y entrega en su hotel o casa en Antalya es gratuita. Hay una segunda vía si prefiere enviarla: mensajería dentro de Antalya y desde el extranjero.',
@@ -270,8 +270,8 @@ export const KARGO: Record<KLang, KargoCopy> = {
     cta: 'Enviar foto por WhatsApp y pedir precio', back: '← Terzi Can, Antalya', faqTitle: 'Preguntas frecuentes', crumb: 'Precio por foto y mensajería', hubTitle: 'Más páginas', locale: 'es_ES', dir: 'ltr',
   },
   fr: {
-    slug: 'couturier-par-photo-antalya-colis',
-    title: 'Service de couture en ligne à Antalya : prix par photo, hôtel et colis',
+    slug: 'couturier-en-ligne-antalya',
+    title: 'Couturier en ligne à Antalya : retouches et réparations',
     desc: 'Couturier à Antalya : prix par photo, collecte et livraison gratuites à l’hôtel ou à domicile. Envoi par colis dans Antalya et depuis l’étranger. Ourlet dès ₺200.',
     h1: 'Couture en ligne à Antalya : nous venons à votre hôtel ou chez vous, et le colis est possible',
     lead: 'Notre atelier de Konyaaltı est ouvert depuis 2006, tous les jours de 08:00 à 23:00. Envoyez une photo du vêtement sur WhatsApp, nous donnons le prix ; la collecte et la livraison à l’hôtel ou à domicile à Antalya sont gratuites. Une seconde voie existe si vous préférez expédier : colis dans Antalya et depuis l’étranger.',
@@ -319,8 +319,8 @@ export const KARGO: Record<KLang, KargoCopy> = {
     cta: 'WhatsApp : envoyer une photo, avoir un prix', back: '← Terzi Can, Antalya', faqTitle: 'Questions fréquentes', crumb: 'Prix par photo et colis', hubTitle: 'Autres pages', locale: 'fr_FR', dir: 'ltr',
   },
   pl: {
-    slug: 'krawiec-antalya-wycena-ze-zdjecia',
-    title: 'Krawiec online w Antalyi: wycena ze zdjęcia, hotel i kurier',
+    slug: 'krawiec-online-antalya',
+    title: 'Krawiec online w Antalyi: poprawki i naprawa ubrań',
     desc: 'Krawiec w Antalyi: cena ze zdjęcia, bezpłatny odbiór i dostawa do hotelu lub domu. Kurier w Antalyi i z zagranicy. Skracanie od ₺200.',
     h1: 'Krawiec online w Antalyi: przyjeżdżamy do hotelu lub domu, możliwa też wysyłka kurierem',
     lead: 'Nasza pracownia w Konyaaltı działa od 2006 roku, codziennie od 08:00 do 23:00. Wyślij zdjęcie ubrania na WhatsApp, podamy cenę; odbiór i dostawa do hotelu lub domu w Antalyi są bezpłatne. Jest też druga droga, jeśli wolisz wysłać ubranie: kurier w Antalyi i z zagranicy.',
@@ -368,8 +368,8 @@ export const KARGO: Record<KLang, KargoCopy> = {
     cta: 'WhatsApp: wyślij zdjęcie, poznaj cenę', back: '← Terzi Can, Antalya', faqTitle: 'Najczęstsze pytania', crumb: 'Cena ze zdjęcia i kurier', hubTitle: 'Inne strony', locale: 'pl_PL', dir: 'ltr',
   },
   uk: {
-    slug: 'kravets-antaliya-tsina-za-foto',
-    title: 'Онлайн-кравець в Анталії: ціна за фото, готель і кур’єр',
+    slug: 'onlayn-kravets-antaliya',
+    title: 'Онлайн-кравець в Анталії: ремонт і підгонка одягу',
     desc: 'Кравець в Анталії: ціна за фото, безкоштовний забір і доставка в готель чи додому. Кур’єр по Анталії та з-за кордону. Підшити від ₺200.',
     h1: 'Онлайн-кравець в Анталії: приїдемо в готель або додому, можна й кур’єром',
     lead: 'Наша майстерня в Коньяалти працює з 2006 року, щодня з 08:00 до 23:00. Надішліть фото речі у WhatsApp, ми назвемо ціну; в Анталії забір і доставка в готель чи додому безкоштовні. Є й другий шлях, якщо зручніше відправити річ: кур’єром по Анталії та з-за кордону.',
@@ -417,8 +417,8 @@ export const KARGO: Record<KLang, KargoCopy> = {
     cta: 'WhatsApp: надішліть фото, дізнайтеся ціну', back: '← Terzi Can, Анталія', faqTitle: 'Часті запитання', crumb: 'Ціна за фото і кур’єр', hubTitle: 'Інші сторінки', locale: 'uk_UA', dir: 'ltr',
   },
   nl: {
-    slug: 'kleermaker-antalya-prijs-per-foto',
-    title: 'Online kleermaker in Antalya: prijs per foto, hotel en koerier',
+    slug: 'online-kleermaker-antalya',
+    title: 'Online kleermaker Antalya: reparatie en vermaakwerk',
     desc: 'Kleermaker in Antalya: prijs per foto, gratis ophalen en brengen naar hotel of huis. Koerier binnen Antalya en vanuit het buitenland. Inkorten vanaf ₺200.',
     h1: 'Online kleermaker in Antalya: wij komen naar uw hotel of huis, koerier kan ook',
     lead: 'Ons atelier in Konyaaltı is sinds 2006 elke dag open van 08:00 tot 23:00. Stuur een foto van het kledingstuk via WhatsApp en wij noemen de prijs; ophalen en brengen naar uw hotel of huis in Antalya is gratis. Er is een tweede weg als u liever opstuurt: koerier binnen Antalya en vanuit het buitenland.',
@@ -466,8 +466,8 @@ export const KARGO: Record<KLang, KargoCopy> = {
     cta: 'WhatsApp: stuur een foto, krijg een prijs', back: '← Terzi Can, Antalya', faqTitle: 'Veelgestelde vragen', crumb: 'Prijs per foto en koerier', hubTitle: 'Meer pagina’s', locale: 'nl_NL', dir: 'ltr',
   },
   ar: {
-    slug: 'khayyat-antalya-bil-sura-wal-shahn',
-    title: 'خدمة خيّاط أونلاين في أنطاليا: السعر بالصورة والفندق والشحن',
+    slug: 'khayyat-online-antalya',
+    title: 'خياط أونلاين في أنطاليا: تصليح وتعديل الملابس',
     desc: 'خيّاط في أنطاليا: السعر من الصورة، استلام وتسليم مجاني إلى الفندق أو المنزل. الشحن داخل أنطاليا ومن خارج تركيا. تقصير من ₺200.',
     h1: 'خيّاط أونلاين في أنطاليا: نصل إلى فندقك أو منزلك، والشحن متاح أيضًا',
     lead: 'ورشتنا في كونيالتي مفتوحة منذ 2006 كل يوم من 08:00 إلى 23:00. أرسل صورة القطعة عبر واتساب فنخبرك بالسعر؛ والاستلام والتسليم إلى الفندق أو المنزل في أنطاليا مجاني. وهناك طريق ثانٍ إن فضّلت الإرسال: الشحن داخل أنطاليا ومن خارج تركيا.',

@@ -12,6 +12,7 @@ import { hreflangFiyat, hreflangIletisim, hreflangSvc } from '@/lib/hreflang';
 import { iletisimUrl } from '@/lib/intl-iletisim';
 import { HIZMET_IDS, hizmetUrl, hizmetLanguages, sixForService } from '@/lib/intl-hizmet';
 import { TOPIC_IDS, topicUrl, topicLanguages, sixAlt } from '@/lib/intl-topics';
+import { KLANGS, kargoUrl, kargoLanguages } from '@/lib/kargo-terzi';
 import { SSS_PATH, SSS_UPDATED, sssHreflang } from '@/lib/sss-merkezi';
 import { PLANGS, promoUrl, promoAlternates, PROMO_LAST_UPDATE, PROMO_FOTOLAR } from '@/lib/promosyon-tekstil';
 
@@ -197,7 +198,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const sssSayfalari: MetadataRoute.Sitemap = (Object.keys(SSS_PATH) as (keyof typeof SSS_PATH)[]).map((l) => ({
     url: `${SITE}${SSS_PATH[l]}`, lastModified: new Date(SSS_UPDATED), changeFrequency: 'monthly' as const, priority: 0.8, alternates: { languages: sssHreflang() },
   }));
-  const hepsi = [...sabitSayfalar, ...sssSayfalari, ...otelSayfalari, ...seoSayfalari, ...turistSayfalari, ...iletisimSayfalari, ...intlSayfalari, ...zoneSayfalari, ...svcSayfalari, ...fiyatSayfalari, ...iletSayfalari, ...konuSayfalari, ...hizmetSayfalari, ...uretimSayfalari, ...promoSayfalari];
+  const kargoSayfalari: MetadataRoute.Sitemap = KLANGS.map((l) => ({
+    url: `${SITE}${kargoUrl(l)}`, lastModified: new Date(LAST_UPDATE), changeFrequency: 'monthly' as const, priority: 0.8, alternates: { languages: kargoLanguages() },
+  }));
+  const hepsi = [...sabitSayfalar, ...sssSayfalari, ...kargoSayfalari, ...otelSayfalari, ...seoSayfalari, ...turistSayfalari, ...iletisimSayfalari, ...intlSayfalari, ...zoneSayfalari, ...svcSayfalari, ...fiyatSayfalari, ...iletSayfalari, ...konuSayfalari, ...hizmetSayfalari, ...uretimSayfalari, ...promoSayfalari];
   for (const e of hepsi) {
     const ilk = gorulen.get(e.url);
     if (!ilk) gorulen.set(e.url, e);

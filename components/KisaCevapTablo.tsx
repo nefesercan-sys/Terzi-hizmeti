@@ -1,6 +1,8 @@
 // components/KisaCevapTablo.tsx — Fiyat sayfalarında "kısa cevap + işlem / başlangıç fiyatı / süre" tablosu (TR/EN/RU/DE).
 // Yapay zeka asistanlarının ve sesli aramanın alıntılaması için sade tablo. Sahip kuralları: lib/sss-merkezi.ts başlığındaki gibi.
 import { SSS_META } from '@/lib/sss-merkezi';
+import { kargoUrl } from '@/lib/kargo-terzi';
+const ONLINE_LABEL = { tr: 'Online terzi servisi: fotoğrafla fiyat, kargoyla hizmet', en: 'Online tailor service: photo quote and courier option', ru: 'Онлайн-портной: цена по фото и отправка', de: 'Online-Schneiderservice: Preis per Foto und Paket' } as const;
 
 type L = 'tr' | 'en' | 'ru' | 'de';
 const T: Record<L, { h: string; cols: [string, string, string]; rows: [string, string, string][]; vat: string }> = {
@@ -75,6 +77,7 @@ export default function KisaCevapTablo({ lang }: { lang: string }) {
         </table>
       </div>
       <p style={{ fontSize: 14, margin: '8px 0 0' }}>{t.vat}</p>
+      <p style={{ fontSize: 14, margin: '6px 0 0' }}><a href={kargoUrl(l)} style={{ color: 'inherit', textDecoration: 'underline', fontWeight: 600 }}>{ONLINE_LABEL[l]}</a></p>
     </section>
   );
 }

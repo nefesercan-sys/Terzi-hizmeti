@@ -484,7 +484,7 @@ export default function AnaveraTekstilSayfasi({ lang }: { lang: AnaveraLang }) {
           </h1>
           <p style={{ color: '#CBD5E1', fontSize: '1.08rem', lineHeight: 1.75, margin: '0 auto 2rem', maxWidth: 780 }}>{t.heroDesc}</p>
           <div style={{ display: 'flex', gap: '0.8rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" style={{ backgroundColor: '#25D366', color: '#FFF', padding: '0.9rem 1.7rem', borderRadius: 8, fontWeight: 800, textDecoration: 'none' }}>{t.contactWa}</a>
+            <a href={WA_LINK} target="_blank" rel="noopener noreferrer" style={{ backgroundColor: '#15803d', color: '#FFF', padding: '0.9rem 1.7rem', borderRadius: 8, fontWeight: 800, textDecoration: 'none' }}>{t.contactWa}</a>
             <a href={`tel:${PHONE_E}`} style={{ border: '1px solid rgba(255,255,255,.3)', color: '#FFF', padding: '0.9rem 1.7rem', borderRadius: 8, fontWeight: 700, textDecoration: 'none' }}>{t.callUs} {PHONE}</a>
           </div>
         </div>
@@ -654,7 +654,7 @@ export default function AnaveraTekstilSayfasi({ lang }: { lang: AnaveraLang }) {
 
       {/* FLOATING WHATSAPP */}
       <a href={WA_LINK} target="_blank" rel="noopener noreferrer"
-        style={{ position: 'fixed', bottom: 25, right: 25, backgroundColor: '#25D366', color: '#FFF', borderRadius: 50, padding: '0.85rem 1.4rem', fontWeight: 800, textDecoration: 'none', boxShadow: '0 8px 25px rgba(37,211,102,.4)', zIndex: 60 }}>
+        style={{ position: 'fixed', bottom: 25, right: 25, backgroundColor: '#15803d', color: '#FFF', borderRadius: 50, padding: '0.85rem 1.4rem', fontWeight: 800, textDecoration: 'none', boxShadow: '0 8px 25px rgba(37,211,102,.4)', zIndex: 60 }}>
         {t.waFloat}
       </a>
     </div>

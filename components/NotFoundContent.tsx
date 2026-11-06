@@ -35,7 +35,7 @@ export default function NotFoundContent() {
       <h1 style={{ fontSize: '1.5rem', fontWeight: 700, marginBottom: '.75rem' }}>{c.title}</h1>
       <p style={{ opacity: 0.8, maxWidth: 440, marginBottom: '2rem', lineHeight: 1.6 }}>{c.text}</p>
       <div style={{ display: 'flex', gap: '.75rem', flexWrap: 'wrap', justifyContent: 'center', marginBottom: '2rem' }}>
-        <a href={home} style={{ background: '#C9A96E', color: '#2C4A3E', padding: '.7rem 1.4rem', borderRadius: 999, fontWeight: 700, textDecoration: 'none' }}>{c.home}</a>
+        <a href={home} style={{ background: '#C9A96E', color: '#1E3329', padding: '.7rem 1.4rem', borderRadius: 999, fontWeight: 700, textDecoration: 'none' }}>{c.home}</a>
         <a href={wa} target="_blank" rel="noopener noreferrer" style={{ border: '1px solid rgba(255,255,255,.4)', color: '#faf7f0', padding: '.7rem 1.4rem', borderRadius: 999, fontWeight: 700, textDecoration: 'none' }}>💬 {c.wa}: {PHONE}</a>
       </div>
       {c.links.length > 0 && (

@@ -39,7 +39,7 @@ export default function QuoteForm({ lang }: { lang: QL }) {
           </label>
         ))}
       </div>
-      <a href={href} target="_blank" rel="noopener noreferrer" style={{ marginTop: '1rem', display: 'inline-block', background: '#25d366', color: '#fff', padding: '.8rem 1.5rem', fontWeight: 700, textDecoration: 'none', fontSize: '.95rem', borderRadius: 4 }}>{t.send}</a>
+      <a href={href} target="_blank" rel="noopener noreferrer" style={{ marginTop: '1rem', display: 'inline-block', background: '#15803d', color: '#fff', padding: '.8rem 1.5rem', fontWeight: 700, textDecoration: 'none', fontSize: '.95rem', borderRadius: 4 }}>{t.send}</a>
     </section>
   );
 }

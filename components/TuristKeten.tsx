@@ -34,7 +34,7 @@ function Img({ k, lang, ratio = '4 / 5', priority = false }: { k: ImgKey; lang: 
 function WaBtn({ href, children, dark = false }: { href: string; children: React.ReactNode; dark?: boolean }) {
   return (
     <a href={href} target="_blank" rel="noopener noreferrer"
-      style={{ background: dark ? C.green : '#25d366', color: '#fff', padding: '.95rem 1.8rem', fontWeight: 700, textDecoration: 'none', fontSize: '.9rem', borderRadius: 4, display: 'inline-block' }}>
+      style={{ background: dark ? C.green : '#15803d', color: '#fff', padding: '.95rem 1.8rem', fontWeight: 700, textDecoration: 'none', fontSize: '.9rem', borderRadius: 4, display: 'inline-block' }}>
       💬 {children}
     </a>
   );

@@ -74,12 +74,12 @@ export default function BlogPost() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <main style={{ maxWidth: 720, margin: '0 auto', padding: '3rem 1.5rem', fontFamily: 'system-ui, sans-serif', color: '#222', lineHeight: 1.7 }}>
-        <nav aria-label="breadcrumb" style={{ fontSize: '.8rem', color: '#888', marginBottom: '1rem' }}>
-          <a href="/" style={{ color: '#888' }}>Ana Sayfa</a> <span>/</span> <a href="/blog" style={{ color: '#888' }}>Blog</a>
+      <div style={{ background: '#FAF7F2' }}><main style={{ maxWidth: 720, margin: '0 auto', padding: '3rem 1.5rem', fontFamily: 'system-ui, sans-serif', color: '#222', lineHeight: 1.7 }}>
+        <nav aria-label="breadcrumb" style={{ fontSize: '.8rem', color: '#6b6b6b', marginBottom: '1rem' }}>
+          <a href="/" style={{ color: '#6b6b6b' }}>Ana Sayfa</a> <span>/</span> <a href="/blog" style={{ color: '#6b6b6b' }}>Blog</a>
         </nav>
 
-        <p style={{ fontSize: '.78rem', color: '#999', marginBottom: '.4rem' }}>
+        <p style={{ fontSize: '.78rem', color: '#6b6b6b', marginBottom: '.4rem' }}>
           {new Date(PUBLISHED).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' })} · Terzi Can
         </p>
         <h1 style={{ fontSize: 'clamp(1.7rem,4.5vw,2.5rem)', fontWeight: 800, margin: '0 0 1.5rem', color: '#2C4A3E' }}>
@@ -183,10 +183,10 @@ export default function BlogPost() {
           </a>
         </div>
 
-        <p style={{ marginTop: '2rem', fontSize: '.85rem', color: '#888' }}>
-          <a href="/blog" style={{ color: '#888' }}>← Tüm blog yazıları</a>
+        <p style={{ marginTop: '2rem', fontSize: '.85rem', color: '#6b6b6b' }}>
+          <a href="/blog" style={{ color: '#6b6b6b' }}>← Tüm blog yazıları</a>
         </p>
-      </main>
+      </main></div>
     </>
   );
 }

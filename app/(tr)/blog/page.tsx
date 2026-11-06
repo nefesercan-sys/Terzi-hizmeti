@@ -52,18 +52,18 @@ export default function BlogIndex() {
   return (
     <main style={{ maxWidth: 720, margin: '0 auto', padding: '3rem 1.5rem', fontFamily: 'system-ui, sans-serif' }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <a href="/" style={{ fontSize: '.85rem', color: '#666', textDecoration: 'none' }}>← Ana Sayfa</a>
+      <a href="/" style={{ fontSize: '.85rem', color: 'rgba(245,241,232,.8)', textDecoration: 'none' }}>← Ana Sayfa</a>
       <h1 style={{ fontSize: 'clamp(1.6rem,4vw,2.4rem)', fontWeight: 800, margin: '1rem 0 2rem' }}>Blog</h1>
 
       {YAZILAR.map(y => (
-        <a key={y.slug} href={`/blog/${y.slug}`} style={{ display: 'block', textDecoration: 'none', color: 'inherit', padding: '1.5rem', border: '1px solid #eee', borderRadius: 14, marginBottom: 16 }}>
-          <div style={{ fontSize: '.75rem', color: '#999', marginBottom: 6 }}>{new Date(y.tarih).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' })}</div>
+        <a key={y.slug} href={`/blog/${y.slug}`} style={{ display: 'block', textDecoration: 'none', color: 'inherit', padding: '1.5rem', border: '1px solid rgba(245,241,232,.2)', borderRadius: 14, marginBottom: 16 }}>
+          <div style={{ fontSize: '.75rem', color: 'rgba(245,241,232,.7)', marginBottom: 6 }}>{new Date(y.tarih).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' })}</div>
           <h2 style={{ fontSize: '1.2rem', fontWeight: 700, marginBottom: 8 }}>{y.baslik}</h2>
-          <p style={{ fontSize: '.9rem', color: '#555', lineHeight: 1.6, margin: 0 }}>{y.ozet}</p>
+          <p style={{ fontSize: '.9rem', color: 'rgba(245,241,232,.85)', lineHeight: 1.6, margin: 0 }}>{y.ozet}</p>
         </a>
       ))}
 
-      <p style={{ marginTop: '2rem', fontSize: '.85rem', color: '#888' }}>
+      <p style={{ marginTop: '2rem', fontSize: '.85rem', color: 'rgba(245,241,232,.7)' }}>
         Sorularınız için ☎ {PHONE} — WhatsApp'tan da yazabilirsiniz.
       </p>
     </main>

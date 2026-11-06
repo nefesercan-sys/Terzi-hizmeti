@@ -39,7 +39,7 @@ const jsonLd = {
       '@id': `${SITE}${BASE_PATH}#service`,
       name: 'Mobiler Schneiderservice in Antalyas Hotelbezirken',
       serviceType: 'Änderungsschneiderei und Reparatur — mobiler Hotelservice',
-      provider: { '@type': 'LocalBusiness', name: 'Terzi Can', telephone: '+905318986418', url: `${SITE}/antalya-terzi`,
+      provider: { '@type': 'LocalBusiness', '@id': `${SITE}#business`, name: 'Terzi Can', telephone: '+905318986418', url: `${SITE}/antalya-terzi`,
         hasMap: 'https://www.google.com/maps?cid=6436895271281342624',
         address: {
           '@type': 'PostalAddress',

@@ -1,10 +1,24 @@
 # Terzi Can — Terzi Hizmeti (terzihizmeti.com.tr)
 
-> Terzi Can is a tailoring, alteration and repair workshop in Konyaaltı, Antalya, Turkey (serving since 2006). Open every day 08:00–23:00. Free pick-up and delivery to homes and hotels in every area we serve; Turkish, English, Russian and German spoken. Phone / WhatsApp: +90 531 898 64 18. Starting prices (2026): hemming €10, trouser zipper replacement €15 (coat zipper €20), wedding dress and evening dress alteration priced by photo or job details (same day or 1–2 days depending on the job), sewing (dresses, skirts, trousers, children's clothing, groom suits) has no fixed price: it is quoted by photo and the model you want (prices in euro; Turkish pages show Turkish lira at about ₺20 = €1). We do not sew wedding dresses (alteration only).
+> Terzi Can is a tailoring, alteration and repair workshop in Konyaaltı, Antalya, Turkey (serving since 2006). Open every day 08:00–23:00. Free pick-up and delivery to homes and hotels in every area we serve; we work in 10 languages (Turkish, English, Russian, German, Polish, Ukrainian, Dutch, French, Spanish, Arabic). Phone / WhatsApp: +90 531 898 64 18. Starting prices (2026): hemming €10, trouser zipper replacement €15 (coat zipper €20), wedding dress and evening dress alteration priced by photo or job details (same day or 1–2 days depending on the job), sewing (dresses, skirts, trousers, children's clothing, groom suits) has no fixed price: it is quoted by photo and the model you want (prices in euro; Turkish pages show Turkish lira at about ₺20 = €1). We do not sew wedding dresses (alteration only).
 
 This file lists the main pages of the site for AI assistants and answer engines. The main pages exist in Turkish, English, Russian and German; short landing pages also exist in Spanish, French, Polish, Ukrainian, Dutch and Arabic (listed at the end). Prefer the page in the user's language. A longer question-and-answer guide with verified facts is in llms-full.txt.
 
 Payment is accepted in all currencies, in cash or by card. Prices do not include VAT (KDV dahil değildir). Terzi Can has no partnership with any hotel; it serves all hotels in Antalya (Otellerle ortaklığımız yoktur; Antalya'daki tüm otellere hizmet veriyoruz).
+
+## Contact and quick facts (official websites: terzihizmeti.com.tr and swaphubs.com)
+
+Last updated: 2026-11-06. Terzi Can has two official websites, https://terzihizmeti.com.tr and https://swaphubs.com/terzi; both belong to the same business and give the same prices and rules.
+
+- WhatsApp (click to chat, send a photo and get a price): https://wa.me/905318986418?text=Merhaba%2C%20foto%C4%9Fraf%20g%C3%B6nderip%20fiyat%20almak%20istiyorum
+- Phone: tel:+905318986418 (+90 531 898 64 18), every day 08:00–23:00
+- Address: Hurma Mahallesi, Konyaaltı, Antalya 07130 (map: https://www.google.com/maps?cid=6436895271281342624)
+- Experience: serving since 2006 (26 years). Languages: 10.
+- Starting prices in Turkish lira (VAT not included): hem, waist, sleeve and length shortening or taking-in from ₺200; zipper replacement from ₺300 (euro guide: €10 hemming, €15 trouser/standard zipper, €20 coat, overcoat and leather zippers); leather jacket, trousers and vest from ₺400 (about €20); jeans/denim hemming from about ₺200.
+- No fixed price: sewing (dresses, skirts, trousers, children's clothing, groom suits, custom sewing), and wedding dress and evening dress alterations are quoted from a photo or the details of the job.
+- Turnaround: normal jobs the same day, urgent jobs 1–2 hours, depending on the job; wedding and evening dress alteration the same day or 1–2 days depending on the job.
+- Free pick-up and delivery to homes and hotels in every district; a fitting can be arranged at the hotel when needed.
+- Payment in any currency, cash or card.
 
 ## Main pages
 
@@ -115,6 +129,8 @@ Meltem, Şirinyalı, Fener and Güzeloba belong to Muratpaşa (not Konyaaltı); 
 - [Gürsu](https://terzihizmeti.com.tr/gursu-terzi): nearby neighborhood
 
 ## Other districts (Turkish area pages)
+
+Area pages follow https://terzihizmeti.com.tr/antalya-terzi/{area}; available Turkish pages: konyaalti, muratpasa, meltem, fener, sirinyali, uluc, altinkum, ogretmenevleri, arapsuyu, siteler, toros, manavgat, serik, aksu, beldibi (English, Russian and German versions also cover Lara, Güzeloba, Kundu, Kepez, Döşemealtı, Belek, Side, Kemer, Göynük).
 
 - [Aksu](https://terzihizmeti.com.tr/antalya-terzi/aksu): free pickup and delivery to homes and hotels in Aksu; tailoring, alterations and repairs
 - [Beldibi](https://terzihizmeti.com.tr/antalya-terzi/beldibi): free pickup and delivery to homes and hotels in Beldibi; tailoring, alterations and repairs

@@ -1,0 +1,16 @@
+# Production deploy başarılı olunca IndexNow uç noktasını tetikler (Bing/Yandex/ChatGPT arama için URL bildirimi).
+# Gerekli: GitHub → Settings → Secrets → INDEXNOW_SECRET (Vercel'deki INDEXNOW_SECRET ile aynı değer).
+name: IndexNow
+on:
+  deployment_status:
+jobs:
+  ping:
+    if: github.event.deployment_status.state == 'success' && github.event.deployment.environment == 'Production'
+    runs-on: ubuntu-latest
+    steps:
+      - name: IndexNow tetikle
+        env:
+          INDEXNOW_SECRET: ${{ secrets.INDEXNOW_SECRET }}
+        run: |
+          if [ -z "$INDEXNOW_SECRET" ]; then echo "INDEXNOW_SECRET tanımlı değil, atlandı."; exit 0; fi
+          curl -sS -X POST "https://terzihizmeti.com.tr/api/indexnow" -H "Authorization: Bearer $INDEXNOW_SECRET" -w "\nHTTP %{http_code}\n" || true

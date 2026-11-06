@@ -39,7 +39,7 @@ const jsonLd = {
       '@id': `${SITE}${BASE_PATH}#service`,
       name: 'Выездной портной в отельных районах Антальи',
       serviceType: 'Подгонка и ремонт — выездной сервис в отель',
-      provider: { '@type': 'LocalBusiness', name: 'Terzi Can', telephone: '+905318986418', url: `${SITE}/antalya-terzi`,
+      provider: { '@type': 'LocalBusiness', '@id': `${SITE}#business`, name: 'Terzi Can', telephone: '+905318986418', url: `${SITE}/antalya-terzi`,
         hasMap: 'https://www.google.com/maps?cid=6436895271281342624',
         address: {
           '@type': 'PostalAddress',

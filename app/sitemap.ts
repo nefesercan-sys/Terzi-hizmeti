@@ -12,6 +12,7 @@ import { hreflangFiyat, hreflangIletisim, hreflangSvc } from '@/lib/hreflang';
 import { iletisimUrl } from '@/lib/intl-iletisim';
 import { HIZMET_IDS, hizmetUrl, hizmetLanguages, sixForService } from '@/lib/intl-hizmet';
 import { TOPIC_IDS, topicUrl, topicLanguages, sixAlt } from '@/lib/intl-topics';
+import { SSS_PATH, SSS_UPDATED, sssHreflang } from '@/lib/sss-merkezi';
 import { PLANGS, promoUrl, promoAlternates, PROMO_LAST_UPDATE, PROMO_FOTOLAR } from '@/lib/promosyon-tekstil';
 
 const SITE = "https://terzihizmeti.com.tr";
@@ -192,7 +193,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const uretimSayfalari: MetadataRoute.Sitemap = U_IDS.flatMap((u) => UL_LIST.map((l) => ({
     url: `${SITE}${uUrl(l, u)}`, lastModified: new Date(LAST_UPDATE), changeFrequency: 'monthly' as const, priority: 0.78, alternates: { languages: uLanguages(u) },
   })));
-  const hepsi = [...sabitSayfalar, ...otelSayfalari, ...seoSayfalari, ...turistSayfalari, ...iletisimSayfalari, ...intlSayfalari, ...zoneSayfalari, ...svcSayfalari, ...fiyatSayfalari, ...iletSayfalari, ...konuSayfalari, ...hizmetSayfalari, ...uretimSayfalari, ...promoSayfalari];
+  // Sık sorulan sorular merkezi (TR/EN/RU/DE, karşılıklı hreflang)
+  const sssSayfalari: MetadataRoute.Sitemap = (Object.keys(SSS_PATH) as (keyof typeof SSS_PATH)[]).map((l) => ({
+    url: `${SITE}${SSS_PATH[l]}`, lastModified: new Date(SSS_UPDATED), changeFrequency: 'monthly' as const, priority: 0.8, alternates: { languages: sssHreflang() },
+  }));
+  const hepsi = [...sabitSayfalar, ...sssSayfalari, ...otelSayfalari, ...seoSayfalari, ...turistSayfalari, ...iletisimSayfalari, ...intlSayfalari, ...zoneSayfalari, ...svcSayfalari, ...fiyatSayfalari, ...iletSayfalari, ...konuSayfalari, ...hizmetSayfalari, ...uretimSayfalari, ...promoSayfalari];
   for (const e of hepsi) {
     const ilk = gorulen.get(e.url);
     if (!ilk) gorulen.set(e.url, e);

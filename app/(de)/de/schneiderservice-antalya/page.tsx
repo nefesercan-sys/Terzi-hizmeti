@@ -110,7 +110,7 @@ const jsonLd = {
 
 const wrap = { maxWidth: 1040, margin: '0 auto', padding: '0 1.25rem' } as const;
 const card = { border: '1px solid rgba(128,128,128,.3)', borderRadius: 14, padding: '1.2rem', background: '#fff' } as const;
-const btn = { display: 'inline-block', background: '#25D366', color: '#fff', fontWeight: 800, padding: '.8rem 1.5rem', borderRadius: 10, textDecoration: 'none' } as const;
+const btn = { display: 'inline-block', background: '#15803d', color: '#fff', fontWeight: 800, padding: '.8rem 1.5rem', borderRadius: 10, textDecoration: 'none' } as const;
 
 export default function SchneiderserviceAntalya() {
   return (

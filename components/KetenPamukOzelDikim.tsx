@@ -265,7 +265,7 @@ export default function KetenPamukOzelDikim({ lang = 'tr' }: { lang?: Lang }) {
             {t.heroDesc}
           </p>
           <a href={WA(waMsg)} target="_blank" rel="noopener noreferrer"
-            style={{ background: '#25d366', color: '#fff', padding: '1rem 2rem', fontWeight: 700, textDecoration: 'none', fontSize: '.88rem', borderRadius: 4, display: 'inline-block' }}>
+            style={{ background: '#15803d', color: '#fff', padding: '1rem 2rem', fontWeight: 700, textDecoration: 'none', fontSize: '.88rem', borderRadius: 4, display: 'inline-block' }}>
             💬 {t.waBtn}
           </a>
           <a href="#seri-uretim" style={{ color: '#D4B07A', fontSize: '.85rem', textDecoration: 'underline', marginLeft: '1.2rem', display: 'inline-block', marginTop: '.8rem' }}>{t.heroSeri}</a>
@@ -358,7 +358,7 @@ export default function KetenPamukOzelDikim({ lang = 'tr' }: { lang?: Lang }) {
           </div>
           <div style={{ textAlign: 'center' }}>
             <a href={WA(wholesaleWaMsg)} target="_blank" rel="noopener noreferrer"
-              style={{ background: '#25d366', color: '#fff', padding: '.9rem 1.8rem', fontWeight: 700, textDecoration: 'none', fontSize: '.85rem', borderRadius: 4, display: 'inline-block', marginRight: '.8rem', marginBottom: '.8rem' }}>
+              style={{ background: '#15803d', color: '#fff', padding: '.9rem 1.8rem', fontWeight: 700, textDecoration: 'none', fontSize: '.85rem', borderRadius: 4, display: 'inline-block', marginRight: '.8rem', marginBottom: '.8rem' }}>
               💬 {t.wholesaleCtaBtn}
             </a>
             <br />
@@ -383,7 +383,7 @@ export default function KetenPamukOzelDikim({ lang = 'tr' }: { lang?: Lang }) {
         <h2 style={{ fontFamily: 'Georgia,serif', fontSize: '1.6rem', color: '#fff', marginBottom: '.7rem' }}>{t.finalCta}</h2>
         <p style={{ color: 'rgba(255,255,255,.85)', marginBottom: '1.6rem', fontSize: '.9rem' }}>{t.finalSub}</p>
         <a href={WA(waMsg)} target="_blank" rel="noopener noreferrer"
-          style={{ background: '#25d366', color: '#fff', padding: '1rem 2.3rem', fontWeight: 700, textDecoration: 'none', fontSize: '.9rem', borderRadius: 4, display: 'inline-block' }}>
+          style={{ background: '#15803d', color: '#fff', padding: '1rem 2.3rem', fontWeight: 700, textDecoration: 'none', fontSize: '.9rem', borderRadius: 4, display: 'inline-block' }}>
           💬 {t.waBtn}
         </a>
         <p style={{ color: 'rgba(255,255,255,.5)', marginTop: '1.2rem', fontSize: '.75rem' }}>{PHONE}</p>

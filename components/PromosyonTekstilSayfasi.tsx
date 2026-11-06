@@ -75,7 +75,7 @@ export default function PromosyonTekstilSayfasi({ lang }: { lang: PLang }) {
           <h1 id="hero-h" style={{ fontSize: 'clamp(1.9rem, 5vw, 3rem)', fontWeight: 800, lineHeight: 1.2, margin: '0 0 1.1rem' }}>{c.h1}</h1>
           <p className="hero-desc" style={{ color: '#CBD5E1', fontSize: '1.08rem', lineHeight: 1.75, margin: '0 auto 2rem', maxWidth: 740 }}>{c.lead}</p>
           <a href={wa} target="_blank" rel="noopener noreferrer"
-            style={{ display: 'inline-block', backgroundColor: '#25D366', color: '#FFFFFF', padding: '.9rem 1.8rem', borderRadius: 8, fontWeight: 800, textDecoration: 'none' }}>{c.cta}</a>
+            style={{ display: 'inline-block', backgroundColor: '#15803d', color: '#FFFFFF', padding: '.9rem 1.8rem', borderRadius: 8, fontWeight: 800, textDecoration: 'none' }}>{c.cta}</a>
         </div>
       </section>
 

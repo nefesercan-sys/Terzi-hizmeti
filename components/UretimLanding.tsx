@@ -81,7 +81,7 @@ export default function UretimLanding({ lang, id }: { lang: UL; id: UId }) {
         <QuoteForm lang={lang} />
         <section style={{ background: C.sand, borderRadius: 8, padding: '1.3rem' }}>
           <p style={{ margin: '0 0 1rem' }}>
-            <a href={waLink(c.wa)} target="_blank" rel="noopener noreferrer" style={{ background: '#25d366', color: '#fff', padding: '.8rem 1.5rem', fontWeight: 700, textDecoration: 'none', fontSize: '.92rem', borderRadius: 4, display: 'inline-block' }}>{ui.cta}</a>
+            <a href={waLink(c.wa)} target="_blank" rel="noopener noreferrer" style={{ background: '#15803d', color: '#fff', padding: '.8rem 1.5rem', fontWeight: 700, textDecoration: 'none', fontSize: '.92rem', borderRadius: 4, display: 'inline-block' }}>{ui.cta}</a>
           </p>
           <p style={{ margin: '0 0 .8rem', fontSize: '.92rem' }}>
             <a href={`tel:${PHONE_TEL}`} style={{ color: C.green }} dir="ltr">☎ {ui.call}: {PHONE}</a>{' · '}<a href={MAPS} target="_blank" rel="noopener noreferrer" style={{ color: C.green }}>{ui.map}</a>

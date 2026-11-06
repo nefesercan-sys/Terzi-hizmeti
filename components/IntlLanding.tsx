@@ -56,7 +56,7 @@ export default function IntlLanding({ lang }: { lang: ILang }) {
           <h1 id="hero-h" style={{ fontFamily: serif, fontSize: 'clamp(1.8rem,5vw,3rem)', fontWeight: 700, lineHeight: 1.15, color: '#fff', margin: '0 0 .9rem' }}>{c.h1}</h1>
           <p className="hero-desc" style={{ fontSize: '1.02rem', color: 'rgba(255,255,255,.92)', maxWidth: 620, margin: '0 0 1.6rem' }}>{c.lead}</p>
           <a href={wa} target="_blank" rel="noopener noreferrer"
-            style={{ background: '#25d366', color: '#fff', padding: '.95rem 1.8rem', fontWeight: 700, textDecoration: 'none', fontSize: '.95rem', borderRadius: 4, display: 'inline-block' }}>
+            style={{ background: '#15803d', color: '#fff', padding: '.95rem 1.8rem', fontWeight: 700, textDecoration: 'none', fontSize: '.95rem', borderRadius: 4, display: 'inline-block' }}>
             💬 {c.cta}
           </a>
         </div>

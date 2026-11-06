@@ -16,7 +16,7 @@ export default function RuTelegramButton() {
       style={{
         position: 'fixed', left: 14, bottom: 84, zIndex: 40,
         display: 'inline-flex', alignItems: 'center', gap: 8,
-        background: '#229ED9', color: '#fff', textDecoration: 'none',
+        background: '#0F7AB8', color: '#fff', textDecoration: 'none',
         padding: '10px 16px', borderRadius: 999, fontWeight: 600, fontSize: 14,
         boxShadow: '0 4px 14px rgba(0,0,0,.25)',
       }}

@@ -8,8 +8,14 @@ import { reviewSchema } from '@/lib/reviews';
 
 /** Hizmet verilen gerçek alanlar */
 export const AREA_SERVED = [
-  'Konyaaltı, Antalya', 'Muratpaşa, Antalya', 'Lara, Antalya', 'Belek, Antalya', 'Side, Manavgat, Antalya', 'Kemer, Antalya', 'Antalya',
+  'Konyaaltı, Antalya', 'Hurma, Konyaaltı', 'Liman, Konyaaltı', 'Sarısu, Konyaaltı', 'Gürsu, Konyaaltı', 'Uncalı, Konyaaltı', 'Çakırlar, Konyaaltı',
+  'Muratpaşa, Antalya', 'Lara, Antalya', 'Kundu, Antalya', 'Güzeloba, Antalya', 'Meltem, Muratpaşa', 'Şirinyalı, Muratpaşa', 'Fener, Muratpaşa',
+  'Kepez, Antalya', 'Aksu, Antalya', 'Döşemealtı, Antalya', 'Belek, Antalya', 'Side, Manavgat, Antalya', 'Kemer, Antalya', 'Beldibi, Kemer, Antalya', 'Göynük, Kemer, Antalya', 'Antalya',
 ];
+
+/** Her iki resmî site de aynı işletmenindir; diğer sitenin işletme sayfası sameAs ile bağlanır. */
+export const OFFICIAL_SITES = ['https://terzihizmeti.com.tr/', 'https://swaphubs.com/terzi'];
+export const GOOGLE_REVIEW_URL = 'https://g.page/r/CYUmDLIgrCRREAE/review';
 
 export function businessNode(opts: { reviews?: boolean } = {}) {
   return {
@@ -25,7 +31,11 @@ export function businessNode(opts: { reviews?: boolean } = {}) {
   description: "Antalya Konyaaltı'nda 2006'dan bu yana hizmet veren profesyonel terzi atölyesi. Paça kısaltma, fermuar değişimi, bel daraltma, özel dikim, gelinlik tadilatı, tekstil imalatı. Hurma, Liman, Sarısu, Gürsu, Uncalı bölgelerine hizmet.",
   url: SITE,
   telephone: PHONE_TEL,
-  priceRange: '$$',
+  priceRange: '₺₺',
+  foundingDate: '2006',
+  paymentAccepted: 'Cash, Credit Card',
+  currenciesAccepted: 'TRY, EUR, USD, GBP, RUB, PLN, UAH, CHF, SEK, NOK, DKK, CZK, AED, SAR',
+  slogan: 'Fotoğraf at, fiyat al',
   image: `${SITE}/terzi-can-hero.jpg`,
   logo: `${SITE}/terzi-can-hero.jpg`,
   hasMap: MAPS,
@@ -44,14 +54,24 @@ export function businessNode(opts: { reviews?: boolean } = {}) {
     opens: '08:00', closes: '23:00',
   }],
   areaServed: AREA_SERVED.map((n) => ({ '@type': 'Place', name: n })),
-  contactPoint: [{
-    '@type': 'ContactPoint',
-    telephone: PHONE_TEL,
-    contactType: 'customer service',
-    areaServed: ['TR', 'DE', 'RU', 'GB', 'PL', 'UA', 'NL', 'FR', 'ES', 'SA'],
-    availableLanguage: ['Turkish', 'English', 'Russian', 'German', 'Polish', 'Ukrainian', 'Dutch', 'French', 'Spanish', 'Arabic'],
-  }],
-  sameAs: [MAPS, `https://wa.me/${PHONE_TEL.replace('+', '')}`, 'https://swaphubs.com/terzi'],
+  contactPoint: [
+    {
+      '@type': 'ContactPoint',
+      telephone: PHONE_TEL,
+      contactType: 'customer service',
+      areaServed: ['TR', 'DE', 'RU', 'GB', 'PL', 'UA', 'NL', 'FR', 'ES', 'SA'],
+      availableLanguage: ['Turkish', 'English', 'Russian', 'German', 'Polish', 'Ukrainian', 'Dutch', 'French', 'Spanish', 'Arabic'],
+      hoursAvailable: { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'], opens: '08:00', closes: '23:00' },
+    },
+    {
+      '@type': 'ContactPoint',
+      contactType: 'WhatsApp',
+      url: `https://wa.me/${PHONE_TEL.replace('+', '')}`,
+      availableLanguage: ['Turkish', 'English', 'Russian', 'German', 'Polish', 'Ukrainian', 'Dutch', 'French', 'Spanish', 'Arabic'],
+      hoursAvailable: { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'], opens: '08:00', closes: '23:00' },
+    },
+  ],
+  sameAs: [MAPS, GOOGLE_REVIEW_URL, `https://wa.me/${PHONE_TEL.replace('+', '')}`, ...OFFICIAL_SITES.filter((u) => !u.startsWith(SITE))],
   knowsLanguage: ['tr', 'en', 'ru', 'de', 'pl', 'uk', 'nl', 'fr', 'es', 'ar'],
 }
 }

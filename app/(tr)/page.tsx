@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { DELIVERY } from '@/lib/delivery';
 import ReviewsBlock from '@/components/ReviewsBlock';
 import Ilustrasyon, { type IlustrasyonTur } from '@/components/Ilustrasyon';
-import { reviewSchema } from '@/lib/reviews';
+import { businessNode } from '@/lib/business';
 import { DISTRICTS as SEO_DISTRICTS, SERVICES as SEO_SERVICES, SERVICE_BASE, districtUrl, serviceUrl, isTrNear, isFreeService } from '@/lib/seo-data';
 
 // ─── CONSTANTS ────────────────────────────────────────────────────────────────
@@ -97,11 +97,7 @@ const jsonLd = {
       description: 'Professional tailor and alteration service in Konyaaltı, Antalya (Turkish, English, Russian, German).',
     },
     {
-      '@type': ['LocalBusiness', 'ClothingStore'],
-      ...reviewSchema(),
-      additionalType: ['https://schema.org/SewingService'],
-      '@id': `${SITE}#business`,
-      name: BIZ,
+      ...businessNode(),
       alternateName: [
         'Terzi Can', 'Terzi Can Antalya', 'Konyaaltı Terzi',
         'Tailor Can Antalya', 'Tailor Antalya', 'English Speaking Tailor Antalya',
@@ -110,40 +106,6 @@ const jsonLd = {
       ],
       description:
         'Professional tailor and clothing alteration workshop in Konyaaltı, Antalya since 2006. Services: pants hemming, zipper replacement, waist adjustment, dressmaking, wedding dress alterations. Mobile tailor service to Hurma, Liman, Sarisu, Gursu, Uncali. message us on WhatsApp in your language.',
-      url: SITE,
-      telephone: PHONE_TEL,
-      priceRange: '₺₺',
-      image: OG,
-      logo: `${SITE}/terzi-can-hero.jpg`,
-      hasMap: MAPS,
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: 'Hurma Mahallesi',
-        addressLocality: 'Konyaaltı',
-        addressRegion: 'Antalya',
-        postalCode: '07130',
-        addressCountry: 'TR',
-      },
-      geo: { '@type': 'GeoCoordinates', latitude: 36.857466, longitude: 30.596987 },
-      openingHoursSpecification: [{
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
-        opens: '08:00', closes: '23:00',
-      }],
-      areaServed: [
-        'Liman, Konyaaltı', 'Hurma, Konyaaltı', 'Sarısu, Konyaaltı',
-        'Gürsu, Konyaaltı', 'Uncalı, Konyaaltı', 'Konyaaltı', 'Muratpaşa', 'Kepez', 'Antalya',
-        'Lara', 'Güzeloba', 'Belek', 'Kemer', 'Side', ].map(n => ({ '@type': 'Place', name: n })),
-      contactPoint: [
-        {
-          '@type': 'ContactPoint',
-          telephone: PHONE_TEL,
-          contactType: 'customer service',
-          availableLanguage: ['Turkish', 'English', 'Russian', 'German', 'Polish', 'Ukrainian', 'Dutch', 'French', 'Spanish', 'Arabic'],
-          areaServed: 'TR',
-        }
-      ],
-      sameAs: [MAPS, `https://wa.me/${WA_NUM}`, 'https://swaphubs.com/terzi'],
       hasOfferCatalog: {
         '@type': 'OfferCatalog',
         name: 'Tailor Services Antalya 2026 / Услуги Ателье Анталья',
@@ -155,7 +117,6 @@ const jsonLd = {
           { '@type': 'Offer', name: 'Mobile Tailor Service / Eve Gelen Terzi / Выездной портной', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Mobile Pickup & Delivery Tailor', description: 'Home pickup and delivery service in Konyaalti (Hurma, Liman, Sarisu free).' } },
         ],
       },
-      knowsLanguage: ['tr', 'en', 'ru', 'de', 'pl', 'uk', 'nl', 'fr', 'es', 'ar'],
     },
     {
       '@type': 'WebPage',

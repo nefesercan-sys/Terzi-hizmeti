@@ -23,7 +23,17 @@ export function districtAnswer(lang: Lang, d: District): string {
   const loc = d.loc[lang];
   const D = DELIVERY[lang];
   const home = isFreeService(d.slug) ? HOME[lang].free : HOME[lang].ask;
-  const v = pickVariant(d.slug, 2, 'ans');
+  const v = pickVariant(d.slug, 3, 'ans');
+  if (v === 2) {
+    // Yakınımdaki terzi / near me kalıbı + başlangıç fiyatları (sesli ve yapay zeka sorguları için)
+    const near = {
+      tr: `${loc} yakınımdaki terzi mi arıyorsunuz? Terzi Can ${loc} paça, bel, kol ve boy kısaltma-daraltmayı ₺200'den, fermuar değişimini ₺300'den başlayan fiyatla yapar; fiyatlara KDV dahil değildir. Fotoğrafı WhatsApp'tan (${PHONE}) gönderin. ${D.urgent} ${D.normal} ${HOTEL_FREE.tr}`,
+      en: `Looking for a tailor near me ${loc}? Terzi Can does hemming, waist, sleeve and length alterations from ₺200 and zipper replacement from ₺300 (prices exclude VAT). Send a photo on WhatsApp (${PHONE}). ${D.urgent} ${D.normal} ${HOTEL_FREE.en}`,
+      ru: `Ищете портного рядом ${loc}? Terzi Can: подшить, ушить в талии и по рукаву — от ₺200, замена молнии — от ₺300 (цены без НДС). Пришлите фото в WhatsApp (${PHONE}). ${D.urgent} ${D.normal} ${HOTEL_FREE.ru}`,
+      de: `Schneider in der Nähe ${loc}? Terzi Can kürzt und ändert (Saum, Taille, Ärmel, Länge) ab ₺200, Reißverschlusswechsel ab ₺300 (zzgl. MwSt.). Foto per WhatsApp senden (${PHONE}). ${D.urgent} ${D.normal} ${HOTEL_FREE.de}`,
+    };
+    return near[lang];
+  }
   if (lang === 'tr') {
     return v === 0
       ? `Terzi Can, ${loc} paça kısaltma, daraltma, fermuar değişimi ve elbise tadilatı yapar; atölye Konyaaltı'nda, Hurma'dadır ve her gün 08:00–23:00 WhatsApp ile telefondan (${PHONE}) ulaşılır. ${D.urgent} ${D.normal} ${HOTEL_FREE.tr} ${home}`

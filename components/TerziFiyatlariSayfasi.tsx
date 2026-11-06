@@ -6,6 +6,7 @@
 // böylece 4 dilde fiyat tutarsızlığı olması mümkün olmaz.
 
 import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
+import KisaCevapTablo from '@/components/KisaCevapTablo';
 import { tryText, eurText, BY_PHOTO_MODEL, byPhotoModelCap, byPhotoOrJobCap, PAYMENT_NOTE } from '@/lib/facts';
 export type FLang = 'tr' | 'en' | 'de' | 'ru';
 
@@ -950,6 +951,8 @@ export default function TerziFiyatlariSayfasi({ lang }: { lang: FLang }) {
           </div>
         </div>
       </section>
+
+      <KisaCevapTablo lang={lang} />
 
       <section className="sec" id="fiyatlar" style={{ background: 'rgba(0,0,0,.12)' }} aria-labelledby="price-h">
         <div className="ctr">

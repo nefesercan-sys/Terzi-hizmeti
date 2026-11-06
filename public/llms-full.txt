@@ -154,6 +154,8 @@ A: Подгонка (подшить, ушить) от ₺200 (около €10),
 
 ## Pages by service and by area (4 languages)
 
+- FAQ hub (40 questions per language): https://terzihizmeti.com.tr/sik-sorulan-sorular-terzi-antalya (EN /en/tailor-faq-antalya, RU /ru/voprosy-portnoy-antalya, DE /de/schneider-faq-antalya)
+
 - Services hub: https://terzihizmeti.com.tr/terzi-hizmetleri (EN /en/tailor-services, RU /ru/uslugi-portnogo, DE /de/schneider-leistungen)
 - Area pages: /antalya-terzi/{area} (EN /en/tailor-antalya/{area}, RU /ru/portnoy-antalya/{area}, DE /de/schneider-antalya/{area}) for muratpasa, konyaalti, meltem, fener, sirinyali, lara, guzeloba, kundu, arapsuyu, toros, ogretmenevleri, kepez, aksu, dosemealti, belek, side, kemer, beldibi, goynuk.
 - Full list of service slugs: see https://terzihizmeti.com.tr/sitemap.xml

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { fitKeywords } from '@/lib/meta-fit';
 import { hreflangFiyat } from '@/lib/hreflang';
 import { FT, PRICE_ROWS } from '@/components/TerziFiyatlariSayfasi';
+import KisaCevapTablo from '@/components/KisaCevapTablo';
 
 // Bu sayfa, insanların (ve yapay zeka asistanlarının) doğal dilde sorduğu sorulara
 // tek sayfada cevap verir: "Antalya'da terzi", "terzi fiyatları", "elbisem yırtıldı",
@@ -191,6 +192,8 @@ export default function TerziFiyatlariPage() {
             </div>
           </div>
         </section>
+
+        <KisaCevapTablo lang="tr" />
 
         <section className="sec" id="fiyatlar" style={{ background: 'rgba(0,0,0,.12)' }} aria-labelledby="price-h">
           <div className="ctr">

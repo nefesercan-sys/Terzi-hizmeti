@@ -47,7 +47,7 @@ export default function SssMerkezi({ lang }: { lang: SssLang }) {
       },
     ],
   };
-  const link = { color: '#0b5ed7', textDecoration: 'underline' } as const;
+  const link = { color: 'inherit', textDecoration: 'underline', fontWeight: 600 } as const;
   return (
     <main style={{ maxWidth: 860, margin: '0 auto', padding: '24px 16px 48px', lineHeight: 1.6 }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, '\\u003c') }} />
@@ -56,7 +56,7 @@ export default function SssMerkezi({ lang }: { lang: SssLang }) {
       </nav>
       <h1 style={{ fontSize: 28, lineHeight: 1.25, margin: '0 0 8px' }}>{m.h1}</h1>
       <p>{m.lead}</p>
-      <p id="kisa-cevap" style={{ background: '#f1f7ff', border: '1px solid #cfe2ff', borderRadius: 8, padding: '12px 14px' }}>{m.short}</p>
+      <p id="kisa-cevap" style={{ background: 'rgba(59,130,246,.14)', border: '1px solid rgba(59,130,246,.45)', color: 'inherit', borderRadius: 8, padding: '12px 14px' }}>{m.short}</p>
       <p><a href={wa} rel="noopener" style={{ display: 'inline-block', background: '#16a34a', color: '#fff', padding: '10px 16px', borderRadius: 8, textDecoration: 'none', fontWeight: 600 }}>{m.cta}</a>{' '}
         <a href={`tel:${PHONE_TEL}`} style={link}>+90 531 898 64 18</a></p>
       <section id="sss" aria-label={m.crumb}>

@@ -10,6 +10,8 @@ import { buildPromoMetadata } from '@/lib/promosyon-tekstil';
 import { promoSlug } from '@/lib/promosyon-paths';
 import { SVC, isSvcSlug, svcUrl } from '@/lib/intl-services';
 import FiyatLanding from '@/components/FiyatLanding';
+import KargoSayfasi, { kargoMetadata } from '@/components/KargoSayfasi';
+import { KARGO, parseKargoSlug } from '@/lib/kargo-terzi';
 import { FIYAT, isFiyatSlug, fiyatUrl } from '@/lib/intl-fiyat';
 import IletisimLanding from '@/components/IletisimLanding';
 import { ILETISIM, isIletisimSlug, iletisimUrl } from '@/lib/intl-iletisim';
@@ -26,7 +28,7 @@ import { UDATA, U_IDS, parseU, uMetadata } from '@/lib/uretim';
 // Yalnızca tanımlı otel bölgesi sayfaları üretilir; diğer iki-segmentli yollar 404 olur.
 export const dynamicParams = false;
 export function generateStaticParams() {
-  return ILANGS.flatMap((lang) => [...U_IDS.map((u) => ({ lang, zone: UDATA[lang][u].slug })), { lang, zone: SVC[lang].slug }, { lang, zone: FIYAT[lang].slug }, { lang, zone: ILETISIM[lang].slug }, { lang, zone: promoSlug(lang) }, ...TOPIC_IDS.map((t) => ({ lang, zone: TOPICS[lang][t].slug })), ...HIZMET_IDS.map((h) => ({ lang, zone: HIZMET[lang][h].slug })), ...ZONE_SLUGS.map((z) => ({ lang, zone: zoneSlug(lang, z) }))]);
+  return ILANGS.flatMap((lang) => [...U_IDS.map((u) => ({ lang, zone: UDATA[lang][u].slug })), { lang, zone: SVC[lang].slug }, { lang, zone: FIYAT[lang].slug }, { lang, zone: ILETISIM[lang].slug }, { lang, zone: promoSlug(lang) }, { lang, zone: KARGO[lang].slug }, ...TOPIC_IDS.map((t) => ({ lang, zone: TOPICS[lang][t].slug })), ...HIZMET_IDS.map((h) => ({ lang, zone: HIZMET[lang][h].slug })), ...ZONE_SLUGS.map((z) => ({ lang, zone: zoneSlug(lang, z) }))]);
 }
 
 type P = { params: Promise<{ lang: string; zone: string }> };
@@ -37,6 +39,7 @@ export async function generateMetadata({ params }: P): Promise<Metadata> {
   const uid = parseU(lang, slug);
   if (uid) return uMetadata(lang, uid);
   if (slug === promoSlug(lang)) return buildPromoMetadata(lang);
+  if (parseKargoSlug(lang, slug)) return kargoMetadata(lang);
   if (isFiyatSlug(lang, slug)) {
     const c = FIYAT[lang]; const url = `${SITE}${fiyatUrl(lang)}`;
     const title = c.title.length + 12 <= 60 ? `${c.title} | Terzi Can` : c.title;
@@ -136,6 +139,7 @@ export default async function Page({ params }: P) {
   const uid = parseU(lang, slug);
   if (uid) return <UretimLanding lang={lang} id={uid} />;
   if (slug === promoSlug(lang)) return <PromosyonTekstilSayfasi lang={lang} />;
+  if (parseKargoSlug(lang, slug)) return <KargoSayfasi lang={lang} />;
   if (isFiyatSlug(lang, slug)) return <FiyatLanding lang={lang} />;
   if (isIletisimSlug(lang, slug)) return <IletisimLanding lang={lang} />;
   if (isSvcSlug(lang, slug)) return <ServicesLanding lang={lang} />;

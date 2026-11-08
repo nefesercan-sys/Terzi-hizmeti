@@ -6,7 +6,11 @@ import { INTL, iUrl, type ILang } from '@/lib/intl';
 import { svcUrl } from '@/lib/intl-services';
 import { TOPICS, TOPIC_IDS, TOPIC_UI, topicUrl, type TopicId } from '@/lib/intl-topics';
 import { UDATA, U_IDS, uUrl, ANAVERA_HOME } from '@/lib/uretim';
+import KargoFermuarKutusu, { type KFVariant } from '@/components/KargoFermuarKutusu';
+import KargoKisa from '@/components/KargoKisa';
 import { HIZMET, HIZMET_IDS, hizmetUrl, type HizmetId } from '@/lib/intl-hizmet';
+const KF_VARIANT: Partial<Record<HizmetId, KFVariant>> = { fermuar: 'both', abiye: 'abiye', mont: 'mont' };
+const KF_SHORT: HizmetId[] = ['paca', 'kot', 'bel', 'gelinlik', 'kol', 'takim', 'deri', 'pantolon', 'beden', 'tamir'];
 
 const C = { green: '#2C4A3E', gold: '#D4B07A', cream: '#FAF7F2', sand: '#F2EDE4', ink: '#1C1814', muted: '#6B5F53', line: 'rgba(44,74,62,.15)' };
 const serif = 'Georgia,serif';
@@ -66,6 +70,8 @@ export default function TopicLanding({ lang, topic, hizmet }: { lang: ILang; top
             <ul style={{ margin: 0, paddingInlineStart: '1.2rem' }}>{U_IDS.map((u) => <li key={u}><Link href={uUrl(lang, u)} style={{ color: C.green }}>{UDATA[lang][u].h1}</Link></li>)}</ul>
           </section>
         )}
+        {hizmet && KF_VARIANT[hizmet] && <KargoFermuarKutusu lang={lang} variant={KF_VARIANT[hizmet]} />}
+        {hizmet && !KF_VARIANT[hizmet] && KF_SHORT.includes(hizmet) && <KargoKisa lang={lang} work={HIZMET[lang][hizmet].name} />}
         <section style={{ background: C.sand, borderRadius: 8, padding: '1.3rem' }}>
           <p style={{ margin: '0 0 1rem' }}>
             <a href={waLink(c.wa)} target="_blank" rel="noopener noreferrer" style={{ background: '#15803d', color: '#fff', padding: '.8rem 1.5rem', fontWeight: 700, textDecoration: 'none', fontSize: '.92rem', borderRadius: 4, display: 'inline-block' }}>💬 {ui.cta}</a>

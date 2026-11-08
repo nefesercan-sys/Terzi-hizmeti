@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import ReviewsBlock from '@/components/ReviewsBlock';
+import KargoKisa from '@/components/KargoKisa';
 import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
 import { businessNode } from '@/lib/business';
 import { fitDesc } from '@/lib/meta-fit';
@@ -256,6 +257,8 @@ export default function PacaKisaltmaPage() {
             </p>
           </div>
         </section>
+
+        <KargoKisa lang="tr" work="Paça kısaltma" />
 
         <section className="sec" id="faq" aria-labelledby="faq-h">
           <div className="ctr" style={{ maxWidth: 720 }}>

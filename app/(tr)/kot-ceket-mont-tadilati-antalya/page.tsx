@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import ReviewsBlock from '@/components/ReviewsBlock';
+import KargoFermuarKutusu from '@/components/KargoFermuarKutusu';
 import { businessNode } from '@/lib/business';
 import { fitKeywords } from '@/lib/meta-fit';
 
@@ -212,6 +213,8 @@ export default function Page() {
             </p>
           </div>
         </section>
+
+        <KargoFermuarKutusu lang="tr" variant="mont" />
 
         <section className="sec" id="faq" aria-labelledby="faq-h">
           <div className="ctr" style={{ maxWidth: 720 }}>

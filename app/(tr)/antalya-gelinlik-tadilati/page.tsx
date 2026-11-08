@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import ReviewsBlock from '@/components/ReviewsBlock';
+import KargoFermuarKutusu from '@/components/KargoFermuarKutusu';
 import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
 import { businessNode } from '@/lib/business';
 import { fitKeywords } from '@/lib/meta-fit';
@@ -213,6 +214,8 @@ export default function GelinlikTadilatiPage() {
 
         {/* FAQ */}
         <OrnekGorselSeridi konu={['gelinlik','genel']} lang="tr" anahtarlar={['abiye-elbise-atolye', 'abiye-askida']} sayfaUrl="https://terzihizmeti.com.tr/antalya-gelinlik-tadilati" />
+
+        <KargoFermuarKutusu lang="tr" variant="abiye" />
 
         <section className="sec" id="faq" aria-labelledby="faq-h">
           <div className="ctr" style={{ maxWidth: 720 }}>

@@ -29,6 +29,8 @@ import { angleFor, angleTitles, angleDescs, angleKeywords } from '@/lib/seo-angl
 import { fgNearDistrict, fgServiceMeta, eurFromText, EUR_FROM } from '@/lib/fg-meta';
 import { trNearDistrict } from '@/lib/tr-meta';
 import { fitDesc, fitKeywords } from '@/lib/meta-fit';
+import KargoFermuarKutusu, { type KFVariant } from '@/components/KargoFermuarKutusu';
+const KF_VARIANT: Record<string, KFVariant | undefined> = { fermuar: 'both', abiye: 'abiye', 'gece-kiyafeti': 'abiye', mont: 'mont' };
 
 const WA = (m: string) => `https://wa.me/${PHONE_TEL.replace('+', '')}?text=${encodeURIComponent(m)}`;
 const OG = `${SITE}/terzi-can-hero.jpg`;
@@ -786,6 +788,7 @@ export function ServicePage({ lang, s }: { lang: Lang; s: Service }) {
 
         {HIZMET_GORSEL[s.id] && <OrnekGorselSeridi konu={HIZMET_KONU[s.id] || 'hizmet'} lang={lang} anahtarlar={HIZMET_GORSEL[s.id]} sayfaUrl={url} />}
 
+        {KF_VARIANT[s.id] && <KargoFermuarKutusu lang={lang} variant={KF_VARIANT[s.id]} />}
         <Faq lang={lang} items={faq} />
         <Cta lang={lang} waMsg={waMsg} text={u.photoPrice} />
 

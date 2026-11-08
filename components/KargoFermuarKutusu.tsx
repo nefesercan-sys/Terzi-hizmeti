@@ -20,6 +20,7 @@ export default function KargoFermuarKutusu({ lang, variant = 'both' }: { lang: K
       <p style={{ margin: '0 0 .7rem' }}>{c.lead}</p>
       <ul style={{ margin: '0 0 .8rem', paddingInlineStart: '1.2rem' }}>{items.map((x) => <li key={x}>{x}</li>)}</ul>
       <ol style={{ margin: '0 0 .8rem', paddingInlineStart: '1.2rem' }}>{c.steps.map((x) => <li key={x}>{x}</li>)}</ol>
+      <p style={{ margin: '0 0 .7rem' }}>{c.more}</p>
       <p style={{ margin: '0 0 .9rem', fontSize: '.88rem', opacity: .85 }}>{c.note}</p>
       <a href={waLink(c.wa)} target="_blank" rel="noopener noreferrer" style={{ background: '#15803d', color: '#fff', padding: '.7rem 1.3rem', fontWeight: 700, textDecoration: 'none', fontSize: '.9rem', borderRadius: 4, display: 'inline-block' }}>
         💬 {c.cta}

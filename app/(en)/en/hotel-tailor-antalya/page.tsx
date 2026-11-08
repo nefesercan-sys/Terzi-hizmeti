@@ -9,7 +9,7 @@ const WA_DEF = `https://wa.me/905318986418?text=${encodeURIComponent('Hello, I w
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Hotel Tailor Antalya: We Come to Belek, Lara, Kemer & Side" },
-  description: "Mobile tailor to hotels in Belek, Lara, Güzeloba, Kemer, Side: alterations and repairs. We come to you. ☎ +90 531 898 64 18",
+  description: "Hotel tailor in Antalya: we come to you in Belek, Lara, Kemer, Side. Free pick-up, hemming from ₺200 (~€10), same day. ☎ +90 531 898 64 18",
   keywords: ['hotel tailor Antalya', 'tailor Belek hotel', 'tailor Lara hotel', 'tailor Kemer hotel', 'tailor Side hotel', 'urgent clothing alteration Antalya', 'mobile tailor Antalya', 'dress alteration hotel Antalya'],
   alternates: {
     canonical: `${SITE}${BASE_PATH}`,
@@ -30,6 +30,16 @@ export const metadata: Metadata = {
     images: [{ url: `${SITE}/terzi-can-hero.jpg`, width: 1024, height: 1024, alt: 'Hotel Tailor Antalya' }],
   },
 };
+
+const FAQ: [string, string][] = [
+  ['How does the mobile hotel tailor service work?', 'Share your hotel name, room number and a convenient time on WhatsApp. Our tailor comes to you, takes measurements or collects the item, and returns it repaired or altered.'],
+  ['Is pick-up and delivery to my hotel free?', 'Yes, pick-up and delivery to hotels and homes in the Antalya districts is free. The repair or alteration itself is priced by the job.'],
+  ['How much do hemming and zipper repairs cost?', 'Hemming and taking in start from ₺200 (about €10). Zipper replacement starts from ₺300 (about €15), and from about €20 for coats, jackets and leather. Leather alterations start from ₺400 (about €20). Prices exclude VAT; the exact price depends on the job, so send a photo on WhatsApp for a quote.'],
+  ['Which hotel districts do you cover?', 'We serve Belek, Lara, Güzeloba, Kemer and Side, and other Antalya districts on request.'],
+  ['How long does an alteration or repair take?', 'Most alterations and repairs are completed the same day (urgent jobs 1–2 hours), depending on the job. For wedding or evening dresses, we recommend contacting us as early as possible.'],
+  ['How can I pay?', 'You can pay in cash or by card, in any major currency.'],
+  ['What languages do you speak?', 'Write to us on WhatsApp in your own language and we will reply.'],
+];
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -55,12 +65,7 @@ const jsonLd = {
     },
     {
       '@type': 'FAQPage',
-      mainEntity: [
-        { '@type': 'Question', name: 'How does the mobile hotel tailor service work?', acceptedAnswer: { '@type': 'Answer', text: 'Share your hotel name, room number and a convenient time on WhatsApp. Our tailor comes to you, takes measurements or collects the item, and returns it repaired or altered.' } },
-        { '@type': 'Question', name: 'Which hotel districts do you cover?', acceptedAnswer: { '@type': 'Answer', text: 'We serve Belek, Lara, Güzeloba, Kemer and Side, and other Antalya districts on request.' } },
-        { '@type': 'Question', name: 'How long does an alteration or repair take?', acceptedAnswer: { '@type': 'Answer', text: 'Most alterations and repairs are completed the same day (urgent jobs 1–2 hours). For wedding or evening dresses, we recommend contacting us as early as possible.' } },
-        { '@type': 'Question', name: 'What languages do you speak?', acceptedAnswer: { '@type': 'Answer', text: 'Write to us on WhatsApp in your own language and we will reply.' } },
-      ],
+      mainEntity: FAQ.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
     },
   ],
 };
@@ -90,11 +95,12 @@ export default function OtelBolgeleriEnHub() {
           </div>
           <div className="hero-content">
             <span className="hero-tag">🏨 Belek · Lara · Kundu · Konyaaltı · Kemer · Göynük · Muratpaşa · Side</span>
-            <h1 id="hub-h">Hotel Tailor — <span className="accent">Mobile Service</span></h1>
+            <h1 id="hub-h">Hotel Tailor in Antalya — <span className="accent">We Come to Your Hotel</span></h1>
             <p className="hero-desc">
               Choose your district, share your hotel name and preferred time on WhatsApp — our tailor
               comes to you. Alterations and repairs, delivered directly to your
-              hotel.
+              hotel. Free pick-up and delivery, hemming from ₺200 (about €10), most jobs
+              done the same day.
             </p>
             <div className="hero-btns">
               <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-primary">💬 Message on WhatsApp →</a>
@@ -113,7 +119,7 @@ export default function OtelBolgeleriEnHub() {
                 that needs altering — on holiday, there's rarely time to find a tailor yourself.
                 Terzi Can comes directly to your hotel in Belek, Lara, Güzeloba, Kemer or Side: we take
                 measurements, repair, collect and return your garment — all without you having to leave
-                the hotel. Write to us on WhatsApp in your own language, so communication is
+                the hotel. Pick-up and delivery are free. Write to us on WhatsApp in your own language, so communication is
                 straightforward.
               </p>
             </div>
@@ -176,12 +182,7 @@ export default function OtelBolgeleriEnHub() {
               <span className="eyebrow">FAQ</span>
               <h2 className="sec-h ff" id="faq-h">Frequently Asked Questions</h2>
             </div>
-            {[
-              ['How does the mobile hotel tailor service work?', 'Share your hotel name, room number and a convenient time on WhatsApp. Our tailor comes to you, takes measurements or collects the item, and returns it repaired or altered.'],
-              ['Which hotel districts do you cover?', 'We serve Belek, Lara, Güzeloba, Kemer and Side, and other Antalya districts on request.'],
-              ['How long does an alteration or repair take?', 'Most alterations and repairs are completed the same day (urgent jobs 1–2 hours). For wedding or evening dresses, we recommend contacting us as early as possible.'],
-              ['What languages do you speak?', 'Write to us on WhatsApp in your own language and we will reply.'],
-            ].map(([q, a]) => (
+            {FAQ.map(([q, a]) => (
               <div key={q} className="faq-item">
                 <div className="faq-q">{q}</div>
                 <div className="faq-a">{a}</div>

@@ -8,8 +8,8 @@ const WA_DEF = `https://wa.me/905318986418?text=${encodeURIComponent('Hallo, ich
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: 'Schneider im Hotel Antalya · Mobiler Service',
-  description: 'Mobiler Schneider zu Hotels in Belek, Lara, Güzeloba, Kemer, Side: Änderungen und Reparatur. Wir kommen zu Ihnen. ☎ +90 531 898 64 18',
+  title: 'Schneider im Hotel Antalya · Abholung kostenlos',
+  description: 'Schneider im Hotel in Belek, Lara, Kemer, Side: Abholung kostenlos, Hose kürzen ab ₺200 (~€10), meist am selben Tag. ☎ +90 531 898 64 18',
   keywords: ['Schneider Hotel Antalya', 'mobiler Schneider Antalya', 'Schneider Belek Hotel', 'Schneider Lara Hotel', 'Schneider Kemer Hotel', 'Schneider Side Hotel', 'Kleidung ändern Antalya eilig', 'Änderungsschneiderei Hotel Antalya'],
   alternates: {
     canonical: `${SITE}${BASE_PATH}`,
@@ -30,6 +30,16 @@ export const metadata: Metadata = {
     images: [{ url: `${SITE}/terzi-can-hero.jpg`, width: 1024, height: 1024, alt: 'Schneider im Hotel Antalya' }],
   },
 };
+
+const FAQ: [string, string][] = [
+  ['Wie funktioniert der mobile Schneiderservice im Hotel?', 'Sie teilen uns Hotelname, Zimmernummer und einen passenden Zeitpunkt per WhatsApp mit. Unser Schneider kommt zu Ihnen, nimmt Maß oder holt das Kleidungsstück ab, und liefert es fertig repariert oder geändert zurück.'],
+  ['In welche Hotelbezirke kommen Sie?', 'Wir bedienen Belek, Lara, Güzeloba, Kemer und Side sowie auf Anfrage weitere Bezirke Antalyas.'],
+  ['Sind Abholung und Lieferung ins Hotel kostenlos?', 'Ja, Abholung und Lieferung zu Hotels und Adressen in den Antalya-Bezirken sind kostenlos. Die Reparatur oder Änderung selbst wird nach Aufwand berechnet.'],
+  ['Was kosten Kürzen und Reißverschluss?', 'Kürzen und Taille enger machen ab ₺200 (ca. 10 €), Reißverschluss wechseln ab ₺300 (ca. 15 €, für Mäntel, Jacken und Leder ca. 20 €). Preise ohne MwSt.; den genauen Preis nennen wir nach einem Foto per WhatsApp.'],
+  ['Wie kann ich bezahlen?', 'Bar oder mit Karte, in jeder gängigen Währung.'],
+  ['Wie lange dauert eine Änderung oder Reparatur?', 'Die meisten Änderungen und Reparaturen sind am selben Tag fertig. Für Hochzeits- oder Abendkleider empfehlen wir, uns möglichst früh zu kontaktieren.'],
+  ['Welche Sprachen sprechen Sie?', 'Schreiben Sie uns per WhatsApp in Ihrer Sprache, wir antworten.'],
+];
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -55,12 +65,7 @@ const jsonLd = {
     },
     {
       '@type': 'FAQPage',
-      mainEntity: [
-        { '@type': 'Question', name: 'Wie funktioniert der mobile Schneiderservice im Hotel?', acceptedAnswer: { '@type': 'Answer', text: 'Sie teilen uns Hotelname, Zimmernummer und einen passenden Zeitpunkt per WhatsApp mit. Unser Schneider kommt zu Ihnen, nimmt Maß oder holt das Kleidungsstück ab, und liefert es fertig repariert oder geändert zurück.' } },
-        { '@type': 'Question', name: 'In welche Hotelbezirke kommen Sie?', acceptedAnswer: { '@type': 'Answer', text: 'Wir bedienen Belek, Lara, Güzeloba, Kemer und Side sowie auf Anfrage weitere Bezirke Antalyas.' } },
-        { '@type': 'Question', name: 'Wie lange dauert eine Änderung oder Reparatur?', acceptedAnswer: { '@type': 'Answer', text: 'Die meisten Änderungen und Reparaturen sind am selben Tag fertig. Für Hochzeits- oder Abendkleider empfehlen wir, uns möglichst früh zu kontaktieren.' } },
-        { '@type': 'Question', name: 'Welche Sprachen sprechen Sie?', acceptedAnswer: { '@type': 'Answer', text: 'Schreiben Sie uns per WhatsApp in Ihrer Sprache, wir antworten.' } },
-      ],
+      mainEntity: FAQ.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
     },
   ],
 };
@@ -91,11 +96,12 @@ export default function OtelBolgeleriDeHub() {
           </div>
           <div className="hero-content">
             <span className="hero-tag">🏨 Belek · Lara · Kundu · Konyaaltı · Kemer · Göynük · Muratpaşa · Side</span>
-            <h1 id="hub-h">Schneider im Hotel — <span className="accent">Mobiler Service</span></h1>
+            <h1 id="hub-h">Schneider in Antalya — <span className="accent">wir kommen in Ihr Hotel</span></h1>
             <p className="hero-desc">
               Wählen Sie Ihren Bezirk, teilen Sie Hotelname und Zeitpunkt per WhatsApp mit — unser
               Schneider kommt zu Ihnen. Änderungen und Reparaturen,
-              direkt vor Ort in Ihrem Hotel.
+              direkt vor Ort in Ihrem Hotel. Abholung und Lieferung kostenlos, Hose kürzen ab ₺200
+              (ca. 10 €), die meisten Arbeiten am selben Tag fertig.
             </p>
             <div className="hero-btns">
               <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-primary">💬 Auf WhatsApp schreiben →</a>
@@ -115,7 +121,7 @@ export default function OtelBolgeleriDeHub() {
                 braucht, oder ein Anzug, der angepasst werden muss — im Urlaub bleibt
                 selten Zeit, selbst eine Änderungsschneiderei zu finden. Terzi Can kommt direkt zu
                 Ihrem Hotel in Belek, Lara, Güzeloba, Kemer oder Side: Maßnehmen, Reparieren, Abholen
-                und Zurückbringen — alles ohne dass Sie Ihr Hotel verlassen müssen. Schreiben Sie uns
+                und Zurückbringen — alles ohne dass Sie Ihr Hotel verlassen müssen. Abholung und Lieferung sind kostenlos. Schreiben Sie uns
                 per WhatsApp in Ihrer Sprache, die Verständigung ist unkompliziert.
               </p>
             </div>
@@ -182,12 +188,7 @@ export default function OtelBolgeleriDeHub() {
               <span className="eyebrow">FAQ</span>
               <h2 className="sec-h ff" id="faq-h">Häufig gestellte Fragen</h2>
             </div>
-            {[
-              ['Wie funktioniert der mobile Schneiderservice im Hotel?', 'Sie teilen uns Hotelname, Zimmernummer und einen passenden Zeitpunkt per WhatsApp mit. Unser Schneider kommt zu Ihnen, nimmt Maß oder holt das Kleidungsstück ab, und liefert es fertig repariert oder geändert zurück.'],
-              ['In welche Hotelbezirke kommen Sie?', 'Wir bedienen Belek, Lara, Güzeloba, Kemer und Side sowie auf Anfrage weitere Bezirke Antalyas.'],
-              ['Wie lange dauert eine Änderung oder Reparatur?', 'Die meisten Änderungen und Reparaturen sind am selben Tag fertig. Für Hochzeits- oder Abendkleider empfehlen wir, uns möglichst früh zu kontaktieren.'],
-              ['Welche Sprachen sprechen Sie?', 'Schreiben Sie uns per WhatsApp in Ihrer Sprache, wir antworten.'],
-            ].map(([q, a]) => (
+            {FAQ.map(([q, a]) => (
               <div key={q} className="faq-item">
                 <div className="faq-q">{q}</div>
                 <div className="faq-a">{a}</div>

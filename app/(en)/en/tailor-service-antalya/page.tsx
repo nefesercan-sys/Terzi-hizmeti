@@ -23,9 +23,9 @@ const OG        = `${SITE}/terzi-can-hero.jpg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Tailor in Antalya: Repairs, Alterations, Custom | Terzi Can" },
+  title: { absolute: "Tailor in Antalya: Hemming from ₺200, Repairs | Terzi Can" },
   // SEO Optimizasyonu: Google'da kesilmemesi için ~150 karaktere optimize edildi
-  description: 'Mobile tailor, repair and alterations service across Konyaaltı and nearby districts. We visit your hotel in Belek, Lara, Kemer, and Side.',
+  description: 'Tailor in Antalya (Konyaaltı): hemming from ₺200 (~€10), zipper from ₺300. Free hotel pick-up and delivery in Belek, Lara, Kemer, Side. Same day.',
   keywords: ['tailor Antalya', 'tailor service Antalya', 'hotel tailor Antalya', 'urgent clothing alteration Antalya', 'tailor Konyaaltı', 'clothing repair Antalya', 'trouser hemming Antalya', 'tailor open Sunday Antalya'],
   authors: [{ name: 'Terzi Can', url: SITE }],
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
 // AI/özet aramalarında en çok sorulan sorular (kısa, doğrudan cevaplar)
 const EXTRA_FAQS: [string, string][] = [
   ['Where can I get trousers hemmed near me in Antalya?', 'At Terzi Can in Hurma, Konyaaltı, open every day 08:00–23:00. Hemming (trousers, jeans) is ready the same day (urgent jobs 1–2 hours). WhatsApp: ' + PHONE],
-  ['How much does hemming and zipper replacement cost in Antalya?', 'The price depends on the garment and the work: hemming, waist taking-in, zipper replacement, evening and wedding dress alterations. Send a photo on WhatsApp for an exact quote.'],
+  ['How much does hemming and zipper replacement cost in Antalya?', 'Hemming and waist taking-in start from ₺200 (about €10); zipper replacement starts from ₺300 (about €15, about €20 for coats, jackets and leather). Prices exclude VAT. Custom sewing and evening or wedding dress alterations are quoted from a photo on WhatsApp.'],
   ['Can you alter a jacket, coat, shirt, skirt or shorts?', 'Yes. We alter and repair jackets, coats, shirts, skirts, shorts, dresses and trousers for men and women. Send a photo of the garment on WhatsApp and we will quote the price and time.'],
   ['I am a hotel guest staying only a few days. Is that enough time?', 'Yes. Most hemming and repairs are ready the same day (urgent jobs 1–2 hours), and we can pick up and return clothes to your hotel (free for hotels).'],
   ['What are your opening hours and how do I contact you?', 'Every day 08:00–23:00. Call or WhatsApp ' + PHONE + '. The workshop is in Hurma, Konyaaltı, Antalya.'],
@@ -115,11 +115,11 @@ const SERVICES = [
 
 const REPAIR_CATEGORIES = [
   { icon: '✂️', title: 'Tailoring', keyword: 'custom tailoring Antalya', desc: 'Made-from-scratch garments to your exact measurements.',
-    rows: [["Men's Trousers", ''], ["Women's Dress", ''], ['Evening Gown', ''], ["Children's Clothing", '']] as [string, string][] },
+    rows: [["Men's Trousers", 'by photo'], ["Women's Dress", 'by photo'], ['Evening Gown', 'by photo'], ["Children's Clothing", 'by photo']] as [string, string][] },
   { icon: '🔧', title: 'Repair', keyword: 'clothing repair Antalya', desc: 'Zippers and tears — everyday fixes.',
-    rows: [['Zipper Replacement (Trousers)', ''], ['Zipper Replacement (Coat)', '']] as [string, string][] },
+    rows: [['Zipper Replacement (Trousers)', 'from ₺300 (~€15)'], ['Zipper Replacement (Coat, Jacket, Leather)', 'from ₺300 (~€20)']] as [string, string][] },
   { icon: '📏', title: 'Alterations', keyword: 'hemming Antalya', desc: 'Precise fit adjustments to your body.',
-    rows: [['Hemming', ''], ['Waist Taking In', ''], ['Sleeve Shortening', ''], ['Dress / Jacket Resizing', ''], ['Wedding & Evening Dress', '']] as [string, string][] },
+    rows: [['Hemming', 'from ₺200 (~€10)'], ['Waist Taking In', 'from ₺200 (~€10)'], ['Sleeve Shortening', 'from ₺200 (~€10)'], ['Dress / Jacket Resizing', 'by photo'], ['Wedding & Evening Dress (alterations only)', 'by photo']] as [string, string][] },
 ];
 
 const FAQS: [string, string][] = [
@@ -260,13 +260,13 @@ export default function TailorServiceAntalyaPage() {
                     <table className="price-table" aria-label={cat.title}>
                       <caption className="visually-hidden">{cat.title} price list</caption>
                       <thead><tr><th scope="col" className="visually-hidden">Service</th><th scope="col" className="visually-hidden">Price</th></tr></thead>
-                      <tbody>{cat.rows.map((row) => (<tr key={row[0]}><td colSpan={2}>{row[0]}</td></tr>))}</tbody>
+                      <tbody>{cat.rows.map((row) => (<tr key={row[0]}><td>{row[0]}</td><td>{row[1]}</td></tr>))}</tbody>
                     </table>
                   </article>
                 ))}
               </div>
               <p style={{ fontSize: '.76rem', color: 'rgba(255,255,255,.4)', marginTop: '1rem', fontStyle: 'italic' }}>
-                The price depends on the fabric and the work; we confirm it on WhatsApp before we start.
+                Prices are “from” prices and exclude VAT. The exact price depends on the fabric and the work; we confirm it on WhatsApp before we start.
               </p>
               <div style={{ textAlign: 'center', marginTop: '1.8rem' }}>
                 <a href={WA('Hello, I would like to know your tailoring/repair prices.')} target="_blank" rel="noopener noreferrer" className="btn-primary">

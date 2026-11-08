@@ -1,6 +1,7 @@
 
 
 import { IMG, ALT } from '@/lib/turist-keten';
+import { OZEL, ozelUrl } from '@/lib/ozel-siparis';
 
 const PHONE = '+90 531 898 64 18';
 const WA_NUM = '905318986418';
@@ -387,6 +388,7 @@ export default function KetenPamukOzelDikim({ lang = 'tr' }: { lang?: Lang }) {
           💬 {t.waBtn}
         </a>
         <p style={{ color: 'rgba(255,255,255,.5)', marginTop: '1.2rem', fontSize: '.75rem' }}>{PHONE}</p>
+        <p style={{ marginTop: '.8rem', fontSize: '.85rem' }}><a href={ozelUrl(lang)} style={{ color: '#D4B07A', textDecoration: 'underline' }}>{OZEL[lang].crumb}</a></p>
       </section>
     </main>
   );

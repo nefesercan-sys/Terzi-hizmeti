@@ -180,3 +180,48 @@ export const KARGO_FERMUAR: Record<KFLang, KFCopy> = {
     faqA: 'نعم. يمكنك إرسال فستان سهرة أو فستان أو معطف أو جاكيت عبر الشحن؛ نستبدل السحّاب ونعيد القطعة إليك. الشحن متاح داخل أنطاليا وإلى الخارج، ويتحمّل العميل رسوم الشحن. يُتّفق على السعر والتفاصيل عبر واتساب. إن رغبت، يمكن أيضًا تنفيذ أعمال الإصلاح والتعديل الأخرى عبر الشحن بعد الاتفاق على التفاصيل عبر واتساب.',
   },
 };
+
+// ── Kısa varyant: işin kendi sayfasında tek cümle ('Dilerseniz bu işlemi kargoyla da yaptırabilirsiniz'). {w} = işin adı. ──
+// Fiyat yok; kurallar aynı: Antalya içi ve yurt dışı, kargo ücreti müşteriye ait, ayrıntı WhatsApp'tan. Dikim sayfalarında kullanılmaz.
+export const KARGO_KISA: Record<KFLang, { v: [string, string]; link: string }> = {
+  tr: { v: [
+    '{w}: dilerseniz bu işlemi WhatsApp’tan görüşerek kargoyla da yaptırabilirsiniz (Antalya içi ve yurt dışı; kargo ücreti müşteriye aittir, fiyat ve ayrıntılar WhatsApp’tan).',
+    'Uzakta mısınız? {w} için kıyafetinizi kargoyla gönderebilirsiniz; Antalya içi ve yurt dışı için WhatsApp’tan görüşürüz, kargo ücretini müşteri öder.',
+  ], link: 'Kargoyla hizmet' },
+  en: { v: [
+    '{w}: if you like, you can also have this done by courier after agreeing the details on WhatsApp (within Antalya and abroad; the customer pays the shipping fee).',
+    'Not in Antalya? For {w} you can send the garment by courier; we agree price and details on WhatsApp, within Antalya and abroad, and the customer pays shipping.',
+  ], link: 'Service by courier' },
+  ru: { v: [
+    '{w}: при желании эту работу можно выполнить и с отправкой курьером после обсуждения в WhatsApp (по Анталье и за границу; доставку оплачивает клиент).',
+    'Вы далеко? Для работы «{w}» можно отправить вещь курьером; цену и детали уточняем в WhatsApp, по Анталье и за границу, доставку оплачивает клиент.',
+  ], link: 'Услуга с отправкой курьером' },
+  de: { v: [
+    '{w}: Auf Wunsch können Sie diese Arbeit nach Absprache per WhatsApp auch per Versand erledigen lassen (innerhalb Antalyas und ins Ausland; die Versandkosten trägt der Kunde).',
+    'Nicht in Antalya? Für „{w}“ können Sie das Teil per Kurier schicken; Preis und Einzelheiten klären wir per WhatsApp, innerhalb Antalyas und ins Ausland, die Versandkosten trägt der Kunde.',
+  ], link: 'Service per Versand' },
+  es: { v: [
+    '{w}: si lo desea, también puede encargar este trabajo por envío, tras acordarlo por WhatsApp (dentro de Antalya y al extranjero; el cliente paga el envío).',
+    '¿No está en Antalya? Para «{w}» puede enviar la prenda por mensajería; precio y detalles se acuerdan por WhatsApp, dentro de Antalya y al extranjero, y el cliente paga el envío.',
+  ], link: 'Servicio por envío' },
+  fr: { v: [
+    '{w} : si vous le souhaitez, vous pouvez aussi confier ce travail par envoi, après accord sur WhatsApp (à Antalya et à l’étranger ; les frais d’envoi sont à la charge du client).',
+    'Vous n’êtes pas à Antalya ? Pour « {w} », vous pouvez envoyer le vêtement par transporteur ; prix et détails sont précisés sur WhatsApp, à Antalya et à l’étranger, frais d’envoi à la charge du client.',
+  ], link: 'Service par envoi' },
+  pl: { v: [
+    '{w}: jeśli chcesz, możesz zlecić tę pracę także wysyłkowo, po ustaleniu na WhatsApp (w obrębie Antalyi i za granicę; koszt wysyłki ponosi klient).',
+    'Nie jesteś w Antalyi? Przy „{w}” możesz wysłać ubranie kurierem; cenę i szczegóły ustalamy na WhatsApp, w obrębie Antalyi i za granicę, koszt wysyłki ponosi klient.',
+  ], link: 'Usługa wysyłkowa' },
+  uk: { v: [
+    '{w}: за бажання цю роботу можна замовити й із пересилкою, після узгодження у WhatsApp (по Анталії та за кордон; вартість доставки сплачує клієнт).',
+    'Ви не в Анталії? Для «{w}» можна надіслати річ кур’єром; ціну та деталі уточнюємо у WhatsApp, по Анталії та за кордон, доставку сплачує клієнт.',
+  ], link: 'Послуга з пересилкою' },
+  nl: { v: [
+    '{w}: als u wilt, kunt u dit werk ook per verzending laten doen, na overleg via WhatsApp (binnen Antalya en naar het buitenland; de verzendkosten betaalt de klant).',
+    'Niet in Antalya? Voor “{w}” kunt u het kledingstuk per koerier sturen; prijs en details bespreken we via WhatsApp, binnen Antalya en naar het buitenland, verzendkosten voor de klant.',
+  ], link: 'Service per verzending' },
+  ar: { v: [
+    '{w}: إن رغبت، يمكنك تنفيذ هذا العمل عبر الشحن أيضًا بعد الاتفاق على واتساب (داخل أنطاليا وإلى الخارج؛ يتحمّل العميل رسوم الشحن).',
+    'لست في أنطاليا؟ لعمل «{w}» يمكنك إرسال القطعة عبر الشحن؛ نتفق على السعر والتفاصيل عبر واتساب، داخل أنطاليا وإلى الخارج، ويتحمّل العميل رسوم الشحن.',
+  ], link: 'الخدمة عبر الشحن' },
+};

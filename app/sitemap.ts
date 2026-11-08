@@ -14,6 +14,7 @@ import { HIZMET_IDS, hizmetUrl, hizmetLanguages, sixForService } from '@/lib/int
 import { TOPIC_IDS, topicUrl, topicLanguages, sixAlt } from '@/lib/intl-topics';
 import { KLANGS, kargoUrl, kargoLanguages } from '@/lib/kargo-terzi';
 import { GLANGS, olcuUrl, olcuLanguages } from '@/lib/olcu-rehberi';
+import { OLANGS, ozelUrl, ozelLanguages, OZEL_UPDATED } from '@/lib/ozel-siparis';
 import { SSS_PATH, SSS_UPDATED, sssHreflang } from '@/lib/sss-merkezi';
 import { PLANGS, promoUrl, promoAlternates, PROMO_LAST_UPDATE, PROMO_FOTOLAR } from '@/lib/promosyon-tekstil';
 
@@ -205,7 +206,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const olcuSayfalari: MetadataRoute.Sitemap = GLANGS.map((l) => ({
     url: `${SITE}${olcuUrl(l)}`, lastModified: new Date('2026-11-08'), changeFrequency: 'monthly' as const, priority: 0.7, alternates: { languages: olcuLanguages() },
   }));
-  const hepsi = [...sabitSayfalar, ...sssSayfalari, ...kargoSayfalari, ...olcuSayfalari, ...otelSayfalari, ...seoSayfalari, ...turistSayfalari, ...iletisimSayfalari, ...intlSayfalari, ...zoneSayfalari, ...svcSayfalari, ...fiyatSayfalari, ...iletSayfalari, ...konuSayfalari, ...hizmetSayfalari, ...uretimSayfalari, ...promoSayfalari];
+  const ozelSayfalari: MetadataRoute.Sitemap = OLANGS.map((l) => ({
+    url: `${SITE}${ozelUrl(l)}`, lastModified: new Date(OZEL_UPDATED), changeFrequency: 'monthly' as const, priority: 0.8, alternates: { languages: ozelLanguages() },
+  }));
+  const hepsi = [...sabitSayfalar, ...sssSayfalari, ...kargoSayfalari, ...ozelSayfalari, ...olcuSayfalari, ...otelSayfalari, ...seoSayfalari, ...turistSayfalari, ...iletisimSayfalari, ...intlSayfalari, ...zoneSayfalari, ...svcSayfalari, ...fiyatSayfalari, ...iletSayfalari, ...konuSayfalari, ...hizmetSayfalari, ...uretimSayfalari, ...promoSayfalari];
   for (const e of hepsi) {
     const ilk = gorulen.get(e.url);
     if (!ilk) gorulen.set(e.url, e);

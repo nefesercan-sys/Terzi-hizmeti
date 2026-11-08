@@ -7,6 +7,7 @@ import { KARGO, kargoUrl, kargoLanguages, type KLang } from '@/lib/kargo-terzi';
 import { SSS_LINKS, SSS_PATH } from '@/lib/sss-merkezi';
 import { svcUrl } from '@/lib/intl-services';
 import type { ILang } from '@/lib/intl';
+import { OZEL, ozelUrl } from '@/lib/ozel-siparis';
 
 const C = { green: '#2C4A3E', gold: '#D4B07A', cream: '#FAF7F2', sand: '#F2EDE4', ink: '#1C1814', muted: '#6B5F53' };
 const serif = 'Georgia,serif';
@@ -107,7 +108,7 @@ export default function KargoSayfasi({ lang }: { lang: KLang }) {
           <p style={{ margin: '0 0 .8rem', fontSize: '.92rem' }}>
             <a href={`tel:${PHONE_TEL}`} style={{ color: C.green }} dir="ltr">☎ {PHONE}</a>{' · '}<a href={MAPS} target="_blank" rel="noopener noreferrer" style={{ color: C.green }}>Google Maps</a>
           </p>
-          <p style={{ margin: 0, fontSize: '.9rem' }}><strong>{c.hubTitle}:</strong>{links.map(([h], i) => <span key={h}>{i ? ' · ' : ' '}<Link href={h} style={{ color: C.green }}>{labels[i]}</Link></span>)}</p>
+          <p style={{ margin: 0, fontSize: '.9rem' }}><strong>{c.hubTitle}:</strong>{links.map(([h], i) => <span key={h}>{i ? ' · ' : ' '}<Link href={h} style={{ color: C.green }}>{labels[i]}</Link></span>)}{' · '}<Link href={ozelUrl(lang)} style={{ color: C.green }}>{OZEL[lang].crumb}</Link></p>
         </section>
       </article>
     </main>

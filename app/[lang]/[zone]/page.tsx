@@ -14,6 +14,8 @@ import KargoSayfasi, { kargoMetadata } from '@/components/KargoSayfasi';
 import { KARGO, parseKargoSlug } from '@/lib/kargo-terzi';
 import OlcuRehberiSayfasi, { olcuMetadata } from '@/components/OlcuRehberiSayfasi';
 import { OLCU, parseOlcuSlug } from '@/lib/olcu-rehberi';
+import OzelSiparisSayfasi, { ozelMetadata } from '@/components/OzelSiparisSayfasi';
+import { OZEL, parseOzelSlug } from '@/lib/ozel-siparis';
 import { FIYAT, isFiyatSlug, fiyatUrl } from '@/lib/intl-fiyat';
 import IletisimLanding from '@/components/IletisimLanding';
 import { ILETISIM, isIletisimSlug, iletisimUrl } from '@/lib/intl-iletisim';
@@ -30,7 +32,7 @@ import { UDATA, U_IDS, parseU, uMetadata } from '@/lib/uretim';
 // Yalnızca tanımlı otel bölgesi sayfaları üretilir; diğer iki-segmentli yollar 404 olur.
 export const dynamicParams = false;
 export function generateStaticParams() {
-  return ILANGS.flatMap((lang) => [...U_IDS.map((u) => ({ lang, zone: UDATA[lang][u].slug })), { lang, zone: SVC[lang].slug }, { lang, zone: FIYAT[lang].slug }, { lang, zone: ILETISIM[lang].slug }, { lang, zone: promoSlug(lang) }, { lang, zone: KARGO[lang].slug }, { lang, zone: OLCU[lang].slug }, ...TOPIC_IDS.map((t) => ({ lang, zone: TOPICS[lang][t].slug })), ...HIZMET_IDS.map((h) => ({ lang, zone: HIZMET[lang][h].slug })), ...ZONE_SLUGS.map((z) => ({ lang, zone: zoneSlug(lang, z) }))]);
+  return ILANGS.flatMap((lang) => [...U_IDS.map((u) => ({ lang, zone: UDATA[lang][u].slug })), { lang, zone: SVC[lang].slug }, { lang, zone: FIYAT[lang].slug }, { lang, zone: ILETISIM[lang].slug }, { lang, zone: promoSlug(lang) }, { lang, zone: KARGO[lang].slug }, { lang, zone: OZEL[lang].slug }, { lang, zone: OLCU[lang].slug }, ...TOPIC_IDS.map((t) => ({ lang, zone: TOPICS[lang][t].slug })), ...HIZMET_IDS.map((h) => ({ lang, zone: HIZMET[lang][h].slug })), ...ZONE_SLUGS.map((z) => ({ lang, zone: zoneSlug(lang, z) }))]);
 }
 
 type P = { params: Promise<{ lang: string; zone: string }> };
@@ -43,6 +45,7 @@ export async function generateMetadata({ params }: P): Promise<Metadata> {
   if (slug === promoSlug(lang)) return buildPromoMetadata(lang);
   if (parseKargoSlug(lang, slug)) return kargoMetadata(lang);
   if (parseOlcuSlug(lang, slug)) return olcuMetadata(lang);
+  if (parseOzelSlug(lang, slug)) return ozelMetadata(lang);
   if (isFiyatSlug(lang, slug)) {
     const c = FIYAT[lang]; const url = `${SITE}${fiyatUrl(lang)}`;
     const title = c.title.length + 12 <= 60 ? `${c.title} | Terzi Can` : c.title;
@@ -144,6 +147,7 @@ export default async function Page({ params }: P) {
   if (slug === promoSlug(lang)) return <PromosyonTekstilSayfasi lang={lang} />;
   if (parseKargoSlug(lang, slug)) return <KargoSayfasi lang={lang} />;
   if (parseOlcuSlug(lang, slug)) return <OlcuRehberiSayfasi lang={lang} />;
+  if (parseOzelSlug(lang, slug)) return <OzelSiparisSayfasi lang={lang} />;
   if (isFiyatSlug(lang, slug)) return <FiyatLanding lang={lang} />;
   if (isIletisimSlug(lang, slug)) return <IletisimLanding lang={lang} />;
   if (isSvcSlug(lang, slug)) return <ServicesLanding lang={lang} />;

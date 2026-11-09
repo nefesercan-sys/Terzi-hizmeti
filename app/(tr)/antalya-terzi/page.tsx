@@ -22,8 +22,8 @@ const OG        = `${SITE}/terzi-can-hero.jpg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Antalya Terzi · Paça ₺200'den, Fermuar ₺300'den · 08–23" },
-  description: "Antalya'da bay bayan terzi: paça kısaltma ₺200, fermuar ₺300, bel daraltma ₺200. Eve ve otele servis. 08:00–23:00. ☎ " + PHONE,
+  title: { absolute: "Antalya Terzi · Her Gün 08–23 Açık, Aynı Gün Teslim" },
+  description: "Konyaaltı'nda bay bayan terzi. Fotoğrafı WhatsApp'tan gönderin, fiyatı hemen öğrenin. Paça 200 TL'den, normal işler aynı gün, acil 1–2 saat. Her gün 08:00–23:00. ☎ " + PHONE,
   keywords: ['Antalya terzi', 'Konyaaltı terzi', 'Hurma terzi', 'Liman terzi', 'Uncalı terzi', 'Gürsu terzi', 'otele gelen terzi Antalya', 'acil terzi Antalya'],
   authors: [{ name: BIZ, url: SITE }],
   creator: BIZ,

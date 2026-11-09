@@ -26,9 +26,9 @@ const OG        = `${SITE}/terzi-can-hero.jpg`;
 // ─── METADATA ─────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Terzi Can Antalya · Paça ₺200'den, Fermuar ₺300'den" },
+  title: { absolute: "Terzi Can Antalya · Konyaaltı Terzi, 2006'dan Beri" },
   description:
-    "Konyaaltı Hurma, Liman, Uncalı, Gürsu'da bay bayan tamir tadilat: söküğü dikme, paça ₺200, fermuar değişimi ₺300. Her gün 08:00–23:00. ☎ 0531 898 64 18",
+    "2006'dan beri Konyaaltı Hurma, Liman, Uncalı, Gürsu'da bay bayan terzi: tamir, tadilat, özel dikim. Paça 200 TL'den, fermuar 300 TL'den (KDV hariç). Her gün 08:00–23:00. ☎ 0531 898 64 18",
   keywords: ['Antalya terzi', 'Konyaaltı terzi', 'otele gelen terzi Antalya', 'acil terzi Antalya', 'paça kısaltma Konyaaltı', 'fermuar değişimi Antalya', 'gelinlik tadilatı Antalya', 'özel dikim Antalya'],
   authors: [{ name: BIZ, url: SITE }],
   creator: BIZ,

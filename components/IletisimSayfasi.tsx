@@ -183,7 +183,7 @@ const T = {
   },
   de: {
     title: `Schneider Antalya Kontakt | ${PHONE} · WhatsApp`,
-    desc: `Schneider Terzi Can, Antalya: Anruf oder WhatsApp ${PHONE}. Hurma, Konyaaltı. Täglich 08:00–23:00. Foto senden, Preis noch heute erfahren.`,
+    desc: `Schneider in der Nähe in Antalya: Terzi Can, Hurma, Konyaaltı. Anruf oder WhatsApp ${PHONE}, täglich 08:00–23:00. Foto senden, Preis erfahren.`,
     tag: 'Antalya · Konyaaltı · Täglich 08:00–23:00',
     h1: 'Kontakt Terzi Can — Schneider in Antalya',
     lead: 'Telefon, WhatsApp und Adresse. Rufen Sie an oder schreiben Sie uns: Foto senden und Preis sowie Fertigstellungszeit erfahren.',

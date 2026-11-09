@@ -260,8 +260,29 @@ const PHOTO: Record<L3, string> = { en: 'Price by photo on WhatsApp', ru: 'Це�
 const OPEN_SHORT: Record<L3, string> = { en: 'open daily 08:00–23:00', ru: 'ежедневно 08:00–23:00', de: 'täglich 08:00–23:00' };
 
 /** Yakın bölge sayfası için elle yazılmış EN/RU/DE meta; kayıt yoksa undefined. */
+/** Almanca bölge sayfaları (tatil bölgeleri): fiyat ve 'in der Nähe' niyeti başlık/açıklamaya eklenir. Fiyatlar sitede yayınlanan başlangıç fiyatlarıdır. */
+const DE_NEAR_META: Record<string, { t: string; d: string; kw: string[] }> = {
+  konyaalti: { t: 'Schneider Konyaaltı: Hose kürzen ab ₺200 | Terzi Can', d: 'Schneider in Konyaaltı: Hose kürzen ab ₺200 (~€10), Reißverschluss ab ₺300, Kleider ändern. Abholung in Antalya gratis. Täglich 08:00–23:00. ☎ +90 531 898 64 18', kw: ['Schneider in der Nähe Konyaaltı', 'Änderungsschneiderei Konyaaltı'] },
+  muratpasa: { t: 'Schneider Muratpaşa: Abendkleid ändern, Hose kürzen', d: 'Schneider in Muratpaşa: Hose kürzen ab ₺200 (~€10), Reißverschluss ab ₺300, Abendkleid ändern. Abholung in Antalya gratis. Täglich 08:00–23:00. ☎ +90 531 898 64 18', kw: ['Schneider in der Nähe Muratpaşa', 'Änderungsschneiderei Muratpaşa'] },
+  side: { t: 'Schneider Side: Hose kürzen ab ₺200, Hotelabholung', d: 'Schneider in Side: Hose kürzen ab ₺200 (~€10), Reißverschluss ab ₺300, Kleider ändern. Abholung im Hotel gratis. Täglich 08:00–23:00. ☎ +90 531 898 64 18', kw: ['Schneider in der Nähe Side', 'Änderungsschneiderei Side', 'Hose kürzen Side Hotel'] },
+  belek: { t: 'Schneider Belek: Hose kürzen ab ₺200, Hotelabholung', d: 'Schneider in Belek: Hose kürzen ab ₺200 (~€10), Reißverschluss ab ₺300, Kleider ändern. Abholung im Hotel gratis. Täglich 08:00–23:00. ☎ +90 531 898 64 18', kw: ['Schneider in der Nähe Belek', 'Änderungsschneiderei Belek', 'Hose kürzen Belek Hotel'] },
+  lara: { t: 'Schneider Lara: Abendkleid ändern, Hose kürzen ab ₺200', d: 'Schneider in Lara: Hose kürzen ab ₺200 (~€10), Abendkleid anpassen, Reißverschluss ab ₺300. Abholung im Hotel gratis. Täglich 08:00–23:00. ☎ +90 531 898 64 18', kw: ['Schneider in der Nähe Lara', 'Änderungsschneiderei Lara', 'Hose kürzen Lara Hotel'] },
+  kundu: { t: 'Schneider Kundu: Reißverschluss, Hose kürzen ab ₺200', d: 'Schneider in Kundu: Hose kürzen ab ₺200 (~€10), Reißverschluss ab ₺300, Risse reparieren. Abholung im Hotel gratis. Täglich 08:00–23:00. ☎ +90 531 898 64 18', kw: ['Schneider in der Nähe Kundu', 'Änderungsschneiderei Kundu'] },
+  aksu: { t: 'Schneider Aksu: Hose kürzen ab ₺200, Kleider ändern', d: 'Schneider in Aksu: Hose kürzen ab ₺200 (~€10), Reißverschluss ab ₺300, Kleider ändern und reparieren. Abholung gratis. Täglich 08:00–23:00. ☎ +90 531 898 64 18', kw: ['Schneider in der Nähe Aksu', 'Änderungsschneiderei Aksu'] },
+  kemer: { t: 'Schneider Kemer: Hose kürzen ab ₺200, Hotelabholung', d: 'Schneider in Kemer: Hose kürzen ab ₺200 (~€10), Reißverschluss ab ₺300, Kleider ändern. Abholung im Hotel gratis. Täglich 08:00–23:00. ☎ +90 531 898 64 18', kw: ['Schneider Kemer', 'Schneider in der Nähe Kemer', 'Änderungsschneiderei Kemer', 'Hose kürzen Kemer Hotel'] },
+  manavgat: { t: 'Schneider Manavgat: Hose kürzen ab ₺200, Änderungen', d: 'Schneider in Manavgat: Hose kürzen ab ₺200 (~€10), Reißverschluss ab ₺300, Kleider ändern. Abholung gratis. Täglich 08:00–23:00. ☎ +90 531 898 64 18', kw: ['Schneider Manavgat', 'Schneider in der Nähe Manavgat', 'Änderungsschneiderei Manavgat'] },
+};
+
 export function fgNearDistrict(lang: string, slug: string, name: string): FgMeta | undefined {
   const x = FG_DISTRICT[slug]?.[lang as L3];
+  if (lang === 'de' && DE_NEAR_META[slug]) {
+    const o = DE_NEAR_META[slug];
+    return {
+      title: o.t,
+      desc: o.d,
+      kw: Array.from(new Set([`${NEAR_KW.de} ${name}`, ...o.kw, ...(x ? x.kw : []), ...KW_PLACE.de.map((k) => `${k} ${name}`)])),
+    };
+  }
   if (!x) return undefined;
   const l = lang as L3;
   const [body, ph] = splitPhone(x.d);

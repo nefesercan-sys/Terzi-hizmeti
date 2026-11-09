@@ -16,7 +16,7 @@ const T: Record<L, { h: string; cols: [string, string, string]; rows: [string, s
       ['Kaban, palto kısaltma/daraltma', "₺200'den", 'Aynı gün'],
       ['Gelinlik ve abiye tadilatı', 'Fotoğrafa veya işin detayına göre', 'Aynı gün veya duruma göre 1–2 gün'],
       ['Dikim (elbise, etek, pantolon, çocuk, takım)', 'Fotoğrafa ve istenilen modele göre', 'Modele ve adede göre'],
-      ['Eve ve otele alım-teslim', 'Ücretsiz', 'Her bölgede'],
+      ['Eve ve otele alım-teslim', 'Var', 'Her bölgede'],
     ], vat: "Fiyatlara KDV dahil değildir. Ödeme tüm para birimleriyle, nakit veya kartla.",
   },
   en: {
@@ -29,7 +29,7 @@ const T: Record<L, { h: string; cols: [string, string, string]; rows: [string, s
       ['Overcoat shortening/taking-in', 'From ₺200', 'Same day'],
       ['Wedding and evening dress alterations', 'By photo or job details', 'Same day or 1–2 days depending on the job'],
       ['Sewing (dress, skirt, trousers, children, suit)', 'By photo and the model you want', 'Depends on model and quantity'],
-      ['Home and hotel pick-up and delivery', 'Free', 'Every area we serve'],
+      ['Home and hotel pick-up and delivery', 'Available', 'Every area we serve'],
     ], vat: 'Prices exclude VAT. Payment in any currency, cash or card.',
   },
   ru: {
@@ -42,7 +42,7 @@ const T: Record<L, { h: string; cols: [string, string, string]; rows: [string, s
       ['Пальто: укоротить, ушить', 'От ₺200', 'В тот же день'],
       ['Переделка свадебных и вечерних платьев', 'По фото или деталям работы', 'В тот же день или 1–2 дня'],
       ['Пошив (платье, юбка, брюки, детское, костюм)', 'По фото и желаемой модели', 'По модели и количеству'],
-      ['Забор и доставка домой и в отель', 'Бесплатно', 'В каждом районе'],
+      ['Забор и доставка домой и в отель', 'Есть', 'В каждом районе'],
     ], vat: 'Цены без НДС. Оплата в любой валюте, наличными или картой.',
   },
   de: {
@@ -55,7 +55,7 @@ const T: Record<L, { h: string; cols: [string, string, string]; rows: [string, s
       ['Mantel kürzen/enger machen', 'Ab ₺200', 'Selber Tag'],
       ['Änderung von Braut- und Abendkleidern', 'Nach Foto oder Details der Arbeit', 'Selber Tag oder 1–2 Tage je nach Arbeit'],
       ['Nähen (Kleid, Rock, Hose, Kinder, Anzug)', 'Nach Foto und gewünschtem Modell', 'Je nach Modell und Menge'],
-      ['Abholung und Lieferung nach Hause und ins Hotel', 'Kostenlos', 'In jedem Gebiet'],
+      ['Abholung und Lieferung nach Hause und ins Hotel', 'Möglich', 'In jedem Gebiet'],
     ], vat: 'Preise zzgl. MwSt. Zahlung in jeder Währung, bar oder Karte.',
   },
 };

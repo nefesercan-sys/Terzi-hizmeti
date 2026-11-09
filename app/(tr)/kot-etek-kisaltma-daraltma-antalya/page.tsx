@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Kot Etek Kısaltma ve Daraltma ₺200'den · Antalya" },
   description:
-    "Kot etek boyu kısaltma, bel daraltma ve orijinal etek ucu ₺200'den. Normal iş aynı gün, acil 1–2 saat. Eve ve otele ücretsiz. ☎ " + PHONE,
+    "Kot etek boyu kısaltma, bel daraltma ve orijinal etek ucu ₺200'den. Normal iş aynı gün, acil 1–2 saat. Eve ve otele servis. ☎ " + PHONE,
   keywords: fitKeywords([
     'kot etek kısaltma', 'kot etek daraltma', 'kot etek boy kısaltma', 'kot etek bel daraltma', 'kot etek orijinal ucu', 'kot etek tadilatı', 'Antalya kot etek kısaltma',
   ]),
@@ -38,7 +38,7 @@ const FAQ: [string, string][] = [
   ['Kot etek orijinal ucuyla kısaltılır mı?', 'Evet, kot eteğin orijinal etek ucu görünümünü koruyacak şekilde kısaltma yapıyoruz. Fotoğraf gönderirseniz yapılabilecek işlemi söyleriz.'],
   ['Kot etek daraltma ve bel daraltma yapıyor musunuz?', 'Evet. Kot etekte bel ve kalça daraltma ₺200\'den başlar; net fiyat fotoğrafa göre söylenir.'],
   ['Kot etek tadilatı ne kadar sürer?', 'Etek tadilatı çoğunlukla aynı gün biter; acil işlerde 1–2 saat.'],
-  ['Kot ürününü eve veya otele gelip alıyor musunuz?', 'Evet, eteği evinizden veya otelinizden ücretsiz alırız; Konyaaltı, Muratpaşa ve çevresinde geçerlidir.'],
+  ['Kot ürününü eve veya otele gelip alıyor musunuz?', 'Evet, eteği evinizden veya otelinizden alırız; Konyaaltı, Muratpaşa ve çevresinde geçerlidir.'],
   ["Kot eteğin yırtmacı varsa kısaltma yapılır mı?", "Evet. Yırtmaçlı kot etek kısaltılırken yırtmaç boyu da yeni boya göre ayarlanır; aksi halde yırtmaç yüksek ya da kısa kalır."],
   ["Midi kot eteği mini yapabilir misiniz?", "Boy kısaltma yapılabilir, ancak eteğin kalıbı değişmez. A kesimli ya da düz bir eteği çok kısaltmadan önce fotoğrafa bakıp uygun boyu birlikte belirleriz."],
   ["Kot etekte fermuar değişimi de yapılıyor mu?", "Evet. Bozulan fermuar değiştirilebilir; fermuar değişimi ₺300'den başlar. Kısaltma veya daraltmayla aynı işlemde yapılabilir."],
@@ -51,7 +51,7 @@ const GUIDE: [string, string][] = [
   ["Etek ucunun orijinal görünümü", "Kot eteklerde etek ucu çoğunlukla kalın bir dikiş ve çoğu zaman sökük bir saçak ya da kıvrımla biter. Kısaltırken bu detayı korumak mümkünse etek ucunun yakın fotoğrafını bekleriz. Detay yoksa sade kıvırma dikişiyle bitiririz. Hangisinin uygun olduğunu fotoğrafa göre söyleriz."],
   ["Yırtmaç, cep ve fermuarlı etekler", "Yırtmaçlı bir kot eteği kısaltırken yırtmaç boyu da yeni boya göre ayarlanır, aksi halde yırtmaç eteğin ucuna kadar çıkmaz ya da fazla yüksek kalır. Ön ya da yan fermuarlı eteklerde bel daraltırken fermuar yeri değişmez. Fermuar bozulduysa değişimi de aynı işlemde yapılabilir; fermuar değişimi fiyatı ₺300'den başlar."],
   ["Bel ve kalça daraltma", "Kot etekte bel bolsa arka ortadan ya da yan dikişlerden pay alınır. Kalça ve oturma yeri bol ise yan dikişler birlikte ayarlanır. Büyük eteği çok küçültmek kalıbı bozabilir, bu yüzden en fazla ne kadar daraltılabileceğini fotoğraf ve ölçüye bakarak söyleriz."],
-  ["Fiyat ve teslim", "Kot etek boy kısaltma, bel ve kalça daraltma ₺200'den başlar; net fiyat fotoğrafa göre söylenir. Normal işler aynı gün, acil işler 1–2 saatte teslim edilir. Fiyatlara KDV dahil değildir. Eve ve otele alım-teslim ücretsizdir."],
+  ["Fiyat ve teslim", "Kot etek boy kısaltma, bel ve kalça daraltma ₺200'den başlar; net fiyat fotoğrafa göre söylenir. Normal işler aynı gün, acil işler 1–2 saatte teslim edilir. Fiyatlara KDV dahil değildir. Eve ve otele alım-teslim yapılır."],
 ];
 
 const jsonLd = {
@@ -103,7 +103,7 @@ const jsonLd = {
       description: "Kot Etek Nasıl Kısaltılır?",
       step: [
         { '@type': 'HowToStep', name: 'Fotoğraf Gönderin', text: 'WhatsApp\'tan kot eteğin fotoğrafını gönderin, ön fiyat alın.' },
-        { '@type': 'HowToStep', name: 'Teslim Edin', text: 'Eteği atölyeye bırakın veya adresten ücretsiz teslim alalım.' },
+        { '@type': 'HowToStep', name: 'Teslim Edin', text: 'Eteği atölyeye bırakın veya adresten teslim alalım.' },
         { '@type': 'HowToStep', name: 'Ölçü ve Dikiş', text: 'Boy ve bel ölçüsü üzerinizde işaretlenir, etek ucu yeniden dikilir. Aynı gün; acilde 1–2 saat.' },
         { '@type': 'HowToStep', name: 'Teslim Alın', text: 'Boy ve bel kontrol edilerek teslim edilir.' },
       ],
@@ -143,7 +143,7 @@ export default function Page() {
             <h1 id="hero-h">
               Kot Etek Kısaltma <span className="accent">Antalya</span><br />₺200'den, Aynı Gün Teslim</h1>
             <p className="hero-desc">
-              Kot etek boy kısaltma, bel daraltma ve orijinal etek ucu yapımı. Kalın kot kumaşa uygun dikişle çalışıyoruz; eve ve otele ücretsiz servis.
+              Kot etek boy kısaltma, bel daraltma ve orijinal etek ucu yapımı. Kalın kot kumaşa uygun dikişle çalışıyoruz; eve ve otele servis.
             </p>
             <p className="hero-desc"><strong>Kısa cevap:</strong> Kot etek kısaltma ve daraltma ₺200'den başlar; orijinal etek ucu görünümü korunur, normal işler aynı gün teslim edilir.</p>
             <div className="hero-btns">
@@ -188,7 +188,7 @@ export default function Page() {
             </div>
             <div className="howto-list">
               <div className="howto-item"><div className="howto-t">Fotoğraf Gönderin</div><div className="howto-d">WhatsApp'tan kot eteğin fotoğrafını gönderin, ön fiyat alın.</div></div>
-              <div className="howto-item"><div className="howto-t">Teslim Edin</div><div className="howto-d">Eteği atölyeye bırakın veya adresten ücretsiz teslim alalım.</div></div>
+              <div className="howto-item"><div className="howto-t">Teslim Edin</div><div className="howto-d">Eteği atölyeye bırakın veya adresten teslim alalım.</div></div>
               <div className="howto-item"><div className="howto-t">Ölçü ve Dikiş</div><div className="howto-d">Boy ve bel ölçüsü üzerinizde işaretlenir, etek ucu yeniden dikilir. Aynı gün; acilde 1–2 saat.</div></div>
               <div className="howto-item"><div className="howto-t">Teslim Alın</div><div className="howto-d">Boy ve bel kontrol edilerek teslim edilir.</div></div>
             </div>

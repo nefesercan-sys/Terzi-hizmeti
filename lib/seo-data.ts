@@ -3,7 +3,7 @@
 // Bölge × hizmet arama sorguları için TEK veri kaynağı (TR/EN/RU/DE).
 // Kurallar:
 //  - Sadece doğrulanmış bilgi: tek atölye (Hurma, Konyaaltı), 2006'dan beri, her gün 08:00–23:00,
-//    eve ve otele her bölgede ücretsiz servis, teslim süreleri lib/delivery.ts'ten (acil 1–2 saat / normal aynı gün / özel dikim modele ve adede göre), gelinlik ve abiye TADİLATI sabit fiyatsız (fotoğrafa veya işin detayına göre); dikimde sabit fiyat yok.
+//    eve ve otele her bölgede servis, teslim süreleri lib/delivery.ts'ten (acil 1–2 saat / normal aynı gün / özel dikim modele ve adede göre), gelinlik ve abiye TADİLATI sabit fiyatsız (fotoğrafa veya işin detayına göre); dikimde sabit fiyat yok.
 //  - Mesafe/dakika, puan, müşteri sayısı, sahte vaat YOK.
 //  - Yeni bölge/hizmet eklemek için sadece bu dosyaya satır ekle; sayfalar, sitemap ve iç linkler otomatik oluşur.
 // ============================================================
@@ -27,7 +27,7 @@ export const LAST_UPDATE = '2026-11-04';
 // noindex olur, sitemap'ten, iç linklerden ve hreflang'dan çıkar. Yabancı dil (EN/RU/DE) sayfaları TÜM bölgelerde açıktır.
 // Bir bölgeyi Türkçede açmak/kapatmak için bu listeyi değiştirmek yeterli.
 export const TR_NEAR_SLUGS = ['konyaalti', 'hurma', 'liman', 'gursu', 'uluc', 'altinkum', 'ogretmenevleri', 'arapsuyu', 'siteler', 'uncali', 'sarisu', 'meltem', 'muratpasa', 'fener', 'sirinyali', 'toros', 'manavgat', 'serik', 'aksu', 'beldibi'];
-export const isFreeService = (_slug: string): boolean => true; // Eve ve otele ücretsiz servis: her bölgede (sahibin kararı)
+export const isFreeService = (_slug: string): boolean => true; // Eve ve otele servis: her bölgede (sahibin kararı)
 export const isTrNear = (slug: string): boolean => TR_NEAR_SLUGS.includes(slug);
 // ── Türkçe yakın bölge sayfaları için ek anahtar kelime katmanı ─────────────────────────────
 // Konyaaltı: sahil mahalleleri + günlük arama kalıpları. Diğer yakın bölgeler: dönüşümlü 6 terim (sayfalar birbirinin kopyası olmasın).

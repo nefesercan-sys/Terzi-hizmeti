@@ -2,7 +2,7 @@
 // terzihizmeti.com.tr — lib/intl.ts
 // Ek turist dilleri (ES/FR/PL/UK/NL/AR): her dil için TEK kısa tanıtım sayfası (/es, /fr, /pl, /uk, /nl, /ar).
 // Yalnızca işletme sahibinin doğruladığı bilgiler: Hurma/Konyaaltı atölye, 2006'dan beri, her gün 08:00–23:00,
-// süreler lib/delivery.ts'ten, WhatsApp'tan fotoğrafla fiyat. Eve ve otele alım-teslim her hizmet bölgesinde ücretsiz.
+// süreler lib/delivery.ts'ten, WhatsApp'tan fotoğrafla fiyat. Eve ve otele alım-teslim her hizmet bölgesinde yapılır.
 // Bu dosyadaki tanıtım metinlerinde rakam yazılmaz; başlangıç fiyatları lib/facts.ts üzerinden (IntlLanding, intl-fiyat) gösterilir.
 // Dikimde sabit fiyat YOKTUR: "fotoğrafa ve istediğiniz modele göre" (lib/facts.ts BY_PHOTO_MODEL).
 // ============================================================
@@ -43,7 +43,7 @@ export const INTL: Record<ILang, ICopy> = {
     servicesTitle: 'Qué podemos hacer',
     services: ['Acortar pantalones, vaqueros, faldas y vestidos', 'Ajustar cintura, costados y mangas', 'Cambiar cremalleras rotas', 'Reparar costuras y desgarros', 'Arreglos de vestidos de novia y de fiesta', 'Confección a medida en lino y algodón'],
     hotelTitle: 'Recogida y entrega en su hotel',
-    hotelText: 'Recogemos y entregamos la ropa en su hotel. El servicio a hoteles es gratuito en todas las zonas donde trabajamos (Konyaaltı, Lara, Belek, Side, Kemer y más). Escríbanos por WhatsApp con el nombre del hotel para acordar la recogida.',
+    hotelText: 'Recogemos y entregamos la ropa en su hotel. El servicio a hoteles está disponible en todas las zonas donde trabajamos (Konyaaltı, Lara, Belek, Side, Kemer y más). Escríbanos por WhatsApp con el nombre del hotel para acordar la recogida.',
     zonesLabel: 'Zonas hoteleras que atendemos',
     faqTitle: 'Preguntas frecuentes',
     faq: [
@@ -69,7 +69,7 @@ export const INTL: Record<ILang, ICopy> = {
     servicesTitle: 'Ce que nous faisons',
     services: ['Raccourcir pantalons, jeans, jupes et robes', 'Ajuster la taille, les côtés et les manches', 'Remplacer les fermetures éclair cassées', 'Réparer coutures et déchirures', 'Retouches de robes de mariée et de soirée', 'Sur-mesure en lin et en coton'],
     hotelTitle: 'Collecte et livraison à votre hôtel',
-    hotelText: 'Nous récupérons et livrons vos vêtements à votre hôtel. Le service vers les hôtels est gratuit dans toutes les zones desservies (Konyaaltı, Lara, Belek, Side, Kemer et autres). Écrivez-nous sur WhatsApp avec le nom de l\'hôtel pour convenir de la prise en charge.',
+    hotelText: 'Nous récupérons et livrons vos vêtements à votre hôtel. Le service vers les hôtels sont disponibles dans toutes les zones desservies (Konyaaltı, Lara, Belek, Side, Kemer et autres). Écrivez-nous sur WhatsApp avec le nom de l\'hôtel pour convenir de la prise en charge.',
     zonesLabel: 'Zones hôtelières desservies',
     faqTitle: 'Questions fréquentes',
     faq: [
@@ -95,7 +95,7 @@ export const INTL: Record<ILang, ICopy> = {
     servicesTitle: 'Co robimy',
     services: ['Skracanie spodni, jeansów, spódnic i sukienek', 'Zwężanie w talii, bokach i rękawach', 'Wymiana zepsutych zamków', 'Naprawa szwów i rozdarć', 'Przeróbki sukien ślubnych i wieczorowych', 'Szycie na miarę z lnu i bawełny'],
     hotelTitle: 'Odbiór i dostawa do hotelu',
-    hotelText: 'Odbieramy i dowozimy ubrania do Twojego hotelu. Odbiór i dowóz do hoteli są bezpłatne we wszystkich obsługiwanych rejonach (Konyaaltı, Lara, Belek, Side, Kemer i inne). Napisz na WhatsAppie z nazwą hotelu, a ustalimy odbiór.',
+    hotelText: 'Odbieramy i dowozimy ubrania do Twojego hotelu. Odbiór i dowóz do hoteli są dostępne we wszystkich obsługiwanych rejonach (Konyaaltı, Lara, Belek, Side, Kemer i inne). Napisz na WhatsAppie z nazwą hotelu, a ustalimy odbiór.',
     zonesLabel: 'Rejony hotelowe, które obsługujemy',
     faqTitle: 'Najczęstsze pytania',
     faq: [
@@ -121,7 +121,7 @@ export const INTL: Record<ILang, ICopy> = {
     servicesTitle: 'Що ми робимо',
     services: ['Вкорочення штанів, джинсів, спідниць і суконь', 'Звуження по талії, боках і рукавах', 'Заміна зламаних блискавок', 'Ремонт швів і розривів', 'Підгонка весільних та вечірніх суконь', 'Пошиття з льону та бавовни за мірками'],
     hotelTitle: 'Забір і доставка до вашого готелю',
-    hotelText: 'Ми забираємо та повертаємо одяг у вашому готелі. Послуга для готелів безкоштовна в усіх районах, які ми обслуговуємо (Коньяалти, Лара, Белек, Сіде, Кемер та інші). Напишіть у WhatsApp із назвою готелю, і ми домовимось про забір.',
+    hotelText: 'Ми забираємо та повертаємо одяг у вашому готелі. Послуга для готелів доступна в усіх районах, які ми обслуговуємо (Коньяалти, Лара, Белек, Сіде, Кемер та інші). Напишіть у WhatsApp із назвою готелю, і ми домовимось про забір.',
     zonesLabel: 'Готельні зони, які ми обслуговуємо',
     faqTitle: 'Часті запитання',
     faq: [
@@ -147,7 +147,7 @@ export const INTL: Record<ILang, ICopy> = {
     servicesTitle: 'Wat wij doen',
     services: ['Broeken, jeans, rokken en jurken inkorten', 'Taille, zijnaden en mouwen innemen', 'Kapotte ritsen vervangen', 'Naden en scheuren herstellen', 'Bruids- en galajurken aanpassen', 'Maatwerk in linnen en katoen'],
     hotelTitle: 'Ophalen en terugbrengen bij uw hotel',
-    hotelText: 'Wij halen uw kleding op bij uw hotel en brengen die terug. Voor hotels is dit gratis in alle gebieden waar wij werken (Konyaaltı, Lara, Belek, Side, Kemer en meer). Stuur ons via WhatsApp de naam van het hotel om het ophalen af te spreken.',
+    hotelText: 'Wij halen uw kleding op bij uw hotel en brengen die terug. Voor hotels is dit mogelijk in alle gebieden waar wij werken (Konyaaltı, Lara, Belek, Side, Kemer en meer). Stuur ons via WhatsApp de naam van het hotel om het ophalen af te spreken.',
     zonesLabel: 'Hotelgebieden die wij bedienen',
     faqTitle: 'Veelgestelde vragen',
     faq: [
@@ -173,7 +173,7 @@ export const INTL: Record<ILang, ICopy> = {
     servicesTitle: 'ماذا نفعل',
     services: ['تقصير البناطيل والجينز والتنانير والفساتين', 'تضييق الخصر والجوانب والأكمام', 'استبدال السحّابات المعطّلة', 'إصلاح الدرز والتمزقات', 'تعديل فساتين الزفاف والسهرة', 'تفصيل من الكتان والقطن'],
     hotelTitle: 'الاستلام والتسليم في فندقك',
-    hotelText: 'نستلم ملابسك من فندقك ونعيدها إليه. الخدمة مجانية للفنادق في جميع المناطق التي نخدمها (كونيالتي ولارا وبيليك وسيدي وكيمر وغيرها). راسلنا على واتساب باسم الفندق لنتفق على الاستلام.',
+    hotelText: 'نستلم ملابسك من فندقك ونعيدها إليه. الخدمة متاح للفنادق في جميع المناطق التي نخدمها (كونيالتي ولارا وبيليك وسيدي وكيمر وغيرها). راسلنا على واتساب باسم الفندق لنتفق على الاستلام.',
     zonesLabel: 'المناطق الفندقية التي نخدمها',
     faqTitle: 'الأسئلة الشائعة',
     faq: [
@@ -188,14 +188,14 @@ export const INTL: Record<ILang, ICopy> = {
 };
 
 
-/** Eve ve otele ücretsiz alım-teslim: hizmet verilen TÜM bölgelerde (sahibin kararı, Ekim 2026). */
+/** Eve ve otele alım-teslim: hizmet verilen TÜM bölgelerde (sahibin kararı, Ekim 2026). */
 export const NB: Record<ILang, { title: string; text: string }> = {
-  es: { title: 'Recogida y entrega gratis a domicilio y en hoteles', text: 'Recogida y entrega gratuitas a domicilio y en hotel en todas las zonas que atendemos (Konyaaltı, Muratpaşa, Lara, Belek, Side, Kemer…). Todos los días de 08:00 a 23:00. Solo paga el trabajo.' },
-  fr: { title: 'Prise en charge et livraison gratuites à domicile et à l\'hôtel', text: 'Prise en charge et livraison gratuites à domicile et à l\'hôtel dans toutes les zones desservies (Konyaaltı, Muratpaşa, Lara, Belek, Side, Kemer…). Tous les jours de 08h00 à 23h00. Vous ne payez que le travail.' },
-  pl: { title: 'Bezpłatny odbiór i dowóz do domu i hotelu', text: 'Bezpłatny odbiór i dowóz do domu i do hotelu we wszystkich obsługiwanych rejonach (Konyaaltı, Muratpaşa, Lara, Belek, Side, Kemer…). Codziennie 08:00–23:00. Płacisz tylko za usługę.' },
-  uk: { title: 'Безкоштовний забір і доставка додому та в готель', text: 'Безкоштовний забір і доставка додому та в готель у всіх районах, які ми обслуговуємо (Коньяалти, Муратпаша, Лара, Белек, Сіде, Кемер…). Щодня 08:00–23:00. Ви платите лише за роботу.' },
-  nl: { title: 'Gratis ophalen en terugbrengen aan huis en in het hotel', text: 'Gratis ophalen en terugbrengen aan huis en in het hotel in alle gebieden die we bedienen (Konyaaltı, Muratpaşa, Lara, Belek, Side, Kemer…). Dagelijks 08:00–23:00. U betaalt alleen voor het werk.' },
-  ar: { title: 'استلام وتسليم مجاني للمنازل والفنادق', text: 'استلام وتسليم مجاني للمنازل والفنادق في جميع المناطق التي نخدمها (Konyaaltı, Muratpaşa, Lara, Belek, Side, Kemer…). يوميًا من 08:00 إلى 23:00. تدفع فقط مقابل العمل.' },
+  es: { title: 'Recogida y entrega a domicilio y en hoteles', text: 'Recogida y entrega a domicilio y en hotel en todas las zonas que atendemos (Konyaaltı, Muratpaşa, Lara, Belek, Side, Kemer…). Todos los días de 08:00 a 23:00. Solo paga el trabajo.' },
+  fr: { title: 'Prise en charge et livraison à domicile et à l\'hôtel', text: 'Prise en charge et livraison à domicile et à l\'hôtel dans toutes les zones desservies (Konyaaltı, Muratpaşa, Lara, Belek, Side, Kemer…). Tous les jours de 08h00 à 23h00. Vous ne payez que le travail.' },
+  pl: { title: 'Odbiór i dowóz do domu i hotelu', text: 'Odbiór i dowóz do domu i do hotelu we wszystkich obsługiwanych rejonach (Konyaaltı, Muratpaşa, Lara, Belek, Side, Kemer…). Codziennie 08:00–23:00. Płacisz tylko za usługę.' },
+  uk: { title: 'Забір і доставка додому та в готель', text: 'Забір і доставка додому та в готель у всіх районах, які ми обслуговуємо (Коньяалти, Муратпаша, Лара, Белек, Сіде, Кемер…). Щодня 08:00–23:00. Ви платите лише за роботу.' },
+  nl: { title: 'Ophalen en terugbrengen aan huis en in het hotel', text: 'Ophalen en terugbrengen aan huis en in het hotel in alle gebieden die we bedienen (Konyaaltı, Muratpaşa, Lara, Belek, Side, Kemer…). Dagelijks 08:00–23:00. U betaalt alleen voor het werk.' },
+  ar: { title: 'استلام وتسليم للمنازل والفنادق', text: 'استلام وتسليم للمنازل والفنادق في جميع المناطق التي نخدمها (Konyaaltı, Muratpaşa, Lara, Belek, Side, Kemer…). يوميًا من 08:00 إلى 23:00. تدفع فقط مقابل العمل.' },
 };
 
 export const NB_DISTRICT: Record<ILang, { title: string; text: string }> = {

@@ -38,7 +38,7 @@ const FAQ: [string, string][] = [
   ['Orijinal paça yapımı nedir?', 'Kot pantolon kısaltılırken paçanın orijinal paça görünümünü koruyacak şekilde dikilmesidir.'],
   ['Boy nasıl belirlenir?', 'Boy, pantolonu ve giyeceğiniz ayakkabıyı giyerken üzerinizde işaretlenir. Uzaktan ise paçanın yakın fotoğrafını ve istediğiniz boyu WhatsApp\'tan gönderin.'],
   ['Orijinal paça yapımı ne kadar sürer?', 'Orijinal paça işleri de çoğunlukla aynı gün biter; acilde 1–2 saat.'],
-  ['Kot pantolonu eve veya otele gelip alıyor musunuz?', 'Evet, kotu adresinizden ücretsiz alıp teslim ederiz; Konyaaltı, Muratpaşa ve çevresinde geçerlidir.'],
+  ['Kot pantolonu eve veya otele gelip alıyor musunuz?', 'Evet, kotu adresinizden alıp teslim ederiz; Konyaaltı, Muratpaşa ve çevresinde geçerlidir.'],
   ["Orijinal paça yapımı sıradan kısaltmadan nasıl ayrılır?", "Sıradan kısaltmada paça kesilip yeniden dikilir; orijinal paça yapımında ise kıvrım ve dikiş görünümü fabrika paçasına yakın kalacak şekilde çalışılır. Sonuç, kotun kısaltıldığının daha az belli olmasıdır."],
   ["Hangi kotlarda orijinal paça önerirsiniz?", "Paça detayı belirgin olan, ham ya da koyu denimli ve markalı kotlarda orijinal paça görünümünü korumayı öneririz. Sade paçalı kotlarda standart kısaltma yeterli olabilir."],
   ["Çok kısaltma gerekirse orijinal görünüm korunur mu?", "Çok fazla kısaltma gerekirse orijinal izin bir kısmı kesilebilir. Bunu işlemden önce söyler, alternatifi birlikte seçeriz."],
@@ -51,7 +51,7 @@ const GUIDE: [string, string][] = [
   ["Hangi kotlarda daha çok önemli?", "Paça detayı belirgin olan kotlarda, özellikle ham veya koyu denimde, solmuş kenar ve dikiş izi pantolonun karakterinin parçasıdır. Markalı ya da çok sevdiğiniz kotlarda bu detayı korumak ister, kısaltmanın anlaşılmamasını beklersiniz. Paça çok sade bir kotta ise standart kısaltma çoğu zaman yeterlidir."],
   ["Fotoğrafı nasıl çekmelisiniz?", "Paçanın yakın bir fotoğrafını gün ışığında, dikiş izi görünecek şekilde çekin. Mümkünse paçanın iç yüzünü ve kotu giydiğiniz hâlde boy fotoğrafını da ekleyin. Bu görüntülerden paçanın nasıl yapıldığını ve orijinal görünümün korunup korunamayacağını önceden değerlendiririz."],
   ["Her kotta aynen korunabilir mi?", "Kumaşın kalınlığına, paçadaki payın genişliğine ve ne kadar kısaltılacağına göre değişir. Çok fazla kısaltma gerekiyorsa orijinal izin bir kısmı kesilebilir; bunu işlemden önce size açıkça söyleriz ve alternatifi birlikte seçeriz. Net sonucu fotoğrafa bakmadan vaat etmeyiz."],
-  ["Fiyat ve teslim", "Orijinal paça görünümünü koruyarak kot paça kısaltma ₺200'den başlar. Net fiyat fotoğrafa göre söylenir ve fiyatlara KDV dahil değildir. Normal işler aynı gün, acil işler 1–2 saatte teslim edilir; eve ve otele alım-teslim ücretsizdir."],
+  ["Fiyat ve teslim", "Orijinal paça görünümünü koruyarak kot paça kısaltma ₺200'den başlar. Net fiyat fotoğrafa göre söylenir ve fiyatlara KDV dahil değildir. Normal işler aynı gün, acil işler 1–2 saatte teslim edilir; eve ve otele alım-teslim yapılır."],
 ];
 
 const jsonLd = {
@@ -102,7 +102,7 @@ const jsonLd = {
       description: "Orijinal Paça Nasıl Yapılır?",
       step: [
         { '@type': 'HowToStep', name: 'Fotoğraf Gönderin', text: 'WhatsApp\'tan kot pantolonun paçasının yakın fotoğrafını ve boyunu gönderin.' },
-        { '@type': 'HowToStep', name: 'Teslim Edin', text: 'Atölyeye uğrayın ya da ücretsiz servisimizi çağırın.' },
+        { '@type': 'HowToStep', name: 'Teslim Edin', text: 'Atölyeye uğrayın ya da servisimizi çağırın.' },
         { '@type': 'HowToStep', name: 'Ölçü ve Dikiş', text: 'Boy giyeceğiniz ayakkabıyla işaretlenir; paçanın orijinal görünümünü koruyacak şekilde dikilir. Normal işte aynı gün, acilde 1–2 saat.' },
         { '@type': 'HowToStep', name: 'Teslim Alın', text: 'Paça görünümü kontrol edilir ve teslim edilir.' },
       ],
@@ -142,7 +142,7 @@ export default function Page() {
             <h1 id="hero-h">
               Orijinal Kot Paça Yapımı <span className="accent">Antalya</span><br />₺200'den, Aynı Gün Teslim</h1>
             <p className="hero-desc">
-              Kot pantolonun paçasını kısaltırken orijinal paça görünümünü koruyoruz. Kalın denimde çalışırken paçanın karakterini göz önünde tutuyoruz; eve ve otele ücretsiz servis.
+              Kot pantolonun paçasını kısaltırken orijinal paça görünümünü koruyoruz. Kalın denimde çalışırken paçanın karakterini göz önünde tutuyoruz; eve ve otele servis.
             </p>
             <p className="hero-desc"><strong>Kısa cevap:</strong> Orijinal paça görünümünü koruyarak kot paça kısaltma ₺200'den başlar; boy ayakkabıyla işaretlenir, normal işler aynı gün teslim edilir.</p>
             <div className="hero-btns">
@@ -185,7 +185,7 @@ export default function Page() {
             </div>
             <div className="howto-list">
               <div className="howto-item"><div className="howto-t">Fotoğraf Gönderin</div><div className="howto-d">WhatsApp'tan kot pantolonun paçasının yakın fotoğrafını ve boyunu gönderin.</div></div>
-              <div className="howto-item"><div className="howto-t">Teslim Edin</div><div className="howto-d">Atölyeye uğrayın ya da ücretsiz servisimizi çağırın.</div></div>
+              <div className="howto-item"><div className="howto-t">Teslim Edin</div><div className="howto-d">Atölyeye uğrayın ya da servisimizi çağırın.</div></div>
               <div className="howto-item"><div className="howto-t">Ölçü ve Dikiş</div><div className="howto-d">Boy giyeceğiniz ayakkabıyla işaretlenir; paçanın orijinal görünümünü koruyacak şekilde dikilir. Normal işte aynı gün, acilde 1–2 saat.</div></div>
               <div className="howto-item"><div className="howto-t">Teslim Alın</div><div className="howto-d">Paça görünümü kontrol edilir ve teslim edilir.</div></div>
             </div>

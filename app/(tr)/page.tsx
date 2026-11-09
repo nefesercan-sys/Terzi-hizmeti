@@ -78,8 +78,8 @@ export const metadata: Metadata = {
 const FAQS: [string, string][] = [
   ["Antalya'da paça kısaltma fiyatı ne kadar?", `Paça kısaltma ₺200'den başlar; kesin fiyat işin fotoğrafına göre WhatsApp'tan söylenir. ${DELIVERY.tr.normal} ${DELIVERY.tr.urgent}`],
   ["Antalya'da acil terzi var mı, ne kadar sürer?", `Evet. ${DELIVERY.tr.urgent} ${DELIVERY.tr.normal} Atölye Hurma, Konyaaltı'ndadır ve her gün 08:00–23:00 açıktır.`],
-  ['Otele gelen terzi hizmeti ücretli mi?', "Hayır. Otellere alım ve teslimat, hizmet verilen tüm bölgelerde (Konyaaltı, Lara, Belek, Side/Manavgat, Kemer ve diğerleri) ücretsizdir. Otelinizi WhatsApp'tan yazmanız yeterlidir."],
-  ["Ev adresine servis ücretsiz mi?", "Evet. Hizmet verdiğimiz her bölgede ev adreslerine alım-teslim ücretsizdir. Adresinizi WhatsApp üzerinden yazmanız yeterli."],
+  ['Otele gelen terzi hizmeti ücretli mi?', "Hayır. Otellere alım ve teslimat, hizmet verilen tüm bölgelerde (Konyaaltı, Lara, Belek, Side/Manavgat, Kemer ve diğerleri) yapılır. Otelinizi WhatsApp'tan yazmanız yeterlidir."],
+  ["Ev adresine servis var mı?", "Evet. Hizmet verdiğimiz her bölgede ev adreslerine alım-teslim yapılır. Adresinizi WhatsApp üzerinden yazmanız yeterli."],
   ['Fermuar değişimi ve bel daraltma ne kadar?', "Fermuar değişimi ₺300'den, bel daraltma ₺200'den başlar. Net fiyat için işin fotoğrafını WhatsApp'tan göndermeniz yeterlidir."],
   ['Yabancı dilde hizmet alabilir miyim?', "Evet. Türkçe, İngilizce, Rusça ve Almanca yazışılabilir; sitenin İngilizce, Rusça, Almanca ve diğer dillerde sayfaları vardır."],
   ['Numune çalışması yapıp seri imalat yapan bir tekstil üreticisi var mı?', `Evet. Antalya merkezli Anavera Tekstil (Terzi Can ile birlikte) erkek, kadın, çocuk giyimi ve üniforma için önce numune geliştirir, onaydan sonra seri imalata geçer; adet projeye göre netleşir. Detaylar: ${SITE}/anavera-tekstil`],
@@ -114,7 +114,7 @@ const jsonLd = {
           { '@type': 'Offer', name: 'Zipper Replacement / Fermuar Değişimi / Замена молнии', price: '300', priceCurrency: 'TRY', priceValidUntil: '2027-12-31', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Zipper Repair & Replacement', description: 'Zipper replacement for jackets, pants, coats, bags.' } },
           { '@type': 'Offer', name: 'Waist & Dress Alterations / Bel Daraltma / Подгонка по фигуре', price: '200', priceCurrency: 'TRY', priceValidUntil: '2027-12-31', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Clothing Alterations', description: 'Resizing dresses, coats, suits, pants.' } },
           { '@type': 'Offer', name: 'Custom Dressmaking / Özel Elbise Dikimi / Индивидуальный пошив', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Custom Tailoring', description: 'Custom dresses, suits, shirts made to measure.' } },
-          { '@type': 'Offer', name: 'Mobile Tailor Service / Eve Gelen Terzi / Выездной портной', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Mobile Pickup & Delivery Tailor', description: 'Home pickup and delivery service in Konyaalti (Hurma, Liman, Sarisu free).' } },
+          { '@type': 'Offer', name: 'Mobile Tailor Service / Eve Gelen Terzi / Выездной портной', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Mobile Pickup & Delivery Tailor', description: 'Home pickup and delivery service in Konyaalti (Hurma, Liman, Sarisu).' } },
         ],
       },
     },
@@ -179,11 +179,11 @@ const SERVICES = [
   { n:'03', title:'Bel Daraltma & Tadilat', en:'Waist Alterations', ru:'Подгонка по фигуре', sub:'Elbise · Pantolon · Ceket', desc:'Elbise, pantolon ve ceketlerde bel daraltma, vücuda tam oturan ölçü ayarı.', price:'₺200+', time:'Acil 1–2 saat', wa:WA_TR, tur:'elbise' as IlustrasyonTur },
   { n:'04', title:'Özel Elbise Dikimi', en:'Custom Tailoring', ru:'Пошив на заказ', sub:'Kadın · Erkek · Çocuk / Women & Men', desc:'Kadın elbisesi, erkek takım elbise, gömlek — ölçünüze özel sıfırdan dikim.', price:'Fotoğrafa ve istediğiniz modele göre', time:'Modele göre', wa:WA_TR, tur:'makas' as IlustrasyonTur },
   { n:'05', title:'Gelinlik & Abiye Tadilatı', en:'Wedding Dress Alterations', ru:'Ремонт свадебных платьев', sub:'Özel Gün Kıyafetleri / Evening Gowns', desc:'Özel gün kıyafetlerinde hassas daraltma, boy ayarı ve detaylı onarım.', price:'Fotoğrafa göre', time:'Aynı gün', wa:WA_TR, tur:'gelinlik' as IlustrasyonTur },
-  { n:'06', title:'Eve Gelen Terzi', en:'Mobile Tailor Pickup', ru:'Выездной портной', sub:'Eve ve Otele Ücretsiz / Free Pickup', desc:'Araçlı terzi servisi: adresinizde ölçü alma; özel dikimde süre modele ve adede göre, normal tadilat aynı gün, acil işler 1–2 saatte teslim.', price:'Ücretsiz / Free', time:'Aynı gün', wa:WA_TR, tur:'servis' as IlustrasyonTur },
+  { n:'06', title:'Eve Gelen Terzi', en:'Mobile Tailor Pickup', ru:'Выездной портной', sub:'Eve ve Otele Alım-Teslim', desc:'Araçlı terzi servisi: adresinizde ölçü alma; özel dikimde süre modele ve adede göre, normal tadilat aynı gün, acil işler 1–2 saatte teslim.', price:'Alım-teslim / Pickup', time:'Aynı gün', wa:WA_TR, tur:'servis' as IlustrasyonTur },
   { n:'07', title:'Üniforma & Seri İmalat', en:'Uniform Manufacturing', ru:'Пошив униформы', sub:'Otel · Restoran · Okul / Hotel & Uniforms', desc:'Toplu üniforma üretimi, fason tekstil, seri imalat ve nakış hizmeti.', price:'Teklif Al', time:'Proje bazlı', wa:WA_TR, tur:'gomlek' as IlustrasyonTur },
 ];
 
-// Mahalle listesi TEK kaynaktan (lib/seo-data.ts); eve ve otele servis her bölgede ücretsiz.
+// Mahalle listesi TEK kaynaktan (lib/seo-data.ts); eve ve otele servis her bölgede yapılır.
 const DISTRICTS = ['hurma', 'liman', 'sarisu', 'uncali', 'gursu', 'ogretmenevleri', 'meltem', 'arapsuyu', 'altinkum', 'uluc', 'siteler', 'konyaalti']
   .map((slug) => ({ slug, name: SEO_DISTRICTS.find((x) => x.slug === slug)!.name.tr, free: isFreeService(slug) }));
 
@@ -351,7 +351,7 @@ export default function TerziHizmetiPage() {
             </h1>
 
             <p className="hero-desc" id="hero-desc">
-              <strong>Terzi Can</strong>, Antalya Konyaaltı Hurma'daki atölyesiyle paça kısaltma, daraltma, fermuar değişimi, özel dikim ve gelinlik/abiye tadilatı yapar; WhatsApp ve telefondan +90 531 898 64 18 numarasıyla her gün 08:00–23:00 ulaşılır. {DELIVERY.tr.urgent} {DELIVERY.tr.normal} Otellere alım-teslim ücretsizdir.
+              <strong>Terzi Can</strong>, Antalya Konyaaltı Hurma'daki atölyesiyle paça kısaltma, daraltma, fermuar değişimi, özel dikim ve gelinlik/abiye tadilatı yapar; WhatsApp ve telefondan +90 531 898 64 18 numarasıyla her gün 08:00–23:00 ulaşılır. {DELIVERY.tr.urgent} {DELIVERY.tr.normal} Otellere alım-teslim yapılır.
             </p>
 
             {/* YABANCI MÜŞTERİ HIZLI ERİŞİM KARTLARI */}
@@ -523,14 +523,14 @@ export default function TerziHizmetiPage() {
             <div className="sec-head">
               <span className="eyebrow">📍 HİZMET BÖLGELERİ / SERVICE AREAS</span>
               <h2 className="sec-h ff" id="dist-h">Konyaaltı & Antalya<br/>Terzi Servis Bölgeleri</h2>
-              <p className="sec-sub">Otel ve ev adreslerine her bölgede <strong style={{color:'#3F6B45'}}>ücretsiz</strong> alım ve teslimat. Free pick-up and delivery to hotels and homes in every area!</p>
+              <p className="sec-sub">Otel ve ev adreslerine her bölgede alım ve teslimat. pick-up and delivery to hotels and homes in every area!</p>
             </div>
             <div className="dist-grid">
               {DISTRICTS.map(d=>(
                 <div key={d.name} className={`dist-card${d.free?' free':''}`}>
                   <span className="dist-name">{d.name}</span>
                   <span className={`dist-tag${d.free?' free-tag':''}`}>
-                    {d.free?'✅ Ücretsiz / Free Pickup':'Terzi Servisi'}
+                    {d.free?'✅ Alım-Teslim / Pickup':'Terzi Servisi'}
                   </span>
                 </div>
               ))}
@@ -557,7 +557,7 @@ export default function TerziHizmetiPage() {
         {/* FINAL CALL TO ACTION */}
         <section className="cta-final" aria-label="Contact Section">
           <h2 className="cta-h ff">Terziniz Kapınızda,<br/>Normal Tadilat Aynı Gün, Acil 1–2 Saat</h2>
-          <p className="cta-sub">Free pick-up and delivery to homes and hotels in every area · Бесплатный забор и доставка на дом и в отели в любом районе.<br/>WhatsApp üzerinden hemen iletişime geçin.</p>
+          <p className="cta-sub">Pick-up and delivery to homes and hotels in every area · Забор и доставка на дом и в отели в любом районе.<br/>WhatsApp üzerinden hemen iletişime geçin.</p>
           <div className="cta-btns">
             <a href={WA_TR} target="_blank" rel="noopener noreferrer" className="btn-white">💬 WhatsApp'tan Yazın</a>
             <a href={MAPS} target="_blank" rel="noopener noreferrer" className="btn-outline-white">📍 Google Haritalar</a>

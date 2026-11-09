@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Kot Pantolon Paça Kısaltma ₺200'den · Aynı Gün · Antalya" },
   description:
-    "Kot pantolon paça kısaltma, orijinal paça yapımı ve daraltma ₺200'den. Normal iş aynı gün, acil 1–2 saat. Eve ve otele ücretsiz servis. ☎ " + PHONE,
+    "Kot pantolon paça kısaltma, orijinal paça yapımı ve daraltma ₺200'den. Normal iş aynı gün, acil 1–2 saat. Eve ve otele servis. ☎ " + PHONE,
   keywords: fitKeywords([
     'kot pantolon paça kısaltma', 'kot paçası kısaltma', 'kot pantolon paça yapımı', 'kot pantolon orijinal paça', 'kot pantolon daraltma', 'kot pantolon kısaltma', 'kot paça kısaltma fiyat', 'jean paça kısaltma', 'Antalya kot paça kısaltma',
   ]),
@@ -39,7 +39,7 @@ const FAQ: [string, string][] = [
   ['Kot pantolon daraltma yapıyor musunuz?', 'Evet. Kot pantolonda bacak ve bel daraltma ₺200\'den başlar; net fiyat fotoğrafa göre söylenir.'],
   ['Kot pantolon paça kısaltma ne kadar sürer?', 'Genelde aynı gün; acil işlerde 1–2 saat içinde teslim ederiz.'],
   ['Kot paçası uzatılır mı veya genişletilir mi?', 'Fotoğraf gönderirseniz kumaş payına bakıp yapılıp yapılamayacağını söyleriz.'],
-  ['Kot ürününü eve veya otele gelip alıyor musunuz?', 'Evet, kotunuzu evinizden veya otelinizden ücretsiz alırız; Konyaaltı, Muratpaşa ve çevresinde geçerlidir.'],
+  ['Kot ürününü eve veya otele gelip alıyor musunuz?', 'Evet, kotunuzu evinizden veya otelinizden alırız; Konyaaltı, Muratpaşa ve çevresinde geçerlidir.'],
   ["Kot paçasını kısaltırken ayakkabıyla mı ölçüyorsunuz?", "Evet. Kot, giyeceğiniz ayakkabıyla birlikte ve normal bel hizasında dururken işaretlenir. Uzaktan çalışıyorsanız hangi ayakkabıyla giyeceğinizi WhatsApp'tan yazmanız yeterli."],
   ["Streç kot ile sert kot aynı fiyata mı kısalır?", "Kot paça kısaltma her ikisinde de ₺200'den başlar. Kumaşın kalınlığı ve işin kapsamı kesin tutarı etkileyebilir; fotoğrafla net fiyat söylenir."],
   ["Kısaltma sonrası kotun duruşu bozulur mu?", "Makul bir kısaltmada bozulmaz. Çok fazla kısaltma gerekiyorsa diz ve baldır hizasındaki kalıbın etkilenebileceğini, fotoğrafa bakarak önceden söyleriz."],
@@ -104,7 +104,7 @@ const jsonLd = {
       description: "Kot Paça Nasıl Kısaltılır?",
       step: [
         { '@type': 'HowToStep', name: 'Fotoğraf Gönderin', text: 'WhatsApp\'tan kot pantolonun fotoğrafını gönderin, ön fiyat alın.' },
-        { '@type': 'HowToStep', name: 'Teslim Edin', text: 'Kotu atölyeye bırakın ya da adresinizden ücretsiz alalım.' },
+        { '@type': 'HowToStep', name: 'Teslim Edin', text: 'Kotu atölyeye bırakın ya da adresinizden alalım.' },
         { '@type': 'HowToStep', name: 'Ölçü ve Dikiş', text: 'Boy ayakkabınızla işaretlenir, paça kalın kota uygun iplikle kapatılır. Aynı gün; acilde 1–2 saat.' },
         { '@type': 'HowToStep', name: 'Teslim Alın', text: 'Paça dikişi kontrol edilerek teslim edilir.' },
       ],
@@ -144,7 +144,7 @@ export default function Page() {
             <h1 id="hero-h">
               Kot Pantolon Paça Kısaltma <span className="accent">Antalya</span><br />₺200'den, Aynı Gün Teslim</h1>
             <p className="hero-desc">
-              Kot pantolon paça kısaltma, orijinal paça yapımı ve daraltma. Kalın denime uygun iplik ve iğneyle çalışıyoruz; adresinize ücretsiz servis veriyoruz.
+              Kot pantolon paça kısaltma, orijinal paça yapımı ve daraltma. Kalın denime uygun iplik ve iğneyle çalışıyoruz; adresinize servis veriyoruz.
             </p>
             <p className="hero-desc"><strong>Kısa cevap:</strong> Kot pantolon paça kısaltma ve daraltma ₺200'den başlar; orijinal paça görünümü korunur, normal işler aynı gün teslim edilir.</p>
             <div className="hero-btns">
@@ -189,7 +189,7 @@ export default function Page() {
             </div>
             <div className="howto-list">
               <div className="howto-item"><div className="howto-t">Fotoğraf Gönderin</div><div className="howto-d">WhatsApp'tan kot pantolonun fotoğrafını gönderin, ön fiyat alın.</div></div>
-              <div className="howto-item"><div className="howto-t">Teslim Edin</div><div className="howto-d">Kotu atölyeye bırakın ya da adresinizden ücretsiz alalım.</div></div>
+              <div className="howto-item"><div className="howto-t">Teslim Edin</div><div className="howto-d">Kotu atölyeye bırakın ya da adresinizden alalım.</div></div>
               <div className="howto-item"><div className="howto-t">Ölçü ve Dikiş</div><div className="howto-d">Boy ayakkabınızla işaretlenir, paça kalın kota uygun iplikle kapatılır. Aynı gün; acilde 1–2 saat.</div></div>
               <div className="howto-item"><div className="howto-t">Teslim Alın</div><div className="howto-d">Paça dikişi kontrol edilerek teslim edilir.</div></div>
             </div>

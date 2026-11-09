@@ -45,7 +45,7 @@ const UI = {
     popular: 'Sık aranan aramalar', faq: 'Sık Sorulan Sorular', nearby: 'Yakın bölgeler', all: 'Tüm hizmetler',
     otherLang: 'Diğer diller', hotelLink: 'Otel bölgesi sayfası', districts: 'Hizmet verdiğimiz bölgeler',
     related: 'İlgili hizmetler', time: 'Teslim süresi', price: 'Fiyat', photoPrice: 'Fotoğraf gönderin, fiyatı hemen söyleyelim',
-    mahalle: 'Konyaaltı mahalleleri', ctaH: 'Hemen Ulaşın', free: 'Otel ve eve ücretsiz servis', paid: 'Otellere ücretsiz servis',
+    mahalle: 'Konyaaltı mahalleleri', ctaH: 'Hemen Ulaşın', free: 'Otel ve eve servis', paid: 'Otellere servis',
     hours: 'Her gün 08:00–23:00', since: "2006'dan beri · 26 yıl deneyim", where: 'Atölye: Hurma Mahallesi, Konyaaltı, Antalya',
     footer: 'Terzi Can · Hurma, Konyaaltı, Antalya', pricesLink: 'Terzi fiyatları 2026', pricesHref: '/antalya-terzi-fiyatlari',
   },
@@ -54,7 +54,7 @@ const UI = {
     popular: 'Popular searches', faq: 'Frequently Asked Questions', nearby: 'Nearby areas', all: 'All services',
     otherLang: 'Other languages', hotelLink: 'Hotel area page', districts: 'Areas we serve',
     related: 'Related services', time: 'Turnaround', price: 'Price', photoPrice: 'Send a photo and we will quote right away',
-    mahalle: 'Konyaaltı neighbourhoods (Turkish)', ctaH: 'Get in Touch', free: 'Free service to hotels and homes', paid: 'Free hotel service',
+    mahalle: 'Konyaaltı neighbourhoods (Turkish)', ctaH: 'Get in Touch', free: 'Service to hotels and homes', paid: 'Hotel service',
     hours: 'Open daily 08:00–23:00', since: 'Serving since 2006 · 26 years of experience', where: 'Workshop: Hurma, Konyaaltı, Antalya',
     footer: 'Terzi Can · Hurma, Konyaaltı, Antalya', pricesLink: 'Tailor prices Antalya', pricesHref: '/en/tailor-prices-antalya',
   },
@@ -63,7 +63,7 @@ const UI = {
     popular: 'Частые запросы', faq: 'Частые вопросы', nearby: 'Ближайшие районы', all: 'Все услуги',
     otherLang: 'Другие языки', hotelLink: 'Страница отельного района', districts: 'Районы обслуживания',
     related: 'Похожие услуги', time: 'Срок', price: 'Цена', photoPrice: 'Пришлите фото — сразу назовём цену',
-    mahalle: 'Районы Коньяалты (тур.)', ctaH: 'Свяжитесь с нами', free: 'Бесплатный выезд в отели и на дом', paid: 'Бесплатный выезд в отели',
+    mahalle: 'Районы Коньяалты (тур.)', ctaH: 'Свяжитесь с нами', free: 'Выезд в отели и на дом', paid: 'Выезд в отели',
     hours: 'Ежедневно 08:00–23:00', since: 'Работаем с 2006 года · 26 лет опыта', where: 'Мастерская: Хурма, Коньяалты, Анталья',
     footer: 'Terzi Can · Хурма, Коньяалты, Анталья', pricesLink: 'Цены портного Анталья', pricesHref: '/ru/ceny-portnoy-antalya',
   },
@@ -72,7 +72,7 @@ const UI = {
     popular: 'Häufige Suchanfragen', faq: 'Häufige Fragen', nearby: 'Nahegelegene Gebiete', all: 'Alle Leistungen',
     otherLang: 'Andere Sprachen', hotelLink: 'Seite für das Hotelgebiet', districts: 'Gebiete, die wir bedienen',
     related: 'Ähnliche Leistungen', time: 'Dauer', price: 'Preis', photoPrice: 'Foto senden, Preis sofort per WhatsApp',
-    mahalle: 'Stadtteile in Konyaaltı (türk.)', ctaH: 'Kontakt aufnehmen', free: 'Kostenloser Service zu Hotels und nach Hause', paid: 'Hotelservice kostenlos',
+    mahalle: 'Stadtteile in Konyaaltı (türk.)', ctaH: 'Kontakt aufnehmen', free: 'Service zu Hotels und nach Hause', paid: 'Hotelservice',
     hours: 'Täglich 08:00–23:00', since: 'Seit 2006 · 26 Jahre Erfahrung', where: 'Werkstatt: Hurma, Konyaaltı, Antalya',
     footer: 'Terzi Can · Hurma, Konyaaltı, Antalya', pricesLink: 'Schneider Preise Antalya', pricesHref: '/de/schneider-preise-antalya',
   },
@@ -145,16 +145,16 @@ function _districtCopy(lang: Lang, d: District) {
   let desc = '';
   const descs = {
     tr: [`${loc} terzi arıyorsanız: Terzi Can Konyaaltı. Paça kısaltma ₺200'den, fermuar değişimi ₺300'den, elbise tamiri. Her gün 08:00–23:00. ${PH}`,
-         `${loc} terzi: paça ₺200'den, fermuar ₺300'den, elbise tamiri. Her gün 08:00–23:00, otel ve eve ücretsiz alım. ${PH}`,
+         `${loc} terzi: paça ₺200'den, fermuar ₺300'den, elbise tamiri. Her gün 08:00–23:00, otel ve eve alım. ${PH}`,
          `${loc} terzi ${PH}: paça, fermuar, elbise dikimi ve tamiri. Her gün 08:00–23:00.`],
     en: [`Tailor ${loc}? Terzi Can, Konyaaltı: hemming, zipper replacement, dress repair. Open daily 08:00–23:00. ${PH}`,
-         `Tailor ${loc}: hemming, zippers, dress repair. Open daily 08:00–23:00, free hotel pick-up. ${PH}`,
+         `Tailor ${loc}: hemming, zippers, dress repair. Open daily 08:00–23:00, hotel pick-up. ${PH}`,
          `Tailor ${loc} ${PH}: hemming, zippers, dress repair. Open daily 08:00–23:00.`],
     ru: [`Портной ${loc}? Terzi Can, Коньяалты: подшив, замена молнии, ремонт платьев. Ежедневно 08:00–23:00. ${PH}`,
-         `Портной ${loc}: подшив, молния, ремонт платьев. Ежедневно 08:00–23:00, забор из отелей бесплатно. ${PH}`,
+         `Портной ${loc}: подшив, молния, ремонт платьев. Ежедневно 08:00–23:00, забор из отелей. ${PH}`,
          `Портной ${loc} ${PH}: подшив, молнии, ремонт платьев. Ежедневно 08:00–23:00.`],
     de: [`Schneider ${loc}? Terzi Can, Konyaaltı: Hose kürzen, Reißverschluss, Kleid ändern. Täglich 08:00–23:00. ${PH}`,
-         `Schneider ${loc}: Kürzen, Reißverschluss, Kleider ändern. Täglich 08:00–23:00, Hotelabholung gratis. ${PH}`,
+         `Schneider ${loc}: Kürzen, Reißverschluss, Kleider ändern. Täglich 08:00–23:00, Hotelabholung. ${PH}`,
          `Schneider ${loc} ${PH}: Kürzen, Reißverschlüsse, Kleider ändern. Täglich 08:00–23:00.`],
   }[lang];
   const priT: string[] = lang === 'tr'
@@ -165,7 +165,7 @@ function _districtCopy(lang: Lang, d: District) {
       de: [`Schneider ${n}: Hotelabholung, Kürzen | Terzi Can`, `Schneider ${n}, Antalya · Hotelabholung | Terzi Can`],
     } as Record<string, string[]>)[lang] : []);
   const priD: string[] = lang === 'tr'
-    ? (TR_PRI.includes(d.slug) ? (d.slug === 'konyaalti' ? [`Konyaaltı, Hurma, Liman, Uncalı, Gürsu ve Öğretmenevleri'nde terzi arıyorsanız: paça ₺200'den, fermuar ₺300'den. Her gün 08:00–23:00, adrese servis. ${PH}`, `Konyaaltı terzi: Hurma, Liman, Uncalı, Gürsu. Paça ₺200'den, fermuar ₺300'den. Her gün 08:00–23:00. ${PH}`] : [`${loc} terzi: paça kısaltma ücreti ₺200'den, fermuar değişimi ₺300'den. Otel ve eve ücretsiz servis, her gün 08:00–23:00. ${PH}`, `${loc} terzi: paça ₺200'den, fermuar ₺300'den. Her gün 08:00–23:00. ${PH}`]) : [])
+    ? (TR_PRI.includes(d.slug) ? (d.slug === 'konyaalti' ? [`Konyaaltı, Hurma, Liman, Uncalı, Gürsu ve Öğretmenevleri'nde terzi arıyorsanız: paça ₺200'den, fermuar ₺300'den. Her gün 08:00–23:00, adrese servis. ${PH}`, `Konyaaltı terzi: Hurma, Liman, Uncalı, Gürsu. Paça ₺200'den, fermuar ₺300'den. Her gün 08:00–23:00. ${PH}`] : [`${loc} terzi: paça kısaltma ücreti ₺200'den, fermuar değişimi ₺300'den. Otel ve eve servis, her gün 08:00–23:00. ${PH}`, `${loc} terzi: paça ₺200'den, fermuar ₺300'den. Her gün 08:00–23:00. ${PH}`]) : [])
     : (FG_PRI.includes(d.slug) ? ({
       en: [`Staying ${loc}? We collect from your hotel: hemming, zippers. message us on WhatsApp in your language. Daily 08:00–23:00. ${PH}`, `Staying ${loc}? Hotel pick-up: hemming, zippers. Daily 08:00–23:00. ${PH}`],
       ru: [`Отдыхаете ${loc}? Заберём вещи из отеля: подшив, молния. Говорим по-русски. Ежедневно 08:00–23:00. ${PH}`, `Отдыхаете ${loc}? Забор из отеля: подшив, молния. Ежедневно 08:00–23:00. ${PH}`],
@@ -244,7 +244,7 @@ function serviceCopy(lang: Lang, s: Service) {
   }[lang];
   const who = { tr: 'Terzi Can Konyaaltı:', en: 'Terzi Can in Konyaaltı:', ru: 'Terzi Can в Коньяалты:', de: 'Terzi Can in Konyaaltı:' }[lang];
   const open = { tr: 'Her gün 08:00–23:00', en: 'Open daily 08:00–23:00', ru: 'Ежедневно 08:00–23:00', de: 'Täglich 08:00–23:00' }[lang];
-  const pick = { tr: 'eve ve otele ücretsiz servis', en: 'free pick-up to home and hotel', ru: 'бесплатный забор на дом и в отель', de: 'Gratis-Abholung zu Hause und im Hotel' }[lang];
+  const pick = { tr: 'eve ve otele servis', en: 'pick-up to home and hotel', ru: 'забор на дом и в отель', de: 'Abholung zu Hause und im Hotel' }[lang];
   const tel = `☎ ${PHONE}`;
   const priceTxt = price ? (lang === 'tr' ? `2026 fiyatı ${price}` : price) : '';
   const body = (withTime: boolean) => `${who} ${withTime ? tm : ''}${withTime && priceTxt ? ', ' : ''}${priceTxt}`.replace(/[\s,:]+$/, '');
@@ -267,32 +267,32 @@ function serviceFaq(lang: Lang, s: Service): [string, string][] {
   const time = timeOf(lang, s);
   return {
     tr: [
-      [`Antalya'da ${s.vars.tr[0]} için nereye gidebilirim?`, `Konyaaltı Hurma'daki Terzi Can atölyesine. ${s.intro.tr} Eve ve otele alım-teslim tüm bölgelerde ücretsizdir; atölye her gün 08:00–23:00 açık.`],
+      [`Antalya'da ${s.vars.tr[0]} için nereye gidebilirim?`, `Konyaaltı Hurma'daki Terzi Can atölyesine. ${s.intro.tr} Eve ve otele alım-teslim tüm bölgelerde yapılır; atölye her gün 08:00–23:00 açık.`],
       [`${nm} kaç gün sürer, fiyatı nedir?`, `${time}.${price ? ' ' + price + '; net fiyat kumaşa ve işin kapsamına bağlı.' : " Fiyat için kıyafetin fotoğrafını WhatsApp'tan iletin."}`],
-      [`${nm} için otele ya da eve geliyor musunuz?`, 'Evet. Konyaaltı, Muratpaşa, Lara, Güzeloba, Kundu, Belek, Side ve Kemer dahil tüm bölgelerde eve ve otele alım-teslim ücretsizdir.'],
+      [`${nm} için otele ya da eve geliyor musunuz?`, 'Evet. Konyaaltı, Muratpaşa, Lara, Güzeloba, Kundu, Belek, Side ve Kemer dahil tüm bölgelerde eve ve otele alım-teslim yapılır.'],
       [`${nm} kaç TL, ücreti nedir?`, price ? `${price}. Net fiyat kumaşa ve işin kapsamına göre, fotoğrafla WhatsApp'tan söylenir.` : "Fiyat işe göre değişir; kıyafetin fotoğrafını WhatsApp'tan gönderin, net fiyatı söyleyelim."],
       [`${nm} ne zaman teslim edilir?`, `${time}.`],
     ],
     en: [
-      [`Where in Antalya can I get ${s.vars.en[0]} done?`, `At the Terzi Can workshop in Hurma, Konyaaltı. ${s.intro.en} Pick-up and delivery to homes and hotels is free everywhere we serve, and the workshop is open daily 08:00–23:00.`],
+      [`Where in Antalya can I get ${s.vars.en[0]} done?`, `At the Terzi Can workshop in Hurma, Konyaaltı. ${s.intro.en} Pick-up and delivery to homes and hotels is available everywhere we serve, and the workshop is open daily 08:00–23:00.`],
       [`How many days does ${nm.toLowerCase()} take, and what is the price?`, `${time}.${price ? ' ' + price + '; the final price depends on the fabric and the scope of work.' : ' Send a photo of the garment on WhatsApp to get a price.'}`],
       [`How much does ${nm.toLowerCase()} cost?`, price ? `${price}. The final price depends on the fabric and the scope of work; we confirm it from a photo on WhatsApp.` : 'The price depends on the work; send a photo on WhatsApp and we will confirm it.'],
       [`When will my ${nm.toLowerCase()} be ready?`, `${time}.`],
-      [`Do you come to my hotel or home for ${nm.toLowerCase()}?`, 'Yes. Pick-up and delivery to homes and hotels is free in every area we serve, including Konyaaltı, Muratpaşa, Lara, Güzeloba, Kundu, Belek and Side.'],
+      [`Do you come to my hotel or home for ${nm.toLowerCase()}?`, 'Yes. Pick-up and delivery to homes and hotels is available in every area we serve, including Konyaaltı, Muratpaşa, Lara, Güzeloba, Kundu, Belek and Side.'],
     ],
     ru: [
-      [`Куда в Анталье обратиться: ${s.vars.ru[0]}?`, `В мастерскую Terzi Can в Хурме (Коньяалты). ${s.intro.ru} Забор и доставка на дом и в отели бесплатны везде, где мы работаем; мастерская открыта ежедневно с 08:00 до 23:00.`],
+      [`Куда в Анталье обратиться: ${s.vars.ru[0]}?`, `В мастерскую Terzi Can в Хурме (Коньяалты). ${s.intro.ru} Забор и доставка на дом и в отели возможны везде, где мы работаем; мастерская открыта ежедневно с 08:00 до 23:00.`],
       [`Сколько дней занимает «${nm}» и какая цена?`, `${time}.${price ? ' ' + price + '; окончательная цена зависит от ткани и объёма работ.' : ' Пришлите фото вещи в WhatsApp, и мы назовём цену.'}`],
       [`Сколько стоит «${nm}»?`, price ? `${price}. Окончательная цена зависит от ткани и объёма работы; подтверждаем по фото в WhatsApp.` : 'Цена зависит от работы; отправьте фото в WhatsApp, и мы подтвердим цену.'],
       [`Когда будет готова услуга «${nm}»?`, `${time}.`],
-      [`Забираете ли вы вещь из отеля или с дома для услуги «${nm}»?`, 'Да. Забор и доставка на дом и в отели бесплатны во всех районах: Коньяалты, Муратпаша, Лара, Гюзельоба, Кунду, Белек и Сиде.'],
+      [`Забираете ли вы вещь из отеля или с дома для услуги «${nm}»?`, 'Да. Забор и доставка на дом и в отели возможны во всех районах: Коньяалты, Муратпаша, Лара, Гюзельоба, Кунду, Белек и Сиде.'],
     ],
     de: [
-      [`Wo in Antalya bekomme ich „${s.vars.de[0]}“?`, `In der Werkstatt von Terzi Can in Hurma, Konyaaltı. ${s.intro.de} Abholung und Lieferung zu Hotel und nach Hause sind überall kostenlos, die Werkstatt ist täglich von 08:00 bis 23:00 geöffnet.`],
+      [`Wo in Antalya bekomme ich „${s.vars.de[0]}“?`, `In der Werkstatt von Terzi Can in Hurma, Konyaaltı. ${s.intro.de} Abholung und Lieferung zu Hotel und nach Hause sind überall möglich, die Werkstatt ist täglich von 08:00 bis 23:00 geöffnet.`],
       [`Wie viele Tage braucht „${nm}“ und was kostet es?`, `${time}.${price ? ' ' + price + '; der endgültige Preis hängt von Stoff und Aufwand ab.' : ' Schicken Sie ein Foto des Kleidungsstücks per WhatsApp, dann nennen wir den Preis.'}`],
       [`Was kostet „${nm}“?`, price ? `${price}. Der endgültige Preis hängt von Stoff und Aufwand ab; wir bestätigen ihn per Foto auf WhatsApp.` : 'Der Preis hängt von der Arbeit ab; senden Sie ein Foto per WhatsApp, wir bestätigen ihn.'],
       [`Wann ist „${nm}“ fertig?`, `${time}.`],
-      [`Holen Sie die Kleidung für „${nm}“ im Hotel oder zu Hause ab?`, 'Ja. Abholung und Lieferung zu Hotel und nach Hause sind in allen Gebieten kostenlos: Konyaaltı, Muratpaşa, Lara, Güzeloba, Kundu, Belek und Side.'],
+      [`Holen Sie die Kleidung für „${nm}“ im Hotel oder zu Hause ab?`, 'Ja. Abholung und Lieferung zu Hotel und nach Hause sind in allen Gebieten möglich: Konyaaltı, Muratpaşa, Lara, Güzeloba, Kundu, Belek und Side.'],
     ],
   }[lang] as [string, string][];
 }
@@ -384,8 +384,8 @@ export function hubMetadata(lang: Lang): Metadata {
   const description = {
     tr: `Bay bayan tamir tadilat: söküğü, yırtığı dikme, paça ve etek kısaltma, fermuar değişimi. Konyaaltı Hurma, Liman, Uncalı, Gürsu. ☎ ${PHONE}`,
     en: `Clothing repair for men & women: torn seams, hemming, zipper replacement. Konyaaltı, Hurma, Liman, Arapsuyu. Pick-up arranged on WhatsApp. ☎ ${PHONE}`,
-    ru: `Ремонт одежды: зашить дырку, подшив, молнии, мужская и женская. Коньяалты, Хурма, Лиман, Арапсую. Бесплатный забор. ☎ ${PHONE}`,
-    de: `Kleidung reparieren & ändern: Risse nähen, Kürzen, Reißverschluss. Konyaaltı, Hurma, Liman, Arapsuyu. Abholung gratis. ☎ ${PHONE}`,
+    ru: `Ремонт одежды: зашить дырку, подшив, молнии, мужская и женская. Коньяалты, Хурма, Лиман, Арапсую. Забор вещей. ☎ ${PHONE}`,
+    de: `Kleidung reparieren & ändern: Risse nähen, Kürzen, Reißverschluss. Konyaaltı, Hurma, Liman, Arapsuyu. Hotelabholung. ☎ ${PHONE}`,
   }[lang];
   const url = abs(SERVICE_BASE[lang]);
   return {

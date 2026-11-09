@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Liman Terzi · Paça ₺200'den, Fermuar ₺300'den · Servis" },
   description:
-    "Liman terzi: paça kısaltma ₺200, fermuar değişimi ₺300, bel daraltma, tamir tadilat. Liman'a ücretsiz servis. Her gün 08:00–23:00. ☎ " + PHONE,
+    "Liman terzi: paça kısaltma ₺200, fermuar değişimi ₺300, bel daraltma, tamir tadilat. Liman'a servis. Her gün 08:00–23:00. ☎ " + PHONE,
   keywords: fitKeywords(Array.from(new Set(['Liman tamir tadilat', 'Liman söküğü dikme', 'Liman yırtık tamiri', 'Liman elbise tamiri', 'Liman terzi', 'Liman mahallesi terzi', 'Liman Konyaaltı terzi', 'Liman paça kısaltma', 'Liman fermuar tamiri', 'Liman bel daraltma', 'Liman elbise dikimi', 'Liman gelinlik tadilatı', 'Liman terzi fiyatları 2026', 'Konyaaltı Liman dikiş atölyesi', 'Liman fermuar değişimi', 'Liman fermuar değiştirme', 'Liman beden ayarlama', 'Liman beden ayarlaması', 'Liman beden küçültme', 'Liman beden büyütme', 'Liman pantolon daraltma', 'Liman pantolon kısaltma', 'Liman kot paçası kısaltma', 'Liman abiye tamiri', 'Liman mont fermuar değişimi', 'Liman ceket tadilatı', 'Liman gömlek daraltma', 'Liman etek daraltma', 'Liman şort kısaltma', 'Liman özel dikim', 'Liman bayan elbise dikimi', 'Liman yakınımda terzi', 'Konyaaltı Liman terzi tamir tadilat', 'Liman bay bayan elbise tamiri', 'Liman terzi', 'Liman bay bayan terzi', 'Liman dikim', 'Liman tamir tadilat', 'Liman elbise tamiri', 'Liman elbise tadilatı', 'Liman fermuar değişimi', 'Liman fermuar tamiri', 'Liman boy kısaltma', 'Liman bel daraltma', 'Liman etek boyu kısaltma', 'Liman pantolon boyu kısaltma', 'Liman paça kısaltma', 'Liman kot paçası kısaltma', 'Liman beden ölçüsüne göre elbise tadilatı', 'Liman mont tamiri', 'Liman ceket daraltma', 'Liman gömlek daraltma', 'Liman şort kısaltma', 'Liman pantolon daraltma', 'Liman etek daraltma', 'Liman elbise daraltma', 'Liman elbise dikimi']))),
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   alternates: { canonical: PAGE_URL, languages: { tr: PAGE_URL, en: `${SITE}${DISTRICT_BASE.en}/liman`, ru: `${SITE}${DISTRICT_BASE.ru}/liman`, de: `${SITE}${DISTRICT_BASE.de}/liman`, 'x-default': PAGE_URL } },
@@ -122,7 +122,7 @@ export default function LimanPage() {
             <div className="hero-overlay" />
           </div>
           <div className="hero-content">
-            <span className="hero-tag">📍 Liman Mahallesi · Konyaaltı · Ücretsiz Servis</span>
+            <span className="hero-tag">📍 Liman Mahallesi · Konyaaltı</span>
             <h1 id="hero-h">
               Liman <span className="accent">Terzi</span><br />
               Paça Kısaltma, Bel Daraltma, Fermuar Değişimi
@@ -147,7 +147,7 @@ export default function LimanPage() {
               <p className="sec-sub">
                 Atölyemizin bulunduğu mahalle. Liman içindeki tüm sokaklara — sahil şeridi, iş yerleri ve site/apartman bölgeleri dahil — en hızlı ulaşım burada, çünkü atölyemiz Liman sınırları içinde.
               </p>
-              <p className="sec-sub" style={{ marginTop: '.8rem' }}>Liman mahallesine ücretsiz adrese servis veriyoruz — atölyemiz burada olduğu için genellikle en hızlı teslimat bu bölgede.</p>
+              <p className="sec-sub" style={{ marginTop: '.8rem' }}>Liman mahallesine adrese servis veriyoruz — atölyemiz burada olduğu için genellikle en hızlı teslimat bu bölgede.</p>
             </div>
           </div>
         </section>

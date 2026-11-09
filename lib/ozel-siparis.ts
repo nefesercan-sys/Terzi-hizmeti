@@ -38,7 +38,7 @@ export const OZEL: Record<OLang, OzelCopy> = {
     priceTitle: 'Fiyat nasıl belirlenir',
     price: ["Özel dikimde sabit fiyat yoktur; fiyat fotoğrafa veya istenilen modele göre belirlenir.", "Fiyatı işlem başlamadan WhatsApp'tan söyleriz. Fiyatlara KDV dahil değildir.", "Ödeme zamanı ve yöntemi WhatsApp'tan netleştirilir."],
     shipTitle: 'Teslimat ve garanti',
-    ship: ["Antalya'da otel ve ev teslimi ücretsizdir. Yurt dışına kargo ile gönderilir; kargo ücreti müşteriye aittir.", "Kargo ve gümrük ayrıntıları ülkenize göre WhatsApp'tan netleştirilir.", "Kargo firmasının taşıma garantisi geçerlidir. Dikimimize de garanti veriyoruz; beğenilmediği takdirde işlem yeniden düzeltilir."],
+    ship: ["Antalya'da otel ve ev teslimi yapılır. Yurt dışına kargo ile gönderilir; kargo ücreti müşteriye aittir.", "Kargo ve gümrük ayrıntıları ülkenize göre WhatsApp'tan netleştirilir.", "Kargo firmasının taşıma garantisi geçerlidir. Dikimimize de garanti veriyoruz; beğenilmediği takdirde işlem yeniden düzeltilir."],
     faq: [
       ['Hangi giysiler özel dikilir?', "Bay ve bayan takım, spor takım, pantolon, şort, etek, gömlek, abiye ve takım elbise özel dikilir. Kumaş olarak keten, pamuk ve diğer kumaşlar seçilebilir."],
       ['Özel dikim ne kadar tutar?', "Özel dikimde sabit fiyat yoktur; fiyat fotoğrafa veya istenilen modele göre WhatsApp'tan söylenir. Fiyatlara KDV dahil değildir."],
@@ -67,7 +67,7 @@ export const OZEL: Record<OLang, OzelCopy> = {
     priceTitle: 'How the price is set',
     price: ['Made-to-order sewing has no fixed price; it depends on your photo or chosen model.', 'We tell you the price on WhatsApp before any work starts. Prices exclude VAT.', 'Payment timing and method are agreed on WhatsApp.'],
     shipTitle: 'Delivery and guarantee',
-    ship: ['Hotel and home delivery in Antalya is free. Orders abroad go by courier; the courier fee is paid by the customer.', 'Courier and customs details are clarified on WhatsApp for your country.', 'The carrier’s transport guarantee applies. We also guarantee our sewing; if you are not happy, we correct it again.'],
+    ship: ['Hotel and home delivery in Antalya is available. Orders abroad go by courier; the courier fee is paid by the customer.', 'Courier and customs details are clarified on WhatsApp for your country.', 'The carrier’s transport guarantee applies. We also guarantee our sewing; if you are not happy, we correct it again.'],
     faq: [
       ['What can be made to order?', 'Men’s and women’s sets, sports sets, trousers, shorts, skirts, shirts, evening dresses and suits. Fabrics: linen, cotton and others.'],
       ['How much does made-to-order clothing cost?', 'There is no fixed price; it depends on your photo or model and is quoted on WhatsApp. Prices exclude VAT.'],
@@ -96,7 +96,7 @@ export const OZEL: Record<OLang, OzelCopy> = {
     priceTitle: 'Как определяется цена',
     price: ['Фиксированной цены на пошив по заказу нет: она зависит от фото или выбранной модели.', 'Цену называем в WhatsApp до начала работы. НДС в цену не входит.', 'Срок и способ оплаты уточняются в WhatsApp.'],
     shipTitle: 'Доставка и гарантия',
-    ship: ['Доставка в отель и домой по Анталье бесплатна. За границу отправляем курьером; стоимость доставки оплачивает клиент.', 'Детали доставки и таможни для вашей страны уточняются в WhatsApp.', 'Действует гарантия перевозчика на транспортировку. На пошив даём свою гарантию; если не понравится, исправим снова.'],
+    ship: ['Доставка в отель и домой по Анталье возможна. За границу отправляем курьером; стоимость доставки оплачивает клиент.', 'Детали доставки и таможни для вашей страны уточняются в WhatsApp.', 'Действует гарантия перевозчика на транспортировку. На пошив даём свою гарантию; если не понравится, исправим снова.'],
     faq: [
       ['Что можно сшить на заказ?', 'Мужские и женские костюмы, спортивные комплекты, брюки, шорты, юбки, рубашки, вечерние платья и костюмы. Ткани: лён, хлопок и другие.'],
       ['Сколько стоит пошив на заказ?', 'Фиксированной цены нет: она зависит от фото или модели, называем её в WhatsApp. НДС в цену не входит.'],
@@ -125,7 +125,7 @@ export const OZEL: Record<OLang, OzelCopy> = {
     priceTitle: 'Wie der Preis entsteht',
     price: ['Für Maßanfertigung gibt es keinen Festpreis; er richtet sich nach Foto oder Wunschmodell.', 'Den Preis nennen wir per WhatsApp, bevor wir beginnen. Preise ohne MwSt.', 'Zahlungszeitpunkt und -art klären wir per WhatsApp.'],
     shipTitle: 'Lieferung und Garantie',
-    ship: ['Lieferung ins Hotel oder nach Hause in Antalya ist kostenlos. Ins Ausland per Kurier; die Versandkosten trägt der Kunde.', 'Versand- und Zolldetails für Ihr Land klären wir per WhatsApp.', 'Es gilt die Transportgarantie des Versanddienstes. Auf unsere Näharbeit geben wir ebenfalls Garantie; bei Nichtgefallen wird sie erneut korrigiert.'],
+    ship: ['Lieferung ins Hotel oder nach Hause in Antalya ist möglich. Ins Ausland per Kurier; die Versandkosten trägt der Kunde.', 'Versand- und Zolldetails für Ihr Land klären wir per WhatsApp.', 'Es gilt die Transportgarantie des Versanddienstes. Auf unsere Näharbeit geben wir ebenfalls Garantie; bei Nichtgefallen wird sie erneut korrigiert.'],
     faq: [
       ['Was kann nach Maß genäht werden?', 'Damen- und Herrenkombinationen, Sportsets, Hosen, Shorts, Röcke, Hemden, Abendkleider und Anzüge. Stoffe: Leinen, Baumwolle und andere.'],
       ['Was kostet Maßanfertigung?', 'Es gibt keinen Festpreis; er hängt von Foto oder Modell ab und wird per WhatsApp genannt. Preise ohne MwSt.'],
@@ -154,7 +154,7 @@ export const OZEL: Record<OLang, OzelCopy> = {
     priceTitle: 'Cómo se fija el precio',
     price: ['La confección por encargo no tiene precio fijo; depende de su foto o del modelo elegido.', 'Le decimos el precio por WhatsApp antes de empezar. Los precios no incluyen IVA.', 'El momento y la forma de pago se acuerdan por WhatsApp.'],
     shipTitle: 'Entrega y garantía',
-    ship: ['La entrega en hotel o domicilio en Antalya es gratuita. Al extranjero va por mensajería; el coste del envío lo paga el cliente.', 'Los detalles de envío y aduana para su país se aclaran por WhatsApp.', 'Rige la garantía de transporte de la empresa de mensajería. También garantizamos nuestra costura; si no le gusta, la corregimos de nuevo.'],
+    ship: ['La entrega en hotel o domicilio en Antalya están disponibles. Al extranjero va por mensajería; el coste del envío lo paga el cliente.', 'Los detalles de envío y aduana para su país se aclaran por WhatsApp.', 'Rige la garantía de transporte de la empresa de mensajería. También garantizamos nuestra costura; si no le gusta, la corregimos de nuevo.'],
     faq: [
       ['¿Qué se puede hacer por encargo?', 'Conjuntos de hombre y de mujer, conjuntos deportivos, pantalones, bermudas, faldas, camisas, vestidos de noche y trajes. Telas: lino, algodón y otras.'],
       ['¿Cuánto cuesta la ropa a medida?', 'No hay precio fijo; depende de la foto o del modelo y se indica por WhatsApp. Los precios no incluyen IVA.'],
@@ -183,7 +183,7 @@ export const OZEL: Record<OLang, OzelCopy> = {
     priceTitle: 'Comment le prix est fixé',
     price: ['La confection sur commande n’a pas de prix fixe ; il dépend de votre photo ou du modèle choisi.', 'Nous donnons le prix sur WhatsApp avant de commencer. Les prix s’entendent hors TVA.', 'Le moment et le mode de paiement sont précisés sur WhatsApp.'],
     shipTitle: 'Livraison et garantie',
-    ship: ['La livraison à l’hôtel ou à domicile à Antalya est gratuite. À l’étranger, l’envoi se fait par transporteur ; les frais d’envoi sont à la charge du client.', 'Les détails d’envoi et de douane pour votre pays sont précisés sur WhatsApp.', 'La garantie de transport du transporteur s’applique. Nous garantissons aussi notre couture ; si le résultat ne vous plaît pas, nous le corrigeons de nouveau.'],
+    ship: ['La livraison à l’hôtel ou à domicile à Antalya sont disponibles. À l’étranger, l’envoi se fait par transporteur ; les frais d’envoi sont à la charge du client.', 'Les détails d’envoi et de douane pour votre pays sont précisés sur WhatsApp.', 'La garantie de transport du transporteur s’applique. Nous garantissons aussi notre couture ; si le résultat ne vous plaît pas, nous le corrigeons de nouveau.'],
     faq: [
       ['Que peut-on faire sur commande ?', 'Ensembles homme et femme, tenues de sport, pantalons, shorts, jupes, chemises, robes de soirée et costumes. Tissus : lin, coton et autres.'],
       ['Combien coûte un vêtement sur mesure ?', 'Il n’y a pas de prix fixe ; il dépend de la photo ou du modèle et est donné sur WhatsApp. Les prix s’entendent hors TVA.'],
@@ -212,7 +212,7 @@ export const OZEL: Record<OLang, OzelCopy> = {
     priceTitle: 'Jak ustalamy cenę',
     price: ['Szycie na zamówienie nie ma stałej ceny; zależy od zdjęcia lub wybranego modelu.', 'Cenę podajemy na WhatsApp przed rozpoczęciem pracy. Ceny nie zawierają VAT.', 'Termin i sposób płatności ustalamy na WhatsApp.'],
     shipTitle: 'Dostawa i gwarancja',
-    ship: ['Dostawa do hotelu i domu w Antalyi jest bezpłatna. Za granicę wysyłamy kurierem; koszt przesyłki ponosi klient.', 'Szczegóły wysyłki i odprawy celnej dla Twojego kraju ustalamy na WhatsApp.', 'Obowiązuje gwarancja przewoźnika na transport. Na nasze szycie również dajemy gwarancję; jeśli efekt się nie spodoba, poprawimy pracę ponownie.'],
+    ship: ['Dostawa do hotelu i domu w Antalyi jest dostępna. Za granicę wysyłamy kurierem; koszt przesyłki ponosi klient.', 'Szczegóły wysyłki i odprawy celnej dla Twojego kraju ustalamy na WhatsApp.', 'Obowiązuje gwarancja przewoźnika na transport. Na nasze szycie również dajemy gwarancję; jeśli efekt się nie spodoba, poprawimy pracę ponownie.'],
     faq: [
       ['Co można uszyć na zamówienie?', 'Komplety damskie i męskie, komplety sportowe, spodnie, szorty, spódnice, koszule, suknie wieczorowe i garnitury. Tkaniny: len, bawełna i inne.'],
       ['Ile kosztuje szycie na miarę?', 'Nie ma stałej ceny; zależy od zdjęcia lub modelu i jest podawana na WhatsApp. Ceny nie zawierają VAT.'],
@@ -241,7 +241,7 @@ export const OZEL: Record<OLang, OzelCopy> = {
     priceTitle: 'Як визначається ціна',
     price: ['Фіксованої ціни на пошив на замовлення немає: вона залежить від фото або обраної моделі.', 'Ціну називаємо у WhatsApp до початку роботи. ПДВ у ціну не входить.', 'Час і спосіб оплати уточнюємо у WhatsApp.'],
     shipTitle: 'Доставка і гарантія',
-    ship: ['Доставка до готелю та додому по Анталії безкоштовна. За кордон відправляємо кур’єром; вартість доставки сплачує клієнт.', 'Деталі відправлення й митниці для вашої країни уточнюємо у WhatsApp.', 'Діє гарантія перевізника на транспортування. На пошив теж даємо гарантію; якщо не сподобається, виправимо роботу знову.'],
+    ship: ['Доставка до готелю та додому по Анталії доступна. За кордон відправляємо кур’єром; вартість доставки сплачує клієнт.', 'Деталі відправлення й митниці для вашої країни уточнюємо у WhatsApp.', 'Діє гарантія перевізника на транспортування. На пошив теж даємо гарантію; якщо не сподобається, виправимо роботу знову.'],
     faq: [
       ['Що можна пошити на замовлення?', 'Чоловічі та жіночі костюми, спортивні комплекти, штани, шорти, спідниці, сорочки, вечірні сукні та костюми. Тканини: льон, бавовна та інші.'],
       ['Скільки коштує пошив на замовлення?', 'Фіксованої ціни немає: вона залежить від фото чи моделі, називаємо її у WhatsApp. ПДВ у ціну не входить.'],
@@ -270,7 +270,7 @@ export const OZEL: Record<OLang, OzelCopy> = {
     priceTitle: 'Hoe de prijs tot stand komt',
     price: ['Maatwerk heeft geen vaste prijs; die hangt af van uw foto of gekozen model.', 'Wij noemen de prijs via WhatsApp voordat we beginnen. Prijzen zijn exclusief btw.', 'Moment en wijze van betalen stemmen we af via WhatsApp.'],
     shipTitle: 'Levering en garantie',
-    ship: ['Levering aan hotel of huisadres in Antalya is gratis. Naar het buitenland gaat het per koerier; de verzendkosten zijn voor de klant.', 'Details over verzending en douane voor uw land bespreken we via WhatsApp.', 'De transportgarantie van de vervoerder geldt. Ook op ons naaiwerk geven wij garantie; bent u niet tevreden, dan corrigeren wij het opnieuw.'],
+    ship: ['Levering aan hotel of huisadres in Antalya is mogelijk. Naar het buitenland gaat het per koerier; de verzendkosten zijn voor de klant.', 'Details over verzending en douane voor uw land bespreken we via WhatsApp.', 'De transportgarantie van de vervoerder geldt. Ook op ons naaiwerk geven wij garantie; bent u niet tevreden, dan corrigeren wij het opnieuw.'],
     faq: [
       ['Wat kan op bestelling worden gemaakt?', 'Dames- en herenkostuums, sportsets, broeken, shorts, rokken, overhemden, avondjurken en pakken. Stoffen: linnen, katoen en andere.'],
       ['Wat kost maatkleding?', 'Er is geen vaste prijs; die hangt af van de foto of het model en wordt via WhatsApp genoemd. Prijzen zijn exclusief btw.'],
@@ -299,7 +299,7 @@ export const OZEL: Record<OLang, OzelCopy> = {
     priceTitle: 'كيف يُحدَّد السعر',
     price: ['لا يوجد سعر ثابت للتفصيل حسب الطلب؛ يعتمد السعر على الصورة أو الموديل المختار.', 'نخبركم بالسعر عبر واتساب قبل بدء العمل. الأسعار لا تشمل ضريبة القيمة المضافة.', 'يُتفق على وقت الدفع وطريقته عبر واتساب.'],
     shipTitle: 'التسليم والضمان',
-    ship: ['التسليم إلى الفندق أو المنزل في أنطاليا مجاني. نشحن إلى الخارج عبر شركة شحن، وتكلفة الشحن على العميل.', 'تفاصيل الشحن والجمارك لبلدكم يُتفق عليها عبر واتساب.', 'يسري ضمان النقل الخاص بشركة الشحن. ونمنح ضماناً على خياطتنا أيضاً؛ وإن لم يعجبكم العمل نصحّحه مرة أخرى.'],
+    ship: ['التسليم إلى الفندق أو المنزل في أنطاليا متاح. نشحن إلى الخارج عبر شركة شحن، وتكلفة الشحن على العميل.', 'تفاصيل الشحن والجمارك لبلدكم يُتفق عليها عبر واتساب.', 'يسري ضمان النقل الخاص بشركة الشحن. ونمنح ضماناً على خياطتنا أيضاً؛ وإن لم يعجبكم العمل نصحّحه مرة أخرى.'],
     faq: [
       ['ما الذي يمكن تفصيله حسب الطلب؟', 'بدلات رجالية ونسائية، أطقم رياضية، بناطيل، شورتات، تنانير، قمصان، فساتين سهرة وبدلات رسمية. الأقمشة: كتان وقطن وغيرها.'],
       ['كم تبلغ تكلفة التفصيل حسب الطلب؟', 'لا يوجد سعر ثابت؛ يعتمد على الصورة أو الموديل ويُذكر عبر واتساب. الأسعار لا تشمل ضريبة القيمة المضافة.'],

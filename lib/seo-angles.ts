@@ -44,15 +44,15 @@ export interface AngleCtx {
   lang: ALang;
   n: string;          // bölge adı (o dilde)
   loc: string;        // "…'da" / "in X" / "в X"
-  free: boolean;      // ücretsiz servis bölgesi mi (yakın) — değilse "bölgeye göre fiyatlandırılır"
+  free: boolean;      // servis bölgesi mi (yakın) — değilse "bölgeye göre fiyatlandırılır"
   tail: string;       // site tonuna göre kapanış: telefon + (saat | fotoğraf at, fiyat al)
 }
 
 const SVC: Record<ALang, { free: string; paid: string }> = {
-  tr: { free: 'Eve ve otele ücretsiz servis', paid: 'Eve ve otele ücretsiz servis' },
-  en: { free: 'Free pick-up to home and hotel', paid: 'Free pick-up to home and hotel' },
-  ru: { free: 'Бесплатный забор на дом и в отель', paid: 'Бесплатный забор на дом и в отель' },
-  de: { free: 'Gratis-Abholung zu Hause und im Hotel', paid: 'Gratis-Abholung zu Hause und im Hotel' },
+  tr: { free: 'Eve ve otele servis', paid: 'Eve ve otele servis' },
+  en: { free: 'pick-up to home and hotel', paid: 'pick-up to home and hotel' },
+  ru: { free: 'Забор на дом и в отель', paid: 'Забор на дом и в отель' },
+  de: { free: 'Abholung zu Hause und im Hotel', paid: 'Abholung zu Hause und im Hotel' },
 };
 
 type T = { titles: (n: string) => string[]; core: (c: AngleCtx) => string; extra: string; kw: (n: string) => string[] };

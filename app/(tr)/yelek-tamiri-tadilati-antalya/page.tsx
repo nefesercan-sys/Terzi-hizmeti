@@ -13,18 +13,18 @@ const WA        = (m: string) => `https://wa.me/${WA_NUM}?text=${encodeURICompon
 const WA_DEF    = WA("Merhaba, yelek tamiri/tadilatı için fiyat almak istiyorum. Fotoğrafı gönderiyorum.");
 const MAPS      = 'https://www.google.com/maps?cid=6436895271281342624';
 const TODAY     = '2026-11-03';
-const FAQ: [string, string][] = [["Yelek tamiri ve tadilatı ne kadar?", "Yelek fiyatı türüne (takım yelek, kot, deri, şişme) ve işe göre değişir; fotoğrafı WhatsApp'tan gönderirseniz net fiyatı söyleriz."], ["Takım elbise yeleği daraltılır mı?", "Evet. Yelek beden ayarı sırt kemeri ve yan dikişlerden yapılır; kumaş ve astara göre fotoğraftan değerlendirilir."], ["Yelek boyu ve omuzu ayarlanır mı?", "Evet. Boy ve omuz/kol çukuru ölçünüze göre düzenlenir; ölçü yelek üzerinizdeyken işaretlenir."], ["Yelek fermuarı değişiyor mu?", "Evet. Kot, deri ve şişme yeleklerin fermuarı değiştirilir; fiyat fermuar boyuna ve yeleğe göre söylenir."], ["Deri veya kot yelek tadilatı yapılıyor mu?", "Evet. Deri ve kot yelek tadilatı yapılıyor; ayrıntı için deri ceket ve kot sayfalarımıza bakabilirsiniz."], ["Yelek tadilatı ne kadar sürer?", "Normal işler aynı gün, acil işler 1–2 saatte teslim edilir. Kapsamlı işlerde süreyi fotoğrafı görünce söyleriz."], ["Yeleği eve veya otele gelip alıyor musunuz?", "Evet. Konyaaltı, Muratpaşa ve çevresinde eve ve otele alım-teslim ücretsizdir."]];
+const FAQ: [string, string][] = [["Yelek tamiri ve tadilatı ne kadar?", "Yelek fiyatı türüne (takım yelek, kot, deri, şişme) ve işe göre değişir; fotoğrafı WhatsApp'tan gönderirseniz net fiyatı söyleriz."], ["Takım elbise yeleği daraltılır mı?", "Evet. Yelek beden ayarı sırt kemeri ve yan dikişlerden yapılır; kumaş ve astara göre fotoğraftan değerlendirilir."], ["Yelek boyu ve omuzu ayarlanır mı?", "Evet. Boy ve omuz/kol çukuru ölçünüze göre düzenlenir; ölçü yelek üzerinizdeyken işaretlenir."], ["Yelek fermuarı değişiyor mu?", "Evet. Kot, deri ve şişme yeleklerin fermuarı değiştirilir; fiyat fermuar boyuna ve yeleğe göre söylenir."], ["Deri veya kot yelek tadilatı yapılıyor mu?", "Evet. Deri ve kot yelek tadilatı yapılıyor; ayrıntı için deri ceket ve kot sayfalarımıza bakabilirsiniz."], ["Yelek tadilatı ne kadar sürer?", "Normal işler aynı gün, acil işler 1–2 saatte teslim edilir. Kapsamlı işlerde süreyi fotoğrafı görünce söyleriz."], ["Yeleği eve veya otele gelip alıyor musunuz?", "Evet. Konyaaltı, Muratpaşa ve çevresinde eve ve otele alım-teslim yapılır."]];
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Yelek Tamiri ve Tadilatı Antalya · Aynı Gün" },
-  description: "Takım elbise yeleği, kot ve deri yelek daraltma, boy ayarı, fermuar ve düğme onarımı. Fiyat fotoğrafa göre. Eve ve otele ücretsiz. ☎ +90 531 898 64 18",
+  description: "Takım elbise yeleği, kot ve deri yelek daraltma, boy ayarı, fermuar ve düğme onarımı. Fiyat fotoğrafa göre. Eve ve otele servis. ☎ +90 531 898 64 18",
   keywords: fitKeywords(["yelek tamiri", "yelek tadilatı", "yelek daraltma", "yelek kısaltma", "yelek fermuarı değişimi", "takım elbise yeleği tadilatı", "deri yelek tamiri", "kot yelek tadilatı", "yelek tamiri Antalya"]),
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: "Yelek Tamiri ve Tadilatı Antalya | Terzi Can",
-    description: "Takım elbise, kot, deri ve şişme yelek: beden daraltma, boy ve omuz ayarı, fermuar ve düğme onarımı. Eve ve otele ücretsiz.",
+    description: "Takım elbise, kot, deri ve şişme yelek: beden daraltma, boy ve omuz ayarı, fermuar ve düğme onarımı. Eve ve otele servis.",
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'tr_TR', type: 'website',
     images: [{ url: `${SITE}/terzi-can-hero.jpg`, width: 1024, height: 1024, alt: "Yelek Tamiri ve Tadilatı Antalya" }],
   },
@@ -36,7 +36,7 @@ const jsonLd = {
     businessNode(),
     {
       '@type': 'WebPage', '@id': `${PAGE_URL}#webpage`, url: PAGE_URL,
-      name: "Yelek Tamiri ve Tadilatı Antalya", description: "Takım elbise, kot, deri ve şişme yelek: beden daraltma, boy ve omuz ayarı, fermuar ve düğme onarımı. Eve ve otele ücretsiz.",
+      name: "Yelek Tamiri ve Tadilatı Antalya", description: "Takım elbise, kot, deri ve şişme yelek: beden daraltma, boy ve omuz ayarı, fermuar ve düğme onarımı. Eve ve otele servis.",
       inLanguage: 'tr', isPartOf: { '@id': `${SITE}#website` }, about: { '@id': `${SITE}#business` },
       breadcrumb: { '@id': `${PAGE_URL}#breadcrumb` }, dateModified: TODAY,
     },
@@ -86,7 +86,7 @@ export default function Page() {
           <div className="hero-content">
             <span className="hero-tag">🦺 Yelek · Daraltma · Fermuar · Düğme</span>
             <h1 id="hero-h">Yelek Tamiri ve Tadilatı <span className="accent">Antalya</span></h1>
-            <p className="hero-desc">Takım elbise, kot, deri ve şişme yelek: beden daraltma, boy ve omuz ayarı, fermuar ve düğme onarımı. Eve ve otele ücretsiz. Her gün 08:00–23:00.</p>
+            <p className="hero-desc">Takım elbise, kot, deri ve şişme yelek: beden daraltma, boy ve omuz ayarı, fermuar ve düğme onarımı. Eve ve otele servis. Her gün 08:00–23:00.</p>
             <p className="hero-desc"><strong>Kısa cevap:</strong> Yelek daraltma, boy ayarı, fermuar ve düğme onarımı yapılır; fiyat yeleğin türüne (takım yelek, kot, deri, şişme) ve işe göre fotoğrafla söylenir. Normal işler aynı gün teslim edilir.</p>
             <div className="hero-btns">
               <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-primary">💬 Fotoğraf Gönderin →</a>
@@ -130,7 +130,7 @@ export default function Page() {
               <div className="howto-item"><div className="howto-t">📏 Boy ve omuz</div><div className="howto-d">Yelek boyu ve omuz/kol çukuru ölçünüze göre düzenlenir.</div></div>
               <div className="howto-item"><div className="howto-t">🧷 Fermuar ve düğme</div><div className="howto-d">Kot, deri ve şişme yelek fermuarı değişimi; düğme ve düğme iliği onarımı.</div></div>
               <div className="howto-item"><div className="howto-t">🪡 Astar ve söküklerin onarımı</div><div className="howto-d">Yırtık astar, sökük dikiş ve cep onarımı.</div></div>
-              <div className="howto-item"><div className="howto-t">Fotoğraf Gönderin</div><div className="howto-d">Yeleğin ve yapılacak yerin fotoğrafını WhatsApp'tan gönderin, net fiyat alın. Eve ve otele ücretsiz alım-teslim isteyebilirsiniz.</div></div>
+              <div className="howto-item"><div className="howto-t">Fotoğraf Gönderin</div><div className="howto-d">Yeleğin ve yapılacak yerin fotoğrafını WhatsApp'tan gönderin, net fiyat alın. Eve ve otele alım-teslim isteyebilirsiniz.</div></div>
             </div>
           </div>
         </section>

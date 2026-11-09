@@ -23,7 +23,7 @@ const OG        = `${SITE}/terzi-can-hero.jpg`;
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Antalya Terzi · Paça ₺200'den, Fermuar ₺300'den · 08–23" },
-  description: "Antalya'da bay bayan terzi: paça kısaltma ₺200, fermuar ₺300, bel daraltma ₺200. Eve ve otele ücretsiz servis. 08:00–23:00. ☎ " + PHONE,
+  description: "Antalya'da bay bayan terzi: paça kısaltma ₺200, fermuar ₺300, bel daraltma ₺200. Eve ve otele servis. 08:00–23:00. ☎ " + PHONE,
   keywords: ['Antalya terzi', 'Konyaaltı terzi', 'Hurma terzi', 'Liman terzi', 'Uncalı terzi', 'Gürsu terzi', 'otele gelen terzi Antalya', 'acil terzi Antalya'],
   authors: [{ name: BIZ, url: SITE }],
   creator: BIZ,
@@ -65,12 +65,12 @@ export const metadata: Metadata = {
 };
 
 const FAQS: [string, string][] = [
-  ['Servis ücretsiz mi?', 'Evet. Hizmet verdiğimiz her bölgede eve ve otele alım-teslim ücretsizdir. Adresinizi veya otelinizi WhatsApp üzerinden yazmanız yeterli.'],
-  ["Ahatlı, Toros ve diğer Antalya bölgelerine hizmet var mı?", 'Evet. Eve ve otele alım-teslim tüm bölgelerde ücretsizdir; WhatsApp\'tan yazmanız yeterli.'],
+  ['Servis var mı?', 'Evet. Hizmet verdiğimiz her bölgede eve ve otele alım-teslim yapılır. Adresinizi veya otelinizi WhatsApp üzerinden yazmanız yeterli.'],
+  ["Ahatlı, Toros ve diğer Antalya bölgelerine hizmet var mı?", 'Evet. Eve ve otele alım-teslim tüm bölgelerde yapılır; WhatsApp\'tan yazmanız yeterli.'],
   ['Bay, bayan, çocuk kıyafeti dikiyor musunuz?', 'Evet, erkek, kadın ve çocuk kıyafetlerinde özel ölçü dikim hizmeti sunuyoruz.'],
   ['Üniforma üretimi ve toplu sipariş alıyor musunuz?', 'Evet, otel, okul, restoran ve kurumlar için üniforma tasarımı ve toplu üretim yapıyoruz.'],
   ['Fason imalat yapıyor musunuz?', 'Evet, markalar ve işletmeler için numune dikimi, kalıp çıkarma ve seri üretim hizmeti veriyoruz.'],
-  ['Muratpaşa, Lara, Belek, Side ve Kemer\'e hizmet var mı?', "Evet. Muratpaşa (Meltem, Şirinyalı, Fener, Güzeloba dahil), Lara, Belek, Side/Manavgat ve Kemer'deki otellere alım-teslimat ücretsizdir."],
+  ['Muratpaşa, Lara, Belek, Side ve Kemer\'e hizmet var mı?', "Evet. Muratpaşa (Meltem, Şirinyalı, Fener, Güzeloba dahil), Lara, Belek, Side/Manavgat ve Kemer'deki otellere alım-teslimat yapılır."],
 ];
 
 const jsonLd = {
@@ -116,17 +116,17 @@ interface Neighborhood {
 }
 
 const NEIGHBORHOODS: Neighborhood[] = [
-  { name: 'Hurma', tag: 'Öncelikli', note: 'Atölyeye en yakın — ücretsiz adrese servis', priority: true },
-  { name: 'Liman', tag: 'Öncelikli', note: 'Eve ve otele ücretsiz servis, WhatsApp\'tan randevu', priority: true },
-  { name: 'Sarısu', tag: 'Öncelikli', note: 'Ücretsiz adrese servis', priority: true },
-  { name: 'Uncalı', tag: 'Yakın', note: 'Ücretsiz adrese servis', priority: false },
-  { name: 'Gürsu', tag: 'Yakın', note: 'Ücretsiz adrese servis', priority: false },
-  { name: 'Öğretmenevleri', tag: 'Yakın', note: 'Ücretsiz adrese servis', priority: false },
-  { name: 'Altınkum', tag: 'Yakın', note: 'Ücretsiz adrese servis', priority: false },
-  { name: 'Siteler', tag: 'Yakın', note: 'Ücretsiz adrese servis', priority: false },
-  { name: 'Arapsuyu', tag: 'Yakın', note: 'Ücretsiz adrese servis', priority: false },
-  { name: 'Ahatlı', tag: 'Yakın', note: 'Ücretsiz adrese servis', priority: false },
-  { name: 'Toros', tag: 'Yakın', note: 'Ücretsiz adrese servis', priority: false },
+  { name: 'Hurma', tag: 'Öncelikli', note: 'Atölyeye en yakın — adrese servis', priority: true },
+  { name: 'Liman', tag: 'Öncelikli', note: 'Eve ve otele servis, WhatsApp\'tan randevu', priority: true },
+  { name: 'Sarısu', tag: 'Öncelikli', note: 'adrese servis', priority: true },
+  { name: 'Uncalı', tag: 'Yakın', note: 'adrese servis', priority: false },
+  { name: 'Gürsu', tag: 'Yakın', note: 'adrese servis', priority: false },
+  { name: 'Öğretmenevleri', tag: 'Yakın', note: 'adrese servis', priority: false },
+  { name: 'Altınkum', tag: 'Yakın', note: 'adrese servis', priority: false },
+  { name: 'Siteler', tag: 'Yakın', note: 'adrese servis', priority: false },
+  { name: 'Arapsuyu', tag: 'Yakın', note: 'adrese servis', priority: false },
+  { name: 'Ahatlı', tag: 'Yakın', note: 'adrese servis', priority: false },
+  { name: 'Toros', tag: 'Yakın', note: 'adrese servis', priority: false },
 ];
 
 const OTHER_DISTRICTS: string[] = [
@@ -226,7 +226,7 @@ const PROCESS_STEPS: [string, string, string][] = [
   ['01', 'Mahallenizi Belirtin', "WhatsApp\'tan bulunduğunuz mahalleyi ve ihtiyacınızı yazın."],
   ['02', 'Ölçü & Tasarım', 'Adresinizde ölçü alınır veya atölyede tasarım detayları belirlenir.'],
   ['03', 'Dikim / Üretim', 'Tekli dikim atölyede tamamlanır; toplu üniforma ve fason üretim ayrı sayfamızda.'],
-  ['04', 'Teslimat', 'Eve ve otele her bölgede ücretsiz.'],
+  ['04', 'Teslimat', 'Eve ve otele her bölgede servis.'],
 ];
 
 export default function KonyaaltiTailorServicePage() {
@@ -267,7 +267,7 @@ export default function KonyaaltiTailorServicePage() {
               Tamir, Tadilat
             </h1>
             <p className="hero-desc" id="hero-desc">
-              Antalya'da terzi arıyorsanız Terzi Can, Konyaaltı Hurma'daki atölyesinden bay, bayan ve çocuk kıyafetlerinde tamir, tadilat ve özel dikim yapar; Hurma, Liman, Sarısu, Uncalı, Gürsu ve çevresine, ayrıca Lara, Belek, Side ve Kemer otellerine hizmet verir. {DELIVERY.tr.urgent} {DELIVERY.tr.normal} Otellere alım-teslim ücretsizdir.
+              Antalya'da terzi arıyorsanız Terzi Can, Konyaaltı Hurma'daki atölyesinden bay, bayan ve çocuk kıyafetlerinde tamir, tadilat ve özel dikim yapar; Hurma, Liman, Sarısu, Uncalı, Gürsu ve çevresine, ayrıca Lara, Belek, Side ve Kemer otellerine hizmet verir. {DELIVERY.tr.urgent} {DELIVERY.tr.normal} Otellere alım-teslim yapılır.
             </p>
             <div className="hero-btns">
               <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-primary">
@@ -294,7 +294,7 @@ export default function KonyaaltiTailorServicePage() {
               <div className="sec-head">
                 <span className="eyebrow">📍 Konyaaltı Mahalleleri</span>
                 <h2 className="sec-h" id="nb-h">Size En Yakın Mahalleden Başlıyoruz</h2>
-                <p className="sec-sub">Tüm bölgelere eve ve otele ücretsiz servis veriyoruz.</p>
+                <p className="sec-sub">Tüm bölgelere eve ve otele servis veriyoruz.</p>
               </div>
               <ul className="nb-grid" aria-label="Öncelikli hizmet mahalleleri">
                 {NEIGHBORHOODS.map((n: Neighborhood) => (

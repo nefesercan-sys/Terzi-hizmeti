@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: 'Schneider in Antalya: Hose kürzen ab ₺200, Reparatur' },
   description:
-    'Schneider in Antalya (Konyaaltı): Hose kürzen ab ₺200 (~€10), Reißverschluss ab ₺300. Hotelservice mit kostenloser Abholung, meist am selben Tag.',
+    'Schneider in Antalya (Konyaaltı): Hose kürzen ab ₺200 (~€10), Reißverschluss ab ₺300. Hotelservice mit Abholung, meist am selben Tag.',
   keywords: ['Schneider Antalya', 'Änderungsschneiderei Antalya', 'Schneider Hotel Antalya', 'Kleidung ändern Antalya eilig', 'Schneider Konyaaltı', 'Hose kürzen Antalya', 'Reißverschluss wechseln Antalya', 'Maßanfertigung Antalya'],
   alternates: {
     canonical: PAGE_URL,
@@ -68,14 +68,14 @@ const STEPS: [string, string][] = [
 const FAQS: [string, string][] = [
   ['Gibt es in Antalya einen Schneider, der Deutsch spricht?', 'Ja. Am einfachsten schreiben Sie uns per WhatsApp.'],
   ['Kommt der Schneider ins Hotel?', 'Ja. Wir besuchen Hotels, zum Beispiel in Belek, Lara, Kemer und Side. Senden Sie Hotelname und Standort per WhatsApp. Details zum Hotelservice: ' + HOTEL_URL],
-  ['Ist der Besuch kostenlos?', 'Ja. Abholung und Lieferung zu Hause und im Hotel sind innerhalb von Antalya kostenlos.'],
+  ['Kommen Sie auch zu mir vor Ort?', 'Ja. Abholung und Lieferung zu Hause und im Hotel sind innerhalb von Antalya möglich.'],
   ['Wie bekomme ich einen Preis, ohne vorbeizukommen?', 'Senden Sie ein Foto des Kleidungsstücks und der gewünschten Arbeit per WhatsApp. Wir nennen Preis und Bearbeitungszeit. Preisliste: ' + PRICE_URL],
   ['Wie schnell ist eine Änderung fertig?', 'Viele Reparaturen und das Kürzen von Hosen sind am selben Tag, eilig in 1–2 Stunden fertig. Die genaue Zeit hängt von Arbeit und Auslastung ab und wird per WhatsApp bestätigt.'],
   ['Können Sie ein Brautkleid oder Abendkleid ändern?', 'Ja. Brautkleid- und Abendkleid-Änderungen sind möglich; der Preis hängt vom Aufwand ab. Senden Sie am besten vorab Fotos.'],
   ['Wo kann ich in Antalya in meiner Nähe eine Hose kürzen lassen?', 'Bei Terzi Can in Hurma, Konyaaltı, täglich von 08:00 bis 23:00 geöffnet. Hosen und Jeans kürzen, meist am selben Tag, eilig in 1–2 Stunden. WhatsApp: ' + PHONE],
   ['Was kostet Kürzen und Reißverschluss wechseln in Antalya?', 'Kürzen und Taille enger machen ab ₺200 (ca. 10 €), Reißverschluss wechseln ab ₺300 (ca. 15 €, für Mäntel, Jacken und Leder ca. 20 €). Preise ohne MwSt. Maßanfertigung sowie Abend- und Brautkleid-Änderungen nennen wir nach einem Foto per WhatsApp.'],
   ['Ändern Sie auch Jacken, Mäntel, Hemden, Röcke und Shorts?', 'Ja. Wir ändern und reparieren Jacken, Mäntel, Hemden, Röcke, Shorts, Kleider und Hosen für Damen und Herren. Senden Sie ein Foto per WhatsApp, wir nennen Preis und Dauer.'],
-  ['Ich bin nur wenige Tage im Hotel. Reicht die Zeit?', 'Ja. Kürzen und Reparaturen sind am selben Tag oder am selben Tag fertig. Wir holen die Kleidung im Hotel ab und bringen sie zurück (für Hotels kostenlos).'],
+  ['Ich bin nur wenige Tage im Hotel. Reicht die Zeit?', 'Ja. Kürzen und Reparaturen sind am selben Tag oder am selben Tag fertig. Wir holen die Kleidung im Hotel ab und bringen sie zurück (für Hotels möglich).'],
   ['Haben Sie am Wochenende geöffnet?', 'Ja, die Werkstatt ist an sieben Tagen in der Woche geöffnet. Die aktuellen Zeiten stehen bei Google Maps.'],
 ];
 
@@ -127,7 +127,7 @@ export default function SchneiderserviceAntalya() {
               Schneider in Antalya: Änderungen, Reparatur, Maßanfertigung
             </h1>
             <p id="hero-desc" style={{ maxWidth: 720, margin: '0 auto 1.6rem', lineHeight: 1.7, fontSize: '1.05rem', opacity: .92 }}>
-              Terzi Can ist eine Schneiderei in Konyaaltı, Antalya: Kürzen, Ändern, Reparieren und Maßanfertigung; erreichbar per WhatsApp oder Telefon unter +90 531 898 64 18, täglich 08:00–23:00. {DELIVERY.de.urgent} {DELIVERY.de.normal} Abholung und Lieferung im Hotel sind überall kostenlos, auch in Lara, Belek, Side und Kemer.
+              Terzi Can ist eine Schneiderei in Konyaaltı, Antalya: Kürzen, Ändern, Reparieren und Maßanfertigung; erreichbar per WhatsApp oder Telefon unter +90 531 898 64 18, täglich 08:00–23:00. {DELIVERY.de.urgent} {DELIVERY.de.normal} Abholung und Lieferung im Hotel sind überall möglich, auch in Lara, Belek, Side und Kemer.
             </p>
             <div style={{ display: 'flex', gap: '.7rem', justifyContent: 'center', flexWrap: 'wrap' }}>
               <a href={WA_DEF} target="_blank" rel="noopener noreferrer" style={btn}>Foto senden, Preis erfahren</a>
@@ -174,7 +174,7 @@ export default function SchneiderserviceAntalya() {
         <section style={{ ...wrap, padding: '2.5rem 1.25rem 0' }}>
           <h2 style={{ fontSize: '1.5rem', fontWeight: 800, margin: '0 0 1rem' }}>Einsatzgebiet in Antalya</h2>
           <div style={{ ...card }}>
-            <p style={{ margin: '0 0 .6rem' }}><strong>Kostenloser Besuch:</strong> {FREE_DISTRICTS.join(', ')}</p>
+            <p style={{ margin: '0 0 .6rem' }}><strong>Besuch vor Ort:</strong> {FREE_DISTRICTS.join(', ')}</p>
             <p style={{ margin: '0 0 .6rem' }}><strong>Nach Absprache:</strong> {OTHER_DISTRICTS.join(', ')}</p>
             <p style={{ margin: 0, fontSize: '.9rem', opacity: .8 }}>
               Werkstatt: Hurma Mahallesi, 07130 Konyaaltı/Antalya. <a href={MAPS} target="_blank" rel="noopener noreferrer">Auf Google Maps ansehen</a>.

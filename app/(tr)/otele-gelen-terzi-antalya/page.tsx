@@ -23,7 +23,7 @@ const OG        = `${SITE}/terzi-can-hero.jpg`;
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Otelde Terzi Hizmeti: Belek, Lara, Kemer, Side — Otele Gelir" },
-  description: fitDesc("Antalya'da otele gelen terzi: Belek, Lara, Kundu, Kemer, Side bölgelerinde otelden alım, tadilat ve teslimat ücretsiz. Her gün 08:00–23:00. ☎ " + PHONE),
+  description: fitDesc("Antalya'da otele gelen terzi: Belek, Lara, Kundu, Kemer, Side bölgelerinde otelden alım, tadilat ve teslimat yapılır. Her gün 08:00–23:00. ☎ " + PHONE),
   keywords: ['otele gelen terzi Antalya', 'otelde terzi hizmeti', 'Belek otel terzi', 'Lara otel terzi', 'Kemer otel terzi', 'Side otel terzi', 'acil terzi Antalya', 'turist terzi Antalya'],
   authors: [{ name: BIZ, url: SITE }],
   creator: BIZ,
@@ -108,10 +108,10 @@ interface LangLabel {
 }
 
 const LANG_LABELS: Record<Lang, LangLabel> = {
-  tr: { name: 'Türkçe', flag: '🇹🇷', note: 'Eve ve otele alım-teslim hizmet verdiğimiz tüm bölgelerde ücretsizdir.' },
-  en: { name: 'English', flag: '🇬🇧', note: 'Pick-up and delivery to homes and hotels is free in every area we serve.' },
-  ru: { name: 'Русский', flag: '🇷🇺', note: 'Забор и доставка на дом и в отели бесплатны во всех районах, которые мы обслуживаем.' },
-  de: { name: 'Deutsch', flag: '🇩🇪', note: 'Abholung und Lieferung zu Hause und im Hotel sind in allen Gebieten, die wir bedienen, kostenlos.' },
+  tr: { name: 'Türkçe', flag: '🇹🇷', note: 'Eve ve otele alım-teslim hizmet verdiğimiz tüm bölgelerde yapılır.' },
+  en: { name: 'English', flag: '🇬🇧', note: 'Pick-up and delivery to homes and hotels is available in every area we serve.' },
+  ru: { name: 'Русский', flag: '🇷🇺', note: 'Забор и доставка на дом и в отели возможны во всех районах, которые мы обслуживаем.' },
+  de: { name: 'Deutsch', flag: '🇩🇪', note: 'Abholung und Lieferung zu Hause und im Hotel sind in allen Gebieten, die wir bedienen, möglich.' },
 };
 
 interface VipCategory {
@@ -126,7 +126,7 @@ const Premium_CATEGORIES: Record<Lang, VipCategory[]> = {
   tr: [
     { icon: '🚗', title: 'Otelde Ölçü & Teslimat', keyword: 'otele gelen terzi servisi Antalya',
       desc: 'Adresinizde veya otel lobisinde ölçü alma ve provaya gelme hizmeti.',
-      rows: [['Otele alım-teslim (Konyaaltı, Lara, Kundu)', 'Ücretsiz'], ['Otele alım-teslim (Belek, Side)', 'Ücretsiz'], ['Otele alım-teslim (Kemer)', 'Ücretsiz']] },
+      rows: [['Otele alım-teslim (Konyaaltı, Lara, Kundu)', 'Var'], ['Otele alım-teslim (Belek, Side)', 'Var'], ['Otele alım-teslim (Kemer)', 'Var']] },
     { icon: '✂️', title: 'Ekspres Tadilat', keyword: 'acil terzi Antalya',
       desc: 'Tatiliniz sırasında ihtiyaç duyduğunuz acil onarımlar.',
       rows: [['Acil Paça Kısaltma', '₺200+'], ['Acil Yırtık Onarımı / Fermuar', '₺300+'], ['Abiye / Elbise Tadilatı', 'Fotoğrafa göre']] },
@@ -134,7 +134,7 @@ const Premium_CATEGORIES: Record<Lang, VipCategory[]> = {
   en: [
     { icon: '🚗', title: 'Hotel Fitting & Delivery', keyword: 'Mobile tailor Antalya',
       desc: 'We come to your hotel lobby or room for fitting and measurements.',
-      rows: [['Hotel pick-up & delivery (Konyaaltı, Lara, Kundu)', 'Free'], ['Hotel pick-up & delivery (Belek, Side)', 'Free'], ['Hotel pick-up & delivery (Kemer)', 'Free']] },
+      rows: [['Hotel pick-up & delivery (Konyaaltı, Lara, Kundu)', 'Available'], ['Hotel pick-up & delivery (Belek, Side)', 'Available'], ['Hotel pick-up & delivery (Kemer)', 'Available']] },
     { icon: '✂️', title: 'Express Alterations', keyword: 'urgent tailor Antalya',
       desc: 'Urgent repairs and alterations you need during your holiday.',
       rows: [['Express Hemming', '₺200+'], ['Express Tear / Zipper Repair', '₺300+'], ['Evening Dress Alterations', 'Fotoğrafa göre']] },
@@ -142,7 +142,7 @@ const Premium_CATEGORIES: Record<Lang, VipCategory[]> = {
   ru: [
     { icon: '🚗', title: 'Выезд в отель и примерка', keyword: 'портной в отель Анталья',
       desc: 'Выезд в лобби отеля для снятия мерок и примерки.',
-      rows: [['Забор и доставка в отели (Коньяалты, Лара, Кунду)', 'Бесплатно'], ['Забор и доставка в отели (Белек, Сиде)', 'Бесплатно'], ['Забор и доставка в отели (Кемер)', 'Бесплатно']] },
+      rows: [['Забор и доставка в отели (Коньяалты, Лара, Кунду)', 'Есть'], ['Забор и доставка в отели (Белек, Сиде)', 'Есть'], ['Забор и доставка в отели (Кемер)', 'Есть']] },
     { icon: '✂️', title: 'Экспресс-ремонт', keyword: 'срочный портной Анталья',
       desc: 'Срочный ремонт и подгонка одежды во время вашего отдыха.',
       rows: [['Срочное укорачивание', '₺200+'], ['Срочный ремонт / Молния', '₺300+'], ['Подгонка вечернего платья', 'Fotoğrafa göre']] },
@@ -150,7 +150,7 @@ const Premium_CATEGORIES: Record<Lang, VipCategory[]> = {
   de: [
     { icon: '🚗', title: 'Anprobe & Lieferung im Hotel', keyword: 'mobiler Schneider Antalya',
       desc: 'Wir kommen in die Lobby oder aufs Zimmer Ihres Hotels für Maße und Anproben.',
-      rows: [['Hotel-Abholung & Lieferung (Konyaaltı, Lara, Kundu)', 'Kostenlos'], ['Hotel-Abholung & Lieferung (Belek, Side)', 'Kostenlos'], ['Hotel-Abholung & Lieferung (Kemer)', 'Kostenlos']] },
+      rows: [['Hotel-Abholung & Lieferung (Konyaaltı, Lara, Kundu)', 'Möglich'], ['Hotel-Abholung & Lieferung (Belek, Side)', 'Möglich'], ['Hotel-Abholung & Lieferung (Kemer)', 'Möglich']] },
     { icon: '✂️', title: 'Express-Änderungen', keyword: 'Notfall-Schneider Antalya',
       desc: 'Dringende Reparaturen und Änderungen während Ihres Urlaubs.',
       rows: [['Express-Kürzen', '₺200+'], ['Express-Riss / Reißverschluss', '₺300+'], ['Abendkleid-Änderungen', 'Fotoğrafa göre']] },
@@ -204,7 +204,7 @@ export default function MobileTailorHotelPage() {
               ve Tadilat Servisi
             </h1>
             <p className="hero-desc" id="hero-desc">
-              Otelde kalıyorsanız Terzi Can kıyafetinizi otelden alır, Konyaaltı'ndaki atölyede tadil eder ve otele geri getirir; Konyaaltı, Lara, Belek, Side ve Kemer otellerine alım-teslim ücretsizdir. {DELIVERY.tr.urgent} {DELIVERY.tr.normal} Otel adınızı WhatsApp'tan iletmeniz yeterli (+90 531 898 64 18, her gün 08:00–23:00).
+              Otelde kalıyorsanız Terzi Can kıyafetinizi otelden alır, Konyaaltı'ndaki atölyede tadil eder ve otele geri getirir; Konyaaltı, Lara, Belek, Side ve Kemer otellerine alım-teslim yapılır. {DELIVERY.tr.urgent} {DELIVERY.tr.normal} Otel adınızı WhatsApp'tan iletmeniz yeterli (+90 531 898 64 18, her gün 08:00–23:00).
             </p>
             <div className="hero-btns">
               <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-primary" style={{ background: '#C9A96E', color: '#111' }}>
@@ -273,7 +273,7 @@ export default function MobileTailorHotelPage() {
               <div className="sec-head">
                 <span className="eyebrow">₺ Hizmet Fiyatları · Pricing</span>
                 <h2 className="sec-h" id="price-h">Otel Servisi ve Ekspres Tadilat</h2>
-                <p className="sec-sub">Eve ve otele alım-teslim ücretsizdir; yalnızca işlemin ücreti ve aciliyeti fiyatı belirler.</p>
+                <p className="sec-sub">Eve ve otele alım-teslim yapılır; yalnızca işlemin ücreti ve aciliyeti fiyatı belirler.</p>
               </div>
 
               {LANGS.map((lang: Lang) => (

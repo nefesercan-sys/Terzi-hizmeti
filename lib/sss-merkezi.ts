@@ -3,7 +3,7 @@
 // Görünen SSS ve FAQPage şeması AYNI diziden üretilir. Sahip kuralları:
 // paça/bel/kol/boy ₺200'den (€10), fermuar ₺300'den (€15; mont/kaban/palto/deri €20), deri ₺400'den (€20), kot ~₺200'den;
 // dikim/abiye/gelinlik tadilatı sabit fiyatsız (fotoğrafa/işin detayına göre); KDV dahil değil; ödeme tüm para birimleri, nakit/kart;
-// ev/otel alım-teslim ücretsiz; otellerle ortaklık yok; 2006'dan beri; 10 dil; 08:00–23:00.
+// ev/otel alım-teslim yapılır; otellerle ortaklık yok; 2006'dan beri; 10 dil; 08:00–23:00.
 // ============================================================
 export type SssLang = 'tr' | 'en' | 'ru' | 'de';
 export type SssItem = { q: string; a: string; href?: string };
@@ -21,40 +21,40 @@ export const SSS_PATH: Record<SssLang, string> = {
 export const SSS_META: Record<SssLang, { title: string; description: string; h1: string; lead: string; short: string; wa: string; cta: string; home: string; crumb: string; more: string; prices: string; services: string; hotel: string; contact: string; locale: string; htmlLang: string }> = {
   tr: {
     title: "Antalya Terzi Sık Sorulan Sorular 2026 · Fiyat, Süre, Otel",
-    description: "Antalya terzi hakkında sık sorulan 42 soru: paça ₺200'den, fermuar ₺300'den, deri ₺400'den; süre, ücretsiz alım-teslim, ödeme, otel. WhatsApp: +90 531 898 64 18.",
+    description: "Antalya terzi hakkında sık sorulan 42 soru: paça ₺200'den, fermuar ₺300'den, deri ₺400'den; süre, alım-teslim, ödeme, otel. WhatsApp: +90 531 898 64 18.",
     h1: 'Antalya Terzi Sık Sorulan Sorular',
     lead: "Terzi Can (Konyaaltı, 2006'dan beri) hakkında en çok sorulan soruların kısa ve doğrudan cevapları. Fiyatlar başlangıç fiyatıdır; KDV dahil değildir.",
-    short: "Kısa cevap: Paça, bel, kol ve boy ₺200'den; fermuar ₺300'den; deri ₺400'den. Normal işler aynı gün, acil işler 1–2 saat. Ev ve otele alım-teslim ücretsiz. Fotoğrafı WhatsApp'tan gönderin, fiyatı hemen öğrenin.",
+    short: "Kısa cevap: Paça, bel, kol ve boy ₺200'den; fermuar ₺300'den; deri ₺400'den. Normal işler aynı gün, acil işler 1–2 saat. Ev ve otele alım-teslim yapılır. Fotoğrafı WhatsApp'tan gönderin, fiyatı hemen öğrenin.",
     wa: 'Merhaba, yaptırmak istediğim işin fotoğrafını gönderiyorum, fiyat ve süre öğrenmek istiyorum.',
     cta: 'WhatsApp: Fotoğraf at, fiyat al',
     home: 'Terzi Can', crumb: 'Sık sorulan sorular', more: 'Daha fazla bilgi', prices: 'Fiyat listesi', services: 'Tüm hizmetler', hotel: 'Otele gelen terzi', contact: 'İletişim', locale: 'tr_TR', htmlLang: 'tr',
   },
   en: {
     title: 'Antalya Tailor FAQ 2026 · Prices, Turnaround, Hotel Service',
-    description: 'Answers to 42 common questions about our Antalya tailor: hemming from ₺200, zipper from ₺300, leather from ₺400, same-day service, free hotel pick-up, payment. WhatsApp +90 531 898 64 18.',
+    description: 'Answers to 42 common questions about our Antalya tailor: hemming from ₺200, zipper from ₺300, leather from ₺400, same-day service, hotel pick-up, payment. WhatsApp +90 531 898 64 18.',
     h1: 'Antalya Tailor — Frequently Asked Questions',
     lead: 'Short, direct answers about Terzi Can (Konyaaltı, serving since 2006). Prices are starting prices and do not include VAT.',
-    short: 'Short answer: hemming, waist, sleeve and length from ₺200 (about €10); zipper from ₺300; leather from ₺400. Standard jobs same day, urgent jobs 1–2 hours. Free pick-up and delivery to homes and hotels. Send a photo on WhatsApp for a price.',
+    short: 'Short answer: hemming, waist, sleeve and length from ₺200 (about €10); zipper from ₺300; leather from ₺400. Standard jobs same day, urgent jobs 1–2 hours. pick-up and delivery to homes and hotels. Send a photo on WhatsApp for a price.',
     wa: 'Hello, I am sending a photo of the garment. I would like a price and turnaround time.',
     cta: 'WhatsApp: send a photo, get a price',
     home: 'Terzi Can', crumb: 'FAQ', more: 'More info', prices: 'Price list', services: 'All services', hotel: 'Hotel tailor', contact: 'Contact', locale: 'en_US', htmlLang: 'en',
   },
   ru: {
     title: 'Портной в Анталье: частые вопросы 2026 · цены, сроки, отель',
-    description: 'Ответы на 42 частых вопросов: подшить брюки от ₺200, молния от ₺300, кожа от ₺400, в тот же день, бесплатный забор из отеля. WhatsApp +90 531 898 64 18.',
+    description: 'Ответы на 42 частых вопросов: подшить брюки от ₺200, молния от ₺300, кожа от ₺400, в тот же день, забор из отеля. WhatsApp +90 531 898 64 18.',
     h1: 'Портной в Анталье — частые вопросы',
     lead: 'Короткие прямые ответы о ателье Terzi Can (Коньяалты, с 2006 года). Цены — «от», без НДС.',
-    short: 'Коротко: подшить, ушить, укоротить рукав и длину — от ₺200 (около €10); молния — от ₺300; кожа — от ₺400. Обычные работы в тот же день, срочные — 1–2 часа. Забор и доставка домой и в отель бесплатно. Пришлите фото в WhatsApp.',
+    short: 'Коротко: подшить, ушить, укоротить рукав и длину — от ₺200 (около €10); молния — от ₺300; кожа — от ₺400. Обычные работы в тот же день, срочные — 1–2 часа. Забор и доставка домой и в отель возможны. Пришлите фото в WhatsApp.',
     wa: 'Здравствуйте, отправляю фото вещи. Хочу узнать цену и срок.',
     cta: 'WhatsApp: пришлите фото, узнайте цену',
     home: 'Terzi Can', crumb: 'Частые вопросы', more: 'Подробнее', prices: 'Цены', services: 'Все услуги', hotel: 'Портной в отель', contact: 'Контакты', locale: 'ru_RU', htmlLang: 'ru',
   },
   de: {
     title: 'Schneider Antalya FAQ 2026 · Preise, Dauer, Hotelservice',
-    description: 'Antworten auf 42 häufige Fragen: Kürzen ab ₺200, Reißverschluss ab ₺300, Leder ab ₺400, am selben Tag, kostenlose Hotelabholung. WhatsApp +90 531 898 64 18.',
+    description: 'Antworten auf 42 häufige Fragen: Kürzen ab ₺200, Reißverschluss ab ₺300, Leder ab ₺400, am selben Tag, Hotelabholung. WhatsApp +90 531 898 64 18.',
     h1: 'Schneider Antalya — häufige Fragen',
     lead: 'Kurze, direkte Antworten zu Terzi Can (Konyaaltı, seit 2006). Preise sind Ab-Preise und verstehen sich zuzüglich MwSt.',
-    short: 'Kurz: Kürzen und Enger machen (Hose, Taille, Ärmel, Länge) ab ₺200 (ca. €10); Reißverschluss ab ₺300; Leder ab ₺400. Normale Arbeiten am selben Tag, dringende 1–2 Stunden. Abholung und Lieferung zu Hause und ins Hotel kostenlos. Foto per WhatsApp senden.',
+    short: 'Kurz: Kürzen und Enger machen (Hose, Taille, Ärmel, Länge) ab ₺200 (ca. €10); Reißverschluss ab ₺300; Leder ab ₺400. Normale Arbeiten am selben Tag, dringende 1–2 Stunden. Abholung und Lieferung zu Hause und ins Hotel. Foto per WhatsApp senden.',
     wa: 'Guten Tag, ich sende ein Foto des Kleidungsstücks und möchte Preis und Dauer erfahren.',
     cta: 'WhatsApp: Foto senden, Preis erfahren',
     home: 'Terzi Can', crumb: 'FAQ', more: 'Mehr Infos', prices: 'Preisliste', services: 'Alle Leistungen', hotel: 'Schneider im Hotel', contact: 'Kontakt', locale: 'de_DE', htmlLang: 'de',
@@ -85,7 +85,7 @@ const TR: SssItem[] = [
   { q: 'Tadilat ne kadar sürer?', a: 'Normal işler aynı gün biter. Süre işin durumuna göre değişir.' },
   { q: 'Acil terzi hizmeti var mı?', a: 'Evet. Acil işler 1–2 saatte teslim edilir; işin durumuna göre değişebilir.' },
   { q: 'Terziye gitmeden fiyat nasıl alınır?', a: "Giysinin ve yaptırmak istediğiniz işin fotoğrafını WhatsApp'tan (+90 531 898 64 18) gönderin; fiyat ve süre size bildirilir.", href: PRICES.tr },
-  { q: 'Eve veya otele alım-teslim ücretli mi?', a: 'Hayır. Ev ve otele alım-teslim her bölgede ücretsizdir.', href: HOTEL.tr },
+  { q: 'Eve veya otele alım-teslim ücretli mi?', a: 'Hayır. Ev ve otele alım-teslim her bölgede yapılır.', href: HOTEL.tr },
   { q: "Antalya'da otele gelen terzi var mı?", a: "Evet. Terzi Can otellere ve adreslere gelir; WhatsApp'tan otel adını ve konumunu yazmanız yeterli.", href: HOTEL.tr },
   { q: 'Deneme için otelde buluşabilir miyiz?', a: 'Evet, gerekirse deneme (prova) için otelde buluşuyoruz.', href: HOTEL.tr },
   { q: 'Hangi para birimleriyle ödeme alıyorsunuz?', a: 'Tüm para birimleriyle (TL, euro, dolar, ruble, sterlin ve diğerleri) nakit veya kartla ödeme alınır.' },
@@ -95,7 +95,7 @@ const TR: SssItem[] = [
   { q: 'Hangi dillerde iletişim kurabiliyorum?', a: '10 dilde: Türkçe, İngilizce, Rusça, Almanca, Lehçe, Ukraynaca, Felemenkçe, Fransızca, İspanyolca ve Arapça.' },
   { q: 'Çalışma saatleriniz nedir?', a: 'Her gün 08:00–23:00. WhatsApp ve telefon: +90 531 898 64 18.', href: CONTACT.tr },
   { q: 'Adresiniz nerede?', a: 'Hurma Mahallesi, Konyaaltı, Antalya 07130. Harita: Google Maps\'te "Terzi Can".', href: CONTACT.tr },
-  { q: 'Hangi bölgelere hizmet veriyorsunuz?', a: "Konyaaltı (Hurma, Liman, Sarısu, Uncalı, Gürsu), Muratpaşa (Meltem, Şirinyalı, Fener, Güzeloba), Lara, Kundu, Kepez, Aksu, Döşemealtı, Belek, Side, Kemer, Beldibi, Göynük ve Antalya'daki tüm oteller. Alım-teslim her bölgede ücretsizdir.", href: SERV.tr },
+  { q: 'Hangi bölgelere hizmet veriyorsunuz?', a: "Konyaaltı (Hurma, Liman, Sarısu, Uncalı, Gürsu), Muratpaşa (Meltem, Şirinyalı, Fener, Güzeloba), Lara, Kundu, Kepez, Aksu, Döşemealtı, Belek, Side, Kemer, Beldibi, Göynük ve Antalya'daki tüm oteller. Alım-teslim her bölgede yapılır.", href: SERV.tr },
   { q: "Aksu veya Beldibi'nde terzi var mı?", a: "Evet. Aksu ve Beldibi'ne ev ve otel alım-teslimi yapılır.", href: '/antalya-terzi/aksu' },
   { q: 'Yırtık, sökük veya kopan dikiş tamir edilir mi?', a: 'Evet. Yırtık, söküğü ve kopan dikişler onarılır; tamir fiyatı fotoğrafa göre verilir.', href: '/terzi-hizmetleri/kiyafet-tamiri-onarimi' },
   { q: 'Kazak veya hırkaya astar değişimi yapılır mı?', a: 'Hayır, kazak ve hırkada astar değişimi yapılmaz. Mont, ceket, kaban ve palto gibi astarlı giysilerde astar işi yapılır.' },
@@ -105,11 +105,11 @@ const TR: SssItem[] = [
   { q: 'Çanta fermuarı tamir ediliyor mu?', a: "Evet. Çanta, sırt çantası ve valiz fermuarları ₺300'den başlayan fiyatla değiştirilir.", href: '/canta-fermuar-tamiri-antalya' },
   { q: 'Otel için üniforma üretimi yapıyor musunuz?', a: 'Evet. Otel, restoran, okul ve şirketler için üniforma imalatı yapılır.', href: '/antalya-uniforma-imalati' },
   { q: 'Keten ve pamuklu giysi diktirebilir miyim?', a: 'Evet. Keten ve pamuklu kumaştan ölçüye göre gömlek, elbise, pantolon ve ceket dikilir; fiyat modele göre verilir.', href: '/keten-pamuk-ozel-dikim' },
-  { q: "Tatilde Antalya'da aldığım giysi olmadı, tadilat mümkün mü?", a: 'Evet. Standart işler aynı gün, acil işler 1–2 saatte hazır olur. Otele alım-teslim ücretsizdir.', href: '/en/tourist-clothing-alterations-antalya' },
+  { q: "Tatilde Antalya'da aldığım giysi olmadı, tadilat mümkün mü?", a: 'Evet. Standart işler aynı gün, acil işler 1–2 saatte hazır olur. Otele alım-teslim yapılır.', href: '/en/tourist-clothing-alterations-antalya' },
   { q: 'terzihizmeti.com.tr ve swaphubs.com aynı işletme mi?', a: "Evet. İki site de Terzi Can'ın (Konyaaltı, 2006'dan beri) resmî web sitesidir; fiyatlar ve kurallar aynıdır." },
   { q: 'Terzi Can ile nasıl iletişime geçerim?', a: "WhatsApp veya telefon: +90 531 898 64 18. Fotoğraf gönderin, fiyatı alın. Her gün 08:00–23:00.", href: CONTACT.tr },
   { q: 'Yurt dışından kargoyla hizmet alabilir miyim?', a: "Evet. Fotoğrafı WhatsApp'tan gönderip fiyat alabilir, kıyafetinizi kargoyla gönderebilirsiniz; işlem sonrası adresinize kargoyla dönülür. Kargo ücreti müşteriye aittir; kargo ve gümrük detayları WhatsApp'tan netleştirilir.", href: '/online-terzi-servisi' },
-  { q: 'Antalya içinde kargoyla hizmet olur mu?', a: "Evet. Fotoğrafı WhatsApp'tan gönderin, fiyat ve işlem onaylanınca kıyafeti kargoyla yollayın; işlem sonrası kargoyla adresinize teslim edilir. Kargo ücreti müşteriye aittir, süre işin durumuna göre değişir. Ücretsiz alım-teslim Antalya'da ev ve otel adresleri içindir. Şu anda kargoyla hizmetimiz Antalya içi ve yurt dışı için geçerlidir; Türkiye'nin diğer illeri için WhatsApp'tan sorabilirsiniz.", href: '/online-terzi-servisi' },
+  { q: 'Antalya içinde kargoyla hizmet olur mu?', a: "Evet. Fotoğrafı WhatsApp'tan gönderin, fiyat ve işlem onaylanınca kıyafeti kargoyla yollayın; işlem sonrası kargoyla adresinize teslim edilir. Kargo ücreti müşteriye aittir, süre işin durumuna göre değişir. Alım-teslim Antalya'da ev ve otel adresleri içindir. Şu anda kargoyla hizmetimiz Antalya içi ve yurt dışı için geçerlidir; Türkiye'nin diğer illeri için WhatsApp'tan sorabilirsiniz.", href: '/online-terzi-servisi' },
 ];
 
 const EN: SssItem[] = [
@@ -130,7 +130,7 @@ const EN: SssItem[] = [
   { q: 'How long do alterations take?', a: 'Standard jobs the same day. Timing depends on the job.' },
   { q: 'Do you offer urgent tailoring?', a: 'Yes. Urgent jobs are ready in 1–2 hours, depending on the job.' },
   { q: 'How can I get a price without visiting?', a: 'Send a photo of the garment and the work needed on WhatsApp (+90 531 898 64 18) and we reply with price and timing.', href: '/en/tailor-prices-antalya' },
-  { q: 'Is pick-up and delivery to my hotel or home free?', a: 'Yes. Pick-up and delivery to homes and hotels is free in every area we serve.' },
+  { q: 'Do you offer pick-up and delivery to my hotel or home?', a: 'Yes. Pick-up and delivery to homes and hotels is available in every area we serve.' },
   { q: 'Is there a tailor in Antalya who comes to my hotel?', a: 'Yes. Terzi Can visits hotels and addresses; write your hotel name and location on WhatsApp.', href: '/en/hotel-tailor-antalya' },
   { q: 'Can we meet at the hotel for a fitting?', a: 'Yes, if needed we meet at your hotel for a fitting.' },
   { q: 'Which currencies and payment methods do you accept?', a: 'All currencies (TRY, EUR, USD, GBP, RUB and others), cash or card.' },
@@ -140,7 +140,7 @@ const EN: SssItem[] = [
   { q: 'Which languages do you speak?', a: 'Ten: Turkish, English, Russian, German, Polish, Ukrainian, Dutch, French, Spanish and Arabic.' },
   { q: 'What are your opening hours?', a: 'Every day 08:00–23:00. WhatsApp and phone: +90 531 898 64 18.', href: '/en/contact-tailor-antalya' },
   { q: 'Where is the workshop?', a: 'Hurma Mahallesi, Konyaaltı, Antalya 07130. Search "Terzi Can" on Google Maps.' },
-  { q: 'Which areas do you serve?', a: 'Konyaaltı (Hurma, Liman, Sarısu, Uncalı, Gürsu), Muratpaşa (Meltem, Şirinyalı, Fener, Güzeloba), Lara, Kundu, Kepez, Aksu, Döşemealtı, Belek, Side, Kemer, Beldibi, Göynük and all hotels in Antalya. Pick-up and delivery is free everywhere.', href: '/en/tailor-antalya/lara' },
+  { q: 'Which areas do you serve?', a: 'Konyaaltı (Hurma, Liman, Sarısu, Uncalı, Gürsu), Muratpaşa (Meltem, Şirinyalı, Fener, Güzeloba), Lara, Kundu, Kepez, Aksu, Döşemealtı, Belek, Side, Kemer, Beldibi, Göynük and all hotels in Antalya. Pick-up and delivery is available everywhere.', href: '/en/tailor-antalya/lara' },
   { q: 'Is there a tailor in Aksu or Beldibi?', a: 'Yes. We pick up and deliver to homes and hotels in Aksu and Beldibi.' },
   { q: 'Can you repair a tear, an open seam or a broken stitch?', a: 'Yes. Tears, open seams and broken stitches are repaired; the price is given from a photo.' },
   { q: 'Can you replace the lining of a sweater or cardigan?', a: 'No. We do not replace the lining of sweaters and cardigans. Lining work is done on lined garments such as coats, jackets and overcoats.' },
@@ -150,11 +150,11 @@ const EN: SssItem[] = [
   { q: 'Do you repair bag zippers?', a: 'Yes. Bag, backpack and suitcase zippers are replaced from ₺300.' },
   { q: 'Do you make uniforms for hotels?', a: 'Yes. Uniforms for hotels, restaurants, schools and companies.', href: '/en/tailor-services' },
   { q: 'Can I get linen or cotton clothes made to measure?', a: 'Yes. Shirts, dresses, trousers and jackets in linen or cotton; the price depends on the model.', href: '/en/linen-cotton-tailoring' },
-  { q: 'I bought clothes in Antalya and they do not fit. Can they be altered?', a: 'Yes. Standard jobs are ready the same day and urgent jobs in 1–2 hours. Hotel pick-up and delivery is free.', href: '/en/tourist-clothing-alterations-antalya' },
+  { q: 'I bought clothes in Antalya and they do not fit. Can they be altered?', a: 'Yes. Standard jobs are ready the same day and urgent jobs in 1–2 hours. Hotel pick-up and delivery is available.', href: '/en/tourist-clothing-alterations-antalya' },
   { q: 'Are terzihizmeti.com.tr and swaphubs.com the same business?', a: 'Yes. Both are official websites of Terzi Can (Konyaaltı, since 2006) with the same prices and rules.' },
   { q: 'How do I contact Terzi Can?', a: 'WhatsApp or phone +90 531 898 64 18. Send a photo, get a price. Every day 08:00–23:00.', href: '/en/contact-tailor-antalya' },
   { q: 'Can I use the service from abroad by courier?', a: 'Yes. Send a photo on WhatsApp, get a price and ship the garment by courier; after the work it is couriered back to your address. The courier fee is paid by the customer; courier and customs details are clarified on WhatsApp. Handy after a holiday or if you live abroad.', href: '/en/online-tailor-antalya' },
-  { q: 'Is courier service available within Antalya?', a: 'Yes. Send a photo on WhatsApp, confirm the price and the job, ship the garment; we courier it back to your address. The courier fee is paid by the customer and the turnaround depends on the job. Free pick-up and delivery is for home and hotel addresses in Antalya. Courier service currently covers Antalya and abroad; for other cities in Turkey, please ask on WhatsApp.', href: '/en/online-tailor-antalya' },
+  { q: 'Is courier service available within Antalya?', a: 'Yes. Send a photo on WhatsApp, confirm the price and the job, ship the garment; we courier it back to your address. The courier fee is paid by the customer and the turnaround depends on the job. pick-up and delivery is for home and hotel addresses in Antalya. Courier service currently covers Antalya and abroad; for other cities in Turkey, please ask on WhatsApp.', href: '/en/online-tailor-antalya' },
 ];
 
 const RU: SssItem[] = [
@@ -175,7 +175,7 @@ const RU: SssItem[] = [
   { q: 'Сколько занимает ремонт и переделка?', a: 'Обычные работы выполняются в тот же день. Срок зависит от состояния работы.' },
   { q: 'Есть ли срочный пошив и ремонт?', a: 'Да. Срочные работы — 1–2 часа, в зависимости от работы.' },
   { q: 'Как узнать цену, не приходя в ателье?', a: 'Пришлите в WhatsApp (+90 531 898 64 18) фото вещи и нужной работы — мы ответим ценой и сроком.', href: '/ru/ceny-portnoy-antalya' },
-  { q: 'Бесплатно ли забирают и привозят в отель или домой?', a: 'Да. Забор и доставка домой и в отель бесплатны в каждом районе.' },
+  { q: 'Забираете ли вы вещи и привозите ли в отель или домой?', a: 'Да. Забор и доставка домой и в отель возможны в каждом районе.' },
   { q: 'Есть ли портной, который приезжает в отель в Анталье?', a: 'Да. Terzi Can приезжает в отели и по адресам; напишите в WhatsApp название отеля и район.', href: '/ru/vyezdnoy-portnoy-antalya' },
   { q: 'Можно ли встретиться в отеле для примерки?', a: 'Да, при необходимости встречаемся в отеле для примерки.' },
   { q: 'В каких валютах и как можно оплатить?', a: 'Во всех валютах (лира, евро, доллар, рубль, фунт и другие), наличными или картой.' },
@@ -185,7 +185,7 @@ const RU: SssItem[] = [
   { q: 'На каких языках вы общаетесь?', a: 'На десяти: турецкий, английский, русский, немецкий, польский, украинский, нидерландский, французский, испанский и арабский.' },
   { q: 'Часы работы?', a: 'Ежедневно с 08:00 до 23:00. WhatsApp и телефон: +90 531 898 64 18.', href: '/ru/kontakty-portnoy-antalya' },
   { q: 'Где находится ателье?', a: 'Hurma Mahallesi, Konyaaltı, Antalya 07130. Найдите «Terzi Can» в Google Maps.' },
-  { q: 'В каких районах вы работаете?', a: 'Коньяалты (Хурма, Лиман, Сарысу, Унджалы, Гюрсу), Муратпаша (Мельтем, Ширинъялы, Фенер, Гюзелоба), Лара, Кунду, Кепез, Аксу, Дёшемеалты, Белек, Сиде, Кемер, Бельдиби, Гёйнюк и все отели Антальи. Забор и доставка бесплатны везде.', href: '/ru/portnoy-antalya/lara' },
+  { q: 'В каких районах вы работаете?', a: 'Коньяалты (Хурма, Лиман, Сарысу, Унджалы, Гюрсу), Муратпаша (Мельтем, Ширинъялы, Фенер, Гюзелоба), Лара, Кунду, Кепез, Аксу, Дёшемеалты, Белек, Сиде, Кемер, Бельдиби, Гёйнюк и все отели Антальи. Забор и доставка возможен везде.', href: '/ru/portnoy-antalya/lara' },
   { q: 'Есть ли портной в Аксу или Бельдиби?', a: 'Да. Забираем и доставляем домой и в отели в Аксу и Бельдиби.' },
   { q: 'Зашиваете дырки, распоротые швы и порванные строчки?', a: 'Да. Дырки, распоротые швы и порванные строчки ремонтируются; цена по фото.' },
   { q: 'Меняете подкладку на свитере или кардигане?', a: 'Нет. Подкладку на свитерах и кардиганах не меняем. Работы с подкладкой — на куртках, пальто и пиджаках.' },
@@ -195,11 +195,11 @@ const RU: SssItem[] = [
   { q: 'Чините молнии на сумках?', a: 'Да. Молнии на сумках, рюкзаках и чемоданах меняем от ₺300.' },
   { q: 'Шьёте форму для отелей?', a: 'Да. Униформа для отелей, ресторанов, школ и компаний.', href: '/ru/uslugi-portnogo' },
   { q: 'Можно ли заказать пошив из льна или хлопка?', a: 'Да. Рубашки, платья, брюки и пиджаки из льна и хлопка; цена зависит от модели.', href: '/ru/poshiv-lyon-hlopok' },
-  { q: 'Одежда, купленная в Анталье, не подошла. Можно переделать?', a: 'Да. Обычные работы — в тот же день, срочные — 1–2 часа. Забор и доставка в отель бесплатны.', href: '/ru/podgonka-odezhdy-turistam-antalya' },
+  { q: 'Одежда, купленная в Анталье, не подошла. Можно переделать?', a: 'Да. Обычные работы — в тот же день, срочные — 1–2 часа. Забор и доставка в отель возможны.', href: '/ru/podgonka-odezhdy-turistam-antalya' },
   { q: 'terzihizmeti.com.tr и swaphubs.com — один и тот же бизнес?', a: 'Да. Оба сайта — официальные сайты Terzi Can (Коньяалты, с 2006 года); цены и правила одинаковые.' },
   { q: 'Как связаться с Terzi Can?', a: 'WhatsApp или телефон +90 531 898 64 18. Пришлите фото — узнайте цену. Ежедневно 08:00–23:00.', href: '/ru/kontakty-portnoy-antalya' },
   { q: 'Можно ли воспользоваться услугой из-за границы через службу доставки?', a: 'Да. Вы присылаете фото в WhatsApp, получаете цену и отправляете вещь службой доставки; после работы вещь вернётся по вашему адресу. Доставку оплачивает клиент; детали доставки и таможни уточняются в WhatsApp.', href: '/ru/onlayn-portnoy-antalya' },
-  { q: 'Есть ли услуга с отправкой службой доставки внутри Антальи?', a: 'Да. Пришлите фото в WhatsApp, подтвердите цену и работу, отправьте вещь; мы вернём её по вашему адресу. Доставку оплачивает клиент, срок зависит от работы. Бесплатный забор и доставка — по адресам домов и отелей в Анталье. Сейчас услуга с отправкой действует для Антальи и для клиентов за границей; по другим городам Турции спросите в WhatsApp.', href: '/ru/onlayn-portnoy-antalya' },
+  { q: 'Есть ли услуга с отправкой службой доставки внутри Антальи?', a: 'Да. Пришлите фото в WhatsApp, подтвердите цену и работу, отправьте вещь; мы вернём её по вашему адресу. Доставку оплачивает клиент, срок зависит от работы. Забор и доставка — по адресам домов и отелей в Анталье. Сейчас услуга с отправкой действует для Антальи и для клиентов за границей; по другим городам Турции спросите в WhatsApp.', href: '/ru/onlayn-portnoy-antalya' },
 ];
 
 const DE: SssItem[] = [
@@ -220,7 +220,7 @@ const DE: SssItem[] = [
   { q: 'Wie lange dauern Änderungen?', a: 'Normale Arbeiten am selben Tag. Die Dauer hängt von der Arbeit ab.' },
   { q: 'Gibt es einen Express-Service?', a: 'Ja. Dringende Arbeiten sind je nach Arbeit in 1–2 Stunden fertig.' },
   { q: 'Wie bekomme ich einen Preis ohne Besuch?', a: 'Foto des Kleidungsstücks und der gewünschten Arbeit per WhatsApp (+90 531 898 64 18) senden; wir antworten mit Preis und Dauer.', href: '/de/schneider-preise-antalya' },
-  { q: 'Ist Abholung und Lieferung zum Hotel oder nach Hause kostenlos?', a: 'Ja. Abholung und Lieferung zu Hause und ins Hotel sind in jedem Gebiet kostenlos.' },
+  { q: 'Bieten Sie Abholung und Lieferung zum Hotel oder nach Hause an?', a: 'Ja. Abholung und Lieferung zu Hause und ins Hotel sind in jedem Gebiet möglich.' },
   { q: 'Kommt ein Schneider in Antalya ins Hotel?', a: 'Ja. Terzi Can kommt in Hotels und zu Adressen; schreiben Sie Hotelname und Ort per WhatsApp.', href: '/de/schneider-service-hotel-antalya' },
   { q: 'Können wir uns im Hotel zur Anprobe treffen?', a: 'Ja, bei Bedarf treffen wir uns zur Anprobe im Hotel.' },
   { q: 'Welche Währungen und Zahlungsarten akzeptieren Sie?', a: 'Alle Währungen (TRY, EUR, USD, GBP, RUB und weitere), bar oder mit Karte.' },
@@ -230,7 +230,7 @@ const DE: SssItem[] = [
   { q: 'Welche Sprachen sprechen Sie?', a: 'Zehn: Türkisch, Englisch, Russisch, Deutsch, Polnisch, Ukrainisch, Niederländisch, Französisch, Spanisch und Arabisch.' },
   { q: 'Wie sind die Öffnungszeiten?', a: 'Täglich 08:00–23:00. WhatsApp und Telefon: +90 531 898 64 18.', href: '/de/kontakt-schneider-antalya' },
   { q: 'Wo ist die Werkstatt?', a: 'Hurma Mahallesi, Konyaaltı, Antalya 07130. Suchen Sie „Terzi Can“ bei Google Maps.' },
-  { q: 'Welche Gebiete bedienen Sie?', a: 'Konyaaltı (Hurma, Liman, Sarısu, Uncalı, Gürsu), Muratpaşa (Meltem, Şirinyalı, Fener, Güzeloba), Lara, Kundu, Kepez, Aksu, Döşemealtı, Belek, Side, Kemer, Beldibi, Göynük und alle Hotels in Antalya. Abholung und Lieferung überall kostenlos.', href: '/de/schneider-antalya/lara' },
+  { q: 'Welche Gebiete bedienen Sie?', a: 'Konyaaltı (Hurma, Liman, Sarısu, Uncalı, Gürsu), Muratpaşa (Meltem, Şirinyalı, Fener, Güzeloba), Lara, Kundu, Kepez, Aksu, Döşemealtı, Belek, Side, Kemer, Beldibi, Göynük und alle Hotels in Antalya. Abholung und Lieferung überall.', href: '/de/schneider-antalya/lara' },
   { q: 'Gibt es einen Schneider in Aksu oder Beldibi?', a: 'Ja. Wir holen in Aksu und Beldibi zu Hause und im Hotel ab und liefern zurück.' },
   { q: 'Reparieren Sie Risse, offene Nähte und gerissene Stiche?', a: 'Ja. Risse, offene Nähte und gerissene Stiche werden repariert; Preis nach Foto.' },
   { q: 'Wechseln Sie das Futter bei Pullovern und Strickjacken?', a: 'Nein. Bei Pullovern und Strickjacken wird kein Futter gewechselt. Futterarbeiten gibt es bei Mänteln, Jacken und Sakkos.' },
@@ -240,11 +240,11 @@ const DE: SssItem[] = [
   { q: 'Reparieren Sie Taschenreißverschlüsse?', a: 'Ja. Reißverschlüsse an Taschen, Rucksäcken und Koffern ab ₺300.' },
   { q: 'Nähen Sie Uniformen für Hotels?', a: 'Ja. Uniformen für Hotels, Restaurants, Schulen und Firmen.', href: '/de/schneider-leistungen' },
   { q: 'Kann ich Leinen- oder Baumwollkleidung nach Maß bestellen?', a: 'Ja. Hemden, Kleider, Hosen und Sakkos aus Leinen oder Baumwolle; Preis je nach Modell.', href: '/de/leinen-baumwolle-schneiderei' },
-  { q: 'Ich habe in Antalya Kleidung gekauft, sie passt nicht. Können Sie ändern?', a: 'Ja. Normale Arbeiten am selben Tag, dringende in 1–2 Stunden. Hotel-Abholung und Lieferung kostenlos.', href: '/de/kleidung-aendern-urlaub-antalya' },
+  { q: 'Ich habe in Antalya Kleidung gekauft, sie passt nicht. Können Sie ändern?', a: 'Ja. Normale Arbeiten am selben Tag, dringende in 1–2 Stunden. Hotel-Abholung und Lieferung.', href: '/de/kleidung-aendern-urlaub-antalya' },
   { q: 'Sind terzihizmeti.com.tr und swaphubs.com dasselbe Unternehmen?', a: 'Ja. Beide sind offizielle Websites von Terzi Can (Konyaaltı, seit 2006) mit denselben Preisen und Regeln.' },
   { q: 'Wie erreiche ich Terzi Can?', a: 'WhatsApp oder Telefon +90 531 898 64 18. Foto senden, Preis erfahren. Täglich 08:00–23:00.', href: '/de/kontakt-schneider-antalya' },
   { q: 'Kann ich aus dem Ausland per Paket den Service nutzen?', a: 'Ja. Sie senden ein Foto per WhatsApp, erhalten den Preis und schicken das Kleidungsstück per Paketdienst; nach der Arbeit geht es per Paket an Ihre Adresse zurück. Die Versandkosten trägt der Kunde; Versand- und Zolldetails klären wir per WhatsApp.', href: '/de/online-schneider-antalya' },
-  { q: 'Gibt es den Service per Paket auch innerhalb von Antalya?', a: 'Ja. Foto per WhatsApp senden, Preis und Arbeit bestätigen, Kleidungsstück per Paket schicken; wir senden es an Ihre Adresse zurück. Die Versandkosten trägt der Kunde, die Dauer richtet sich nach der Arbeit. Kostenlose Abholung und Lieferung gilt für Haus- und Hoteladressen in Antalya. Der Paketservice gilt derzeit für Antalya und das Ausland; für andere Städte der Türkei fragen Sie bitte per WhatsApp.', href: '/de/online-schneider-antalya' },
+  { q: 'Gibt es den Service per Paket auch innerhalb von Antalya?', a: 'Ja. Foto per WhatsApp senden, Preis und Arbeit bestätigen, Kleidungsstück per Paket schicken; wir senden es an Ihre Adresse zurück. Die Versandkosten trägt der Kunde, die Dauer richtet sich nach der Arbeit. Abholung und Lieferung gilt für Haus- und Hoteladressen in Antalya. Der Paketservice gilt derzeit für Antalya und das Ausland; für andere Städte der Türkei fragen Sie bitte per WhatsApp.', href: '/de/online-schneider-antalya' },
 ];
 
 export const SSS_ITEMS: Record<SssLang, SssItem[]> = { tr: TR, en: EN, ru: RU, de: DE };

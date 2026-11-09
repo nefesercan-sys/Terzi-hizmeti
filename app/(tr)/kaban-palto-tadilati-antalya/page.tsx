@@ -13,18 +13,18 @@ const WA        = (m: string) => `https://wa.me/${WA_NUM}?text=${encodeURICompon
 const WA_DEF    = WA("Merhaba, kaban veya palto tadilatı için fiyat almak istiyorum. Fotoğrafı gönderiyorum.");
 const MAPS      = 'https://www.google.com/maps?cid=6436895271281342624';
 const TODAY     = '2026-11-03';
-const FAQ: [string, string][] = [["Kaban ve palto tadilatı ne kadar?", "Kaban ve palto boy/kol kısaltma ve daraltma ₺200'den, fermuar değişimi ₺300'den başlar. Astar, düğme ve onarım işleri kapsama göre fotoğrafla fiyatlanır."], ["Paltonun boyu kısaltılır mı?", "Evet. Palto boyu üzerinizdeyken işaretlenir; astar ve kumaş boyuna göre kısaltılır. Başlangıç fiyatı ₺200'dür."], ["Kaban kolu kısaltma ve daraltma yapılıyor mu?", "Evet. Kol boyu kısaltılır, kol ve beden daraltılır; kumaş ve astara göre yapılabilecek işlem fotoğraftan değerlendirilir."], ["Palto astarı değişir mi?", "Evet. Yırtılan veya eskiyen astar onarılır ya da değiştirilir; fiyat işin kapsamına göre fotoğrafla söylenir."], ["Kaban fermuarı veya düğmesi değişiyor mu?", "Evet. Kaban fermuarı değişimi ₺300'den başlar; düğme takma ve değiştirme yapılır."], ["Kaban ve palto tadilatı ne kadar sürer?", "Normal işler aynı gün, acil işler 1–2 saatte teslim edilir. Kapsamlı işlerde süreyi fotoğrafı görünce söyleriz."], ["Kaban ve paltoyu eve veya otele gelip alıyor musunuz?", "Evet. Konyaaltı, Muratpaşa ve çevresinde eve ve otele alım-teslim ücretsizdir."]];
+const FAQ: [string, string][] = [["Kaban ve palto tadilatı ne kadar?", "Kaban ve palto boy/kol kısaltma ve daraltma ₺200'den, fermuar değişimi ₺300'den başlar. Astar, düğme ve onarım işleri kapsama göre fotoğrafla fiyatlanır."], ["Paltonun boyu kısaltılır mı?", "Evet. Palto boyu üzerinizdeyken işaretlenir; astar ve kumaş boyuna göre kısaltılır. Başlangıç fiyatı ₺200'dür."], ["Kaban kolu kısaltma ve daraltma yapılıyor mu?", "Evet. Kol boyu kısaltılır, kol ve beden daraltılır; kumaş ve astara göre yapılabilecek işlem fotoğraftan değerlendirilir."], ["Palto astarı değişir mi?", "Evet. Yırtılan veya eskiyen astar onarılır ya da değiştirilir; fiyat işin kapsamına göre fotoğrafla söylenir."], ["Kaban fermuarı veya düğmesi değişiyor mu?", "Evet. Kaban fermuarı değişimi ₺300'den başlar; düğme takma ve değiştirme yapılır."], ["Kaban ve palto tadilatı ne kadar sürer?", "Normal işler aynı gün, acil işler 1–2 saatte teslim edilir. Kapsamlı işlerde süreyi fotoğrafı görünce söyleriz."], ["Kaban ve paltoyu eve veya otele gelip alıyor musunuz?", "Evet. Konyaaltı, Muratpaşa ve çevresinde eve ve otele alım-teslim yapılır."]];
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Kaban ve Palto Tadilatı ₺200'den · Antalya" },
-  description: "Kaban ve palto boy, kol kısaltma ve daraltma ₺200'den; fermuar değişimi ₺300'den. Astar ve düğme onarımı. Eve ve otele ücretsiz. ☎ +90 531 898 64 18",
+  description: "Kaban ve palto boy, kol kısaltma ve daraltma ₺200'den; fermuar değişimi ₺300'den. Astar ve düğme onarımı. Eve ve otele servis. ☎ +90 531 898 64 18",
   keywords: fitKeywords(["kaban tadilatı", "palto tadilatı", "kaban kısaltma", "palto kısaltma", "palto daraltma", "kaban kol kısaltma", "palto astar değişimi", "kaban düğme değişimi", "palto tamiri Antalya"]),
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: "Kaban ve Palto Tadilatı Antalya | Terzi Can",
-    description: "Kaban ve palto boyu, kol boyu, bel ve beden daraltma; astar, düğme, cep ve yaka onarımı. Eve ve otele ücretsiz servis.",
+    description: "Kaban ve palto boyu, kol boyu, bel ve beden daraltma; astar, düğme, cep ve yaka onarımı. Eve ve otele servis.",
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'tr_TR', type: 'website',
     images: [{ url: `${SITE}/terzi-can-hero.jpg`, width: 1024, height: 1024, alt: "Kaban ve Palto Tadilatı Antalya" }],
   },
@@ -36,7 +36,7 @@ const jsonLd = {
     businessNode(),
     {
       '@type': 'WebPage', '@id': `${PAGE_URL}#webpage`, url: PAGE_URL,
-      name: "Kaban ve Palto Tadilatı Antalya", description: "Kaban ve palto boyu, kol boyu, bel ve beden daraltma; astar, düğme, cep ve yaka onarımı. Eve ve otele ücretsiz servis.",
+      name: "Kaban ve Palto Tadilatı Antalya", description: "Kaban ve palto boyu, kol boyu, bel ve beden daraltma; astar, düğme, cep ve yaka onarımı. Eve ve otele servis.",
       inLanguage: 'tr', isPartOf: { '@id': `${SITE}#website` }, about: { '@id': `${SITE}#business` },
       breadcrumb: { '@id': `${PAGE_URL}#breadcrumb` }, dateModified: TODAY,
     },
@@ -93,7 +93,7 @@ export default function Page() {
           <div className="hero-content">
             <span className="hero-tag">🧥 Kaban · Palto · Astar · Düğme</span>
             <h1 id="hero-h">Kaban ve Palto Tadilatı <span className="accent">Antalya</span></h1>
-            <p className="hero-desc">Kaban ve palto boyu, kol boyu, bel ve beden daraltma; astar, düğme, cep ve yaka onarımı. Eve ve otele ücretsiz servis. Her gün 08:00–23:00.</p>
+            <p className="hero-desc">Kaban ve palto boyu, kol boyu, bel ve beden daraltma; astar, düğme, cep ve yaka onarımı. Eve ve otele servis. Her gün 08:00–23:00.</p>
             <p className="hero-desc"><strong>Kısa cevap:</strong> Kaban ve palto boy-kol kısaltma ve daraltma ₺200'den, fermuar değişimi ₺300'den başlar; astar, düğme ve söküklerin onarımı fotoğrafa göre fiyatlanır. Normal işler aynı gün teslim edilir.</p>
             <div className="hero-btns">
               <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-primary">💬 Fotoğraf Gönderin →</a>
@@ -138,7 +138,7 @@ export default function Page() {
               <div className="howto-item"><div className="howto-t">📐 Daraltma</div><div className="howto-d">Beden, bel ve kol daraltma; yün, kaşmir ve kalın kumaşlarda yapılabilecek işlem fotoğraftan değerlendirilir.</div></div>
               <div className="howto-item"><div className="howto-t">🪡 Astar ve düğme</div><div className="howto-d">Yırtılan astarın onarımı veya değişimi, düğme takılması ve düğme değişimi.</div></div>
               <div className="howto-item"><div className="howto-t">🧷 Fermuar, cep, yaka</div><div className="howto-d">Kaban fermuarı değişimi, cep ağzı ve yaka onarımı.</div></div>
-              <div className="howto-item"><div className="howto-t">Fotoğraf Gönderin</div><div className="howto-d">Kaban veya paltonun ve yapılacak yerin fotoğrafını WhatsApp'tan gönderin. Eve ve otele ücretsiz alım-teslim isteyebilirsiniz.</div></div>
+              <div className="howto-item"><div className="howto-t">Fotoğraf Gönderin</div><div className="howto-d">Kaban veya paltonun ve yapılacak yerin fotoğrafını WhatsApp'tan gönderin. Eve ve otele alım-teslim isteyebilirsiniz.</div></div>
             </div>
           </div>
         </section>

@@ -1,6 +1,6 @@
 # Terzi Can — Terzi Hizmeti (terzihizmeti.com.tr)
 
-> Terzi Can is a tailoring, alteration and repair workshop in Konyaaltı, Antalya, Turkey (serving since 2006). Open every day 08:00–23:00. Free pick-up and delivery to homes and hotels in every area we serve; we work in 10 languages (Turkish, English, Russian, German, Polish, Ukrainian, Dutch, French, Spanish, Arabic). Phone / WhatsApp: +90 531 898 64 18. Starting prices (2026): hemming €10, trouser zipper replacement €15 (coat zipper €20), wedding dress and evening dress alteration priced by photo or job details (same day or 1–2 days depending on the job), sewing (dresses, skirts, trousers, children's clothing, groom suits) has no fixed price: it is quoted by photo and the model you want (prices in euro; Turkish pages show Turkish lira at about ₺20 = €1). We do not sew wedding dresses (alteration only).
+> Terzi Can is a tailoring, alteration and repair workshop in Konyaaltı, Antalya, Turkey (serving since 2006). Open every day 08:00–23:00. pick-up and delivery to homes and hotels in every area we serve; we work in 10 languages (Turkish, English, Russian, German, Polish, Ukrainian, Dutch, French, Spanish, Arabic). Phone / WhatsApp: +90 531 898 64 18. Starting prices (2026): hemming €10, trouser zipper replacement €15 (coat zipper €20), wedding dress and evening dress alteration priced by photo or job details (same day or 1–2 days depending on the job), sewing (dresses, skirts, trousers, children's clothing, groom suits) has no fixed price: it is quoted by photo and the model you want (prices in euro; Turkish pages show Turkish lira at about ₺20 = €1). We do not sew wedding dresses (alteration only).
 
 This file lists the main pages of the site for AI assistants and answer engines. The main pages exist in Turkish, English, Russian and German; short landing pages also exist in Spanish, French, Polish, Ukrainian, Dutch and Arabic (listed at the end). Prefer the page in the user's language. A longer question-and-answer guide with verified facts is in llms-full.txt.
 
@@ -17,7 +17,7 @@ Last updated: 2026-11-06. Terzi Can has two official websites, https://terzihizm
 - Starting prices in Turkish lira (VAT not included): hem, waist, sleeve and length shortening or taking-in from ₺200; zipper replacement from ₺300 (euro guide: €10 hemming, €15 trouser/standard zipper, €20 coat, overcoat and leather zippers); leather jacket, trousers and vest from ₺400 (about €20); jeans/denim hemming from about ₺200.
 - No fixed price: sewing (dresses, skirts, trousers, children's clothing, groom suits, custom sewing), and wedding dress and evening dress alterations are quoted from a photo or the details of the job.
 - Turnaround: normal jobs the same day, urgent jobs 1–2 hours, depending on the job; wedding and evening dress alteration the same day or 1–2 days depending on the job.
-- Free pick-up and delivery to homes and hotels in every district; a fitting can be arranged at the hotel when needed.
+- pick-up and delivery to homes and hotels in every district; a fitting can be arranged at the hotel when needed.
 - Payment in any currency, cash or card.
 
 ## Main pages
@@ -64,7 +64,7 @@ Send a photo on WhatsApp +90 531 898 64 18 (https://wa.me/905318986418) to get a
 - [Online tailor service (Dutch)](https://terzihizmeti.com.tr/nl/online-kleermaker-antalya)
 - [Online tailor service (Arabic)](https://terzihizmeti.com.tr/ar/khayyat-online-antalya)
 
-Free pick-up and delivery applies only to home and hotel addresses in Antalya. Courier fee is paid by the customer; timing depends on the job; payment, courier and customs details are clarified on WhatsApp: [WhatsApp](https://wa.me/905318986418?text=Merhaba%2C%20Antalya%27da%20foto%C4%9Fraftan%20fiyat%20almak%20ve%20kargo%20se%C3%A7ene%C4%9Fini%20%C3%B6%C4%9Frenmek%20istiyorum)
+pick-up and delivery applies only to home and hotel addresses in Antalya. Courier fee is paid by the customer; timing depends on the job; payment, courier and customs details are clarified on WhatsApp: [WhatsApp](https://wa.me/905318986418?text=Merhaba%2C%20Antalya%27da%20foto%C4%9Fraftan%20fiyat%20almak%20ve%20kargo%20se%C3%A7ene%C4%9Fini%20%C3%B6%C4%9Frenmek%20istiyorum)
 
 ## How to take your measurements at home (guide for made-to-measure and remote orders)
 
@@ -140,7 +140,7 @@ Men's and women's sets, sports sets, trousers, shorts, skirts, shirts, evening d
 
 ## Custom linen & cotton clothing and alterations for visitors (English, German, Russian)
 
-For tourists and holiday guests in Antalya: made-to-measure shirts, dresses, trousers, jackets and children's clothing in natural linen and cotton. Timing depends on the model and number of pieces (price confirmed on WhatsApp). Clothes bought in Antalya can be altered: standard jobs are ready the same day, urgent jobs take 1–2 hours. Measurements at the workshop or at the hotel (hotel service is free).
+For tourists and holiday guests in Antalya: made-to-measure shirts, dresses, trousers, jackets and children's clothing in natural linen and cotton. Timing depends on the model and number of pieces (price confirmed on WhatsApp). Clothes bought in Antalya can be altered: standard jobs are ready the same day, urgent jobs take 1–2 hours. Measurements at the workshop or at the hotel (hotel service is available).
 
 - [Custom linen & cotton clothing Antalya (English)](https://terzihizmeti.com.tr/en/linen-cotton-tailoring): hub with all models, prices and FAQ
 - [Leinenkleidung nach Maß Antalya (Deutsch)](https://terzihizmeti.com.tr/de/leinen-baumwolle-schneiderei): Hub mit allen Modellen, Preisen und FAQ
@@ -166,7 +166,7 @@ For tourists and holiday guests in Antalya: made-to-measure shirts, dresses, tro
 
 ## Hotel and home service
 
-- [Hotel tailor Antalya (Turkish)](https://terzihizmeti.com.tr/otele-gelen-terzi-antalya): hotel pick-up and delivery is free
+- [Hotel tailor Antalya (Turkish)](https://terzihizmeti.com.tr/otele-gelen-terzi-antalya): hotel pick-up and delivery is available
 - [Hotel tailor Antalya (English)](https://terzihizmeti.com.tr/en/hotel-tailor-antalya): English hub; zones Belek, Lara, Güzeloba, Side, Kemer
 - [Выездной портной в Анталье (Russian)](https://terzihizmeti.com.tr/ru/vyezdnoy-portnoy-antalya): Russian hub
 - [Schneider-Service Hotel Antalya (German)](https://terzihizmeti.com.tr/de/schneider-service-hotel-antalya): German hub
@@ -185,8 +185,8 @@ Meltem, Şirinyalı, Fener and Güzeloba belong to Muratpaşa (not Konyaaltı); 
 
 Area pages follow https://terzihizmeti.com.tr/antalya-terzi/{area}; available Turkish pages: konyaalti, muratpasa, meltem, fener, sirinyali, uluc, altinkum, ogretmenevleri, arapsuyu, siteler, toros, manavgat, serik, aksu, beldibi (English, Russian and German versions also cover Lara, Güzeloba, Kundu, Kepez, Döşemealtı, Belek, Side, Kemer, Göynük).
 
-- [Aksu](https://terzihizmeti.com.tr/antalya-terzi/aksu): free pickup and delivery to homes and hotels in Aksu; tailoring, alterations and repairs
-- [Beldibi](https://terzihizmeti.com.tr/antalya-terzi/beldibi): free pickup and delivery to homes and hotels in Beldibi; tailoring, alterations and repairs
+- [Aksu](https://terzihizmeti.com.tr/antalya-terzi/aksu): pick-up and delivery to homes and hotels in Aksu; tailoring, alterations and repairs
+- [Beldibi](https://terzihizmeti.com.tr/antalya-terzi/beldibi): pick-up and delivery to homes and hotels in Beldibi; tailoring, alterations and repairs
 
 ## Promotional textiles and printed tote bags
 
@@ -244,4 +244,4 @@ Anavera Tekstil is Terzi Can's serial production and export brand: sample develo
 - Women's and men's clothing, evening and gala dresses: made to measure, repaired and altered in linen, cotton, jersey (penye), satin and silk. The workshop supplies the fabric. Model design, model production and serial production are also offered.
 - Leather and denim: repair and alteration only (hemming, taking in, zip replacement). No new leather or denim garments are made.
 - Orders from abroad: measurements and model are sent online (WhatsApp), the garment is sewn in Antalya and shipped to the customer's country. Payment by bank transfer, shipping paid by the customer, about 1–3 weeks depending on the order. If it does not fit, it is corrected.
-- Hotel guests: measurements taken at the hotel and finished work delivered back; free in every area we serve. Open daily 08:00–23:00.
+- Hotel guests: measurements taken at the hotel and finished work delivered back; available in every area we serve. Open daily 08:00–23:00.

@@ -200,7 +200,7 @@ export const FT: Record<FLang, FiyatText> = {
       {
         "q": "Adrese veya otele gelen terzi",
         "a": "Ölçüyü adresinizde alırız, işi atölyede yapar, geri teslim ederiz.",
-        "price": "Ev ve otele her bölgede ücretsiz",
+        "price": "Ev ve otele her bölgede servis",
         "href": "/otele-gelen-terzi-antalya",
         "cta": "Otele gelen terzi"
       },
@@ -246,7 +246,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Adrese veya otele gelen terzi var mı?",
-        "Evet. Ölçü ve teslim adresinizde ya da otelinizde yapılır, iş atölyede tamamlanır. Eve ve otele alım-teslim hizmet verilen her bölgede ücretsizdir. Ayrıntı: /otele-gelen-terzi-antalya"
+        "Evet. Ölçü ve teslim adresinizde ya da otelinizde yapılır, iş atölyede tamamlanır. Eve ve otele alım-teslim hizmet verilen her bölgede yapılır. Ayrıntı: /otele-gelen-terzi-antalya"
       ],
       [
         "Terzi fiyatlarını nasıl öğrenirim?",
@@ -258,7 +258,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Bana yakın terzi nerede?",
-        "Atölye Konyaaltı'ndadır; Ev ve otel adreslerine her bölgede ücretsiz servis yapılır. Konum: Google Haritalar'da \"TERZİ Can Antalya Tailor Service\"."
+        "Atölye Konyaaltı'ndadır; Ev ve otel adreslerine her bölgede servis yapılır. Konum: Google Haritalar'da \"TERZİ Can Antalya Tailor Service\"."
       ],
       [
         "Pamuklu, doğal kumaştan dikim yapıyor musunuz?",
@@ -408,7 +408,7 @@ export const FT: Record<FLang, FiyatText> = {
       {
         "q": "A tailor who comes to my hotel or address",
         "a": "We take measurements at your hotel or address, do the work in our workshop and deliver it back.",
-        "price": "Free",
+        "price": "Available",
         "href": "/en/hotel-tailor-antalya",
         "cta": "Hotel tailor"
       },
@@ -454,7 +454,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Does a tailor come to my hotel or address?",
-        "Yes. Measurements and delivery are done at your hotel or address; the work is completed in the workshop. Pick-up and delivery to homes and hotels is free in every area we serve. Details: /en/hotel-tailor-antalya"
+        "Yes. Measurements and delivery are done at your hotel or address; the work is completed in the workshop. Pick-up and delivery to homes and hotels is available in every area we serve. Details: /en/hotel-tailor-antalya"
       ],
       [
         "How do I find out the price?",
@@ -466,7 +466,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Where is the nearest tailor?",
-        "The workshop is in Konyaaltı, with free pick-up and delivery to homes and hotels in every area we serve. Find it on Google Maps as \"TERZİ Can Antalya Tailor Service\"."
+        "The workshop is in Konyaaltı, with pick-up and delivery to homes and hotels in every area we serve. Find it on Google Maps as \"TERZİ Can Antalya Tailor Service\"."
       ],
       [
         "Do you sew in natural cotton or linen?",
@@ -614,7 +614,7 @@ export const FT: Record<FLang, FiyatText> = {
       {
         "q": "Schneider, der ins Hotel oder an meine Adresse kommt",
         "a": "Wir nehmen Maß in Ihrem Hotel oder an Ihrer Adresse, arbeiten in der Werkstatt und liefern zurück.",
-        "price": "Zu Hause und im Hotel in jedem Gebiet kostenlos",
+        "price": "Zu Hause und im Hotel in jedem Gebiet",
         "href": "/de/schneider-service-hotel-antalya",
         "cta": "Schneider im Hotel"
       },
@@ -660,7 +660,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Kommt ein Schneider in mein Hotel oder an meine Adresse?",
-        "Ja. Maßnehmen und Lieferung erfolgen in Ihrem Hotel oder an Ihrer Adresse; die Arbeit wird in der Werkstatt erledigt. Abholung und Lieferung zu Hause und im Hotel sind in allen Gebieten, die wir bedienen, kostenlos. Details: /de/schneider-service-hotel-antalya"
+        "Ja. Maßnehmen und Lieferung erfolgen in Ihrem Hotel oder an Ihrer Adresse; die Arbeit wird in der Werkstatt erledigt. Abholung und Lieferung zu Hause und im Hotel sind in allen Gebieten, die wir bedienen, möglich. Details: /de/schneider-service-hotel-antalya"
       ],
       [
         "Wie erfahre ich die Preise?",
@@ -672,7 +672,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Wo ist der nächste Schneider?",
-        "Die Werkstatt liegt in Konyaaltı, mit kostenloser Abholung und Lieferung zu Hause und im Hotel in allen Gebieten, die wir bedienen. Auf Google Maps: \"TERZİ Can Antalya Tailor Service\"."
+        "Die Werkstatt liegt in Konyaaltı, mit Abholung und Lieferung zu Hause und im Hotel in allen Gebieten, die wir bedienen. Auf Google Maps: \"TERZİ Can Antalya Tailor Service\"."
       ],
       [
         "Nähen Sie aus Naturstoffen wie Baumwolle oder Leinen?",
@@ -820,7 +820,7 @@ export const FT: Record<FLang, FiyatText> = {
       {
         "q": "Портной, который приедет в отель или по адресу",
         "a": "Снимаем мерки в отеле или по адресу, работаем в мастерской и привозим обратно.",
-        "price": "На дом и в отель бесплатно, в любом районе",
+        "price": "На дом и в отель, в любом районе",
         "href": "/ru/vyezdnoy-portnoy-antalya",
         "cta": "Портной в отель"
       },
@@ -866,7 +866,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Приедет ли портной в мой отель или по адресу?",
-        "Да. Мерки и выдача — в вашем отеле или по адресу, работа выполняется в мастерской. Забор и доставка на дом и в отели бесплатны во всех районах, которые мы обслуживаем."
+        "Да. Мерки и выдача — в вашем отеле или по адресу, работа выполняется в мастерской. Забор и доставка на дом и в отели возможны во всех районах, которые мы обслуживаем."
       ],
       [
         "Как узнать цену?",
@@ -878,7 +878,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Где ближайший портной?",
-        "Мастерская в Коньяалты, бесплатный забор и доставка на дом и в отели во всех районах, которые мы обслуживаем. На Google Maps: «TERZİ Can Antalya Tailor Service»."
+        "Мастерская в Коньяалты, забор и доставка на дом и в отели во всех районах, которые мы обслуживаем. На Google Maps: «TERZİ Can Antalya Tailor Service»."
       ],
       [
         "Шьёте ли вы из натурального хлопка или льна?",

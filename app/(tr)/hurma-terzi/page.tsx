@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Hurma Terzi · Paça ₺200'den · Her Gün 23:00'e Kadar" },
   description:
-    fitDesc("Hurma terzi: paça kısaltma ₺200, fermuar ₺300, bel daraltma, özel dikim. Atölyemiz Hurma'da, adrese ücretsiz servis. Her gün 08:00–23:00. ☎ " + PHONE),
+    fitDesc("Hurma terzi: paça kısaltma ₺200, fermuar ₺300, bel daraltma, özel dikim. Atölyemiz Hurma'da, adrese servis. Her gün 08:00–23:00. ☎ " + PHONE),
   keywords: fitKeywords(Array.from(new Set(['Hurma tamir tadilat', 'Hurma söküğü dikme', 'Hurma yırtık tamiri', 'Hurma elbise tamiri', 'Hurma terzi', 'Hurma mahallesi terzi', 'Hurma Konyaaltı terzi', 'Hurma paça kısaltma', 'Hurma fermuar tamiri', 'Hurma bel daraltma', 'Hurma elbise dikimi', 'Hurma gelinlik tadilatı', 'Hurma eve gelen terzi', 'Hurma adrese gelen terzi', 'Hurma terzi fiyatları 2026', 'Konyaaltı Hurma dikiş atölyesi', 'Hurma sahil terzi', 'Hurma otel terzi hizmeti', 'Hurma özel dikim', 'Hurma bay bayan elbise dikimi', 'Hurma ölçüye göre özel dikim', 'Hurma ölçüye göre elbise dikimi', 'Hurma beden ayarlama', 'Hurma beden ayarlaması', 'Hurma elbise daraltma', 'Hurma elbise kısaltma', 'Hurma pantolon daraltma', 'Hurma abiye tamiri', 'Hurma abiye tadilatı', 'Hurma kot paçası kısaltma', 'Hurma fermuar değişimi', 'Hurma ceket tadilatı', 'Hurma mont tamiri', 'Hurma gömlek daraltma', 'Hurma etek kısaltma', 'Hurma şort kısaltma', 'Hurma yakınımda terzi', 'Hurma atölye', 'Konyaaltı Hurma terzi tamir tadilat', 'Hurma bay bayan elbise tamiri', 'Hurma terzi', 'Hurma bay bayan terzi', 'Hurma dikim', 'Hurma tamir tadilat', 'Hurma elbise tamiri', 'Hurma elbise tadilatı', 'Hurma fermuar değişimi', 'Hurma fermuar tamiri', 'Hurma boy kısaltma', 'Hurma bel daraltma', 'Hurma etek boyu kısaltma', 'Hurma pantolon boyu kısaltma', 'Hurma paça kısaltma', 'Hurma kot paçası kısaltma', 'Hurma beden ölçüsüne göre elbise tadilatı', 'Hurma mont tamiri', 'Hurma ceket daraltma', 'Hurma gömlek daraltma', 'Hurma şort kısaltma', 'Hurma pantolon daraltma', 'Hurma etek daraltma', 'Hurma elbise daraltma', 'Hurma elbise dikimi']))),
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   alternates: { canonical: PAGE_URL, languages: { tr: PAGE_URL, en: `${SITE}${DISTRICT_BASE.en}/hurma`, ru: `${SITE}${DISTRICT_BASE.ru}/hurma`, de: `${SITE}${DISTRICT_BASE.de}/hurma`, 'x-default': PAGE_URL } },
@@ -33,9 +33,9 @@ export const metadata: Metadata = {
 
 // Görünen SSS ve FAQPage şeması tek diziden üretilir (tutarlılık).
 const FAQ: [string, string][] = [
-    ['Hurma mahallesine terzi servisi geliyor mu?', 'Evet! Hurma mahallesine ücretsiz adrese servis veriyoruz. Kıyafetinizi adresinizden alıp normal tamir ve tadilatta aynı gün, acil işlerde 1–2 saatte teslim ediyoruz; özel dikimde süre modele ve adede göre belirlenir.'],
+    ['Hurma mahallesine terzi servisi geliyor mu?', 'Evet! Hurma mahallesine adrese servis veriyoruz. Kıyafetinizi adresinizden alıp normal tamir ve tadilatta aynı gün, acil işlerde 1–2 saatte teslim ediyoruz; özel dikimde süre modele ve adede göre belirlenir.'],
     ['Hurma terzi fiyatları ne kadar 2026?', 'Paça kısaltma ₺200\'den, fermuar değişimi ₺300\'den, bel daraltma ₺200\'den, elbise dikimi fotoğrafa ve istediğiniz modele göre, gelinlik ve abiye tadilatı fotoğrafa veya işin detayına göre.'],
-    ['Hurma sahil bölgesindeki otellere terzi servisi var mı?', 'Evet, Hurma sahil şeridindeki otellere ücretsiz alım-teslimatlı tadilat, onarım ve dikim hizmeti veriyoruz; ev adreslerine de her bölgede ücretsizdir.'],
+    ['Hurma sahil bölgesindeki otellere terzi servisi var mı?', 'Evet, Hurma sahil şeridindeki otellere alım-teslimatlı tadilat, onarım ve dikim hizmeti veriyoruz; ev adreslerine de her bölgede yapılır.'],
     ['Hurma\'da acil tadilat ne kadar sürer?', 'Paça kısaltma, fermuar değişimi ve bel daraltma gibi standart işlemler aynı gün, acil olanlar 1–2 saatte teslim edilir.'],
 ];
 
@@ -122,7 +122,7 @@ export default function HurmaTerziPage() {
             <div className="hero-overlay" />
           </div>
           <div className="hero-content">
-            <span className="hero-tag">📍 Hurma Mahallesi · Konyaaltı · Ücretsiz Servis</span>
+            <span className="hero-tag">📍 Hurma Mahallesi · Konyaaltı</span>
             <h1 id="hero-h">
               Hurma <span className="accent">Terzi</span><br />
               Paça Kısaltma, Bel Daraltma, Fermuar Değişimi
@@ -204,7 +204,7 @@ export default function HurmaTerziPage() {
               </div>
               <div className="howto-item">
                 <div className="howto-t">Otele Servis</div>
-                <div className="howto-d">Hurma sahilindeki otellere ve ev adreslerine ücretsiz alım-teslimatlı tadilat ve onarım.</div>
+                <div className="howto-d">Hurma sahilindeki otellere ve ev adreslerine alım-teslimatlı tadilat ve onarım.</div>
               </div>
             </div>
           </div>

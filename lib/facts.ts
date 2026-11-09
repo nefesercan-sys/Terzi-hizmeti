@@ -2,7 +2,7 @@
 // lib/facts.ts — İŞLETME KURALLARI İÇİN TEK KAYNAK (fiyat, saat, servis)
 // Sitedeki metinler bu değerlerle çelişmemeli. Süreler: lib/delivery.ts.
 // Sahibin kararları (Ekim 2026):
-//   • Eve ve otele alım-teslim TÜM hizmet bölgelerinde ücretsiz.
+//   • Eve ve otele alım-teslim TÜM hizmet bölgelerinde yapılır.
 //   • Gelinlik DİKİMİ yapılmaz (gelinlik/abiye TADİLATI yapılır).
 //   • Abiye/gelinlik TADİLATI (boy, bel, korse/kapama, kuyruk, elbise tadilatı) için SABİT FİYAT YAZILMAZ: BY_PHOTO_OR_JOB ("fotoğrafa veya işin detayına göre"). Eski sabit fiyatlar kaldırıldı (Kasım 2026).
 //   • Gelinlik/abiye tadilatı süresi: WEDDING_TIME ("aynı gün veya duruma göre 1–2 gün"). Paça/bel/tamir "aynı gün" kuralı (lib/delivery.ts) değişmez.

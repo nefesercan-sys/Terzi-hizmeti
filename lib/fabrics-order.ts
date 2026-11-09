@@ -15,7 +15,7 @@ export const FABRICS_ORDER: Record<FabricsLang, {
     leather: 'Deri ve kot: yalnızca tamir ve tadilat (kot paça kısaltma, deri ceket ve pantolon tamiri, daraltma, kısaltma, fermuar değişimi). Sıfırdan deri ya da kot dikimi yapmıyoruz.',
     abroadH: 'Yurt dışından sipariş nasıl verilir?',
     abroadSteps: ['WhatsApp\'tan modeli ve beden ölçülerinizi gönderin.', 'Dikimi Antalya\'daki atölyemizde yaparız.', 'İstediğiniz ülkeye kargolarız. Ödeme banka havalesiyle, kargo ücretini müşteri öder. Genellikle 1–3 hafta sürer.', 'Beden uymazsa düzeltme yaparız.'],
-    abroadNote: 'Otelde kalıyorsanız ölçünüzü otelinizde alıp işi bitince otele teslim ediyoruz. Eve ve otele alım-teslim tüm bölgelerde ücretsizdir. Her gün 08:00–23:00.',
+    abroadNote: 'Otelde kalıyorsanız ölçünüzü otelinizde alıp işi bitince otele teslim ediyoruz. Eve ve otele alım-teslim tüm bölgelerde yapılır. Her gün 08:00–23:00.',
   },
   en: {
     h: 'Fabrics and orders from abroad',
@@ -24,7 +24,7 @@ export const FABRICS_ORDER: Record<FabricsLang, {
     leather: 'Leather and denim: repair and alteration only (hemming jeans, repairing or taking in leather jackets and trousers, shortening, zip replacement). We do not make new leather or denim garments.',
     abroadH: 'How to order from abroad',
     abroadSteps: ['Send us the model and your measurements on WhatsApp.', 'We sew the garment in our Antalya workshop.', 'We ship to the country you choose. Payment is by bank transfer and the customer pays shipping. It usually takes 1–3 weeks.', 'If it does not fit, we correct it.'],
-    abroadNote: 'If you are staying in a hotel, we can take your measurements there and deliver the finished work back to the hotel. Hotel pickup and delivery are free in every area we serve. Open daily 08:00–23:00.',
+    abroadNote: 'If you are staying in a hotel, we can take your measurements there and deliver the finished work back to the hotel. Hotel pickup and delivery are available in every area we serve. Open daily 08:00–23:00.',
   },
   ru: {
     h: 'Ткани и заказ из-за границы',
@@ -33,7 +33,7 @@ export const FABRICS_ORDER: Record<FabricsLang, {
     leather: 'Кожа и джинсы: только ремонт и подгонка (подшив джинсов, ремонт и ушивание кожаных курток и брюк, укорачивание, замена молний). Новые вещи из кожи или джинсовой ткани мы не шьём.',
     abroadH: 'Как заказать из-за границы',
     abroadSteps: ['Пришлите в WhatsApp модель и свои мерки.', 'Мы шьём вещь в нашей мастерской в Анталье.', 'Отправляем в выбранную вами страну. Оплата банковским переводом, доставку оплачивает клиент. Обычно это занимает 1–3 недели.', 'Если вещь не подошла, мы её исправим.'],
-    abroadNote: 'Если вы живёте в отеле, мы снимем мерки в отеле и вернём готовую вещь туда же. Забор и доставка бесплатны во всех районах. Ежедневно 08:00–23:00.',
+    abroadNote: 'Если вы живёте в отеле, мы снимем мерки в отеле и вернём готовую вещь туда же. Забор и доставка возможен во всех районах. Ежедневно 08:00–23:00.',
   },
   de: {
     h: 'Stoffe und Bestellungen aus dem Ausland',
@@ -42,6 +42,6 @@ export const FABRICS_ORDER: Record<FabricsLang, {
     leather: 'Leder und Jeans: nur Reparatur und Änderung (Jeans kürzen, Lederjacken und -hosen reparieren oder enger machen, kürzen, Reißverschluss tauschen). Neue Kleidung aus Leder oder Jeansstoff nähen wir nicht.',
     abroadH: 'So bestellen Sie aus dem Ausland',
     abroadSteps: ['Senden Sie uns Modell und Körpermaße per WhatsApp.', 'Wir nähen das Stück in unserer Werkstatt in Antalya.', 'Wir versenden in das Land Ihrer Wahl. Zahlung per Banküberweisung, die Versandkosten trägt der Kunde. Dauer meist 1–3 Wochen.', 'Passt es nicht, korrigieren wir es.'],
-    abroadNote: 'Wenn Sie im Hotel wohnen, nehmen wir dort Maß und bringen das fertige Stück zurück ins Hotel. Abholung und Lieferung im Hotel sind in allen Gebieten, die wir bedienen, kostenlos. Täglich 08:00–23:00.',
+    abroadNote: 'Wenn Sie im Hotel wohnen, nehmen wir dort Maß und bringen das fertige Stück zurück ins Hotel. Abholung und Lieferung im Hotel sind in allen Gebieten, die wir bedienen, möglich. Täglich 08:00–23:00.',
   },
 };

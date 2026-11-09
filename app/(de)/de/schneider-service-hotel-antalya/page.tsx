@@ -8,8 +8,8 @@ const WA_DEF = `https://wa.me/905318986418?text=${encodeURIComponent('Hallo, ich
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: 'Schneider im Hotel Antalya · Abholung kostenlos',
-  description: 'Schneider im Hotel in Belek, Lara, Kemer, Side: Abholung kostenlos, Hose kürzen ab ₺200 (~€10), meist am selben Tag. ☎ +90 531 898 64 18',
+  title: 'Schneider im Hotel Antalya · Abholung',
+  description: 'Schneider im Hotel in Belek, Lara, Kemer, Side: Abholung, Hose kürzen ab ₺200 (~€10), meist am selben Tag. ☎ +90 531 898 64 18',
   keywords: ['Schneider Hotel Antalya', 'mobiler Schneider Antalya', 'Schneider Belek Hotel', 'Schneider Lara Hotel', 'Schneider Kemer Hotel', 'Schneider Side Hotel', 'Kleidung ändern Antalya eilig', 'Änderungsschneiderei Hotel Antalya'],
   alternates: {
     canonical: `${SITE}${BASE_PATH}`,
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 const FAQ: [string, string][] = [
   ['Wie funktioniert der mobile Schneiderservice im Hotel?', 'Sie teilen uns Hotelname, Zimmernummer und einen passenden Zeitpunkt per WhatsApp mit. Unser Schneider kommt zu Ihnen, nimmt Maß oder holt das Kleidungsstück ab, und liefert es fertig repariert oder geändert zurück.'],
   ['In welche Hotelbezirke kommen Sie?', 'Wir bedienen Belek, Lara, Güzeloba, Kemer und Side sowie auf Anfrage weitere Bezirke Antalyas.'],
-  ['Sind Abholung und Lieferung ins Hotel kostenlos?', 'Ja, Abholung und Lieferung zu Hotels und Adressen in den Antalya-Bezirken sind kostenlos. Die Reparatur oder Änderung selbst wird nach Aufwand berechnet.'],
+  ['Bieten Sie Abholung und Lieferung ins Hotel an?', 'Ja, Abholung und Lieferung zu Hotels und Adressen in den Antalya-Bezirken sind möglich. Die Reparatur oder Änderung selbst wird nach Aufwand berechnet.'],
   ['Was kosten Kürzen und Reißverschluss?', 'Kürzen und Taille enger machen ab ₺200 (ca. 10 €), Reißverschluss wechseln ab ₺300 (ca. 15 €, für Mäntel, Jacken und Leder ca. 20 €). Preise ohne MwSt.; den genauen Preis nennen wir nach einem Foto per WhatsApp.'],
   ['Wie kann ich bezahlen?', 'Bar oder mit Karte, in jeder gängigen Währung.'],
   ['Wie lange dauert eine Änderung oder Reparatur?', 'Die meisten Änderungen und Reparaturen sind am selben Tag fertig. Für Hochzeits- oder Abendkleider empfehlen wir, uns möglichst früh zu kontaktieren.'],
@@ -100,7 +100,7 @@ export default function OtelBolgeleriDeHub() {
             <p className="hero-desc">
               Wählen Sie Ihren Bezirk, teilen Sie Hotelname und Zeitpunkt per WhatsApp mit — unser
               Schneider kommt zu Ihnen. Änderungen und Reparaturen,
-              direkt vor Ort in Ihrem Hotel. Abholung und Lieferung kostenlos, Hose kürzen ab ₺200
+              direkt vor Ort in Ihrem Hotel. Abholung und Lieferung, Hose kürzen ab ₺200
               (ca. 10 €), die meisten Arbeiten am selben Tag fertig.
             </p>
             <div className="hero-btns">
@@ -121,7 +121,7 @@ export default function OtelBolgeleriDeHub() {
                 braucht, oder ein Anzug, der angepasst werden muss — im Urlaub bleibt
                 selten Zeit, selbst eine Änderungsschneiderei zu finden. Terzi Can kommt direkt zu
                 Ihrem Hotel in Belek, Lara, Güzeloba, Kemer oder Side: Maßnehmen, Reparieren, Abholen
-                und Zurückbringen — alles ohne dass Sie Ihr Hotel verlassen müssen. Abholung und Lieferung sind kostenlos. Schreiben Sie uns
+                und Zurückbringen — alles ohne dass Sie Ihr Hotel verlassen müssen. Abholung und Lieferung sind möglich. Schreiben Sie uns
                 per WhatsApp in Ihrer Sprache, die Verständigung ist unkompliziert.
               </p>
             </div>

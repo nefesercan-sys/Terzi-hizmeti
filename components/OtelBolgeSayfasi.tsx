@@ -23,10 +23,10 @@ type Lang = 'tr' | 'en' | 'ru' | 'de';
 
 // H1 varyantları (bölge slug'ına göre deterministik); bölge adı vurgulu kalır.
 const H1V: Record<string, ((r: string) => [string, string])[]> = {
-  tr: [(r) => ['Otele Gelen Terzi', r], (r) => ['Otelinize gelen terzi', r], (r) => [`${r} otellerine terzi servisi`, 'Alım ve teslim ücretsiz']],
-  en: [(r) => ['Hotel Tailor', r], (r) => ['Tailor that comes to your hotel in', r], (r) => [`${r} hotel tailor service`, 'Free pickup and delivery']],
-  ru: [(r) => ['Портной в отеле', r], (r) => ['Портной с выездом в отель:', r], (r) => [`Портной для отелей: ${r}`, 'Забор и доставка бесплатно']],
-  de: [(r) => ['Schneider im Hotel', r], (r) => ['Schneider kommt ins Hotel:', r], (r) => [`Hotel-Schneider ${r}`, 'Abholung und Lieferung kostenlos']],
+  tr: [(r) => ['Otele Gelen Terzi', r], (r) => ['Otelinize gelen terzi', r], (r) => [`${r} otellerine terzi servisi`, 'Alım ve teslim']],
+  en: [(r) => ['Hotel Tailor', r], (r) => ['Tailor that comes to your hotel in', r], (r) => [`${r} hotel tailor service`, 'pick-up and delivery']],
+  ru: [(r) => ['Портной в отеле', r], (r) => ['Портной с выездом в отель:', r], (r) => [`Портной для отелей: ${r}`, 'Забор и доставка']],
+  de: [(r) => ['Schneider im Hotel', r], (r) => ['Schneider kommt ins Hotel:', r], (r) => [`Hotel-Schneider ${r}`, 'Abholung und Lieferung']],
 };
 const h1Varyant = (lang: string, slug: string, r: string) => {
   const v = H1V[lang]; if (!v) return null;
@@ -49,8 +49,8 @@ const T: Record<Lang, any> = {
       { icon: '🔧', tr: 'Repair', en: 'Zippers, tears, seams', desc: 'Everyday repairs — zippers and torn seams.', items: ['Zipper Replacement', 'Tear Repair'] },
       { icon: '📏', tr: 'Alterations', en: 'Hemming, taking in', desc: 'Precise fit adjustments so clothing sits exactly right.', items: ['Hemming', 'Waist Taking In', 'Sleeve Shortening'] },
     ],
-    priceEyebrow: 'Pricing', priceH: 'Prices', priceSub: 'Hotel pick-up and delivery is free — you only pay for the work.',
-    priceRows: [['Hotel Visit', 'FREE'], ['Hemming', (P_en.hem)], ['Zipper Replacement', (P_en.zip)], ['Dress / Suit Alteration', (P_en.alter)], ['Wedding Dress Alteration', (P_en.wedding)]],
+    priceEyebrow: 'Pricing', priceH: 'Prices', priceSub: 'Hotel pick-up and delivery is available; the price depends on the work.',
+    priceRows: [['Hotel Visit', 'Available'], ['Hemming', (P_en.hem)], ['Zipper Replacement', (P_en.zip)], ['Dress / Suit Alteration', (P_en.alter)], ['Wedding Dress Alteration', (P_en.wedding)]],
     procEyebrow: 'Process', procH: 'How It Works',
     steps: [
       ['01', 'Share Hotel & Room', `Send hotel name and room number to ${PHONE}`],
@@ -77,7 +77,7 @@ const T: Record<Lang, any> = {
       { icon: '🔧', tr: 'Ремонт', en: 'Молнии, разрывы, швы', desc: 'Повседневный ремонт — молнии и швы.', items: ['Замена молнии', 'Ремонт разрыва'] },
       { icon: '📏', tr: 'Подгонка', en: 'Укорачивание, заужение', desc: 'Точная подгонка по фигуре.', items: ['Укорачивание', 'Заужение талии', 'Укорачивание рукавов'] },
     ],
-    priceEyebrow: 'Стоимость', priceH: 'Цены', priceSub: 'Забор и доставка в отель бесплатны — вы платите только за работу.',
+    priceEyebrow: 'Стоимость', priceH: 'Цены', priceSub: 'Забор и доставка в отель возможны; стоимость зависит от работы.',
     priceRows: [['Выезд в отель', 'БЕСПЛАТНО'], ['Укорачивание', ('от ' + P_ru.hem.replace('+', ''))], ['Замена молнии', ('от ' + P_ru.zip.replace('+', ''))], ['Подгонка платья/костюма', ('от ' + P_ru.alter.replace('+', ''))], ['Подгонка свадебного платья', ('от ' + P_ru.wedding.replace('+', ''))]],
     procEyebrow: 'Процесс', procH: 'Как мы работаем',
     steps: [
@@ -105,8 +105,8 @@ const T: Record<Lang, any> = {
       { icon: '🔧', tr: 'Reparatur', en: 'Reißverschlüsse, Risse, Nähte', desc: 'Alltägliche Reparaturen — Reißverschlüsse und Nähte.', items: ['Reißverschluss ersetzen', 'Riss reparieren'] },
       { icon: '📏', tr: 'Änderungen', en: 'Kürzen, enger machen', desc: 'Präzise Passform-Anpassungen für perfekten Sitz.', items: ['Kürzen', 'Taille enger machen', 'Ärmel kürzen'] },
     ],
-    priceEyebrow: 'Kosten', priceH: 'Preise', priceSub: 'Abholung und Lieferung im Hotel sind kostenlos — Sie zahlen nur die Arbeit.',
-    priceRows: [['Hotelbesuch', 'KOSTENLOS'], ['Kürzen', ('ab ' + P_de.hem.replace('+', ''))], ['Reißverschluss ersetzen', ('ab ' + P_de.zip.replace('+', ''))], ['Kleid-/Anzugänderung', ('ab ' + P_de.alter.replace('+', ''))], ['Brautkleid ändern', ('ab ' + P_de.wedding.replace('+', ''))]],
+    priceEyebrow: 'Kosten', priceH: 'Preise', priceSub: 'Abholung und Lieferung im Hotel sind möglich; der Preis richtet sich nach der Arbeit.',
+    priceRows: [['Hotelbesuch', 'Möglich'], ['Kürzen', ('ab ' + P_de.hem.replace('+', ''))], ['Reißverschluss ersetzen', ('ab ' + P_de.zip.replace('+', ''))], ['Kleid-/Anzugänderung', ('ab ' + P_de.alter.replace('+', ''))], ['Brautkleid ändern', ('ab ' + P_de.wedding.replace('+', ''))]],
     procEyebrow: 'Ablauf', procH: 'So funktioniert es',
     steps: [
       ['01', 'Hotel & Zimmer angeben', `Senden Sie Hotelname und Zimmernummer an ${PHONE}`],
@@ -133,8 +133,8 @@ const T: Record<Lang, any> = {
       { icon: '🔧', tr: 'Tamir', en: 'Fermuar, yırtık, sökük', desc: 'Günlük tamirler — fermuar ve sökük dikiş.', items: ['Fermuar Değişimi', 'Yırtık Tamiri'] },
       { icon: '📏', tr: 'Tadilat', en: 'Boy kısaltma, daraltma', desc: 'Kıyafetin tam oturması için hassas ölçü ayarı.', items: ['Boy Kısaltma', 'Bel Daraltma', 'Kol Kısaltma'] },
     ],
-    priceEyebrow: '₺ Fiyatlar', priceH: 'Fiyatlar', priceSub: 'Otele alım-teslim ücretsiz — yalnızca yapılan iş ücretlendirilir.',
-    priceRows: [['Otel Ziyareti', 'ÜCRETSİZ'], ['Boy Kısaltma', (P_tr.hem)], ['Fermuar Değişimi', (P_tr.zip)], ['Elbise / Takım Tadilatı', (P_tr.alter)], ['Gelinlik Tadilatı', (P_tr.wedding)]],
+    priceEyebrow: '₺ Fiyatlar', priceH: 'Fiyatlar', priceSub: 'Otele alım-teslim yapılır; ücret yalnızca yapılan işe göre belirlenir.',
+    priceRows: [['Otel Ziyareti', 'Var'], ['Boy Kısaltma', (P_tr.hem)], ['Fermuar Değişimi', (P_tr.zip)], ['Elbise / Takım Tadilatı', (P_tr.alter)], ['Gelinlik Tadilatı', (P_tr.wedding)]],
     procEyebrow: 'Süreç', procH: 'Nasıl Çalışır',
     steps: [
       ['01', 'Otel & Oda Bilginizi Gönderin', `Otel adı ve oda numaranızı ${PHONE} numarasına iletin`],
@@ -259,7 +259,7 @@ export default function OtelBolgeSayfasi({ lang, region, allRegions, basePath, m
               <caption className="visually-hidden">{t.priceH}</caption>
               <thead><tr><th scope="col" className="visually-hidden">Service</th><th scope="col" className="visually-hidden">Price</th></tr></thead>
               <tbody>
-                {[t.priceRows[0], ...pickSome(t.priceRows.slice(1), region.slug, 4, 'price')].map((row: string[]) => (<tr key={row[0]}><td>{row[0]}</td><td style={{ color: row[1].match(/FREE|БЕСПЛАТНО|KOSTENLOS|ÜCRETSİZ/) ? '#22c55e' : undefined, fontWeight: 600 }}>{row[1]}</td></tr>))}
+                {[t.priceRows[0], ...pickSome(t.priceRows.slice(1), region.slug, 4, 'price')].map((row: string[]) => (<tr key={row[0]}><td>{row[0]}</td><td style={{ fontWeight: 600 }}>{row[1]}</td></tr>))}
               </tbody>
             </table>
           </div>

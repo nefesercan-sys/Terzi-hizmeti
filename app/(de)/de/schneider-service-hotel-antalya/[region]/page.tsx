@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: { params: Promise<{ region: s
 
   const url = `${SITE}${BASE_PATH}/${r.slug}`;
   const title = `Schneider im Hotel ${r.name}, Antalya | Abholung & Lieferung`;
-  const desc = fitDesc(`Urlaub in ${r.name}? Wir holen im Hotel ab und bringen zurück, kostenlos: Hose kürzen ab ₺200 (~€10), Reißverschluss ab ₺300, Kleider ändern. Täglich 08:00–23:00.`);
+  const desc = fitDesc(`Urlaub in ${r.name}? Wir holen im Hotel ab und bringen zurück: Hose kürzen ab ₺200 (~€10), Reißverschluss ab ₺300, Kleider ändern. Täglich 08:00–23:00.`);
   const ogImage = `${SITE}/terzi-can-hero.jpg`;
 
   return {

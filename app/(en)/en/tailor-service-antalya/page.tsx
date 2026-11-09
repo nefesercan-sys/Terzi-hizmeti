@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Tailor in Antalya: Hemming from ₺200, Repairs | Terzi Can" },
   // SEO Optimizasyonu: Google'da kesilmemesi için ~150 karaktere optimize edildi
-  description: 'Tailor in Antalya (Konyaaltı): hemming from ₺200 (~€10), zipper from ₺300. Free hotel pick-up and delivery in Belek, Lara, Kemer, Side. Same day.',
+  description: 'Tailor in Antalya (Konyaaltı): hemming from ₺200 (~€10), zipper from ₺300. Hotel pick-up and delivery in Belek, Lara, Kemer, Side. Same day.',
   keywords: ['tailor Antalya', 'tailor service Antalya', 'hotel tailor Antalya', 'urgent clothing alteration Antalya', 'tailor Konyaaltı', 'clothing repair Antalya', 'trouser hemming Antalya', 'tailor open Sunday Antalya'],
   authors: [{ name: 'Terzi Can', url: SITE }],
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
@@ -48,7 +48,7 @@ const EXTRA_FAQS: [string, string][] = [
   ['Where can I get trousers hemmed near me in Antalya?', 'At Terzi Can in Hurma, Konyaaltı, open every day 08:00–23:00. Hemming (trousers, jeans) is ready the same day (urgent jobs 1–2 hours). WhatsApp: ' + PHONE],
   ['How much does hemming and zipper replacement cost in Antalya?', 'Hemming and waist taking-in start from ₺200 (about €10); zipper replacement starts from ₺300 (about €15, about €20 for coats, jackets and leather). Prices exclude VAT. Custom sewing and evening or wedding dress alterations are quoted from a photo on WhatsApp.'],
   ['Can you alter a jacket, coat, shirt, skirt or shorts?', 'Yes. We alter and repair jackets, coats, shirts, skirts, shorts, dresses and trousers for men and women. Send a photo of the garment on WhatsApp and we will quote the price and time.'],
-  ['I am a hotel guest staying only a few days. Is that enough time?', 'Yes. Most hemming and repairs are ready the same day (urgent jobs 1–2 hours), and we can pick up and return clothes to your hotel (free for hotels).'],
+  ['I am a hotel guest staying only a few days. Is that enough time?', 'Yes. Most hemming and repairs are ready the same day (urgent jobs 1–2 hours), and we can pick up and return clothes to your hotel (available for hotels).'],
   ['What are your opening hours and how do I contact you?', 'Every day 08:00–23:00. Call or WhatsApp ' + PHONE + '. The workshop is in Hurma, Konyaaltı, Antalya.'],
 ];
 
@@ -96,11 +96,11 @@ const jsonLd = {
 
 const PRIORITY_DISTRICTS = [
   { name: 'Konyaaltı', tag: 'Workshop', note: 'Our workshop is here' },
-  { name: 'Muratpaşa', tag: 'Free service', note: 'Free pick-up and delivery' },
-  { name: 'Kepez', tag: 'Free service', note: 'Free pick-up and delivery' },
-  { name: 'Lara', tag: 'Free service', note: 'Free pick-up and delivery to Lara hotels' },
-  { name: 'Döşemealtı', tag: 'Free service', note: 'Free pick-up and delivery' },
-  { name: 'Aksu', tag: 'Free service', note: 'Free pick-up and delivery' },
+  { name: 'Muratpaşa', tag: 'Service', note: 'pick-up and delivery' },
+  { name: 'Kepez', tag: 'Service', note: 'pick-up and delivery' },
+  { name: 'Lara', tag: 'Service', note: 'pick-up and delivery to Lara hotels' },
+  { name: 'Döşemealtı', tag: 'Service', note: 'pick-up and delivery' },
+  { name: 'Aksu', tag: 'Service', note: 'pick-up and delivery' },
 ];
 
 const OTHER_DISTRICTS = ['Belek', 'Kemer', 'Serik', 'Side'];
@@ -110,7 +110,7 @@ const SERVICES = [
   { icon: '👗', tr: "Women's Tailoring", en: 'Dresses, blouses, skirts, gowns', desc: 'Custom design and made-to-measure sewing for any occasion.', items: ['Dress', 'Blouse', 'Skirt', 'Evening Gown'] },
   { icon: '🔧', tr: 'Clothing Repair', en: 'Zippers, tears, seams', desc: 'Everyday repairs — zippers and torn seams.', items: ['Zipper Replacement', 'Tear Repair'] },
   { icon: '📏', tr: 'Alterations', en: 'Hemming, taking in, resizing', desc: 'Precise fit adjustments so clothing sits exactly right.', items: ['Hemming', 'Waist Taking In', 'Sleeve Shortening', 'Dress Resizing'] },
-  { icon: '🚗', tr: 'Mobile / Hotel Service', en: 'We come to you', desc: 'Measurement, collection and delivery at your hotel or address.', items: ['Hotel Visit', 'Home Visit', 'Free Pickup & Delivery'] },
+  { icon: '🚗', tr: 'Mobile / Hotel Service', en: 'We come to you', desc: 'Measurement, collection and delivery at your hotel or address.', items: ['Hotel Visit', 'Home Visit', 'Pickup & Delivery'] },
 ];
 
 const REPAIR_CATEGORIES = [
@@ -124,9 +124,9 @@ const REPAIR_CATEGORIES = [
 
 const FAQS: [string, string][] = [
   ['Do you come to hotels in Belek, Lara and Kemer?', 'Yes! Our mobile tailor visits all hotels in Belek, Lara, Kemer and Side. Just share your hotel name on WhatsApp.'],
-  ['Is the mobile visit free?', 'Yes. Pick-up and delivery to homes and hotels is free in every area we serve.'],
+  ['Do you offer mobile visits?', 'Yes. Pick-up and delivery to homes and hotels is available in every area we serve.'],
   ['Can I get alterations before an event?', 'Yes, most repairs and hemming are completed the same day (urgent jobs 1–2 hours).'],
-  ['Do you serve Konyaaltı and nearby districts?', 'Yes — Konyaaltı, Muratpaşa, Kepez, Lara, Döşemealtı, Belek, Kemer, Side and nearby districts, all with free pick-up and delivery to homes and hotels.'],
+  ['Do you serve Konyaaltı and nearby districts?', 'Yes — Konyaaltı, Muratpaşa, Kepez, Lara, Döşemealtı, Belek, Kemer, Side and nearby districts, all with pick-up and delivery to homes and hotels.'],
   ['Do you speak English?', 'Yes — write to us on WhatsApp in your own language and we will reply.'],
   ...EXTRA_FAQS,
 ];
@@ -135,7 +135,7 @@ const PROCESS_STEPS: [string, string, string][] = [
   ['01', 'Share Your Location', 'Send your hotel name or address on WhatsApp.'],
   ['02', 'Measurement & Design', 'We take measurements at your address, or discuss design details.'],
   ['03', 'Tailoring / Repair', 'The work is completed at our Konyaaltı workshop.'],
-  ['04', 'Delivery', 'Free delivery in Konyaaltı; scheduled delivery elsewhere in Antalya. Ask on WhatsApp.'],
+  ['04', 'Delivery', 'Delivery in Konyaaltı; scheduled delivery elsewhere in Antalya. Ask on WhatsApp.'],
 ];
 
 export default function TailorServiceAntalyaPage() {
@@ -166,7 +166,7 @@ export default function TailorServiceAntalyaPage() {
               Tailor, Repair & Alterations<br /><span className="accent">Delivered to Your Hotel</span>
             </h1>
             <p className="hero-desc" id="hero-desc">
-              Terzi Can is a tailor in Konyaaltı, Antalya that hems, alters, repairs and sews to measure; reach us on WhatsApp or phone at +90 531 898 64 18, every day 08:00–23:00. {DELIVERY.en.urgent} {DELIVERY.en.normal} Hotel pick-up and delivery is free in every area we serve, including Lara, Belek, Side and Kemer.
+              Terzi Can is a tailor in Konyaaltı, Antalya that hems, alters, repairs and sews to measure; reach us on WhatsApp or phone at +90 531 898 64 18, every day 08:00–23:00. {DELIVERY.en.urgent} {DELIVERY.en.normal} Hotel pick-up and delivery is available in every area we serve, including Lara, Belek, Side and Kemer.
             </p>
             <div className="hero-btns">
               <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-primary">
@@ -192,7 +192,7 @@ export default function TailorServiceAntalyaPage() {
               <div className="sec-head">
                 <span className="eyebrow">📍 Antalya Districts</span>
                 <h2 className="sec-h" id="nb-h">We Start From the District Closest to You</h2>
-                <p className="sec-sub">Free mobile visits in Konyaaltı; scheduled visits elsewhere in Antalya. Ask on WhatsApp.</p>
+                <p className="sec-sub">Mobile visits in Konyaaltı; scheduled visits elsewhere in Antalya. Ask on WhatsApp.</p>
               </div>
               <ul className="nb-grid" aria-label="Priority districts">
                 {PRIORITY_DISTRICTS.map((n) => (

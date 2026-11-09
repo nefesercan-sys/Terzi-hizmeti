@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Paça Kısaltma ₺200'den · Kumaş Pantolon, Etek · Konyaaltı" },
   description:
-    fitDesc("Pantolon, kot, etek paça kısaltma ₺200'den, aynı gün teslim, acil 1–2 saat. Eve ve otele ücretsiz servis. Her gün 08:00–23:00. ☎ " + PHONE),
+    fitDesc("Pantolon, kot, etek paça kısaltma ₺200'den, aynı gün teslim, acil 1–2 saat. Eve ve otele servis. Her gün 08:00–23:00. ☎ " + PHONE),
   keywords: ['paça kısaltma Konyaaltı', 'pantolon kısaltma Antalya', 'kot paça kısaltma', 'etek kısaltma Antalya', 'acil paça kısaltma', 'paça kısaltma fiyatı', 'Konyaaltı terzi', 'Antalya terzi'],
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   alternates: { canonical: PAGE_URL },
@@ -42,7 +42,7 @@ const FAQ: [string, string][] = [
     ['Paça kısaltma fiyatları 2026\'da ne kadar?', '2026 güncel başlangıç fiyatı: pantolon, kot ve etek paça kısaltma ₺200\'den. Fiyat işin durumuna göre değişebilir; fotoğraf göndererek net fiyatı öğrenebilirsiniz.'],
   ["Takım elbise pantolonunun paçası kısaltılır mı?", "Evet. Kumaş pantolonda paça görünmez dikişle kapatılır, boy giyeceğiniz ayakkabıyla işaretlenir. Manşetli pantolonlarda manşet yeniden yapılır."],
   ["Astarlı etek kısaltılırsa astar da kısalır mı?", "Evet. Astarlı eteklerde astar da yeni boya göre kısaltılır, böylece etek ucunda astar dışarı taşmaz."],
-  ["Konyaaltı'nda otelde kalıyorum, servis gelir mi?", "Evet. Konyaaltı'ndaki otellere ücretsiz alım-teslim yapıyoruz; gerekirse deneme için otelde buluşuruz. Otellerle ortaklığımız yoktur, Antalya'daki tüm otellere hizmet veriyoruz."],
+  ["Konyaaltı'nda otelde kalıyorum, servis gelir mi?", "Evet. Konyaaltı'ndaki otellere alım-teslim yapıyoruz; gerekirse deneme için otelde buluşuruz. Otellerle ortaklığımız yoktur, Antalya'daki tüm otellere hizmet veriyoruz."],
   ["Paça kısaltma için hangi para birimleriyle ödeme yapılır?", "Tüm para birimleriyle ödeme kabul ediyoruz; nakit veya kartla ödeyebilirsiniz. Fiyatlara KDV dahil değildir."],
 ];
 
@@ -51,7 +51,7 @@ const GUIDE: [string, string][] = [
   ["Klasik pantolon ve takım elbise paçası", "Kumaş pantolonlarda paça genellikle düz kesilip görünmez dikişle kapatılır; yani dışarıdan dikiş izi görünmez. Takım elbise pantolonunda boy, giyilecek ayakkabıyla ve pantolonun ayağın üstünde hafifçe durması esasına göre işaretlenir. Manşetli pantolonlarda ise manşet yeniden yapılır ve boy ona göre ayarlanır."],
   ["Keten, gabardin ve ince kumaşlar", "İnce ve dökümlü kumaşlarda paçayı sıkı çekmemek gerekir; aksi halde paçada büzülme olur. Keten gibi kolay kırışan kumaşlarda ise dikiş sonrası ütü ile paçanın oturması sağlanır. Kumaş cinsini fotoğrafta ya da mesajda belirtirseniz işi ona göre planlarız."],
   ["Etek kısaltma", "Düz, pilili ya da kloş eteklerin kısaltılma yöntemi birbirinden farklıdır. Düz eteklerde etek ucu düz kıvrılırken kloş eteklerde etek ucu daireseldir ve kenar daha dar bir kıvırmayla bitirilir. Astarlı eteklerde astar da yeni boya göre kısaltılır. Etek boyunu eteği giyerek ve düz dururken belirleriz."],
-  ["Konyaaltı'nda eve ve otele servis", "Konyaaltı, Hurma, Liman, Sarısu, Uncalı ve Gürsu gibi mahallelerde eve ve otele alım-teslim ücretsizdir. Pantolonunuzu adresinizden alır, işi tamamladıktan sonra yine adrese teslim ederiz. Gerekirse deneme için otelde buluşuruz. Otellerle ortaklığımız yoktur; Antalya'daki tüm otellere hizmet veriyoruz."],
+  ["Konyaaltı'nda eve ve otele servis", "Konyaaltı, Hurma, Liman, Sarısu, Uncalı ve Gürsu gibi mahallelerde eve ve otele alım-teslim yapılır. Pantolonunuzu adresinizden alır, işi tamamladıktan sonra yine adrese teslim ederiz. Gerekirse deneme için otelde buluşuruz. Otellerle ortaklığımız yoktur; Antalya'daki tüm otellere hizmet veriyoruz."],
   ["Fiyat ve ödeme", "Pantolon, kot ve etek paça kısaltma ₺200'den başlar. Net fiyat işin fotoğrafına göre WhatsApp'tan söylenir. Fiyatlara KDV dahil değildir. Tüm para birimleriyle, nakit veya kartla ödeme yapabilirsiniz. Kotlar için ayrı sayfalarımızda daha ayrıntılı bilgi bulabilirsiniz."],
 ];
 
@@ -151,7 +151,7 @@ export default function PacaKisaltmaPage() {
             <p className="hero-desc">
               Pantolon, kot, etek paça kısaltma — görünmez dikiş tekniğiyle,
               orijinal görünümü koruyarak. Eve ve otele
-              ücretsiz servis.
+              servis.
             </p>
             <p className="hero-desc"><strong>Kısa cevap:</strong> Pantolon, kot ve etek paça kısaltma ₺200'den başlar; işler aynı gün, acil işler 1–2 saatte teslim edilir.</p>
             <div className="hero-btns">

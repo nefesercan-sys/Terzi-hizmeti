@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Mont Tamiri ve Tadilatı ₺200'den · Fermuar · Antalya" },
   description:
-    "Mont boy ve kol kısaltma, daraltma ₺200'den; fermuar değişimi ₺300'den. Normal iş aynı gün, acil 1–2 saat. Eve ve otele ücretsiz. ☎ " + PHONE,
+    "Mont boy ve kol kısaltma, daraltma ₺200'den; fermuar değişimi ₺300'den. Normal iş aynı gün, acil 1–2 saat. Eve ve otele servis. ☎ " + PHONE,
   keywords: fitKeywords([
     'mont tamiri', 'mont tadilatı', 'mont kısaltma', 'mont daraltma', 'mont kol kısaltma', 'mont tamiri Antalya', 'mont tadilatı fiyat', 'mont fermuarı değişimi', 'kaban tadilatı',
   ]),
@@ -82,7 +82,7 @@ const jsonLd = {
       description: "Mont Tadilatı Nasıl İlerler?",
       step: [
         { '@type': 'HowToStep', name: 'Fotoğraf Gönderin', text: 'WhatsApp\'tan montun ve yapılacak yerin fotoğrafını gönderin, ön fiyat alın.' },
-        { '@type': 'HowToStep', name: 'Montu Teslim Edin', text: 'Atölyeye getirin veya eve/otele ücretsiz alım-teslim isteyin.' },
+        { '@type': 'HowToStep', name: 'Montu Teslim Edin', text: 'Atölyeye getirin veya eve/otele alım-teslim isteyin.' },
         { '@type': 'HowToStep', name: 'Ölçü ve Dikiş', text: 'Ölçü montun üzerinizdeyken işaretlenir; işlem yapılır. Normal işte aynı gün, acilde 1–2 saat.' },
         { '@type': 'HowToStep', name: 'Teslim Alın', text: 'Kontrol edilip teslim edilir.' },
       ],
@@ -97,7 +97,7 @@ const jsonLd = {
         { '@type': 'Question', name: 'Mont fermuarı değişiyor mu?', acceptedAnswer: { '@type': 'Answer', text: 'Evet. Mont, kaban ve ceket fermuarı değişimi ₺300\'den başlar. Ayrıntı için mont fermuarı değişimi sayfamıza bakabilirsiniz.' } },
         { '@type': 'Question', name: 'Mont tamiri ve tadilatı ne kadar sürer?', acceptedAnswer: { '@type': 'Answer', text: 'Normal işler aynı gün teslim edilir; acil işler 1–2 saatte tamamlanır. Kapsamlı işlerde süreyi fotoğrafı görünce söyleriz.' } },
         { '@type': 'Question', name: 'Yırtık veya sökülen mont dikilir mi?', acceptedAnswer: { '@type': 'Answer', text: 'Evet. Söküklerin dikilmesi ve yırtık onarımı yapılır; fiyat işe göre değişir. Fotoğrafı gönderirseniz net fiyatı söyleriz.' } },
-        { '@type': 'Question', name: 'Montu eve veya otele gelip alıyor musunuz?', acceptedAnswer: { '@type': 'Answer', text: 'Evet. Konyaaltı, Muratpaşa ve çevresinde eve ve otele alım-teslim ücretsizdir.' } },
+        { '@type': 'Question', name: 'Montu eve veya otele gelip alıyor musunuz?', acceptedAnswer: { '@type': 'Answer', text: 'Evet. Konyaaltı, Muratpaşa ve çevresinde eve ve otele alım-teslim yapılır.' } },
       ],
     },
   ],
@@ -130,7 +130,7 @@ export default function Page() {
             <h1 id="hero-h">
               Mont Tamiri ve Tadilatı <span className="accent">Antalya</span><br />₺200'den, Aynı Gün Teslim</h1>
             <p className="hero-desc">
-              Mont boy ve kol kısaltma, daraltma, tamir ve fermuar değişimi. Eve ve otele ücretsiz servis; her gün 08:00–23:00.
+              Mont boy ve kol kısaltma, daraltma, tamir ve fermuar değişimi. Eve ve otele servis; her gün 08:00–23:00.
             </p>
             <p className="hero-desc"><strong>Kısa cevap:</strong> Mont kısaltma ve daraltma ₺200'den, mont fermuarı değişimi ₺300'den başlar; normal işler aynı gün, acil işler 1–2 saatte teslim edilir.</p>
             <div className="hero-btns">
@@ -177,7 +177,7 @@ export default function Page() {
             </div>
             <div className="howto-list">
               <div className="howto-item"><div className="howto-t">Fotoğraf Gönderin</div><div className="howto-d">WhatsApp'tan montun ve yapılacak yerin fotoğrafını gönderin, ön fiyat alın.</div></div>
-              <div className="howto-item"><div className="howto-t">Montu Teslim Edin</div><div className="howto-d">Atölyeye getirin veya eve/otele ücretsiz alım-teslim isteyin.</div></div>
+              <div className="howto-item"><div className="howto-t">Montu Teslim Edin</div><div className="howto-d">Atölyeye getirin veya eve/otele alım-teslim isteyin.</div></div>
               <div className="howto-item"><div className="howto-t">Ölçü ve Dikiş</div><div className="howto-d">Ölçü montun üzerinizdeyken işaretlenir; işlem yapılır. Normal işte aynı gün, acilde 1–2 saat.</div></div>
               <div className="howto-item"><div className="howto-t">Teslim Alın</div><div className="howto-d">Kontrol edilip teslim edilir.</div></div>
             </div>
@@ -199,7 +199,7 @@ export default function Page() {
               ['Mont fermuarı değişiyor mu?', 'Evet. Mont, kaban ve ceket fermuarı değişimi ₺300\'den başlar. Ayrıntı için mont fermuarı değişimi sayfamıza bakabilirsiniz.'],
               ['Mont tamiri ve tadilatı ne kadar sürer?', 'Normal işler aynı gün teslim edilir; acil işler 1–2 saatte tamamlanır. Kapsamlı işlerde süreyi fotoğrafı görünce söyleriz.'],
               ['Yırtık veya sökülen mont dikilir mi?', 'Evet. Söküklerin dikilmesi ve yırtık onarımı yapılır; fiyat işe göre değişir. Fotoğrafı gönderirseniz net fiyatı söyleriz.'],
-              ['Montu eve veya otele gelip alıyor musunuz?', 'Evet. Konyaaltı, Muratpaşa ve çevresinde eve ve otele alım-teslim ücretsizdir.'],
+              ['Montu eve veya otele gelip alıyor musunuz?', 'Evet. Konyaaltı, Muratpaşa ve çevresinde eve ve otele alım-teslim yapılır.'],
             ].map(([q, a]) => (
               <div key={q} className="faq-item">
                 <div className="faq-q">{q}</div>

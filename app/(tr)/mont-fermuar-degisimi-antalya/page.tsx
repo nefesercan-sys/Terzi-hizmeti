@@ -86,7 +86,7 @@ const jsonLd = {
       estimatedCost: { '@type': 'MonetaryAmount', currency: 'TRY', value: '300' },
       step: [
         { '@type': 'HowToStep', name: 'Fotoğraf Gönderin', text: 'WhatsApp\'tan montun ve bozuk fermuarın fotoğrafını gönderin, ön fiyat alın.' },
-        { '@type': 'HowToStep', name: 'Montu Teslim Edin', text: 'Atölyeye getirin veya eve/otele ücretsiz alım-teslim isteyin.' },
+        { '@type': 'HowToStep', name: 'Montu Teslim Edin', text: 'Atölyeye getirin veya eve/otele alım-teslim isteyin.' },
         { '@type': 'HowToStep', name: 'Fermuar Değiştirilir', text: 'Kalın kumaşa uygun fermuar seçilir ve dikilir — normal işte aynı gün, acilde 1–2 saatte.' },
         { '@type': 'HowToStep', name: 'Teslim Alın', text: 'Mont test edilip kontrol edildikten sonra teslim edilir.' },
       ],
@@ -134,7 +134,7 @@ export default function MontFermuarPage() {
               Mont Fermuarı Değişimi <span className="accent">Antalya</span><br />₺300'den, Aynı Gün Teslim</h1>
             <p className="hero-desc">
               Mont, kaban, ceket ve yelek fermuarı değişimi ve tamiri. Kalın kumaş ve su geçirmez montlar dahil.
-              Eve ve otele ücretsiz servis; normal işler aynı gün, acil işler 1–2 saatte tamamlanır.
+              Eve ve otele servis; normal işler aynı gün, acil işler 1–2 saatte tamamlanır.
             </p>
             <p className="hero-desc"><strong>Kısa cevap:</strong> Mont fermuarı değişimi ₺300'den başlar; normal işler aynı gün, acil işler 1–2 saatte teslim edilir.</p>
             <div className="hero-btns">
@@ -193,7 +193,7 @@ export default function MontFermuarPage() {
             </div>
             <div className="howto-list">
               <div className="howto-item"><div className="howto-t">Fotoğraf Gönderin</div><div className="howto-d">WhatsApp'tan montun ve bozuk fermuarın fotoğrafını gönderin, ön fiyat alın.</div></div>
-              <div className="howto-item"><div className="howto-t">Montu Teslim Edin</div><div className="howto-d">Atölyeye getirin veya eve/otele ücretsiz alım-teslim isteyin.</div></div>
+              <div className="howto-item"><div className="howto-t">Montu Teslim Edin</div><div className="howto-d">Atölyeye getirin veya eve/otele alım-teslim isteyin.</div></div>
               <div className="howto-item"><div className="howto-t">Fermuar Değiştirilir</div><div className="howto-d">Kalın kumaşa uygun fermuar seçilir ve dikilir. Normal işte aynı gün, acilde 1–2 saat.</div></div>
               <div className="howto-item"><div className="howto-t">Teslim Alın</div><div className="howto-d">Mont test edilip kontrol edildikten sonra teslim edilir.</div></div>
             </div>

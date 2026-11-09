@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Sarısu Terzi · Kot Paçası ₺200'den · Her Gün Açık" },
   description:
-    "Sarısu terzi: kot paçası, şort, pantolon kısaltma ₺200, fermuar ₺300, bel daraltma. Sarısu'ya ücretsiz servis. Her gün 08:00–23:00. ☎ " + PHONE,
+    "Sarısu terzi: kot paçası, şort, pantolon kısaltma ₺200, fermuar ₺300, bel daraltma. Sarısu'ya servis. Her gün 08:00–23:00. ☎ " + PHONE,
   keywords: fitKeywords(Array.from(new Set(['Sarısu tamir tadilat', 'Sarısu söküğü dikme', 'Sarısu yırtık tamiri', 'Sarısu elbise tamiri', 'Sarısu terzi', 'Sarısu mahallesi terzi', 'Sarısu Konyaaltı terzi', 'Sarısu paça kısaltma', 'Sarısu fermuar tamiri', 'Sarısu bel daraltma', 'Sarısu elbise dikimi', 'Sarısu gelinlik tadilatı', 'Sarısu terzi fiyatları 2026', 'Konyaaltı Sarısu dikiş atölyesi', 'Sarısu kot paçası kısaltma', 'Sarısu kot kısaltma', 'Sarısu kot daraltma', 'Sarısu şort kısaltma', 'Sarısu şort daraltma', 'Sarısu pantolon kısaltma', 'Sarısu pantolon daraltma', 'Sarısu etek kısaltma', 'Sarısu etek daraltma', 'Sarısu fermuar değişimi', 'Sarısu beden ayarlama', 'Sarısu ölçüye göre dikim', 'Sarısu özel dikim', 'Sarısu bay bayan terzi', 'Sarısu çocuk kıyafet tadilatı', 'Sarısu abiye tamiri', 'Sarısu ceket tadilatı', 'Sarısu mont kısaltma', 'Sarısu gömlek daraltma', 'Sarısu yakınımda terzi', 'Konyaaltı Sarısu terzi tamir tadilat', 'Sarısu bay bayan elbise tamiri', 'Sarısu terzi', 'Sarısu bay bayan terzi', 'Sarısu dikim', 'Sarısu tamir tadilat', 'Sarısu elbise tamiri', 'Sarısu elbise tadilatı', 'Sarısu fermuar değişimi', 'Sarısu fermuar tamiri', 'Sarısu boy kısaltma', 'Sarısu bel daraltma', 'Sarısu etek boyu kısaltma', 'Sarısu pantolon boyu kısaltma', 'Sarısu paça kısaltma', 'Sarısu kot paçası kısaltma', 'Sarısu beden ölçüsüne göre elbise tadilatı', 'Sarısu mont tamiri', 'Sarısu ceket daraltma', 'Sarısu gömlek daraltma', 'Sarısu şort kısaltma', 'Sarısu pantolon daraltma', 'Sarısu etek daraltma', 'Sarısu elbise daraltma', 'Sarısu elbise dikimi']))),
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   alternates: { canonical: PAGE_URL, languages: { tr: PAGE_URL, en: `${SITE}${DISTRICT_BASE.en}/sarisu`, ru: `${SITE}${DISTRICT_BASE.ru}/sarisu`, de: `${SITE}${DISTRICT_BASE.de}/sarisu`, 'x-default': PAGE_URL } },
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 
 // Görünen SSS ve FAQPage şeması tek diziden üretilir (tutarlılık).
 const FAQ: [string, string][] = [
-    ["Sarısu'ya ücretsiz servis var mı?", 'Evet, Sarısu mahallesine ücretsiz adrese servis veriyoruz. Kıyafetinizi adresinizden alıp normal işte aynı gün, acil işte 1–2 saatte teslim ediyoruz.'],
+    ["Sarısu'ya servis var mı?", 'Evet, Sarısu mahallesine adrese servis veriyoruz. Kıyafetinizi adresinizden alıp normal işte aynı gün, acil işte 1–2 saatte teslim ediyoruz.'],
     ['Sarısu terzi fiyatları ne kadar 2026?', 'Paça kısaltma ₺200\'den, fermuar değişimi ₺300\'den, bel daraltma ₺200\'den, elbise dikimi fotoğrafa ve istediğiniz modele göre, gelinlik/abiye tadilatı fotoğrafa veya işin detayına göre.'],
     ['Sarısu\'da acil tadilat ne kadar sürer?', 'Paça kısaltma, fermuar değişimi ve bel daraltma gibi standart işlemler aynı gün, acil olanlar 1–2 saatte teslim edilir.'],
     ['Gelinlik ve abiye tadilatı yapıyor musunuz?', 'Evet, gelinlik ve abiye tadilatında uzmanız. Fiyat fotoğrafa veya işin detayına göre belirlenir.'],
@@ -122,7 +122,7 @@ export default function SarisuPage() {
             <div className="hero-overlay" />
           </div>
           <div className="hero-content">
-            <span className="hero-tag">📍 Sarısu Mahallesi · Konyaaltı · Ücretsiz Servis</span>
+            <span className="hero-tag">📍 Sarısu Mahallesi · Konyaaltı</span>
             <h1 id="hero-h">
               Sarısu <span className="accent">Terzi</span><br />
               Paça Kısaltma, Bel Daraltma, Fermuar Değişimi
@@ -145,9 +145,9 @@ export default function SarisuPage() {
               <span className="eyebrow">Sarısu Mahallesi</span>
               <h2 className="sec-h ff" id="local-h">Sarısu'da Terzi İhtiyacınız İçin Buradayız</h2>
               <p className="sec-sub">
-                Konyaaltı sahil şeridinin batı ucundaki Sarısu, hem yerleşik aileleriyle hem de plaj/otel bölgesindeki tatilci yoğunluğuyla dikkat çeken bir mahalle. Sarısu sınırları içindeki konut ve site bölgelerine ücretsiz adrese servis veriyoruz.
+                Konyaaltı sahil şeridinin batı ucundaki Sarısu, hem yerleşik aileleriyle hem de plaj/otel bölgesindeki tatilci yoğunluğuyla dikkat çeken bir mahalle. Sarısu sınırları içindeki konut ve site bölgelerine adrese servis veriyoruz.
               </p>
-              <p className="sec-sub" style={{ marginTop: '.8rem' }}>Sarısu mahallesine ücretsiz adrese servis veriyoruz.</p>
+              <p className="sec-sub" style={{ marginTop: '.8rem' }}>Sarısu mahallesine adrese servis veriyoruz.</p>
             </div>
           </div>
         </section>

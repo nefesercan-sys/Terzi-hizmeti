@@ -39,7 +39,7 @@ const FAQ: [string, string][] = [
   ['Kot ceket veya mont daraltılır mı?', 'Evet. Beden ve kol daraltma yapıyoruz; kumaş payına göre yapılabilecek işlem fotoğraftan değerlendirilir.'],
   ['Orijinal dikiş görünümü korunur mu?', 'Kot ceket ve mont tadilatında orijinal dikiş görünümünü koruyacak şekilde çalışıyoruz. Fotoğraf gönderirseniz yapılabilecek işlemi söyleriz.'],
   ['Kot mont tadilatı ne kadar sürer?', 'Kot ceket işleri çoğunlukla aynı gün biter; acil işlerde 1–2 saat.'],
-  ['Kot ürününü eve veya otele gelip alıyor musunuz?', 'Evet, ceket veya montu adresinizden ücretsiz alırız; Konyaaltı, Muratpaşa ve çevresinde geçerlidir.'],
+  ['Kot ürününü eve veya otele gelip alıyor musunuz?', 'Evet, ceket veya montu adresinizden alırız; Konyaaltı, Muratpaşa ve çevresinde geçerlidir.'],
   ["Kot ceketin kolu manşetli ise kısaltma yapılır mı?", "Evet. Manşetli kollarda kısaltma manşetin altından ya da omuz tarafından yapılabilir; hangisinin uygun olduğuna fotoğrafa bakarak karar veririz."],
   ["Omuzu bol olan kot ceket dar yapılabilir mi?", "Omuz çizgisi büyük ölçüde değiştirilemez. Yan dikişlerden yapılan beden daraltma mümkündür ama omuza oturmayan bir ceket için tadilatın sınırlı kalacağını önceden söyleriz."],
   ["Kot montun fermuarı da değişiyor mu?", "Evet. Kot mont fermuar değişimi ₺300'den başlar; kısaltma veya daraltmayla aynı işlemde yapılabilir."],
@@ -52,7 +52,7 @@ const GUIDE: [string, string][] = [
   ["Boy kısaltma ve cep hizası", "Ceket boyunu kısaltırken etek ucundaki kalın dikiş ve bel hizasındaki cepler birlikte düşünülür. Boy çok kısalırsa cep ağızları ceketin ucuna fazla yaklaşır; bu yüzden en uygun boyu fotoğrafa bakarak söyleriz. Kot montta bu kural daha da önemlidir, çünkü mont ceketten daha uzundur ve kaban gibi kullanılır."],
   ["Beden daraltmada sınırlar", "Yan dikişlerden yapılan beden daraltma çoğu kot ceket ve montta mümkündür. Omuz çizgisi ise büyük ölçüde değiştirilemez; omuza oturmayan bir ceketi tadilatla kurtarmak zor olur. Bu nedenle satın alırken omza uyan bedeni seçip bolluğu tadilatla almak en sağlıklı yoldur."],
   ["Düğme ve fermuar", "Kot ceketlerde düşen ya da bozulan düğmeler ve kot montlarda bozulan fermuarlar tadilatla birlikte yenilenebilir. Mont fermuar değişimi ₺300'den başlar. Düğme ve çıtçıt işi için fotoğraf göndermeniz ve yenisinin neye benzemesi gerektiğini yazmanız yeterlidir."],
-  ["Fiyat ve teslim", "Kot ceket ve mont kol, boy kısaltma ve daraltma ₺200'den başlar; net fiyat fotoğrafa göre söylenir. Fiyatlara KDV dahil değildir. Normal işler aynı gün, acil işler 1–2 saatte teslim edilir; eve ve otele alım-teslim ücretsizdir."],
+  ["Fiyat ve teslim", "Kot ceket ve mont kol, boy kısaltma ve daraltma ₺200'den başlar; net fiyat fotoğrafa göre söylenir. Fiyatlara KDV dahil değildir. Normal işler aynı gün, acil işler 1–2 saatte teslim edilir; eve ve otele alım-teslim yapılır."],
 ];
 
 const jsonLd = {
@@ -105,7 +105,7 @@ const jsonLd = {
       description: "Kot Ceket Tadilatı Nasıl Yapılır?",
       step: [
         { '@type': 'HowToStep', name: 'Fotoğraf Gönderin', text: 'WhatsApp\'tan kot ceketin veya montun fotoğrafını gönderin, ön fiyat alın.' },
-        { '@type': 'HowToStep', name: 'Teslim Edin', text: 'Ceketi getirin ya da evinizden veya otelinizden ücretsiz alalım.' },
+        { '@type': 'HowToStep', name: 'Teslim Edin', text: 'Ceketi getirin ya da evinizden veya otelinizden alalım.' },
         { '@type': 'HowToStep', name: 'Ölçü ve Dikiş', text: 'Kol, boy ve beden ceket üzerinizdeyken işaretlenir; ilgili dikişler yeniden kurulur. Aynı gün; acilde 1–2 saat.' },
         { '@type': 'HowToStep', name: 'Teslim Alın', text: 'Kol ve boy kontrol edilerek teslim edilir.' },
       ],
@@ -145,7 +145,7 @@ export default function Page() {
             <h1 id="hero-h">
               Kot Ceket ve Mont Tadilatı <span className="accent">Antalya</span><br />₺200'den, Aynı Gün Teslim</h1>
             <p className="hero-desc">
-              Kot ceket ve kot mont kol kısaltma, boy kısaltma ve daraltma; orijinal dikiş görünümünü koruyacak şekilde. Eve ve otele ücretsiz servis.
+              Kot ceket ve kot mont kol kısaltma, boy kısaltma ve daraltma; orijinal dikiş görünümünü koruyacak şekilde. Eve ve otele servis.
             </p>
             <p className="hero-desc"><strong>Kısa cevap:</strong> Kot ceket ve kot mont kısaltma ve daraltma ₺200'den başlar; normal işler aynı gün, acil işler 1–2 saatte teslim edilir.</p>
             <div className="hero-btns">
@@ -190,7 +190,7 @@ export default function Page() {
             </div>
             <div className="howto-list">
               <div className="howto-item"><div className="howto-t">Fotoğraf Gönderin</div><div className="howto-d">WhatsApp'tan kot ceketin veya montun fotoğrafını gönderin, ön fiyat alın.</div></div>
-              <div className="howto-item"><div className="howto-t">Teslim Edin</div><div className="howto-d">Ceketi getirin ya da evinizden veya otelinizden ücretsiz alalım.</div></div>
+              <div className="howto-item"><div className="howto-t">Teslim Edin</div><div className="howto-d">Ceketi getirin ya da evinizden veya otelinizden alalım.</div></div>
               <div className="howto-item"><div className="howto-t">Ölçü ve Dikiş</div><div className="howto-d">Kol, boy ve beden ceket üzerinizdeyken işaretlenir; ilgili dikişler yeniden kurulur. Aynı gün; acilde 1–2 saat.</div></div>
               <div className="howto-item"><div className="howto-t">Teslim Alın</div><div className="howto-d">Kol ve boy kontrol edilerek teslim edilir.</div></div>
             </div>

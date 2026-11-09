@@ -148,7 +148,7 @@ export const BLOG_YAZILARI: BlogYazi[] = [
       {
         h: 'Otele gelen terzi nasıl çalışır?',
         p: [
-          'Otelinizin bulunduğu bölgeye göre terzi otelinize gelir, ölçü alır, gerekirse kıyafeti atölyeye götürür ve tadilat bitince otelinize teslim eder. Atölyemiz Konyaaltı\'nda; Lara, Belek, Kemer ve Side bölgelerine hizmet veriyoruz. Hizmet verilen bölgelerde otel alım ve teslimatı ücretsizdir.',
+          'Otelinizin bulunduğu bölgeye göre terzi otelinize gelir, ölçü alır, gerekirse kıyafeti atölyeye götürür ve tadilat bitince otelinize teslim eder. Atölyemiz Konyaaltı\'nda; Lara, Belek, Kemer ve Side bölgelerine hizmet veriyoruz. Hizmet verilen bölgelerde otel alım ve teslimatı yapılır.',
         ],
       },
       {
@@ -167,7 +167,7 @@ export const BLOG_YAZILARI: BlogYazi[] = [
       },
     ],
     sss: [
-      { q: 'Otele terzi geliyor mu?', a: 'Evet. Lara, Belek, Kemer, Side ve Konyaaltı bölgelerindeki otellere terzi hizmeti veriyoruz. Hizmet verilen bölgelerde alım ve teslim ücretsizdir.' },
+      { q: 'Otele terzi geliyor mu?', a: 'Evet. Lara, Belek, Kemer, Side ve Konyaaltı bölgelerindeki otellere terzi hizmeti veriyoruz. Hizmet verilen bölgelerde alım ve teslim yapılır.' },
       { q: 'Yabancı dil biliyor musunuz?', a: 'Türkçe, İngilizce, Rusça ve Almanca ile iletişim kuruyoruz.' },
       { q: 'Tatilde acil bir tadilat için ne yapmalıyım?', a: 'Kıyafetin fotoğrafını ve otel bilginizi WhatsApp\'tan gönderin. Acil işler 1–2 saatte teslim edilir.' },
     ],

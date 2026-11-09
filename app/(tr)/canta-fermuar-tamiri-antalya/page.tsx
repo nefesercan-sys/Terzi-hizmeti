@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Çanta Fermuar Tamiri ₺300'den · Aynı Gün · Antalya" },
   description:
-    "Çanta, sırt çantası ve valiz fermuarı değişimi ₺300'den. Normal iş aynı gün, acil 1–2 saat. Eve ve otele ücretsiz servis. ☎ " + PHONE,
+    "Çanta, sırt çantası ve valiz fermuarı değişimi ₺300'den. Normal iş aynı gün, acil 1–2 saat. Eve ve otele servis. ☎ " + PHONE,
   keywords: fitKeywords([
     'çanta fermuar tamiri fiyat', 'çanta fermuarı değiştirme', 'çanta fermuarı tamiri Antalya', 'sırt çantası fermuar tamiri', 'valiz fermuar tamiri', 'çanta fermuarı ne kadar', 'çanta fermuarı kaç TL', 'Konyaaltı çanta fermuarı',
   ]),
@@ -82,7 +82,7 @@ const jsonLd = {
       description: "Çanta Fermuarı Nasıl Değiştirilir?",
       step: [
         { '@type': 'HowToStep', name: 'Fotoğraf Gönderin', text: 'WhatsApp\'tan çantanın ve bozuk fermuarın fotoğrafını gönderin, ön fiyat alın.' },
-        { '@type': 'HowToStep', name: 'Çantayı Teslim Edin', text: 'Atölyeye getirin veya eve/otele ücretsiz alım-teslim isteyin.' },
+        { '@type': 'HowToStep', name: 'Çantayı Teslim Edin', text: 'Atölyeye getirin veya eve/otele alım-teslim isteyin.' },
         { '@type': 'HowToStep', name: 'Fermuar Değiştirilir', text: 'Çantanın kumaşına ve deri/suni deri yapısına uygun fermuar seçilir ve dikilir. Normal işte aynı gün, acilde 1–2 saat.' },
         { '@type': 'HowToStep', name: 'Teslim Alın', text: 'Fermuar test edilip kontrol edildikten sonra teslim edilir.' },
       ],
@@ -96,7 +96,7 @@ const jsonLd = {
         { '@type': 'Question', name: 'Sırt çantası ve valiz fermuarı da değişiyor mu?', acceptedAnswer: { '@type': 'Answer', text: 'Evet. Sırt çantası, el çantası ve valiz fermuarı için fotoğraf gönderin; yapılabilecek işlemi ve fiyatı söyleyelim.' } },
         { '@type': 'Question', name: 'Fermuar sıkıştı, tamamen bozulmadı; tamir edilebilir mi?', acceptedAnswer: { '@type': 'Answer', text: 'Çoğu zaman sıkışan fermuar değişim gerektirmeden onarılabilir. Fotoğraf gönderirseniz değerlendirip bilgi veririz.' } },
         { '@type': 'Question', name: 'Çanta fermuarını değiştirmek yeni çanta almaya göre mantıklı mı?', acceptedAnswer: { '@type': 'Answer', text: 'Çantanın gövdesi sağlamsa fermuar değişimi çoğu zaman daha ekonomiktir. Fotoğrafını gönderin, birlikte değerlendirelim.' } },
-        { '@type': 'Question', name: 'Çantayı eve veya otele gelip alıyor musunuz?', acceptedAnswer: { '@type': 'Answer', text: 'Evet. Konyaaltı, Muratpaşa ve çevresinde eve ve otele alım-teslim ücretsizdir.' } },
+        { '@type': 'Question', name: 'Çantayı eve veya otele gelip alıyor musunuz?', acceptedAnswer: { '@type': 'Answer', text: 'Evet. Konyaaltı, Muratpaşa ve çevresinde eve ve otele alım-teslim yapılır.' } },
       ],
     },
   ],
@@ -129,7 +129,7 @@ export default function Page() {
             <h1 id="hero-h">
               Çanta Fermuar Tamiri <span className="accent">Antalya</span><br />₺300'den, Aynı Gün Teslim</h1>
             <p className="hero-desc">
-              Çanta, sırt çantası ve valiz fermuarı değişimi ve tamiri. Eve ve otele ücretsiz servis; normal işler aynı gün, acil işler 1–2 saatte tamamlanır.
+              Çanta, sırt çantası ve valiz fermuarı değişimi ve tamiri. Eve ve otele servis; normal işler aynı gün, acil işler 1–2 saatte tamamlanır.
             </p>
             <p className="hero-desc"><strong>Kısa cevap:</strong> Çanta fermuarı değişimi ₺300'den başlar; normal işler aynı gün, acil işler 1–2 saatte teslim edilir.</p>
             <div className="hero-btns">
@@ -175,7 +175,7 @@ export default function Page() {
             </div>
             <div className="howto-list">
               <div className="howto-item"><div className="howto-t">Fotoğraf Gönderin</div><div className="howto-d">WhatsApp'tan çantanın ve bozuk fermuarın fotoğrafını gönderin, ön fiyat alın.</div></div>
-              <div className="howto-item"><div className="howto-t">Çantayı Teslim Edin</div><div className="howto-d">Atölyeye getirin veya eve/otele ücretsiz alım-teslim isteyin.</div></div>
+              <div className="howto-item"><div className="howto-t">Çantayı Teslim Edin</div><div className="howto-d">Atölyeye getirin veya eve/otele alım-teslim isteyin.</div></div>
               <div className="howto-item"><div className="howto-t">Fermuar Değiştirilir</div><div className="howto-d">Çantanın kumaşına ve deri/suni deri yapısına uygun fermuar seçilir ve dikilir. Normal işte aynı gün, acilde 1–2 saat.</div></div>
               <div className="howto-item"><div className="howto-t">Teslim Alın</div><div className="howto-d">Fermuar test edilip kontrol edildikten sonra teslim edilir.</div></div>
             </div>
@@ -196,7 +196,7 @@ export default function Page() {
               ['Sırt çantası ve valiz fermuarı da değişiyor mu?', 'Evet. Sırt çantası, el çantası ve valiz fermuarı için fotoğraf gönderin; yapılabilecek işlemi ve fiyatı söyleyelim.'],
               ['Fermuar sıkıştı, tamamen bozulmadı; tamir edilebilir mi?', 'Çoğu zaman sıkışan fermuar değişim gerektirmeden onarılabilir. Fotoğraf gönderirseniz değerlendirip bilgi veririz.'],
               ['Çanta fermuarını değiştirmek yeni çanta almaya göre mantıklı mı?', 'Çantanın gövdesi sağlamsa fermuar değişimi çoğu zaman daha ekonomiktir. Fotoğrafını gönderin, birlikte değerlendirelim.'],
-              ['Çantayı eve veya otele gelip alıyor musunuz?', 'Evet. Konyaaltı, Muratpaşa ve çevresinde eve ve otele alım-teslim ücretsizdir.'],
+              ['Çantayı eve veya otele gelip alıyor musunuz?', 'Evet. Konyaaltı, Muratpaşa ve çevresinde eve ve otele alım-teslim yapılır.'],
             ].map(([q, a]) => (
               <div key={q} className="faq-item">
                 <div className="faq-q">{q}</div>

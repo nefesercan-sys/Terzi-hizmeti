@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Kot Daraltma ₺200'den · Bacak, Bel, Kalça · Antalya" },
   description:
-    "Kot pantolon bacak ve bel daraltma ₺200'den; ölçü üzerinizde alınır. Normal iş aynı gün, acil 1–2 saat. Eve ve otele ücretsiz. ☎ " + PHONE,
+    "Kot pantolon bacak ve bel daraltma ₺200'den; ölçü üzerinizde alınır. Normal iş aynı gün, acil 1–2 saat. Eve ve otele servis. ☎ " + PHONE,
   keywords: fitKeywords([
     'kot pantolon daraltma', 'kot daraltma fiyat', 'kot pantolon bacak daraltma', 'kot bel daraltma', 'kot pantolon daraltma Antalya', 'jean daraltma terzi', 'kot pantolon dar paça yapma',
   ]),
@@ -39,7 +39,7 @@ const FAQ: [string, string][] = [
   ['Kot pantolon daraltma için ne göndermeliyim?', 'Pantolonun önden ve arkadan fotoğrafını, hangi yeri daraltmak istediğinizi ve varsa istediğiniz ölçüyü WhatsApp\'tan gönderin.'],
   ['Kot pantolon daraltma ne kadar sürer?', 'Çoğu daraltma aynı gün biter; acil işlerde 1–2 saat içinde teslim ederiz.'],
   ['Daraltırken paçanın orijinal görünümü korunur mu?', 'Evet, paçanın orijinal görünümünü koruyacak şekilde çalışıyoruz. Fotoğraf gönderirseniz yapılabilecek işlemi söyleriz.'],
-  ['Kot pantolonu eve veya otele gelip alıyor musunuz?', 'Evet, pantolonu eve veya otele gelip ücretsiz alırız; Konyaaltı, Muratpaşa ve çevresinde geçerlidir.'],
+  ['Kot pantolonu eve veya otele gelip alıyor musunuz?', 'Evet, pantolonu eve veya otele gelip alırız; Konyaaltı, Muratpaşa ve çevresinde geçerlidir.'],
   ["Kot pantolonun kalçası bolsa daraltılır mı?", "Evet. Kalça ve oturma yeri bolluğu da daraltılır; arkadan çekilmiş bir fotoğraf göndermeniz yeterlidir. Net fiyat işin kapsamına göre söylenir."],
   ["Geniş paçalı kotu dar paçalı yapabilir misiniz?", "Evet, bacak daraltmayla geniş ya da düz kesim bir kot daha dar bir kalıba getirilebilir. Referans olarak sevdiğiniz bir pantolonun ölçüsünü yazarsanız daha doğru sonuç alırız."],
   ["Streç kotu fazla daraltırsam sıkar mı?", "Esnek kumaşta çok fazla daraltma sıkabilir. Bu yüzden ölçüyü üzerinizde kontrol etmeyi ve gerekirse payı sınırlı tutmayı öneririz."],
@@ -52,7 +52,7 @@ const GUIDE: [string, string][] = [
   ["Dar paça ve slim kesim isteyenler için", "Geniş veya düz kesim bir kotu daha dar bir kalıba çevirmek mümkündür; bunun için bacak dikişleri yeniden ayarlanır. Dar kesim istiyorsanız, mevcut kotun baldır ve diz genişliğini biliyorsanız yazın ya da en sevdiğiniz bir pantolonu referans olarak gösterin. Böylece ölçü tahmine kalmadan belirlenir."],
   ["Streç oranı daraltma payını değiştirir", "Esnek içerikli kotta kumaş vücuda uyum sağladığı için daraltma payı sınırlı tutulur; sert denimde ise pay daha rahat belirlenir. Etiketteki kumaş içeriğini mesaja eklemeniz işimizi kolaylaştırır. Çok daraltma yapılırsa oturma ve diz hareketi sıkışabileceği için ölçüyü üzerinizde kontrol etmeyi öneririz."],
   ["Daraltırken nelere dikkat edilir?", "Kotun cep yerleşimi, arkadaki dikiş çizgileri ve paça şekli daraltma sırasında bozulmamalıdır. Bu yüzden her kotta önce mevcut dikiş yapısına bakılır, sonra hangi dikişten pay alınacağına karar verilir. Paça kısmı da kısalacaksa iki işlem birlikte planlanır; kısaltma ayrıntıları için kot paça kısaltma sayfamıza bakabilirsiniz."],
-  ["Fiyat ve teslim", "Kot pantolon bacak veya bel daraltma ₺200'den başlar. Net fiyat daraltılacak yer sayısına ve kumaşa göre fotoğrafla söylenir. Normal işler aynı gün, acil işler 1–2 saatte teslim edilir; eve ve otele alım-teslim ücretsizdir. Fiyatlara KDV dahil değildir."],
+  ["Fiyat ve teslim", "Kot pantolon bacak veya bel daraltma ₺200'den başlar. Net fiyat daraltılacak yer sayısına ve kumaşa göre fotoğrafla söylenir. Normal işler aynı gün, acil işler 1–2 saatte teslim edilir; eve ve otele alım-teslim yapılır. Fiyatlara KDV dahil değildir."],
 ];
 
 const jsonLd = {
@@ -104,7 +104,7 @@ const jsonLd = {
       description: "Kot Pantolon Nasıl Daraltılır?",
       step: [
         { '@type': 'HowToStep', name: 'Fotoğraf Gönderin', text: 'WhatsApp\'tan kot pantolonun önden ve arkadan fotoğrafını, daraltmak istediğiniz yeri belirterek gönderin.' },
-        { '@type': 'HowToStep', name: 'Teslim Edin', text: 'Pantolonu getirin veya adresinizden ücretsiz alım talep edin.' },
+        { '@type': 'HowToStep', name: 'Teslim Edin', text: 'Pantolonu getirin veya adresinizden alım talep edin.' },
         { '@type': 'HowToStep', name: 'Ölçü ve Dikiş', text: 'Daraltılacak yer üzerinizde iğnelenir, dikişler yeniden kurulur. Aynı gün; acilde 1–2 saat.' },
         { '@type': 'HowToStep', name: 'Teslim Alın', text: 'Oturuş kontrol edilir; isterseniz deneyip teslim alırsınız.' },
       ],
@@ -144,7 +144,7 @@ export default function Page() {
             <h1 id="hero-h">
               Kot Pantolon Daraltma <span className="accent">Antalya</span><br />₺200'den, Aynı Gün Teslim</h1>
             <p className="hero-desc">
-              Kot pantolonda bacak daraltma ve bel daraltma. Kalın kot kumaşa uygun dikişle çalışıyoruz; eve ve otele ücretsiz servis veriyoruz.
+              Kot pantolonda bacak daraltma ve bel daraltma. Kalın kot kumaşa uygun dikişle çalışıyoruz; eve ve otele servis veriyoruz.
             </p>
             <p className="hero-desc"><strong>Kısa cevap:</strong> Kot pantolon bacak ve bel daraltma ₺200'den başlar; ölçü üzerinizde alınır, normal işler aynı gün, acil işler 1–2 saatte teslim edilir.</p>
             <div className="hero-btns">
@@ -188,7 +188,7 @@ export default function Page() {
             </div>
             <div className="howto-list">
               <div className="howto-item"><div className="howto-t">Fotoğraf Gönderin</div><div className="howto-d">WhatsApp'tan kot pantolonun önden ve arkadan fotoğrafını, daraltmak istediğiniz yeri belirterek gönderin.</div></div>
-              <div className="howto-item"><div className="howto-t">Teslim Edin</div><div className="howto-d">Pantolonu getirin veya adresinizden ücretsiz alım talep edin.</div></div>
+              <div className="howto-item"><div className="howto-t">Teslim Edin</div><div className="howto-d">Pantolonu getirin veya adresinizden alım talep edin.</div></div>
               <div className="howto-item"><div className="howto-t">Ölçü ve Dikiş</div><div className="howto-d">Daraltılacak yer üzerinizde iğnelenir, dikişler yeniden kurulur. Aynı gün; acilde 1–2 saat.</div></div>
               <div className="howto-item"><div className="howto-t">Teslim Alın</div><div className="howto-d">Oturuş kontrol edilir; isterseniz deneyip teslim alırsınız.</div></div>
             </div>

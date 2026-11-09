@@ -402,6 +402,14 @@ export function hubMetadata(lang: Lang): Metadata {
 function Shell({ lang, waMsg, children, footLinks }: { lang: Lang; waMsg: string; children: React.ReactNode; footLinks: { href: string; label: string }[] }) {
   const u = UI[lang];
   const href = WA(waMsg);
+  // Almanca sayfalar: kargo/online ve iletişim sayfalarına tutarlı iç bağlantı (zaten varsa tekrar eklenmez).
+  const deExtra = lang === 'de'
+    ? [
+        { href: '/de/online-schneider-antalya', label: 'Online-Schneider & Versand' },
+        { href: '/de/kontakt-schneider-antalya', label: 'Kontakt' },
+      ].filter((x) => !footLinks.some((l) => l.href === x.href))
+    : [];
+  const allFootLinks = [...footLinks, ...deExtra];
   return (
     <div lang={lang}>
       <div className="float">
@@ -417,7 +425,7 @@ function Shell({ lang, waMsg, children, footLinks }: { lang: Lang; waMsg: string
       <footer>
         <div>© {new Date().getFullYear()} {u.footer} · {PHONE}</div>
         <nav className="foot-links" aria-label="Footer">
-          {footLinks.map((l) => (<a key={l.href} href={l.href}>{l.label}</a>))}
+          {allFootLinks.map((l) => (<a key={l.href} href={l.href}>{l.label}</a>))}
           <a href={MAPS} target="_blank" rel="noopener noreferrer">Google Maps</a>
         </nav>
       </footer>

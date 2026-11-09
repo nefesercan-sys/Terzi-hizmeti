@@ -664,8 +664,8 @@ export const EXPRESS_COPY: L3<ExpressCopy> = {
     customLink: 'Want something made from scratch?', customLinkP: `Custom linen and cotton clothing, timing depends on the model and number of pieces.`,
   },
   de: {
-    title: 'Kleidung ändern im Urlaub Antalya — eilig 1–2 Stunden',
-    desc: 'Kleidung passt nicht? Kürzen, Taille, Ärmel und Reparaturen in Antalya. Meist am selben Tag, eilig 1–2 Stunden. Hotelabholung. Terzi Can, Konyaaltı.',
+    title: 'Kleidung ändern in Antalya: Hose kürzen ab ₺200 (~€10)',
+    desc: 'Kleidung passt nicht? Kürzen ab ₺200 (~€10), Taille, Ärmel, Reißverschluss ab ₺300. Meist am selben Tag, eilig 1–2 Stunden. Hotelabholung in Antalya gratis. Terzi Can.',
     keywords: ['Kleidung ändern Antalya Urlaub', 'Schneider Antalya dringend', 'Änderungsschneiderei Antalya Touristen', 'Hose kürzen Antalya Urlaub', 'Taille enger machen Antalya', 'Schneider Hotel Antalya Abholung', 'Kleid ändern Antalya eilig', 'Schneider Konyaaltı'],
     h1: 'Kleidung ändern im Urlaub in Antalya',
     lead: 'Im Urlaub in Antalya eingekauft und etwas passt nicht? Terzi Can kürzt Säume, macht Taillen und Seiten enger, ändert Ärmel und repariert Reißverschlüsse. Die meisten Aufträge sind am selben Tag fertig; in dringenden Fällen in 1–2 Stunden. Auf Wunsch holen wir die Kleidung im Hotel ab und liefern sie zurück.',

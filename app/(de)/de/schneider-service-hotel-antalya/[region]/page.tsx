@@ -32,14 +32,14 @@ export async function generateMetadata({ params }: { params: Promise<{ region: s
 
   const url = `${SITE}${BASE_PATH}/${r.slug}`;
   const title = `Schneider im Hotel ${r.name}, Antalya | Abholung & Lieferung`;
-  const desc = fitDesc(`Urlaub in ${r.name}? Wir holen Kleidung im Hotel ab, ändern sie in Konyaaltı und bringen sie zurück. Täglich 08:00–23:00, Abholung und Lieferung kostenlos.`);
+  const desc = fitDesc(`Urlaub in ${r.name}? Wir holen im Hotel ab und bringen zurück, kostenlos: Hose kürzen ab ₺200 (~€10), Reißverschluss ab ₺300, Kleider ändern. Täglich 08:00–23:00.`);
   const ogImage = `${SITE}/terzi-can-hero.jpg`;
 
   return {
     metadataBase: new URL(SITE),
     title: { absolute: title },
     description: desc,
-    keywords: fitKeywords([`Schneider Hotel ${r.name}`, `Änderungsschneiderei ${r.name}`, `Hose kürzen ${r.name}`, `Reißverschluss reparieren ${r.name}`, 'Schneider Antalya Urlaub', 'Kleidung ändern lassen Antalya Hotel']),
+    keywords: fitKeywords([`Schneider Hotel ${r.name}`, `Schneider in der Nähe ${r.name}`, `Änderungsschneiderei ${r.name}`, `Hose kürzen ${r.name}`, `Reißverschluss reparieren ${r.name}`, 'Schneider Antalya Urlaub', 'Kleidung ändern lassen Antalya Hotel']),
     alternates: {
       canonical: url,
       languages: {

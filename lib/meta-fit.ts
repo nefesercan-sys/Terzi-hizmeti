@@ -19,7 +19,7 @@ export function fitDesc(s: string, max = META_DESC_MAX): string {
   let t = phoneFirst(s);
   if (len(t) <= max) return t;
   // 0) numara baştaysa (☎ numara · metin) korunur; yalnızca metin kısmı kısaltılır
-  const lead = /^(☎[^·]{6,24}·\s*)(.+)$/su.exec(t);
+  const lead = /^(☎[^·]{6,24}·\s*)([\s\S]+)$/u.exec(t);
   if (lead) return lead[1] + fitDesc(lead[2], max - len(lead[1]));
   // 1) sondaki telefon eki çıkarılır (telefon sayfada ve şemada zaten var)
   t = t.replace(/\s*☎.*$/u, '').trim();

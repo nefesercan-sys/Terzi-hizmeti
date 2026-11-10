@@ -24,8 +24,8 @@ const OG        = `${SITE}/terzi-can-hero.jpg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Портной в Анталье: подшив от ₺200, ремонт, пошив · Ежедневно" },
-  description: fitDesc('☎ ' + PHONE + ' · ' + 'Портной в Анталье: подшив от ₺200 (~€10), замена молнии от ₺300, пошив. Приедем в отель или по адресу, забор и доставка. По-русски.'),
+  title: { absolute: "Ателье и портной в Анталье: подшив от ₺200 · Ежедневно" },
+  description: fitDesc('☎ ' + PHONE + ' · ' + 'Ателье и портной в Анталье: подшив от ₺200 (~€10), замена молнии от ₺300, пошив. Приедем в отель или по адресу, забор и доставка. По-русски.'),
   keywords: ['портной Анталья', 'выездной портной Анталья', 'портной в отель Анталья', 'срочная подгонка одежды Анталья', 'портной Коньяалты', 'русскоговорящий портной Анталья', 'ремонт одежды Анталья', 'подшить брюки Анталья'],
   authors: [{ name: 'Terzi Can', url: SITE }],
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
@@ -34,12 +34,12 @@ export const metadata: Metadata = {
     languages: { 'tr': TR_URL, 'en': EN_URL, 'ru': PAGE_URL, 'de': DE_URL, ...INTL_ALT, 'x-default': TR_URL },
   },
   openGraph: {
-    title: 'Портной Анталья · Выездной портной в отель',
+    title: 'Ателье и портной Анталья · Выезд в отель',
     description: 'Пошив, ремонт и подгонка во всех районах Антальи. Мы приедем к вам.',
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'ru_RU', alternateLocale: ['tr_TR'], type: 'website',
-    images: [{ url: OG, width: 1024, height: 1024, alt: 'Портной Анталья', type: 'image/jpeg' }],
+    images: [{ url: OG, width: 1024, height: 1024, alt: 'Ателье и портной Анталья', type: 'image/jpeg' }],
   },
-  twitter: { card: 'summary_large_image', title: 'Портной Анталья — Выездной портной', description: 'Приедем в ваш отель во всех районах Антальи.', images: [OG] },
+  twitter: { card: 'summary_large_image', title: 'Ателье и портной Анталья — выезд в отель', description: 'Приедем в ваш отель во всех районах Антальи.', images: [OG] },
   other: { 'geo.region': 'TR-07', 'geo.placename': 'Antalya', contact: PHONE },
 };
 
@@ -57,7 +57,7 @@ const jsonLd = {
   '@graph': [
     {
       '@type': 'WebPage', '@id': `${PAGE_URL}#webpage`, url: PAGE_URL,
-      name: 'Портной Анталья — Выездной портной, ремонт, подгонка',
+      name: 'Ателье и портной Анталья — выезд в отель, ремонт, подгонка',
       description: 'Выездной портной во всех районах Антальи, в отелях и по адресам.',
       inLanguage: 'ru', dateModified: TODAY,
       breadcrumb: { '@id': `${PAGE_URL}#breadcrumb` },
@@ -162,7 +162,7 @@ export default function UslugiPortnogoAntalyaPage() {
           <div className="hero-content">
             <span className="hero-tag">📍 Все районы Антальи · Выезд в отель и по адресу</span>
             <span className="hero-eng">Портной Анталья</span>
-            <h1 id="hero-h">Пошив, ремонт, подгонка<br /><span className="accent">прямо в ваш отель</span></h1>
+            <h1 id="hero-h">Ателье в Анталье: пошив, ремонт, подгонка<br /><span className="accent">прямо в ваш отель</span></h1>
             <p className="hero-desc" id="hero-desc">
               Terzi Can — портной в Коньяалты (Анталья): подшив, подгонка, ремонт и пошив по меркам; на связи в WhatsApp и по телефону +90 531 898 64 18 ежедневно с 08:00 до 23:00. {DELIVERY.ru.urgent} {DELIVERY.ru.normal} Забор и доставка в отели возможны везде, где мы работаем: Лара, Белек, Сиде, Кемер и другие районы.
             </p>

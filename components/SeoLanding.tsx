@@ -168,7 +168,7 @@ function _districtCopy(lang: Lang, d: District) {
     ? (TR_PRI.includes(d.slug) ? (d.slug === 'konyaalti' ? [`Konyaaltı, Hurma, Liman, Uncalı, Gürsu ve Öğretmenevleri'nde terzi arıyorsanız: paça ₺200'den, fermuar ₺300'den. Her gün 08:00–23:00, adrese servis. ${PH}`, `Konyaaltı terzi: Hurma, Liman, Uncalı, Gürsu. Paça ₺200'den, fermuar ₺300'den. Her gün 08:00–23:00. ${PH}`] : [`${loc} terzi: paça kısaltma ücreti ₺200'den, fermuar değişimi ₺300'den. Otel ve eve servis, her gün 08:00–23:00. ${PH}`, `${loc} terzi: paça ₺200'den, fermuar ₺300'den. Her gün 08:00–23:00. ${PH}`]) : [])
     : (FG_PRI.includes(d.slug) ? ({
       en: [`Staying ${loc}? We collect from your hotel: hemming, zippers. message us on WhatsApp in your language. Daily 08:00–23:00. ${PH}`, `Staying ${loc}? Hotel pick-up: hemming, zippers. Daily 08:00–23:00. ${PH}`],
-      ru: [`Отдыхаете ${loc}? Заберём вещи из отеля: подшив, молния. Говорим по-русски. Ежедневно 08:00–23:00. ${PH}`, `Отдыхаете ${loc}? Забор из отеля: подшив, молния. Ежедневно 08:00–23:00. ${PH}`],
+      ru: [`Отдыхаете ${loc}? Заберём вещи из отеля: подшив, молния. WhatsApp на вашем языке. Ежедневно 08:00–23:00. ${PH}`, `Отдыхаете ${loc}? Забор из отеля: подшив, молния. Ежедневно 08:00–23:00. ${PH}`],
       de: [`Urlaub ${loc}? Wir holen im Hotel ab: Kürzen, Reißverschluss. schreiben Sie uns per WhatsApp. Täglich 08:00–23:00. ${PH}`, `Urlaub ${loc}? Hotelabholung: Kürzen, Reißverschluss. Täglich 08:00–23:00. ${PH}`],
     } as Record<string, string[]>)[lang] : []);
   if (priT.length) title = pickFit([...priT, ...titles], 60);

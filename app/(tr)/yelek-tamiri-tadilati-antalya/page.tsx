@@ -17,8 +17,8 @@ const FAQ: [string, string][] = [["Yelek tamiri ve tadilatı ne kadar?", "Yelek 
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Yelek Tamiri ve Tadilatı Antalya · Aynı Gün" },
-  description: "Takım elbise yeleği, kot ve deri yelek daraltma, boy ayarı, fermuar ve düğme onarımı. Fiyat fotoğrafa göre. Eve ve otele servis. ☎ +90 531 898 64 18",
+  title: { absolute: "Yelek Tamiri ve Tadilatı Antalya · Aynı Gün · 0531 898 64 18" },
+  description: "☎ +90 531 898 64 18 · Takım elbise yeleği, kot ve deri yelek daraltma, boy ayarı, fermuar ve düğme onarımı. Fiyat fotoğrafa göre. Eve ve otele servis.",
   keywords: fitKeywords(["yelek tamiri", "yelek tadilatı", "yelek daraltma", "yelek kısaltma", "yelek fermuarı değişimi", "takım elbise yeleği tadilatı", "deri yelek tamiri", "kot yelek tadilatı", "yelek tamiri Antalya"]),
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   alternates: { canonical: PAGE_URL },

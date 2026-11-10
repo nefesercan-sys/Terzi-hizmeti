@@ -17,5 +17,5 @@ const T: Record<string, { t: string; d: string; kw: string[] }> = {
 };
 export function trNearDistrict(slug: string, name: string, loc: string, phone: string, brand: string): TrMeta | undefined {
   const e = T[slug]; if (!e) return undefined;
-  return { title: `${e.t} | ${brand}`, desc: `${e.d.replace('{loc}', loc.charAt(0).toUpperCase() + loc.slice(1))} ☎ ${phone}`, kw: e.kw.map((k) => `${name} ${k}`) };
+  return { title: `${e.t} | ${brand}`, desc: `☎ ${phone} · ${e.d.replace('{loc}', loc.charAt(0).toUpperCase() + loc.slice(1))}`, kw: e.kw.map((k) => `${name} ${k}`) };
 }

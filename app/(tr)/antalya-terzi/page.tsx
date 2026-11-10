@@ -22,8 +22,8 @@ const OG        = `${SITE}/terzi-can-hero.jpg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Antalya Terzi · Her Gün 08–23 Açık, Aynı Gün Teslim" },
-  description: "Konyaaltı'nda bay bayan terzi. Fotoğrafı WhatsApp'tan gönderin, fiyatı hemen öğrenin. Paça 200 TL'den, normal işler aynı gün, acil 1–2 saat. Her gün 08:00–23:00. ☎ " + PHONE,
+  title: { absolute: "Antalya Terzi · Her Gün 08–23 Açık · 0531 898 64 18" },
+  description: "☎ 0531 898 64 18 · Konyaaltı'nda bay bayan terzi. Fotoğrafı WhatsApp'tan gönderin, fiyatı hemen öğrenin. Paça 200 TL'den, normal işler aynı gün, acil 1–2 saat. Her gün 08:00–23:00.",
   keywords: ['Antalya terzi', 'Konyaaltı terzi', 'Hurma terzi', 'Liman terzi', 'Uncalı terzi', 'Gürsu terzi', 'otele gelen terzi Antalya', 'acil terzi Antalya'],
   authors: [{ name: BIZ, url: SITE }],
   creator: BIZ,
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Hurma, Liman, Sarısu Terzi — Konyaaltı',
-    description: 'Hurma, Liman, Sarısu, Uncalı, Gürsu mahalleleri öncelikli. ☎ ' + PHONE,
+    description: '☎ ' + PHONE + ' · ' + 'Hurma, Liman, Sarısu, Uncalı, Gürsu mahalleleri öncelikli.',
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'tr_TR',
     alternateLocale: ['en_US', 'ru_RU', 'de_DE'], type: 'website',
     images: [{ url: OG, width: 1024, height: 1024, alt: 'Konyaaltı Tailor Service', type: 'image/jpeg' }],

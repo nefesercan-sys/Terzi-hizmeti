@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Orijinal Kot Paça Yapımı ₺200'den · Dikiş İzi Korunur" },
   description:
-    "Kot paçayı kısaltırken orijinal paça görünümünü koruyoruz, ₺200'den. Boy ayakkabıyla işaretlenir. Normal iş aynı gün, acil 1–2 saat. ☎ " + PHONE,
+    '☎ ' + PHONE + ' · ' + "Kot paçayı kısaltırken orijinal paça görünümünü koruyoruz, ₺200'den. Boy ayakkabıyla işaretlenir. Normal iş aynı gün, acil 1–2 saat.",
   keywords: fitKeywords([
     'orijinal kot paça yapımı', 'orijinal paça kot kısaltma', 'kot paça orijinal dikiş', 'kot paçası orijinal kalsın', 'orijinal paça kısaltma fiyat', 'kot paça kısaltma Antalya',
   ]),
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: "Orijinal Kot Paça Yapımı Antalya — Aynı Gün",
-    description: "Kot paça kısaltırken orijinal paça görünümü korunur. ₺200'den. ☎ " + PHONE,
+    description: '☎ ' + PHONE + ' · ' + "Kot paça kısaltırken orijinal paça görünümü korunur. ₺200'den.",
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'tr_TR', type: 'website',
     images: [{ url: `${SITE}/terzi-can-hero.jpg`, width: 1024, height: 1024, alt: "Orijinal Kot Paça Yapımı Antalya — Aynı Gün" }],
   },

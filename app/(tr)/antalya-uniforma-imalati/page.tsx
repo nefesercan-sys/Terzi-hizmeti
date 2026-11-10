@@ -20,7 +20,7 @@ const LAST_MODIFIED = '2026-10-01';
 
 const PAGE_TITLE = 'Antalya Üniforma İmalatı ve Kurumsal Kıyafet';
 const PAGE_DESC  =
-  'Antalya otel, restoran, hastane, okul ve güvenlik personeli üniforma üretimi. Özel tasarım, nakış & baskı logosu ve seri imalat hizmeti. ☎ ' + PHONE;
+  '☎ ' + PHONE + ' · ' + 'Antalya otel, restoran, hastane, okul ve güvenlik personeli üniforma üretimi. Özel tasarım, nakış & baskı logosu ve seri imalat hizmeti.';
 
 // DÜZELTME: /og/terzi-can-uniforma.jpg dosyası yoktu (404). Var olan görsel kullanılıyor.
 const OG_IMAGE = `${HOME_URL}/terzi-can-hero.jpg`;

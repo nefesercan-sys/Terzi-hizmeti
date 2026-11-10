@@ -9,7 +9,7 @@ const WA_DEF = `https://wa.me/905318986418?text=${encodeURIComponent('Hallo, ich
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: 'Schneider im Hotel Antalya · Abholung',
-  description: 'Schneider im Hotel in Belek, Lara, Kemer, Side: Abholung, Hose kürzen ab ₺200 (~€10), meist am selben Tag. ☎ +90 531 898 64 18',
+  description: '☎ +90 531 898 64 18 · Schneider im Hotel in Belek, Lara, Kemer, Side: Abholung, Hose kürzen ab ₺200 (~€10), meist am selben Tag.',
   keywords: ['Schneider Hotel Antalya', 'mobiler Schneider Antalya', 'Schneider Belek Hotel', 'Schneider Lara Hotel', 'Schneider Kemer Hotel', 'Schneider Side Hotel', 'Kleidung ändern Antalya eilig', 'Änderungsschneiderei Hotel Antalya'],
   alternates: {
     canonical: `${SITE}${BASE_PATH}`,

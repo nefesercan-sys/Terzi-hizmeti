@@ -25,7 +25,7 @@ const OG        = `${SITE}/terzi-can-hero.jpg`;
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Портной в Анталье: подшив от ₺200, ремонт, пошив · Ежедневно" },
-  description: fitDesc('Портной в Анталье: подшив от ₺200 (~€10), замена молнии от ₺300, пошив. Приедем в отель или по адресу, забор и доставка. По-русски. ☎ ' + PHONE),
+  description: fitDesc('☎ ' + PHONE + ' · ' + 'Портной в Анталье: подшив от ₺200 (~€10), замена молнии от ₺300, пошив. Приедем в отель или по адресу, забор и доставка. По-русски.'),
   keywords: ['портной Анталья', 'выездной портной Анталья', 'портной в отель Анталья', 'срочная подгонка одежды Анталья', 'портной Коньяалты', 'русскоговорящий портной Анталья', 'ремонт одежды Анталья', 'подшить брюки Анталья'],
   authors: [{ name: 'Terzi Can', url: SITE }],
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },

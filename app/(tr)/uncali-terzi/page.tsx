@@ -19,13 +19,13 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Uncalı Terzi · Paça ₺200'den, Abiye Tadilatı Fotoğrafa Göre" },
   description:
-    fitDesc("Uncalı terzi: paça ₺200, abiye ve elbise tadilatı fotoğrafa göre, etek kısaltma, daraltma, özel dikim. Uncalı'ya servis. 08:00–23:00. ☎ " + PHONE),
+    fitDesc('☎ ' + PHONE + ' · ' + "Uncalı terzi: paça ₺200, abiye ve elbise tadilatı fotoğrafa göre, etek kısaltma, daraltma, özel dikim. Uncalı'ya servis. 08:00–23:00."),
   keywords: fitKeywords(Array.from(new Set(['Uncalı tamir tadilat', 'Uncalı söküğü dikme', 'Uncalı yırtık tamiri', 'Uncalı elbise tamiri', 'Uncalı terzi', 'Uncalı mahallesi terzi', 'Uncalı Konyaaltı terzi', 'Uncalı paça kısaltma', 'Uncalı fermuar tamiri', 'Uncalı bel daraltma', 'Uncalı elbise dikimi', 'Uncalı gelinlik tadilatı', 'Uncalı terzi fiyatları 2026', 'Konyaaltı Uncalı dikiş atölyesi', 'Uncalı abiye tamiri', 'Uncalı abiye tadilatı', 'Uncalı abiye daraltma', 'Uncalı abiye kısaltma', 'Uncalı abiye fermuar değişimi', 'Uncalı abiye özel dikim', 'Uncalı elbise daraltma', 'Uncalı elbise kısaltma', 'Uncalı ölçüye göre özel dikim', 'Uncalı bayan elbise dikimi', 'Uncalı etek kısaltma', 'Uncalı etek daraltma', 'Uncalı beden ayarlama', 'Uncalı fermuar değişimi', 'Uncalı kot paçası kısaltma', 'Uncalı pantolon kısaltma', 'Uncalı şort kısaltma', 'Uncalı ceket tadilatı', 'Uncalı gömlek daraltma', 'Uncalı yakınımda terzi', 'Konyaaltı Uncalı terzi tamir tadilat', 'Uncalı bay bayan elbise tamiri', 'Uncalı terzi', 'Uncalı bay bayan terzi', 'Uncalı dikim', 'Uncalı tamir tadilat', 'Uncalı elbise tamiri', 'Uncalı elbise tadilatı', 'Uncalı fermuar değişimi', 'Uncalı fermuar tamiri', 'Uncalı boy kısaltma', 'Uncalı bel daraltma', 'Uncalı etek boyu kısaltma', 'Uncalı pantolon boyu kısaltma', 'Uncalı paça kısaltma', 'Uncalı kot paçası kısaltma', 'Uncalı beden ölçüsüne göre elbise tadilatı', 'Uncalı mont tamiri', 'Uncalı ceket daraltma', 'Uncalı gömlek daraltma', 'Uncalı şort kısaltma', 'Uncalı pantolon daraltma', 'Uncalı etek daraltma', 'Uncalı elbise daraltma', 'Uncalı elbise dikimi']))),
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   alternates: { canonical: PAGE_URL, languages: { tr: PAGE_URL, en: `${SITE}${DISTRICT_BASE.en}/uncali`, ru: `${SITE}${DISTRICT_BASE.ru}/uncali`, de: `${SITE}${DISTRICT_BASE.de}/uncali`, 'x-default': PAGE_URL } },
   openGraph: {
     title: 'Uncalı Terzi · Abiye, Etek, Elbise Tadilat | Terzi Can',
-    description: "Uncalı terzi: abiye tamiri, tadilatı, etek ve elbise kısaltma, daraltma, özel dikim. Paça ₺200'den, abiye fotoğrafa göre. 08:00–23:00. ☎ " + PHONE,
+    description: '☎ ' + PHONE + ' · ' + "Uncalı terzi: abiye tamiri, tadilatı, etek ve elbise kısaltma, daraltma, özel dikim. Paça ₺200'den, abiye fotoğrafa göre. 08:00–23:00.",
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'tr_TR', type: 'website',
     images: [{ url: `${SITE}/terzi-can-hero.jpg`, width: 1024, height: 1024, alt: 'Uncalı Terzi Konyaaltı' }],
   },

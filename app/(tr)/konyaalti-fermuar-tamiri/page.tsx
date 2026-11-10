@@ -22,9 +22,9 @@ const TODAY     = '2026-10-04';
 // sayfaları genel sayfalara göre daha hızlı ve yüksek sıralar.
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Fermuar Değişimi ₺300'den · Aynı Gün · Konyaaltı" },
+  title: { absolute: "Fermuar Değişimi ₺300'den · Konyaaltı · 0531 898 64 18" },
   description:
-    "Pantolon, mont, ceket ve çanta fermuarı ₺300'den. Normal iş aynı gün, acil 1–2 saat. Eve ve otele servis. ☎ " + PHONE,
+    "☎ 0531 898 64 18 · Pantolon, mont, ceket ve çanta fermuarı ₺300'den. Normal iş aynı gün, acil 1–2 saat. Eve ve otele servis.",
   keywords: fitKeywords([
     'fermuar tamiri Konyaaltı', 'fermuar değişimi Antalya', 'fermuar tamiri Antalya',
     'pantolon fermuarı değişimi', 'mont fermuarı tamiri', 'ceket fermuarı değişimi',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Fermuar Tamiri Konyaaltı — Aynı Gün Değişim',
-    description: 'Pantolon, mont, ceket, çanta fermuarı. Normal tadilat aynı gün, acil 1–2 saat. ☎ ' + PHONE,
+    description: '☎ ' + PHONE + ' · ' + 'Pantolon, mont, ceket, çanta fermuarı. Normal tadilat aynı gün, acil 1–2 saat.',
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'tr_TR', type: 'website',
     images: [{ url: `${SITE}/terzi-can-hero.jpg`, width: 1024, height: 1024, alt: 'Fermuar Tamiri Konyaaltı' }],
   },

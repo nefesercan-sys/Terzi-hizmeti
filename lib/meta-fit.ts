@@ -7,9 +7,20 @@ export const META_KW_MAX = 8;
 
 const len = (s: string) => [...s].length;
 
+/** Açıklamanın sonundaki "☎ numara" ekini başa alır ("☎ numara · metin"): arama sonucunda kesilse bile numara görünür. */
+export function phoneFirst(s: string): string {
+  const t = s.trim();
+  const m = /^([\s\S]*?)\s*☎\s*(\+?\d[\d ]{9,18}\d)\s*\.?$/.exec(t);
+  if (!m || !m[1].trim() || m[1].includes('☎')) return t;
+  return `☎ ${m[2]} · ${m[1].trim()}`;
+}
+
 export function fitDesc(s: string, max = META_DESC_MAX): string {
-  let t = s.trim();
+  let t = phoneFirst(s);
   if (len(t) <= max) return t;
+  // 0) numara baştaysa (☎ numara · metin) korunur; yalnızca metin kısmı kısaltılır
+  const lead = /^(☎[^·]{6,24}·\s*)([\s\S]+)$/u.exec(t);
+  if (lead) return lead[1] + fitDesc(lead[2], max - len(lead[1]));
   // 1) sondaki telefon eki çıkarılır (telefon sayfada ve şemada zaten var)
   t = t.replace(/\s*☎.*$/u, '').trim();
   if (len(t) <= max) return t;

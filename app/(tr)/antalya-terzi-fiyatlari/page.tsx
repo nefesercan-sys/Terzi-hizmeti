@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Terzi Fiyatları 2026 · Paça ₺200'den, Fermuar ₺300'den" },
   description:
-    "Antalya terzi fiyatları 2026: paça ₺200, bel ₺200, fermuar ₺300, abiye-gelinlik tadilatı fotoğrafa veya işin detayına göre; dikim fotoğrafa ve modele göre. ☎ " + PHONE,
+    "☎ 0531 898 64 18 · Antalya terzi fiyatları 2026: paça ₺200, bel ₺200, fermuar ₺300, abiye-gelinlik tadilatı fotoğrafa veya işin detayına göre; dikim fotoğrafa ve modele göre.",
   keywords: fitKeywords([
     'Antalya terzi', 'terzi fiyatları', 'terzi fiyat listesi 2026', 'Antalya terzi fiyatları',
     'elbise diktirmek', 'elbise tadilatı', 'elbisem yırtıldı', 'bel daraltma', 'paça kısaltma fiyatı',

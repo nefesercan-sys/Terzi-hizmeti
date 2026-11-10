@@ -78,7 +78,7 @@ const T: Record<Lang, any> = {
       { icon: '📏', tr: 'Подгонка', en: 'Укорачивание, заужение', desc: 'Точная подгонка по фигуре.', items: ['Укорачивание', 'Заужение талии', 'Укорачивание рукавов'] },
     ],
     priceEyebrow: 'Стоимость', priceH: 'Цены', priceSub: 'Забор и доставка в отель возможны; стоимость зависит от работы.',
-    priceRows: [['Выезд в отель', 'БЕСПЛАТНО'], ['Укорачивание', ('от ' + P_ru.hem.replace('+', ''))], ['Замена молнии', ('от ' + P_ru.zip.replace('+', ''))], ['Подгонка платья/костюма', ('от ' + P_ru.alter.replace('+', ''))], ['Подгонка свадебного платья', ('от ' + P_ru.wedding.replace('+', ''))]],
+    priceRows: [['Выезд в отель', 'По договорённости в WhatsApp'], ['Укорачивание', ('от ' + P_ru.hem.replace('+', ''))], ['Замена молнии', ('от ' + P_ru.zip.replace('+', ''))], ['Подгонка платья/костюма', ('от ' + P_ru.alter.replace('+', ''))], ['Подгонка свадебного платья', ('от ' + P_ru.wedding.replace('+', ''))]],
     procEyebrow: 'Процесс', procH: 'Как мы работаем',
     steps: [
       ['01', 'Отель и номер', `Отправьте название отеля и номер комнаты на ${PHONE}`],
@@ -133,7 +133,7 @@ const T: Record<Lang, any> = {
       { icon: '🔧', tr: 'Tamir', en: 'Fermuar, yırtık, sökük', desc: 'Günlük tamirler — fermuar ve sökük dikiş.', items: ['Fermuar Değişimi', 'Yırtık Tamiri'] },
       { icon: '📏', tr: 'Tadilat', en: 'Boy kısaltma, daraltma', desc: 'Kıyafetin tam oturması için hassas ölçü ayarı.', items: ['Boy Kısaltma', 'Bel Daraltma', 'Kol Kısaltma'] },
     ],
-    priceEyebrow: '₺ Fiyatlar', priceH: 'Fiyatlar', priceSub: 'Otele alım-teslim yapılır; ücret yalnızca yapılan işe göre belirlenir.',
+    priceEyebrow: '₺ Fiyatlar', priceH: 'Fiyatlar', priceSub: 'Otele alım-teslim yapılır; fiyat yapılacak işe göre belirlenir.',
     priceRows: [['Otel Ziyareti', 'Var'], ['Boy Kısaltma', (P_tr.hem)], ['Fermuar Değişimi', (P_tr.zip)], ['Elbise / Takım Tadilatı', (P_tr.alter)], ['Gelinlik Tadilatı', (P_tr.wedding)]],
     procEyebrow: 'Süreç', procH: 'Nasıl Çalışır',
     steps: [

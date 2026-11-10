@@ -5,7 +5,7 @@
 //   • Eve ve otele alım-teslim TÜM hizmet bölgelerinde yapılır.
 //   • Gelinlik DİKİMİ yapılmaz (gelinlik/abiye TADİLATI yapılır).
 //   • Abiye/gelinlik TADİLATI (boy, bel, korse/kapama, kuyruk, elbise tadilatı) için SABİT FİYAT YAZILMAZ: BY_PHOTO_OR_JOB ("fotoğrafa veya işin detayına göre"). Eski sabit fiyatlar kaldırıldı (Kasım 2026).
-//   • Gelinlik/abiye tadilatı süresi: WEDDING_TIME ("aynı gün veya duruma göre 1–2 gün"). Paça/bel/tamir "aynı gün" kuralı (lib/delivery.ts) değişmez.
+//   • Gelinlik/abiye tadilatı süresi: WEDDING_TIME ("işin durumuna göre"). Paça/bel/tamir "aynı gün" kuralı (lib/delivery.ts) değişmez.
 //   • Fiyatlara KDV DAHİL DEĞİLDİR (VAT_NOT_INCLUDED).
 //   • Otellerle ortaklık YOKTUR; Antalya'daki tüm otellere hizmet verilir (HOTEL_NOTE).
 //   • Yabancı dil sayfalarında fiyat EURO; € fiyatlar sahibin belirlediği turist başlangıç fiyatlarıdır (gerçek kurla çevrilmez; sahip kararı Kasım 2026). TRY_PER_EUR yalnız EUR_OVERRIDE'ı olmayan kalemler içindir.
@@ -48,16 +48,16 @@ export const byPhotoOrJobCap = (l: ByPhotoLang): string => { const t: string = B
 
 /** Gelinlik/abiye tadilatı süresi (sahip kararı, Kasım 2026). */
 export const WEDDING_TIME = {
-  tr: 'aynı gün veya duruma göre 1–2 gün',
-  en: 'same day or 1–2 days depending on the job',
-  ru: 'в тот же день или за 1–2 дня в зависимости от работы',
-  de: 'am selben Tag oder je nach Aufwand in 1–2 Tagen',
-  es: 'el mismo día o en 1–2 días según el trabajo',
-  fr: 'le jour même ou en 1 à 2 jours selon le travail',
-  pl: 'tego samego dnia lub w 1–2 dni, zależnie od pracy',
-  uk: 'того ж дня або за 1–2 дні, залежно від роботи',
-  nl: 'dezelfde dag of binnen 1–2 dagen, afhankelijk van het werk',
-  ar: 'في اليوم نفسه أو خلال يوم إلى يومين حسب العمل',
+  tr: 'işin durumuna göre',
+  en: 'depending on the job',
+  ru: 'в зависимости от работы',
+  de: 'je nach Arbeit',
+  es: 'según el trabajo',
+  fr: 'selon le travail',
+  pl: 'zależnie od pracy',
+  uk: 'залежно від роботи',
+  nl: 'afhankelijk van het werk',
+  ar: 'حسب العمل',
 } as const;
 
 /** Otel bölge/liste sayfalarında gösterilecek not: ortaklık yok, tüm otellere hizmet. */

@@ -19,8 +19,8 @@ export const ZONE_VARIANTS: Record<ILang, { lead: F[]; how: F[] }> = {
       (z) => `Arreglos de ropa para huéspedes de ${z}: usted nos escribe, recogemos en el hotel y entregamos de vuelta. El precio se confirma por WhatsApp con una foto.`,
     ],
     how: [
-      (z) => `Trabajamos desde nuestro taller en Hurma (Konyaaltı). Para los hoteles, incluido ${z}, la recogida y la entrega no tienen coste. Indique en WhatsApp su hotel y cuándo se marcha.`,
-      (z) => `El proceso es sencillo: envía una foto, acordamos precio y plazo, recogemos la prenda en su hotel de ${z} y se la devolvemos ya arreglada. Sin coste de recogida ni de entrega.`,
+      (z) => `Trabajamos desde nuestro taller en Hurma (Konyaaltı). Para los hoteles, incluido ${z}, hay recogida y entrega. Indique en WhatsApp su hotel y cuándo se marcha.`,
+      (z) => `El proceso es sencillo: envía una foto, acordamos precio y plazo, recogemos la prenda en su hotel de ${z} y se la devolvemos ya arreglada.`,
     ],
   },
   fr: {
@@ -30,7 +30,7 @@ export const ZONE_VARIANTS: Record<ILang, { lead: F[]; how: F[] }> = {
     ],
     how: [
       (z) => `Nous travaillons depuis l'atelier de Hurma (Konyaaltı). Pour les hôtels, y compris à ${z}, la collecte et la livraison sont disponibles. Indiquez sur WhatsApp votre hôtel et votre date de départ.`,
-      (z) => `Le déroulement est simple : vous envoyez une photo, nous convenons du prix et du délai, nous récupérons le vêtement dans votre hôtel à ${z} puis nous vous le rapportons retouché, sans frais de collecte ni de livraison.`,
+      (z) => `Le déroulement est simple : vous envoyez une photo, nous convenons du prix et du délai, nous récupérons le vêtement dans votre hôtel à ${z} puis nous vous le rapportons retouché.`,
     ],
   },
   pl: {
@@ -39,8 +39,8 @@ export const ZONE_VARIANTS: Record<ILang, { lead: F[]; how: F[] }> = {
       (z) => `Przeróbki dla gości hoteli w ${z}: piszesz do nas, odbieramy ubranie z hotelu i przywozimy je z powrotem. Cenę potwierdzamy na WhatsAppie po zdjęciu.`,
     ],
     how: [
-      (z) => `Pracujemy z naszej pracowni w Hurma (Konyaaltı). Dla hoteli, także w ${z}, odbiór i dostawa nic nie kosztują. Napisz na WhatsAppie, w którym hotelu mieszkasz i kiedy wyjeżdżasz.`,
-      (z) => `Przebieg jest prosty: wysyłasz zdjęcie, ustalamy cenę i termin, odbieramy ubranie z Twojego hotelu w ${z} i przywozimy je poprawione, bez opłat za odbiór i dostawę.`,
+      (z) => `Pracujemy z naszej pracowni w Hurma (Konyaaltı). Dla hoteli, także w ${z}, odbiór i dostawa są dostępne. Napisz na WhatsAppie, w którym hotelu mieszkasz i kiedy wyjeżdżasz.`,
+      (z) => `Przebieg jest prosty: wysyłasz zdjęcie, ustalamy cenę i termin, odbieramy ubranie z Twojego hotelu w ${z} i przywozimy je poprawione.`,
     ],
   },
   uk: {
@@ -60,7 +60,7 @@ export const ZONE_VARIANTS: Record<ILang, { lead: F[]; how: F[] }> = {
     ],
     how: [
       (z) => `Wij werken vanuit ons atelier in Hurma (Konyaaltı). Voor hotels, ook in ${z}, zijn ophalen en terugbrengen mogelijk. Laat via WhatsApp weten in welk hotel u verblijft en wanneer u vertrekt.`,
-      (z) => `Het is eenvoudig: u stuurt een foto, wij spreken prijs en termijn af, halen het kledingstuk op in uw hotel in ${z} en brengen het aangepast terug, zonder kosten voor ophalen of bezorgen.`,
+      (z) => `Het is eenvoudig: u stuurt een foto, wij spreken prijs en termijn af, halen het kledingstuk op in uw hotel in ${z} en brengen het aangepast terug.`,
     ],
   },
   ar: {
@@ -70,7 +70,7 @@ export const ZONE_VARIANTS: Record<ILang, { lead: F[]; how: F[] }> = {
     ],
     how: [
       (z) => `نعمل من ورشتنا في حي هورما (كونيالتي). الاستلام والتسليم من الفنادق متاح، ومنها فنادق ${z}. اكتب لنا عبر واتساب اسم فندقك وموعد مغادرتك.`,
-      (z) => `الخطوات بسيطة: ترسل صورة، نتفق على السعر والمدة، نستلم القطعة من فندقك في ${z} ونعيدها معدّلة دون رسوم استلام أو تسليم.`,
+      (z) => `الخطوات بسيطة: ترسل صورة، نتفق على السعر والمدة، نستلم القطعة من فندقك في ${z} ونعيدها معدّلة.`,
     ],
   },
 };

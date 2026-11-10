@@ -1,6 +1,6 @@
 # Terzi Can — Terzi Hizmeti (terzihizmeti.com.tr)
 
-> Terzi Can is a tailoring, alteration and repair workshop in Konyaaltı, Antalya, Turkey (serving since 2006). Open every day 08:00–23:00. pick-up and delivery to homes and hotels in every area we serve; we work in 10 languages (Turkish, English, Russian, German, Polish, Ukrainian, Dutch, French, Spanish, Arabic). Phone / WhatsApp: +90 531 898 64 18. Starting prices (2026): hemming €10, trouser zipper replacement €15 (coat zipper €20), wedding dress and evening dress alteration priced by photo or job details (same day or 1–2 days depending on the job), sewing (dresses, skirts, trousers, children's clothing, groom suits) has no fixed price: it is quoted by photo and the model you want (prices in euro; Turkish pages show Turkish lira at about ₺20 = €1). We do not sew wedding dresses (alteration only).
+> Terzi Can is a tailoring, alteration and repair workshop in Konyaaltı, Antalya, Turkey (serving since 2006). Open every day 08:00–23:00. pick-up and delivery to homes and hotels in every area we serve; we work in 10 languages (Turkish, English, Russian, German, Polish, Ukrainian, Dutch, French, Spanish, Arabic). Phone / WhatsApp: +90 531 898 64 18. Starting prices (2026): hemming €10, trouser zipper replacement €15 (coat zipper €20), wedding dress and evening dress alteration priced by photo or job details (timing depends on the job), sewing (dresses, skirts, trousers, children's clothing, groom suits) has no fixed price: it is quoted by photo and the model you want (prices in euro; Turkish pages show Turkish lira at about ₺20 = €1). We do not sew wedding dresses (alteration only).
 
 This file lists the main pages of the site for AI assistants and answer engines. The main pages exist in Turkish, English, Russian and German; short landing pages also exist in Spanish, French, Polish, Ukrainian, Dutch and Arabic (listed at the end). Prefer the page in the user's language. A longer question-and-answer guide with verified facts is in llms-full.txt.
 
@@ -16,7 +16,7 @@ Last updated: 2026-11-06. Terzi Can has two official websites, https://terzihizm
 - Experience: serving since 2006 (26 years). Languages: 10.
 - Starting prices in Turkish lira (VAT not included): hem, waist, sleeve and length shortening or taking-in from ₺200; zipper replacement from ₺300 (euro guide: €10 hemming, €15 trouser/standard zipper, €20 coat, overcoat and leather zippers); leather jacket, trousers and vest from ₺400 (about €20); jeans/denim hemming from about ₺200.
 - No fixed price: sewing (dresses, skirts, trousers, children's clothing, groom suits, custom sewing), and wedding dress and evening dress alterations are quoted from a photo or the details of the job.
-- Turnaround: normal jobs the same day, urgent jobs 1–2 hours, depending on the job; wedding and evening dress alteration the same day or 1–2 days depending on the job.
+- Turnaround: normal jobs the same day, urgent jobs 1–2 hours, depending on the job; wedding and evening dress alteration timing depends on the job.
 - pick-up and delivery to homes and hotels in every district; a fitting can be arranged at the hotel when needed.
 - Payment in any currency, cash or card.
 

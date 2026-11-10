@@ -33,7 +33,7 @@ const POOL = (lang: L, r: string): { id: string; q: string; a: string }[] => {
     { id: 'free', q: `${r} otel servisi var mı?`, a: 'Evet. Otellere alım-teslim hizmet verilen tüm bölgelerde yapılır; fiyat yapılacak tamir, tadilat veya dikim işine göre belirlenir.' },
     { id: 'urgent', q: `${r} otelinde acil terzi var mı?`, a: `Evet. ${D.urgent} Fotoğrafı ve otel adınızı WhatsApp'tan gönderin.` },
     { id: 'hem', q: `${r} otelde paça kısaltma ne kadar sürer?`, a: `${D.normal} ${D.urgent} Paça kısaltma ₺200'den başlar.` },
-    { id: 'dress', q: `${r} bölgesinde akşam yemeği için elbise veya takım ayarı yapılır mı?`, a: `Evet; takım tadilatı aynı gün, acil durumda 1–2 saatte hazır olur; gelinlik ve abiye tadilatı aynı gün veya duruma göre 1–2 günde teslim edilir. Gelinlik ve abiye fiyatı fotoğrafa veya işin detayına göre belirlenir.` },
+    { id: 'dress', q: `${r} bölgesinde akşam yemeği için elbise veya takım ayarı yapılır mı?`, a: `Evet; takım tadilatı aynı gün, acil durumda 1–2 saatte hazır olur; gelinlik ve abiye tadilatı işin durumuna göre teslim edilir. Gelinlik ve abiye fiyatı fotoğrafa veya işin detayına göre belirlenir.` },
     { id: 'custom', q: `Tatilde ${r} için özel dikim yaptırabilir miyim?`, a: `Evet; keten ve pamuk gibi yazlık kumaşlarla ölçüye göre dikim yapıyoruz. ${D.custom} Tatil bitiş tarihinizi WhatsApp'tan bildirin.` },
     { id: 'lang', q: `${r} bölgesinde terziyle kendi dilimde konuşabilir miyim?`, a: "Evet. WhatsApp'tan Türkçe, İngilizce, Rusça veya Almanca yazabilirsiniz." },
   ];

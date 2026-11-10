@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Kot Ceket ve Mont Tadilatı ₺200'den · Kol, Boy, Beden" },
   description:
-    "Kot ceket ve kot mont kol, boy kısaltma ve daraltma ₺200'den; orijinal görünümde dikiş. Normal iş aynı gün, acil 1–2 saat. ☎ " + PHONE,
+    '☎ ' + PHONE + ' · ' + "Kot ceket ve kot mont kol, boy kısaltma ve daraltma ₺200'den; orijinal görünümde dikiş. Normal iş aynı gün, acil 1–2 saat.",
   keywords: fitKeywords([
     'kot ceket kısaltma', 'kot ceket daraltma', 'kot mont kısaltma', 'kot mont daraltma', 'kot ceket kol kısaltma', 'kot ceket tadilatı', 'kot mont tadilatı', 'kot ceket orijinal dikiş', 'Antalya kot ceket terzi',
   ]),
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: "Kot Ceket ve Kot Mont Tadilatı Antalya",
-    description: "Kot ceket ve mont kısaltma, daraltma, orijinal görünümde dikiş. ₺200'den. ☎ " + PHONE,
+    description: '☎ ' + PHONE + ' · ' + "Kot ceket ve mont kısaltma, daraltma, orijinal görünümde dikiş. ₺200'den.",
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'tr_TR', type: 'website',
     images: [{ url: `${SITE}/terzi-can-hero.jpg`, width: 1024, height: 1024, alt: "Kot Ceket ve Kot Mont Tadilatı Antalya" }],
   },

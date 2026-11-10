@@ -382,10 +382,10 @@ export function hubMetadata(lang: Lang): Metadata {
     de: 'Kleidung ändern & reparieren Antalya · Kürzen',
   }[lang];
   const description = {
-    tr: `Bay bayan tamir tadilat: söküğü, yırtığı dikme, paça ve etek kısaltma, fermuar değişimi. Konyaaltı Hurma, Liman, Uncalı, Gürsu. ☎ ${PHONE}`,
-    en: `Clothing repair for men & women: torn seams, hemming, zipper replacement. Konyaaltı, Hurma, Liman, Arapsuyu. Pick-up arranged on WhatsApp. ☎ ${PHONE}`,
-    ru: `Ремонт одежды: зашить дырку, подшив, молнии, мужская и женская. Коньяалты, Хурма, Лиман, Арапсую. Забор вещей. ☎ ${PHONE}`,
-    de: `Kleidung reparieren & ändern: Risse nähen, Kürzen, Reißverschluss. Konyaaltı, Hurma, Liman, Arapsuyu. Hotelabholung. ☎ ${PHONE}`,
+    tr: `☎ ${PHONE} · Bay bayan tamir tadilat: söküğü, yırtığı dikme, paça ve etek kısaltma, fermuar değişimi. Konyaaltı Hurma, Liman, Uncalı, Gürsu.`,
+    en: `☎ ${PHONE} · Clothing repair for men & women: torn seams, hemming, zipper replacement. Konyaaltı, Hurma, Liman, Arapsuyu. Pick-up arranged on WhatsApp.`,
+    ru: `☎ ${PHONE} · Ремонт одежды: зашить дырку, подшив, молнии, мужская и женская. Коньяалты, Хурма, Лиман, Арапсую. Забор вещей.`,
+    de: `☎ ${PHONE} · Kleidung reparieren & ändern: Risse nähen, Kürzen, Reißverschluss. Konyaaltı, Hurma, Liman, Arapsuyu. Hotelabholung.`,
   }[lang];
   const url = abs(SERVICE_BASE[lang]);
   return {

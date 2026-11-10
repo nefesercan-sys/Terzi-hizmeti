@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Fermuar Tamiri Konyaaltı — Aynı Gün Değişim',
-    description: 'Pantolon, mont, ceket, çanta fermuarı. Normal tadilat aynı gün, acil 1–2 saat. ☎ ' + PHONE,
+    description: '☎ ' + PHONE + ' · ' + 'Pantolon, mont, ceket, çanta fermuarı. Normal tadilat aynı gün, acil 1–2 saat.',
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'tr_TR', type: 'website',
     images: [{ url: `${SITE}/terzi-can-hero.jpg`, width: 1024, height: 1024, alt: 'Fermuar Tamiri Konyaaltı' }],
   },

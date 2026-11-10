@@ -23,7 +23,7 @@ const OG        = `${SITE}/terzi-can-hero.jpg`;
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Otelde Terzi Hizmeti: Belek, Lara, Kemer, Side — Otele Gelir" },
-  description: fitDesc("Antalya'da otele gelen terzi: Belek, Lara, Kundu, Kemer, Side bölgelerinde otelden alım, tadilat ve teslimat yapılır. Her gün 08:00–23:00. ☎ " + PHONE),
+  description: fitDesc('☎ ' + PHONE + ' · ' + "Antalya'da otele gelen terzi: Belek, Lara, Kundu, Kemer, Side bölgelerinde otelden alım, tadilat ve teslimat yapılır. Her gün 08:00–23:00."),
   keywords: ['otele gelen terzi Antalya', 'otelde terzi hizmeti', 'Belek otel terzi', 'Lara otel terzi', 'Kemer otel terzi', 'Side otel terzi', 'acil terzi Antalya', 'turist terzi Antalya'],
   authors: [{ name: BIZ, url: SITE }],
   creator: BIZ,
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Mobile Tailor Service to Hotels in Antalya',
-    description: 'Express tailoring service directly to your hotel room or lobby. Serving Belek, Lara, Kundu, and Kemer. ☎ ' + PHONE,
+    description: '☎ ' + PHONE + ' · ' + 'Express tailoring service directly to your hotel room or lobby. Serving Belek, Lara, Kundu, and Kemer.',
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'tr_TR',
     alternateLocale: ['en_US', 'ru_RU', 'de_DE'], type: 'website',
     images: [{ url: OG, width: 1024, height: 1024, alt: 'Mobile Tailor Antalya', type: 'image/jpeg' }],

@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   alternates: { canonical: PAGE_URL, languages: { tr: PAGE_URL, en: `${SITE}${DISTRICT_BASE.en}/hurma`, ru: `${SITE}${DISTRICT_BASE.ru}/hurma`, de: `${SITE}${DISTRICT_BASE.de}/hurma`, 'x-default': PAGE_URL } },
   openGraph: {
     title: 'Hurma Terzi · Tamir, Tadilat, Özel Dikim | Terzi Can',
-    description: "Hurma terzi atölyemiz Hurma'da: tamir, tadilat, bay bayan özel dikim, ölçüye göre elbise, daraltma, kısaltma. Paça ₺200'den. 08:00–23:00. ☎ " + PHONE,
+    description: '☎ ' + PHONE + ' · ' + "Hurma terzi atölyemiz Hurma'da: tamir, tadilat, bay bayan özel dikim, ölçüye göre elbise, daraltma, kısaltma. Paça ₺200'den. 08:00–23:00.",
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'tr_TR', type: 'website',
     images: [{ url: `${SITE}/terzi-can-hero.jpg`, width: 1024, height: 1024, alt: 'Hurma Terzi Konyaaltı' }],
   },

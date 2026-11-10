@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Mont Tamiri ve Tadilatı ₺200'den · Fermuar · Antalya" },
   description:
-    "Mont boy ve kol kısaltma, daraltma ₺200'den; fermuar değişimi ₺300'den. Normal iş aynı gün, acil 1–2 saat. Eve ve otele servis. ☎ " + PHONE,
+    '☎ ' + PHONE + ' · ' + "Mont boy ve kol kısaltma, daraltma ₺200'den; fermuar değişimi ₺300'den. Normal iş aynı gün, acil 1–2 saat. Eve ve otele servis.",
   keywords: fitKeywords([
     'mont tamiri', 'mont tadilatı', 'mont kısaltma', 'mont daraltma', 'mont kol kısaltma', 'mont tamiri Antalya', 'mont tadilatı fiyat', 'mont fermuarı değişimi', 'kaban tadilatı',
   ]),
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: "Mont Tamiri ve Tadilatı Antalya — Aynı Gün",
-    description: "Mont kısaltma, daraltma, tamir ve fermuar değişimi. ₺200'den. Normal iş aynı gün. ☎ " + PHONE,
+    description: '☎ ' + PHONE + ' · ' + "Mont kısaltma, daraltma, tamir ve fermuar değişimi. ₺200'den. Normal iş aynı gün.",
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'tr_TR', type: 'website',
     images: [{ url: `${SITE}/terzi-can-hero.jpg`, width: 1024, height: 1024, alt: "Mont Tamiri ve Tadilatı Antalya — Aynı Gün" }],
   },

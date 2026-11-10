@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Paça Kısaltma Konyaaltı — Aynı Gün Teslim',
-    description: 'Pantolon, kot, etek kısaltma. ₺200\'den başlayan fiyatlar. ☎ ' + PHONE,
+    description: '☎ ' + PHONE + ' · ' + 'Pantolon, kot, etek kısaltma. ₺200\'den başlayan fiyatlar.',
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'tr_TR', type: 'website',
     images: [{ url: `${SITE}/terzi-can-hero.jpg`, width: 1024, height: 1024, alt: 'Paça Kısaltma Konyaaltı' }],
   },

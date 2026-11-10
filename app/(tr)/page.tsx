@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Terzi Can Antalya — Tailor & Alterations | Портной Анталья',
-    description: 'Professional tailoring & alteration service in Konyaaltı, Antalya. English, Russian, German & Turkish spoken. ☎ ' + PHONE,
+    description: '☎ ' + PHONE + ' · ' + 'Professional tailoring & alteration service in Konyaaltı, Antalya. English, Russian, German & Turkish spoken.',
     url: SITE, siteName: 'Terzi Hizmeti', locale: 'tr_TR',
     alternateLocale: ['en_US', 'ru_RU', 'de_DE'],
     type: 'website',
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Terzi Can Antalya | Tailor & Alterations | Портной',
-    description: 'Konyaaltı tailor workshop. Alterations, hemming, zipper replacement, dressmaking. ☎ ' + PHONE,
+    description: '☎ ' + PHONE + ' · ' + 'Konyaaltı tailor workshop. Alterations, hemming, zipper replacement, dressmaking.',
     images: [OG],
   },
   other: {

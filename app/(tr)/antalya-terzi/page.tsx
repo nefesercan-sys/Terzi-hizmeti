@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Hurma, Liman, Sarısu Terzi — Konyaaltı',
-    description: 'Hurma, Liman, Sarısu, Uncalı, Gürsu mahalleleri öncelikli. ☎ ' + PHONE,
+    description: '☎ ' + PHONE + ' · ' + 'Hurma, Liman, Sarısu, Uncalı, Gürsu mahalleleri öncelikli.',
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'tr_TR',
     alternateLocale: ['en_US', 'ru_RU', 'de_DE'], type: 'website',
     images: [{ url: OG, width: 1024, height: 1024, alt: 'Konyaaltı Tailor Service', type: 'image/jpeg' }],

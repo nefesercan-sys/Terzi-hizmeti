@@ -26,7 +26,10 @@ const OLD = new Date('2026-09-20');   // v36'da değişmeyen sayfalar (sahte gü
 const CHANGED = new Set(['', '/ru/uslugi-portnogo-antalya', '/antalya-terzi', '/antalya-terzi-fiyatlari', '/antalya-gelinlik-tadilati', '/antalya-uniforma-imalati', '/en/tailor-service-antalya', '/de/schneiderservice-antalya', '/gursu-terzi', '/hurma-terzi', '/liman-terzi', '/sarisu-terzi', '/uncali-terzi', '/keten-pamuk-ozel-dikim', '/en/linen-cotton-tailoring', '/de/leinen-baumwolle-schneiderei', '/ru/poshiv-lyon-hlopok', '/konyaalti-fermuar-tamiri', '/konyaalti-paca-kisaltma', '/otele-gelen-terzi-antalya', '/blog/2026-yaz-sezonu-gelinlik-tadilat-rehberi', '/anavera-tekstil', '/en/anavera-tekstil', '/de/anavera-tekstil', '/ru/anavera-tekstil']);
 // Bu dalda (fix/icerik-seo-hatalar) metni değişen sayfalar: süreler, otel ücretsiz kuralı, SSS, doğrudan cevap, bölgeye özgü bölümler, fiyat kaynağı.
 const CHANGED30 = new Set(['/kaban-palto-tadilati-antalya', '/yelek-tamiri-tadilati-antalya', '/mont-fermuar-degisimi-antalya', '/mont-tamiri-tadilati-antalya', '/canta-fermuar-tamiri-antalya', '/deri-ceket-tadilati-antalya', '/kot-pantolon-paca-kisaltma-antalya', '/kot-pantolon-daraltma-antalya', '/orijinal-kot-paca-yapimi-antalya', '/kot-ceket-mont-tadilati-antalya', '/kot-etek-kisaltma-daraltma-antalya', '', '/antalya-terzi', '/otele-gelen-terzi-antalya', '/antalya-terzi-fiyatlari', '/en/tailor-prices-antalya', '/de/schneider-preise-antalya', '/ru/ceny-portnoy-antalya', '/antalya-gelinlik-tadilati', '/antalya-uniforma-imalati', '/gursu-terzi', '/hurma-terzi', '/liman-terzi', '/sarisu-terzi', '/uncali-terzi', '/keten-pamuk-ozel-dikim', '/konyaalti-fermuar-tamiri', '/konyaalti-paca-kisaltma', '/en/tailor-service-antalya', '/ru/uslugi-portnogo-antalya', '/de/schneiderservice-antalya', '/en/hotel-tailor-antalya', '/ru/vyezdnoy-portnoy-antalya', '/de/schneider-service-hotel-antalya']);
-const lm = (path: string) => (CHANGED30.has(path) ? NOW30 : CHANGED.has(path) ? NOW : OLD);
+// 9–10 Kasım 2026: başlık/açıklama (telefon başta), ücretsiz ifadesi, gelinlik süresi düzeltmeleriyle değişen sayfalar.
+const NOW10 = new Date('2026-11-10');
+const CHANGED10 = new Set(['', '/antalya-gelinlik-tadilati', '/antalya-terzi', '/antalya-terzi-fiyatlari', '/antalya-uniforma-imalati', '/canta-fermuar-tamiri-antalya', '/de/schneider-service-hotel-antalya', '/de/schneiderservice-antalya', '/deri-ceket-tadilati-antalya', '/en/hotel-tailor-antalya', '/en/tailor-service-antalya', '/gursu-terzi', '/hurma-terzi', '/kaban-palto-tadilati-antalya', '/keten-pamuk-ozel-dikim', '/konyaalti-fermuar-tamiri', '/konyaalti-paca-kisaltma', '/kot-ceket-mont-tadilati-antalya', '/kot-etek-kisaltma-daraltma-antalya', '/kot-pantolon-daraltma-antalya', '/kot-pantolon-paca-kisaltma-antalya', '/liman-terzi', '/mont-fermuar-degisimi-antalya', '/mont-tamiri-tadilati-antalya', '/orijinal-kot-paca-yapimi-antalya', '/otele-gelen-terzi-antalya', '/ru/uslugi-portnogo-antalya', '/ru/vyezdnoy-portnoy-antalya', '/sarisu-terzi', '/uncali-terzi', '/yelek-tamiri-tadilati-antalya']);
+const lm = (path: string) => (CHANGED10.has(path) ? NOW10 : CHANGED30.has(path) ? NOW30 : CHANGED.has(path) ? NOW : OLD);
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // OTEL_BOLGELERI verisini güvenli bir şekilde slug metin dizisine çeviriyoruz
@@ -48,7 +51,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ? Object.fromEntries(ILANGS.map((x) => [INTL[x].hreflang, `${SITE}${zoneUrl(x, slug as (typeof ZONE_SLUGS)[number])}`]))
       : {};
     const alternates = { languages: { ...urls, ...extra, 'x-default': urls.tr } };
-    return Object.values(urls).map((url) => ({ url, lastModified: NOW30, changeFrequency: 'weekly' as const, priority: 0.75, alternates }));
+    return Object.values(urls).map((url) => ({ url, lastModified: NOW10, changeFrequency: 'weekly' as const, priority: 0.75, alternates }));
   });
 
   // Sabit Sayfalar Hiyerarşisi

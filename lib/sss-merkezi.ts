@@ -9,7 +9,7 @@ export type SssLang = 'tr' | 'en' | 'ru' | 'de';
 export type SssItem = { q: string; a: string; href?: string };
 
 export const SSS_SITE = 'https://terzihizmeti.com.tr';
-export const SSS_UPDATED = '2026-11-06';
+export const SSS_UPDATED = '2026-11-10';
 
 export const SSS_PATH: Record<SssLang, string> = {
   tr: '/sik-sorulan-sorular-terzi-antalya',

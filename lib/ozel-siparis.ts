@@ -22,7 +22,7 @@ export type OzelCopy = {
 };
 
 export const OZEL_SITE = 'https://terzihizmeti.com.tr';
-export const OZEL_UPDATED = '2026-11-08';
+export const OZEL_UPDATED = '2026-11-09';
 
 export const OZEL: Record<OLang, OzelCopy> = {
   tr: {

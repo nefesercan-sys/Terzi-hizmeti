@@ -26,7 +26,7 @@ export const rootMetadata: Metadata = {
   verification: {
     google: 'W2S_Gr49EgkgWG7xAWWMc5qPW6Cw3wEnOi6O6UC9zkQ',
     // Yandex Webmaster: eski ve yeni doğrulama kodları birlikte (ikisi de geçerli kalsın)
-    yandex: ['e7b38dec995b9142', '90847d9fde4fea11'],
+    yandex: ['e7b38dec995b9142', '90847d9fde4fea11', '62e96c6659d5a6ba'],
     // Bing Webmaster kodu gerekirse buraya ekleyin (Bing'de GSC'den içe aktarırsanız gerekmez):
     // other: { 'msvalidate.01': 'BING_KODU' },
   },

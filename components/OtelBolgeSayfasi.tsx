@@ -194,7 +194,7 @@ export default function OtelBolgeSayfasi({ lang, region, allRegions, basePath, m
           <p className="hero-desc" id="hero-desc">{t.heroDesc(region.name, regionAnswer(lang, region.slug, region.name))}</p>
           <div className="hero-btns">
             <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-primary"><span aria-hidden="true">💬</span> {t.waShare} <span aria-hidden="true">→</span></a>
-            <a href={`tel:${PHONE_TEL}`} className="btn-secondary"><span aria-hidden="true">📞</span> {t.callLabel}</a>
+            <a href={`tel:${PHONE_TEL}`} className="btn-secondary"><span className="ico-tel" aria-hidden="true" /> {t.callLabel}</a>
           </div>
         </div>
       </header>

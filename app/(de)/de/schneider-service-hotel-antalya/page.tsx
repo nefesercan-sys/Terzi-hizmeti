@@ -105,7 +105,7 @@ export default function OtelBolgeleriDeHub() {
             </p>
             <div className="hero-btns">
               <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-primary">💬 Auf WhatsApp schreiben →</a>
-              <a href="tel:+905318986418" className="btn-secondary">📞 +90 531 898 64 18</a>
+              <a href="tel:+905318986418" className="btn-secondary"><span className="ico-tel" aria-hidden="true" /> +90 531 898 64 18</a>
             </div>
           </div>
         </section>
@@ -202,7 +202,7 @@ export default function OtelBolgeleriDeHub() {
           <p className="cta-sub">Wir erreichen Sie wahrscheinlich trotzdem — fragen Sie einfach per WhatsApp.</p>
           <div className="cta-btns">
             <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-white">💬 Auf WhatsApp schreiben</a>
-            <a href="tel:+905318986418" className="btn-outline-white">📞 +90 531 898 64 18</a>
+            <a href="tel:+905318986418" className="btn-outline-white"><span className="ico-tel" aria-hidden="true" /> +90 531 898 64 18</a>
           </div>
         </section>
       </div>

@@ -211,7 +211,7 @@ export default function MobileTailorHotelPage() {
                 <span aria-hidden="true">🚕</span> Otelime Terzi Çağır <span aria-hidden="true">→</span>
               </a>
               <a href={`tel:${PHONE_TEL}`} className="btn-secondary">
-                <span aria-hidden="true">📞</span> {PHONE}
+                <span className="ico-tel" aria-hidden="true" /> {PHONE}
               </a>
             </div>
           </div>
@@ -337,7 +337,7 @@ export default function MobileTailorHotelPage() {
               <span aria-hidden="true">💬</span> Contact via WhatsApp
             </a>
             <a href={`tel:${PHONE_TEL}`} className="btn-outline-white">
-              <span aria-hidden="true">📞</span> Call Now
+              <span className="ico-tel" aria-hidden="true" /> Call Now
             </a>
           </div>
         </section>

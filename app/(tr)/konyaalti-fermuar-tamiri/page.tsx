@@ -129,7 +129,7 @@ export default function FermuarTamiriPage() {
 
       <div>
         <div className="float">
-          <a href={`tel:${PHONE_TEL}`} className="fbtn fbtn-call" aria-label="Ara">📞</a>
+          <a href={`tel:${PHONE_TEL}`} className="fbtn fbtn-call" aria-label="Ara"><span className="ico-tel" aria-hidden="true" /></a>
           <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="fbtn fbtn-wa" aria-label="WhatsApp">💬</a>
         </div>
 
@@ -156,7 +156,7 @@ export default function FermuarTamiriPage() {
             <p className="hero-desc"><strong>Kısa cevap:</strong> Fermuar değişimi ve tamiri ₺300'den başlar; normal işler aynı gün, acil işler 1–2 saatte tamamlanır.</p>
             <div className="hero-btns">
               <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-primary">💬 Fotoğraf Gönderin →</a>
-              <a href={`tel:${PHONE_TEL}`} className="btn-secondary">📞 {PHONE}</a>
+              <a href={`tel:${PHONE_TEL}`} className="btn-secondary"><span className="ico-tel" aria-hidden="true" /> {PHONE}</a>
             </div>
           </div>
         </section>

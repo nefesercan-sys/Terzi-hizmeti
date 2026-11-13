@@ -100,7 +100,7 @@ export default function GelinlikTadilatiPage() {
 
       <div>
         <div className="float">
-          <a href={`tel:${PHONE_TEL}`} className="fbtn fbtn-call" aria-label="Ara">📞</a>
+          <a href={`tel:${PHONE_TEL}`} className="fbtn fbtn-call" aria-label="Ara"><span className="ico-tel" aria-hidden="true" /></a>
           <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="fbtn fbtn-wa" aria-label="WhatsApp">💬</a>
         </div>
 
@@ -128,7 +128,7 @@ export default function GelinlikTadilatiPage() {
             </p>
             <div className="hero-btns">
               <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-primary">💬 Randevu Alın →</a>
-              <a href={`tel:${PHONE_TEL}`} className="btn-secondary">📞 {PHONE}</a>
+              <a href={`tel:${PHONE_TEL}`} className="btn-secondary"><span className="ico-tel" aria-hidden="true" /> {PHONE}</a>
             </div>
           </div>
         </section>

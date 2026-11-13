@@ -16,7 +16,7 @@ const OG       = `${SITE}/terzi-can-hero.jpg`;
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: 'Keten Pamuk Özel Dikim, Kalıp, Seri Üretim | Terzi Can' },
-  description: '☎ ' + PHONE + ' · ' + 'Keten ve pamuk giyim: bay, bayan, çocuk özel dikim, model ve kalıp çıkarma, numune, seri ve fason üretim. Avrupa ve Rusya\'ya gönderim.',
+  description: 'Terziye sor: ' + PHONE + ' · ' + 'Keten ve pamuk giyim: bay, bayan, çocuk özel dikim, model ve kalıp çıkarma, numune, seri ve fason üretim. Avrupa ve Rusya\'ya gönderim.',
   keywords: fitKeywords(['keten özel dikim antalya', 'pamuk özel dikim', 'keten elbise diktirmek', 'keten gömlek dikim', 'bay keten giyim dikimi', 'bayan keten elbise modelleri', 'keten pamuk model ve kalıp çıkarma', 'keten giyim numune çalışması', 'keten pamuk seri üretim', 'keten giyim seri imalat', 'pamuk giyim seri imalat', 'keten giyim fason üretim', 'pamuk giyim fason dikim', 'özel ve seri keten üretimi', 'Avrupa ve Rusya\'ya keten giyim gönderimi', 'keten pamuk giyim imalatı antalya',
     'bay bayan keten elbise', 'keten pantolon özel dikim', 'keten ceket özel dikim', 'keten şort dikimi', 'keten etek dikimi', 'pamuk gömlek özel dikim',
     'doğal kumaş özel dikim', 'doğal kumaş giyim üretimi', 'kişiye özel keten elbise', 'tek adet ve seri adet dikim',

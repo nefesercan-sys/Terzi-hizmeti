@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Kot Daraltma ₺200'den · Bacak, Bel, Kalça · Antalya" },
   description:
-    '☎ ' + PHONE + ' · ' + "Kot pantolon bacak ve bel daraltma ₺200'den; ölçü üzerinizde alınır. Normal iş aynı gün, acil 1–2 saat. Eve ve otele servis.",
+    'Terziye sor: ' + PHONE + ' · ' + "Kot pantolon bacak ve bel daraltma ₺200'den; ölçü üzerinizde alınır. Normal iş aynı gün, acil 1–2 saat. Eve ve otele servis.",
   keywords: fitKeywords([
     'kot pantolon daraltma', 'kot daraltma fiyat', 'kot pantolon bacak daraltma', 'kot bel daraltma', 'kot pantolon daraltma Antalya', 'jean daraltma terzi', 'kot pantolon dar paça yapma',
   ]),
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: "Kot Pantolon Daraltma Antalya — Aynı Gün",
-    description: '☎ ' + PHONE + ' · ' + "Kot pantolon bacak ve bel daraltma ₺200'den. Normal iş aynı gün, acil 1–2 saat.",
+    description: 'Terziye sor: ' + PHONE + ' · ' + "Kot pantolon bacak ve bel daraltma ₺200'den. Normal iş aynı gün, acil 1–2 saat.",
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'tr_TR', type: 'website',
     images: [{ url: `${SITE}/terzi-can-hero.jpg`, width: 1024, height: 1024, alt: "Kot Pantolon Daraltma Antalya — Aynı Gün" }],
   },

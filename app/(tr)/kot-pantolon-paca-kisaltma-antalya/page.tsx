@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Kot Pantolon Paça Kısaltma ₺200'den · Aynı Gün · Antalya" },
   description:
-    '☎ ' + PHONE + ' · ' + "Kot pantolon paça kısaltma, orijinal paça yapımı ve daraltma ₺200'den. Normal iş aynı gün, acil 1–2 saat. Eve ve otele servis.",
+    'Terziye sor: ' + PHONE + ' · ' + "Kot pantolon paça kısaltma, orijinal paça yapımı ve daraltma ₺200'den. Normal iş aynı gün, acil 1–2 saat. Eve ve otele servis.",
   keywords: fitKeywords([
     'kot pantolon paça kısaltma', 'kot paçası kısaltma', 'kot pantolon paça yapımı', 'kot pantolon orijinal paça', 'kot pantolon daraltma', 'kot pantolon kısaltma', 'kot paça kısaltma fiyat', 'jean paça kısaltma', 'Antalya kot paça kısaltma',
   ]),
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: "Kot Pantolon Paça Kısaltma Antalya — Aynı Gün",
-    description: '☎ ' + PHONE + ' · ' + "Kot paça kısaltma, orijinal paça yapımı, daraltma. Normal iş aynı gün, acil 1–2 saat.",
+    description: 'Terziye sor: ' + PHONE + ' · ' + "Kot paça kısaltma, orijinal paça yapımı, daraltma. Normal iş aynı gün, acil 1–2 saat.",
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'tr_TR', type: 'website',
     images: [{ url: `${SITE}/terzi-can-hero.jpg`, width: 1024, height: 1024, alt: "Kot Pantolon Paça Kısaltma Antalya — Aynı Gün" }],
   },

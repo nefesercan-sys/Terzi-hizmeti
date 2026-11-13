@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Terzi Can Antalya · Konyaaltı Terzi · +90 531 898 64 18" },
   description:
-    "☎ +90 531 898 64 18 · 2006'dan beri Konyaaltı Hurma, Liman, Uncalı, Gürsu'da bay bayan terzi: tamir, tadilat, özel dikim. Paça 200 TL'den, fermuar 300 TL'den (KDV hariç). Her gün 08:00–23:00.",
+    "Terziye sor: +90 531 898 64 18 · 2006'dan beri Konyaaltı Hurma, Liman, Uncalı, Gürsu'da bay bayan terzi: tamir, tadilat, özel dikim. Paça 200 TL'den, fermuar 300 TL'den (KDV hariç). Her gün 08:00–23:00.",
   keywords: ['Antalya terzi', 'Konyaaltı terzi', 'otele gelen terzi Antalya', 'acil terzi Antalya', 'paça kısaltma Konyaaltı', 'fermuar değişimi Antalya', 'gelinlik tadilatı Antalya', 'özel dikim Antalya'],
   authors: [{ name: BIZ, url: SITE }],
   creator: BIZ,
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Terzi Can Antalya — Tailor & Alterations | Портной Анталья',
-    description: '☎ ' + PHONE + ' · ' + 'Professional tailoring & alteration service in Konyaaltı, Antalya. English, Russian, German & Turkish spoken.',
+    description: 'Ask the tailor: ' + PHONE + ' · ' + 'Professional tailoring & alteration service in Konyaaltı, Antalya. English, Russian, German & Turkish spoken.',
     url: SITE, siteName: 'Terzi Hizmeti', locale: 'tr_TR',
     alternateLocale: ['en_US', 'ru_RU', 'de_DE'],
     type: 'website',
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Terzi Can Antalya | Tailor & Alterations | Портной',
-    description: '☎ ' + PHONE + ' · ' + 'Konyaaltı tailor workshop. Alterations, hemming, zipper replacement, dressmaking.',
+    description: 'Ask the tailor: ' + PHONE + ' · ' + 'Konyaaltı tailor workshop. Alterations, hemming, zipper replacement, dressmaking.',
     images: [OG],
   },
   other: {

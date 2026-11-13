@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Kot Etek Kısaltma ve Daraltma ₺200'den · Antalya" },
   description:
-    '☎ ' + PHONE + ' · ' + "Kot etek boyu kısaltma, bel daraltma ve orijinal etek ucu ₺200'den. Normal iş aynı gün, acil 1–2 saat. Eve ve otele servis.",
+    'Terziye sor: ' + PHONE + ' · ' + "Kot etek boyu kısaltma, bel daraltma ve orijinal etek ucu ₺200'den. Normal iş aynı gün, acil 1–2 saat. Eve ve otele servis.",
   keywords: fitKeywords([
     'kot etek kısaltma', 'kot etek daraltma', 'kot etek boy kısaltma', 'kot etek bel daraltma', 'kot etek orijinal ucu', 'kot etek tadilatı', 'Antalya kot etek kısaltma',
   ]),
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: "Kot Etek Kısaltma ve Daraltma Antalya",
-    description: '☎ ' + PHONE + ' · ' + "Kot etek boy kısaltma, bel daraltma, orijinal etek ucu. ₺200'den.",
+    description: 'Terziye sor: ' + PHONE + ' · ' + "Kot etek boy kısaltma, bel daraltma, orijinal etek ucu. ₺200'den.",
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'tr_TR', type: 'website',
     images: [{ url: `${SITE}/terzi-can-hero.jpg`, width: 1024, height: 1024, alt: "Kot Etek Kısaltma ve Daraltma Antalya" }],
   },

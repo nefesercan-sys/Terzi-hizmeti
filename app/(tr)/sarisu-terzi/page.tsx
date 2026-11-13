@@ -19,13 +19,13 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Sarısu Terzi · Kot Paçası ₺200'den · Her Gün Açık" },
   description:
-    '☎ ' + PHONE + ' · ' + "Sarısu terzi: kot paçası, şort, pantolon kısaltma ₺200, fermuar ₺300, bel daraltma. Sarısu'ya servis. Her gün 08:00–23:00.",
+    'Terziye sor: ' + PHONE + ' · ' + "Sarısu terzi: kot paçası, şort, pantolon kısaltma ₺200, fermuar ₺300, bel daraltma. Sarısu'ya servis. Her gün 08:00–23:00.",
   keywords: fitKeywords(Array.from(new Set(['Sarısu tamir tadilat', 'Sarısu söküğü dikme', 'Sarısu yırtık tamiri', 'Sarısu elbise tamiri', 'Sarısu terzi', 'Sarısu mahallesi terzi', 'Sarısu Konyaaltı terzi', 'Sarısu paça kısaltma', 'Sarısu fermuar tamiri', 'Sarısu bel daraltma', 'Sarısu elbise dikimi', 'Sarısu gelinlik tadilatı', 'Sarısu terzi fiyatları 2026', 'Konyaaltı Sarısu dikiş atölyesi', 'Sarısu kot paçası kısaltma', 'Sarısu kot kısaltma', 'Sarısu kot daraltma', 'Sarısu şort kısaltma', 'Sarısu şort daraltma', 'Sarısu pantolon kısaltma', 'Sarısu pantolon daraltma', 'Sarısu etek kısaltma', 'Sarısu etek daraltma', 'Sarısu fermuar değişimi', 'Sarısu beden ayarlama', 'Sarısu ölçüye göre dikim', 'Sarısu özel dikim', 'Sarısu bay bayan terzi', 'Sarısu çocuk kıyafet tadilatı', 'Sarısu abiye tamiri', 'Sarısu ceket tadilatı', 'Sarısu mont kısaltma', 'Sarısu gömlek daraltma', 'Sarısu yakınımda terzi', 'Konyaaltı Sarısu terzi tamir tadilat', 'Sarısu bay bayan elbise tamiri', 'Sarısu terzi', 'Sarısu bay bayan terzi', 'Sarısu dikim', 'Sarısu tamir tadilat', 'Sarısu elbise tamiri', 'Sarısu elbise tadilatı', 'Sarısu fermuar değişimi', 'Sarısu fermuar tamiri', 'Sarısu boy kısaltma', 'Sarısu bel daraltma', 'Sarısu etek boyu kısaltma', 'Sarısu pantolon boyu kısaltma', 'Sarısu paça kısaltma', 'Sarısu kot paçası kısaltma', 'Sarısu beden ölçüsüne göre elbise tadilatı', 'Sarısu mont tamiri', 'Sarısu ceket daraltma', 'Sarısu gömlek daraltma', 'Sarısu şort kısaltma', 'Sarısu pantolon daraltma', 'Sarısu etek daraltma', 'Sarısu elbise daraltma', 'Sarısu elbise dikimi']))),
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   alternates: { canonical: PAGE_URL, languages: { tr: PAGE_URL, en: `${SITE}${DISTRICT_BASE.en}/sarisu`, ru: `${SITE}${DISTRICT_BASE.ru}/sarisu`, de: `${SITE}${DISTRICT_BASE.de}/sarisu`, 'x-default': PAGE_URL } },
   openGraph: {
     title: 'Sarısu Terzi · Kot Paçası, Şort Kısaltma | Terzi Can',
-    description: '☎ ' + PHONE + ' · ' + "Sarısu terzi: kot paçası, şort ve pantolon kısaltma ₺200'den, bel daraltma, fermuar, tamir tadilat. Adrese servis. Her gün 08:00–23:00.",
+    description: 'Terziye sor: ' + PHONE + ' · ' + "Sarısu terzi: kot paçası, şort ve pantolon kısaltma ₺200'den, bel daraltma, fermuar, tamir tadilat. Adrese servis. Her gün 08:00–23:00.",
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'tr_TR', type: 'website',
     images: [{ url: `${SITE}/terzi-can-hero.jpg`, width: 1024, height: 1024, alt: 'Sarısu Terzi Konyaaltı' }],
   },

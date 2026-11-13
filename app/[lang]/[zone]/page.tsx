@@ -24,7 +24,7 @@ import { ZCOPY, ZONE_SLUGS, parseZone, zoneData, zoneSlug, zoneUrl } from '@/lib
 import { zoneSeoTitles } from '@/lib/bolge-hizmet-matrisi-turist';
 import { SITE } from '@/lib/seo-data';
 import { OG_DEFAULT } from '@/lib/turist-keten';
-import { fitDesc } from '@/lib/meta-fit';
+import { fitDesc, withAsk } from '@/lib/meta-fit';
 import { hreflangFiyat, hreflangIletisim, hreflangSvc } from '@/lib/hreflang';
 import UretimLanding from '@/components/UretimLanding';
 import { UDATA, U_IDS, parseU, uMetadata } from '@/lib/uretim';
@@ -50,11 +50,11 @@ export async function generateMetadata({ params }: P): Promise<Metadata> {
     const c = FIYAT[lang]; const url = `${SITE}${fiyatUrl(lang)}`;
     const title = c.title.length + 12 <= 60 ? `${c.title} | Terzi Can` : c.title;
     return {
-      metadataBase: new URL(SITE), title: { absolute: title }, description: fitDesc(c.desc),
+      metadataBase: new URL(SITE), title: { absolute: title }, description: fitDesc(withAsk(c.desc, lang), undefined, lang),
       robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
       alternates: { canonical: url, languages: hreflangFiyat() },
-      openGraph: { title, description: fitDesc(c.desc), url, siteName: 'Terzi Can', locale: INTL[lang].locale, type: 'website', images: [{ url: OG_DEFAULT, width: 1200, height: 630, alt: title }] },
-      twitter: { card: 'summary_large_image', title, description: fitDesc(c.desc), images: [OG_DEFAULT] },
+      openGraph: { title, description: fitDesc(withAsk(c.desc, lang), undefined, lang), url, siteName: 'Terzi Can', locale: INTL[lang].locale, type: 'website', images: [{ url: OG_DEFAULT, width: 1200, height: 630, alt: title }] },
+      twitter: { card: 'summary_large_image', title, description: fitDesc(withAsk(c.desc, lang), undefined, lang), images: [OG_DEFAULT] },
       other: { 'geo.region': 'TR-07', 'geo.placename': 'Antalya' },
     };
   }
@@ -62,11 +62,11 @@ export async function generateMetadata({ params }: P): Promise<Metadata> {
     const c = ILETISIM[lang]; const url = `${SITE}${iletisimUrl(lang)}`;
     const title = c.title.length + 12 <= 60 ? `${c.title} | Terzi Can` : c.title;
     return {
-      metadataBase: new URL(SITE), title: { absolute: title }, description: fitDesc(c.desc),
+      metadataBase: new URL(SITE), title: { absolute: title }, description: fitDesc(withAsk(c.desc, lang), undefined, lang),
       robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
       alternates: { canonical: url, languages: hreflangIletisim() },
-      openGraph: { title, description: fitDesc(c.desc), url, siteName: 'Terzi Can', locale: INTL[lang].locale, type: 'website', images: [{ url: OG_DEFAULT, width: 1200, height: 630, alt: title }] },
-      twitter: { card: 'summary_large_image', title, description: fitDesc(c.desc), images: [OG_DEFAULT] },
+      openGraph: { title, description: fitDesc(withAsk(c.desc, lang), undefined, lang), url, siteName: 'Terzi Can', locale: INTL[lang].locale, type: 'website', images: [{ url: OG_DEFAULT, width: 1200, height: 630, alt: title }] },
+      twitter: { card: 'summary_large_image', title, description: fitDesc(withAsk(c.desc, lang), undefined, lang), images: [OG_DEFAULT] },
       other: { 'geo.region': 'TR-07', 'geo.placename': 'Antalya' },
     };
   }
@@ -74,11 +74,11 @@ export async function generateMetadata({ params }: P): Promise<Metadata> {
     const c = SVC[lang]; const url = `${SITE}${svcUrl(lang)}`;
     const title = c.title.length + 12 <= 60 ? `${c.title} | Terzi Can` : c.title;
     return {
-      metadataBase: new URL(SITE), title: { absolute: title }, description: fitDesc(c.desc),
+      metadataBase: new URL(SITE), title: { absolute: title }, description: fitDesc(withAsk(c.desc, lang), undefined, lang),
       robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
       alternates: { canonical: url, languages: hreflangSvc() },
-      openGraph: { title, description: fitDesc(c.desc), url, siteName: 'Terzi Can', locale: INTL[lang].locale, type: 'website', images: [{ url: OG_DEFAULT, width: 1200, height: 630, alt: title }] },
-      twitter: { card: 'summary_large_image', title, description: fitDesc(c.desc), images: [OG_DEFAULT] },
+      openGraph: { title, description: fitDesc(withAsk(c.desc, lang), undefined, lang), url, siteName: 'Terzi Can', locale: INTL[lang].locale, type: 'website', images: [{ url: OG_DEFAULT, width: 1200, height: 630, alt: title }] },
+      twitter: { card: 'summary_large_image', title, description: fitDesc(withAsk(c.desc, lang), undefined, lang), images: [OG_DEFAULT] },
       other: { 'geo.region': 'TR-07', 'geo.placename': 'Antalya' },
     };
   }
@@ -87,11 +87,11 @@ export async function generateMetadata({ params }: P): Promise<Metadata> {
     const c = HIZMET[lang][hz]; const url = `${SITE}${hizmetUrl(lang, hz)}`;
     const title = c.title.length + 12 <= 60 ? `${c.title} | Terzi Can` : c.title;
     return {
-      metadataBase: new URL(SITE), title: { absolute: title }, description: fitDesc(c.desc),
+      metadataBase: new URL(SITE), title: { absolute: title }, description: fitDesc(withAsk(c.desc, lang), undefined, lang),
       robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
       alternates: { canonical: url, languages: hizmetLanguages(hz) },
-      openGraph: { title, description: fitDesc(c.desc), url, siteName: 'Terzi Can', locale: INTL[lang].locale, type: 'website', images: [{ url: OG_DEFAULT, width: 1200, height: 630, alt: title }] },
-      twitter: { card: 'summary_large_image', title, description: fitDesc(c.desc), images: [OG_DEFAULT] },
+      openGraph: { title, description: fitDesc(withAsk(c.desc, lang), undefined, lang), url, siteName: 'Terzi Can', locale: INTL[lang].locale, type: 'website', images: [{ url: OG_DEFAULT, width: 1200, height: 630, alt: title }] },
+      twitter: { card: 'summary_large_image', title, description: fitDesc(withAsk(c.desc, lang), undefined, lang), images: [OG_DEFAULT] },
       other: { 'geo.region': 'TR-07', 'geo.placename': 'Antalya' },
     };
   }
@@ -101,11 +101,11 @@ export async function generateMetadata({ params }: P): Promise<Metadata> {
     const brand = topic === 'tekstil' ? 'Anavera Tekstil' : 'Terzi Can';
     const title = c.title.length + brand.length + 3 <= 60 ? `${c.title} | ${brand}` : c.title;
     return {
-      metadataBase: new URL(SITE), title: { absolute: title }, description: fitDesc(c.desc),
+      metadataBase: new URL(SITE), title: { absolute: title }, description: (topic === 'tekstil' ? fitDesc(c.desc) : fitDesc(withAsk(c.desc, lang), undefined, lang)),
       robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
       alternates: { canonical: url, languages: topicLanguages(topic) },
-      openGraph: { title, description: fitDesc(c.desc), url, siteName: topic === 'tekstil' ? 'Anavera Tekstil' : 'Terzi Can', locale: INTL[lang].locale, type: 'website', images: [{ url: OG_DEFAULT, width: 1200, height: 630, alt: title }] },
-      twitter: { card: 'summary_large_image', title, description: fitDesc(c.desc), images: [OG_DEFAULT] },
+      openGraph: { title, description: (topic === 'tekstil' ? fitDesc(c.desc) : fitDesc(withAsk(c.desc, lang), undefined, lang)), url, siteName: topic === 'tekstil' ? 'Anavera Tekstil' : 'Terzi Can', locale: INTL[lang].locale, type: 'website', images: [{ url: OG_DEFAULT, width: 1200, height: 630, alt: title }] },
+      twitter: { card: 'summary_large_image', title, description: (topic === 'tekstil' ? fitDesc(c.desc) : fitDesc(withAsk(c.desc, lang), undefined, lang)), images: [OG_DEFAULT] },
       other: { 'geo.region': 'TR-07', 'geo.placename': 'Antalya' },
     };
   }
@@ -116,7 +116,7 @@ export async function generateMetadata({ params }: P): Promise<Metadata> {
   const seoT = zone === 'antalya' ? [] : zoneSeoTitles(lang, z.name, ZONE_SLUGS.indexOf(zone)); // bölgeye göre farklı, hizmet kelimeli başlık
   const base = seoT.find((t) => t.length <= 60) ?? zc.title(z.name);
   const title = base.length + 12 <= 60 ? `${base} | Terzi Can` : base;
-  const description = fitDesc(zc.desc(z.name));
+  const description = fitDesc(withAsk(zc.desc(z.name), lang), undefined, lang);
   const url = `${SITE}${zoneUrl(lang, zone)}`;
   const sfx = zone === 'antalya' ? '' : `/${zone}`; // 'antalya' = otel ana sayfası
   const tr = `${SITE}/otele-gelen-terzi-antalya${sfx}`;

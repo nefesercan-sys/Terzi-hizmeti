@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Mont Fermuarı Değişimi ₺300'den · Aynı Gün · Antalya" },
   description:
-    '☎ ' + PHONE + ' · ' + "Mont, kaban ve ceket fermuarı değişimi ₺300'den; kalın ve su geçirmez montlar dahil. Normal iş aynı gün, acil 1–2 saat.",
+    'Terziye sor: ' + PHONE + ' · ' + "Mont, kaban ve ceket fermuarı değişimi ₺300'den; kalın ve su geçirmez montlar dahil. Normal iş aynı gün, acil 1–2 saat.",
   keywords: fitKeywords([
     'mont fermuarı değiştirme', 'mont fermuarı değişimi fiyatları', 'mont fermuar tamiri Antalya',
     'kaban fermuarı değişimi', 'ceket fermuarı değişimi', 'su geçirmez mont fermuarı',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   alternates: { canonical: PAGE_URL },
   openGraph: {
     title: 'Mont Fermuarı Değişimi Antalya — Aynı Gün Teslim',
-    description: '☎ ' + PHONE + ' · ' + 'Mont, kaban, ceket fermuarı değişimi. Normal iş aynı gün, acil 1–2 saat.',
+    description: 'Terziye sor: ' + PHONE + ' · ' + 'Mont, kaban, ceket fermuarı değişimi. Normal iş aynı gün, acil 1–2 saat.',
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'tr_TR', type: 'website',
     images: [{ url: `${SITE}/terzi-can-hero.jpg`, width: 1024, height: 1024, alt: 'Mont fermuarı değişimi Antalya' }],
   },

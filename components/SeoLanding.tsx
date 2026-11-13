@@ -332,7 +332,7 @@ export function districtMetadata(lang: Lang, d: District): Metadata {
   return {
     metadataBase: new URL(SITE),
     title: { absolute: c.title },
-    description: fitDesc(c.desc),
+    description: fitDesc(c.desc, undefined, lang),
     keywords: fitKeywords(kw),
     // Türkçe + uzak bölge: dizine alınmasın, linkler takip edilsin.
     robots: !isIndexable(lang, d.slug)
@@ -340,7 +340,7 @@ export function districtMetadata(lang: Lang, d: District): Metadata {
       : { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
     alternates: alternatesFor(lang, (l) => abs(districtUrl(l, d)), d.slug),
     openGraph: {
-      title: c.title, description: fitDesc(c.desc), url, siteName: 'Terzi Can', locale: OG_LOCALE[lang], type: 'website',
+      title: c.title, description: fitDesc(c.desc, undefined, lang), url, siteName: 'Terzi Can', locale: OG_LOCALE[lang], type: 'website',
       images: [{ url: OG, width: 1024, height: 1024, alt: c.title }],
     },
   };
@@ -352,7 +352,7 @@ export function serviceMetadata(lang: Lang, s: Service): Metadata {
   return {
     metadataBase: new URL(SITE),
     title: { absolute: c.title },
-    description: fitDesc(c.desc),
+    description: fitDesc(c.desc, undefined, lang),
     keywords: fitKeywords([
       ...c.kw,
       ...s.vars[lang],
@@ -368,7 +368,7 @@ export function serviceMetadata(lang: Lang, s: Service): Metadata {
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
     alternates: (() => { const a = alternatesFor(lang, (l) => abs(serviceUrl(l, s))); return { ...a, languages: { ...a.languages, ...sixForService(s.slug.tr) } }; })(),
     openGraph: {
-      title: c.title, description: fitDesc(c.desc), url, siteName: 'Terzi Can', locale: OG_LOCALE[lang], type: 'website',
+      title: c.title, description: fitDesc(c.desc, undefined, lang), url, siteName: 'Terzi Can', locale: OG_LOCALE[lang], type: 'website',
       images: [{ url: OG, width: 1024, height: 1024, alt: c.title }],
     },
   };
@@ -382,19 +382,19 @@ export function hubMetadata(lang: Lang): Metadata {
     de: 'Kleidung ändern & reparieren Antalya · Kürzen',
   }[lang];
   const description = {
-    tr: `☎ ${PHONE} · Bay bayan tamir tadilat: söküğü, yırtığı dikme, paça ve etek kısaltma, fermuar değişimi. Konyaaltı Hurma, Liman, Uncalı, Gürsu.`,
-    en: `☎ ${PHONE} · Clothing repair for men & women: torn seams, hemming, zipper replacement. Konyaaltı, Hurma, Liman, Arapsuyu. Pick-up arranged on WhatsApp.`,
-    ru: `☎ ${PHONE} · Ремонт одежды: зашить дырку, подшив, молнии, мужская и женская. Коньяалты, Хурма, Лиман, Арапсую. Забор вещей.`,
-    de: `☎ ${PHONE} · Kleidung reparieren & ändern: Risse nähen, Kürzen, Reißverschluss. Konyaaltı, Hurma, Liman, Arapsuyu. Hotelabholung.`,
+    tr: `Terziye sor: ${PHONE} · Bay bayan tamir tadilat: söküğü, yırtığı dikme, paça ve etek kısaltma, fermuar değişimi. Konyaaltı Hurma, Liman, Uncalı, Gürsu.`,
+    en: `Ask the tailor: ${PHONE} · Clothing repair for men & women: torn seams, hemming, zipper replacement. Konyaaltı, Hurma, Liman, Arapsuyu. Pick-up arranged on WhatsApp.`,
+    ru: `Спросите в ателье: ${PHONE} · Ремонт одежды: зашить дырку, подшив, молнии, мужская и женская. Коньяалты, Хурма, Лиман, Арапсую. Забор вещей.`,
+    de: `Schneider fragen: ${PHONE} · Kleidung reparieren & ändern: Risse nähen, Kürzen, Reißverschluss. Konyaaltı, Hurma, Liman, Arapsuyu. Hotelabholung.`,
   }[lang];
   const url = abs(SERVICE_BASE[lang]);
   return {
     metadataBase: new URL(SITE),
     title: { absolute: title },
-    description: fitDesc(description),
+    description: fitDesc(description, undefined, lang),
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
     alternates: (() => { const a = alternatesFor(lang, (l) => abs(SERVICE_BASE[l])); return { ...a, languages: { ...a.languages, ...sixAlt('tamir') } }; })(),
-    openGraph: { title, description: fitDesc(description), url, siteName: 'Terzi Can', locale: OG_LOCALE[lang], type: 'website', images: [{ url: OG, width: 1024, height: 1024, alt: title }] },
+    openGraph: { title, description: fitDesc(description, undefined, lang), url, siteName: 'Terzi Can', locale: OG_LOCALE[lang], type: 'website', images: [{ url: OG, width: 1024, height: 1024, alt: title }] },
   };
 }
 
@@ -433,6 +433,13 @@ function Shell({ lang, waMsg, children, footLinks }: { lang: Lang; waMsg: string
   );
 }
 
+const ASK_LINE: Record<string, string> = {
+  tr: "Terziye sor: arayın ya da WhatsApp'tan yazın. Sormak ücretsiz.",
+  en: 'Ask the tailor: call or message us on WhatsApp. Asking is free.',
+  ru: 'Спросите в ателье: позвоните или напишите в WhatsApp. Спросить можно бесплатно.',
+  de: 'Schneider fragen: anrufen oder per WhatsApp schreiben. Fragen kostet nichts.',
+};
+
 function Hero({ lang, tag, h1, desc, waMsg }: { lang: Lang; tag: string; h1: React.ReactNode; desc: string; waMsg: string }) {
   const u = UI[lang];
   return (
@@ -449,6 +456,7 @@ function Hero({ lang, tag, h1, desc, waMsg }: { lang: Lang; tag: string; h1: Rea
           <a href={WA(waMsg)} target="_blank" rel="noopener noreferrer" className="btn-primary">{u.waBtn}</a>
           <a href={`tel:${PHONE_TEL}`} className="btn-secondary">📞 {PHONE}</a>
         </div>
+        <p className="hero-ask" style={{ margin: '.85rem 0 0', fontSize: '.95rem', fontWeight: 600, opacity: 0.92 }}>{ASK_LINE[lang]}</p>
       </div>
     </section>
   );

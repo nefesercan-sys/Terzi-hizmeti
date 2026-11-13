@@ -274,7 +274,7 @@ export default function KonyaaltiTailorServicePage() {
                 <span aria-hidden="true">💬</span> Mahallenizi Söyleyin <span aria-hidden="true">→</span>
               </a>
               <a href={`tel:${PHONE_TEL}`} className="btn-secondary">
-                <span aria-hidden="true">📞</span> {PHONE}
+                <span className="ico-tel" aria-hidden="true" /> {PHONE}
               </a>
             </div>
           </div>

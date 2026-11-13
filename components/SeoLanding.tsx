@@ -413,7 +413,7 @@ function Shell({ lang, waMsg, children, footLinks }: { lang: Lang; waMsg: string
   return (
     <div lang={lang}>
       <div className="float">
-        <a href={`tel:${PHONE_TEL}`} className="fbtn fbtn-call" aria-label="Tel">📞</a>
+        <a href={`tel:${PHONE_TEL}`} className="fbtn fbtn-call" aria-label="Tel"><span className="ico-tel" aria-hidden="true" /></a>
         <a href={href} target="_blank" rel="noopener noreferrer" className="fbtn fbtn-wa" aria-label="WhatsApp">💬</a>
       </div>
       <nav className="nav" aria-label="Navigation">
@@ -454,7 +454,7 @@ function Hero({ lang, tag, h1, desc, waMsg }: { lang: Lang; tag: string; h1: Rea
         <p className="hero-desc">{desc}</p>
         <div className="hero-btns">
           <a href={WA(waMsg)} target="_blank" rel="noopener noreferrer" className="btn-primary">{u.waBtn}</a>
-          <a href={`tel:${PHONE_TEL}`} className="btn-secondary">📞 {PHONE}</a>
+          <a href={`tel:${PHONE_TEL}`} className="btn-secondary"><span className="ico-tel" aria-hidden="true" /> {PHONE}</a>
         </div>
         <p className="hero-ask" style={{ margin: '.85rem 0 0', fontSize: '.95rem', fontWeight: 600, opacity: 0.92 }}>{ASK_LINE[lang]}</p>
       </div>

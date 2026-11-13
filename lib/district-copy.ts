@@ -8,12 +8,6 @@ import { DELIVERY } from '@/lib/delivery';
 import { PHONE, isFreeService, type Lang, type District } from '@/lib/seo-data';
 import { pickVariant } from '@/lib/area-profiles';
 
-const HOME: Record<Lang, { free: string; ask: string }> = {
-  tr: { free: 'Ev adreslerinde de alım-teslim yapılır.', ask: 'Ev adreslerinde de alım-teslim yapılır.' },
-  en: { free: 'Home addresses are served here as well.', ask: 'Home addresses are served here as well.' },
-  ru: { free: 'Домашние адреса здесь тоже обслуживаются.', ask: 'Домашние адреса здесь тоже обслуживаются.' },
-  de: { free: 'Auch Wohnadressen werden hier bedient.', ask: 'Auch Wohnadressen werden hier bedient.' },
-};
 const HOTEL_FREE: Record<Lang, string> = {
   tr: 'Eve ve otele alım-teslim yapılır.', en: 'Pick-up and delivery to homes and hotels is available.', ru: 'Забор и доставка на дом и в отели возможны.', de: 'Abholung und Lieferung zu Hause und im Hotel sind möglich.',
 };
@@ -22,7 +16,6 @@ const HOTEL_FREE: Record<Lang, string> = {
 export function districtAnswer(lang: Lang, d: District): string {
   const loc = d.loc[lang];
   const D = DELIVERY[lang];
-  const home = isFreeService(d.slug) ? HOME[lang].free : HOME[lang].ask;
   const v = pickVariant(d.slug, 3, 'ans');
   if (v === 2) {
     // Yakınımdaki terzi / near me kalıbı + başlangıç fiyatları (sesli ve yapay zeka sorguları için)
@@ -36,22 +29,22 @@ export function districtAnswer(lang: Lang, d: District): string {
   }
   if (lang === 'tr') {
     return v === 0
-      ? `Terzi Can, ${loc} paça kısaltma, daraltma, fermuar değişimi ve elbise tadilatı yapar; atölye Konyaaltı'nda, Hurma'dadır ve her gün 08:00–23:00 WhatsApp ile telefondan (${PHONE}) ulaşılır. ${D.urgent} ${D.normal} ${HOTEL_FREE.tr} ${home}`
-      : `${loc} terzi arıyorsanız Terzi Can'a ${PHONE} numarasından, her gün 08:00–23:00 arası WhatsApp veya telefonla ulaşabilirsiniz; atölye Hurma, Konyaaltı'ndadır. ${D.urgent} ${D.normal} ${HOTEL_FREE.tr} ${home}`;
+      ? `Terzi Can, ${loc} paça kısaltma, daraltma, fermuar değişimi ve elbise tadilatı yapar; atölye Konyaaltı'nda, Hurma'dadır ve her gün 08:00–23:00 WhatsApp ile telefondan (${PHONE}) ulaşılır. ${D.urgent} ${D.normal} ${HOTEL_FREE.tr}`
+      : `${loc} terzi arıyorsanız Terzi Can'a ${PHONE} numarasından, her gün 08:00–23:00 arası WhatsApp veya telefonla ulaşabilirsiniz; atölye Hurma, Konyaaltı'ndadır. ${D.urgent} ${D.normal} ${HOTEL_FREE.tr}`;
   }
   if (lang === 'en') {
     return v === 0
-      ? `Terzi Can hems, takes in and repairs clothes ${loc}; the workshop is in Hurma, Konyaaltı, and you can reach us on WhatsApp or by phone (${PHONE}) every day from 08:00 to 23:00. ${D.urgent} ${D.normal} ${HOTEL_FREE.en} ${home}`
-      : `Looking for a tailor ${loc}? Message or call Terzi Can on ${PHONE} daily between 08:00 and 23:00; our workshop is in Hurma, Konyaaltı. ${D.urgent} ${D.normal} ${HOTEL_FREE.en} ${home}`;
+      ? `Terzi Can hems, takes in and repairs clothes ${loc}; the workshop is in Hurma, Konyaaltı, and you can reach us on WhatsApp or by phone (${PHONE}) every day from 08:00 to 23:00. ${D.urgent} ${D.normal} ${HOTEL_FREE.en}`
+      : `Looking for a tailor ${loc}? Message or call Terzi Can on ${PHONE} daily between 08:00 and 23:00; our workshop is in Hurma, Konyaaltı. ${D.urgent} ${D.normal} ${HOTEL_FREE.en}`;
   }
   if (lang === 'ru') {
     return v === 0
-      ? `Terzi Can подшивает, ушивает и ремонтирует одежду ${loc}; мастерская находится в Хурме (Коньяалты), на связи в WhatsApp и по телефону (${PHONE}) ежедневно с 08:00 до 23:00. ${D.urgent} ${D.normal} ${HOTEL_FREE.ru} ${home}`
-      : `Ищете портного ${loc}? Пишите или звоните в Terzi Can по номеру ${PHONE} ежедневно с 08:00 до 23:00; мастерская — в Хурме, Коньяалты. ${D.urgent} ${D.normal} ${HOTEL_FREE.ru} ${home}`;
+      ? `Terzi Can подшивает, ушивает и ремонтирует одежду ${loc}; мастерская находится в Хурме (Коньяалты), на связи в WhatsApp и по телефону (${PHONE}) ежедневно с 08:00 до 23:00. ${D.urgent} ${D.normal} ${HOTEL_FREE.ru}`
+      : `Ищете портного ${loc}? Пишите или звоните в Terzi Can по номеру ${PHONE} ежедневно с 08:00 до 23:00; мастерская — в Хурме, Коньяалты. ${D.urgent} ${D.normal} ${HOTEL_FREE.ru}`;
   }
   return v === 0
-    ? `Terzi Can kürzt, ändert und repariert Kleidung ${loc}; die Werkstatt liegt in Hurma, Konyaaltı, erreichbar per WhatsApp oder Telefon (${PHONE}) täglich von 08:00 bis 23:00. ${D.urgent} ${D.normal} ${HOTEL_FREE.de} ${home}`
-    : `Sie suchen einen Schneider ${loc}? Schreiben oder rufen Sie Terzi Can unter ${PHONE} an, täglich 08:00–23:00; die Werkstatt ist in Hurma, Konyaaltı. ${D.urgent} ${D.normal} ${HOTEL_FREE.de} ${home}`;
+    ? `Terzi Can kürzt, ändert und repariert Kleidung ${loc}; die Werkstatt liegt in Hurma, Konyaaltı, erreichbar per WhatsApp oder Telefon (${PHONE}) täglich von 08:00 bis 23:00. ${D.urgent} ${D.normal} ${HOTEL_FREE.de}`
+    : `Sie suchen einen Schneider ${loc}? Schreiben oder rufen Sie Terzi Can unter ${PHONE} an, täglich 08:00–23:00; die Werkstatt ist in Hurma, Konyaaltı. ${D.urgent} ${D.normal} ${HOTEL_FREE.de}`;
 }
 
 type QA = (lang: Lang, d: District) => [string, string];

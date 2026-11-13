@@ -172,7 +172,7 @@ export default function TailorServiceAntalyaPage() {
               <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-primary">
                 <span aria-hidden="true">💬</span> Share Your Location <span aria-hidden="true">→</span>
               </a>
-              <a href={`tel:${PHONE_TEL}`} className="btn-secondary"><span aria-hidden="true">📞</span> {PHONE}</a>
+              <a href={`tel:${PHONE_TEL}`} className="btn-secondary"><span className="ico-tel" aria-hidden="true" /> {PHONE}</a>
             </div>
           </div>
         </header>

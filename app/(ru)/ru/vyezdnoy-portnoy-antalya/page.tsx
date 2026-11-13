@@ -103,7 +103,7 @@ export default function OtelBolgeleriRuHub() {
             </p>
             <div className="hero-btns">
               <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-primary">💬 Написать в WhatsApp →</a>
-              <a href="tel:+905318986418" className="btn-secondary">📞 +90 531 898 64 18</a>
+              <a href="tel:+905318986418" className="btn-secondary"><span className="ico-tel" aria-hidden="true" /> +90 531 898 64 18</a>
             </div>
           </div>
         </section>
@@ -211,7 +211,7 @@ export default function OtelBolgeleriRuHub() {
           <p className="cta-sub">Скорее всего, мы всё равно можем приехать — просто спросите в WhatsApp.</p>
           <div className="cta-btns">
             <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-white">💬 Написать в WhatsApp</a>
-            <a href="tel:+905318986418" className="btn-outline-white">📞 +90 531 898 64 18</a>
+            <a href="tel:+905318986418" className="btn-outline-white"><span className="ico-tel" aria-hidden="true" /> +90 531 898 64 18</a>
           </div>
         </section>
       </div>

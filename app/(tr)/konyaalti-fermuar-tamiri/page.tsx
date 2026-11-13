@@ -22,9 +22,9 @@ const TODAY     = '2026-10-04';
 // sayfaları genel sayfalara göre daha hızlı ve yüksek sıralar.
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Fermuar Değişimi ₺300'den · Konyaaltı · 0531 898 64 18" },
+  title: { absolute: "Fermuar Değişimi ₺300'den · Konyaaltı · +90 531 898 64 18" },
   description:
-    "☎ 0531 898 64 18 · Pantolon, mont, ceket ve çanta fermuarı ₺300'den. Normal iş aynı gün, acil 1–2 saat. Eve ve otele servis.",
+    "☎ +90 531 898 64 18 · Pantolon, mont, ceket ve çanta fermuarı ₺300'den. Normal iş aynı gün, acil 1–2 saat. Eve ve otele servis.",
   keywords: fitKeywords([
     'fermuar tamiri Konyaaltı', 'fermuar değişimi Antalya', 'fermuar tamiri Antalya',
     'pantolon fermuarı değişimi', 'mont fermuarı tamiri', 'ceket fermuarı değişimi',

@@ -159,7 +159,7 @@ export default function GelinlikTadilatiPage() {
                   <span className="price-icon" aria-hidden="true">✨</span>
                   <div><div className="price-tr">Abiye & Nişanlık</div></div>
                 </div>
-                <p className="price-desc">Özel gün kıyafetlerinde detaylı tadilat.</p>
+                <p className="price-desc">Özel gün kıyafetlerinde detaylı tadilat. <a href="/abiye-tadilati-antalya">Abiye tadilatı ve tamiri sayfası</a></p>
                 <table className="price-table"><tbody>
                   <tr><td>Abiye Tadilatı</td><td>Fotoğrafa göre</td></tr>
                   <tr><td>Nişanlık Daraltma</td><td>Fotoğrafa göre</td></tr>
@@ -173,7 +173,7 @@ export default function GelinlikTadilatiPage() {
                 </div>
                 <p className="price-desc">Dantel, tül, saten kumaşlarda özel dikiş.</p>
                 <table className="price-table"><tbody>
-                  <tr><td>Dantel Deseni Bütünlüğü Koruma</td><td>₺300+</td></tr>
+                  <tr><td>Dantel Deseni Bütünlüğü Koruma</td><td>Fotoğrafa göre</td></tr>
                   <tr><td>Kuyruk Kısaltma</td><td>Fotoğrafa göre</td></tr>
                 </tbody></table>
               </div>

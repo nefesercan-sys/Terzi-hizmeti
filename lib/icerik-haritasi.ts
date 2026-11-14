@@ -28,6 +28,7 @@ const TR_SERVICES: MapLink[] = [
   { href: '/mont-tamiri-tadilati-antalya', label: 'Mont tamiri ve tadilatı' },
   { href: '/kaban-palto-tadilati-antalya', label: 'Kaban ve palto tadilatı' },
   { href: '/yelek-tamiri-tadilati-antalya', label: 'Yelek tamiri ve tadilatı' },
+  { href: '/abiye-tadilati-antalya', label: 'Abiye tadilatı ve tamiri' },
   { href: '/mont-fermuar-degisimi-antalya', label: 'Mont fermuarı değişimi' },
   { href: '/canta-fermuar-tamiri-antalya', label: 'Çanta fermuar tamiri' },
   { href: '/deri-ceket-tadilati-antalya', label: 'Deri ceket tadilatı' },

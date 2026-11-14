@@ -76,6 +76,7 @@ const TR: SssItem[] = [
   { q: 'Kot paçası orijinal paça görünümüyle kısaltılır mı?', a: "Evet, orijinal paça görünümü korunarak kısaltılır. Kot işleri yaklaşık ₺200'den başlar.", href: '/orijinal-kot-paca-yapimi-antalya' },
   { q: 'Deri ceket veya deri pantolon tadilatı yapılıyor mu?', a: "Evet. Deri ceket, pantolon ve yelek tadilatı ₺400'den başlar (yaklaşık €20).", href: '/deri-ceket-tadilati-antalya' },
   { q: 'Kaban ve palto kısaltma/daraltma yapılıyor mu?', a: "Evet. Kaban ve paltoda kısaltma ve daraltma ₺200'den, fermuar değişimi ₺300'den başlar.", href: '/kaban-palto-tadilati-antalya' },
+  { q: 'Abiye elbise tadilatı ve tamiri yapıyor musunuz?', a: 'Evet. Abiye beden ayarlama, daraltma, kısaltma, fermuar tamiri, askı ayarı, sırtı bağcıklı yapma ve model değiştirme yapılır; fiyat fotoğrafa göre verilir.', href: '/abiye-tadilati-antalya' },
   { q: 'Yelek tamiri ve daraltma var mı?', a: 'Evet. Yelek tadilatının fiyatı fotoğrafa göre verilir.', href: '/yelek-tamiri-tadilati-antalya' },
   { q: 'Gelinlik tadilatı yapıyor musunuz?', a: 'Evet. Gelinlik tadilatının fiyatı fotoğrafa veya işin detayına göre belirlenir; süre işin durumuna göre belirlenir.', href: '/antalya-gelinlik-tadilati' },
   { q: 'Gelinlik dikimi yapıyor musunuz?', a: 'Hayır. Gelinlik DİKİMİ yapılmaz; yalnızca gelinlik ve abiye TADİLATI yapılır.', href: '/antalya-gelinlik-tadilati' },

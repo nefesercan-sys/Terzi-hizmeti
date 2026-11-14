@@ -61,6 +61,7 @@ const QUICK: { q: string; a: string; price: string; href: string; cta: string }[
   { q: 'Kot paça, kot ceket veya kot etek kısaltma', a: 'Orijinal paça görünümü korunur; daraltma ve kısaltma.', price: '₺200\'den', href: '/kot-pantolon-paca-kisaltma-antalya', cta: 'Kot tadilat' },
   { q: 'Elbise diktirmek / kendime elbise dikmek', a: 'Ölçü, model ve kumaş seçimi, prova ve teslim. Fotoğrafını gönderin.', price: 'Fotoğrafa ve istediğiniz modele göre', href: '#dikim', cta: 'Özel dikim' },
   { q: 'Gelinlik ve abiye tadilatı', a: 'Hassas daraltma, boy ve askı ayarı; prova randevusu.', price: 'Fotoğrafa göre', href: '/antalya-gelinlik-tadilati', cta: 'Gelinlik tadilatı' },
+  { q: 'Abiye elbise daraltma, kısaltma, fermuar ve askı ayarı', a: 'Beden ayarlama, fermuar tamiri, bağcıklı yapma ve model değiştirme.', price: 'Fotoğrafa göre', href: '/abiye-tadilati-antalya', cta: 'Abiye tadilatı' },
   { q: 'Adrese veya otele gelen terzi', a: 'Ölçüyü adresinizde alırız, işi atölyede yapar, geri teslim ederiz.', price: 'Ev ve otele her bölgede servis', href: '/otele-gelen-terzi-antalya', cta: 'Otele gelen terzi' },
   { q: 'Pamuklu, doğal kumaştan dikim', a: 'Keten ve pamuktan özel dikim ve seri üretim yapılır.', price: 'Fotoğrafa göre', href: '/keten-pamuk-ozel-dikim', cta: 'Keten & pamuk' },
   { q: 'Model, tasarım, dikim atölyesi, seri imalat', a: 'Önce numune, onaydan sonra seri imalat ve üretim takibi (adet: modele göre teklif, proje bazında netleşir).', price: 'Teklif', href: '/anavera-tekstil', cta: 'Anavera Tekstil' },

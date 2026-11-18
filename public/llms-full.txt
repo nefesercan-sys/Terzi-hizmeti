@@ -102,7 +102,7 @@ A: Hayır, fiyatlara KDV dahil değildir.
 A: Hayır, hiçbir otelle ortaklığımız yoktur; Antalya'daki tüm otellere hizmet veriyoruz.
 
 **Q: Kaç yıldır hizmet veriyorsunuz? Hangi dilleri konuşuyorsunuz?**
-A: 2006'dan beri (26 yıl) hizmet veriyoruz; 10 dilde (Türkçe, İngilizce, Rusça, Almanca, Lehçe, Ukraynaca, Felemenkçe, Fransızca, İspanyolca, Arapça) yazışabilirsiniz.
+A: 2006'dan beri (20 yıl) hizmet veriyoruz; 10 dilde (Türkçe, İngilizce, Rusça, Almanca, Lehçe, Ukraynaca, Felemenkçe, Fransızca, İspanyolca, Arapça) yazışabilirsiniz.
 
 **Q: Çalışma saatleriniz nedir?**
 A: Her gün 08:00–23:00. WhatsApp ve telefon: +90 531 898 64 18.
@@ -194,7 +194,7 @@ Opening hours, price levels and service areas can change. The live pages and the
   Gürsu; Meltem, Şirinyalı, Fener and Güzeloba belong to Muratpaşa; hotel zones Lara, Belek, Side/Manavgat and Kemer are served too)
 - **Phone / WhatsApp:** +90 531 898 64 18
 - **Languages spoken:** 10 — Turkish, English, Russian, German, Polish, Ukrainian, Dutch, French, Spanish, Arabic (core pages in tr/en/ru/de, short pages in the other six)
-- **Experience:** serving since 2006 (26 years)
+- **Experience:** serving since 2006 (20 years)
 - **Official websites:** https://terzihizmeti.com.tr and https://swaphubs.com/terzi are both official websites of the same business; each keeps its own canonical address
 - **Payment:** all currencies (TRY, EUR, USD, RUB and others), cash or card (ödeme tüm para birimleriyle, nakit veya kartla)
 - **VAT:** prices do not include VAT (fiyatlara KDV dahil değildir)

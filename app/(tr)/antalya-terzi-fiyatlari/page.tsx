@@ -127,7 +127,7 @@ const jsonLd = {
     {
       '@type': 'Service', '@id': `${PAGE_URL}#service`,
       serviceType: 'Terzi, tamir, tadilat, özel dikim',
-      provider: { '@type': ['LocalBusiness', 'ClothingStore'], '@id': `${SITE}#business`, name: 'Terzi Can', telephone: PHONE_TEL, url: SITE },
+      provider: { '@type': 'LocalBusiness', '@id': `${SITE}#business`, name: 'TERZİ Can - Konyaaltı', telephone: PHONE_TEL, url: SITE },
       areaServed: ['Konyaaltı', 'Muratpaşa', 'Kepez', 'Lara', 'Antalya'].map((n) => ({ '@type': 'Place', name: n })),
       hasOfferCatalog: {
         '@type': 'OfferCatalog', name: 'Terzi fiyat listesi 2026 (başlangıç fiyatları)',

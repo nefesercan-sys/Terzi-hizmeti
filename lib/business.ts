@@ -19,13 +19,13 @@ export const GOOGLE_REVIEW_URL = 'https://g.page/r/CYUmDLIgrCRREAE/review';
 
 export function businessNode(opts: { reviews?: boolean } = {}) {
   return {
-  '@type': ['LocalBusiness', 'ClothingStore'],
+  '@type': 'LocalBusiness',
   ...(opts.reviews === false ? {} : reviewSchema()),
   additionalType: ['https://schema.org/SewingService'],
   '@id': BUSINESS_ID,
-  name: 'Terzi Can',
+  name: 'TERZİ Can - Konyaaltı',
   alternateName: [
-    'Terzi Can Antalya', 'Konyaaltı Terzi', 'Tailor Can Antalya',
+    'Terzi Can', 'TERZİ Can Antalya Tailor Service', 'Terzi Can Antalya', 'Konyaaltı Terzi', 'Tailor Can Antalya',
     'Портной Кан Анталья', 'Schneider Can Antalya', 'Terzi Hizmeti Antalya', 'Dikiş Atölyesi Antalya',
   ],
   description: "Antalya Konyaaltı'nda 2006'dan bu yana hizmet veren profesyonel terzi atölyesi. Paça kısaltma, fermuar değişimi, bel daraltma, özel dikim, gelinlik tadilatı, tekstil imalatı. Hurma, Liman, Sarısu, Gürsu, Uncalı bölgelerine hizmet.",

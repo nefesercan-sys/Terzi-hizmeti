@@ -39,23 +39,24 @@ export function twinUrl(url: string): string {
   return t ? `${SH_SITE}${t}` : url;
 }
 
-type Alt = { canonical?: string | URL | null; languages?: Record<string, string> | null; [k: string]: unknown };
-
 /**
- * Metadata/sitemap alternates sarmalayıcısı.
+ * Metadata/sitemap alternates sarmalayıcısı (Next.js Metadata ve MetadataRoute tipleriyle uyumlu olsun diye genel tip).
  * - Sayfanın kendisi swaphubs'ta asılsa: yalnız cross-domain canonical (hreflang yok).
  * - Değilse: hreflang kümesindeki kopya adresler swaphubs karşılığıyla değiştirilir.
  */
-export function withTwin<T extends Alt | undefined>(alt: T): T {
-  if (!alt) return alt;
-  const can = typeof alt.canonical === 'string' ? alt.canonical : undefined;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function withTwin<T>(alt: T): T {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const a = alt as any;
+  if (!a || typeof a !== 'object') return alt;
+  const can = typeof a.canonical === 'string' ? a.canonical : undefined;
   if (can) {
     const t = twinUrl(can);
-    if (t !== can) return { canonical: t } as unknown as T;
+    if (t !== can) return { canonical: t } as T;
   }
-  if (alt.languages) {
-    const languages = Object.fromEntries(Object.entries(alt.languages).map(([k, v]) => [k, typeof v === 'string' ? twinUrl(v) : v]));
-    return { ...alt, languages } as T;
+  if (a.languages && typeof a.languages === 'object') {
+    const languages = Object.fromEntries(Object.entries(a.languages).map(([k, v]) => [k, typeof v === 'string' ? twinUrl(v) : v]));
+    return { ...a, languages } as T;
   }
   return alt;
 }

@@ -9,6 +9,7 @@
 // ============================================================
 
 export const SH_SITE = 'https://swaphubs.com';
+const TWIN_OFF: boolean = true;
 const TH_SITE = 'https://terzihizmeti.com.tr';
 
 const DISTRICT_RE = /^\/(en\/tailor-antalya|ru\/portnoy-antalya|de\/schneider-antalya)\/[a-z0-9-]+$/;
@@ -26,6 +27,9 @@ const FIXED: Record<string, string> = {
 
 /** terzihizmeti yolu → swaphubs'taki karşılığı (yoksa null). */
 export function twinPath(path: string): string | null {
+  // Sahibin kararı (19 Kasım 2026 akşam): iki site arası canonical yönlendirmesi geri alındı; her sayfa kendi adresinde asıl.
+  // Yeniden açmak için aşağıdaki satırı silin.
+  if (TWIN_OFF) return null;
   const p = path.length > 1 ? path.replace(/\/$/, '') : path;
   if (FIXED[p]) return FIXED[p];
   if (DISTRICT_RE.test(p) || SERVICE_RE.test(p) || HOTEL_RE.test(p)) return p;

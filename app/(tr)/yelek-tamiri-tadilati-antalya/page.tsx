@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { withTwin } from '@/lib/twin';
 import ReviewsBlock from '@/components/ReviewsBlock';
 import KargoKisa from '@/components/KargoKisa';
 import { businessNode } from '@/lib/business';
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
   description: "Terziye sor: +90 531 898 64 18 · Takım elbise yeleği, kot ve deri yelek daraltma, boy ayarı, fermuar ve düğme onarımı. Fiyat fotoğrafa göre. Eve ve otele servis.",
   keywords: fitKeywords(["yelek tamiri", "yelek tadilatı", "yelek daraltma", "yelek kısaltma", "yelek fermuarı değişimi", "takım elbise yeleği tadilatı", "deri yelek tamiri", "kot yelek tadilatı", "yelek tamiri Antalya"]),
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
-  alternates: { canonical: PAGE_URL },
+  alternates: withTwin({ canonical: PAGE_URL }),
   openGraph: {
     title: "Yelek Tamiri ve Tadilatı Antalya | Terzi Can",
     description: "Takım elbise, kot, deri ve şişme yelek: beden daraltma, boy ve omuz ayarı, fermuar ve düğme onarımı. Eve ve otele servis.",

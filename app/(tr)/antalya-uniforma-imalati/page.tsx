@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next';
+import { withTwin } from '@/lib/twin';
 import ReviewsBlock from '@/components/ReviewsBlock';
 import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
 import { businessNode } from '@/lib/business';
@@ -97,9 +98,9 @@ export const metadata: Metadata = {
       'max-video-preview': -1,
     },
   },
-  alternates: {
+  alternates: withTwin({
     canonical: SITE_URL,
-  },
+  }),
   openGraph: {
     title: PAGE_TITLE,
     description: PAGE_DESC,

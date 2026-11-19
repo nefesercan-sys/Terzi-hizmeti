@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { withTwin } from '@/lib/twin';
 import ReviewsBlock from '@/components/ReviewsBlock';
 import KargoKisa from '@/components/KargoKisa';
 import { businessNode } from '@/lib/business';
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
   description: "Terziye sor: +90 531 898 64 18 · Abiye beden ayarlama, daraltma, kısaltma, fermuar tamiri, askı ayarı, bağcıklı yapma ve model değiştirme. Fiyat fotoğrafa göre.",
   keywords: fitKeywords(["abiye tadilatı", "abiye elbise tamiri", "abiye daraltma", "abiye elbise kısaltma", "abiye beden ayarlama", "abiye fermuar tamiri", "abiye fermuar değişimi", "abiye elbise bağcıklı yapma", "askılı elbise askı ayarlama", "elbise modelini değiştirme", "abiye tadilatı Antalya"]),
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
-  alternates: { canonical: PAGE_URL },
+  alternates: withTwin({ canonical: PAGE_URL }),
   openGraph: {
     title: "Abiye Tadilatı ve Tamiri Antalya | Terzi Can",
     description: "Abiye elbise daraltma, kısaltma, beden ayarlama, fermuar tamiri, askı ayarı, bağcıklı yapma ve model değiştirme. Fiyat fotoğrafa göre.",

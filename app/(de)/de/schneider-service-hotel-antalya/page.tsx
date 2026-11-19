@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { withTwin } from '@/lib/twin';
 import { zoneAlt } from '@/lib/intl-zones';
 import { OTEL_BOLGELERI } from '@/lib/otel-bolgeleri';
 
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
   title: 'Schneider im Hotel Antalya · Abholung',
   description: 'Schneider fragen: +90 531 898 64 18 · Schneider im Hotel in Belek, Lara, Kemer, Side: Abholung, Hose kürzen ab ₺200 (~€10), meist am selben Tag.',
   keywords: ['Schneider Hotel Antalya', 'mobiler Schneider Antalya', 'Schneider Belek Hotel', 'Schneider Lara Hotel', 'Schneider Kemer Hotel', 'Schneider Side Hotel', 'Kleidung ändern Antalya eilig', 'Änderungsschneiderei Hotel Antalya'],
-  alternates: {
+  alternates: withTwin({
     canonical: `${SITE}${BASE_PATH}`,
     languages: {
       'tr': `${SITE}/otele-gelen-terzi-antalya`,
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
       ...zoneAlt('antalya'),
       'x-default': `${SITE}/otele-gelen-terzi-antalya`,
     },
-  },
+  }),
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   openGraph: {
     title: 'Schneider im Hotel Antalya — Mobiler Service',
@@ -59,7 +60,7 @@ const jsonLd = {
           postalCode: '07130',
           addressCountry: 'TR',
         },
-        geo: { '@type': 'GeoCoordinates', latitude: 36.857466, longitude: 30.596987 } },
+        geo: { '@type': 'GeoCoordinates', latitude: 36.8572868, longitude: 30.5970193 } },
       areaServed: OTEL_BOLGELERI.map((r) => ({ '@type': 'Place', name: r.name })),
       availableLanguage: ['de', 'en', 'ru', 'tr', 'pl', 'uk', 'nl', 'fr', 'es', 'ar'],
     },

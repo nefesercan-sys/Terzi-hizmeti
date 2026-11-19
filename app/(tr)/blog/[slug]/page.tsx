@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { withTwin } from '@/lib/twin';
 import { notFound } from 'next/navigation';
 import { fitDesc } from '@/lib/meta-fit';
 import { BLOG_YAZILARI, blogYazisi } from '@/lib/blog-yazilari';
@@ -21,7 +22,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     metadataBase: new URL(SITE),
     title: { absolute: `${y.baslik} | Terzi Can Antalya`.length > 60 ? y.baslik : `${y.baslik} | Terzi Can Antalya` },
     description: fitDesc(y.ozet),
-    alternates: { canonical: url },
+    alternates: withTwin({ canonical: url }),
     robots: { index: true, follow: true },
     openGraph: {
       title: y.baslik, description: y.ozet, url, siteName: 'Terzi Hizmeti', locale: 'tr_TR', type: 'article',

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { withTwin } from '@/lib/twin';
 import { ANAVERA_URLS, translations, type AnaveraLang } from '@/components/AnaveraTekstilSayfasi';
 import { sixAlt } from '@/lib/intl-topics';
 import { fitDesc, fitKeywords } from '@/lib/meta-fit';
@@ -45,7 +46,7 @@ export function buildAnaveraMetadata(lang: AnaveraLang): Metadata {
     description: fitDesc(c.description),
     keywords: fitKeywords(c.keywords),
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large' } },
-    alternates: {
+    alternates: withTwin({
       canonical: url,
       languages: {
         'en': ANAVERA_URLS.en,
@@ -55,7 +56,7 @@ export function buildAnaveraMetadata(lang: AnaveraLang): Metadata {
         ...sixAlt('tekstil'),
         'x-default': ANAVERA_URLS.en,
       },
-    },
+    }),
     openGraph: {
       title: c.title,
       description: c.description,

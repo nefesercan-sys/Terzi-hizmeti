@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { withTwin } from '@/lib/twin';
 import ReviewsBlock from '@/components/ReviewsBlock';
 import KargoKisa from '@/components/KargoKisa';
 import { businessNode } from '@/lib/business';
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
   description: "Terziye sor: +90 531 898 64 18 · Ceket, mont, palto ve kaban astar değişimi ve onarımı; yırtık astar tamiri. Fiyat fotoğrafa göre.",
   keywords: fitKeywords(["astar değişimi", "astar tamiri", "yırtık astar", "ceket astarı değişimi", "mont astarı değişimi", "palto astarı", "kaban astarı", "astar tamiri Antalya"]),
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
-  alternates: { canonical: PAGE_URL },
+  alternates: withTwin({ canonical: PAGE_URL }),
   openGraph: {
     title: "Astar Değişimi Antalya | Terzi Can",
     description: "Ceket, mont, palto ve kaban astar değişimi ve onarımı; yırtık astar tamiri. Antalya Konyaaltı.",

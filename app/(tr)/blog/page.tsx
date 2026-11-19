@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { withTwin } from '@/lib/twin';
 
 const SITE  = 'https://terzihizmeti.com.tr';
 import { BLOG_YAZILARI } from '@/lib/blog-yazilari';
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Terzilik Rehberleri ve Blog | Terzi Can Antalya" },
   description: 'Terzi Can\'dan dikim, tadilat ve kıyafet bakımı üzerine pratik rehberler ve güncel bilgiler.',
-  alternates: { canonical: `${SITE}/blog` },
+  alternates: withTwin({ canonical: `${SITE}/blog` }),
   robots: { index: true, follow: true },
   openGraph: {
     title: 'Blog | Terzi Can Antalya',

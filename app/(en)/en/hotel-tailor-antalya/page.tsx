@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { withTwin } from '@/lib/twin';
 import { zoneAlt } from '@/lib/intl-zones';
 import { OTEL_BOLGELERI } from '@/lib/otel-bolgeleri';
 
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
   title: { absolute: "Hotel Tailor Antalya: We Come to Belek, Lara, Kemer & Side" },
   description: "Ask the tailor: +90 531 898 64 18 · Hotel tailor in Antalya: we come to you in Belek, Lara, Kemer, Side. pick-up, hemming from ₺200 (~€10), same day.",
   keywords: ['hotel tailor Antalya', 'tailor Belek hotel', 'tailor Lara hotel', 'tailor Kemer hotel', 'tailor Side hotel', 'urgent clothing alteration Antalya', 'mobile tailor Antalya', 'dress alteration hotel Antalya'],
-  alternates: {
+  alternates: withTwin({
     canonical: `${SITE}${BASE_PATH}`,
     languages: {
       'tr': `${SITE}/otele-gelen-terzi-antalya`,
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
       ...zoneAlt('antalya'),
       'x-default': `${SITE}/otele-gelen-terzi-antalya`,
     },
-  },
+  }),
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   openGraph: {
     title: 'Hotel Tailor Antalya — Mobile Service',
@@ -59,7 +60,7 @@ const jsonLd = {
           postalCode: '07130',
           addressCountry: 'TR',
         },
-        geo: { '@type': 'GeoCoordinates', latitude: 36.857466, longitude: 30.596987 } },
+        geo: { '@type': 'GeoCoordinates', latitude: 36.8572868, longitude: 30.5970193 } },
       areaServed: OTEL_BOLGELERI.map((r) => ({ '@type': 'Place', name: r.name })),
       availableLanguage: ['en', 'de', 'ru', 'tr', 'pl', 'uk', 'nl', 'fr', 'es', 'ar'],
     },

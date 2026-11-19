@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { withTwin } from '@/lib/twin';
 import ReviewsBlock from '@/components/ReviewsBlock';
 import KargoKisa from '@/components/KargoKisa';
 import { businessNode } from '@/lib/business';
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
     'orijinal kot paça yapımı', 'orijinal paça kot kısaltma', 'kot paça orijinal dikiş', 'kot paçası orijinal kalsın', 'orijinal paça kısaltma fiyat', 'kot paça kısaltma Antalya',
   ]),
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
-  alternates: { canonical: PAGE_URL },
+  alternates: withTwin({ canonical: PAGE_URL }),
   openGraph: {
     title: "Orijinal Kot Paça Yapımı Antalya — Aynı Gün",
     description: 'Terziye sor: ' + PHONE + ' · ' + "Kot paça kısaltırken orijinal paça görünümü korunur. ₺200'den.",

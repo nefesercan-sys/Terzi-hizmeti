@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { withTwin } from '@/lib/twin';
 import { notFound } from 'next/navigation';
 import IntlLanding from '@/components/IntlLanding';
 import { ILANGS, INTL, iUrl, isILang } from '@/lib/intl';
@@ -23,14 +24,14 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     description: fitDesc(withAsk(c.desc, lang), undefined, lang),
     keywords: fitKeywords(c.keywords),
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
-    alternates: {
+    alternates: withTwin({
       canonical: url,
       languages: {
         tr: `${SITE}/antalya-terzi`, en: `${SITE}/en/tailor-service-antalya`, ru: `${SITE}/ru/uslugi-portnogo-antalya`, de: `${SITE}/de/schneiderservice-antalya`,
         ...Object.fromEntries(ILANGS.map((l) => [INTL[l].hreflang, `${SITE}${iUrl(l)}`])),
         'x-default': `${SITE}/antalya-terzi`,
       },
-    },
+    }),
     openGraph: { title: c.title, description: fitDesc(withAsk(c.desc, lang), undefined, lang), url, siteName: 'Terzi Can', locale: c.locale, type: 'website', images: [{ url: OG_DEFAULT, width: 1200, height: 630, alt: c.h1 }] },
     twitter: { card: 'summary_large_image', title: c.title, description: fitDesc(withAsk(c.desc, lang), undefined, lang), images: [OG_DEFAULT] },
     other: { 'geo.region': 'TR-07', 'geo.placename': 'Antalya' },

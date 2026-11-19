@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { withTwin } from '@/lib/twin';
 import ReviewsBlock from '@/components/ReviewsBlock';
 import KargoKisa from '@/components/KargoKisa';
 import { businessNode } from '@/lib/business';
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
     'kot pantolon daraltma', 'kot daraltma fiyat', 'kot pantolon bacak daraltma', 'kot bel daraltma', 'kot pantolon daraltma Antalya', 'jean daraltma terzi', 'kot pantolon dar paça yapma',
   ]),
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
-  alternates: { canonical: PAGE_URL },
+  alternates: withTwin({ canonical: PAGE_URL }),
   openGraph: {
     title: "Kot Pantolon Daraltma Antalya — Aynı Gün",
     description: 'Terziye sor: ' + PHONE + ' · ' + "Kot pantolon bacak ve bel daraltma ₺200'den. Normal iş aynı gün, acil 1–2 saat.",

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { withTwin } from '@/lib/twin';
 import ReviewsBlock from '@/components/ReviewsBlock';
 import KargoFermuarKutusu from '@/components/KargoFermuarKutusu';
 import { businessNode } from '@/lib/business';
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
   description: "Terziye sor: +90 531 898 64 18 · Kaban ve palto boy, kol kısaltma ve daraltma ₺200'den; fermuar değişimi ₺300'den. Astar ve düğme onarımı. Eve ve otele servis.",
   keywords: fitKeywords(["kaban tadilatı", "palto tadilatı", "kaban kısaltma", "palto kısaltma", "palto daraltma", "kaban kol kısaltma", "palto astar değişimi", "kaban düğme değişimi", "palto tamiri Antalya"]),
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
-  alternates: { canonical: PAGE_URL },
+  alternates: withTwin({ canonical: PAGE_URL }),
   openGraph: {
     title: "Kaban ve Palto Tadilatı Antalya | Terzi Can",
     description: "Kaban ve palto boyu, kol boyu, bel ve beden daraltma; astar, düğme, cep ve yaka onarımı. Eve ve otele servis.",

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { withTwin } from '@/lib/twin';
 import { notFound } from 'next/navigation';
 import { zoneAlt } from '@/lib/intl-zones';
 import { OTEL_BOLGELERI, bulOtelBolgesi } from '@/lib/otel-bolgeleri';
@@ -27,7 +28,7 @@ export async function generateMetadata({ params }: { params: Promise<{ region: s
     metadataBase: new URL(SITE),
     title: { absolute: title }, description: desc,
     keywords: fitKeywords([`${r.name} otel terzi`, `${r.name} terzi`, 'otele gelen terzi Antalya', `${r.name} fermuar tamiri`, `${r.name} paça kısaltma`, `${r.name} otelde terzi`]),
-    alternates: {
+    alternates: withTwin({
       canonical: url,
       languages: {
         'tr': url,
@@ -37,7 +38,7 @@ export async function generateMetadata({ params }: { params: Promise<{ region: s
         ...zoneAlt(r.slug),
         'x-default': url,
       },
-    },
+    }),
     openGraph: { title, description: desc, url, type: 'website', locale: 'tr_TR' },
     robots: { index: true, follow: true },
   };

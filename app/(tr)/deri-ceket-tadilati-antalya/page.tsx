@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { withTwin } from '@/lib/twin';
 import ReviewsBlock from '@/components/ReviewsBlock';
 import KargoKisa from '@/components/KargoKisa';
 import { businessNode } from '@/lib/business';
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
     'deri ceket tadilatı', 'deri ceket tadilatı fiyat', 'deri ceket daraltma', 'deri ceket kol kısaltma', 'deri ceket tamiri', 'deri pantolon tadilatı', 'deri yelek tamiri', 'deri mont terzi', 'Antalya deri ceket terzi',
   ]),
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
-  alternates: { canonical: PAGE_URL },
+  alternates: withTwin({ canonical: PAGE_URL }),
   openGraph: {
     title: "Deri Ceket, Pantolon ve Yelek Tadilatı Antalya",
     description: 'Terziye sor: ' + PHONE + ' · ' + "Deri ceket, pantolon ve yelek tamir ve tadilatı ₺400'den. Fotoğrafla net fiyat.",

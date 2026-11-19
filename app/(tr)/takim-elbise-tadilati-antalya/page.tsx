@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { withTwin } from '@/lib/twin';
 import ReviewsBlock from '@/components/ReviewsBlock';
 import KargoKisa from '@/components/KargoKisa';
 import { businessNode } from '@/lib/business';
@@ -29,7 +30,7 @@ export const metadata: Metadata = {
   description: "Terziye sor: +90 531 898 64 18 · Takım elbise ceket daraltma, kol ve paça kısaltma, bel ayarı, yelek ve astar onarımı. Fiyat fotoğrafa göre. Takım satışı yok, tadilat ve özel dikim.",
   keywords: fitKeywords(["takım elbise tadilatı", "takım elbise daraltma", "ceket daraltma", "ceket kol kısaltma", "takım elbise pantolon paça kısaltma", "takım elbise bel daraltma", "takım elbise yelek tadilatı", "takım elbise tamiri", "takım elbise tadilatı Antalya"]),
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
-  alternates: { canonical: PAGE_URL },
+  alternates: withTwin({ canonical: PAGE_URL }),
   openGraph: {
     title: "Takım Elbise Tadilatı Antalya | Terzi Can",
     description: "Takım elbise ceket, pantolon ve yelek tadilatı: daraltma, kol ve paça kısaltma, bel ayarı, astar onarımı. Fiyat fotoğrafa göre.",

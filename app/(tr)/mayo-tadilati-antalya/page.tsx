@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { withTwin } from '@/lib/twin';
 import ReviewsBlock from '@/components/ReviewsBlock';
 import KargoKisa from '@/components/KargoKisa';
 import { businessNode } from '@/lib/business';
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
   description: "Terziye sor: +90 531 898 64 18 · Mayo ve bikini tadilatı: beden daraltma, askı ve bağlama ayarı, onarım. Fiyat fotoğrafa göre. Antalya'da alım-teslim.",
   keywords: fitKeywords(["mayo tadilatı", "mayo daraltma", "bikini tadilatı", "mayo tamiri", "mayo askı ayarı", "mayo beden ayarlama", "mayo tadilatı Antalya", "swimwear alterations Antalya", "переделка купальника Анталья"]),
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
-  alternates: { canonical: PAGE_URL },
+  alternates: withTwin({ canonical: PAGE_URL }),
   openGraph: {
     title: "Mayo Tadilatı Antalya | Terzi Can",
     description: "Mayo ve bikini tadilatı Antalya: beden ayarlama, askı ve bağlama ayarı, onarım. Fiyat fotoğrafa göre.",

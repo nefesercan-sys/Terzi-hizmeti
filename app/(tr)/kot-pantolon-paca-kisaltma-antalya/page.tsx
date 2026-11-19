@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { withTwin } from '@/lib/twin';
 import ReviewsBlock from '@/components/ReviewsBlock';
 import KargoKisa from '@/components/KargoKisa';
 import { businessNode } from '@/lib/business';
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
     'kot pantolon paça kısaltma', 'kot paçası kısaltma', 'kot pantolon paça yapımı', 'kot pantolon orijinal paça', 'kot pantolon daraltma', 'kot pantolon kısaltma', 'kot paça kısaltma fiyat', 'jean paça kısaltma', 'Antalya kot paça kısaltma',
   ]),
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
-  alternates: { canonical: PAGE_URL },
+  alternates: withTwin({ canonical: PAGE_URL }),
   openGraph: {
     title: "Kot Pantolon Paça Kısaltma Antalya — Aynı Gün",
     description: 'Terziye sor: ' + PHONE + ' · ' + "Kot paça kısaltma, orijinal paça yapımı, daraltma. Normal iş aynı gün, acil 1–2 saat.",

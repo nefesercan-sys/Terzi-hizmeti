@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { withTwin } from '@/lib/twin';
 import { DELIVERY } from '@/lib/delivery';
 import ReviewsBlock from '@/components/ReviewsBlock';
 import Ilustrasyon, { type IlustrasyonTur } from '@/components/Ilustrasyon';
@@ -41,13 +42,13 @@ export const metadata: Metadata = {
   // Gerçek EN/RU/DE karşılıkları /antalya-terzi kümesinde (bkz. o sayfanın
   // alternates.languages tanımı) — burada olmayan bir sayfayı varmış gibi
   // göstermemek için hreflang sadece kendine (x-default) işaret eder.
-  alternates: {
+  alternates: withTwin({
     canonical: SITE,
     languages: {
       'tr-TR': SITE,
       'x-default': SITE,
     },
-  },
+  }),
   openGraph: {
     title: 'Terzi Can Antalya — Tailor & Alterations | Портной Анталья',
     description: 'Ask the tailor: ' + PHONE + ' · ' + 'Professional tailoring & alteration service in Konyaaltı, Antalya. English, Russian, German & Turkish spoken.',
@@ -64,7 +65,7 @@ export const metadata: Metadata = {
   },
   other: {
     'geo.region': 'TR-07', 'geo.placename': 'Konyaaltı, Antalya',
-    'geo.position': '36.857466;30.596987', 'ICBM': '36.857466, 30.596987',
+    'geo.position': '36.8572868;30.5970193', 'ICBM': '36.8572868, 30.5970193',
     'contact': PHONE,
   },
   // Sayfa kendi 'verification' tanımladığında layout'taki tanımı tamamen ezer; bu yüzden ikisi de burada.

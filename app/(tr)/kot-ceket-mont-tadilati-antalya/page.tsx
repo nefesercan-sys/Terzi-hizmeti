@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { withTwin } from '@/lib/twin';
 import ReviewsBlock from '@/components/ReviewsBlock';
 import KargoFermuarKutusu from '@/components/KargoFermuarKutusu';
 import { businessNode } from '@/lib/business';
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
     'kot ceket kısaltma', 'kot ceket daraltma', 'kot mont kısaltma', 'kot mont daraltma', 'kot ceket kol kısaltma', 'kot ceket tadilatı', 'kot mont tadilatı', 'kot ceket orijinal dikiş', 'Antalya kot ceket terzi',
   ]),
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
-  alternates: { canonical: PAGE_URL },
+  alternates: withTwin({ canonical: PAGE_URL }),
   openGraph: {
     title: "Kot Ceket ve Kot Mont Tadilatı Antalya",
     description: 'Terziye sor: ' + PHONE + ' · ' + "Kot ceket ve mont kısaltma, daraltma, orijinal görünümde dikiş. ₺200'den.",

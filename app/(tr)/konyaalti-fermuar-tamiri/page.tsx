@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { withTwin } from '@/lib/twin';
 import ReviewsBlock from '@/components/ReviewsBlock';
 import KargoFermuarKutusu from '@/components/KargoFermuarKutusu';
 import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
     'çanta fermuar tamiri fiyat', 'fermuar değişimi fiyatları 2026',
   ]),
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
-  alternates: { canonical: PAGE_URL },
+  alternates: withTwin({ canonical: PAGE_URL }),
   openGraph: {
     title: 'Fermuar Tamiri Konyaaltı — Aynı Gün Değişim',
     description: 'Terziye sor: ' + PHONE + ' · ' + 'Pantolon, mont, ceket, çanta fermuarı. Normal tadilat aynı gün, acil 1–2 saat.',

@@ -47,7 +47,7 @@ export function businessNode(opts: { reviews?: boolean } = {}) {
     postalCode: '07130',
     addressCountry: 'TR',
   },
-  geo: { '@type': 'GeoCoordinates', latitude: 36.857466, longitude: 30.596987 },
+  geo: { '@type': 'GeoCoordinates', latitude: 36.8572868, longitude: 30.5970193 },
   openingHoursSpecification: [{
     '@type': 'OpeningHoursSpecification',
     dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],

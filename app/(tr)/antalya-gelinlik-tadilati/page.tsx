@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { withTwin } from '@/lib/twin';
 import ReviewsBlock from '@/components/ReviewsBlock';
 import KargoFermuarKutusu from '@/components/KargoFermuarKutusu';
 import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
     'wedding dress alterations Antalya', 'подгонка свадебного платья Анталья',
   ]),
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
-  alternates: { canonical: PAGE_URL },
+  alternates: withTwin({ canonical: PAGE_URL }),
   openGraph: {
     title: 'Gelinlik Tadilatı Antalya — Hassas Daraltma ve Boy Ayarı',
     description: 'Terziye sor: ' + PHONE + ' · ' + 'Gelinlik ve abiye tadilatı. Fiyat fotoğrafa veya işin detayına göre.',

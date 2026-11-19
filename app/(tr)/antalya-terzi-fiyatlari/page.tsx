@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { withTwin } from '@/lib/twin';
 import { fitKeywords } from '@/lib/meta-fit';
 import { hreflangFiyat } from '@/lib/hreflang';
 import { FT, PRICE_ROWS } from '@/components/TerziFiyatlariSayfasi';
@@ -37,10 +38,10 @@ export const metadata: Metadata = {
   ]),
   authors: [{ name: 'Terzi Can', url: SITE }],
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
-  alternates: {
+  alternates: withTwin({
     canonical: PAGE_URL,
     languages: hreflangFiyat(),
-  },
+  }),
   openGraph: {
     title: 'Antalya Terzi Fiyat Listesi 2026 — Fotoğraf Gönderin, Fiyatı Öğrenin',
     description: 'Paça ₺200, bel daraltma ₺200, fermuar ₺300; dikim fotoğrafa ve istediğiniz modele göre. Adrese ve otele gelen terzi.',

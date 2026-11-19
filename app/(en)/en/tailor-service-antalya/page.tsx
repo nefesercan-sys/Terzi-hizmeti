@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { withTwin } from '@/lib/twin';
 import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
 import { businessNode } from '@/lib/turist-keten';
 import { DELIVERY } from '@/lib/delivery';
@@ -29,10 +30,10 @@ export const metadata: Metadata = {
   keywords: ['tailor Antalya', 'tailor service Antalya', 'hotel tailor Antalya', 'urgent clothing alteration Antalya', 'tailor Konyaaltı', 'clothing repair Antalya', 'trouser hemming Antalya', 'tailor open Sunday Antalya'],
   authors: [{ name: 'Terzi Can', url: SITE }],
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
-  alternates: {
+  alternates: withTwin({
     canonical: PAGE_URL,
     languages: { 'tr': TR_URL, 'en': PAGE_URL, 'ru': RU_URL, 'de': DE_URL, ...INTL_ALT, 'x-default': TR_URL },
-  },
+  }),
   openGraph: {
     title: 'Tailor Service Antalya · Mobile Tailor to Your Hotel',
     description: 'Tailoring, repair and alterations across Konyaaltı and nearby districts. We come to you.',

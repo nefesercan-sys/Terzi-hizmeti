@@ -1,5 +1,6 @@
 // terzihizmeti.com.tr — Anavera Tekstil B2B sayfaları (numune, seri imalat, kendi marka, yurt dışı gönderim, üretici), 10 dil.
 import type { Metadata } from 'next';
+import { withTwin } from '@/lib/twin';
 import { U_IDS, UL_LIST, type UCopy, type UId, type UL, type UPack } from './uretim-types';
 import { U_TR, U_EN, U_DE, U_RU } from './uretim-1';
 import { U_ES, U_FR, U_PL } from './uretim-2';
@@ -35,7 +36,7 @@ export function uMetadata(lang: UL, id: UId): Metadata {
   return {
     metadataBase: new URL(SITE_U), title: { absolute: title }, description: fitDesc(c.desc),
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
-    alternates: { canonical: url, languages: uLanguages(id) },
+    alternates: withTwin({ canonical: url, languages: uLanguages(id) }),
     openGraph: { title, description: fitDesc(c.desc), url, siteName: 'Anavera Tekstil', locale: LOCALE[lang], type: 'website', images: [{ url: OG_DEFAULT, width: 1200, height: 630, alt: title }] },
     twitter: { card: 'summary_large_image', title, description: fitDesc(c.desc), images: [OG_DEFAULT] },
     other: { 'geo.region': 'TR-07', 'geo.placename': 'Antalya' },

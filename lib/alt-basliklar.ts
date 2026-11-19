@@ -586,9 +586,9 @@ const BASE: Record<Exclude<Konu, 'terziFp' | 'hizmetFp'>, Item[]> = {
    },
    "p": {
     "tr": "Paça kısaltma ve bel daraltma ₺200'den, fermuar değişimi ₺300'den, gelinlik, abiye ve elbise tadilatı fotoğrafa veya işin detayına göre fiyatlanır. Dikimde sabit fiyat yoktur: fotoğrafa ve istediğiniz modele göre belirlenir.",
-    "en": "Hemming and waist taking-in start from €10, trouser zipper replacement from €15, coat zippers from €20, leather alterations from €20. Custom sewing is priced by photo and the model you want.",
-    "de": "Saum kürzen und Bund enger machen ab €10, Hosen-Reißverschluss ab €15, Mantel-Reißverschlüsse ab €20, Lederänderungen ab €20. Maßanfertigung nach Foto und gewünschtem Modell.",
-    "ru": "Подшив и ушивание в талии — от €10, замена молнии на брюках — от €15, молний на пальто — от €20, переделка кожаных изделий — от €20. Пошив — по фото и желаемой модели.",
+    "en": "Hemming and waist taking-in start from €10, trouser zipper replacement from €15, coat zippers from €15, leather alterations from €20. Custom sewing is priced by photo and the model you want.",
+    "de": "Saum kürzen und Bund enger machen ab €10, Hosen-Reißverschluss ab €15, Mantel-Reißverschlüsse ab €15, Lederänderungen ab €20. Maßanfertigung nach Foto und gewünschtem Modell.",
+    "ru": "Подшив и ушивание в талии — от €10, замена молнии на брюках — от €15, молний на пальто — от €15, переделка кожаных изделий — от €20. Пошив — по фото и желаемой модели.",
     "es": "Bajos y cintura desde €10, cambio de cremallera desde €15, arreglos de vestidos de novia, de noche y de vestir según la foto o los detalles del trabajo. La confección a medida se presupuesta según la foto y el modelo que desee.",
     "fr": "Ourlet et taille dès €10, remplacement de fermeture dès €15, retouches de robes de mariée, de soirée et d’habillées selon la photo ou les détails du travail. La couture sur mesure est établie selon la photo et le modèle souhaité.",
     "pl": "Nogawki i talia od €10, wymiana zamka od €15, przeróbki sukni ślubnych, wieczorowych i sukienek według zdjęcia lub zakresu prac. Szycie na miarę wyceniamy według zdjęcia i wybranego modelu.",

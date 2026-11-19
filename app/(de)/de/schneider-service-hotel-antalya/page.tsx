@@ -36,7 +36,7 @@ const FAQ: [string, string][] = [
   ['Wie funktioniert der mobile Schneiderservice im Hotel?', 'Sie teilen uns Hotelname, Zimmernummer und einen passenden Zeitpunkt per WhatsApp mit. Unser Schneider kommt zu Ihnen, nimmt Maß oder holt das Kleidungsstück ab, und liefert es fertig repariert oder geändert zurück.'],
   ['In welche Hotelbezirke kommen Sie?', 'Wir bedienen Belek, Lara, Güzeloba, Kemer und Side sowie auf Anfrage weitere Bezirke Antalyas.'],
   ['Bieten Sie Abholung und Lieferung ins Hotel an?', 'Ja, Abholung und Lieferung zu Hotels und Adressen in den Antalya-Bezirken sind möglich. Die Reparatur oder Änderung selbst wird nach Aufwand berechnet.'],
-  ['Was kosten Kürzen und Reißverschluss?', 'Kürzen und Taille enger machen ab ₺200 (ca. 10 €), Reißverschluss wechseln ab ₺300 (ca. 15 €, für Mäntel, Jacken und Leder ca. 20 €). Preise ohne MwSt.; den genauen Preis nennen wir nach einem Foto per WhatsApp.'],
+  ['Was kosten Kürzen und Reißverschluss?', 'Kürzen und Taille enger machen ab ₺200 (ca. 10 €), Reißverschluss wechseln ab ₺300 (ca. 15 €, für Mäntel, Jacken und Leder ca. 15 €). Preise ohne MwSt.; den genauen Preis nennen wir nach einem Foto per WhatsApp.'],
   ['Wie kann ich bezahlen?', 'Bar oder mit Karte, in jeder gängigen Währung.'],
   ['Wie lange dauert eine Änderung oder Reparatur?', 'Die meisten Änderungen und Reparaturen sind am selben Tag fertig. Für Hochzeits- oder Abendkleider empfehlen wir, uns möglichst früh zu kontaktieren.'],
   ['Welche Sprachen sprechen Sie?', 'Schreiben Sie uns per WhatsApp in Ihrer Sprache, wir antworten.'],

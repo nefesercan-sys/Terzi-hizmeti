@@ -79,7 +79,7 @@ export const metadata: Metadata = {
 const FAQS: [string, string][] = [
   ["Antalya'da paça kısaltma fiyatı ne kadar?", `Paça kısaltma ₺200'den başlar; kesin fiyat işin fotoğrafına göre WhatsApp'tan söylenir. ${DELIVERY.tr.normal} ${DELIVERY.tr.urgent}`],
   ["Antalya'da acil terzi var mı, ne kadar sürer?", `Evet. ${DELIVERY.tr.urgent} ${DELIVERY.tr.normal} Atölye Hurma, Konyaaltı'ndadır ve her gün 08:00–23:00 açıktır.`],
-  ['Otele gelen terzi hizmeti ücretli mi?', "Hayır. Otellere alım ve teslimat, hizmet verilen tüm bölgelerde (Konyaaltı, Lara, Belek, Side/Manavgat, Kemer ve diğerleri) yapılır. Otelinizi WhatsApp'tan yazmanız yeterlidir."],
+  ['Otele gelen terzi hizmeti var mı?', "Evet. Otellere alım ve teslimat, hizmet verilen tüm bölgelerde (Konyaaltı, Lara, Belek, Side/Manavgat, Kemer ve diğerleri) yapılır. Otelinizi WhatsApp'tan yazmanız yeterlidir."],
   ["Ev adresine servis var mı?", "Evet. Hizmet verdiğimiz her bölgede ev adreslerine alım-teslim yapılır. Adresinizi WhatsApp üzerinden yazmanız yeterli."],
   ['Fermuar değişimi ve bel daraltma ne kadar?', "Fermuar değişimi ₺300'den, bel daraltma ₺200'den başlar. Net fiyat için işin fotoğrafını WhatsApp'tan göndermeniz yeterlidir."],
   ['Yabancı dilde hizmet alabilir miyim?', "Evet. Türkçe, İngilizce, Rusça ve Almanca yazışılabilir; sitenin İngilizce, Rusça, Almanca ve diğer dillerde sayfaları vardır."],
@@ -95,7 +95,7 @@ const jsonLd = {
       name: 'Terzi Hizmeti — Tailor Can Antalya',
       url: SITE,
       inLanguage: ['tr', 'en', 'ru', 'de'],
-      description: 'Professional tailor and alteration service in Konyaaltı, Antalya (Turkish, English, Russian, German).',
+      description: 'Professional tailor and alteration service in Konyaaltı, Antalya (Turkish, English, Russian, German, Spanish, French, Polish, Ukrainian, Dutch, Arabic).',
     },
     {
       ...businessNode(),

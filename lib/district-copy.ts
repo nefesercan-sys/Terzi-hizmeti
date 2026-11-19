@@ -92,10 +92,10 @@ const POOL: { id: string; f: Record<Lang, (loc: string, n: string, d: District) 
     de: (loc) => [`Ändern Sie ${loc} auch Braut- und Abendkleider?`, 'Ja. Wir ändern Abend- und Brautkleider; der genaue Preis hängt von Foto und Aufwand ab. Abendkleider sind am selben Tag fertig, beim Brautkleid richtet sich die Dauer nach dem Umfang.'],
   } },
   { id: 'tourist', f: {
-    tr: (loc) => [`Turist olarak ${loc} terzi bulabilir miyim?`, `Evet. WhatsApp'tan kendi dilinizde yazabilirsiniz; Türkçe, İngilizce, Rusça ve Almanca ile hizmet veriyoruz. Eve ve otele alım-teslim yapılır. Fotoğrafı gönderin, fiyatı söyleyelim.`],
-    en: (loc) => [`Can tourists find a tailor ${loc}?`, 'Yes. Write to us on WhatsApp in your own language; we serve in Turkish, English, Russian and German. Pick-up and delivery to homes and hotels is available. Send a photo and we will quote.'],
-    ru: (loc) => [`Может ли турист найти портного ${loc}?`, 'Да. Пишите в WhatsApp на своём языке; мы работаем на турецком, английском, русском и немецком. Забор и доставка на дом и в отели возможны. Пришлите фото — назовём цену.'],
-    de: (loc) => [`Finden Touristen ${loc} einen Schneider?`, 'Ja. Schreiben Sie uns per WhatsApp in Ihrer Sprache; wir bedienen auf Türkisch, Englisch, Russisch und Deutsch. Abholung und Lieferung zu Hause und im Hotel sind möglich. Foto senden, wir nennen den Preis.'],
+    tr: (loc) => [`Turist olarak ${loc} terzi bulabilir miyim?`, `Evet. WhatsApp'tan kendi dilinizde yazabilirsiniz; Türkçe, İngilizce, Rusça, Almanca, İspanyolca, Fransızca, Lehçe, Ukraynaca, Felemenkçe ve Arapça ile hizmet veriyoruz. Eve ve otele alım-teslim yapılır. Fotoğrafı gönderin, fiyatı söyleyelim.`],
+    en: (loc) => [`Can tourists find a tailor ${loc}?`, 'Yes. Write to us on WhatsApp in your own language; we serve in Turkish, English, Russian, German, Spanish, French, Polish, Ukrainian, Dutch and Arabic. Pick-up and delivery to homes and hotels is available. Send a photo and we will quote.'],
+    ru: (loc) => [`Может ли турист найти портного ${loc}?`, 'Да. Пишите в WhatsApp на своём языке; мы работаем на турецком, английском, русском, немецком, испанском, французском, польском, украинском, нидерландском и арабском. Забор и доставка на дом и в отели возможны. Пришлите фото — назовём цену.'],
+    de: (loc) => [`Finden Touristen ${loc} einen Schneider?`, 'Ja. Schreiben Sie uns per WhatsApp in Ihrer Sprache; wir bedienen auf Türkisch, Englisch, Russisch, Deutsch, Spanisch, Französisch, Polnisch, Ukrainisch, Niederländisch und Arabisch. Abholung und Lieferung zu Hause und im Hotel sind möglich. Foto senden, wir nennen den Preis.'],
   } },
   { id: 'hours', f: {
     tr: (loc) => [`${loc} terzi akşam ve hafta sonu açık mı?`, `Evet. Terzi Can haftanın 7 günü, Cumartesi ve Pazar dahil, 08:00–23:00 arası açıktır. Mesai dışında WhatsApp'tan fotoğraf ve mesaj bırakabilirsiniz.`],

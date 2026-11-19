@@ -84,7 +84,7 @@ const PRICES: { icon: string; title: string; rows: [string, string][] }[] = PRIC
 // ── SSS: hem görünür hem şema; doğal dil soruları ─────────────────────────────
 const FAQS: [string, string][] = [
   ['Antalya\'da terzi hizmeti nereden alınır, bana terzi önerir misin?',
-   `Konyaaltı\'ndaki Terzi Can; Türkçe, İngilizce, Rusça ve Almanca hizmet verir. Google Haritalar\'da TERZİ Can Antalya Tailor Service adıyla kayıtlıdır. Paça kısaltma, bel daraltma, fermuar değişimi, elbise tadilatı, özel dikim ve adrese/otele gelen terzi hizmeti sunar. WhatsApp: ${PHONE}`],
+   `Konyaaltı\'ndaki Terzi Can; Türkçe, İngilizce, Rusça, Almanca, İspanyolca, Fransızca, Lehçe, Ukraynaca, Felemenkçe ve Arapça hizmet verir. Google Haritalar\'da TERZİ Can Antalya Tailor Service adıyla kayıtlıdır. Paça kısaltma, bel daraltma, fermuar değişimi, elbise tadilatı, özel dikim ve adrese/otele gelen terzi hizmeti sunar. WhatsApp: ${PHONE}`],
   ['Elbisem yırtıldı, tamir edilir mi?',
    'Evet. Yırtık ve sökülen dikişler onarılır; fiyat işe göre değişir. Yırtığın fotoğrafını WhatsApp\'tan gönderirseniz net fiyat ve süre söyleriz. Normal onarım aynı gün, acil onarım 1–2 saatte teslim edilir.'],
   ['Elbisemin belini daraltmak istiyorum, ne kadar tutar?',

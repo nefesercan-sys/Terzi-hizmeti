@@ -24,7 +24,7 @@ const FAQ: [string, string][] = [
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Astar Değişimi ve Astar Tamiri · Antalya · +90 531 898 64 18" },
+  title: { absolute: "Astar Değişimi ve Astar Tamiri · Antalya | Terzi Can" },
   description: "Terziye sor: +90 531 898 64 18 · Ceket, mont, palto ve kaban astar değişimi ve onarımı; yırtık astar tamiri. Fiyat fotoğrafa göre.",
   keywords: fitKeywords(["astar değişimi", "astar tamiri", "yırtık astar", "ceket astarı değişimi", "mont astarı değişimi", "palto astarı", "kaban astarı", "astar tamiri Antalya"]),
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },

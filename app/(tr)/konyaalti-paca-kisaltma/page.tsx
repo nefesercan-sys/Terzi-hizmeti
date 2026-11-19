@@ -17,7 +17,7 @@ const TODAY     = '2026-10-04';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Paça Kısaltma ₺200'den · Konyaaltı · +90 531 898 64 18" },
+  title: { absolute: "Paça Kısaltma ₺200'den · Konyaaltı | Terzi Can" },
   description:
     fitDesc("Terziye sor: +90 531 898 64 18 · Pantolon, kot, etek paça kısaltma ₺200'den, aynı gün teslim, acil 1–2 saat. Eve ve otele servis. Her gün 08:00–23:00."),
   keywords: ['paça kısaltma Konyaaltı', 'pantolon kısaltma Antalya', 'kot paça kısaltma', 'etek kısaltma Antalya', 'acil paça kısaltma', 'paça kısaltma fiyatı', 'Konyaaltı terzi', 'Antalya terzi'],

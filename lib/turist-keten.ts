@@ -587,7 +587,7 @@ export const HUB_COPY: L3<HubCopy> = {
       ['Können Sie nach Foto oder eigenem Entwurf nähen?', 'Ja. Senden Sie ein Foto oder beschreiben Sie Ihre Idee per WhatsApp. Wir passen sie Ihren Maßen an und schlagen einen passenden Stoff vor.'],
       ['Welche Kleidungsstücke kann ich bestellen?', 'Hemden, Kleider, Hosen, Shorts, Sakkos und Sommeranzüge für Damen und Herren sowie Kinderkleidung — aus natürlichen Leinen- und Baumwollstoffen.'],
       ['Ändern Sie auch Kleidung, die ich in Antalya gekauft habe?', 'Ja. Kürzen, Taille und Seiten enger machen, Ärmel kürzen und Reparaturen sind am selben Tag fertig. In dringenden Fällen in 1–2 Stunden; wir bestätigen per WhatsApp.'],
-      ['Wo sind Sie und wann haben Sie geöffnet?', 'Terzi Can befindet sich in Hurma Mahallesi, Konyaaltı, Antalya, täglich von 08:00 bis 23:00 Uhr geöffnet. Wir arbeiten seit 2006 und sprechen Deutsch, Englisch, Russisch und Türkisch.'],
+      ['Wo sind Sie und wann haben Sie geöffnet?', 'Terzi Can befindet sich in Hurma Mahallesi, Konyaaltı, Antalya, täglich von 08:00 bis 23:00 Uhr geöffnet. Wir arbeiten seit 2006 und sprechen Türkisch, Englisch, Russisch, Deutsch, Spanisch, Französisch, Polnisch, Ukrainisch, Niederländisch und Arabisch.'],
     ],
     related: 'Leinen- & Baumwollkleidung',
   },

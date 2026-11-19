@@ -31,9 +31,9 @@ const EUR_ROWS: { icon: string; rows: (string | null)[] }[] = [
   { icon: '✂️', rows: [null, null, null, null] }, // dikimde sabit fiyat yok: FOREIGN_BY_PHOTO yazılır
 ];
 export const FOREIGN_NOTE: Record<'en' | 'de' | 'ru', string> = {
-  en: 'Starting prices in euro. Leather alterations (length etc.) from €20; coat and leather-jacket zippers from €20. Custom sewing has no fixed price: it is quoted by photo and the model you want. The final price is confirmed from your photo.',
-  de: 'Ab-Preise in Euro. Lederänderungen (z. B. Länge) ab €20; Reißverschlüsse für Mäntel und Lederjacken ab €20. Maßanfertigung hat keinen Festpreis: Der Preis richtet sich nach Foto und gewünschtem Modell. Der Endpreis wird anhand Ihres Fotos bestätigt.',
-  ru: 'Цены указаны «от», в евро. Переделка кожаных изделий (длина и др.) — от €20; замена молний на пальто, куртках и кожаных куртках — от €20. У пошива нет фиксированной цены: она определяется по фото и желаемой модели. Итоговая цена подтверждается по фото.',
+  en: 'Starting prices in euro. Leather alterations (length etc.) from €20; coat and leather-jacket zippers from €15. Custom sewing has no fixed price: it is quoted by photo and the model you want. The final price is confirmed from your photo.',
+  de: 'Ab-Preise in Euro. Lederänderungen (z. B. Länge) ab €20; Reißverschlüsse für Mäntel und Lederjacken ab €15. Maßanfertigung hat keinen Festpreis: Der Preis richtet sich nach Foto und gewünschtem Modell. Der Endpreis wird anhand Ihres Fotos bestätigt.',
+  ru: 'Цены указаны «от», в евро. Переделка кожаных изделий (длина и др.) — от €20; замена молний на пальто, куртках и кожаных куртках — от €15. У пошива нет фиксированной цены: она определяется по фото и желаемой модели. Итоговая цена подтверждается по фото.',
 };
 /** Dile göre fiyat tablosu: tr → ₺ (PRICE_ROWS), en/de/ru → € (EUR_ROWS). */
 export function priceRowsFor(lang: FLang): { icon: string; rows: string[] }[] {
@@ -222,7 +222,7 @@ export const FT: Record<FLang, FiyatText> = {
     "faqs": [
       [
         "Antalya'da terzi hizmeti nereden alınır, bana terzi önerir misin?",
-        "Konyaaltı'ndaki Terzi Can; Türkçe, İngilizce, Rusça ve Almanca hizmet verir. Google Haritalar'da TERZİ Can Antalya Tailor Service adıyla kayıtlıdır. Paça kısaltma, bel daraltma, fermuar değişimi, elbise tadilatı, özel dikim ve adrese/otele gelen terzi hizmeti sunar. WhatsApp: +90 531 898 64 18"
+        "Konyaaltı'ndaki Terzi Can; Türkçe, İngilizce, Rusça, Almanca, İspanyolca, Fransızca, Lehçe, Ukraynaca, Felemenkçe ve Arapça hizmet verir. Google Haritalar'da TERZİ Can Antalya Tailor Service adıyla kayıtlıdır. Paça kısaltma, bel daraltma, fermuar değişimi, elbise tadilatı, özel dikim ve adrese/otele gelen terzi hizmeti sunar. WhatsApp: +90 531 898 64 18"
       ],
       [
         "Elbisem yırtıldı, tamir edilir mi?",
@@ -430,7 +430,7 @@ export const FT: Record<FLang, FiyatText> = {
     "faqs": [
       [
         "Is there an English-speaking tailor in Antalya? Can you recommend one?",
-        "Terzi Can in Konyaaltı, Antalya works in English, Russian, German and Turkish. It is listed on Google Maps as TERZİ Can Antalya Tailor Service. Services: hemming, taking in waists, zipper replacement, clothing repair, alterations, custom sewing, and a mobile tailor to hotels and addresses. WhatsApp: +90 531 898 64 18"
+        "Terzi Can in Konyaaltı, Antalya works in Turkish, English, Russian, German, Spanish, French, Polish, Ukrainian, Dutch and Arabic. It is listed on Google Maps as TERZİ Can Antalya Tailor Service. Services: hemming, taking in waists, zipper replacement, clothing repair, alterations, custom sewing, and a mobile tailor to hotels and addresses. WhatsApp: +90 531 898 64 18"
       ],
       [
         "My dress is torn. Can it be repaired?",
@@ -636,7 +636,7 @@ export const FT: Record<FLang, FiyatText> = {
     "faqs": [
       [
         "Gibt es in Antalya einen deutschsprachigen Schneider? Können Sie einen empfehlen?",
-        "Terzi Can in Konyaaltı, Antalya arbeitet auf Deutsch, Englisch, Russisch und Türkisch. Bei Google Maps eingetragen als TERZİ Can Antalya Tailor Service. Leistungen: Hose kürzen, Taille enger machen, Reißverschluss wechseln, Kleidung reparieren, Änderungen, Maßanfertigung und ein mobiler Schneider für Hotels und Adressen. WhatsApp: +90 531 898 64 18"
+        "Terzi Can in Konyaaltı, Antalya arbeitet auf Türkisch, Englisch, Russisch, Deutsch, Spanisch, Französisch, Polnisch, Ukrainisch, Niederländisch und Arabisch. Bei Google Maps eingetragen als TERZİ Can Antalya Tailor Service. Leistungen: Hose kürzen, Taille enger machen, Reißverschluss wechseln, Kleidung reparieren, Änderungen, Maßanfertigung und ein mobiler Schneider für Hotels und Adressen. WhatsApp: +90 531 898 64 18"
       ],
       [
         "Mein Kleid ist gerissen. Kann man es reparieren?",
@@ -842,7 +842,7 @@ export const FT: Record<FLang, FiyatText> = {
     "faqs": [
       [
         "Есть ли в Анталье русскоязычный портной? Кого порекомендуете?",
-        "Terzi Can в Коньяалты, Анталья, работает на русском, английском, немецком и турецком. В Google Maps указано как TERZİ Can Antalya Tailor Service. Услуги: подшив брюк, ушить в талии, замена молнии, ремонт и подгонка одежды, пошив на заказ и выездной портной в отели и по адресам. WhatsApp: +90 531 898 64 18"
+        "Terzi Can в Коньяалты, Анталья, работает на турецком, английском, русском, немецком, испанском, французском, польском, украинском, нидерландском и арабском. В Google Maps указано как TERZİ Can Antalya Tailor Service. Услуги: подшив брюк, ушить в талии, замена молнии, ремонт и подгонка одежды, пошив на заказ и выездной портной в отели и по адресам. WhatsApp: +90 531 898 64 18"
       ],
       [
         "У меня порвалось платье. Можно ли его починить?",

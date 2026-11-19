@@ -1,7 +1,7 @@
 // ============================================================
 // lib/sss-merkezi.ts — "Sık sorulan sorular" merkez sayfası (TR/EN/RU/DE) tek kaynak.
 // Görünen SSS ve FAQPage şeması AYNI diziden üretilir. Sahip kuralları:
-// paça/bel/kol/boy ₺200'den (€10), fermuar ₺300'den (€15; mont/kaban/palto/deri €20), deri ₺400'den (€20), kot ~₺200'den;
+// paça/bel/kol/boy ₺200'den (€10), fermuar ₺300'den (€15; mont/kaban/palto/deri €15), deri ₺400'den (€20), kot ~₺200'den;
 // dikim/abiye/gelinlik tadilatı sabit fiyatsız (fotoğrafa/işin detayına göre); KDV dahil değil; ödeme tüm para birimleri, nakit/kart;
 // ev/otel alım-teslim yapılır; otellerle ortaklık yok; 2006'dan beri; 10 dil; 08:00–23:00.
 // ============================================================
@@ -71,7 +71,7 @@ const TR: SssItem[] = [
   { q: "Pantolon paçası kısaltma Antalya'da ne kadar?", a: "Paça kısaltma ₺200'den başlar (yaklaşık €10). Kot ve kumaş pantolonda işe göre kesin fiyat için fotoğrafı WhatsApp'tan gönderin. Fiyatlara KDV dahil değildir.", href: '/konyaalti-paca-kisaltma' },
   { q: 'Bel daraltma ne kadar tutar?', a: "Bel ve yan daraltma ₺200'den başlar. Normal işte aynı gün, acilde 1–2 saatte teslim edilir.", href: '/terzi-hizmetleri/bel-daraltma' },
   { q: 'Kol ve boy kısaltma ücreti nedir?', a: "Kol boyu ve genel boy kısaltma ₺200'den başlar; ceket, gömlek, elbise ve etekte uygulanır.", href: '/terzi-hizmetleri/kol-boyu-kisaltma' },
-  { q: 'Fermuar değişimi kaç TL?', a: "Fermuar değişimi ₺300'den başlar. Euro karşılığı pantolon ve standart fermuarda yaklaşık €15, mont, kaban, palto ve deri fermuarda €20'dir.", href: '/konyaalti-fermuar-tamiri' },
+  { q: 'Fermuar değişimi kaç TL?', a: "Fermuar değişimi ₺300'den başlar. Euro karşılığı pantolon ve standart fermuarda yaklaşık €15, mont, kaban, palto ve deri fermuarda €15'dir.", href: '/konyaalti-fermuar-tamiri' },
   { q: 'Mont, kaban veya palto fermuarı değişir mi?', a: "Evet. Mont, kaban, palto, ceket ve çanta fermuarları değiştirilir (₺300'den).", href: '/mont-fermuar-degisimi-antalya' },
   { q: 'Kot paçası orijinal paça görünümüyle kısaltılır mı?', a: "Evet, orijinal paça görünümü korunarak kısaltılır. Kot işleri yaklaşık ₺200'den başlar.", href: '/orijinal-kot-paca-yapimi-antalya' },
   { q: 'Deri ceket veya deri pantolon tadilatı yapılıyor mu?', a: "Evet. Deri ceket, pantolon ve yelek tadilatı ₺400'den başlar (yaklaşık €20).", href: '/deri-ceket-tadilati-antalya' },
@@ -91,7 +91,7 @@ const TR: SssItem[] = [
   { q: 'Tadilat ne kadar sürer?', a: 'Normal işler aynı gün biter. Süre işin durumuna göre değişir.' },
   { q: 'Acil terzi hizmeti var mı?', a: 'Evet. Acil işler 1–2 saatte teslim edilir; işin durumuna göre değişebilir.' },
   { q: 'Terziye gitmeden fiyat nasıl alınır?', a: "Giysinin ve yaptırmak istediğiniz işin fotoğrafını WhatsApp'tan (+90 531 898 64 18) gönderin; fiyat ve süre size bildirilir.", href: PRICES.tr },
-  { q: 'Eve veya otele alım-teslim ücretli mi?', a: 'Hayır. Ev ve otele alım-teslim her bölgede yapılır.', href: HOTEL.tr },
+  { q: 'Eve veya otele alım-teslim yapıyor musunuz?', a: 'Evet. Ev ve otele alım-teslim hizmet verdiğimiz her bölgede yapılır.', href: HOTEL.tr },
   { q: "Antalya'da otele gelen terzi var mı?", a: "Evet. Terzi Can otellere ve adreslere gelir; WhatsApp'tan otel adını ve konumunu yazmanız yeterli.", href: HOTEL.tr },
   { q: 'Deneme için otelde buluşabilir miyiz?', a: 'Evet, gerekirse deneme (prova) için otelde buluşuyoruz.', href: HOTEL.tr },
   { q: 'Hangi para birimleriyle ödeme alıyorsunuz?', a: 'Tüm para birimleriyle (TL, euro, dolar, ruble, sterlin ve diğerleri) nakit veya kartla ödeme alınır.' },
@@ -122,7 +122,7 @@ const EN: SssItem[] = [
   { q: 'How much does hemming trousers cost in Antalya?', a: 'Hemming starts from ₺200 (about €10). Send a photo on WhatsApp for the exact price. Prices exclude VAT.', href: '/en/tailor-services' },
   { q: 'How much is taking in the waist?', a: 'Waist and side taking-in starts from ₺200. Standard jobs the same day, urgent jobs 1–2 hours.' },
   { q: 'What does sleeve or length shortening cost?', a: 'Sleeve and length shortening starts from ₺200 for jackets, shirts, dresses and skirts.' },
-  { q: 'How much is a zipper replacement?', a: 'From ₺300. Euro guide: about €15 for trousers and standard zippers, €20 for coat, overcoat and leather zippers.' },
+  { q: 'How much is a zipper replacement?', a: 'From ₺300. Euro guide: about €15 for trousers and standard zippers, €15 for coat, overcoat and leather zippers.' },
   { q: 'Can you replace a coat, overcoat or jacket zipper?', a: 'Yes. Coat, overcoat, jacket and bag zippers are replaced (from ₺300).' },
   { q: 'Can jeans be hemmed with the original hem?', a: 'Yes, the original hem look is kept. Denim jobs start around ₺200.' },
   { q: 'Do you alter leather jackets or leather trousers?', a: 'Yes. Leather jacket, trousers and vest alterations start from ₺400 (about €20).' },
@@ -167,7 +167,7 @@ const RU: SssItem[] = [
   { q: 'Сколько стоит подшить брюки в Анталье?', a: 'Подшить брюки — от ₺200 (около €10). Точную цену назовём по фото в WhatsApp. Цены без НДС.', href: '/ru/uslugi-portnogo' },
   { q: 'Сколько стоит ушить в талии?', a: 'Ушивание в талии и по бокам — от ₺200. Обычные работы в тот же день, срочные — 1–2 часа.' },
   { q: 'Сколько стоит укоротить рукав или длину?', a: 'Укорачивание рукава и длины — от ₺200 (пиджак, рубашка, платье, юбка).' },
-  { q: 'Сколько стоит замена молнии?', a: 'От ₺300. Ориентир в евро: около €15 для брюк и обычных молний, €20 для пальто, пуховика и кожи.' },
+  { q: 'Сколько стоит замена молнии?', a: 'От ₺300. Ориентир в евро: около €15 для брюк и обычных молний, €15 для пальто, пуховика и кожи.' },
   { q: 'Заменяете молнию на куртке или пальто?', a: 'Да. Меняем молнии на куртках, пальто, пиджаках и сумках (от ₺300).' },
   { q: 'Можно ли подшить джинсы с сохранением оригинального низа?', a: 'Да, оригинальный низ сохраняется. Работы с джинсами — примерно от ₺200.' },
   { q: 'Переделываете кожаные куртки и брюки?', a: 'Да. Переделка кожаных курток, брюк и жилетов — от ₺400 (около €20).' },
@@ -212,7 +212,7 @@ const DE: SssItem[] = [
   { q: 'Was kostet das Kürzen einer Hose in Antalya?', a: 'Kürzen ab ₺200 (ca. €10). Den genauen Preis nennen wir nach Foto per WhatsApp. Preise zzgl. MwSt.', href: '/de/schneider-leistungen' },
   { q: 'Was kostet das Enger machen in der Taille?', a: 'Taille und Seiten enger machen ab ₺200. Normale Arbeiten am selben Tag, dringende in 1–2 Stunden.' },
   { q: 'Was kostet das Kürzen von Ärmeln oder Länge?', a: 'Ärmel und Länge kürzen ab ₺200 (Jacke, Hemd, Kleid, Rock).' },
-  { q: 'Was kostet ein Reißverschlusswechsel?', a: 'Ab ₺300. Richtwert in Euro: etwa €15 für Hosen und normale Reißverschlüsse, €20 für Mantel, Jacke und Leder.' },
+  { q: 'Was kostet ein Reißverschlusswechsel?', a: 'Ab ₺300. Richtwert in Euro: etwa €15 für Hosen und normale Reißverschlüsse, €15 für Mantel, Jacke und Leder.' },
   { q: 'Wechseln Sie Reißverschlüsse bei Jacken und Mänteln?', a: 'Ja. Reißverschlüsse an Jacken, Mänteln, Sakkos und Taschen werden gewechselt (ab ₺300).' },
   { q: 'Kann man Jeans mit Original-Saum kürzen?', a: 'Ja, der Original-Saum bleibt erhalten. Jeans-Arbeiten ab ca. ₺200.' },
   { q: 'Ändern Sie Lederjacken und Lederhosen?', a: 'Ja. Änderungen an Lederjacken, -hosen und -westen ab ₺400 (ca. €20).' },

@@ -168,7 +168,7 @@ export const BLOG_YAZILARI: BlogYazi[] = [
     ],
     sss: [
       { q: 'Otele terzi geliyor mu?', a: 'Evet. Lara, Belek, Kemer, Side ve Konyaaltı bölgelerindeki otellere terzi hizmeti veriyoruz. Hizmet verilen bölgelerde alım ve teslim yapılır.' },
-      { q: 'Yabancı dil biliyor musunuz?', a: 'Türkçe, İngilizce, Rusça ve Almanca ile iletişim kuruyoruz.' },
+      { q: 'Yabancı dil biliyor musunuz?', a: 'Türkçe, İngilizce, Rusça, Almanca, İspanyolca, Fransızca, Lehçe, Ukraynaca, Felemenkçe ve Arapça ile iletişim kuruyoruz.' },
       { q: 'Tatilde acil bir tadilat için ne yapmalıyım?', a: 'Kıyafetin fotoğrafını ve otel bilginizi WhatsApp\'tan gönderin. Acil işler 1–2 saatte teslim edilir.' },
     ],
     linkler: [

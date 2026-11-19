@@ -47,7 +47,7 @@ export const metadata: Metadata = {
 // AI/özet aramalarında en çok sorulan sorular (kısa, doğrudan cevaplar)
 const EXTRA_FAQS: [string, string][] = [
   ['Where can I get trousers hemmed near me in Antalya?', 'At Terzi Can in Hurma, Konyaaltı, open every day 08:00–23:00. Hemming (trousers, jeans) is ready the same day (urgent jobs 1–2 hours). WhatsApp: ' + PHONE],
-  ['How much does hemming and zipper replacement cost in Antalya?', 'Hemming and waist taking-in start from ₺200 (about €10); zipper replacement starts from ₺300 (about €15, about €20 for coats, jackets and leather). Prices exclude VAT. Custom sewing and evening or wedding dress alterations are quoted from a photo on WhatsApp.'],
+  ['How much does hemming and zipper replacement cost in Antalya?', 'Hemming and waist taking-in start from ₺200 (about €10); zipper replacement starts from ₺300 (about €15, about €15 for coats, jackets and leather). Prices exclude VAT. Custom sewing and evening or wedding dress alterations are quoted from a photo on WhatsApp.'],
   ['Can you alter a jacket, coat, shirt, skirt or shorts?', 'Yes. We alter and repair jackets, coats, shirts, skirts, shorts, dresses and trousers for men and women. Send a photo of the garment on WhatsApp and we will quote the price and time.'],
   ['I am a hotel guest staying only a few days. Is that enough time?', 'Yes. Most hemming and repairs are ready the same day (urgent jobs 1–2 hours), and we can pick up and return clothes to your hotel (available for hotels).'],
   ['What are your opening hours and how do I contact you?', 'Every day 08:00–23:00. Call or WhatsApp ' + PHONE + '. The workshop is in Hurma, Konyaaltı, Antalya.'],
@@ -118,7 +118,7 @@ const REPAIR_CATEGORIES = [
   { icon: '✂️', title: 'Tailoring', keyword: 'custom tailoring Antalya', desc: 'Made-from-scratch garments to your exact measurements.',
     rows: [["Men's Trousers", 'by photo'], ["Women's Dress", 'by photo'], ['Evening Gown', 'by photo'], ["Children's Clothing", 'by photo']] as [string, string][] },
   { icon: '🔧', title: 'Repair', keyword: 'clothing repair Antalya', desc: 'Zippers and tears — everyday fixes.',
-    rows: [['Zipper Replacement (Trousers)', 'from ₺300 (~€15)'], ['Zipper Replacement (Coat, Jacket, Leather)', 'from ₺300 (~€20)']] as [string, string][] },
+    rows: [['Zipper Replacement (Trousers)', 'from ₺300 (~€15)'], ['Zipper Replacement (Coat, Jacket, Leather)', 'from ₺300 (~€15)']] as [string, string][] },
   { icon: '📏', title: 'Alterations', keyword: 'hemming Antalya', desc: 'Precise fit adjustments to your body.',
     rows: [['Hemming', 'from ₺200 (~€10)'], ['Waist Taking In', 'from ₺200 (~€10)'], ['Sleeve Shortening', 'from ₺200 (~€10)'], ['Dress / Jacket Resizing', 'by photo'], ['Wedding & Evening Dress (alterations only)', 'by photo']] as [string, string][] },
 ];

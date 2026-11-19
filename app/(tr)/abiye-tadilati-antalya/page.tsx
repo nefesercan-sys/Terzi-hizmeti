@@ -27,7 +27,7 @@ const FAQ: [string, string][] = [
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Abiye Tadilatı ve Tamiri · Antalya | Terzi Can" },
+  title: { absolute: "Abiye Tadilatı ve Tamiri · Antalya · +90 531 898 64 18" },
   description: "Terziye sor: +90 531 898 64 18 · Abiye beden ayarlama, daraltma, kısaltma, fermuar tamiri, askı ayarı, bağcıklı yapma ve model değiştirme. Fiyat fotoğrafa göre.",
   keywords: fitKeywords(["abiye tadilatı", "abiye elbise tamiri", "abiye daraltma", "abiye elbise kısaltma", "abiye beden ayarlama", "abiye fermuar tamiri", "abiye fermuar değişimi", "abiye elbise bağcıklı yapma", "askılı elbise askı ayarlama", "elbise modelini değiştirme", "abiye tadilatı Antalya"]),
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },

@@ -6,6 +6,7 @@
 // Siteye özgü ayarlar yalnızca aşağıdaki SITE_CFG bloğundadır.
 // ============================================================
 import { hreflangIletisim } from '@/lib/hreflang';
+import { withTwin } from '@/lib/twin';
 import type { Metadata } from 'next';
 import { businessNode } from '@/lib/business';
 import {
@@ -20,7 +21,7 @@ const SITE_CFG = {
   businessId: `${SITE}#business`,
   businessName: 'Terzi Can',
   image: `${SITE}/terzi-can-hero.jpg`,
-  geo: { latitude: 36.857466, longitude: 30.596987 },
+  geo: { latitude: 36.8572868, longitude: 30.5970193 },
   sameAs: [MAPS, `https://wa.me/${PHONE_TEL.replace('+', '')}`, 'https://swaphubs.com/terzi'],
   contactUrl: {
     tr: '/iletisim',
@@ -43,7 +44,7 @@ export const CONTACT_URL = SITE_CFG.contactUrl;
 const OG_LOCALE: L4 = { tr: 'tr_TR', en: 'en_US', ru: 'ru_RU', de: 'de_DE' };
 const PHONE_LOCAL = '+90 531 898 64 18';
 // Yol tarifi: işletme koordinatları (lib/business.ts geo ile aynı)
-const DIR_URL = 'https://www.google.com/maps/dir/?api=1&destination=36.857466,30.596987';
+const DIR_URL = 'https://www.google.com/maps/dir/?api=1&destination=36.8572868,30.5970193';
 const WA_BASE = `https://wa.me/${PHONE_TEL.replace('+', '')}`;
 const abs = (p: string) => `${SITE}${p === '/' ? '' : p}`;
 
@@ -253,7 +254,7 @@ export function iletisimMetadata(lang: Lang): Metadata {
     metadataBase: new URL(SITE),
     title: { absolute: c.title },
     description: c.desc,
-    alternates: { canonical: url, languages: alt.languages },
+    alternates: withTwin({ canonical: url, languages: alt.languages }),
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
     openGraph: {
       title: c.title, description: c.desc, url, siteName: SITE_CFG.siteName, locale: OG_LOCALE[lang], type: 'website',

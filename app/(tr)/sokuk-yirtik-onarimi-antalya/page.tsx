@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { withTwin } from '@/lib/twin';
 import ReviewsBlock from '@/components/ReviewsBlock';
 import KargoKisa from '@/components/KargoKisa';
 import { businessNode } from '@/lib/business';
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
   description: "Terziye sor: +90 531 898 64 18 · Sökük dikiş, yırtık, delik ve cep onarımı; pantolon, mont, kazak ve elbise tamiri. Fiyat fotoğrafa göre.",
   keywords: fitKeywords(["sökük dikme", "sökük onarımı", "yırtık onarımı", "yırtık pantolon tamiri", "delik kapatma", "cep tamiri", "kıyafet tamiri", "kıyafet tamiri Antalya"]),
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
-  alternates: { canonical: PAGE_URL },
+  alternates: withTwin({ canonical: PAGE_URL }),
   openGraph: {
     title: "Sökük ve Yırtık Onarımı Antalya | Terzi Can",
     description: "Sökük dikiş, yırtık, delik ve cep onarımı: pantolon, mont, kot ve elbise tamiri. Antalya Konyaaltı.",

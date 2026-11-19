@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { withTwin } from '@/lib/twin';
 import ReviewsBlock from '@/components/ReviewsBlock';
 import KargoFermuarKutusu from '@/components/KargoFermuarKutusu';
 import { businessNode } from '@/lib/business';
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
     'mont fermuarı ne kadar', 'mont fermuarı kaç TL', 'Konyaaltı mont fermuarı',
   ]),
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
-  alternates: { canonical: PAGE_URL },
+  alternates: withTwin({ canonical: PAGE_URL }),
   openGraph: {
     title: 'Mont Fermuarı Değişimi Antalya — Aynı Gün Teslim',
     description: 'Terziye sor: ' + PHONE + ' · ' + 'Mont, kaban, ceket fermuarı değişimi. Normal iş aynı gün, acil 1–2 saat.',

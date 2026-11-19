@@ -1,5 +1,6 @@
 // lib/fiyat-meta.ts — fiyat/SSS sayfaları için merkezi metadata + şema (4 dil)
 import type { Metadata } from 'next';
+import { withTwin } from '@/lib/twin';
 import { hreflangFiyat } from '@/lib/hreflang';
 import { FT, FIYAT_URLS, priceRowsFor, SITE, PHONE_TEL, type FLang } from '@/components/TerziFiyatlariSayfasi';
 import { fitDesc, fitKeywords } from '@/lib/meta-fit';
@@ -16,10 +17,10 @@ export function buildFiyatMetadata(lang: FLang): Metadata {
     keywords: fitKeywords(T.keywords),
     authors: [{ name: 'Terzi Can', url: SITE }],
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
-    alternates: {
+    alternates: withTwin({
       canonical: url,
       languages: hreflangFiyat(),
-    },
+    }),
     openGraph: {
       title: T.ogTitle, description: T.ogDesc, url, siteName: 'Terzi Can',
       locale: T.locale, type: 'website',

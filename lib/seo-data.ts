@@ -231,7 +231,7 @@ export const SERVICES: Service[] = [
     },
   },
   {
-    id: 'elbise-dikim', icon: '👗', time: 'three', priceFrom: 800,
+    id: 'elbise-dikim', icon: '👗', time: 'three',
     slug: { tr: 'elbise-dikimi', en: 'custom-dress-making', ru: 'poshiv-platya', de: 'kleid-naehen-lassen' },
     name: { tr: 'Elbise Dikimi (Ölçüye Göre)', en: 'Custom Dress Making', ru: 'Пошив платьев на заказ', de: 'Kleid nach Maß nähen' },
     q: { tr: 'elbise dikimi', en: 'custom dress making', ru: 'пошив платья', de: 'Kleid nähen lassen' },
@@ -317,7 +317,7 @@ export const SERVICES: Service[] = [
     },
   },
   {
-    id: 'abiye', icon: '👗', time: 'next', priceFrom: 800, priceText: {
+    id: 'abiye', icon: '👗', time: 'next', priceText: {
       tr: 'Abiye tadilatı fotoğrafa veya işin detayına göre fiyatlanır.', en: 'Evening dress alterations; the price is confirmed on WhatsApp from a photo.',
       ru: 'Подгонка вечерних платьев; цена уточняется в WhatsApp по фото.', de: 'Abendkleid-Änderung; der Preis wird per WhatsApp anhand eines Fotos bestätigt.',
     },

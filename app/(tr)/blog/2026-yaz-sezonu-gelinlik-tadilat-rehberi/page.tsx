@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { withTwin } from '@/lib/twin';
 import { fitDesc } from '@/lib/meta-fit';
 
 const SITE      = 'https://terzihizmeti.com.tr';
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
   title: { absolute: "2026 Yaz Sezonu Gelinlik Tadilat Rehberi | Antalya" },
   description:
     fitDesc('Yaz düğün sezonunda gelinlik tadilatı nasıl planlanır? Randevu zamanlaması, kumaş seçimi ve sıcak, nemli havada gelinlik bakımı için pratik rehber.'),
-  alternates: { canonical: PAGE_URL },
+  alternates: withTwin({ canonical: PAGE_URL }),
   robots: { index: true, follow: true },
   openGraph: {
     title: '2026 Yaz Sezonu Gelinlik Tadilat Rehberi',

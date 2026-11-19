@@ -11,6 +11,7 @@
 // Route'lar: tr/en/de/ru → kendi route grupları; es/fr/pl/uk/nl/ar → app/[lang]/[zone].
 // ============================================================
 import type { Metadata } from 'next';
+import { withTwin } from '@/lib/twin';
 import { UDATA } from '@/lib/uretim';
 import { PLANGS, PROMO_PATH, PROMO_NAME, type PLang } from '@/lib/promosyon-paths';
 
@@ -627,7 +628,7 @@ export function buildPromoMetadata(lang: PLang): Metadata {
     title: { absolute: c.title },
     description: c.desc,
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
-    alternates: { canonical: url, languages: promoAlternates() },
+    alternates: withTwin({ canonical: url, languages: promoAlternates() }),
     openGraph: {
       title: c.title, description: c.desc, url, siteName: 'Anavera Tekstil', locale: c.ogLocale, type: 'website',
       images: [{ url: OG, width: 1200, height: 630, alt: c.h1 }],

@@ -15,6 +15,7 @@
 //  - Görseller örnek/stil görselidir (müşteri fotoğrafı gibi sunulmaz) — sayfada bu not yer alır.
 // ============================================================
 import type { Metadata } from 'next';
+import { withTwin } from '@/lib/twin';
 import { businessNode as sharedBusinessNode } from '@/lib/business';
 import { SITE, PHONE_TEL, MAPS, abs } from '@/lib/seo-data';
 import { sixAlt } from '@/lib/intl-topics';
@@ -852,7 +853,7 @@ const meta = (lang: TLang, title: string, desc: string, keywords: string[], url:
   keywords: fitKeywords(keywords),
   authors: [{ name: 'Terzi Can', url: SITE }],
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
-  alternates: { canonical: url, languages },
+  alternates: withTwin({ canonical: url, languages }),
   openGraph: {
     title, description: desc, url, siteName: 'Terzi Can', locale: UI[lang].locale, type: 'website',
     images: [{ url: image, width: 1200, height: 630, alt: imgAlt }],

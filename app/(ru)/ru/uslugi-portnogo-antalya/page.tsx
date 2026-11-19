@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { withTwin } from '@/lib/twin';
 import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
 import FabricsOrderBlock from '@/components/FabricsOrderBlock';
 import { DELIVERY } from '@/lib/delivery';
@@ -29,10 +30,10 @@ export const metadata: Metadata = {
   keywords: ['портной Анталья', 'выездной портной Анталья', 'портной в отель Анталья', 'срочная подгонка одежды Анталья', 'портной Коньяалты', 'русскоговорящий портной Анталья', 'ремонт одежды Анталья', 'подшить брюки Анталья'],
   authors: [{ name: 'Terzi Can', url: SITE }],
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
-  alternates: {
+  alternates: withTwin({
     canonical: PAGE_URL,
     languages: { 'tr': TR_URL, 'en': EN_URL, 'ru': PAGE_URL, 'de': DE_URL, ...INTL_ALT, 'x-default': TR_URL },
-  },
+  }),
   openGraph: {
     title: 'Ателье и портной Анталья · Выезд в отель',
     description: 'Пошив, ремонт и подгонка во всех районах Антальи. Мы приедем к вам.',

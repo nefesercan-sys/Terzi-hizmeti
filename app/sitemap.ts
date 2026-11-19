@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next';
+import { withTwin, twinUrl } from '@/lib/twin';
 import { BLOG_YAZILARI } from '@/lib/blog-yazilari';
 import { OTEL_BOLGELERI } from '@/lib/otel-bolgeleri';
 import { DISTRICTS, SERVICES, LANGS, SERVICE_BASE, districtUrl, serviceUrl, LAST_UPDATE, isIndexable, type Lang } from '@/lib/seo-data';
@@ -61,7 +62,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // 📍 2. ANA ŞEHİR SAYFASI & MERKEZ HİZMETLER (Priority: 0.90)
     { url: `${SITE}/antalya-terzi`, lastModified: lm('/antalya-terzi'), changeFrequency: 'weekly', priority: 0.90 },
-    { url: `${SITE}/otele-gelen-terzi-antalya`, lastModified: lm('/otele-gelen-terzi-antalya'), changeFrequency: 'weekly', priority: 0.90, alternates: { languages: { tr: `${SITE}/otele-gelen-terzi-antalya`, en: `${SITE}/en/hotel-tailor-antalya`, ru: `${SITE}/ru/vyezdnoy-portnoy-antalya`, de: `${SITE}/de/schneider-service-hotel-antalya`, ...Object.fromEntries(ILANGS.map((x) => [INTL[x].hreflang, `${SITE}${zoneUrl(x, 'antalya')}`])), 'x-default': `${SITE}/otele-gelen-terzi-antalya` } } },
+    { url: `${SITE}/otele-gelen-terzi-antalya`, lastModified: lm('/otele-gelen-terzi-antalya'), changeFrequency: 'weekly', priority: 0.90, alternates: withTwin({ languages: { tr: `${SITE}/otele-gelen-terzi-antalya`, en: `${SITE}/en/hotel-tailor-antalya`, ru: `${SITE}/ru/vyezdnoy-portnoy-antalya`, de: `${SITE}/de/schneider-service-hotel-antalya`, ...Object.fromEntries(ILANGS.map((x) => [INTL[x].hreflang, `${SITE}${zoneUrl(x, 'antalya')}`])), 'x-default': `${SITE}/otele-gelen-terzi-antalya` } }) },
 
     // 🏠 3. KONYAALTI MAHALLE SAYFALARI (Sıcak Lokal Müşteri - Priority: 0.85)
     { url: `${SITE}/hurma-terzi`, lastModified: lm('/hurma-terzi'), changeFrequency: 'weekly', priority: 0.85 },
@@ -106,9 +107,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE}/en/tailor-service-antalya`, lastModified: lm('/en/tailor-service-antalya'), changeFrequency: 'weekly', priority: 0.80 },
     { url: `${SITE}/ru/uslugi-portnogo-antalya`, lastModified: lm('/ru/uslugi-portnogo-antalya'), changeFrequency: 'weekly', priority: 0.80 },
     { url: `${SITE}/de/schneiderservice-antalya`, lastModified: lm('/de/schneiderservice-antalya'), changeFrequency: 'weekly', priority: 0.80 },
-    { url: `${SITE}/en/hotel-tailor-antalya`, lastModified: lm('/en/hotel-tailor-antalya'), changeFrequency: 'weekly', priority: 0.80, alternates: { languages: { tr: `${SITE}/otele-gelen-terzi-antalya`, en: `${SITE}/en/hotel-tailor-antalya`, ru: `${SITE}/ru/vyezdnoy-portnoy-antalya`, de: `${SITE}/de/schneider-service-hotel-antalya`, ...Object.fromEntries(ILANGS.map((x) => [INTL[x].hreflang, `${SITE}${zoneUrl(x, 'antalya')}`])), 'x-default': `${SITE}/otele-gelen-terzi-antalya` } } },
-    { url: `${SITE}/ru/vyezdnoy-portnoy-antalya`, lastModified: lm('/ru/vyezdnoy-portnoy-antalya'), changeFrequency: 'weekly', priority: 0.80, alternates: { languages: { tr: `${SITE}/otele-gelen-terzi-antalya`, en: `${SITE}/en/hotel-tailor-antalya`, ru: `${SITE}/ru/vyezdnoy-portnoy-antalya`, de: `${SITE}/de/schneider-service-hotel-antalya`, ...Object.fromEntries(ILANGS.map((x) => [INTL[x].hreflang, `${SITE}${zoneUrl(x, 'antalya')}`])), 'x-default': `${SITE}/otele-gelen-terzi-antalya` } } },
-    { url: `${SITE}/de/schneider-service-hotel-antalya`, lastModified: lm('/de/schneider-service-hotel-antalya'), changeFrequency: 'weekly', priority: 0.80, alternates: { languages: { tr: `${SITE}/otele-gelen-terzi-antalya`, en: `${SITE}/en/hotel-tailor-antalya`, ru: `${SITE}/ru/vyezdnoy-portnoy-antalya`, de: `${SITE}/de/schneider-service-hotel-antalya`, ...Object.fromEntries(ILANGS.map((x) => [INTL[x].hreflang, `${SITE}${zoneUrl(x, 'antalya')}`])), 'x-default': `${SITE}/otele-gelen-terzi-antalya` } } },
+    { url: `${SITE}/en/hotel-tailor-antalya`, lastModified: lm('/en/hotel-tailor-antalya'), changeFrequency: 'weekly', priority: 0.80, alternates: withTwin({ languages: { tr: `${SITE}/otele-gelen-terzi-antalya`, en: `${SITE}/en/hotel-tailor-antalya`, ru: `${SITE}/ru/vyezdnoy-portnoy-antalya`, de: `${SITE}/de/schneider-service-hotel-antalya`, ...Object.fromEntries(ILANGS.map((x) => [INTL[x].hreflang, `${SITE}${zoneUrl(x, 'antalya')}`])), 'x-default': `${SITE}/otele-gelen-terzi-antalya` } }) },
+    { url: `${SITE}/ru/vyezdnoy-portnoy-antalya`, lastModified: lm('/ru/vyezdnoy-portnoy-antalya'), changeFrequency: 'weekly', priority: 0.80, alternates: withTwin({ languages: { tr: `${SITE}/otele-gelen-terzi-antalya`, en: `${SITE}/en/hotel-tailor-antalya`, ru: `${SITE}/ru/vyezdnoy-portnoy-antalya`, de: `${SITE}/de/schneider-service-hotel-antalya`, ...Object.fromEntries(ILANGS.map((x) => [INTL[x].hreflang, `${SITE}${zoneUrl(x, 'antalya')}`])), 'x-default': `${SITE}/otele-gelen-terzi-antalya` } }) },
+    { url: `${SITE}/de/schneider-service-hotel-antalya`, lastModified: lm('/de/schneider-service-hotel-antalya'), changeFrequency: 'weekly', priority: 0.80, alternates: withTwin({ languages: { tr: `${SITE}/otele-gelen-terzi-antalya`, en: `${SITE}/en/hotel-tailor-antalya`, ru: `${SITE}/ru/vyezdnoy-portnoy-antalya`, de: `${SITE}/de/schneider-service-hotel-antalya`, ...Object.fromEntries(ILANGS.map((x) => [INTL[x].hreflang, `${SITE}${zoneUrl(x, 'antalya')}`])), 'x-default': `${SITE}/otele-gelen-terzi-antalya` } }) },
     { url: `${SITE}/en/linen-cotton-tailoring`, lastModified: lm('/en/linen-cotton-tailoring'), changeFrequency: 'weekly', priority: 0.78 },
     { url: `${SITE}/ru/poshiv-lyon-hlopok`, lastModified: lm('/ru/poshiv-lyon-hlopok'), changeFrequency: 'weekly', priority: 0.78 },
     { url: `${SITE}/de/leinen-baumwolle-schneiderei`, lastModified: lm('/de/leinen-baumwolle-schneiderei'), changeFrequency: 'weekly', priority: 0.78 },
@@ -126,9 +127,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     return { languages: Object.fromEntries([...ls.map((l) => [l, `${SITE}${urlFor(l)}`]), ['x-default', `${SITE}${urlFor(ls.includes('tr') ? 'tr' : 'en')}`]]) };
   };
   const seoSayfalari: MetadataRoute.Sitemap = [
-    ...LANGS.map((l) => ({ url: `${SITE}${SERVICE_BASE[l]}`, lastModified: SEO_DATE, changeFrequency: 'weekly' as const, priority: 0.8, alternates: (() => { const a = alt((x) => SERVICE_BASE[x]); return { languages: { ...a.languages, ...sixAlt('tamir') } }; })() })),
-    ...SERVICES.flatMap((s) => LANGS.map((l) => ({ url: `${SITE}${serviceUrl(l, s)}`, lastModified: SEO_DATE, changeFrequency: 'monthly' as const, priority: 0.78, alternates: (() => { const a = alt((x) => serviceUrl(x, s)); return { languages: { ...a.languages, ...sixForService(s.slug.tr) } }; })() }))),
-    ...DISTRICTS.flatMap((d) => LANGS.filter((l) => isIndexable(l, d.slug)).map((l) => ({ url: `${SITE}${districtUrl(l, d)}`, lastModified: SEO_DATE, changeFrequency: 'monthly' as const, priority: 0.76, alternates: alt((x) => districtUrl(x, d), (x) => isIndexable(x, d.slug)) }))),
+    ...LANGS.map((l) => ({ url: `${SITE}${SERVICE_BASE[l]}`, lastModified: SEO_DATE, changeFrequency: 'weekly' as const, priority: 0.8, alternates: withTwin((() => { const a = alt((x) => SERVICE_BASE[x]); return { languages: { ...a.languages, ...sixAlt('tamir') } }; })()) })),
+    ...SERVICES.flatMap((s) => LANGS.map((l) => ({ url: `${SITE}${serviceUrl(l, s)}`, lastModified: SEO_DATE, changeFrequency: 'monthly' as const, priority: 0.78, alternates: withTwin((() => { const a = alt((x) => serviceUrl(x, s)); return { languages: { ...a.languages, ...sixForService(s.slug.tr) } }; })()) }))),
+    ...DISTRICTS.flatMap((d) => LANGS.filter((l) => isIndexable(l, d.slug)).map((l) => ({ url: `${SITE}${districtUrl(l, d)}`, lastModified: SEO_DATE, changeFrequency: 'monthly' as const, priority: 0.76, alternates: withTwin(alt((x) => districtUrl(x, d), (x) => isIndexable(x, d.slug))) }))),
   ];
 
   // 🧵 8. TURİST KETEN & PAMUK ÖZEL DİKİM + EKSPRES TADİLAT (EN/DE/RU; hub'ın TR karşılığı da hreflang'a dahil)
@@ -136,7 +137,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     languages: Object.fromEntries([...TLANGS.map((l) => [l, `${SITE}${urlFor(l)}`]), ['x-default', `${SITE}${urlFor('en')}`]]),
   });
   const turistSayfalari: MetadataRoute.Sitemap = allNewPages().flatMap((pg) =>
-    TLANGS.map((l) => ({ url: `${SITE}${pg.urlFor(l)}`, lastModified: new Date(TURIST_UPDATE), changeFrequency: 'monthly' as const, priority: pg.id === 'express' ? 0.8 : 0.77, alternates: tAlt(pg.urlFor) })),
+    TLANGS.map((l) => ({ url: `${SITE}${pg.urlFor(l)}`, lastModified: new Date(TURIST_UPDATE), changeFrequency: 'monthly' as const, priority: pg.id === 'express' ? 0.8 : 0.77, alternates: withTwin(tAlt(pg.urlFor)) })),
   );
   // Hub sayfaları sabitSayfalar'da zaten var; hreflang eşleşmesi için ayrıca alternates ile aşağıda güncellenir.
   const hubAlt = { languages: { tr: `${SITE}${TR_HUB}`, ...Object.fromEntries(TLANGS.map((l) => [l, `${SITE}${hubUrl(l)}`])), ...sixAlt('keten'), 'x-default': `${SITE}${TR_HUB}` } };
@@ -155,13 +156,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   };
   const contactAlt = { languages: hreflangIletisim() }; // 4 + 6 dil tek küme (lib/hreflang.ts)
   const iletisimSayfalari: MetadataRoute.Sitemap = (Object.keys(CONTACT) as (keyof typeof CONTACT)[]).map((l) => ({
-    url: `${SITE}${CONTACT[l]}`, lastModified: new Date(LAST_UPDATE), changeFrequency: 'monthly' as const, priority: l === 'tr' ? 0.85 : 0.8, alternates: contactAlt,
+    url: `${SITE}${CONTACT[l]}`, lastModified: new Date(LAST_UPDATE), changeFrequency: 'monthly' as const, priority: l === 'tr' ? 0.85 : 0.8, alternates: withTwin(contactAlt),
   }));
 
   // Ek turist dilleri (ES/FR/PL/UK/NL/AR): tek tanıtım sayfası, kendi aralarında hreflang.
   const intlAlt = { languages: { tr: `${SITE}/antalya-terzi`, en: `${SITE}/en/tailor-service-antalya`, ru: `${SITE}/ru/uslugi-portnogo-antalya`, de: `${SITE}/de/schneiderservice-antalya`, ...Object.fromEntries(ILANGS.map((l) => [INTL[l].hreflang, `${SITE}${iUrl(l)}`])), 'x-default': `${SITE}/antalya-terzi` } };
   const intlSayfalari: MetadataRoute.Sitemap = ILANGS.map((l) => ({
-    url: `${SITE}${iUrl(l)}`, lastModified: new Date(LAST_UPDATE), changeFrequency: 'monthly' as const, priority: 0.7, alternates: intlAlt,
+    url: `${SITE}${iUrl(l)}`, lastModified: new Date(LAST_UPDATE), changeFrequency: 'monthly' as const, priority: 0.7, alternates: withTwin(intlAlt),
   }));
 
   // Dört ana hizmet sayfası, 6 ek dil sayfasının hreflang kümesinin üyesidir: karşılıklılık için aynı kümeyi taşırlar.
@@ -174,22 +175,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
       tr: `${SITE}/otele-gelen-terzi-antalya${z === 'antalya' ? '' : `/${z}`}`, en: `${SITE}/en/hotel-tailor-antalya${z === 'antalya' ? '' : `/${z}`}`, ru: `${SITE}/ru/vyezdnoy-portnoy-antalya${z === 'antalya' ? '' : `/${z}`}`, de: `${SITE}/de/schneider-service-hotel-antalya${z === 'antalya' ? '' : `/${z}`}`,
       ...Object.fromEntries(ILANGS.map((x) => [INTL[x].hreflang, `${SITE}${zoneUrl(x, z)}`])), 'x-default': z === 'antalya' ? `${SITE}/otele-gelen-terzi-antalya` : `${SITE}/otele-gelen-terzi-antalya/${z}`,
     } };
-    return ILANGS.map((l) => ({ url: `${SITE}${zoneUrl(l, z)}`, lastModified: new Date(LAST_UPDATE), changeFrequency: 'monthly' as const, priority: 0.65, alternates: alt }));
+    return ILANGS.map((l) => ({ url: `${SITE}${zoneUrl(l, z)}`, lastModified: new Date(LAST_UPDATE), changeFrequency: 'monthly' as const, priority: 0.65, alternates: withTwin(alt) }));
   });
 
   // Hizmetler ve kumaşlar sayfası (6 dil, kendi hreflang kümesi)
   const svcAlt = { languages: hreflangSvc() };
-  const svcSayfalari: MetadataRoute.Sitemap = ILANGS.map((l) => ({ url: `${SITE}${svcUrl(l)}`, lastModified: new Date(LAST_UPDATE), changeFrequency: 'monthly' as const, priority: 0.75, alternates: svcAlt }));
+  const svcSayfalari: MetadataRoute.Sitemap = ILANGS.map((l) => ({ url: `${SITE}${svcUrl(l)}`, lastModified: new Date(LAST_UPDATE), changeFrequency: 'monthly' as const, priority: 0.75, alternates: withTwin(svcAlt) }));
   const fiyatAlt = { languages: hreflangFiyat() }; // 4 dilli + 6 dilli fiyat sayfaları tek 10 dilli küme, x-default TR
   const fiyat4 = new Set([`${SITE}/antalya-terzi-fiyatlari`, `${SITE}/en/tailor-prices-antalya`, `${SITE}/de/schneider-preise-antalya`, `${SITE}/ru/ceny-portnoy-antalya`]);
   sabitSayfalar.forEach((e) => { if (fiyat4.has(e.url)) e.alternates = fiyatAlt; });
-  const fiyatSayfalari: MetadataRoute.Sitemap = ILANGS.map((l) => ({ url: `${SITE}${fiyatUrl(l)}`, lastModified: new Date(LAST_UPDATE), changeFrequency: 'monthly' as const, priority: 0.75, alternates: fiyatAlt }));
+  const fiyatSayfalari: MetadataRoute.Sitemap = ILANGS.map((l) => ({ url: `${SITE}${fiyatUrl(l)}`, lastModified: new Date(LAST_UPDATE), changeFrequency: 'monthly' as const, priority: 0.75, alternates: withTwin(fiyatAlt) }));
   const iletAlt = { languages: hreflangIletisim() };
-  const iletSayfalari: MetadataRoute.Sitemap = ILANGS.map((l) => ({ url: `${SITE}${iletisimUrl(l)}`, lastModified: new Date(LAST_UPDATE), changeFrequency: 'monthly' as const, priority: 0.7, alternates: iletAlt }));
+  const iletSayfalari: MetadataRoute.Sitemap = ILANGS.map((l) => ({ url: `${SITE}${iletisimUrl(l)}`, lastModified: new Date(LAST_UPDATE), changeFrequency: 'monthly' as const, priority: 0.7, alternates: withTwin(iletAlt) }));
 
   // Promosyon / reklam tekstili ve baskılı bez çanta imalatı (10 dil, hreflang karşılıklı; x-default: EN)
   const promoSayfalari: MetadataRoute.Sitemap = PLANGS.map((l) => ({
-    url: promoUrl(l), lastModified: new Date(PROMO_LAST_UPDATE), changeFrequency: 'monthly' as const, priority: 0.8, alternates: { languages: promoAlternates() }, images: PROMO_FOTOLAR.map((f) => `${SITE}${f.src}`),
+    url: promoUrl(l), lastModified: new Date(PROMO_LAST_UPDATE), changeFrequency: 'monthly' as const, priority: 0.8, alternates: withTwin({ languages: promoAlternates() }), images: PROMO_FOTOLAR.map((f) => `${SITE}${f.src}`),
   }));
 
   // Aynı URL birden fazla bölümde üretilebilir; ilk kayıt (sabit sayfalar) korunur.
@@ -197,26 +198,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const gorulen = new Map<string, MetadataRoute.Sitemap[number]>();
   const konuSayfalari: MetadataRoute.Sitemap = TOPIC_IDS.flatMap((t) => ILANGS.map((l) => ({
     url: `${SITE}${topicUrl(l, t)}`, lastModified: new Date(LAST_UPDATE), changeFrequency: 'monthly' as const, priority: 0.75,
-    alternates: { languages: topicLanguages(t) },
+    alternates: withTwin({ languages: topicLanguages(t) }),
   })));
   const hizmetSayfalari: MetadataRoute.Sitemap = HIZMET_IDS.flatMap((h) => ILANGS.map((l) => ({
-    url: `${SITE}${hizmetUrl(l, h)}`, lastModified: new Date(LAST_UPDATE), changeFrequency: 'monthly' as const, priority: 0.72, alternates: { languages: hizmetLanguages(h) },
+    url: `${SITE}${hizmetUrl(l, h)}`, lastModified: new Date(LAST_UPDATE), changeFrequency: 'monthly' as const, priority: 0.72, alternates: withTwin({ languages: hizmetLanguages(h) }),
   })));
   const uretimSayfalari: MetadataRoute.Sitemap = U_IDS.flatMap((u) => UL_LIST.map((l) => ({
-    url: `${SITE}${uUrl(l, u)}`, lastModified: new Date(LAST_UPDATE), changeFrequency: 'monthly' as const, priority: 0.78, alternates: { languages: uLanguages(u) },
+    url: `${SITE}${uUrl(l, u)}`, lastModified: new Date(LAST_UPDATE), changeFrequency: 'monthly' as const, priority: 0.78, alternates: withTwin({ languages: uLanguages(u) }),
   })));
   // Sık sorulan sorular merkezi (TR/EN/RU/DE, karşılıklı hreflang)
   const sssSayfalari: MetadataRoute.Sitemap = (Object.keys(SSS_PATH) as (keyof typeof SSS_PATH)[]).map((l) => ({
-    url: `${SITE}${SSS_PATH[l]}`, lastModified: new Date(SSS_UPDATED), changeFrequency: 'monthly' as const, priority: 0.8, alternates: { languages: sssHreflang() },
+    url: `${SITE}${SSS_PATH[l]}`, lastModified: new Date(SSS_UPDATED), changeFrequency: 'monthly' as const, priority: 0.8, alternates: withTwin({ languages: sssHreflang() }),
   }));
   const kargoSayfalari: MetadataRoute.Sitemap = KLANGS.map((l) => ({
-    url: `${SITE}${kargoUrl(l)}`, lastModified: new Date(LAST_UPDATE), changeFrequency: 'monthly' as const, priority: 0.8, alternates: { languages: kargoLanguages() },
+    url: `${SITE}${kargoUrl(l)}`, lastModified: new Date(LAST_UPDATE), changeFrequency: 'monthly' as const, priority: 0.8, alternates: withTwin({ languages: kargoLanguages() }),
   }));
   const olcuSayfalari: MetadataRoute.Sitemap = GLANGS.map((l) => ({
-    url: `${SITE}${olcuUrl(l)}`, lastModified: new Date('2026-11-08'), changeFrequency: 'monthly' as const, priority: 0.7, alternates: { languages: olcuLanguages() },
+    url: `${SITE}${olcuUrl(l)}`, lastModified: new Date('2026-11-08'), changeFrequency: 'monthly' as const, priority: 0.7, alternates: withTwin({ languages: olcuLanguages() }),
   }));
   const ozelSayfalari: MetadataRoute.Sitemap = OLANGS.map((l) => ({
-    url: `${SITE}${ozelUrl(l)}`, lastModified: new Date(OZEL_UPDATED), changeFrequency: 'monthly' as const, priority: 0.8, alternates: { languages: ozelLanguages() },
+    url: `${SITE}${ozelUrl(l)}`, lastModified: new Date(OZEL_UPDATED), changeFrequency: 'monthly' as const, priority: 0.8, alternates: withTwin({ languages: ozelLanguages() }),
   }));
   const hepsi = [...sabitSayfalar, ...sssSayfalari, ...kargoSayfalari, ...ozelSayfalari, ...olcuSayfalari, ...otelSayfalari, ...seoSayfalari, ...turistSayfalari, ...iletisimSayfalari, ...intlSayfalari, ...zoneSayfalari, ...svcSayfalari, ...fiyatSayfalari, ...iletSayfalari, ...konuSayfalari, ...hizmetSayfalari, ...uretimSayfalari, ...promoSayfalari];
   for (const e of hepsi) {
@@ -224,5 +225,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     if (!ilk) gorulen.set(e.url, e);
     else if (!ilk.alternates && e.alternates) ilk.alternates = e.alternates;
   }
-  return [...gorulen.values()];
+  // swaphubs.com'da asıl olan EN/DE/RU kopya sayfalar (lib/twin.ts) bu sitemap'e girmez; hreflang kümeleri swaphubs karşılığını gösterir.
+  return [...gorulen.values()]
+    .filter((e) => twinUrl(e.url) === e.url)
+    .map((e) => (e.alternates ? { ...e, alternates: withTwin(e.alternates) } : e));
 }

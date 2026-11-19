@@ -1,5 +1,6 @@
 // terzihizmeti.com.tr — "Siparişe özel dikim, yurt dışına kargo" sayfası, 10 dilde tek sayfa. Veri: lib/ozel-siparis.ts
 import Link from 'next/link';
+import { withTwin } from '@/lib/twin';
 import type { Metadata } from 'next';
 import { PHONE, PHONE_TEL, MAPS, SITE } from '@/lib/seo-data';
 import { businessNode, OG_DEFAULT, waLink } from '@/lib/turist-keten';
@@ -23,7 +24,7 @@ export function ozelMetadata(lang: OLang): Metadata {
   return {
     metadataBase: new URL(SITE), title: { absolute: c.title }, description: c.desc,
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
-    alternates: { canonical: url, languages: ozelLanguages() },
+    alternates: withTwin({ canonical: url, languages: ozelLanguages() }),
     openGraph: { title: c.h1, description: c.desc, url, siteName: 'Terzi Can', locale: c.locale, type: 'website', images: [{ url: OG_DEFAULT, width: 1200, height: 630, alt: c.h1 }] },
     twitter: { card: 'summary_large_image', title: c.h1, description: c.desc, images: [OG_DEFAULT] },
     other: { 'geo.region': 'TR-07', 'geo.placename': 'Antalya' },

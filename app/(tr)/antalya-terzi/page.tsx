@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { withTwin } from '@/lib/twin';
 import { INTL_ALT } from '@/lib/intl';
 import { DELIVERY } from '@/lib/delivery';
 import FabricsOrderBlock from '@/components/FabricsOrderBlock';
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
     index: true, follow: true,
     googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
   },
-  alternates: {
+  alternates: withTwin({
     canonical: PAGE_URL,
     languages: {
       'tr': PAGE_URL,
@@ -42,7 +43,7 @@ export const metadata: Metadata = {
       ...INTL_ALT,
       'x-default': PAGE_URL,
     },
-  },
+  }),
   openGraph: {
     title: 'Hurma, Liman, Sarısu Terzi — Konyaaltı',
     description: 'Terziye sor: ' + PHONE + ' · ' + 'Hurma, Liman, Sarısu, Uncalı, Gürsu mahalleleri öncelikli.',
@@ -58,7 +59,7 @@ export const metadata: Metadata = {
   },
   other: {
     'geo.region': 'TR-07', 'geo.placename': 'Konyaaltı, Antalya',
-    'geo.position': '36.857466;30.596987', 'ICBM': '36.857466, 30.596987',
+    'geo.position': '36.8572868;30.5970193', 'ICBM': '36.8572868, 30.5970193',
     'contact': PHONE,
   },
   verification: { google: 'W2S_Gr49EgkgWG7xAWWMc5qPW6Cw3wEnOi6O6UC9zkQ' },

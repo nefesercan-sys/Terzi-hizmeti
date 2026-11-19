@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { withTwin } from '@/lib/twin';
 import ReviewsBlock from '@/components/ReviewsBlock';
 import KargoKisa from '@/components/KargoKisa';
 import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
     fitDesc("Terziye sor: +90 531 898 64 18 · Pantolon, kot, etek paça kısaltma ₺200'den, aynı gün teslim, acil 1–2 saat. Eve ve otele servis. Her gün 08:00–23:00."),
   keywords: ['paça kısaltma Konyaaltı', 'pantolon kısaltma Antalya', 'kot paça kısaltma', 'etek kısaltma Antalya', 'acil paça kısaltma', 'paça kısaltma fiyatı', 'Konyaaltı terzi', 'Antalya terzi'],
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
-  alternates: { canonical: PAGE_URL },
+  alternates: withTwin({ canonical: PAGE_URL }),
   openGraph: {
     title: 'Paça Kısaltma Konyaaltı — Aynı Gün Teslim',
     description: 'Terziye sor: ' + PHONE + ' · ' + 'Pantolon, kot, etek kısaltma. ₺200\'den başlayan fiyatlar.',

@@ -1,6 +1,7 @@
 // components/SssMerkezi.tsx — Sık sorulan sorular merkez sayfası (TR/EN/RU/DE). Sunucu bileşeni.
 // Görünen SSS ile FAQPage şeması AYNI diziden (lib/sss-merkezi.ts) üretilir.
 import type { Metadata } from 'next';
+import { withTwin } from '@/lib/twin';
 import { SSS_ITEMS, SSS_LINKS, SSS_META, SSS_PATH, SSS_SITE, SSS_UPDATED, sssHreflang, type SssLang } from '@/lib/sss-merkezi';
 import { BUSINESS_ID, PHONE_TEL } from '@/lib/seo-data';
 
@@ -14,7 +15,7 @@ export function sssMetadata(lang: SssLang): Metadata {
     metadataBase: new URL(SSS_SITE),
     title: { absolute: m.title },
     description: m.description,
-    alternates: { canonical: url, languages: sssHreflang() },
+    alternates: withTwin({ canonical: url, languages: sssHreflang() }),
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
     openGraph: { title: m.h1, description: m.description, url, siteName: 'Terzi Can', locale: m.locale, type: 'website', images: [{ url: OG, width: 1024, height: 1024, alt: m.h1 }] },
     twitter: { card: 'summary_large_image', title: m.h1, description: m.description, images: [OG] },

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { withTwin } from '@/lib/twin';
 import ReviewsBlock from '@/components/ReviewsBlock';
 import KargoKisa from '@/components/KargoKisa';
 import { businessNode } from '@/lib/business';
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
     'çanta fermuar tamiri fiyat', 'çanta fermuarı değiştirme', 'çanta fermuarı tamiri Antalya', 'sırt çantası fermuar tamiri', 'valiz fermuar tamiri', 'çanta fermuarı ne kadar', 'çanta fermuarı kaç TL', 'Konyaaltı çanta fermuarı',
   ]),
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
-  alternates: { canonical: PAGE_URL },
+  alternates: withTwin({ canonical: PAGE_URL }),
   openGraph: {
     title: "Çanta Fermuar Tamiri Antalya — Aynı Gün Teslim",
     description: 'Terziye sor: ' + PHONE + ' · ' + "Çanta, sırt çantası ve valiz fermuarı değişimi ₺300'den. Normal iş aynı gün, acil 1–2 saat.",

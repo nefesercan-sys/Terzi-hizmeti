@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { withTwin } from '@/lib/twin';
 import ReviewsBlock from '@/components/ReviewsBlock';
 import KargoFermuarKutusu from '@/components/KargoFermuarKutusu';
 import { businessNode } from '@/lib/business';
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
     'mont tamiri', 'mont tadilatı', 'mont kısaltma', 'mont daraltma', 'mont kol kısaltma', 'mont tamiri Antalya', 'mont tadilatı fiyat', 'mont fermuarı değişimi', 'kaban tadilatı',
   ]),
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
-  alternates: { canonical: PAGE_URL },
+  alternates: withTwin({ canonical: PAGE_URL }),
   openGraph: {
     title: "Mont Tamiri ve Tadilatı Antalya — Aynı Gün",
     description: 'Terziye sor: ' + PHONE + ' · ' + "Mont kısaltma, daraltma, tamir ve fermuar değişimi. ₺200'den. Normal iş aynı gün.",

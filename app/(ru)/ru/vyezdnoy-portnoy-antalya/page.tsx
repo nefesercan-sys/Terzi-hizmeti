@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { withTwin } from '@/lib/twin';
 import { zoneAlt } from '@/lib/intl-zones';
 import { OTEL_BOLGELERI, OTEL_AD_RU } from '@/lib/otel-bolgeleri';
 
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
   title: { absolute: "Выездное ателье и портной: Белек, Лара, Кемер, Сиде" },
   description: 'Выездное ателье и портной в отели Антальи: Белек, Лара, Кемер, Сиде. Забор вещей, подшив от ₺200 (~€10), в тот же день. Пишите в WhatsApp на своём языке.',
   keywords: ['портной в отель Анталья', 'выездной портной Анталья', 'портной Белек отель', 'портной Лара отель', 'портной Кемер отель', 'портной Сиде отель', 'срочная подгонка одежды Анталья', 'ремонт одежды в отеле Анталья'],
-  alternates: {
+  alternates: withTwin({
     canonical: `${SITE}${BASE_PATH}`,
     languages: {
       'tr': `${SITE}/otele-gelen-terzi-antalya`,
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
       ...zoneAlt('antalya'),
       'x-default': `${SITE}/otele-gelen-terzi-antalya`,
     },
-  },
+  }),
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   openGraph: {
     title: 'Выездной портной Анталья — Мобильный сервис',
@@ -59,7 +60,7 @@ const jsonLd = {
           postalCode: '07130',
           addressCountry: 'TR',
         },
-        geo: { '@type': 'GeoCoordinates', latitude: 36.857466, longitude: 30.596987 } },
+        geo: { '@type': 'GeoCoordinates', latitude: 36.8572868, longitude: 30.5970193 } },
       areaServed: OTEL_BOLGELERI.map((r) => ({ '@type': 'Place', name: OTEL_AD_RU[r.slug] ?? r.name })),
       availableLanguage: ['ru', 'en', 'de', 'tr', 'pl', 'uk', 'nl', 'fr', 'es', 'ar'],
     },

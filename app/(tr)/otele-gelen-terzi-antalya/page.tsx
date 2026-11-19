@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { withTwin } from '@/lib/twin';
 import { zoneAlt } from '@/lib/intl-zones';
 import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
 import ReviewsBlock from '@/components/ReviewsBlock';
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
     index: true, follow: true,
     googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1, 'max-video-preview': -1 },
   },
-  alternates: {
+  alternates: withTwin({
     canonical: PAGE_URL,
     languages: {
       'tr': PAGE_URL,
@@ -42,7 +43,7 @@ export const metadata: Metadata = {
       ...zoneAlt('antalya'),
       'x-default': PAGE_URL,
     },
-  },
+  }),
   openGraph: {
     title: 'Mobile Tailor Service to Hotels in Antalya',
     description: 'Ask the tailor: ' + PHONE + ' · ' + 'Express tailoring service directly to your hotel room or lobby. Serving Belek, Lara, Kundu, and Kemer.',

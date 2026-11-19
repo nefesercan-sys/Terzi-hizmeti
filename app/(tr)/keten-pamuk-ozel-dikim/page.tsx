@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { withTwin } from '@/lib/twin';
 import { sixAlt } from '@/lib/intl-topics';
 import KetenPamukOzelDikim, { KETEN_PAMUK_T } from '@/components/KetenPamukOzelDikim';
 import { fitKeywords } from '@/lib/meta-fit';
@@ -23,10 +24,10 @@ export const metadata: Metadata = {
     'keten giyim kargo', 'keten giyim yurt dışı gönderim', 'keten pamuk giyim yurt içi gönderim']),
   authors: [{ name: 'Terzi Can', url: SITE }],
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
-  alternates: {
+  alternates: withTwin({
     canonical: PAGE_URL,
     languages: { tr: PAGE_URL, en: EN_URL, ru: RU_URL, de: DE_URL, ...sixAlt('keten'), 'x-default': PAGE_URL },
-  },
+  }),
   openGraph: {
     title: 'Keten & Pamuk Giyim: Özel Dikim, Kalıp, Seri Üretim — Terzi Can',
     description: 'Doğal keten ve pamuk: bay, bayan, çocuk modelleri; özel dikim, model ve kalıp, seri ve fason üretim; Avrupa ve Rusya\'ya gönderim.',

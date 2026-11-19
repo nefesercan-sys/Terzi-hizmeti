@@ -5,6 +5,7 @@
 // Veri: lib/seo-data.ts. Sadece doğrulanmış bilgi kullanılır (bkz. dosya başlığı).
 // ============================================================
 import { sixForService } from '@/lib/intl-hizmet';
+import { withTwin } from '@/lib/twin';
 import { sixAlt } from '@/lib/intl-topics';
 import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
 import type { GorselAnahtar } from '@/lib/ornek-gorseller';
@@ -338,7 +339,7 @@ export function districtMetadata(lang: Lang, d: District): Metadata {
     robots: !isIndexable(lang, d.slug)
       ? { index: false, follow: true }
       : { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
-    alternates: alternatesFor(lang, (l) => abs(districtUrl(l, d)), d.slug),
+    alternates: withTwin(alternatesFor(lang, (l) => abs(districtUrl(l, d)), d.slug)),
     openGraph: {
       title: c.title, description: fitDesc(c.desc, undefined, lang), url, siteName: 'Terzi Can', locale: OG_LOCALE[lang], type: 'website',
       images: [{ url: OG, width: 1024, height: 1024, alt: c.title }],
@@ -366,7 +367,7 @@ export function serviceMetadata(lang: Lang, s: Service): Metadata {
       } as Record<string, string[]>)[lang],
     ]),
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
-    alternates: (() => { const a = alternatesFor(lang, (l) => abs(serviceUrl(l, s))); return { ...a, languages: { ...a.languages, ...sixForService(s.slug.tr) } }; })(),
+    alternates: withTwin((() => { const a = alternatesFor(lang, (l) => abs(serviceUrl(l, s))); return { ...a, languages: { ...a.languages, ...sixForService(s.slug.tr) } }; })()),
     openGraph: {
       title: c.title, description: fitDesc(c.desc, undefined, lang), url, siteName: 'Terzi Can', locale: OG_LOCALE[lang], type: 'website',
       images: [{ url: OG, width: 1024, height: 1024, alt: c.title }],
@@ -393,7 +394,7 @@ export function hubMetadata(lang: Lang): Metadata {
     title: { absolute: title },
     description: fitDesc(description, undefined, lang),
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
-    alternates: (() => { const a = alternatesFor(lang, (l) => abs(SERVICE_BASE[l])); return { ...a, languages: { ...a.languages, ...sixAlt('tamir') } }; })(),
+    alternates: withTwin((() => { const a = alternatesFor(lang, (l) => abs(SERVICE_BASE[l])); return { ...a, languages: { ...a.languages, ...sixAlt('tamir') } }; })()),
     openGraph: { title, description: fitDesc(description, undefined, lang), url, siteName: 'Terzi Can', locale: OG_LOCALE[lang], type: 'website', images: [{ url: OG, width: 1024, height: 1024, alt: title }] },
   };
 }

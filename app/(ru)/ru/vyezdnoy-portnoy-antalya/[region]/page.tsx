@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { withTwin } from '@/lib/twin';
 import { notFound } from 'next/navigation';
 import { zoneAlt } from '@/lib/intl-zones';
 import { OTEL_BOLGELERI, bulOtelBolgesiLang } from '@/lib/otel-bolgeleri';
@@ -36,7 +37,7 @@ export async function generateMetadata({ params }: { params: Promise<{ region: s
     title: { absolute: title },
     description: desc,
     keywords: fitKeywords([`портной в отель ${r.name}`, `выездной портной ${r.name}`, `подшить брюки ${r.name}`, `ремонт молнии ${r.name}`, 'портной Анталья отель', 'срочный ремонт одежды Анталья']),
-    alternates: {
+    alternates: withTwin({
       canonical: url,
       languages: {
         'tr': `${SITE}/otele-gelen-terzi-antalya/${r.slug}`,
@@ -46,7 +47,7 @@ export async function generateMetadata({ params }: { params: Promise<{ region: s
         ...zoneAlt(r.slug),
         'x-default': `${SITE}/otele-gelen-terzi-antalya/${r.slug}`,
       },
-    },
+    }),
     openGraph: { title, description: desc, url, type: 'website', locale: 'ru_RU', siteName: 'Terzi Can Antalya', images: [{ url: ogImage, width: 1200, height: 630 }] },
     twitter: { card: 'summary_large_image', title, description: desc, images: [ogImage] },
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large' } },

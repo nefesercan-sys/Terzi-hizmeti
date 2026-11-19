@@ -15,7 +15,7 @@ export const AREA_SERVED = [
 
 /** Her iki resmî site de aynı işletmenindir; diğer sitenin işletme sayfası sameAs ile bağlanır. */
 export const OFFICIAL_SITES = ['https://terzihizmeti.com.tr/', 'https://swaphubs.com/terzi'];
-export const GOOGLE_REVIEW_URL = 'https://g.page/r/CYUmDLIgrCRREAE/review';
+export const GOOGLE_REVIEW_URL = 'https://g.page/r/CaC4HSUlclRZEAE/review';
 
 export function businessNode(opts: { reviews?: boolean } = {}) {
   return {
@@ -23,7 +23,7 @@ export function businessNode(opts: { reviews?: boolean } = {}) {
   ...(opts.reviews === false ? {} : reviewSchema()),
   additionalType: ['https://schema.org/SewingService'],
   '@id': BUSINESS_ID,
-  name: 'TERZİ Can - Konyaaltı',
+  name: 'TERZİ Can - Antalya Tailor Service',
   alternateName: [
     'Terzi Can', 'TERZİ Can Antalya Tailor Service', 'Terzi Can Antalya', 'Konyaaltı Terzi', 'Tailor Can Antalya',
     'Портной Кан Анталья', 'Schneider Can Antalya', 'Terzi Hizmeti Antalya', 'Dikiş Atölyesi Antalya',

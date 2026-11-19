@@ -6,6 +6,7 @@ import '@/app/globals.css';
 import IcerikHaritasi from '@/components/IcerikHaritasi';
 import { HizliEylemBandi, HizliAkis } from '@/components/HizliEylem';
 import RuTelegramButton from '@/components/RuTelegramButton';
+import GoogleYorumSeridi from '@/components/GoogleYorumSeridi';
 import ContactTracker from '@/components/ContactTracker';
 
 const inter = Inter({ subsets: ['latin', 'latin-ext', 'cyrillic'], weight: ['400', '500', '600', '700', '800', '900'], variable: '--font-inter', display: 'swap' });
@@ -59,6 +60,7 @@ export default function RootShell({ lang, dir = 'ltr', children }: { lang: strin
       <body>
         <HizliEylemBandi />
         {children}
+        <GoogleYorumSeridi lang={lang} />
         <RuTelegramButton />
         <HizliAkis />
         <IcerikHaritasi />

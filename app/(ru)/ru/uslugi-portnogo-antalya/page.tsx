@@ -74,7 +74,7 @@ const jsonLd = {
     {
       '@type': 'Service', '@id': `${PAGE_URL}#service`,
       serviceType: 'Выездной пошив, ремонт, подгонка одежды',
-      provider: { '@type': 'LocalBusiness', name: 'TERZİ Can - Konyaaltı', telephone: PHONE_TEL, url: SITE },
+      provider: { '@type': 'LocalBusiness', name: 'TERZİ Can - Antalya Tailor Service', telephone: PHONE_TEL, url: SITE },
       areaServed: [
         'Konyaaltı', 'Muratpaşa', 'Kepez', 'Lara', 'Döşemealtı', 'Aksu', 'Belek', 'Kemer',
         'Serik', 'Side', ].map((n) => ({ '@type': 'Place', name: n })),

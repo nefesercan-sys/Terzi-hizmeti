@@ -53,7 +53,7 @@ export function buildFiyatJsonLd(lang: FLang) {
       {
         '@type': 'Service', '@id': `${url}#service`, serviceType: T.serviceType,
         provider: {
-          '@type': 'LocalBusiness', '@id': `${SITE}#business`, name: 'TERZİ Can - Konyaaltı', telephone: PHONE_TEL, url: SITE,
+          '@type': 'LocalBusiness', '@id': `${SITE}#business`, name: 'TERZİ Can - Antalya Tailor Service', telephone: PHONE_TEL, url: SITE,
           address: { '@type': 'PostalAddress', streetAddress: 'Hurma Mahallesi', addressLocality: 'Konyaaltı', addressRegion: 'Antalya', postalCode: '07130', addressCountry: 'TR' },
           openingHoursSpecification: [{
             '@type': 'OpeningHoursSpecification',

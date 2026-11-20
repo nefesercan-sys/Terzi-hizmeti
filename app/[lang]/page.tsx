@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import ReviewsBlock from '@/components/ReviewsBlock';
 import { withTwin } from '@/lib/twin';
 import { notFound } from 'next/navigation';
 import IntlLanding from '@/components/IntlLanding';
@@ -41,5 +42,5 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 export default async function Page({ params }: { params: Promise<{ lang: string }> }) {
   const { lang } = await params;
   if (!isILang(lang)) notFound();
-  return <IntlLanding lang={lang} />;
+  return <><IntlLanding lang={lang} /><ReviewsBlock lang={lang} schema /></>;
 }

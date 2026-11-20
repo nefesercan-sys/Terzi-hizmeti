@@ -1,25 +1,35 @@
 // Görünür müşteri yorumları (Google'daki gerçek yorumlar). Şema ayrıca üretilmez:
 // işletme şeması zaten aynı yorumları lib/reviews.ts'ten alır (çift işaretleme olmasın).
 import { GOOGLE_REVIEWS, GOOGLE_REVIEW_URL, reviewStats } from '@/lib/reviews';
+import { businessNode } from '@/lib/business';
 
-type L = 'tr' | 'en' | 'ru' | 'de';
+type L = 'tr' | 'en' | 'ru' | 'de' | 'es' | 'fr' | 'pl' | 'uk' | 'nl' | 'ar';
 const T = {
   tr: { h: 'Müşteri Yorumları', on: "Google'da", rev: 'yorum', all: "Tüm yorumları Google'da gör", sel: (n: number) => `burada ${n} yorumluk bir seçki` },
   en: { h: 'Customer Reviews', on: 'on Google', rev: 'reviews', all: 'See all reviews on Google', sel: (n: number) => `a selection of ${n} shown here` },
   ru: { h: 'Отзывы клиентов', on: 'в Google', rev: 'отзывов', all: 'Все отзывы в Google', sel: (n: number) => `здесь — подборка из ${n}` },
   de: { h: 'Kundenbewertungen', on: 'bei Google', rev: 'Bewertungen', all: 'Alle Bewertungen bei Google ansehen', sel: (n: number) => `hier eine Auswahl von ${n}` },
+  es: { h: 'Opiniones de clientes', on: 'en Google', rev: 'opiniones', all: 'Ver todas las opiniones en Google', sel: (n: number) => `aquí una selección de ${n}` },
+  fr: { h: 'Avis clients', on: 'sur Google', rev: 'avis', all: 'Voir tous les avis sur Google', sel: (n: number) => `une sélection de ${n} ici` },
+  pl: { h: 'Opinie klientów', on: 'w Google', rev: 'opinii', all: 'Zobacz wszystkie opinie w Google', sel: (n: number) => `tutaj wybór ${n}` },
+  uk: { h: 'Відгуки клієнтів', on: 'у Google', rev: 'відгуків', all: 'Усі відгуки в Google', sel: (n: number) => `тут добірка з ${n}` },
+  nl: { h: 'Klantbeoordelingen', on: 'op Google', rev: 'beoordelingen', all: 'Alle beoordelingen op Google bekijken', sel: (n: number) => `hier een selectie van ${n}` },
+  ar: { h: 'آراء العملاء', on: 'على Google', rev: 'تقييمات', all: 'عرض كل التقييمات على Google', sel: (n: number) => `مختارات من ${n} هنا` },
 } as const;
 
-export default function ReviewsBlock({ lang = 'tr' }: { lang?: L }) {
-  const t = T[lang] ?? T.en;
+// schema: sayfa işletme düğümünü yorumlarla basmıyorsa true ver (6 ek dil sayfaları): tam işletme şeması (adres, saat, puan, yorumlar).
+export default function ReviewsBlock({ lang = 'tr', schema = false }: { lang?: L | string; schema?: boolean }) {
+  const t = T[(lang in T ? lang : 'en') as L];
   const { count, average } = reviewStats();
   const list = [...GOOGLE_REVIEWS].sort((a, b) => Number(b.lang === lang) - Number(a.lang === lang));
   return (
     <section
       id="musteri-yorumlari"
       aria-labelledby="yorumlar-baslik"
+      dir={lang === 'ar' ? 'rtl' : undefined}
       style={{ maxWidth: 1000, margin: '32px auto', padding: '20px 16px', background: '#1E3329', color: '#F5F1E8', borderRadius: 14 }}
     >
+      {schema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', ...businessNode({ reviews: true }) }).replace(/</g, '\\u003c') }} />}
       <h2 id="yorumlar-baslik" style={{ fontSize: 20, fontWeight: 800, marginBottom: 4 }}>{t.h}</h2>
       <p style={{ fontSize: 14, margin: '0 0 14px', opacity: 0.85 }}>
         <span aria-hidden="true" style={{ color: '#F0C987' }}>★★★★★</span> {average} · {count} {t.rev} {t.on} · {t.sel(list.length)}

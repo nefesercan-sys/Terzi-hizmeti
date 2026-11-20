@@ -12,6 +12,7 @@ import { usePathname } from 'next/navigation';
 import { getLang } from '@/lib/icerik-haritasi';
 import { isPromoPath } from '@/lib/promosyon-paths';
 import { INTL6, STEPS, VALUE_PROPS, pageWaMessage, waUrl, type Lang } from '@/lib/value-props';
+import OtelServisSatiri, { isHotelPath } from '@/components/OtelServisSatiri';
 
 const SITE = 'https://terzihizmeti.com.tr';
 
@@ -68,6 +69,11 @@ export function HizliEylemBandi() {
           {primary.actionText}
         </a>
       </div>
+      {!isHotelPath(path) && (
+        <div style={{ maxWidth: 1100, margin: '0 auto', textAlign: 'center' }}>
+          <OtelServisSatiri lang={lang} color="#fff" />
+        </div>
+      )}
     </div>
   );
 }

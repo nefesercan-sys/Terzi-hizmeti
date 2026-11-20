@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import ReviewsBlock from '@/components/ReviewsBlock';
 import { withTwin } from '@/lib/twin';
 import { notFound } from 'next/navigation';
 import ZoneLanding from '@/components/ZoneLanding';
@@ -146,17 +147,17 @@ export default async function Page({ params }: P) {
   const uid = parseU(lang, slug);
   if (uid) return <UretimLanding lang={lang} id={uid} />;
   if (slug === promoSlug(lang)) return <PromosyonTekstilSayfasi lang={lang} />;
-  if (parseKargoSlug(lang, slug)) return <KargoSayfasi lang={lang} />;
-  if (parseOlcuSlug(lang, slug)) return <OlcuRehberiSayfasi lang={lang} />;
-  if (parseOzelSlug(lang, slug)) return <OzelSiparisSayfasi lang={lang} />;
-  if (isFiyatSlug(lang, slug)) return <FiyatLanding lang={lang} />;
-  if (isIletisimSlug(lang, slug)) return <IletisimLanding lang={lang} />;
-  if (isSvcSlug(lang, slug)) return <ServicesLanding lang={lang} />;
+  if (parseKargoSlug(lang, slug)) return <><KargoSayfasi lang={lang} /><ReviewsBlock lang={lang} schema /></>;
+  if (parseOlcuSlug(lang, slug)) return <><OlcuRehberiSayfasi lang={lang} /><ReviewsBlock lang={lang} schema /></>;
+  if (parseOzelSlug(lang, slug)) return <><OzelSiparisSayfasi lang={lang} /><ReviewsBlock lang={lang} schema /></>;
+  if (isFiyatSlug(lang, slug)) return <><FiyatLanding lang={lang} /><ReviewsBlock lang={lang} schema /></>;
+  if (isIletisimSlug(lang, slug)) return <><IletisimLanding lang={lang} /><ReviewsBlock lang={lang} schema /></>;
+  if (isSvcSlug(lang, slug)) return <><ServicesLanding lang={lang} /><ReviewsBlock lang={lang} schema /></>;
   const hz = parseHizmet(lang, slug);
-  if (hz) return <TopicLanding lang={lang} hizmet={hz} />;
+  if (hz) return <><TopicLanding lang={lang} hizmet={hz} /><ReviewsBlock lang={lang} schema /></>;
   const topic = parseTopic(lang, slug);
-  if (topic) return <TopicLanding lang={lang} topic={topic} />;
+  if (topic) return <><TopicLanding lang={lang} topic={topic} /><ReviewsBlock lang={lang} schema /></>;
   const zone = parseZone(lang, slug);
   if (!zone) notFound();
-  return <ZoneLanding lang={lang} zone={zone} />;
+  return <><ZoneLanding lang={lang} zone={zone} /><ReviewsBlock lang={lang} schema /></>;
 }

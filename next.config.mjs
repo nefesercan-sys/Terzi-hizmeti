@@ -47,6 +47,11 @@ const nextConfig = {
       { source: '/de/schneiderservice-antalya-hotels/:region', destination: '/de/schneider-service-hotel-antalya/:region', permanent: true },
       { source: '/konyaalti-terzi', destination: '/antalya-terzi', permanent: true },
       { source: '/blog/2026-yaz-sezonu-getirillik-tadilati-rehberi', destination: '/blog/2026-yaz-sezonu-gelinlik-tadilat-rehberi', permanent: true },
+      // Search Console 404 (21 Kasım 2026): yanlış yazılmış adresler → doğru sayfa
+      { source: '/ru/poshiv-lyon-khlopok', destination: '/ru/poshiv-lyon-hlopok', permanent: true },
+      { source: '/ru/poshiv-lyon-khlopok/:path*', destination: '/ru/poshiv-lyon-hlopok/:path*', permanent: true },
+      { source: '/antalya-uniforma-uretimi', destination: '/antalya-uniforma-imalati', permanent: true },
+      { source: '/antalya-elbise-daraltma', destination: '/terzi-hizmetleri/elbise-tamiri-tadilati', permanent: true },
       // Online terzi servisi: eski adresler -> yeni kisa adresler (kalici)
       { source: '/foto-ile-terzi-kargoyla-antalya', destination: '/online-terzi-servisi', permanent: true },
       { source: '/en/photo-quote-tailor-courier-antalya', destination: '/en/online-tailor-antalya', permanent: true },

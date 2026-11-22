@@ -26,7 +26,7 @@ const FAQ: [string, string][] = [
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Mayo ve Bikini Tadilatı · Antalya | Terzi Can" },
-  description: "Terziye sor: +90 531 898 64 18 · Mayo ve bikini tadilatı: beden daraltma, askı ve bağlama ayarı, onarım. Fiyat fotoğrafa göre. Antalya'da alım-teslim.",
+  description: "Mayo ve bikini tadilatı: beden daraltma, askı ve bağlama ayarı, onarım. Fiyat fotoğrafa göre. Antalya'da alım-teslim.",
   keywords: fitKeywords(["mayo tadilatı", "mayo daraltma", "bikini tadilatı", "mayo tamiri", "mayo askı ayarı", "mayo beden ayarlama", "mayo tadilatı Antalya", "swimwear alterations Antalya", "переделка купальника Анталья"]),
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   alternates: withTwin({ canonical: PAGE_URL }),

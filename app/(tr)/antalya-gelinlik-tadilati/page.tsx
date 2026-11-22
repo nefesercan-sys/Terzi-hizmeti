@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   alternates: withTwin({ canonical: PAGE_URL }),
   openGraph: {
     title: 'Gelinlik Tadilatı Antalya — Hassas Daraltma ve Boy Ayarı',
-    description: 'Terziye sor: ' + PHONE + ' · ' + 'Gelinlik ve abiye tadilatı. Fiyat fotoğrafa veya işin detayına göre.',
+    description: 'Gelinlik ve abiye tadilatı. Fiyat fotoğrafa veya işin detayına göre.',
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'tr_TR', type: 'website',
     images: [{ url: `${SITE}/terzi-can-hero.jpg`, width: 1024, height: 1024, alt: 'Gelinlik Tadilatı Antalya' }],
   },

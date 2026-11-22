@@ -26,7 +26,7 @@ const FAQ: [string, string][] = [
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Sökük ve Yırtık Onarımı · Antalya | Terzi Can" },
-  description: "Terziye sor: +90 531 898 64 18 · Sökük dikiş, yırtık, delik ve cep onarımı; pantolon, mont, kazak ve elbise tamiri. Fiyat fotoğrafa göre.",
+  description: "Sökük dikiş, yırtık, delik ve cep onarımı; pantolon, mont, kazak ve elbise tamiri. Fiyat fotoğrafa göre.",
   keywords: fitKeywords(["sökük dikme", "sökük onarımı", "yırtık onarımı", "yırtık pantolon tamiri", "delik kapatma", "cep tamiri", "kıyafet tamiri", "kıyafet tamiri Antalya"]),
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   alternates: withTwin({ canonical: PAGE_URL }),

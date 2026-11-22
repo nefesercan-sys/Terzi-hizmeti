@@ -51,7 +51,7 @@ const abs = (p: string) => `${SITE}${p === '/' ? '' : p}`;
 // ── Metinler ────────────────────────────────────────────────
 const T = {
   tr: {
-    title: `Terzi Can İletişim | ${PHONE_LOCAL} · WhatsApp · Adres`,
+    title: `Terzi Can İletişim · Telefon, WhatsApp, Adres`,
     desc: `Terzi Can Antalya telefon: ${PHONE} (WhatsApp). Hurma Mah., Konyaaltı. Her gün 08:00–23:00. Fotoğraf gönderin, fiyatı hemen öğrenin.`,
     tag: 'Antalya · Konyaaltı · Her gün 08:00–23:00',
     h1: 'Terzi Can İletişim',
@@ -95,7 +95,7 @@ const T = {
     },
   },
   en: {
-    title: `Contact Tailor Antalya | ${PHONE} · WhatsApp`,
+    title: `Contact Tailor Antalya · Phone, WhatsApp`,
     desc: `Terzi Can tailor, Antalya: call or WhatsApp ${PHONE}. Hurma, Konyaaltı. Open daily 08:00–23:00. Send a photo, get the price today.`,
     tag: 'Antalya · Konyaaltı · Open daily 08:00–23:00',
     h1: 'Contact Terzi Can — Tailor in Antalya',
@@ -139,7 +139,7 @@ const T = {
     },
   },
   ru: {
-    title: `Ателье в Анталье: контакты Terzi Can | ${PHONE}`,
+    title: `Ателье в Анталье: контакты Terzi Can`,
     desc: `Портной Terzi Can, Анталья: звоните или пишите в WhatsApp ${PHONE}. Хурма, Коньяалты. Ежедневно 08:00–23:00. Пришлите фото, цену скажем сразу.`,
     tag: 'Анталья · Коньяалты · Ежедневно 08:00–23:00',
     h1: 'Контакты Terzi Can — ателье и портной в Анталье',
@@ -183,7 +183,7 @@ const T = {
     },
   },
   de: {
-    title: `Schneider Antalya Kontakt | ${PHONE} · WhatsApp`,
+    title: `Schneider Antalya Kontakt · Telefon, WhatsApp`,
     desc: `Schneider in der Nähe in Antalya: Terzi Can, Hurma, Konyaaltı. Anruf oder WhatsApp ${PHONE}, täglich 08:00–23:00. Foto senden, Preis erfahren.`,
     tag: 'Antalya · Konyaaltı · Täglich 08:00–23:00',
     h1: 'Kontakt Terzi Can — Schneider in Antalya',

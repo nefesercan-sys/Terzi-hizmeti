@@ -21,7 +21,7 @@ export const SSS_PATH: Record<SssLang, string> = {
 export const SSS_META: Record<SssLang, { title: string; description: string; h1: string; lead: string; short: string; wa: string; cta: string; home: string; crumb: string; more: string; prices: string; services: string; hotel: string; contact: string; locale: string; htmlLang: string }> = {
   tr: {
     title: "Antalya Terzi Sık Sorulan Sorular 2026 · Fiyat, Süre, Otel",
-    description: "Antalya terzi hakkında sık sorulan 42 soru: paça ₺200'den, fermuar ₺300'den, deri ₺400'den; süre, alım-teslim, ödeme, otel. WhatsApp: +90 531 898 64 18.",
+    description: "Antalya terzi hakkında sık sorulan 42 soru: paça ₺200'den, fermuar ₺300'den, deri ₺400'den; süre, alım-teslim, ödeme, otel. WhatsApp.",
     h1: 'Antalya Terzi Sık Sorulan Sorular',
     lead: "Terzi Can (Konyaaltı, 2006'dan beri) hakkında en çok sorulan soruların kısa ve doğrudan cevapları. Fiyatlar başlangıç fiyatıdır; KDV dahil değildir.",
     short: "Kısa cevap: Paça, bel, kol ve boy ₺200'den; fermuar ₺300'den; deri ₺400'den. Normal işler aynı gün, acil işler 1–2 saat. Ev ve otele alım-teslim yapılır. Fotoğrafı WhatsApp'tan gönderin, fiyatı hemen öğrenin.",
@@ -31,7 +31,7 @@ export const SSS_META: Record<SssLang, { title: string; description: string; h1:
   },
   en: {
     title: 'Antalya Tailor FAQ 2026 · Prices, Turnaround, Hotel Service',
-    description: 'Answers to 42 common questions about our Antalya tailor: hemming from ₺200, zipper from ₺300, leather from ₺400, same-day service, hotel pick-up, payment. WhatsApp +90 531 898 64 18.',
+    description: 'Answers to 42 common questions about our Antalya tailor: hemming from ₺200, zipper from ₺300, leather from ₺400, same-day service, hotel pick-up, payment. WhatsApp.',
     h1: 'Antalya Tailor — Frequently Asked Questions',
     lead: 'Short, direct answers about Terzi Can (Konyaaltı, serving since 2006). Prices are starting prices and do not include VAT.',
     short: 'Short answer: hemming, waist, sleeve and length from ₺200 (about €10); zipper from ₺300; leather from ₺400. Standard jobs same day, urgent jobs 1–2 hours. pick-up and delivery to homes and hotels. Send a photo on WhatsApp for a price.',
@@ -41,7 +41,7 @@ export const SSS_META: Record<SssLang, { title: string; description: string; h1:
   },
   ru: {
     title: 'Ателье и портной в Анталье: частые вопросы 2026',
-    description: 'Ответы на 42 частых вопросов: подшить брюки от ₺200, молния от ₺300, кожа от ₺400, в тот же день, забор из отеля. WhatsApp +90 531 898 64 18.',
+    description: 'Ответы на 42 частых вопросов: подшить брюки от ₺200, молния от ₺300, кожа от ₺400, в тот же день, забор из отеля. WhatsApp.',
     h1: 'Ателье и портной в Анталье — частые вопросы',
     lead: 'Короткие прямые ответы о ателье Terzi Can (Коньяалты, с 2006 года). Цены — «от», без НДС.',
     short: 'Коротко: подшить, ушить, укоротить рукав и длину — от ₺200 (около €10); молния — от ₺300; кожа — от ₺400. Обычные работы в тот же день, срочные — 1–2 часа. Забор и доставка домой и в отель возможны. Пришлите фото в WhatsApp.',
@@ -51,7 +51,7 @@ export const SSS_META: Record<SssLang, { title: string; description: string; h1:
   },
   de: {
     title: 'Schneider Antalya FAQ 2026 · Preise, Dauer, Hotelservice',
-    description: 'Antworten auf 42 häufige Fragen: Kürzen ab ₺200, Reißverschluss ab ₺300, Leder ab ₺400, am selben Tag, Hotelabholung. WhatsApp +90 531 898 64 18.',
+    description: 'Antworten auf 42 häufige Fragen: Kürzen ab ₺200, Reißverschluss ab ₺300, Leder ab ₺400, am selben Tag, Hotelabholung. WhatsApp.',
     h1: 'Schneider Antalya — häufige Fragen',
     lead: 'Kurze, direkte Antworten zu Terzi Can (Konyaaltı, seit 2006). Preise sind Ab-Preise und verstehen sich zuzüglich MwSt.',
     short: 'Kurz: Kürzen und Enger machen (Hose, Taille, Ärmel, Länge) ab ₺200 (ca. €10); Reißverschluss ab ₺300; Leder ab ₺400. Normale Arbeiten am selben Tag, dringende 1–2 Stunden. Abholung und Lieferung zu Hause und ins Hotel. Foto per WhatsApp senden.',

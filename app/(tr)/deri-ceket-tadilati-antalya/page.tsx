@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Deri Ceket Tadilatı ₺400'den · Pantolon, Yelek · Antalya" },
   description:
-    'Terziye sor: ' + PHONE + ' · ' + "Deri ceket, pantolon ve yelek tamir ve tadilatı ₺400'den. Daraltma, kol kısaltma, onarım; net fiyat fotoğrafla. Eve ve otele servis.",
+    "Deri ceket, pantolon ve yelek tamir ve tadilatı ₺400'den. Daraltma, kol kısaltma, onarım; net fiyat fotoğrafla. Eve ve otele servis.",
   keywords: fitKeywords([
     'deri ceket tadilatı', 'deri ceket tadilatı fiyat', 'deri ceket daraltma', 'deri ceket kol kısaltma', 'deri ceket tamiri', 'deri pantolon tadilatı', 'deri yelek tamiri', 'deri mont terzi', 'Antalya deri ceket terzi',
   ]),
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   alternates: withTwin({ canonical: PAGE_URL }),
   openGraph: {
     title: "Deri Ceket, Pantolon ve Yelek Tadilatı Antalya",
-    description: 'Terziye sor: ' + PHONE + ' · ' + "Deri ceket, pantolon ve yelek tamir ve tadilatı ₺400'den. Fotoğrafla net fiyat.",
+    description: "Deri ceket, pantolon ve yelek tamir ve tadilatı ₺400'den. Fotoğrafla net fiyat.",
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'tr_TR', type: 'website',
     images: [{ url: `${SITE}/terzi-can-hero.jpg`, width: 1024, height: 1024, alt: "Deri Ceket, Pantolon ve Yelek Tadilatı Antalya" }],
   },

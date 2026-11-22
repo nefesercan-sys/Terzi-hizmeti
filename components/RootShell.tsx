@@ -8,6 +8,7 @@ import { HizliEylemBandi, HizliAkis } from '@/components/HizliEylem';
 import RuTelegramButton from '@/components/RuTelegramButton';
 import GoogleYorumSeridi from '@/components/GoogleYorumSeridi';
 import ContactTracker from '@/components/ContactTracker';
+import SabitIletisim from '@/components/SabitIletisim';
 
 const inter = Inter({ subsets: ['latin', 'latin-ext', 'cyrillic'], weight: ['400', '500', '600', '700', '800', '900'], variable: '--font-inter', display: 'swap' });
 const syne = Syne({ subsets: ['latin', 'latin-ext'], weight: ['700', '800'], variable: '--font-syne', display: 'swap' });
@@ -62,6 +63,7 @@ export default function RootShell({ lang, dir = 'ltr', children }: { lang: strin
         {children}
         <GoogleYorumSeridi lang={lang} />
         <RuTelegramButton />
+        <SabitIletisim />
         <HizliAkis />
         <IcerikHaritasi />
         <ContactTracker />

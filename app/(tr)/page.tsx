@@ -306,10 +306,6 @@ export default function TerziHizmetiPage() {
         `}</style>
 
         {/* FLOATING ACTION BUTTONS */}
-        <div className="float">
-          <a href={`tel:${PHONE_TEL}`} className="fbtn fbtn-call" aria-label="Call Tailor"><span className="ico-tel" aria-hidden="true" /></a>
-          <a href={WA_TR} target="_blank" rel="noopener noreferrer" className="fbtn fbtn-wa" aria-label="WhatsApp Tailor">💬</a>
-        </div>
 
         {/* HEADER / NAVIGATION */}
         <nav className="nav" aria-label="Navigation">

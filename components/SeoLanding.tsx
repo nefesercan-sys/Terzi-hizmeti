@@ -83,7 +83,7 @@ const HUB_NAME: Record<Lang, string> = {
   tr: 'Antalya Terzi', en: 'Tailor Service Antalya', ru: 'Услуги портного Анталья', de: 'Schneiderservice Antalya',
 };
 const SVC_HUB_NAME: Record<Lang, string> = {
-  tr: 'Terzi Hizmetleri', en: 'Tailor & Alterations', ru: 'Услуги портного', de: 'Änderungsschneiderei',
+  tr: 'Terzi Hizmetleri', en: 'Tailor & Alterations', ru: 'Ремонт одежды и швея', de: 'Änderungsschneiderei',
 };
 
 // ── Ortak şema: işletme düğümü (ana sayfadaki @id ile aynı) ────
@@ -377,13 +377,13 @@ export function hubMetadata(lang: Lang): Metadata {
   const title = {
     tr: 'Tamir Tadilat Terzi Antalya · Paça, Fermuar, Daraltma',
     en: 'Clothing Repair & Alterations Antalya · Hemming',
-    ru: 'Ремонт и подшив одежды в Анталье · подшив',
+    ru: 'Ремонт одежды в Анталии: подшив, ушить, молнии',
     de: 'Kleidung ändern & reparieren · Änderungsschneiderei Antalya',
   }[lang];
   const description = {
     tr: `Bay bayan tamir tadilat: söküğü, yırtığı dikme, paça ve etek kısaltma, fermuar değişimi. Konyaaltı Hurma, Liman, Uncalı, Gürsu.`,
     en: `Tailor & alterations for men & women: torn seams, hemming, zipper replacement. Konyaaltı, Hurma, Liman, Arapsuyu. Pick-up arranged on WhatsApp.`,
-    ru: `Ремонт одежды: зашить дырку, подшив, молнии, мужская и женская. Коньяалты, Хурма, Лиман, Арапсую. Забор вещей.`,
+    ru: `Ремонт одежды, швея: зашить дырку, подшив, молнии, мужская и женская. Коньяалты, Хурма, Лиман, Арапсую. Забор вещей.`,
     de: `Änderungsschneiderei: Kleidung ändern & reparieren, Risse nähen, Kürzen, Reißverschluss. Konyaaltı, Hurma, Liman, Arapsuyu. Hotelabholung.`,
   }[lang];
   const url = abs(SERVICE_BASE[lang]);

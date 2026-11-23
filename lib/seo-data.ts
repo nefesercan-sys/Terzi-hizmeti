@@ -46,7 +46,8 @@ export function trExtraKeywords(slug: string, name: string): string[] {
   return [0, 3, 7, 11, 13, 17].map((k) => `${name} ${TR_TERMS[(h + k) % TR_TERMS.length]}`);
 }
 /** Bu dil + bölge sayfası aramaya açık mı? */
-export const isIndexable = (lang: Lang, slug: string): boolean => lang !== 'tr' || isTrNear(slug);
+// Sahibin kararı (23 Kasım 2026): her bölgede yerli ve yabancı müşteri hedeflenir; Türkçe bölge sayfalarının hepsi dizine açık.
+export const isIndexable = (_lang: Lang, _slug: string): boolean => true;
 
 // ── URL şeması ──────────────────────────────────────────────
 export const DISTRICT_BASE: L4 = {

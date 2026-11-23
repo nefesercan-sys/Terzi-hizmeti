@@ -10,7 +10,7 @@ import OlcuFormu from '@/components/OlcuFormu';
 
 const C = { green: '#2C4A3E', gold: '#D4B07A', cream: '#FAF7F2', sand: '#F2EDE4', ink: '#1C1814', muted: '#6B5F53' };
 const serif = 'Georgia,serif';
-const HOME: Record<GLang, string> = { tr: '/', en: '/en', ru: '/ru', de: '/de', es: '/es', fr: '/fr', pl: '/pl', uk: '/uk', nl: '/nl', ar: '/ar' };
+const HOME: Record<GLang, string> = { tr: '/', en: '/en/tailor-service-antalya', ru: '/ru/uslugi-portnogo-antalya', de: '/de/schneiderservice-antalya', es: '/es', fr: '/fr', pl: '/pl', uk: '/uk', nl: '/nl', ar: '/ar' };
 
 export function olcuMetadata(lang: GLang): Metadata {
   const c = OLCU[lang]; const url = `${OLCU_SITE}${olcuUrl(lang)}`;

@@ -86,6 +86,10 @@ const nextConfig = {
       kisa('/wa/en', wa('Hello, I would like information about your tailoring service in Antalya.')),
       kisa('/wa/de', wa('Hallo, ich möchte Informationen zu Ihrem Schneiderservice in Antalya.')),
       kisa('/wa/ru', wa('Здравствуйте, хочу узнать про ваши услуги портного в Анталье.')),
+      // /en, /ru, /de kök adresinde sayfa yok: dilin ana hizmet sayfasına (terzihizmeti.com.tr; .com alan adı için 'kisa' kuralları ayrı)
+      { source: '/en', destination: '/en/tailor-service-antalya', permanent: true },
+      { source: '/ru', destination: '/ru/uslugi-portnogo-antalya', permanent: true },
+      { source: '/de', destination: '/de/schneiderservice-antalya', permanent: true },
       { source: '/:path*', has: comHost, destination: 'https://terzihizmeti.com.tr/:path*', permanent: true },
     ];
   },

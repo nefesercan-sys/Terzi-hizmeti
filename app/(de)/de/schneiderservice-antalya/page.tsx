@@ -207,7 +207,7 @@ export default function SchneiderserviceAntalya() {
       <FabricsOrderBlock lang="de" />
       <OrnekGorselSeridi konu={['terzi','fiyat']} lang="de" anahtarlar={['eve-gelen-terzi', 'erkek-takim-olcu', 'abiye-elbise-atolye', 'yun-pantolon-metre', 'beyaz-gomlek-katli', 'palto-yaka-detay']} sayfaUrl="https://terzihizmeti.com.tr/de/schneiderservice-antalya" />
 
-      <ReviewsBlock lang="de" />
+      <ReviewsBlock lang="de" schema />
     </>
   );
 }

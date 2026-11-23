@@ -7,6 +7,7 @@ import { OTEL_BOLGELERI } from '@/lib/otel-bolgeleri';
 import { DISTRICTS, SERVICES, DISTRICT_BASE, SERVICE_BASE, districtUrl, serviceUrl, isIndexable } from '@/lib/seo-data';
 import { PROMO_PATH, PROMO_NAME } from '@/lib/promosyon-paths';
 import { PRODUCT_IDS, LINK_NAMES, productUrl, expressUrl, hubUrl, type TLang } from '@/lib/turist-links';
+import { EK_BREADCRUMB } from '@/lib/icerik-haritasi-ek';
 
 export type Lang = 'tr' | 'en' | 'de' | 'ru';
 export type MapLink = { href: string; label: string };
@@ -305,6 +306,12 @@ export function getBreadcrumb(pathname: string): Crumb[] | null {
       const r = OTEL_BOLGELERI.find((x) => x.slug === slug);
       if (r) return [home, { name: hubName, href: hubHref }, { name: regionName(r.slug, r.name, lang), href: p }];
     }
+  }
+  // Kendi şeması olmayan diğer sayfalar (6 ek dil, tekstil ve keten sayfaları): dilin ana sayfası → sayfa
+  const ek = EK_BREADCRUMB[p];
+  if (ek) {
+    const list = ek.map(([name, href]) => ({ name, href }));
+    return list[0]?.href !== '/' && list.length > 1 ? list : [home, ...list.filter((c) => c.href !== '/')];
   }
   return null;
 }

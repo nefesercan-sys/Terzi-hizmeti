@@ -310,7 +310,7 @@ export default function TailorServiceAntalyaPage() {
         </section>
 
         <FabricsOrderBlock lang="en" />
-        <ReviewsBlock lang="en" />
+        <ReviewsBlock lang="en" schema />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@graph': [businessNode('en')] }) }} />
         <footer>
           <div>© {new Date().getFullYear()} Terzi Can · Antalya Tailor Service · {PHONE}</div>

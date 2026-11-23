@@ -306,7 +306,7 @@ export default function UslugiPortnogoAntalyaPage() {
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@graph': [businessNode('ru')] }) }} />
       <FabricsOrderBlock lang="ru" />
-      <ReviewsBlock lang="ru" />
+      <ReviewsBlock lang="ru" schema />
         <footer>
           <div>© {new Date().getFullYear()} Terzi Can · Портной Анталья · {PHONE}</div>
           <nav className="foot-links" aria-label="Ссылки в подвале">

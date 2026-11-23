@@ -317,6 +317,7 @@ export default function TerziHizmetiPage() {
 
         {/* HERO SECTION */}
         <main id="main">
+        <link rel="preload" as="image" type="image/webp" imageSrcSet="/antalya-terzi-can-dikim-tamir-tadilat-640.webp 640w, /antalya-terzi-can-dikim-tamir-tadilat-1024.webp 1024w" imageSizes="100vw" fetchPriority="high" />
         <section className="hero" aria-labelledby="hero-h">
           <div className="hero-bg" aria-hidden="true">
             <picture>
@@ -437,7 +438,7 @@ export default function TerziHizmetiPage() {
               <div className="svc-card" key={s.n}>
                 <div className="svc-img-wrap">
                   {FOTO[s.n]
-                    ? <img src={FOTO[s.n]} alt={`${s.title} – Antalya terzi: dikim, tamir, tadilat (örnek görsel)`} className="svc-img" loading={i===0?'eager':'lazy'} fetchPriority={i===0?'high':'auto'} decoding="async" width={1264} height={848} />
+                    ? <img src={FOTO[s.n]} srcSet={`${FOTO[s.n].replace(/\.webp$/, '-640.webp')} 640w, ${FOTO[s.n]} 1264w`} sizes="(max-width: 700px) 92vw, 380px" alt={`${s.title} – Antalya terzi: dikim, tamir, tadilat (örnek görsel)`} className="svc-img" loading="lazy" decoding="async" width={1264} height={848} />
                     : <Ilustrasyon tur={s.tur} etiket={`${s.title} (çizim)`} className="svc-img" />}
                   <div className="svc-n svc-n-onimg">{s.n}</div>
                 </div>
@@ -474,7 +475,7 @@ export default function TerziHizmetiPage() {
                 { src:'/gorseller/antalya-baskili-bez-canta-uretim.webp', alt:'Atölyede bez çantalar – Antalya terzi: dikim, tamir, tadilat (örnek görsel)' },
               ].map((g,i)=>(
                 <div className="gallery-item" key={i}>
-                  <img src={g.src} alt={g.alt} loading="lazy" decoding="async" width={1264} height={848} />
+                  <img src={g.src} srcSet={`${g.src.replace(/\.webp$/, '-640.webp')} 640w, ${g.src} 1264w`} sizes="(max-width: 700px) 92vw, 380px" alt={g.alt} loading="lazy" decoding="async" width={1264} height={848} />
                 </div>
               ))}
             </div>

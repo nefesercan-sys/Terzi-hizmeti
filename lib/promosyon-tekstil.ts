@@ -22,7 +22,7 @@ export const SITE = 'https://terzihizmeti.com.tr';
 export const PHONE = '+90 531 898 64 18';
 export const PHONE_E = '+905318986418';
 export const waLink = (t: string) => `https://wa.me/${PHONE_E.replace('+', '')}?text=${encodeURIComponent(t)}`;
-const OG = `${SITE}/og-promosyon.jpg`;
+const OG = `${SITE}/og-antalya-promosyon-tekstil-baskili-bez-canta.jpg`;
 
 /** Sayfadaki örnek görseller (örnek niteliğinde; gerçek iş fotoğrafı değildir). idx: COPY[lang].items içindeki sıra. */
 export const PROMO_FOTOLAR: { src: string; idx: number }[] = [

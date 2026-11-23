@@ -28,7 +28,7 @@ export async function generateMetadata({ params }: { params: Promise<{ region: s
   // Yeni VIP SEO Başlığı ve Açıklaması (Dinamik)
   const title = `Hotel Tailor in ${r.name}, Antalya | Pick-up & Delivery`;
   const desc = fitDesc(`Staying in ${r.name}? We collect clothes from your hotel, alter them in Konyaaltı and bring them back. Open daily 08:00–23:00.`);
-  const ogImage = `${SITE}/terzi-can-hero.jpg`;
+  const ogImage = `${SITE}/antalya-terzi-can-dikim-tamir-tadilat.jpg`;
 
   return {
     metadataBase: new URL(SITE),

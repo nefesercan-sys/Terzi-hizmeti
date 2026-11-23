@@ -20,7 +20,7 @@ const WA        = (m: string) => `https://wa.me/${WA_NUM}?text=${encodeURICompon
 const WA_DEF    = WA('Hello, I would like a mobile tailor to come to my hotel/address. My location: ');
 const MAPS      = 'https://www.google.com/maps?cid=6436895271281342624';
 const LAST_MOD  = '2026-10-30';
-const OG        = `${SITE}/terzi-can-hero.jpg`;
+const OG        = `${SITE}/antalya-terzi-can-dikim-tamir-tadilat.jpg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
@@ -156,7 +156,7 @@ export default function TailorServiceAntalyaPage() {
 
         <header className="hero">
           <div className="hero-bg" aria-hidden="true">
-            <Image src="/terzi-can-hero.jpg" alt="" fill priority fetchPriority="high" sizes="100vw"
+            <Image src="/antalya-terzi-can-dikim-tamir-tadilat.jpg" alt="" fill priority fetchPriority="high" sizes="100vw"
               style={{ objectFit: 'cover', objectPosition: 'center 15%', filter: 'brightness(.32) saturate(.75)' }} />
             <div className="hero-overlay" />
           </div>

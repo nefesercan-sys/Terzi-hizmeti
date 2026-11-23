@@ -5,7 +5,7 @@ import { withTwin } from '@/lib/twin';
 import { SSS_ITEMS, SSS_LINKS, SSS_META, SSS_PATH, SSS_SITE, SSS_UPDATED, sssHreflang, type SssLang } from '@/lib/sss-merkezi';
 import { BUSINESS_ID, PHONE_TEL } from '@/lib/seo-data';
 
-const OG = `${SSS_SITE}/terzi-can-hero.jpg`;
+const OG = `${SSS_SITE}/antalya-terzi-can-dikim-tamir-tadilat.jpg`;
 const waUrl = (m: string) => `https://wa.me/${PHONE_TEL.replace('+', '')}?text=${encodeURIComponent(m)}`;
 
 export function sssMetadata(lang: SssLang): Metadata {

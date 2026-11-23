@@ -33,7 +33,7 @@ export {
 };
 type L3<T = string> = Record<TLang, T>;
 
-export const OG_DEFAULT = `${SITE}/linen/og-linen-tailor-antalya.jpg`;
+export const OG_DEFAULT = `${SITE}/linen/og-linen-cotton-tailor-antalya-custom-made.jpg`;
 export const TURIST_UPDATE = '2026-11-09'; // bu kümenin son içerik güncellemesi (sitemap + dateModified)
 
 // ── Görseller (public/linen/*) ──────────────────────────────
@@ -41,20 +41,20 @@ export type ImgKey = 'family' | 'tea' | 'castle' | 'harbourMan' | 'jacketHarbour
   | 'maxi' | 'slit' | 'white' | 'green' | 'kidsCob' | 'kidsGate' | 'kidsBench';
 
 export const IMG: Record<ImgKey, { src: string; w: number; h: number }> = {
-  family:        { src: '/linen/linen-family-hadrians-gate-antalya.jpg', w: 1400, h: 764 },
-  tea:           { src: '/linen/linen-shirt-man-tea-antalya.jpg', w: 1100, h: 600 },
-  castle:        { src: '/linen/linen-shirt-trousers-man-castle-antalya.jpg', w: 720, h: 1290 },
-  harbourMan:    { src: '/linen/linen-shirt-man-harbour-antalya.jpg', w: 720, h: 1290 },
-  jacketHarbour: { src: '/linen/linen-jacket-couple-harbour-antalya.jpg', w: 720, h: 1290 },
-  jacketKaleici: { src: '/linen/linen-jacket-couple-kaleici-antalya.jpg', w: 720, h: 1290 },
-  olive:         { src: '/linen/linen-dress-couple-olive-grove.jpg', w: 1100, h: 732 },
-  maxi:          { src: '/linen/linen-maxi-dress-hadrians-gate.jpg', w: 938, h: 768 },
-  slit:          { src: '/linen/linen-dress-slit-hadrians-gate-antalya.jpg', w: 720, h: 1290 },
-  white:         { src: '/linen/linen-dress-white-garden.jpg', w: 760, h: 1018 },
-  green:         { src: '/linen/linen-dress-green-workshop-terzi-can.jpg', w: 760, h: 1018 },
-  kidsCob:       { src: '/linen/kids-linen-clothing-cobblestone-antalya.jpg', w: 720, h: 1290 },
-  kidsGate:      { src: '/linen/kids-linen-clothing-hadrians-gate-antalya.jpg', w: 720, h: 1290 },
-  kidsBench:     { src: '/linen/kids-linen-shirt-shorts-kaleici.jpg', w: 938, h: 768 },
+  family:        { src: '/linen/antalya-tailor-made-linen-family-hadrians-gate.jpg', w: 1400, h: 764 },
+  tea:           { src: '/linen/antalya-tailor-made-linen-shirt-man-tea.jpg', w: 1100, h: 600 },
+  castle:        { src: '/linen/antalya-tailor-made-linen-shirt-trousers-man-castle.jpg', w: 720, h: 1290 },
+  harbourMan:    { src: '/linen/antalya-tailor-made-linen-shirt-man-harbour.jpg', w: 720, h: 1290 },
+  jacketHarbour: { src: '/linen/antalya-tailor-made-linen-jacket-couple-harbour.jpg', w: 720, h: 1290 },
+  jacketKaleici: { src: '/linen/antalya-tailor-made-linen-jacket-couple-kaleici.jpg', w: 720, h: 1290 },
+  olive:         { src: '/linen/antalya-tailor-made-linen-dress-couple-olive-grove.jpg', w: 1100, h: 732 },
+  maxi:          { src: '/linen/antalya-tailor-made-linen-maxi-dress-hadrians-gate.jpg', w: 938, h: 768 },
+  slit:          { src: '/linen/antalya-tailor-made-linen-dress-slit-hadrians-gate.jpg', w: 720, h: 1290 },
+  white:         { src: '/linen/antalya-tailor-made-linen-dress-white-garden.jpg', w: 760, h: 1018 },
+  green:         { src: '/linen/antalya-tailor-made-linen-dress-green-workshop.jpg', w: 760, h: 1018 },
+  kidsCob:       { src: '/linen/antalya-tailor-made-kids-linen-clothing-cobblestone.jpg', w: 720, h: 1290 },
+  kidsGate:      { src: '/linen/antalya-tailor-made-kids-linen-clothing-hadrians-gate.jpg', w: 720, h: 1290 },
+  kidsBench:     { src: '/linen/antalya-tailor-made-kids-linen-shirt-shorts-kaleici.jpg', w: 938, h: 768 },
 };
 
 export const ALT: Record<ImgKey, L3> = {

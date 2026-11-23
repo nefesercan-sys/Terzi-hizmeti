@@ -12,7 +12,7 @@ const EN_URL   = `${SITE}/en/linen-cotton-tailoring`;
 const RU_URL   = `${SITE}/ru/poshiv-lyon-hlopok`;
 const DE_URL   = `${SITE}/de/leinen-baumwolle-schneiderei`;
 const PHONE    = '+90 531 898 64 18';
-const OG       = `${SITE}/terzi-can-hero.jpg`;
+const OG       = `${SITE}/antalya-terzi-can-dikim-tamir-tadilat.jpg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),

@@ -26,7 +26,7 @@ const WA_DEF    = WA('Hallo, ich möchte ein Foto meines Kleidungsstücks senden
 const WA_HOTEL  = WA('Hallo, ich möchte einen Schneider in mein Hotel in Antalya bestellen. Hotelname und Standort sende ich Ihnen.');
 const MAPS      = 'https://www.google.com/maps?cid=6436895271281342624';
 const LAST_MOD  = '2026-10-04';
-const OG        = `${SITE}/terzi-can-hero.jpg`;
+const OG        = `${SITE}/antalya-terzi-can-dikim-tamir-tadilat.jpg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),

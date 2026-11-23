@@ -5,7 +5,7 @@ import { hreflangFiyat } from '@/lib/hreflang';
 import { FT, FIYAT_URLS, priceRowsFor, SITE, PHONE_TEL, type FLang } from '@/components/TerziFiyatlariSayfasi';
 import { fitDesc, fitKeywords } from '@/lib/meta-fit';
 
-const OG = `${SITE}/terzi-can-hero.jpg`;
+const OG = `${SITE}/antalya-terzi-can-dikim-tamir-tadilat.jpg`;
 
 export function buildFiyatMetadata(lang: FLang): Metadata {
   const T = FT[lang];

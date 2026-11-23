@@ -36,7 +36,7 @@ const KF_SHORT = new Set(['paca', 'kot', 'bel', 'elbise-tamir', 'gelinlik-abiye'
 const KF_VARIANT: Record<string, KFVariant | undefined> = { fermuar: 'both', abiye: 'abiye', 'gece-kiyafeti': 'abiye', mont: 'mont' };
 
 const WA = (m: string) => `https://wa.me/${PHONE_TEL.replace('+', '')}?text=${encodeURIComponent(m)}`;
-const OG = `${SITE}/terzi-can-hero.jpg`;
+const OG = `${SITE}/antalya-terzi-can-dikim-tamir-tadilat.jpg`;
 const OG_LOCALE: Record<Lang, string> = { tr: 'tr_TR', en: 'en_US', ru: 'ru_RU', de: 'de_DE' };
 
 // ── Arayüz metinleri ────────────────────────────────────────
@@ -444,7 +444,7 @@ function Hero({ lang, tag, h1, desc, waMsg }: { lang: Lang; tag: string; h1: Rea
   return (
     <section className="hero" aria-labelledby="hero-h">
       <div className="hero-bg" aria-hidden="true">
-        <Image src="/terzi-can-hero.jpg" alt="Terzi Can — Hurma, Konyaaltı, Antalya" fill priority fetchPriority="high" sizes="100vw" className="hero-bg-img" />
+        <Image src="/antalya-terzi-can-dikim-tamir-tadilat.jpg" alt="Terzi Can — Hurma, Konyaaltı, Antalya" fill priority fetchPriority="high" sizes="100vw" className="hero-bg-img" />
         <div className="hero-overlay" />
       </div>
       <div className="hero-content">

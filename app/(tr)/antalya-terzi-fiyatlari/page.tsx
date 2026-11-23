@@ -23,7 +23,7 @@ const OG        = `${SITE}/antalya-terzi-can-dikim-tamir-tadilat.jpg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Antalya Terzi Fiyatları 2026 · Tüm Hizmetler | Terzi Can" },
+  title: { absolute: "Terzi Fiyat Listesi 2026 Antalya · Paça, Fermuar, Dikim" },
   description:
     "Antalya terzi fiyatları 2026: paça ₺200, bel ₺200, fermuar ₺300, abiye-gelinlik tadilatı fotoğrafa veya işin detayına göre; dikim fotoğrafa ve modele göre.",
   keywords: fitKeywords([

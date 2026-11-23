@@ -26,12 +26,12 @@ const OG = `${SITE}/og-promosyon.jpg`;
 
 /** Sayfadaki örnek görseller (örnek niteliğinde; gerçek iş fotoğrafı değildir). idx: COPY[lang].items içindeki sıra. */
 export const PROMO_FOTOLAR: { src: string; idx: number }[] = [
-  { src: '/gorseller/bez-canta-atolye.webp', idx: 0 }, // Bez çanta
-  { src: '/gorseller/hazir-giyim-atolye.webp', idx: 1 }, // Tişört
-  { src: '/gorseller/uniforma.webp', idx: 7 }, // Uniforma
-  { src: '/gorseller/polar-yelek.webp', idx: 2 }, // Polar yelek
-  { src: '/gorseller/yun-pantolon-metre.webp', idx: 4 }, // Pantolon
-  { src: '/gorseller/sef-mutfak-uniforma.webp', idx: 6 }, // Önlük
+  { src: '/gorseller/antalya-baskili-bez-canta-uretim.webp', idx: 0 }, // Bez çanta
+  { src: '/gorseller/antalya-tekstil-tisort-seri-uretim.webp', idx: 1 }, // Tişört
+  { src: '/gorseller/antalya-uniforma-dikim-uretim.webp', idx: 7 }, // Uniforma
+  { src: '/gorseller/antalya-terzi-yelek-tamiri-fermuar.webp', idx: 2 }, // Polar yelek
+  { src: '/gorseller/antalya-terzi-kumas-pantolon-tadilat.webp', idx: 4 }, // Pantolon
+  { src: '/gorseller/antalya-terzi-asci-uniformasi-dikim.webp', idx: 6 }, // Önlük
 ];
 export const ORNEK_GORSEL: Record<PLang, string> = {
   tr: 'örnek görsel', en: 'illustrative image', de: 'Beispielbild', ru: 'пример изображения', es: 'imagen ilustrativa',

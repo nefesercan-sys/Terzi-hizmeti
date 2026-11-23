@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { withTwin } from '@/lib/twin';
 import ReviewsBlock from '@/components/ReviewsBlock';
+import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
 import KargoKisa from '@/components/KargoKisa';
 import { businessNode } from '@/lib/business';
 import { fitKeywords } from '@/lib/meta-fit';
@@ -242,6 +243,7 @@ export default function Page() {
           </div>
         </section>
 
+        <OrnekGorselSeridi lang="tr" anahtarlar={['pilili-etek', 'bel-daraltma-manken', 'dikis-makinesi']} sayfaUrl={PAGE_URL} />
         <ReviewsBlock lang="tr" />
         <footer>
           <div>© {new Date().getFullYear()} Terzi Can · Kot Etek Kısaltma ve Daraltma Antalya · {PHONE}</div>

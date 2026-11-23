@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { withTwin } from '@/lib/twin';
 import ReviewsBlock from '@/components/ReviewsBlock';
+import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
 import KargoFermuarKutusu from '@/components/KargoFermuarKutusu';
 import { businessNode } from '@/lib/business';
 import { fitKeywords } from '@/lib/meta-fit';
@@ -237,6 +238,7 @@ export default function MontFermuarPage() {
           </div>
         </section>
 
+        <OrnekGorselSeridi lang="tr" anahtarlar={['fermuar-degisimi', 'polar-yelek', 'erkek-palto-atolye']} sayfaUrl={PAGE_URL} />
         <ReviewsBlock lang="tr" />
         <footer>
           <div>© {new Date().getFullYear()} Terzi Can · Mont Fermuarı Değişimi Antalya · {PHONE}</div>

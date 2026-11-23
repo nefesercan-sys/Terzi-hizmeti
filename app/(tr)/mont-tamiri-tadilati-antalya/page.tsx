@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { withTwin } from '@/lib/twin';
 import ReviewsBlock from '@/components/ReviewsBlock';
+import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
 import KargoFermuarKutusu from '@/components/KargoFermuarKutusu';
 import { businessNode } from '@/lib/business';
 import { fitKeywords } from '@/lib/meta-fit';
@@ -222,6 +223,7 @@ export default function Page() {
           </div>
         </section>
 
+        <OrnekGorselSeridi lang="tr" anahtarlar={['erkek-palto-atolye', 'fermuar-degisimi', 'kadin-trenckot-atolye']} sayfaUrl={PAGE_URL} />
         <ReviewsBlock lang="tr" />
         <footer>
           <div>© {new Date().getFullYear()} Terzi Can · Mont Tamiri ve Tadilatı Antalya · {PHONE}</div>

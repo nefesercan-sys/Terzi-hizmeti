@@ -27,7 +27,7 @@ export const BLOG_YAZILARI: BlogYazi[] = [
     baslik: 'Pantolon Paçası Nasıl Kısaltılır? Ölçü, Yöntem ve Fiyat',
     ozet: 'Paça kısaltmada doğru boy nasıl belirlenir, hangi paça tipi nasıl dikilir, ne kadar sürer ve kaça yapılır?',
     tarih: '2026-10-31',
-    gorsel: '/gorseller/paca-kisaltma.webp',
+    gorsel: '/gorseller/antalya-terzi-paca-kisaltma.webp',
     gorselAlt: 'Terzi pantolon paçasına ölçü işaretliyor (örnek görsel)',
     giris: 'Pantolonun boyu uzun geldiğinde paça kısaltma en sık yapılan tadilatlardan biridir. İşin püf noktası, boyu ayakkabıyla birlikte ve ayakta ölçmektir. Bu yazıda doğru ölçünün nasıl alındığını, paça tiplerine göre yöntemleri ve nelere dikkat etmeniz gerektiğini anlatıyoruz.',
     bolumler: [
@@ -82,7 +82,7 @@ export const BLOG_YAZILARI: BlogYazi[] = [
     baslik: 'Fermuar Ne Zaman Tamir Edilir, Ne Zaman Değiştirilir?',
     ozet: 'Sıkışan, açılan veya dişi kopan fermuar için tamir mi değişim mi gerekir? Pantolon, mont ve çanta fermuarı rehberi.',
     tarih: '2026-10-31',
-    gorsel: '/gorseller/fermuar-degisimi.webp',
+    gorsel: '/gorseller/antalya-terzi-fermuar-degisimi-tamiri.webp',
     gorselAlt: 'Mont fermuarı, sökücü ve yeni fermuar masada (örnek görsel)',
     giris: 'Fermuar bozulduğunda ilk soru genelde "tamir mi, değişim mi?" olur. Her sorun için yeni fermuar gerekmez; bazen sadece sürgü (kayıcı) değişir ya da sıkışma giderilir. Bu yazıda hangi durumda ne yapıldığını özetliyoruz.',
     bolumler: [
@@ -131,7 +131,7 @@ export const BLOG_YAZILARI: BlogYazi[] = [
     baslik: 'Antalya\'da Tatilde Kıyafet Tadilatı: Acilde Ne Yapmalı?',
     ozet: 'Tatilde fermuar patladı, elbise uzun geldi: Antalya\'da turistler için acil tadilat ve otele gelen terzi rehberi.',
     tarih: '2026-10-31',
-    gorsel: '/gorseller/eve-gelen-terzi.webp',
+    gorsel: '/gorseller/antalya-eve-otele-gelen-terzi.webp',
     gorselAlt: 'Terzi, elbise kılıfı ve ölçü şeridi ile otel ziyareti (örnek görsel)',
     giris: 'Tatil valizine ne koyarsanız koyun, bir kıyafet mutlaka sorun çıkarır: fermuar patlar, pantolon uzun gelir. Antalya\'da tatil yapıyorsanız bunun için şehir merkezine kadar gitmenize gerek yok. Bu yazı, tatilde acil tadilat ihtiyacını nasıl çözebileceğinizi anlatıyor.',
     bolumler: [
@@ -182,7 +182,7 @@ export const BLOG_YAZILARI: BlogYazi[] = [
     baslik: 'Terziye Gitmeden Önce Neler Hazırlanmalı? 6 Maddelik Liste',
     ozet: 'Tadilat için terziye giderken yanınıza ne almalısınız, hangi bilgileri vermelisiniz? Hızlı ve doğru sonuç için kontrol listesi.',
     tarih: '2026-10-31',
-    gorsel: '/gorseller/dikis-makinesi.webp',
+    gorsel: '/gorseller/antalya-terzi-dikim-tamir-dikis-makinesi.webp',
     gorselAlt: 'Dikiş makinesinde çalışan eller (örnek görsel)',
     giris: 'Terzide geçen süre ve işin sonucu, büyük ölçüde nasıl hazırlandığınıza bağlıdır. Doğru kıyafet, doğru ayakkabı ve net bir beklenti, ikinci provayı gereksiz kılabilir. İşte kısa bir kontrol listesi.',
     bolumler: [
@@ -227,7 +227,7 @@ export const BLOG_YAZILARI: BlogYazi[] = [
     baslik: 'Keten ve Pamuklu Kıyafet: Özel Dikim ve Bakım İpuçları',
     ozet: 'Yaz için keten gömlek, elbise ve pantolon yaptırırken kumaş seçimi, çekme payı ve ütüleme önerileri.',
     tarih: '2026-10-31',
-    gorsel: '/gorseller/keten-kadin-evde.webp',
+    gorsel: '/gorseller/antalya-terzi-keten-gomlek-pantolon-ozel-dikim.webp',
     gorselAlt: 'Keten gömlek ve pantolon giyen kadın (örnek görsel)',
     gorselBoyut: [1376, 768],
     giris: 'Antalya gibi sıcak iklimlerde keten ve pamuk kumaş en rahat seçimlerdir. Ancak bu kumaşlar çeker, kırışır ve yanlış bakımda şeklini kaybedebilir. Özel dikim yaptırmadan önce bilmeniz gerekenler burada.',
@@ -270,7 +270,7 @@ export const BLOG_YAZILARI: BlogYazi[] = [
     baslik: 'Bel Daraltma Ne Kadar Mümkün? Elbise ve Pantolon İçin Rehber',
     ozet: 'Elbisede ve pantolonda bel daraltma sınırı nedir? Dikiş payı, kumaş ve modelin etkisi, fiyat ve süre.',
     tarih: '2026-10-31',
-    gorsel: '/gorseller/bel-daraltma-manken.webp',
+    gorsel: '/gorseller/antalya-terzi-elbise-bel-daraltma.webp',
     gorselAlt: 'Mankende bel bölgesine iğnelenmiş elbise (örnek görsel)',
     giris: 'Bol gelen bir elbise veya pantolon çoğu zaman bel daraltmayla kurtarılır. Ancak her kıyafette istediğiniz kadar daraltma yapılamaz; dikiş payı, kesim ve desen sınırı belirler. Bu yazıda neye dikkat edildiğini anlatıyoruz.',
     bolumler: [
@@ -313,7 +313,7 @@ export const BLOG_YAZILARI: BlogYazi[] = [
     baslik: 'Otel ve Restoran Üniforması Yaptırırken Dikkat Edilecekler',
     ozet: 'Personel üniforması için kumaş, beden, nakış ve teslim planı. Otel, restoran ve spa işletmeleri için kontrol listesi.',
     tarih: '2026-10-31',
-    gorsel: '/gorseller/sef-mutfak-uniforma.webp',
+    gorsel: '/gorseller/antalya-terzi-asci-uniformasi-dikim.webp',
     gorselAlt: 'Aşçı ceketi ve önlük giyen mutfak personeli (örnek görsel)',
     gorselBoyut: [1376, 768],
     giris: 'Üniforma, işletmenin ilk görünen yüzüdür. Sezon öncesi toplu sipariş verirken doğru kumaşı ve beden planını seçmek, hem maliyeti hem de personelin konforunu belirler. İşte işletmeler için kısa bir rehber.',

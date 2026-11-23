@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { withTwin } from '@/lib/twin';
 import ReviewsBlock from '@/components/ReviewsBlock';
+import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
 import KargoFermuarKutusu from '@/components/KargoFermuarKutusu';
 import { businessNode } from '@/lib/business';
 import { fitKeywords } from '@/lib/meta-fit';
@@ -29,7 +30,7 @@ export const metadata: Metadata = {
     title: "Kot Ceket ve Kot Mont Tadilatı Antalya",
     description: "Kot ceket ve mont kısaltma, daraltma, orijinal görünümde dikiş. ₺200'den.",
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'tr_TR', type: 'website',
-    images: [{ url: `${SITE}/terzi-can-hero.jpg`, width: 1024, height: 1024, alt: "Kot Ceket ve Kot Mont Tadilatı Antalya" }],
+    images: [{ url: `${SITE}/antalya-terzi-can-dikim-tamir-tadilat.jpg`, width: 1024, height: 1024, alt: "Kot Ceket ve Kot Mont Tadilatı Antalya" }],
   },
 };
 
@@ -138,7 +139,7 @@ export default function Page() {
 
         <section className="hero" aria-labelledby="hero-h">
           <div className="hero-bg" aria-hidden="true">
-            <picture><source type="image/webp" srcSet="/terzi-can-hero-640.webp 640w, /terzi-can-hero-1024.webp 1024w" sizes="100vw" /><img src="/terzi-can-hero.jpg" alt="" className="hero-bg-img" width={1024} height={1024} fetchPriority="high" decoding="async" /></picture>
+            <picture><source type="image/webp" srcSet="/antalya-terzi-can-dikim-tamir-tadilat-640.webp 640w, /antalya-terzi-can-dikim-tamir-tadilat-1024.webp 1024w" sizes="100vw" /><img src="/antalya-terzi-can-dikim-tamir-tadilat.jpg" alt="" className="hero-bg-img" width={1024} height={1024} fetchPriority="high" decoding="async" /></picture>
             <div className="hero-overlay" />
           </div>
           <div className="hero-content">
@@ -244,6 +245,7 @@ export default function Page() {
           </div>
         </section>
 
+        <OrnekGorselSeridi lang="tr" anahtarlar={['kadin-trenckot-atolye', 'fermuar-degisimi', 'dikis-makinesi']} sayfaUrl={PAGE_URL} />
         <ReviewsBlock lang="tr" />
         <footer>
           <div>© {new Date().getFullYear()} Terzi Can · Kot Ceket ve Mont Tadilatı Antalya · {PHONE}</div>

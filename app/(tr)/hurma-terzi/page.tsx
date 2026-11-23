@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     title: 'Hurma Terzi · Tamir, Tadilat, Özel Dikim | Terzi Can',
     description: "Hurma terzi atölyemiz Hurma'da: tamir, tadilat, bay bayan özel dikim, ölçüye göre elbise, daraltma, kısaltma. Paça ₺200'den. 08:00–23:00.",
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'tr_TR', type: 'website',
-    images: [{ url: `${SITE}/terzi-can-hero.jpg`, width: 1024, height: 1024, alt: 'Hurma Terzi Konyaaltı' }],
+    images: [{ url: `${SITE}/antalya-terzi-can-dikim-tamir-tadilat.jpg`, width: 1024, height: 1024, alt: 'Hurma Terzi Konyaaltı' }],
   },
 };
 
@@ -119,7 +119,7 @@ export default function HurmaTerziPage() {
 
         <section className="hero" aria-labelledby="hero-h">
           <div className="hero-bg" aria-hidden="true">
-            <Image src="/terzi-can-hero.jpg" alt="Terzi Can — Hurma mahallesi Konyaaltı terzi atölyesi" fill priority fetchPriority="high" sizes="100vw" className="hero-bg-img" />
+            <Image src="/antalya-terzi-can-dikim-tamir-tadilat.jpg" alt="Terzi Can — Hurma mahallesi Konyaaltı terzi atölyesi" fill priority fetchPriority="high" sizes="100vw" className="hero-bg-img" />
             <div className="hero-overlay" />
           </div>
           <div className="hero-content">

@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     title: 'Hotel Tailor Antalya — Mobile Service',
     description: 'We come to your hotel in Belek, Lara, Güzeloba, Kemer or Side. Alterations and repairs.',
     url: `${SITE}${BASE_PATH}`, siteName: 'Terzi Can', locale: 'en_US', type: 'website',
-    images: [{ url: `${SITE}/terzi-can-hero.jpg`, width: 1024, height: 1024, alt: 'Hotel Tailor Antalya' }],
+    images: [{ url: `${SITE}/antalya-terzi-can-dikim-tamir-tadilat.jpg`, width: 1024, height: 1024, alt: 'Hotel Tailor Antalya' }],
   },
 };
 
@@ -91,7 +91,7 @@ export default function OtelBolgeleriEnHub() {
 
         <section className="hero" aria-labelledby="hub-h">
           <div className="hero-bg" aria-hidden="true">
-            <picture><source type="image/webp" srcSet="/terzi-can-hero-640.webp 640w, /terzi-can-hero-1024.webp 1024w" sizes="100vw" /><img src="/terzi-can-hero.jpg" alt="" className="hero-bg-img" width={1024} height={1024} fetchPriority="high" decoding="async" /></picture>
+            <picture><source type="image/webp" srcSet="/antalya-terzi-can-dikim-tamir-tadilat-640.webp 640w, /antalya-terzi-can-dikim-tamir-tadilat-1024.webp 1024w" sizes="100vw" /><img src="/antalya-terzi-can-dikim-tamir-tadilat.jpg" alt="" className="hero-bg-img" width={1024} height={1024} fetchPriority="high" decoding="async" /></picture>
             <div className="hero-overlay" />
           </div>
           <div className="hero-content">

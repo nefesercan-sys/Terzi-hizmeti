@@ -183,7 +183,7 @@ export default function OtelBolgeSayfasi({ lang, region, allRegions, basePath, m
 
       <header className="hero">
         <div className="hero-bg" aria-hidden="true">
-          <Image src="/terzi-can-hero.jpg" alt={`Terzi Can — ${region.name}`} fill priority fetchPriority="high" sizes="100vw"
+          <Image src="/antalya-terzi-can-dikim-tamir-tadilat.jpg" alt={`Terzi Can — ${region.name}`} fill priority fetchPriority="high" sizes="100vw"
             style={{ objectFit: 'cover', objectPosition: 'center 15%', filter: 'brightness(.32) saturate(.75)' }} />
           <div className="hero-overlay" />
         </div>

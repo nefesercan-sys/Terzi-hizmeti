@@ -7,7 +7,7 @@ const PAGE_URL  = `${SITE}/blog/2026-yaz-sezonu-gelinlik-tadilat-rehberi`;
 const PHONE     = '+90 531 898 64 18';
 const PHONE_TEL = '+905318986418';
 const WA        = 'https://wa.me/905318986418?text=' + encodeURIComponent('Merhaba, gelinlik tadilatı için randevu almak istiyorum.');
-const OG        = `${SITE}/terzi-can-hero.jpg`;
+const OG        = `${SITE}/antalya-terzi-can-dikim-tamir-tadilat.jpg`;
 const PUBLISHED = '2026-08-01';
 const MODIFIED  = '2026-08-01';
 

@@ -22,7 +22,7 @@ const WA_DE     = WA('Hallo! Ich suche einen Schneider für Änderungsschneidere
 const MAPS      = 'https://www.google.com/maps?cid=6436895271281342624';
 const BIZ       = 'TERZİ Can Antalya Tailor Service';
 const TODAY     = '2026-10-04';
-const OG        = `${SITE}/terzi-can-hero.jpg`;
+const OG        = `${SITE}/antalya-terzi-can-dikim-tamir-tadilat.jpg`;
 
 // ─── METADATA ─────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
@@ -165,13 +165,13 @@ const C = {
 // Yapay zekâ ile üretilmiş örnek görseller (gerçek iş fotoğrafı değildir; alt metinde "örnek görsel" yazar).
 // Tabloda olmayan bir hizmet için özgün çizim (Ilustrasyon) kullanılır. Gerçek fotoğraf gelince buradaki dosyalar değiştirilir.
 const FOTO: Record<string, string> = {
-  '01': '/gorseller/paca-kisaltma.webp',
-  '02': '/gorseller/fermuar-degisimi.webp',
-  '03': '/gorseller/bel-daraltma-manken.webp',
-  '04': '/gorseller/kalip-ve-makas.webp',
-  '05': '/gorseller/gelinlik-abiye.webp',
-  '06': '/gorseller/eve-gelen-terzi.webp',
-  '07': '/gorseller/uniforma.webp',
+  '01': '/gorseller/antalya-terzi-paca-kisaltma.webp',
+  '02': '/gorseller/antalya-terzi-fermuar-degisimi-tamiri.webp',
+  '03': '/gorseller/antalya-terzi-elbise-bel-daraltma.webp',
+  '04': '/gorseller/antalya-terzi-ozel-dikim-kalip-makas.webp',
+  '05': '/gorseller/antalya-terzi-gelinlik-tadilati.webp',
+  '06': '/gorseller/antalya-eve-otele-gelen-terzi.webp',
+  '07': '/gorseller/antalya-uniforma-dikim-uretim.webp',
 };
 
 const SERVICES = [
@@ -329,8 +329,8 @@ export default function TerziHizmetiPage() {
         <section className="hero" aria-labelledby="hero-h">
           <div className="hero-bg" aria-hidden="true">
             <picture>
-              <source type="image/webp" srcSet="/terzi-can-hero-640.webp 640w, /terzi-can-hero-1024.webp 1024w" sizes="100vw" />
-              <img src="/terzi-can-hero.jpg" alt="" className="hero-bg-img" width={1024} height={1024} fetchPriority="high" decoding="async" />
+              <source type="image/webp" srcSet="/antalya-terzi-can-dikim-tamir-tadilat-640.webp 640w, /antalya-terzi-can-dikim-tamir-tadilat-1024.webp 1024w" sizes="100vw" />
+              <img src="/antalya-terzi-can-dikim-tamir-tadilat.jpg" alt="" className="hero-bg-img" width={1024} height={1024} fetchPriority="high" decoding="async" />
             </picture>
             <div className="hero-overlay"/>
           </div>
@@ -446,7 +446,7 @@ export default function TerziHizmetiPage() {
               <div className="svc-card" key={s.n}>
                 <div className="svc-img-wrap">
                   {FOTO[s.n]
-                    ? <img src={FOTO[s.n]} alt={`${s.title} (örnek görsel)`} className="svc-img" loading={i===0?'eager':'lazy'} fetchPriority={i===0?'high':'auto'} decoding="async" width={1264} height={848} />
+                    ? <img src={FOTO[s.n]} alt={`${s.title} – Antalya terzi: dikim, tamir, tadilat (örnek görsel)`} className="svc-img" loading={i===0?'eager':'lazy'} fetchPriority={i===0?'high':'auto'} decoding="async" width={1264} height={848} />
                     : <Ilustrasyon tur={s.tur} etiket={`${s.title} (çizim)`} className="svc-img" />}
                   <div className="svc-n svc-n-onimg">{s.n}</div>
                 </div>
@@ -478,9 +478,9 @@ export default function TerziHizmetiPage() {
             </div>
             <div className="gallery-grid">
               {[
-                { src:'/gorseller/dikis-makinesi.webp', alt:'Dikiş makinesinde çalışma (örnek görsel)' },
-                { src:'/gorseller/hazir-giyim-atolye.webp', alt:'Tekstil atölyesi, katlanmış hazır giyim (örnek görsel)' },
-                { src:'/gorseller/bez-canta-atolye.webp', alt:'Atölyede bez çantalar (örnek görsel)' },
+                { src:'/gorseller/antalya-terzi-dikim-tamir-dikis-makinesi.webp', alt:'Dikiş makinesinde çalışma – Antalya terzi: dikim, tamir, tadilat (örnek görsel)' },
+                { src:'/gorseller/antalya-tekstil-tisort-seri-uretim.webp', alt:'Tekstil atölyesi, katlanmış hazır giyim – Antalya terzi: dikim, tamir, tadilat (örnek görsel)' },
+                { src:'/gorseller/antalya-baskili-bez-canta-uretim.webp', alt:'Atölyede bez çantalar – Antalya terzi: dikim, tamir, tadilat (örnek görsel)' },
               ].map((g,i)=>(
                 <div className="gallery-item" key={i}>
                   <img src={g.src} alt={g.alt} loading="lazy" decoding="async" width={1264} height={848} />

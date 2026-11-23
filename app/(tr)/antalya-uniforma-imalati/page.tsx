@@ -24,7 +24,7 @@ const PAGE_DESC  =
   'Antalya otel, restoran, hastane, okul ve güvenlik personeli üniforma üretimi. Özel tasarım, nakış & baskı logosu ve seri imalat hizmeti.';
 
 // DÜZELTME: /og/terzi-can-uniforma.jpg dosyası yoktu (404). Var olan görsel kullanılıyor.
-const OG_IMAGE = `${HOME_URL}/terzi-can-hero.jpg`;
+const OG_IMAGE = `${HOME_URL}/antalya-terzi-can-dikim-tamir-tadilat.jpg`;
 
 const ANTALYA_ILCELER = [
   'Antalya','Konyaaltı','Muratpaşa','Kepez','Döşemealtı','Aksu',

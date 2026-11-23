@@ -20,7 +20,7 @@ type L4<T = string> = Record<Lang, T>;
 const SITE_CFG = {
   businessId: `${SITE}#business`,
   businessName: 'Terzi Can',
-  image: `${SITE}/terzi-can-hero.jpg`,
+  image: `${SITE}/antalya-terzi-can-dikim-tamir-tadilat.jpg`,
   geo: { latitude: 36.8572868, longitude: 30.5970193 },
   sameAs: [MAPS, `https://wa.me/${PHONE_TEL.replace('+', '')}`, 'https://swaphubs.com/terzi'],
   contactUrl: {

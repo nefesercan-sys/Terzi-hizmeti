@@ -42,7 +42,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: commonDisallows,
       },
     ],
-    sitemap: 'https://terzihizmeti.com.tr/sitemap.xml',
+    sitemap: ['https://terzihizmeti.com.tr/sitemap.xml', 'https://terzihizmeti.com.tr/sitemap-gorseller.xml'],
     host: 'https://terzihizmeti.com.tr',
   }
 }

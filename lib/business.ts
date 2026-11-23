@@ -36,8 +36,8 @@ export function businessNode(opts: { reviews?: boolean } = {}) {
   paymentAccepted: 'Cash, Credit Card',
   currenciesAccepted: 'TRY, EUR, USD, GBP, RUB, PLN, UAH, CHF, SEK, NOK, DKK, CZK, AED, SAR',
   slogan: 'Fotoğraf at, fiyat al',
-  image: `${SITE}/terzi-can-hero.jpg`,
-  logo: `${SITE}/terzi-can-hero.jpg`,
+  image: `${SITE}/antalya-terzi-can-dikim-tamir-tadilat.jpg`,
+  logo: `${SITE}/antalya-terzi-can-dikim-tamir-tadilat.jpg`,
   hasMap: MAPS,
   address: {
     '@type': 'PostalAddress',

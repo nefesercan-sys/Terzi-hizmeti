@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: { params: Promise<{ region: s
   const url = `${SITE}${BASE_PATH}/${r.slug}`;
   const title = `Ателье и портной в отель: ${r.name}, Анталья`;
   const desc = fitDesc(`Остановились в районе ${r.name}? Заберём вещи из отеля, подгоним в мастерской в Коньяалты и вернём. Ежедневно 08:00–23:00.`);
-  const ogImage = `${SITE}/terzi-can-hero.jpg`;
+  const ogImage = `${SITE}/antalya-terzi-can-dikim-tamir-tadilat.jpg`;
 
   return {
     metadataBase: new URL(SITE),

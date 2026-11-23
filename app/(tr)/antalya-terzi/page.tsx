@@ -19,7 +19,7 @@ const WA_DEF    = WA('Merhaba, terzi ve tekstil atölyesi hizmetleriniz hakkınd
 const MAPS      = 'https://www.google.com/maps?cid=6436895271281342624';
 const BIZ       = 'TERZİ Can Antalya Tailor Service';
 const TODAY     = '2026-10-04';
-const OG        = `${SITE}/terzi-can-hero.jpg`;
+const OG        = `${SITE}/antalya-terzi-can-dikim-tamir-tadilat.jpg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
@@ -250,7 +250,7 @@ export default function KonyaaltiTailorServicePage() {
         <header className="hero">
           <div className="hero-bg" aria-hidden="true">
             <Image
-              src="/terzi-can-hero.jpg"
+              src="/antalya-terzi-can-dikim-tamir-tadilat.jpg"
               alt="Terzi Can — Konyaaltı Antalya terzi ve dikiş atölyesi"
               fill
               priority

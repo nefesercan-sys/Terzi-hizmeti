@@ -5,7 +5,7 @@ import { sixAlt } from '@/lib/intl-topics';
 import { fitDesc, fitKeywords } from '@/lib/meta-fit';
 
 const SITE    = 'https://terzihizmeti.com.tr';
-const OG      = `${SITE}/og-anavera.jpg`;
+const OG      = `${SITE}/og-antalya-tekstil-uretim-anavera.jpg`;
 const PHONE_E = '+905318986418';
 
 type Copy = { title: string; description: string; ogLocale: string; keywords: string[] };

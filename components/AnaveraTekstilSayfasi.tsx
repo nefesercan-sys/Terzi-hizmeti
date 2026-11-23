@@ -412,7 +412,7 @@ const GOLD = '#C9A227';
 const GOLD_L = '#E4C664';
 const NAVY = '#0F172A';
 // Yapay zekâ ile üretilmiş örnek görseller (gerçek iş fotoğrafı değildir).
-const IMGS = ['/gorseller/hazir-giyim-atolye.webp', '/gorseller/kalip-ve-makas.webp', '/gorseller/bez-canta-atolye.webp', '/gorseller/dikis-makinesi.webp'];
+const IMGS = ['/gorseller/antalya-tekstil-tisort-seri-uretim.webp', '/gorseller/antalya-terzi-ozel-dikim-kalip-makas.webp', '/gorseller/antalya-baskili-bez-canta-uretim.webp', '/gorseller/antalya-terzi-dikim-tamir-dikis-makinesi.webp'];
 
 const eyebrow = { color: '#D97706', fontWeight: 800, fontSize: '0.85rem', letterSpacing: '0.15em', textTransform: 'uppercase' } as const;
 const h2 = { fontSize: 'clamp(1.8rem, 3.5vw, 2.4rem)', fontWeight: 800, color: NAVY, margin: '0.5rem 0 0.8rem' } as const;

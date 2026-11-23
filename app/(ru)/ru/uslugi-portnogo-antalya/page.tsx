@@ -21,7 +21,7 @@ const WA        = (m: string) => `https://wa.me/${WA_NUM}?text=${encodeURICompon
 const WA_DEF    = WA('Здравствуйте, хочу вызвать выездного портного в отель/по адресу. Мой адрес: ');
 const MAPS      = 'https://www.google.com/maps?cid=6436895271281342624';
 const TODAY     = '2026-10-04';
-const OG        = `${SITE}/terzi-can-hero.jpg`;
+const OG        = `${SITE}/antalya-terzi-can-dikim-tamir-tadilat.jpg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
@@ -156,7 +156,7 @@ export default function UslugiPortnogoAntalyaPage() {
 
         <header className="hero">
           <div className="hero-bg" aria-hidden="true">
-            <Image src="/terzi-can-hero.jpg" alt="" fill priority fetchPriority="high" sizes="100vw"
+            <Image src="/antalya-terzi-can-dikim-tamir-tadilat.jpg" alt="" fill priority fetchPriority="high" sizes="100vw"
               style={{ objectFit: 'cover', objectPosition: 'center 15%', filter: 'brightness(.32) saturate(.75)' }} />
             <div className="hero-overlay" />
           </div>

@@ -17,11 +17,11 @@ export type TopicCopy = {
 export type TopicUi = { back: string; faqTitle: string; cta: string; moreTitle: string; hubName: string };
 
 export const TOPIC_UI: Record<ILang, TopicUi> = {
-  es: { back: '← Sastre en Antalya para turistas', faqTitle: 'Preguntas frecuentes', cta: 'Enviar una foto por WhatsApp', moreTitle: 'Otros servicios', hubName: 'Arreglos y ropa a medida' },
+  es: { back: '← Sastre y costurera en Antalya', faqTitle: 'Preguntas frecuentes', cta: 'Enviar una foto por WhatsApp', moreTitle: 'Otros servicios', hubName: 'Arreglos y ropa a medida' },
   fr: { back: '← Couturier à Antalya pour les touristes', faqTitle: 'Questions fréquentes', cta: 'Envoyer une photo sur WhatsApp', moreTitle: 'Autres services', hubName: 'Retouches et sur-mesure' },
-  pl: { back: '← Krawiec w Antalyi dla turystów', faqTitle: 'Najczęstsze pytania', cta: 'Wyślij zdjęcie na WhatsApp', moreTitle: 'Inne usługi', hubName: 'Przeróbki i szycie na miarę' },
+  pl: { back: '← Krawiec i krawcowa w Antalyi', faqTitle: 'Najczęstsze pytania', cta: 'Wyślij zdjęcie na WhatsApp', moreTitle: 'Inne usługi', hubName: 'Przeróbki i szycie na miarę' },
   uk: { back: '← Кравець в Анталії для туристів', faqTitle: 'Часті запитання', cta: 'Надіслати фото у WhatsApp', moreTitle: 'Інші послуги', hubName: 'Підгонка та пошив' },
-  nl: { back: '← Kleermaker in Antalya voor toeristen', faqTitle: 'Veelgestelde vragen', cta: 'Stuur een foto via WhatsApp', moreTitle: 'Andere diensten', hubName: 'Vermaken en maatwerk' },
+  nl: { back: '← Kleermaker en kleding vermaken in Antalya', faqTitle: 'Veelgestelde vragen', cta: 'Stuur een foto via WhatsApp', moreTitle: 'Andere diensten', hubName: 'Vermaken en maatwerk' },
   ar: { back: '← خيّاط في أنطاليا للسياح', faqTitle: 'الأسئلة الشائعة', cta: 'أرسل صورة عبر واتساب', moreTitle: 'خدمات أخرى', hubName: 'التعديل والخياطة حسب المقاس' },
 };
 
@@ -32,7 +32,7 @@ export const TOPICS: Record<ILang, Record<TopicId, TopicCopy>> = {
     tamir: {
       slug: 'arreglos-de-ropa-antalya',
       title: 'Arreglos de ropa en Antalya: bajos, cremalleras, ajustes',
-      desc: 'Acortar pantalones, estrechar, cambiar cremalleras y arreglar chaquetas, vestidos y cuero. Konyaaltı, Antalya, cada día 08:00–23:00.',
+      desc: 'Sastre y costurera: acortar pantalones, estrechar, cambiar cremalleras y arreglar chaquetas, vestidos y cuero. Konyaaltı, Antalya, cada día 08:00–23:00.',
       h1: 'Arreglos de ropa en Antalya',
       lead: 'Taller en Konyaaltı desde 2006. Acortamos, ajustamos y reparamos ropa de mujer y de hombre. Recogemos y entregamos en su hotel.',
       pointsTitle: 'Qué arreglamos',
@@ -78,7 +78,7 @@ export const TOPICS: Record<ILang, Record<TopicId, TopicCopy>> = {
     tamir: {
       slug: 'retouches-vetements-antalya',
       title: 'Retouches de vêtements à Antalya : ourlets, fermetures',
-      desc: 'Raccourcir un pantalon, ajuster, changer une fermeture, retoucher vestes, robes et cuir. Konyaaltı, Antalya, tous les jours 08:00–23:00.',
+      desc: 'Couturier, retouches : raccourcir un pantalon, ajuster, changer une fermeture, retoucher vestes, robes et cuir. Konyaaltı, Antalya, tous les jours 08:00–23:00.',
       h1: 'Retouches de vêtements à Antalya',
       lead: 'Atelier à Konyaaltı depuis 2006. Nous raccourcissons, ajustons et réparons les vêtements femme et homme. Collecte et livraison à votre hôtel.',
       pointsTitle: 'Ce que nous retouchons',
@@ -124,7 +124,7 @@ export const TOPICS: Record<ILang, Record<TopicId, TopicCopy>> = {
     tamir: {
       slug: 'przerobki-krawieckie-antalya',
       title: 'Przeróbki krawieckie w Antalyi: skracanie, zamki',
-      desc: 'Skracanie spodni, zwężanie, wymiana zamków, poprawki marynarek, sukienek i skóry. Konyaaltı, Antalya, codziennie 8:00–23:00.',
+      desc: 'Krawiec i krawcowa: skracanie spodni, zwężanie, wymiana zamków, poprawki marynarek, sukienek i skóry. Konyaaltı, Antalya, codziennie 8:00–23:00.',
       h1: 'Przeróbki krawieckie w Antalyi',
       lead: 'Pracownia w Konyaaltı od 2006 roku. Skracamy, zwężamy i naprawiamy odzież damską i męską. Odbieramy i dowozimy do hotelu.',
       pointsTitle: 'Co poprawiamy',
@@ -216,7 +216,7 @@ export const TOPICS: Record<ILang, Record<TopicId, TopicCopy>> = {
     tamir: {
       slug: 'kleding-vermaken-antalya',
       title: 'Kleding vermaken in Antalya: zomen, ritsen, innemen',
-      desc: 'Broeken inkorten, innemen, ritsen vervangen en colberts, jurken en leer vermaken. Konyaaltı, Antalya, elke dag 08:00–23:00.',
+      desc: 'Kleermaker en kledingreparatie: broeken inkorten, innemen, ritsen vervangen en colberts, jurken en leer vermaken. Konyaaltı, Antalya, elke dag 08:00–23:00.',
       h1: 'Kleding vermaken in Antalya',
       lead: 'Atelier in Konyaaltı sinds 2006. Wij korten in, passen aan en repareren dames- en herenkleding. Ophalen en terugbrengen naar uw hotel.',
       pointsTitle: 'Wat wij vermaken',

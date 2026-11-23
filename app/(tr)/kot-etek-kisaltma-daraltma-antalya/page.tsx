@@ -18,7 +18,7 @@ const TODAY     = '2026-11-03';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Kot Etek Kısaltma ve Daraltma ₺200'den · Antalya" },
+  title: { absolute: "Kot Etek Kısaltma ve Daraltma · Antalya" },
   description:
     "Kot etek boyu kısaltma, bel daraltma ve orijinal etek ucu ₺200'den. Normal iş aynı gün, acil 1–2 saat. Eve ve otele servis.",
   keywords: fitKeywords([

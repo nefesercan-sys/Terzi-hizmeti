@@ -18,7 +18,7 @@ const TODAY     = '2026-11-03';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Çanta Fermuar Tamiri ₺300'den · Aynı Gün · Antalya" },
+  title: { absolute: "Çanta Fermuar Tamiri · Aynı Gün · Antalya" },
   description:
     "Çanta, sırt çantası ve valiz fermuarı değişimi ₺300'den. Normal iş aynı gün, acil 1–2 saat. Eve ve otele servis.",
   keywords: fitKeywords([

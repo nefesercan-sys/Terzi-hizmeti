@@ -18,7 +18,7 @@ const TODAY     = '2026-11-03';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Kot Ceket ve Mont Tadilatı ₺200'den · Kol, Boy, Beden" },
+  title: { absolute: "Kot Ceket ve Mont Tadilatı · Kol, Boy, Beden · Antalya" },
   description:
     "Kot ceket ve kot mont kol, boy kısaltma ve daraltma ₺200'den; orijinal görünümde dikiş. Normal iş aynı gün, acil 1–2 saat.",
   keywords: fitKeywords([

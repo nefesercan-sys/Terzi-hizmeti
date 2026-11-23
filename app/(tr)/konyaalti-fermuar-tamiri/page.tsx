@@ -23,7 +23,7 @@ const TODAY     = '2026-10-04';
 // sayfaları genel sayfalara göre daha hızlı ve yüksek sıralar.
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Fermuar Değişimi ₺300'den · Konyaaltı | Terzi Can" },
+  title: { absolute: "Fermuar Değişimi · Konyaaltı, Aynı Gün | Terzi Can" },
   description:
     "Pantolon, mont, ceket ve çanta fermuarı ₺300'den. Normal iş aynı gün, acil 1–2 saat. Eve ve otele servis.",
   keywords: fitKeywords([

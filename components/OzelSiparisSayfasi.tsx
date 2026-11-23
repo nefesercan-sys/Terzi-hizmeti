@@ -12,7 +12,7 @@ import type { ILang } from '@/lib/intl';
 
 const C = { green: '#2C4A3E', gold: '#D4B07A', cream: '#FAF7F2', sand: '#F2EDE4', ink: '#1C1814' };
 const serif = 'Georgia,serif';
-const HOME: Record<OLang, string> = { tr: '/', en: '/en', ru: '/ru', de: '/de', es: '/es', fr: '/fr', pl: '/pl', uk: '/uk', nl: '/nl', ar: '/ar' };
+const HOME: Record<OLang, string> = { tr: '/', en: '/en/tailor-service-antalya', ru: '/ru/uslugi-portnogo-antalya', de: '/de/schneiderservice-antalya', es: '/es', fr: '/fr', pl: '/pl', uk: '/uk', nl: '/nl', ar: '/ar' };
 const KETEN: Partial<Record<OLang, string>> = { tr: '/keten-pamuk-ozel-dikim', en: '/en/linen-cotton-tailoring', de: '/de/leinen-baumwolle-schneiderei', ru: '/ru/poshiv-lyon-hlopok' };
 const LINK_TEXT: Record<OLang, [string, string]> = {
   tr: ['Online terzi servisi', 'Keten ve pamuk özel dikim'], en: ['Online tailor service', 'Linen & cotton tailoring'], ru: ['Онлайн-портной', 'Пошив из льна и хлопка'], de: ['Online-Schneiderservice', 'Leinen & Baumwolle nach Maß'],

@@ -12,7 +12,7 @@ import { OZEL, ozelUrl } from '@/lib/ozel-siparis';
 
 const C = { green: '#2C4A3E', gold: '#D4B07A', cream: '#FAF7F2', sand: '#F2EDE4', ink: '#1C1814', muted: '#6B5F53' };
 const serif = 'Georgia,serif';
-const HOME: Record<KLang, string> = { tr: '/', en: '/en', ru: '/ru', de: '/de', es: '/es', fr: '/fr', pl: '/pl', uk: '/uk', nl: '/nl', ar: '/ar' };
+const HOME: Record<KLang, string> = { tr: '/', en: '/en/tailor-service-antalya', ru: '/ru/uslugi-portnogo-antalya', de: '/de/schneiderservice-antalya', es: '/es', fr: '/fr', pl: '/pl', uk: '/uk', nl: '/nl', ar: '/ar' };
 const FOUR = ['tr', 'en', 'ru', 'de'] as const;
 type Four = (typeof FOUR)[number];
 const isFour = (l: KLang): l is Four => (FOUR as readonly string[]).includes(l);

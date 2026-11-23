@@ -573,7 +573,7 @@ export default function TerziHizmetiPage() {
               <a href={SERVICE_BASE.tr} style={{ color: '#C9A96E', fontWeight: 700, marginRight: '1rem' }}>Tüm hizmetler →</a>
               {SEO_SERVICES.map((sv) => (<a key={sv.id} href={serviceUrl('tr', sv)} style={{ color: 'rgba(255,255,255,.82)', marginRight: '1rem', whiteSpace: 'nowrap' }}>{sv.name.tr}</a>))}
               <br />
-              {SEO_DISTRICTS.filter((d) => isTrNear(d.slug)).map((d) => (<a key={d.slug} href={districtUrl('tr', d)} style={{ color: 'rgba(255,255,255,.82)', marginRight: '1rem', whiteSpace: 'nowrap' }}>{d.name.tr} terzi</a>))}
+              {SEO_DISTRICTS.map((d) => (<a key={d.slug} href={districtUrl('tr', d)} style={{ color: 'rgba(255,255,255,.82)', marginRight: '1rem', whiteSpace: 'nowrap' }}>{d.name.tr} terzi</a>))}
               <br />
               <a href="/en/tailor-services" hrefLang="en" style={{ color: 'rgba(255,255,255,.82)', marginRight: '1rem' }}>English: Tailor services</a>
               <a href="/ru/uslugi-portnogo" hrefLang="ru" style={{ color: 'rgba(255,255,255,.82)', marginRight: '1rem' }}>Русский: Услуги портного</a>

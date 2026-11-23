@@ -90,8 +90,8 @@ const SVC_HUB_NAME: Record<Lang, string> = {
 const businessNode = (_lang: Lang) => sharedBusinessNode();
 
 const alternatesFor = (lang: Lang, urlFor: (l: Lang) => string, slug?: string) => {
-  // Uzak bölgenin Türkçe sayfası noindex olduğu için hreflang'a girmez; x-default İngilizce olur.
-  const trOk = !slug || isTrNear(slug);
+  // Tüm Türkçe bölge sayfaları dizine açık (23 Kasım 2026): Türkçe her kümede, x-default Türkçe.
+  const trOk = !slug || isIndexable('tr', slug);
   const languages: Record<string, string> = {};
   if (trOk) languages.tr = urlFor('tr');
   languages.en = urlFor('en'); languages.ru = urlFor('ru'); languages.de = urlFor('de');

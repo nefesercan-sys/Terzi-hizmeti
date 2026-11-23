@@ -50,8 +50,8 @@ export const metadata: Metadata = {
     },
   }),
   openGraph: {
-    title: 'Terzi Can Antalya — Tailor & Alterations | Портной Анталья',
-    description: 'Professional tailoring & alteration service in Konyaaltı, Antalya. English, Russian, German & Turkish spoken.',
+    title: "Terzi Can Antalya · Konyaaltı Terzi, 2006'dan Beri",
+    description: "Konyaaltı Hurma'da terzi: tamir, tadilat ve özel dikim. Paça ₺200'den, fermuar ₺300'den. Eve ve otele alım-teslim, her gün 08:00–23:00.",
     url: SITE, siteName: 'Terzi Hizmeti', locale: 'tr_TR',
     alternateLocale: ['en_US', 'ru_RU', 'de_DE'],
     type: 'website',
@@ -59,8 +59,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Terzi Can Antalya | Tailor & Alterations | Портной',
-    description: 'Konyaaltı tailor workshop. Alterations, hemming, zipper replacement, dressmaking.',
+    title: "Terzi Can Antalya · Konyaaltı Terzi, 2006'dan Beri",
+    description: "Konyaaltı Hurma'da terzi: tamir, tadilat ve özel dikim. Her gün 08:00–23:00.",
     images: [OG],
   },
   other: {
@@ -128,19 +128,10 @@ const jsonLd = {
       about: { '@id': `${SITE}#business` },
       inLanguage: ['tr', 'en', 'ru', 'de'],
       dateModified: TODAY,
-      breadcrumb: { '@id': `${SITE}#breadcrumb` },
       speakable: {
         '@type': 'SpeakableSpecification',
         cssSelector: ['#services','#faq','#hero-desc','#foreign-lang-cards'],
       },
-    },
-    {
-      '@type': 'BreadcrumbList',
-      '@id': `${SITE}#breadcrumb`,
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Terzi Can', item: SITE },
-        { '@type': 'ListItem', position: 2, name: 'Tailor Services', item: `${SITE}/#services` },
-      ],
     },
     {
       '@type': 'FAQPage',

@@ -52,6 +52,18 @@ const nextConfig = {
       { source: '/ru/poshiv-lyon-khlopok/:path*', destination: '/ru/poshiv-lyon-hlopok/:path*', permanent: true },
       { source: '/antalya-uniforma-uretimi', destination: '/antalya-uniforma-imalati', permanent: true },
       { source: '/antalya-elbise-daraltma', destination: '/terzi-hizmetleri/elbise-tamiri-tadilati', permanent: true },
+      // Search Console 404 (23 Kasım): eski otel bölgesi adres kalıpları → bugünkü otel bölgesi sayfaları; yazım hatalı blog adresi
+      { source: '/hotel-tailor-antalya/:region', destination: '/en/hotel-tailor-antalya/:region', permanent: true },
+      { source: '/hotel-tailor-antalya', destination: '/en/hotel-tailor-antalya', permanent: true },
+      { source: '/en/tailor-service-antalya-hotels/:region', destination: '/en/hotel-tailor-antalya/:region', permanent: true },
+      { source: '/en/tailor-service-antalya-hotels', destination: '/en/hotel-tailor-antalya', permanent: true },
+      { source: '/ru/oytelniy-portnoy-antalya/:region', destination: '/ru/vyezdnoy-portnoy-antalya/:region', permanent: true },
+      { source: '/ru/oytelniy-portnoy-antalya', destination: '/ru/vyezdnoy-portnoy-antalya', permanent: true },
+      { source: '/ru/uslugi-portnogo-antalya-oteli/:region', destination: '/ru/vyezdnoy-portnoy-antalya/:region', permanent: true },
+      { source: '/ru/uslugi-portnogo-antalya-oteli', destination: '/ru/vyezdnoy-portnoy-antalya', permanent: true },
+      { source: '/de/schneiderservice-antalya-hotels/:region', destination: '/de/schneider-service-hotel-antalya/:region', permanent: true },
+      { source: '/de/schneiderservice-antalya-hotels', destination: '/de/schneider-service-hotel-antalya', permanent: true },
+      { source: '/blog/2026-yaz-sezonu-getirillik-tadilati-rehberi', destination: '/blog/2026-yaz-sezonu-gelinlik-tadilat-rehberi', permanent: true },
       // Online terzi servisi: eski adresler -> yeni kisa adresler (kalici)
       { source: '/foto-ile-terzi-kargoyla-antalya', destination: '/online-terzi-servisi', permanent: true },
       { source: '/en/photo-quote-tailor-courier-antalya', destination: '/en/online-tailor-antalya', permanent: true },

@@ -887,7 +887,7 @@ export const EK_BREADCRUMB: Record<string, [string, string][]> = {
    "/fr"
   ],
   [
-   "Tailleur pour hôtels à Antalya : retouches",
+   "Retouches et couturier pour hôtels à Antalya",
    "/fr/couturier-hotels-antalya"
   ]
  ],

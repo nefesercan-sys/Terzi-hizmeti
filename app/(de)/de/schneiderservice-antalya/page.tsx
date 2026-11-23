@@ -30,17 +30,17 @@ const OG        = `${SITE}/antalya-terzi-can-dikim-tamir-tadilat.jpg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: 'Schneider in Antalya: Hose kürzen ab ₺200, Reparatur' },
+  title: { absolute: 'Änderungsschneiderei Antalya: Hose kürzen ab ₺200, Reparatur' },
   description:
-    'Schneider in Antalya (Konyaaltı): Hose kürzen ab ₺200 (~€10), Reißverschluss ab ₺300. Hotelservice mit Abholung, meist am selben Tag.',
-  keywords: ['Schneider Antalya', 'Änderungsschneiderei Antalya', 'Schneider Hotel Antalya', 'Kleidung ändern Antalya eilig', 'Schneider Konyaaltı', 'Hose kürzen Antalya', 'Reißverschluss wechseln Antalya', 'Maßanfertigung Antalya'],
+    'Änderungsschneiderei in Antalya (Konyaaltı): Hose kürzen ab ₺200 (~€10), Reißverschluss ab ₺300. Hotelservice mit Abholung, meist am selben Tag.',
+  keywords: ['Änderungsschneiderei Antalya', 'Schneiderei Antalya', 'Schneider Antalya', 'Schneider Hotel Antalya', 'Kleidung ändern Antalya eilig', 'Schneider Konyaaltı', 'Hose kürzen Antalya', 'Reißverschluss wechseln Antalya', 'Maßanfertigung Antalya'],
   alternates: withTwin({
     canonical: PAGE_URL,
     languages: { tr: TR_URL, en: EN_URL, ru: RU_URL, de: PAGE_URL, ...INTL_ALT, 'x-default': TR_URL },
   }),
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   openGraph: {
-    title: 'Schneider in Antalya: Änderungen, Reparatur, Maßanfertigung',
+    title: 'Änderungsschneiderei Antalya: Änderungen, Reparatur, Maßanfertigung',
     description: 'Terzi Can in Konyaaltı: Änderungen, Reparaturen und Maßanfertigung. Wir kommen auch ins Hotel.',
     url: PAGE_URL, siteName: 'Terzi Can', locale: 'de_DE', type: 'website',
     images: [{ url: OG, width: 1024, height: 1024, alt: 'Schneider in Antalya, Terzi Can' }],
@@ -67,6 +67,7 @@ const STEPS: [string, string][] = [
 ];
 
 const FAQS: [string, string][] = [
+  ['Wo finde ich eine Änderungsschneiderei in Antalya?', 'Terzi Can ist eine Änderungsschneiderei in Hurma, Konyaaltı, täglich 08:00–23:00 geöffnet: Hosen kürzen, Taille enger machen, Reißverschluss wechseln, Risse reparieren und Maßanfertigung. Wir kommen auch ins Hotel.'],
   ['Gibt es in Antalya einen Schneider, der Deutsch spricht?', 'Ja. Am einfachsten schreiben Sie uns per WhatsApp.'],
   ['Kommt der Schneider ins Hotel?', 'Ja. Wir besuchen Hotels, zum Beispiel in Belek, Lara, Kemer und Side. Senden Sie Hotelname und Standort per WhatsApp. Details zum Hotelservice: ' + HOTEL_URL],
   ['Kommen Sie auch zu mir vor Ort?', 'Ja. Abholung und Lieferung zu Hause und im Hotel sind innerhalb von Antalya möglich.'],
@@ -125,10 +126,10 @@ export default function SchneiderserviceAntalya() {
         <section style={{ background: '#2C4A3E', color: '#fff', padding: '3rem 0', marginTop: '.8rem' }}>
           <div style={{ ...wrap, textAlign: 'center' }}>
             <h1 style={{ fontSize: 'clamp(1.8rem,4.5vw,2.7rem)', fontWeight: 800, lineHeight: 1.2, margin: '0 0 1rem' }}>
-              Schneider in Antalya: Änderungen, Reparatur, Maßanfertigung
+              Änderungsschneiderei Antalya: Änderungen, Reparatur, Maßanfertigung
             </h1>
             <p id="hero-desc" style={{ maxWidth: 720, margin: '0 auto 1.6rem', lineHeight: 1.7, fontSize: '1.05rem', opacity: .92 }}>
-              Terzi Can ist eine Schneiderei in Konyaaltı, Antalya: Kürzen, Ändern, Reparieren und Maßanfertigung; erreichbar per WhatsApp oder Telefon unter +90 531 898 64 18, täglich 08:00–23:00. {DELIVERY.de.urgent} {DELIVERY.de.normal} Abholung und Lieferung im Hotel sind überall möglich, auch in Lara, Belek, Side und Kemer.
+              Terzi Can ist eine Änderungsschneiderei und Maßschneiderei in Konyaaltı, Antalya: Kürzen, Ändern, Reparieren und Maßanfertigung; erreichbar per WhatsApp oder Telefon unter +90 531 898 64 18, täglich 08:00–23:00. {DELIVERY.de.urgent} {DELIVERY.de.normal} Abholung und Lieferung im Hotel sind überall möglich, auch in Lara, Belek, Side und Kemer.
             </p>
             <div style={{ display: 'flex', gap: '.7rem', justifyContent: 'center', flexWrap: 'wrap' }}>
               <a href={WA_DEF} target="_blank" rel="noopener noreferrer" style={btn}>Foto senden, Preis erfahren</a>

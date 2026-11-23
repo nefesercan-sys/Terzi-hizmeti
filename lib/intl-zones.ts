@@ -129,12 +129,12 @@ export const ZCOPY: Record<ILang, ZCopy> = {
       ['¿Cuánto tarda un arreglo?', `${DELIVERY.es.urgent} ${DELIVERY.es.normal}`],
       ['¿Cómo conozco el precio?', 'Envíe por WhatsApp una foto de la prenda y del problema; normalmente indicamos precio y plazo desde la foto.'],
     ],
-    back: '← Sastre en Antalya para turistas', zonesLabel: 'Otras zonas hoteleras', wa: (z) => `Hola, estoy alojado en ${z} y necesito un arreglo de ropa. Le envío una foto.`, cta: 'Escribir por WhatsApp',
+    back: '← Sastre y costurera en Antalya', zonesLabel: 'Otras zonas hoteleras', wa: (z) => `Hola, estoy alojado en ${z} y necesito un arreglo de ropa. Le envío una foto.`, cta: 'Escribir por WhatsApp',
   },
   fr: {
-    title: (z) => `Tailleur pour hôtels à ${z} : retouches`,
+    title: (z) => `Retouches et couturier pour hôtels à ${z}`,
     desc: (z) => `Retouches pour les clients d'hôtels à ${z}, Antalya. Collecte à l'hôtel, ouvert tous les jours 08h00–23h00. Prix sur WhatsApp avec photo.`,
-    h1: (z) => `Tailleur pour hôtels à ${z}`, lead: (z) => `Si vous séjournez à ${z}, nous récupérons le vêtement à l'hôtel et vous le rapportons retouché. Envoyez une photo sur WhatsApp : prix et délai vous sont indiqués.`,
+    h1: (z) => `Couturier et retouches pour hôtels à ${z}`, lead: (z) => `Si vous séjournez à ${z}, nous récupérons le vêtement à l'hôtel et vous le rapportons retouché. Envoyez une photo sur WhatsApp : prix et délai vous sont indiqués.`,
     aboutTitle: (z) => `À propos de la zone de ${z}`, hotelsLabel: 'Exemples d\'hôtels de la zone',
     howTitle: 'Comment cela se passe à votre hôtel',
     how: (z) => `Notre atelier est à Hurma, Konyaaltı. La collecte et la livraison dans les hôtels sont disponibles dans toutes les zones desservies, y compris ${z}. Écrivez-nous sur WhatsApp avec le nom de votre hôtel et votre date de départ.`,
@@ -144,7 +144,7 @@ export const ZCOPY: Record<ILang, ZCopy> = {
       ['Combien de temps dure une retouche ?', `${DELIVERY.fr.urgent} ${DELIVERY.fr.normal}`],
       ['Comment connaître le prix ?', 'Envoyez sur WhatsApp une photo du vêtement et du problème ; nous indiquons en général prix et délai d\'après la photo.'],
     ],
-    back: '← Tailleur à Antalya pour touristes', zonesLabel: 'Autres zones hôtelières', wa: (z) => `Bonjour, je séjourne à ${z} et j'ai besoin d'une retouche. Je vous envoie une photo.`, cta: 'Écrire sur WhatsApp',
+    back: '← Couturier et retouches à Antalya', zonesLabel: 'Autres zones hôtelières', wa: (z) => `Bonjour, je séjourne à ${z} et j'ai besoin d'une retouche. Je vous envoie une photo.`, cta: 'Écrire sur WhatsApp',
   },
   pl: {
     title: (z) => `Krawiec dla hoteli w ${z}: przeróbki ubrań`,
@@ -159,7 +159,7 @@ export const ZCOPY: Record<ILang, ZCopy> = {
       ['Ile trwa przeróbka?', `${DELIVERY.pl.urgent} ${DELIVERY.pl.normal}`],
       ['Jak poznać cenę?', 'Wyślij na WhatsAppie zdjęcie ubrania i problemu; zwykle podajemy cenę i termin na podstawie zdjęcia.'],
     ],
-    back: '← Krawiec w Antalyi dla turystów', zonesLabel: 'Inne rejony hotelowe', wa: (z) => `Dzień dobry, mieszkam w ${z} i potrzebuję przeróbki ubrania. Wysyłam zdjęcie.`, cta: 'Napisz na WhatsAppie',
+    back: '← Krawiec i krawcowa w Antalyi', zonesLabel: 'Inne rejony hotelowe', wa: (z) => `Dzień dobry, mieszkam w ${z} i potrzebuję przeróbki ubrania. Wysyłam zdjęcie.`, cta: 'Napisz na WhatsAppie',
   },
   uk: {
     title: (z) => `Кравець для готелів: ${z}, підгонка одягу`,
@@ -189,7 +189,7 @@ export const ZCOPY: Record<ILang, ZCopy> = {
       ['Hoe lang duurt een aanpassing?', `${DELIVERY.nl.urgent} ${DELIVERY.nl.normal}`],
       ['Hoe weet ik de prijs?', 'Stuur via WhatsApp een foto van het kledingstuk en het probleem; meestal noemen wij prijs en termijn aan de hand van de foto.'],
     ],
-    back: '← Kleermaker in Antalya voor toeristen', zonesLabel: 'Andere hotelgebieden', wa: (z) => `Hallo, ik verblijf in ${z} en heb een kledingaanpassing nodig. Ik stuur een foto.`, cta: 'Stuur een WhatsApp-bericht',
+    back: '← Kleermaker en kleding vermaken in Antalya', zonesLabel: 'Andere hotelgebieden', wa: (z) => `Hallo, ik verblijf in ${z} en heb een kledingaanpassing nodig. Ik stuur een foto.`, cta: 'Stuur een WhatsApp-bericht',
   },
   ar: {
     title: (z) => `خيّاط لفنادق ${z}: تعديل الملابس`,

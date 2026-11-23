@@ -24,10 +24,10 @@ const OG        = `${SITE}/antalya-terzi-can-dikim-tamir-tadilat.jpg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Tailor in Antalya: Hemming from ₺200, Repairs | Terzi Can" },
+  title: { absolute: "Tailor & Alterations Antalya: Hemming from ₺200 | Terzi Can" },
   // SEO Optimizasyonu: Google'da kesilmemesi için ~150 karaktere optimize edildi
   description: 'Tailor in Antalya (Konyaaltı): hemming from ₺200 (~€10), zipper from ₺300. Hotel pick-up and delivery in Belek, Lara, Kemer, Side. Same day.',
-  keywords: ['tailor Antalya', 'tailor service Antalya', 'hotel tailor Antalya', 'urgent clothing alteration Antalya', 'tailor Konyaaltı', 'clothing repair Antalya', 'trouser hemming Antalya', 'tailor open Sunday Antalya'],
+  keywords: ['tailor Antalya', 'tailor service Antalya', 'hotel tailor Antalya', 'urgent clothing alteration Antalya', 'tailor Konyaaltı', 'clothing repair Antalya', 'trouser hemming Antalya', 'tailor open Sunday Antalya', 'alterations Antalya', 'seamstress Antalya', 'dressmaker Antalya'],
   authors: [{ name: 'Terzi Can', url: SITE }],
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   alternates: withTwin({
@@ -124,6 +124,7 @@ const REPAIR_CATEGORIES = [
 ];
 
 const FAQS: [string, string][] = [
+  ['Is there a seamstress or dressmaker in Antalya?', 'Yes. Terzi Can in Hurma, Konyaaltı does everything a seamstress or dressmaker does: hemming, taking in, zip replacement, repairs, and dresses made to measure. Open every day 08:00–23:00, with hotel pick-up.'],
   ['Do you come to hotels in Belek, Lara and Kemer?', 'Yes! Our mobile tailor visits all hotels in Belek, Lara, Kemer and Side. Just share your hotel name on WhatsApp.'],
   ['Do you offer mobile visits?', 'Yes. Pick-up and delivery to homes and hotels is available in every area we serve.'],
   ['Can I get alterations before an event?', 'Yes, most repairs and hemming are completed the same day (urgent jobs 1–2 hours).'],
@@ -167,7 +168,7 @@ export default function TailorServiceAntalyaPage() {
               Tailor, Repair & Alterations<br /><span className="accent">Delivered to Your Hotel</span>
             </h1>
             <p className="hero-desc" id="hero-desc">
-              Terzi Can is a tailor in Konyaaltı, Antalya that hems, alters, repairs and sews to measure; reach us on WhatsApp or phone at +90 531 898 64 18, every day 08:00–23:00. {DELIVERY.en.urgent} {DELIVERY.en.normal} Hotel pick-up and delivery is available in every area we serve, including Lara, Belek, Side and Kemer.
+              Terzi Can is a tailor and alterations shop (seamstress and dressmaker work too) in Konyaaltı, Antalya that hems, alters, repairs and sews to measure; reach us on WhatsApp or phone at +90 531 898 64 18, every day 08:00–23:00. {DELIVERY.en.urgent} {DELIVERY.en.normal} Hotel pick-up and delivery is available in every area we serve, including Lara, Belek, Side and Kemer.
             </p>
             <div className="hero-btns">
               <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-primary">

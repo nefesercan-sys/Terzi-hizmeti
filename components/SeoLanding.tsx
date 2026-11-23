@@ -228,9 +228,9 @@ function serviceCopy(lang: Lang, s: Service) {
     ru: [`${Q} в Анталье ${ps} · ${ts} | Terzi Can`, `${Q} в Анталье · ${ts} | Terzi Can`, `${Q} в Анталье | Terzi Can`],
     de: [`${Q} in Antalya ${ps} · ${ts} | Terzi Can`, `${Q} in Antalya · ${ts} | Terzi Can`, `${Q} in Antalya | Terzi Can`],
   }[lang];
-  const trPrice = lang === 'tr' && ps ? [`${Q} fiyatları 2026 Antalya ${ps} | Terzi Can`, `${Q} fiyatları 2026 · ${ps} | Terzi Can`] : [];
+  const trPrice = lang === 'tr' && ps ? [`${Q} fiyatları 2026 Antalya · ${ts} | Terzi Can`, `${Q} fiyatları 2026 Antalya | Terzi Can`] : [];
   const trNoPrice = lang === 'tr' && !ps ? [`${Q} Antalya · Fotoğrafla Net Fiyat | Terzi Can`, `${Q} Antalya · Fotoğrafla Fiyat | Terzi Can`, `${Q} Antalya · Fiyat | Terzi Can`] : [];
-  const title = pickFit([...trPrice, ...trNoPrice, ...(ps ? t1 : t1.slice(1))], 60);
+  const title = pickFit([...trPrice, ...trNoPrice, ...t1.slice(1)], 60);
   const price = priceShortOf(lang, s);
   const tm0 = timeOf(lang, s).replace(/[.\s]+$/, '');
   const tm = tm0.charAt(0).toLocaleLowerCase(lang === 'tr' ? 'tr-TR' : lang) + tm0.slice(1);
@@ -375,7 +375,7 @@ export function serviceMetadata(lang: Lang, s: Service): Metadata {
 
 export function hubMetadata(lang: Lang): Metadata {
   const title = {
-    tr: 'Tamir Tadilat Terzi Antalya · Paça ₺200, Fermuar ₺300',
+    tr: 'Tamir Tadilat Terzi Antalya · Paça, Fermuar, Daraltma',
     en: 'Clothing Repair & Alterations Antalya · Hemming',
     ru: 'Ремонт и подшив одежды в Анталье · подшив',
     de: 'Kleidung ändern & reparieren · Änderungsschneiderei Antalya',

@@ -665,7 +665,7 @@ export const EXPRESS_COPY: L3<ExpressCopy> = {
     customLink: 'Want something made from scratch?', customLinkP: `Custom linen and cotton clothing, timing depends on the model and number of pieces.`,
   },
   de: {
-    title: 'Kleidung ändern in Antalya: Hose kürzen ab ₺200 (~€10)',
+    title: 'Kleidung ändern in Antalya: Hose kürzen im Urlaub',
     desc: 'Kleidung passt nicht? Kürzen ab ₺200 (~€10), Taille, Ärmel, Reißverschluss ab ₺300. Meist am selben Tag, eilig 1–2 Stunden. Hotelabholung in Antalya. Terzi Can.',
     keywords: ['Kleidung ändern Antalya Urlaub', 'Schneider Antalya dringend', 'Änderungsschneiderei Antalya Touristen', 'Hose kürzen Antalya Urlaub', 'Taille enger machen Antalya', 'Schneider Hotel Antalya Abholung', 'Kleid ändern Antalya eilig', 'Schneider Konyaaltı'],
     h1: 'Kleidung ändern im Urlaub in Antalya',

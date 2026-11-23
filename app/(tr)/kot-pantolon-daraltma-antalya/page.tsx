@@ -18,7 +18,7 @@ const TODAY     = '2026-11-03';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Kot Daraltma ₺200'den · Bacak, Bel, Kalça · Antalya" },
+  title: { absolute: "Kot Daraltma · Bacak, Bel, Kalça · Antalya" },
   description:
     "Kot pantolon bacak ve bel daraltma ₺200'den; ölçü üzerinizde alınır. Normal iş aynı gün, acil 1–2 saat. Eve ve otele servis.",
   keywords: fitKeywords([

@@ -30,7 +30,7 @@ const OG        = `${SITE}/antalya-terzi-can-dikim-tamir-tadilat.jpg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: 'Änderungsschneiderei Antalya: Hose kürzen ab ₺200, Reparatur' },
+  title: { absolute: 'Änderungsschneiderei Antalya: Hose kürzen, Reparatur' },
   description:
     'Änderungsschneiderei in Antalya (Konyaaltı): Hose kürzen ab ₺200 (~€10), Reißverschluss ab ₺300. Hotelservice mit Abholung, meist am selben Tag.',
   keywords: ['Änderungsschneiderei Antalya', 'Schneiderei Antalya', 'Schneider Antalya', 'Schneider Hotel Antalya', 'Kleidung ändern Antalya eilig', 'Schneider Konyaaltı', 'Hose kürzen Antalya', 'Reißverschluss wechseln Antalya', 'Maßanfertigung Antalya'],

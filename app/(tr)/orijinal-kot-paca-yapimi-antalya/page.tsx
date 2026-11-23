@@ -18,7 +18,7 @@ const TODAY     = '2026-11-03';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Orijinal Kot Paça Yapımı ₺200'den · Dikiş İzi Korunur" },
+  title: { absolute: "Orijinal Kot Paça Yapımı · Dikiş İzi Korunur" },
   description:
     "Kot paçayı kısaltırken orijinal paça görünümünü koruyoruz, ₺200'den. Boy ayakkabıyla işaretlenir. Normal iş aynı gün, acil 1–2 saat.",
   keywords: fitKeywords([

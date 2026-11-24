@@ -7,6 +7,8 @@ import { SITE, MAPS, PHONE_TEL, BUSINESS_ID } from '@/lib/seo-data';
 import { reviewSchema } from '@/lib/reviews';
 
 /** Hizmet verilen gerçek alanlar */
+/** Bing Places işletme kaydı (Bing Haritalar; ChatGPT/Copilot yerel sonuçları). Sahip ekledi, 24 Kasım 2026. */
+export const BING_PLACES_URL = 'https://www.bing.com/maps?ss=ypid.YN74E8E19509337C43';
 export const AREA_SERVED = [
   'Konyaaltı, Antalya', 'Hurma, Konyaaltı', 'Liman, Konyaaltı', 'Sarısu, Konyaaltı', 'Gürsu, Konyaaltı', 'Uncalı, Konyaaltı', 'Çakırlar, Konyaaltı',
   'Muratpaşa, Antalya', 'Lara, Antalya', 'Kundu, Antalya', 'Güzeloba, Antalya', 'Meltem, Muratpaşa', 'Şirinyalı, Muratpaşa', 'Fener, Muratpaşa',
@@ -71,7 +73,7 @@ export function businessNode(opts: { reviews?: boolean } = {}) {
       hoursAvailable: { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'], opens: '08:00', closes: '23:00' },
     },
   ],
-  sameAs: [MAPS, GOOGLE_REVIEW_URL, `https://wa.me/${PHONE_TEL.replace('+', '')}`, ...OFFICIAL_SITES.filter((u) => !u.startsWith(SITE))],
+  sameAs: [BING_PLACES_URL, MAPS, GOOGLE_REVIEW_URL, `https://wa.me/${PHONE_TEL.replace('+', '')}`, ...OFFICIAL_SITES.filter((u) => !u.startsWith(SITE))],
   knowsLanguage: ['tr', 'en', 'ru', 'de', 'pl', 'uk', 'nl', 'fr', 'es', 'ar'],
 }
 }

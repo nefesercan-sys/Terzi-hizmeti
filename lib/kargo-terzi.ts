@@ -25,7 +25,7 @@ export const KARGO_UPDATED = '2026-11-06';
 export const KARGO: Record<KLang, KargoCopy> = {
   tr: {
     slug: 'online-terzi-servisi',
-    title: 'Online Terzi Servisi: Elbise Tamiri, Tadilat, Dikim, Kargoyla',
+    title: 'Online Terzi Servisi: Tamir, Tadilat, Dikim, Kargoyla',
     desc: "Antalya'da otelinize ve evinize alım-teslim, fotoğraftan fiyat. Antalya içi ve yurt dışından kargoyla da olur. Paça ₺200'den.",
     h1: 'Online Terzi Servisi: Antalya\'da Otelinize ve Evinize Gelir, Kargoyla da Olur',
     lead: "Konyaaltı'ndaki atölyemiz 2006'dan beri her gün 08:00–23:00 açık. Kıyafetin fotoğrafını WhatsApp'tan gönderin, fiyatı söyleyelim; Antalya'da eve ve otele alım-teslim yapıyoruz. Kargoyla göndermek isteyenler için ikinci bir yol da var: Antalya içi ve yurt dışı.",

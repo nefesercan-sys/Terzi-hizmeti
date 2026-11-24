@@ -27,6 +27,7 @@ import {
   isTrNear, isIndexable, TR_NEAR_SLUGS, trExtraKeywords, isFreeService,
 } from '@/lib/seo-data';
 import { isFar, FAR_TAG, farDesc } from '@/lib/uzak-bolge';
+import { areaKwDesc, serviceKwDesc } from '@/lib/kw-desc';
 import { angleFor, angleTitles, angleDescs, angleKeywords } from '@/lib/seo-angles';
 import { fgNearDistrict, fgServiceMeta, eurFromText, EUR_FROM } from '@/lib/fg-meta';
 import { trNearDistrict } from '@/lib/tr-meta';
@@ -129,7 +130,8 @@ function sortD(lang: Lang, list: District[]): District[] {
 // ── Metin üreticileri ───────────────────────────────────────
 function districtCopy(lang: Lang, d: District) {
   const r = _districtCopy(lang, d);
-  return isFar(d.slug) ? { ...r, desc: farDesc(lang, d.name[lang]) } : r;
+  if (isFar(d.slug)) return { ...r, desc: farDesc(lang, d.name[lang]) };
+  return lang === 'tr' ? r : { ...r, desc: areaKwDesc(lang, d.name[lang], 'a', r.desc) };
 }
 function _districtCopy(lang: Lang, d: District) {
   const n = d.name[lang];
@@ -256,8 +258,9 @@ function serviceCopy(lang: Lang, s: Service) {
   ];
   const desc = pickFit(candidates, 158);
   const o = lang === 'tr' ? undefined : fgServiceMeta(lang, s.id);
-  if (o) return { nm, title: o.title, desc: o.desc, kw: o.kw };
-  return { nm, title, desc, kw: [] as string[] };
+  // Yabancı dillerde açıklama anahtar kelimeli kalıptan (lib/kw-desc.ts); başlık değişmez.
+  if (o) return { nm, title: o.title, desc: lang === 'tr' ? o.desc : serviceKwDesc(lang, nm, 'a', o.desc), kw: o.kw };
+  return { nm, title, desc: lang === 'tr' ? desc : serviceKwDesc(lang, nm, 'a', desc), kw: [] as string[] };
 }
 
 function serviceFaq(lang: Lang, s: Service): [string, string][] {

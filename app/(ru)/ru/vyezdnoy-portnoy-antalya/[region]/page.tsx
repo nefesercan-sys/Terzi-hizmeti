@@ -7,6 +7,7 @@ import OtelBolgeSayfasi from '@/components/OtelBolgeSayfasi';
 import { regionJsonLd } from '@/lib/otel-copy';
 import { BUSINESS_ID, byPriority } from '@/lib/seo-data';
 import { fitDesc, fitKeywords } from '@/lib/meta-fit';
+import { hotelKwDesc } from '@/lib/kw-desc';
 
 const SITE = 'https://terzihizmeti.com.tr';
 const PHONE_TEL = '+905318986418';
@@ -30,12 +31,13 @@ export async function generateMetadata({ params }: { params: Promise<{ region: s
   const url = `${SITE}${BASE_PATH}/${r.slug}`;
   const title = `Ателье и портной в отель: ${r.name}, Анталья`;
   const desc = fitDesc(`Остановились в районе ${r.name}? Заберём вещи из отеля, подгоним в мастерской в Коньяалты и вернём. Ежедневно 08:00–23:00.`);
+  const kwd = hotelKwDesc('ru', r.name, 'a', desc); // anahtar kelimeli kalıp (lib/kw-desc.ts)
   const ogImage = `${SITE}/antalya-terzi-can-dikim-tamir-tadilat.jpg`;
 
   return {
     metadataBase: new URL(SITE),
     title: { absolute: title },
-    description: desc,
+    description: kwd,
     keywords: fitKeywords([`портной в отель ${r.name}`, `выездной портной ${r.name}`, `подшить брюки ${r.name}`, `ремонт молнии ${r.name}`, 'портной Анталья отель', 'срочный ремонт одежды Анталья']),
     alternates: withTwin({
       canonical: url,
@@ -48,8 +50,8 @@ export async function generateMetadata({ params }: { params: Promise<{ region: s
         'x-default': `${SITE}/otele-gelen-terzi-antalya/${r.slug}`,
       },
     }),
-    openGraph: { title, description: desc, url, type: 'website', locale: 'ru_RU', siteName: 'Terzi Can Antalya', images: [{ url: ogImage, width: 1200, height: 630 }] },
-    twitter: { card: 'summary_large_image', title, description: desc, images: [ogImage] },
+    openGraph: { title, description: kwd, url, type: 'website', locale: 'ru_RU', siteName: 'Terzi Can Antalya', images: [{ url: ogImage, width: 1200, height: 630 }] },
+    twitter: { card: 'summary_large_image', title, description: kwd, images: [ogImage] },
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large' } },
   };
 }

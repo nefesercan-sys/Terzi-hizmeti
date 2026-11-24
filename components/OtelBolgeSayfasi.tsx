@@ -9,6 +9,7 @@ import { areaIntro, areaNeeds, NEEDS_H, pickVariant } from '@/lib/area-profiles'
 import { findDistrict } from '@/lib/seo-data';
 import { bolgeMatrisi } from '@/lib/bolge-hizmet-matrisi';
 import { bolgeMatrisiI18n } from '@/lib/bolge-hizmet-matrisi-i18n';
+import TerziHizmetleriBolumu from '@/components/TerziHizmetleriBolumu';
 
 // Fiyatlar tek kaynaktan (fiyat sayfası bileşeni)
 const mkP = (l: FLang) => { const R = priceRowsFor(l); return { hem: R[1].rows[0], zip: R[0].rows[0], alter: R[1].rows[3], wedding: R[1].rows[4] }; };
@@ -278,6 +279,7 @@ export default function OtelBolgeSayfasi({ lang, region, allRegions, basePath, m
 
         <OrnekGorselSeridi konu="bolge" yer={region.name} lang={lang} anahtarlar={['eve-gelen-terzi', 'erkek-takim-olcu']} sayfaUrl={`https://terzihizmeti.com.tr${basePath}/${region.slug}`} />
 
+        <TerziHizmetleriBolumu lang={lang} />
         <section className="sec" style={{ background: 'rgba(0,0,0,.12)' }} aria-labelledby="faq-h">
           <div className="ctr" style={{ maxWidth: 740 }}>
             <div className="sec-head"><span className="eyebrow">{t.faqEyebrow}</span><h2 className="sec-h" id="faq-h">{t.faqH}</h2></div>

@@ -7,6 +7,7 @@ import OtelBolgeSayfasi from '@/components/OtelBolgeSayfasi';
 import { regionJsonLd } from '@/lib/otel-copy';
 import { BUSINESS_ID } from '@/lib/seo-data';
 import { fitDesc, fitKeywords } from '@/lib/meta-fit';
+import { hotelKwDesc } from '@/lib/kw-desc';
 
 const SITE = 'https://terzihizmeti.com.tr';
 const PHONE_TEL = '+905318986418';
@@ -28,12 +29,13 @@ export async function generateMetadata({ params }: { params: Promise<{ region: s
   // Yeni VIP SEO Başlığı ve Açıklaması (Dinamik)
   const title = `Hotel Tailor in ${r.name}, Antalya | Pick-up & Delivery`;
   const desc = fitDesc(`Staying in ${r.name}? We collect clothes from your hotel, alter them in Konyaaltı and bring them back. Open daily 08:00–23:00.`);
+  const kwd = hotelKwDesc('en', r.name, 'a', desc); // anahtar kelimeli kalıp (lib/kw-desc.ts)
   const ogImage = `${SITE}/antalya-terzi-can-dikim-tamir-tadilat.jpg`;
 
   return {
     metadataBase: new URL(SITE),
     title: { absolute: title },
-    description: desc,
+    description: kwd,
     keywords: fitKeywords([`tailor near hotels in ${r.name}`, `${r.name} hotel tailor`, `clothing alterations ${r.name}`, `hemming ${r.name} Antalya`, `zipper repair ${r.name}`, 'holiday clothing alterations Antalya', 'hotel pick-up tailor Antalya']),
     alternates: withTwin({
       canonical: url,
@@ -46,8 +48,8 @@ export async function generateMetadata({ params }: { params: Promise<{ region: s
         'x-default': `${SITE}/otele-gelen-terzi-antalya/${r.slug}`,
       },
     }),
-    openGraph: { title, description: desc, url, type: 'website', locale: 'en_US', siteName: 'Terzi Can Antalya', images: [{ url: ogImage, width: 1200, height: 630, alt: `Hotel tailor in ${r.name}` }] },
-    twitter: { card: 'summary_large_image', title, description: desc, images: [ogImage] },
+    openGraph: { title, description: kwd, url, type: 'website', locale: 'en_US', siteName: 'Terzi Can Antalya', images: [{ url: ogImage, width: 1200, height: 630, alt: `Hotel tailor in ${r.name}` }] },
+    twitter: { card: 'summary_large_image', title, description: kwd, images: [ogImage] },
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large' } },
   };
 }

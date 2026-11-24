@@ -93,10 +93,11 @@ interface HotelRegion {
 }
 
 const HOTEL_REGIONS: HotelRegion[] = [
-  { name: 'Belek & Kadriye', tag: 'Otel Servisi', desc: 'Golf sahaları ve resort otelleriyle bilinen bölgedeki oteller.' },
-  { name: 'Lara & Kundu', tag: 'Hızlı Servis', desc: 'Lara ve Kundu otel bölgesindeki oteller.' },
-  { name: 'Kemer, Beldibi & Göynük', tag: 'Randevulu', desc: 'Kemer, Beldibi, Göynük, Tekirova ve Kiriş otelleri.' },
   { name: 'Konyaaltı & Şehir Merkezi', tag: 'Öncelikli', desc: 'Konyaaltı sahili ve şehir merkezindeki oteller.' },
+  { name: 'Lara, Güzeloba & Kundu', tag: 'Hızlı Servis', desc: 'Lara, Güzeloba ve Kundu otel bölgesindeki oteller.' },
+  { name: 'Belek & Kadriye', tag: 'Otel Servisi', desc: 'Golf sahaları ve resort otelleriyle bilinen bölgedeki oteller.' },
+  { name: 'Side & Manavgat', tag: 'Otel Servisi', desc: 'Side ve Manavgat bölgesindeki oteller.' },
+  { name: 'Kemer, Beldibi & Göynük', tag: 'Randevulu', desc: 'Kemer, Beldibi, Göynük, Tekirova ve Kiriş otelleri.' },
 ];
 
 type Lang = 'tr' | 'en' | 'ru' | 'de';

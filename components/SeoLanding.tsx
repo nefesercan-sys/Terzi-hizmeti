@@ -20,18 +20,21 @@ import { areaIntro, areaNeeds, NEEDS_H, AREA_PROFILES } from '@/lib/area-profile
 import { businessNode as sharedBusinessNode } from '@/lib/business';
 import { OTEL_BOLGELERI } from '@/lib/otel-bolgeleri';
 import {
-  DISTRICTS, SERVICES, MAHALLE_PAGES, findDistrict, LANGS, SITE, PHONE, PHONE_TEL, MAPS, LAST_UPDATE,
+  DISTRICTS, byPriority, SERVICES, MAHALLE_PAGES, findDistrict, LANGS, SITE, PHONE, PHONE_TEL, MAPS, LAST_UPDATE,
   SERVICE_BASE, HUB_MAIN, HOTEL_BASE,
   abs, districtUrl, serviceUrl, query, timeOf, priceOf, TIME_TEXT,
   type Lang, type District, type Service,
   isTrNear, isIndexable, TR_NEAR_SLUGS, trExtraKeywords, isFreeService,
 } from '@/lib/seo-data';
+import { isFar, FAR_TAG, farDesc } from '@/lib/uzak-bolge';
+import { areaKwDesc, serviceKwDesc } from '@/lib/kw-desc';
 import { angleFor, angleTitles, angleDescs, angleKeywords } from '@/lib/seo-angles';
 import { fgNearDistrict, fgServiceMeta, eurFromText, EUR_FROM } from '@/lib/fg-meta';
 import { trNearDistrict } from '@/lib/tr-meta';
 import { fitDesc, fitKeywords } from '@/lib/meta-fit';
 import KargoFermuarKutusu, { type KFVariant } from '@/components/KargoFermuarKutusu';
 import KargoKisa from '@/components/KargoKisa';
+import TerziHizmetleriBolumu from '@/components/TerziHizmetleriBolumu';
 const KF_SHORT = new Set(['paca', 'kot', 'bel', 'elbise-tamir', 'gelinlik-abiye', 'pantolon', 'kol', 'takim', 'gomlek', 'deri', 'tisort', 'etek', 'kiyafet-tamiri', 'beden']);
 const KF_VARIANT: Record<string, KFVariant | undefined> = { fermuar: 'both', abiye: 'abiye', 'gece-kiyafeti': 'abiye', mont: 'mont' };
 
@@ -120,16 +123,15 @@ const TIME_SHORT: Record<Lang, Record<'same' | 'next' | 'three' | 'none', string
 const TR_PRI = ['konyaalti', 'hurma', 'liman', 'gursu', 'uluc', 'altinkum', 'ogretmenevleri', 'arapsuyu', 'siteler', 'uncali', 'sarisu', 'meltem'];
 const FG_PRI = ['konyaalti', 'muratpasa', 'side', 'aksu', 'kundu', 'belek', 'lara', 'kemer', 'beldibi'];
 function sortD(lang: Lang, list: District[]): District[] {
-  const pri = lang === 'tr' ? TR_PRI : FG_PRI;
-  list = list.filter((x) => isIndexable(lang, x.slug)); // Türkçede uzak bölgeler listelenmez
-  const rank = (x: District) => { const i = pri.indexOf(x.slug); return i < 0 ? 999 : i; };
-  return [...list].sort((a, b) => rank(a) - rank(b));
+  // Sıra: lib/seo-data.ts DISTRICT_PRIORITY (sahibin kararı, 24 Kasım 2026)
+  return byPriority(list.filter((x) => isIndexable(lang, x.slug)));
 }
 
 // ── Metin üreticileri ───────────────────────────────────────
 function districtCopy(lang: Lang, d: District) {
   const r = _districtCopy(lang, d);
-  return r;
+  if (isFar(d.slug)) return { ...r, desc: farDesc(lang, d.name[lang]) };
+  return lang === 'tr' ? r : { ...r, desc: areaKwDesc(lang, d.name[lang], 'a', r.desc) };
 }
 function _districtCopy(lang: Lang, d: District) {
   const n = d.name[lang];
@@ -256,8 +258,9 @@ function serviceCopy(lang: Lang, s: Service) {
   ];
   const desc = pickFit(candidates, 158);
   const o = lang === 'tr' ? undefined : fgServiceMeta(lang, s.id);
-  if (o) return { nm, title: o.title, desc: o.desc, kw: o.kw };
-  return { nm, title, desc, kw: [] as string[] };
+  // Yabancı dillerde açıklama anahtar kelimeli kalıptan (lib/kw-desc.ts); başlık değişmez.
+  if (o) return { nm, title: o.title, desc: lang === 'tr' ? o.desc : serviceKwDesc(lang, nm, 'a', o.desc), kw: o.kw };
+  return { nm, title, desc: lang === 'tr' ? desc : serviceKwDesc(lang, nm, 'a', desc), kw: [] as string[] };
 }
 
 function serviceFaq(lang: Lang, s: Service): [string, string][] {
@@ -520,7 +523,7 @@ export function DistrictPage({ lang, d }: { lang: Lang; d: District }) {
     ru: `Здравствуйте, нужен портной ${c.loc}.`,
     de: `Hallo, ich brauche einen Schneider ${c.loc}.`,
   }[lang];
-  const nearbyAll = DISTRICTS.filter((x) => x.slug !== d.slug && isIndexable(lang, x.slug));
+  const nearbyAll = byPriority(DISTRICTS.filter((x) => x.slug !== d.slug && isIndexable(lang, x.slug)));
   let nearby = nearbyAll.filter((x) => x.kind === d.kind).slice(0, 8);
   // Aynı türden az bölge varsa (ör. Türkçede Beldibi) diğer açık bölgelerle tamamla; iç link ağı boş kalmasın.
   if (nearby.length < 3) nearby = [...nearby, ...nearbyAll.filter((x) => x.kind !== d.kind).slice(0, 4)];
@@ -603,9 +606,10 @@ export function DistrictPage({ lang, d }: { lang: Lang; d: District }) {
         { href: SERVICE_BASE[lang], label: u.all },
         { href: u.pricesHref, label: u.pricesLink },
       ]}>
-        <Hero lang={lang} tag={`📍 ${d.name[lang]} · ${isFreeService(d.slug) ? u.free : u.paid} · ${u.hours}`} h1={h1}
+        <Hero lang={lang} tag={`📍 ${d.name[lang]} · ${isFar(d.slug) ? FAR_TAG[lang] : isFreeService(d.slug) ? u.free : u.paid} · ${u.hours}`} h1={h1}
           desc={districtAnswer(lang, d)} waMsg={waMsg} />
 
+        {!isFar(d.slug) && <TerziHizmetleriBolumu lang={lang} />}
         <section className="sec" aria-labelledby="svc-h">
           <div className="ctr">
             <div className="sec-head">

@@ -56,8 +56,8 @@ const SERVICES: { title: string; desc: string; rows: [string, string][] }[] = [
     rows: [['Herrenhose', 'nach Foto'], ['Damenkleid', 'nach Foto'], ['Abendkleid', 'nach Foto'], ['Kinderkleidung', 'nach Foto']] },
 ];
 
-const FREE_DISTRICTS = ['Konyaaltı'];
-const OTHER_DISTRICTS = ['Muratpaşa', 'Kepez', 'Lara', 'Belek', 'Kemer', 'Side', 'Serik', 'Döşemealtı', 'Aksu'];
+const FREE_DISTRICTS = ['Konyaaltı', 'Muratpaşa', 'Lara', 'Güzeloba', 'Kundu', 'Belek', 'Side', 'Kemer', 'Göynük', 'Beldibi', 'Kepez', 'Aksu', 'Manavgat'];
+const OTHER_DISTRICTS = ['Döşemealtı', 'Serik'];
 
 const STEPS: [string, string][] = [
   ['Foto senden', 'Senden Sie per WhatsApp ein Foto des Kleidungsstücks und der gewünschten Arbeit.'],

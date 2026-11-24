@@ -4,7 +4,7 @@ import { DELIVERY } from '@/lib/delivery';
 import ReviewsBlock from '@/components/ReviewsBlock';
 import Ilustrasyon, { type IlustrasyonTur } from '@/components/Ilustrasyon';
 import { businessNode } from '@/lib/business';
-import { DISTRICTS as SEO_DISTRICTS, SERVICES as SEO_SERVICES, SERVICE_BASE, districtUrl, serviceUrl, isTrNear, isFreeService } from '@/lib/seo-data';
+import { DISTRICTS as SEO_DISTRICTS, SERVICES as SEO_SERVICES, SERVICE_BASE, districtUrl, serviceUrl, isTrNear, isFreeService, byPriority } from '@/lib/seo-data';
 
 // ─── CONSTANTS ────────────────────────────────────────────────────────────────
 const SITE      = 'https://terzihizmeti.com.tr';
@@ -176,7 +176,7 @@ const SERVICES = [
 ];
 
 // Mahalle listesi TEK kaynaktan (lib/seo-data.ts); eve ve otele servis her bölgede yapılır.
-const DISTRICTS = ['hurma', 'liman', 'sarisu', 'uncali', 'gursu', 'ogretmenevleri', 'meltem', 'arapsuyu', 'altinkum', 'uluc', 'siteler', 'konyaalti']
+const DISTRICTS = ['konyaalti', 'hurma', 'liman', 'gursu', 'uncali', 'ogretmenevleri', 'sarisu', 'uluc', 'altinkum', 'siteler', 'arapsuyu', 'meltem']
   .map((slug) => ({ slug, name: SEO_DISTRICTS.find((x) => x.slug === slug)!.name.tr, free: isFreeService(slug) }));
 
 
@@ -565,7 +565,7 @@ export default function TerziHizmetiPage() {
               <a href={SERVICE_BASE.tr} style={{ color: '#C9A96E', fontWeight: 700, marginRight: '1rem' }}>Tüm hizmetler →</a>
               {SEO_SERVICES.map((sv) => (<a key={sv.id} href={serviceUrl('tr', sv)} style={{ color: 'rgba(255,255,255,.82)', marginRight: '1rem', whiteSpace: 'nowrap' }}>{sv.name.tr}</a>))}
               <br />
-              {SEO_DISTRICTS.map((d) => (<a key={d.slug} href={districtUrl('tr', d)} style={{ color: 'rgba(255,255,255,.82)', marginRight: '1rem', whiteSpace: 'nowrap' }}>{d.name.tr} terzi</a>))}
+              {byPriority(SEO_DISTRICTS).map((d) => (<a key={d.slug} href={districtUrl('tr', d)} style={{ color: 'rgba(255,255,255,.82)', marginRight: '1rem', whiteSpace: 'nowrap' }}>{d.name.tr} terzi</a>))}
               <br />
               <a href="/en/tailor-services" hrefLang="en" style={{ color: 'rgba(255,255,255,.82)', marginRight: '1rem' }}>English: Tailor services</a>
               <a href="/ru/uslugi-portnogo" hrefLang="ru" style={{ color: 'rgba(255,255,255,.82)', marginRight: '1rem' }}>Русский: Услуги портного</a>

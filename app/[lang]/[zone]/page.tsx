@@ -30,6 +30,9 @@ import { fitDesc, withAsk } from '@/lib/meta-fit';
 import { hreflangFiyat, hreflangIletisim, hreflangSvc } from '@/lib/hreflang';
 import UretimLanding from '@/components/UretimLanding';
 import { UDATA, U_IDS, parseU, uMetadata } from '@/lib/uretim';
+import { areaKwDesc, serviceKwDesc } from '@/lib/kw-desc';
+// Anahtar kelimeli açıklama yalnız hizmet konularında (tekstil üretimi hariç)
+const KW_TOPICS: string[] = ['tamir', 'ozel', 'keten'];
 
 // Yalnızca tanımlı otel bölgesi sayfaları üretilir; diğer iki-segmentli yollar 404 olur.
 export const dynamicParams = false;
@@ -86,7 +89,7 @@ export async function generateMetadata({ params }: P): Promise<Metadata> {
   }
   const hz = parseHizmet(lang, slug);
   if (hz) {
-    const c = HIZMET[lang][hz]; const url = `${SITE}${hizmetUrl(lang, hz)}`;
+    const c0 = HIZMET[lang][hz]; const c = { ...c0, desc: serviceKwDesc(lang, c0.name, 'a', c0.desc) }; const url = `${SITE}${hizmetUrl(lang, hz)}`;
     const title = c.title.length + 12 <= 60 ? `${c.title} | Terzi Can` : c.title;
     return {
       metadataBase: new URL(SITE), title: { absolute: title }, description: fitDesc(withAsk(c.desc, lang), undefined, lang),
@@ -99,7 +102,7 @@ export async function generateMetadata({ params }: P): Promise<Metadata> {
   }
   const topic = parseTopic(lang, slug);
   if (topic) {
-    const c = TOPICS[lang][topic]; const url = `${SITE}${topicUrl(lang, topic)}`;
+    const c0 = TOPICS[lang][topic]; const c = KW_TOPICS.includes(topic) ? { ...c0, desc: serviceKwDesc(lang, c0.h1, 'a', c0.desc) } : c0; const url = `${SITE}${topicUrl(lang, topic)}`;
     const brand = topic === 'tekstil' ? 'Anavera Tekstil' : 'Terzi Can';
     const title = c.title.length + brand.length + 3 <= 60 ? `${c.title} | ${brand}` : c.title;
     return {
@@ -118,7 +121,8 @@ export async function generateMetadata({ params }: P): Promise<Metadata> {
   const seoT = zone === 'antalya' ? [] : zoneSeoTitles(lang, z.name, ZONE_SLUGS.indexOf(zone)); // bölgeye göre farklı, hizmet kelimeli başlık
   const base = seoT.find((t) => t.length <= 60) ?? zc.title(z.name);
   const title = base.length + 12 <= 60 ? `${base} | Terzi Can` : base;
-  const description = fitDesc(withAsk(zc.desc(z.name), lang), undefined, lang);
+  // Anahtar kelimeli kalıp (lib/kw-desc.ts); 'antalya' otel ana sayfası da aynı kalıpla
+  const description = fitDesc((zone === 'antalya' ? withAsk(zc.desc(z.name), lang).replace(/(Анталія|Antalya|Antalyi|أنطاليا)[,،] \1/u, '$1') : areaKwDesc(lang, z.name, 'a', withAsk(zc.desc(z.name), lang))), undefined, lang);
   const url = `${SITE}${zoneUrl(lang, zone)}`;
   const sfx = zone === 'antalya' ? '' : `/${zone}`; // 'antalya' = otel ana sayfası
   const tr = `${SITE}/otele-gelen-terzi-antalya${sfx}`;

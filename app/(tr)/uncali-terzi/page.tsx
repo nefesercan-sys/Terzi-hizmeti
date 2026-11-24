@@ -5,6 +5,7 @@ import { businessNode } from '@/lib/business';
 import Image from 'next/image';
 import { DISTRICT_BASE } from '@/lib/seo-data';
 import { fitDesc, fitKeywords } from '@/lib/meta-fit';
+import TerziHizmetleriBolumu from '@/components/TerziHizmetleriBolumu';
 
 const SITE      = 'https://terzihizmeti.com.tr';
 const PAGE_URL  = `${SITE}/uncali-terzi`;
@@ -242,6 +243,7 @@ export default function UncaliPage() {
             </nav>
           </div>
         </section>
+        <TerziHizmetleriBolumu lang="tr" />
         <ReviewsBlock lang="tr" />
         <footer>
           <div>© {new Date().getFullYear()} Terzi Can · Uncalı Terzi Konyaaltı · {PHONE}</div>

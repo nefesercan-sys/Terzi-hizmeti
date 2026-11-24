@@ -33,6 +33,7 @@ import { trNearDistrict } from '@/lib/tr-meta';
 import { fitDesc, fitKeywords } from '@/lib/meta-fit';
 import KargoFermuarKutusu, { type KFVariant } from '@/components/KargoFermuarKutusu';
 import KargoKisa from '@/components/KargoKisa';
+import TerziHizmetleriBolumu from '@/components/TerziHizmetleriBolumu';
 const KF_SHORT = new Set(['paca', 'kot', 'bel', 'elbise-tamir', 'gelinlik-abiye', 'pantolon', 'kol', 'takim', 'gomlek', 'deri', 'tisort', 'etek', 'kiyafet-tamiri', 'beden']);
 const KF_VARIANT: Record<string, KFVariant | undefined> = { fermuar: 'both', abiye: 'abiye', 'gece-kiyafeti': 'abiye', mont: 'mont' };
 
@@ -605,6 +606,7 @@ export function DistrictPage({ lang, d }: { lang: Lang; d: District }) {
         <Hero lang={lang} tag={`📍 ${d.name[lang]} · ${isFar(d.slug) ? FAR_TAG[lang] : isFreeService(d.slug) ? u.free : u.paid} · ${u.hours}`} h1={h1}
           desc={districtAnswer(lang, d)} waMsg={waMsg} />
 
+        {!isFar(d.slug) && <TerziHizmetleriBolumu lang={lang} />}
         <section className="sec" aria-labelledby="svc-h">
           <div className="ctr">
             <div className="sec-head">

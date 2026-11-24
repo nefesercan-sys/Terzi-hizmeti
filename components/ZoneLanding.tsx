@@ -8,6 +8,7 @@ import { INTL, iUrl, type ILang } from '@/lib/intl';
 import { ZONE_VARIANTS, ZONE_H1, zoneVariantIndex } from '@/lib/zone-variants';
 import { bolgeMatrisiTurist, bolgeEkSssTurist } from '@/lib/bolge-hizmet-matrisi-turist';
 import { ZCOPY, ZONE_SLUGS, zoneData, zoneUrl, type ZoneSlug } from '@/lib/intl-zones';
+import TerziHizmetleriBolumu from '@/components/TerziHizmetleriBolumu';
 
 const C = { green: '#2C4A3E', gold: '#D4B07A', cream: '#FAF7F2', sand: '#F2EDE4', ink: '#1C1814', muted: '#6B5F53', line: 'rgba(44,74,62,.15)' };
 const serif = 'Georgia,serif';
@@ -96,6 +97,7 @@ export default function ZoneLanding({ lang, zone }: { lang: ILang; zone: ZoneSlu
         <p style={{ margin: '1.2rem 0 0', fontSize: '.95rem' }}>{HOTEL_NOTE[lang]} {PAYMENT_NOTE[lang]}</p>
         <OrnekGorselSeridi konu="bolge" yer={z.name} lang={lang} tema="acik" anahtarlar={['eve-gelen-terzi', 'erkek-takim-olcu', 'beyaz-gomlek-katli', 'yun-pantolon-metre']} sayfaUrl={`${SITE}${zoneUrl(lang, zone)}`} />
 
+        <TerziHizmetleriBolumu lang={lang} />
         <section style={{ background: C.sand, borderRadius: 8, padding: '1.3rem' }}>
           <p style={{ margin: '0 0 1rem' }}>
             <a href={waLink(c.wa(z.name))} target="_blank" rel="noopener noreferrer"

@@ -5,6 +5,7 @@ import { businessNode } from '@/lib/business';
 import Image from 'next/image';
 import { DISTRICT_BASE } from '@/lib/seo-data';
 import { fitDesc, fitKeywords } from '@/lib/meta-fit';
+import TerziHizmetleriBolumu from '@/components/TerziHizmetleriBolumu';
 
 const SITE      = 'https://terzihizmeti.com.tr';
 const PAGE_URL  = `${SITE}/hurma-terzi`;
@@ -252,6 +253,7 @@ export default function HurmaTerziPage() {
             </nav>
           </div>
         </section>
+        <TerziHizmetleriBolumu lang="tr" />
         <ReviewsBlock lang="tr" />
         <footer>
           <div>© {new Date().getFullYear()} Terzi Can · Hurma Terzi Konyaaltı · {PHONE}</div>

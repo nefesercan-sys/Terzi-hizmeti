@@ -5,6 +5,7 @@ import { businessNode } from '@/lib/business';
 import Image from 'next/image';
 import { DISTRICT_BASE } from '@/lib/seo-data';
 import { fitKeywords } from '@/lib/meta-fit';
+import TerziHizmetleriBolumu from '@/components/TerziHizmetleriBolumu';
 
 const SITE      = 'https://terzihizmeti.com.tr';
 const PAGE_URL  = `${SITE}/liman-terzi`;
@@ -242,6 +243,7 @@ export default function LimanPage() {
             </nav>
           </div>
         </section>
+        <TerziHizmetleriBolumu lang="tr" />
         <ReviewsBlock lang="tr" />
         <footer>
           <div>© {new Date().getFullYear()} Terzi Can · Liman Terzi Konyaaltı · {PHONE}</div>

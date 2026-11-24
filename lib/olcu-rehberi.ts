@@ -88,7 +88,7 @@ export const OLCU: Record<GLang, OlcuCopy> = {
   },
   en: {
     slug: 'how-to-take-body-measurements-at-home',
-    title: 'How to Take Your Measurements at Home: Tailor Measuring Guide',
+    title: 'How to Take Your Measurements at Home: A Tailor Guide',
     desc: 'Measure yourself accurately with a tape: chest, waist, hips, shoulders, sleeve and leg. Measurement table, photo tips and a ready WhatsApp message.',
     h1: 'How to Take Your Body Measurements at Home',
     lead: 'All you need is a non-stretch tape measure, a mirror and, if possible, a helper. Stand relaxed and upright in close-fitting clothes, hold the tape snug but not tight, write every number in centimetres and send it on WhatsApp. If you cannot measure, just ask us on WhatsApp.',
@@ -200,7 +200,7 @@ export const OLCU: Record<GLang, OlcuCopy> = {
   },
   de: {
     slug: 'koerpermasse-selbst-nehmen-anleitung',
-    title: 'Körpermaße selbst nehmen: Anleitung vom Schneider für zu Hause',
+    title: 'Körpermaße selbst nehmen: Anleitung vom Schneider',
     desc: 'So messen Sie sich mit dem Maßband richtig: Brust, Taille, Hüfte, Schulter, Arm und Bein. Maßtabelle, Fototipps und fertige WhatsApp-Nachricht.',
     h1: 'Körpermaße zu Hause selbst nehmen: Schritt für Schritt',
     lead: 'Sie brauchen ein nicht dehnbares Maßband, einen Spiegel und möglichst eine Hilfsperson. Stehen Sie aufrecht und entspannt in eng anliegender Kleidung, legen Sie das Band anliegend, aber nicht eng an, notieren Sie alles in Zentimetern und senden Sie es per WhatsApp. Wenn Sie nicht messen können, fragen Sie uns einfach auf WhatsApp.',
@@ -480,7 +480,7 @@ export const OLCU: Record<GLang, OlcuCopy> = {
   },
   nl: {
     slug: 'maten-opnemen-thuis-kleermaker',
-    title: 'Zelf je maten opnemen thuis: stap-voor-stap gids van de kleermaker',
+    title: 'Zelf je maten opnemen thuis: gids van de kleermaker',
     desc: 'Meet jezelf correct met een meetlint: borst, taille, heupen, schouders, mouw en been. Matentabel, fototips en een kant-en-klaar WhatsApp-bericht.',
     h1: 'Je maten thuis opnemen, stap voor stap',
     lead: 'Je hebt een niet-rekbaar meetlint nodig, een spiegel en, als het kan, een helper. Sta rechtop en ontspannen in aansluitende kleding, leg het lint aanliggend maar niet strak, noteer alles in centimeters en stuur het via WhatsApp. Lukt het meten niet, vraag het ons dan gewoon via WhatsApp.',

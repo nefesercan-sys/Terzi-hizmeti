@@ -100,11 +100,11 @@ const PRIORITY_DISTRICTS = [
   { name: 'Muratpaşa', tag: 'Service', note: 'pick-up and delivery' },
   { name: 'Kepez', tag: 'Service', note: 'pick-up and delivery' },
   { name: 'Lara', tag: 'Service', note: 'pick-up and delivery to Lara hotels' },
-  { name: 'Döşemealtı', tag: 'Service', note: 'pick-up and delivery' },
-  { name: 'Aksu', tag: 'Service', note: 'pick-up and delivery' },
+  { name: 'Güzeloba & Kundu', tag: 'Service', note: 'pick-up and delivery to hotels' },
+  { name: 'Belek & Side', tag: 'Service', note: 'pick-up and delivery to hotels' },
 ];
 
-const OTHER_DISTRICTS = ['Belek', 'Kemer', 'Serik', 'Side'];
+const OTHER_DISTRICTS = ['Kemer', 'Göynük', 'Beldibi', 'Aksu', 'Manavgat', 'Döşemealtı (by arrangement)', 'Serik (by arrangement)'];
 
 const SERVICES = [
   { icon: '👔', tr: "Men's Tailoring", en: 'Shirts, trousers, jackets, suits', desc: 'Custom-fit garments made from scratch, to your exact measurements.', items: ['Shirt', 'Trousers', 'Jacket', 'Suit', 'Groom Suit'] },

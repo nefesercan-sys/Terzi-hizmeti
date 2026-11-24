@@ -4,7 +4,7 @@
 // Yalnızca gerçekten var olan sayfalara link verir. Puan/yorum verisi içermez.
 // ============================================================
 import { OTEL_BOLGELERI } from '@/lib/otel-bolgeleri';
-import { DISTRICTS, SERVICES, DISTRICT_BASE, SERVICE_BASE, districtUrl, serviceUrl, isIndexable } from '@/lib/seo-data';
+import { DISTRICTS, SERVICES, DISTRICT_BASE, SERVICE_BASE, districtUrl, serviceUrl, isIndexable, byPriority } from '@/lib/seo-data';
 import { PROMO_PATH, PROMO_NAME } from '@/lib/promosyon-paths';
 import { PRODUCT_IDS, LINK_NAMES, productUrl, expressUrl, hubUrl, type TLang } from '@/lib/turist-links';
 import { EK_BREADCRUMB } from '@/lib/icerik-haritasi-ek';
@@ -116,11 +116,11 @@ const RU_NAMES: Record<string, string> = {
 const regionName = (slug: string, name: string, lang: Lang) => (lang === 'ru' ? RU_NAMES[slug] || name : name);
 
 function regionLinks(base: string, lang: Lang, label: (n: string) => string): MapLink[] {
-  return OTEL_BOLGELERI.map((r) => ({ href: `${base}/${r.slug}`, label: label(regionName(r.slug, r.name, lang)) }));
+  return byPriority(OTEL_BOLGELERI).map((r) => ({ href: `${base}/${r.slug}`, label: label(regionName(r.slug, r.name, lang)) }));
 }
 
 const seoServiceLinks = (lang: Lang): MapLink[] => SERVICES.map((s) => ({ href: serviceUrl(lang, s), label: s.name[lang] }));
-const seoDistrictLinks = (lang: Lang): MapLink[] => DISTRICTS.filter((d) => isIndexable(lang, d.slug)).map((d) => ({
+const seoDistrictLinks = (lang: Lang): MapLink[] => byPriority(DISTRICTS.filter((d) => isIndexable(lang, d.slug))).map((d) => ({
   href: districtUrl(lang, d),
   label: { tr: `${d.name.tr} terzi`, en: `Tailor ${d.name.en}`, ru: `Портной ${d.name.ru}`, de: `Schneider ${d.name.de}` }[lang],
 }));

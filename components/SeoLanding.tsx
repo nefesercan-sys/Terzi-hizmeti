@@ -20,12 +20,13 @@ import { areaIntro, areaNeeds, NEEDS_H, AREA_PROFILES } from '@/lib/area-profile
 import { businessNode as sharedBusinessNode } from '@/lib/business';
 import { OTEL_BOLGELERI } from '@/lib/otel-bolgeleri';
 import {
-  DISTRICTS, SERVICES, MAHALLE_PAGES, findDistrict, LANGS, SITE, PHONE, PHONE_TEL, MAPS, LAST_UPDATE,
+  DISTRICTS, byPriority, SERVICES, MAHALLE_PAGES, findDistrict, LANGS, SITE, PHONE, PHONE_TEL, MAPS, LAST_UPDATE,
   SERVICE_BASE, HUB_MAIN, HOTEL_BASE,
   abs, districtUrl, serviceUrl, query, timeOf, priceOf, TIME_TEXT,
   type Lang, type District, type Service,
   isTrNear, isIndexable, TR_NEAR_SLUGS, trExtraKeywords, isFreeService,
 } from '@/lib/seo-data';
+import { isFar, FAR_TAG, farDesc } from '@/lib/uzak-bolge';
 import { angleFor, angleTitles, angleDescs, angleKeywords } from '@/lib/seo-angles';
 import { fgNearDistrict, fgServiceMeta, eurFromText, EUR_FROM } from '@/lib/fg-meta';
 import { trNearDistrict } from '@/lib/tr-meta';
@@ -120,16 +121,14 @@ const TIME_SHORT: Record<Lang, Record<'same' | 'next' | 'three' | 'none', string
 const TR_PRI = ['konyaalti', 'hurma', 'liman', 'gursu', 'uluc', 'altinkum', 'ogretmenevleri', 'arapsuyu', 'siteler', 'uncali', 'sarisu', 'meltem'];
 const FG_PRI = ['konyaalti', 'muratpasa', 'side', 'aksu', 'kundu', 'belek', 'lara', 'kemer', 'beldibi'];
 function sortD(lang: Lang, list: District[]): District[] {
-  const pri = lang === 'tr' ? TR_PRI : FG_PRI;
-  list = list.filter((x) => isIndexable(lang, x.slug)); // Türkçede uzak bölgeler listelenmez
-  const rank = (x: District) => { const i = pri.indexOf(x.slug); return i < 0 ? 999 : i; };
-  return [...list].sort((a, b) => rank(a) - rank(b));
+  // Sıra: lib/seo-data.ts DISTRICT_PRIORITY (sahibin kararı, 24 Kasım 2026)
+  return byPriority(list.filter((x) => isIndexable(lang, x.slug)));
 }
 
 // ── Metin üreticileri ───────────────────────────────────────
 function districtCopy(lang: Lang, d: District) {
   const r = _districtCopy(lang, d);
-  return r;
+  return isFar(d.slug) ? { ...r, desc: farDesc(lang, d.name[lang]) } : r;
 }
 function _districtCopy(lang: Lang, d: District) {
   const n = d.name[lang];
@@ -520,7 +519,7 @@ export function DistrictPage({ lang, d }: { lang: Lang; d: District }) {
     ru: `Здравствуйте, нужен портной ${c.loc}.`,
     de: `Hallo, ich brauche einen Schneider ${c.loc}.`,
   }[lang];
-  const nearbyAll = DISTRICTS.filter((x) => x.slug !== d.slug && isIndexable(lang, x.slug));
+  const nearbyAll = byPriority(DISTRICTS.filter((x) => x.slug !== d.slug && isIndexable(lang, x.slug)));
   let nearby = nearbyAll.filter((x) => x.kind === d.kind).slice(0, 8);
   // Aynı türden az bölge varsa (ör. Türkçede Beldibi) diğer açık bölgelerle tamamla; iç link ağı boş kalmasın.
   if (nearby.length < 3) nearby = [...nearby, ...nearbyAll.filter((x) => x.kind !== d.kind).slice(0, 4)];
@@ -603,7 +602,7 @@ export function DistrictPage({ lang, d }: { lang: Lang; d: District }) {
         { href: SERVICE_BASE[lang], label: u.all },
         { href: u.pricesHref, label: u.pricesLink },
       ]}>
-        <Hero lang={lang} tag={`📍 ${d.name[lang]} · ${isFreeService(d.slug) ? u.free : u.paid} · ${u.hours}`} h1={h1}
+        <Hero lang={lang} tag={`📍 ${d.name[lang]} · ${isFar(d.slug) ? FAR_TAG[lang] : isFreeService(d.slug) ? u.free : u.paid} · ${u.hours}`} h1={h1}
           desc={districtAnswer(lang, d)} waMsg={waMsg} />
 
         <section className="sec" aria-labelledby="svc-h">

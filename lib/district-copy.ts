@@ -7,6 +7,7 @@
 import { DELIVERY } from '@/lib/delivery';
 import { PHONE, isFreeService, type Lang, type District } from '@/lib/seo-data';
 import { pickVariant } from '@/lib/area-profiles';
+import { isFar, farNote } from '@/lib/uzak-bolge';
 
 const HOTEL_FREE: Record<Lang, string> = {
   tr: 'Eve ve otele alım-teslim yapılır.', en: 'Pick-up and delivery to homes and hotels is available.', ru: 'Забор и доставка на дом и в отели возможны.', de: 'Abholung und Lieferung zu Hause und im Hotel sind möglich.',
@@ -14,6 +15,7 @@ const HOTEL_FREE: Record<Lang, string> = {
 
 /** 1–2 cümlelik doğrudan cevap (sesli asistan dostu): kim, ne, nerede, nasıl ulaşılır, süre. */
 export function districtAnswer(lang: Lang, d: District): string {
+  if (isFar(d.slug)) return farNote(lang, d.name[lang]);
   const loc = d.loc[lang];
   const D = DELIVERY[lang];
   const v = pickVariant(d.slug, 3, 'ans');
@@ -127,7 +129,11 @@ export function districtFaqPool(lang: Lang, d: District): [string, string][] {
   // 'home' sorusu otel dışı bölgelerde net bilgi içerdiği için her zaman dahil edilir
   if (!chosen.some((c) => c.id === 'home')) chosen[4] = POOL.find((x) => x.id === 'home')!;
   const uniq = Array.from(new Map(chosen.map((c) => [c.id, c])).values());
-  return uniq.map((c) => c.f[lang](loc, n, d));
+  return uniq.map((c) => {
+    const qa = c.f[lang](loc, n, d);
+    // Uzak bölgede alım-teslim sözü verilmez (sahibin kararı, 24 Kasım 2026)
+    return isFar(d.slug) && (c.id === 'home' || c.id === 'hotel') ? [qa[0], farNote(lang, n)] as [string, string] : qa;
+  });
 }
 export const SERVICE_PICK = (slug: string, total: number, count: number): number[] => {
   const start = pickVariant(slug, total, 'svc');

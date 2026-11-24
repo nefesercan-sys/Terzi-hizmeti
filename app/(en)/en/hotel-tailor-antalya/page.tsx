@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { withTwin } from '@/lib/twin';
 import { zoneAlt } from '@/lib/intl-zones';
 import { OTEL_BOLGELERI } from '@/lib/otel-bolgeleri';
+import { byPriority } from '@/lib/seo-data';
 
 const SITE = 'https://terzihizmeti.com.tr';
 const BASE_PATH = '/en/hotel-tailor-antalya';
@@ -152,7 +153,7 @@ export default function OtelBolgeleriEnHub() {
               <p className="sec-sub">Each district has its own page with a hotel list and direct WhatsApp contact.</p>
             </div>
             <div className="wk-grid">
-              {OTEL_BOLGELERI.map((r) => (
+              {byPriority(OTEL_BOLGELERI).map((r) => (
                 <a key={r.slug} href={`${BASE_PATH}/${r.slug}`} className="wk-card" style={{ textDecoration: 'none', color: 'inherit' }}>
                   <div className="wk-tr">{r.name}</div>
                   <p className="wk-d">{r.blurb.en}</p>

@@ -119,10 +119,10 @@ interface Neighborhood {
 const NEIGHBORHOODS: Neighborhood[] = [
   { name: 'Hurma', tag: 'Öncelikli', note: 'Atölyeye en yakın — adrese servis', priority: true },
   { name: 'Liman', tag: 'Öncelikli', note: 'Eve ve otele servis, WhatsApp\'tan randevu', priority: true },
-  { name: 'Sarısu', tag: 'Öncelikli', note: 'adrese servis', priority: true },
-  { name: 'Uncalı', tag: 'Yakın', note: 'adrese servis', priority: false },
-  { name: 'Gürsu', tag: 'Yakın', note: 'adrese servis', priority: false },
-  { name: 'Öğretmenevleri', tag: 'Yakın', note: 'adrese servis', priority: false },
+  { name: 'Gürsu', tag: 'Öncelikli', note: 'adrese servis', priority: true },
+  { name: 'Uncalı', tag: 'Öncelikli', note: 'adrese servis', priority: true },
+  { name: 'Öğretmenevleri', tag: 'Öncelikli', note: 'adrese servis', priority: true },
+  { name: 'Sarısu', tag: 'Yakın', note: 'adrese servis', priority: false },
   { name: 'Altınkum', tag: 'Yakın', note: 'adrese servis', priority: false },
   { name: 'Siteler', tag: 'Yakın', note: 'adrese servis', priority: false },
   { name: 'Arapsuyu', tag: 'Yakın', note: 'adrese servis', priority: false },
@@ -131,7 +131,8 @@ const NEIGHBORHOODS: Neighborhood[] = [
 ];
 
 const OTHER_DISTRICTS: string[] = [
-  'Muratpaşa', 'Kepez', 'Döşemealtı', 'Aksu', 'Lara', 'Güzeloba', 'Serik', 'Belek', 'Kemer', 'Side',
+  'Muratpaşa', 'Lara', 'Güzeloba', 'Kundu', 'Belek', 'Side', 'Kemer', 'Göynük', 'Beldibi', 'Kepez', 'Aksu', 'Manavgat',
+  'Döşemealtı (işin durumuna göre)', 'Serik (işin durumuna göre)',
 ];
 
 interface WorkshopService {

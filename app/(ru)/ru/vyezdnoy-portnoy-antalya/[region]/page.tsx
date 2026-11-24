@@ -5,7 +5,7 @@ import { zoneAlt } from '@/lib/intl-zones';
 import { OTEL_BOLGELERI, bulOtelBolgesiLang } from '@/lib/otel-bolgeleri';
 import OtelBolgeSayfasi from '@/components/OtelBolgeSayfasi';
 import { regionJsonLd } from '@/lib/otel-copy';
-import { BUSINESS_ID } from '@/lib/seo-data';
+import { BUSINESS_ID, byPriority } from '@/lib/seo-data';
 import { fitDesc, fitKeywords } from '@/lib/meta-fit';
 
 const SITE = 'https://terzihizmeti.com.tr';
@@ -66,7 +66,7 @@ export default async function OtelBolgeRuPage({ params }: { params: Promise<{ re
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <OtelBolgeSayfasi lang="ru" region={r} allRegions={OTEL_BOLGELERI.map((x) => bulOtelBolgesiLang('ru', x.slug)!)} basePath={BASE_PATH} maps={MAPS} />
+      <OtelBolgeSayfasi lang="ru" region={r} allRegions={byPriority(OTEL_BOLGELERI).map((x) => bulOtelBolgesiLang('ru', x.slug)!)} basePath={BASE_PATH} maps={MAPS} />
     </>
   );
 }

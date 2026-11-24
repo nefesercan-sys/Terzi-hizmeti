@@ -1,6 +1,7 @@
 // components/SssMerkezi.tsx — Sık sorulan sorular merkez sayfası (TR/EN/RU/DE). Sunucu bileşeni.
 // Görünen SSS ile FAQPage şeması AYNI diziden (lib/sss-merkezi.ts) üretilir.
 import type { Metadata } from 'next';
+import { lastMod } from '@/lib/lastmod';
 import { withTwin } from '@/lib/twin';
 import { SSS_ITEMS, SSS_LINKS, SSS_META, SSS_PATH, SSS_SITE, SSS_UPDATED, sssHreflang, type SssLang } from '@/lib/sss-merkezi';
 import { BUSINESS_ID, PHONE_TEL } from '@/lib/seo-data';
@@ -35,7 +36,7 @@ export default function SssMerkezi({ lang }: { lang: SssLang }) {
         mainEntity: items.map(({ q, a }) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
       },
       {
-        '@type': 'WebPage', '@id': `${url}#webpage`, url, name: m.h1, inLanguage: m.htmlLang, dateModified: SSS_UPDATED,
+        '@type': 'WebPage', '@id': `${url}#webpage`, url, name: m.h1, inLanguage: m.htmlLang, dateModified: lastMod(url, SSS_UPDATED),
         about: { '@id': BUSINESS_ID }, mainEntity: { '@id': `${url}#faq` }, breadcrumb: { '@id': `${url}#breadcrumb` },
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['#kisa-cevap', '#sss'] },
       },

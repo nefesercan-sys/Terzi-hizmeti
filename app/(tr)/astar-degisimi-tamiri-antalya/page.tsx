@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { lastMod } from '@/lib/lastmod';
 import { withTwin } from '@/lib/twin';
 import ReviewsBlock from '@/components/ReviewsBlock';
 import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
@@ -14,7 +15,7 @@ const WA_NUM    = '905318986418';
 const WA        = (m: string) => `https://wa.me/${WA_NUM}?text=${encodeURIComponent(m)}`;
 const WA_DEF    = WA("Merhaba, astar değişimi/tamiri için fiyat almak istiyorum. Fotoğrafı gönderiyorum.");
 const MAPS      = 'https://www.google.com/maps?cid=6436895271281342624';
-const TODAY     = '2026-11-14';
+const TODAY     = lastMod('/astar-degisimi-tamiri-antalya', '2026-11-14');
 const FAQ: [string, string][] = [
   ["Astar değişimi ne kadar?", "Fiyat ürüne (ceket, mont, palto, kaban) ve işe göre değişir; sabit fiyat yazmıyoruz. Fotoğrafı WhatsApp'tan gönderirseniz net fiyatı söyleriz."],
   ["Ceket ve mont astarı değişir mi?", "Evet. Ceket, mont, palto ve kaban astarı yenisiyle değiştirilir."],

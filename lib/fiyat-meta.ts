@@ -1,5 +1,6 @@
 // lib/fiyat-meta.ts — fiyat/SSS sayfaları için merkezi metadata + şema (4 dil)
 import type { Metadata } from 'next';
+import { lastMod } from '@/lib/lastmod';
 import { withTwin } from '@/lib/twin';
 import { hreflangFiyat } from '@/lib/hreflang';
 import { FT, FIYAT_URLS, priceRowsFor, SITE, PHONE_TEL, type FLang } from '@/components/TerziFiyatlariSayfasi';
@@ -39,7 +40,7 @@ export function buildFiyatJsonLd(lang: FLang) {
     '@context': 'https://schema.org',
     '@graph': [
       {
-        '@type': 'WebPage', '@id': `${url}#webpage`, url, name: T.webName, inLanguage: T.htmlLang, dateModified: today,
+        '@type': 'WebPage', '@id': `${url}#webpage`, url, name: T.webName, inLanguage: T.htmlLang, dateModified: lastMod(url, today),
         breadcrumb: { '@id': `${url}#breadcrumb` },
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['#hero-desc', '#sss'] },
       },

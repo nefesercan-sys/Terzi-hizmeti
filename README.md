@@ -27,5 +27,6 @@ Node 20.9 veya üstü gerekir.
 - `lib/delivery.ts` — teslim süreleri (10 dil)
 - `lib/seo-data.ts` — mahalleler, hizmetler, ücretsiz servis kuralı, `BUSINESS_ID`
 - `lib/business.ts` — işletme JSON-LD düğümü (`businessNode()`)
+- `lib/lastmod.json` — sayfa başına gerçek son güncelleme tarihi (sitemap, JSON-LD `dateModified`, sayfa altındaki "Son güncelleme" satırı). Elle yazılmaz: içerik değiştiren her PR'da `npm run build && npx next start -p 3100` ardından `npm run lastmod -- http://localhost:3100` çalıştırın; yalnızca içeriği değişen sayfaların tarihi ilerler.
 - `lib/meta-fit.ts` — title/description/keywords sınırları (60 / 155 / 8)
 - `app/sitemap.ts` — sitemap; IndexNow URL listesi de buradan üretilir

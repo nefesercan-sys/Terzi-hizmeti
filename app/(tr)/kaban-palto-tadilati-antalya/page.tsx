@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { lastMod } from '@/lib/lastmod';
 import { withTwin } from '@/lib/twin';
 import ReviewsBlock from '@/components/ReviewsBlock';
 import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
@@ -14,7 +15,7 @@ const WA_NUM    = '905318986418';
 const WA        = (m: string) => `https://wa.me/${WA_NUM}?text=${encodeURIComponent(m)}`;
 const WA_DEF    = WA("Merhaba, kaban veya palto tadilatı için fiyat almak istiyorum. Fotoğrafı gönderiyorum.");
 const MAPS      = 'https://www.google.com/maps?cid=6436895271281342624';
-const TODAY     = '2026-11-03';
+const TODAY     = lastMod('/kaban-palto-tadilati-antalya', '2026-11-03');
 const FAQ: [string, string][] = [["Kaban ve palto tadilatı ne kadar?", "Kaban ve palto boy/kol kısaltma ve daraltma ₺200'den, fermuar değişimi ₺300'den başlar. Astar, düğme ve onarım işleri kapsama göre fotoğrafla fiyatlanır."], ["Paltonun boyu kısaltılır mı?", "Evet. Palto boyu üzerinizdeyken işaretlenir; astar ve kumaş boyuna göre kısaltılır. Başlangıç fiyatı ₺200'dür."], ["Kaban kolu kısaltma ve daraltma yapılıyor mu?", "Evet. Kol boyu kısaltılır, kol ve beden daraltılır; kumaş ve astara göre yapılabilecek işlem fotoğraftan değerlendirilir."], ["Palto astarı değişir mi?", "Evet. Yırtılan veya eskiyen astar onarılır ya da değiştirilir; fiyat işin kapsamına göre fotoğrafla söylenir."], ["Kaban fermuarı veya düğmesi değişiyor mu?", "Evet. Kaban fermuarı değişimi ₺300'den başlar; düğme takma ve değiştirme yapılır."], ["Kaban ve palto tadilatı ne kadar sürer?", "Normal işler aynı gün, acil işler 1–2 saatte teslim edilir. Kapsamlı işlerde süreyi fotoğrafı görünce söyleriz."], ["Kaban ve paltoyu eve veya otele gelip alıyor musunuz?", "Evet. Konyaaltı, Muratpaşa ve çevresinde eve ve otele alım-teslim yapılır."]];
 
 export const metadata: Metadata = {

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { lastMod } from '@/lib/lastmod';
 import { withTwin } from '@/lib/twin';
 import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
 import FabricsOrderBlock from '@/components/FabricsOrderBlock';
@@ -20,7 +21,7 @@ const WA_NUM    = '905318986418';
 const WA        = (m: string) => `https://wa.me/${WA_NUM}?text=${encodeURIComponent(m)}`;
 const WA_DEF    = WA('Здравствуйте, хочу вызвать выездного портного в отель/по адресу. Мой адрес: ');
 const MAPS      = 'https://www.google.com/maps?cid=6436895271281342624';
-const TODAY     = '2026-10-04';
+const TODAY     = lastMod('/ru/uslugi-portnogo-antalya', '2026-10-04');
 const OG        = `${SITE}/antalya-terzi-can-dikim-tamir-tadilat.jpg`;
 
 export const metadata: Metadata = {

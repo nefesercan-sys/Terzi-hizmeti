@@ -1,5 +1,6 @@
 // terzihizmeti.com.tr — "Hizmetler ve kumaşlar" sayfası (ES/FR/PL/UK/NL/AR). Veri: lib/intl-services.ts. Sunucu bileşeni, stil inline.
 import Link from 'next/link';
+import { lastMod } from '@/lib/lastmod';
 import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
 import { PHONE, PHONE_TEL, MAPS, SITE } from '@/lib/seo-data';
 import { businessNode, OG_DEFAULT, waLink, TURIST_UPDATE } from '@/lib/turist-keten';
@@ -20,7 +21,7 @@ export function svcJsonLd(lang: ILang) {
       businessNode('en'),
       {
         '@type': 'WebPage', '@id': `${url}#webpage`, url, name: c.title, description: c.desc, inLanguage: lang,
-        dateModified: TURIST_UPDATE, about: { '@id': `${SITE}#business` }, primaryImageOfPage: { '@type': 'ImageObject', url: OG_DEFAULT },
+        dateModified: lastMod(url, TURIST_UPDATE), about: { '@id': `${SITE}#business` }, primaryImageOfPage: { '@type': 'ImageObject', url: OG_DEFAULT },
         isPartOf: { '@id': `${SITE}${iUrl(lang)}#webpage` },
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['#hero-h', '.hero-desc'] },
       },

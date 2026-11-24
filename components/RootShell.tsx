@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next';
+import SonGuncelleme from '@/components/SonGuncelleme';
 import type { ReactNode } from 'react';
 import { Analytics } from '@vercel/analytics/next';
 import { Inter, Syne } from 'next/font/google';
@@ -61,6 +62,7 @@ export default function RootShell({ lang, dir = 'ltr', children }: { lang: strin
       <body>
         <HizliEylemBandi />
         {children}
+        <SonGuncelleme />
         <GoogleYorumSeridi lang={lang} />
         <RuTelegramButton />
         <SabitIletisim />

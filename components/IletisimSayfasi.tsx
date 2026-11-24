@@ -6,6 +6,7 @@
 // Siteye özgü ayarlar yalnızca aşağıdaki SITE_CFG bloğundadır.
 // ============================================================
 import { hreflangIletisim } from '@/lib/hreflang';
+import { BING_PLACES_URL, YANDEX_MAPS_URL } from '@/lib/business';
 import { lastMod } from '@/lib/lastmod';
 import { withTwin } from '@/lib/twin';
 import type { Metadata } from 'next';
@@ -23,7 +24,7 @@ const SITE_CFG = {
   businessName: 'Terzi Can',
   image: `${SITE}/antalya-terzi-can-dikim-tamir-tadilat.jpg`,
   geo: { latitude: 36.8572868, longitude: 30.5970193 },
-  sameAs: [MAPS, `https://wa.me/${PHONE_TEL.replace('+', '')}`, 'https://swaphubs.com/terzi'],
+  sameAs: [BING_PLACES_URL, YANDEX_MAPS_URL, MAPS, `https://wa.me/${PHONE_TEL.replace('+', '')}`, 'https://swaphubs.com/terzi'],
   contactUrl: {
     tr: '/iletisim',
     en: '/en/contact-tailor-antalya',

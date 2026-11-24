@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { lastMod } from '@/lib/lastmod';
 import { withTwin } from '@/lib/twin';
 import ReviewsBlock from '@/components/ReviewsBlock';
 import KargoKisa from '@/components/KargoKisa';
@@ -14,7 +15,7 @@ const WA_NUM    = '905318986418';
 const WA        = (m: string) => `https://wa.me/${WA_NUM}?text=${encodeURIComponent(m)}`;
 const WA_DEF    = WA('Merhaba, paça kısaltma hakkında bilgi almak istiyorum.');
 const MAPS      = 'https://www.google.com/maps?cid=6436895271281342624';
-const TODAY     = '2026-10-04';
+const TODAY     = lastMod('/konyaalti-paca-kisaltma', '2026-10-04');
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),

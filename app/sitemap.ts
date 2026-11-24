@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next';
+import { lastModDate } from '@/lib/lastmod';
 import { withTwin, twinUrl } from '@/lib/twin';
 import { BLOG_YAZILARI } from '@/lib/blog-yazilari';
 import { OTEL_BOLGELERI } from '@/lib/otel-bolgeleri';
@@ -228,5 +229,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // swaphubs.com'da asıl olan EN/DE/RU kopya sayfalar (lib/twin.ts) bu sitemap'e girmez; hreflang kümeleri swaphubs karşılığını gösterir.
   return [...gorulen.values()]
     .filter((e) => twinUrl(e.url) === e.url)
-    .map((e) => (e.alternates ? { ...e, alternates: withTwin(e.alternates) } : e));
+    .map((e) => (e.alternates ? { ...e, alternates: withTwin(e.alternates) } : e))
+    // Gerçek içerik tarihi (lib/lastmod.json, scripts/lastmod.mjs); kaydı olmayan yeni sayfada yukarıdaki tarih kalır
+    .map((e) => ({ ...e, lastModified: lastModDate(e.url, e.lastModified instanceof Date ? e.lastModified : new Date(e.lastModified ?? Date.now())) }));
 }

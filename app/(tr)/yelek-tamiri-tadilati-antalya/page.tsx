@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { lastMod } from '@/lib/lastmod';
 import { withTwin } from '@/lib/twin';
 import ReviewsBlock from '@/components/ReviewsBlock';
 import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
@@ -14,7 +15,7 @@ const WA_NUM    = '905318986418';
 const WA        = (m: string) => `https://wa.me/${WA_NUM}?text=${encodeURIComponent(m)}`;
 const WA_DEF    = WA("Merhaba, yelek tamiri/tadilatı için fiyat almak istiyorum. Fotoğrafı gönderiyorum.");
 const MAPS      = 'https://www.google.com/maps?cid=6436895271281342624';
-const TODAY     = '2026-11-03';
+const TODAY     = lastMod('/yelek-tamiri-tadilati-antalya', '2026-11-03');
 const FAQ: [string, string][] = [["Yelek tamiri ve tadilatı ne kadar?", "Yelek fiyatı türüne (takım yelek, kot, deri, şişme) ve işe göre değişir; fotoğrafı WhatsApp'tan gönderirseniz net fiyatı söyleriz."], ["Takım elbise yeleği daraltılır mı?", "Evet. Yelek beden ayarı sırt kemeri ve yan dikişlerden yapılır; kumaş ve astara göre fotoğraftan değerlendirilir."], ["Yelek boyu ve omuzu ayarlanır mı?", "Evet. Boy ve omuz/kol çukuru ölçünüze göre düzenlenir; ölçü yelek üzerinizdeyken işaretlenir."], ["Yelek fermuarı değişiyor mu?", "Evet. Kot, deri ve şişme yeleklerin fermuarı değiştirilir; fiyat fermuar boyuna ve yeleğe göre söylenir."], ["Deri veya kot yelek tadilatı yapılıyor mu?", "Evet. Deri ve kot yelek tadilatı yapılıyor; ayrıntı için deri ceket ve kot sayfalarımıza bakabilirsiniz."], ["Yelek tadilatı ne kadar sürer?", "Normal işler aynı gün, acil işler 1–2 saatte teslim edilir. Kapsamlı işlerde süreyi fotoğrafı görünce söyleriz."], ["Yeleği eve veya otele gelip alıyor musunuz?", "Evet. Konyaaltı, Muratpaşa ve çevresinde eve ve otele alım-teslim yapılır."]];
 
 export const metadata: Metadata = {

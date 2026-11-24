@@ -1,5 +1,6 @@
 // terzihizmeti.com.tr — konu sayfası (ES/FR/PL/UK/NL/AR): tamir-tadilat, özel dikim, keten-pamuk, tekstil üretimi. Veri: lib/intl-topics.ts.
 import Link from 'next/link';
+import { lastMod } from '@/lib/lastmod';
 import { PHONE, PHONE_TEL, MAPS, SITE } from '@/lib/seo-data';
 import { businessNode, OG_DEFAULT, waLink, TURIST_UPDATE } from '@/lib/turist-keten';
 import { INTL, iUrl, type ILang } from '@/lib/intl';
@@ -21,7 +22,7 @@ export function topicJsonLd(lang: ILang, t: TopicId | HizmetId, isHizmet = false
     '@context': 'https://schema.org',
     '@graph': [
       businessNode('en'),
-      { '@type': 'WebPage', '@id': `${url}#webpage`, url, name: c.title, description: c.desc, inLanguage: lang, dateModified: TURIST_UPDATE, about: { '@id': `${SITE}#business` },
+      { '@type': 'WebPage', '@id': `${url}#webpage`, url, name: c.title, description: c.desc, inLanguage: lang, dateModified: lastMod(url, TURIST_UPDATE), about: { '@id': `${SITE}#business` },
         primaryImageOfPage: { '@type': 'ImageObject', url: OG_DEFAULT }, isPartOf: { '@id': `${SITE}${iUrl(lang)}#webpage` } },
       ...(!isHizmet && t === 'tekstil' ? [{ '@type': 'Brand', '@id': `${SITE}#anavera`, name: 'Anavera Tekstil', description: 'Anavera Tekstil is the serial production and export sub-brand of Terzi Can (Antalya). No minimum order; worldwide shipping.', url: `${SITE}${ANAVERA_HOME('en')}`, logo: OG_DEFAULT }] : []),
       { '@type': 'Service', '@id': `${url}#service`, ...(!isHizmet && t === 'tekstil' ? { brand: { '@id': `${SITE}#anavera` } } : {}), name: c.h1, provider: { '@id': `${SITE}#business` }, areaServed: [{ '@type': 'Place', name: 'Antalya' }, { '@type': 'Place', name: 'Worldwide (shipping)' }], inLanguage: lang },

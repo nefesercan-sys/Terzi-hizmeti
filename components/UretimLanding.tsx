@@ -1,5 +1,6 @@
 // terzihizmeti.com.tr — Anavera Tekstil B2B sayfası (10 dil). Veri: lib/uretim*.ts. Sunucu bileşeni, stil inline.
 import Link from 'next/link';
+import { lastMod } from '@/lib/lastmod';
 import { PHONE, PHONE_TEL, MAPS, SITE } from '@/lib/seo-data';
 import { businessNode, OG_DEFAULT, waLink, TURIST_UPDATE } from '@/lib/turist-keten';
 import QuoteForm from '@/components/QuoteForm';
@@ -40,7 +41,7 @@ export function uJsonLd(lang: UL, id: UId) {
     '@context': 'https://schema.org',
     '@graph': [
       businessNode('en'),
-      { '@type': 'WebPage', '@id': `${url}#webpage`, url, name: c.title, description: c.desc, inLanguage: lang, dateModified: TURIST_UPDATE, about: { '@id': `${SITE}#business` }, primaryImageOfPage: { '@type': 'ImageObject', url: OG_DEFAULT } },
+      { '@type': 'WebPage', '@id': `${url}#webpage`, url, name: c.title, description: c.desc, inLanguage: lang, dateModified: lastMod(url, TURIST_UPDATE), about: { '@id': `${SITE}#business` }, primaryImageOfPage: { '@type': 'ImageObject', url: OG_DEFAULT } },
       { '@type': 'Brand', '@id': `${SITE}#anavera`, name: 'Anavera Tekstil', description: BRAND.en, url: `${SITE}${ANAVERA_HOME('en')}`, logo: OG_DEFAULT },
       { '@type': 'Service', '@id': `${url}#service`, brand: { '@id': `${SITE}#anavera` }, name: c.h1, provider: { '@id': `${SITE}#business` }, areaServed: [{ '@type': 'Place', name: 'Antalya' }, { '@type': 'Place', name: 'Europe' }, { '@type': 'Place', name: 'Worldwide (shipping)' }], inLanguage: lang },
       { '@type': 'FAQPage', '@id': `${url}#faq`, mainEntity: c.faq.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) },

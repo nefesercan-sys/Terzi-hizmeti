@@ -1,5 +1,6 @@
 // terzihizmeti.com.tr — Otel bölgesi derinlik sayfası (ES/FR/PL/UK/NL/AR). Veri: lib/intl-zones.ts. Sunucu bileşeni, stil inline.
 import Link from 'next/link';
+import { lastMod } from '@/lib/lastmod';
 import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
 import { HOTEL_NOTE, PAYMENT_NOTE } from '@/lib/facts';
 import { PHONE, PHONE_TEL, MAPS, SITE } from '@/lib/seo-data';
@@ -22,7 +23,7 @@ export function zoneJsonLd(lang: ILang, zone: ZoneSlug) {
       businessNode('en'),
       {
         '@type': 'WebPage', '@id': `${url}#webpage`, url, name: c.title(z.name), description: c.desc(z.name), inLanguage: lang,
-        dateModified: TURIST_UPDATE, about: { '@id': `${SITE}#business` }, primaryImageOfPage: { '@type': 'ImageObject', url: OG_DEFAULT },
+        dateModified: lastMod(url, TURIST_UPDATE), about: { '@id': `${SITE}#business` }, primaryImageOfPage: { '@type': 'ImageObject', url: OG_DEFAULT },
         isPartOf: { '@id': `${SITE}${iUrl(lang)}#webpage` },
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['#hero-h', '.hero-desc'] },
       },

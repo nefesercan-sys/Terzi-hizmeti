@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { lastMod } from '@/lib/lastmod';
 import { withTwin } from '@/lib/twin';
 import { notFound } from 'next/navigation';
 import { fitDesc } from '@/lib/meta-fit';
@@ -57,7 +58,7 @@ export default async function BlogYazisiSayfasi({ params }: { params: Promise<{ 
         description: y.ozet,
         image: `${SITE}${y.gorsel}`,
         datePublished: y.tarih,
-        dateModified: y.tarih,
+        dateModified: lastMod(url, y.tarih),
         inLanguage: 'tr',
         author: { '@type': 'Organization', name: 'Terzi Can', url: SITE },
         publisher: { '@type': 'Organization', name: 'Terzi Can', logo: { '@type': 'ImageObject', url: `${SITE}/apple-touch-icon.png` } },

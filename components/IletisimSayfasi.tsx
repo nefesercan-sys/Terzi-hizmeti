@@ -6,6 +6,7 @@
 // Siteye özgü ayarlar yalnızca aşağıdaki SITE_CFG bloğundadır.
 // ============================================================
 import { hreflangIletisim } from '@/lib/hreflang';
+import { lastMod } from '@/lib/lastmod';
 import { withTwin } from '@/lib/twin';
 import type { Metadata } from 'next';
 import { businessNode } from '@/lib/business';
@@ -273,7 +274,7 @@ function buildJsonLd(lang: Lang) {
       businessNode({ reviews: false }),
       {
         '@type': 'ContactPage', '@id': `${url}#webpage`, url, name: c.title, description: c.desc, inLanguage: lang,
-        dateModified: LAST_UPDATE,
+        dateModified: lastMod(url, LAST_UPDATE),
         mainEntity: { '@id': SITE_CFG.businessId },
         about: { '@id': SITE_CFG.businessId },
         breadcrumb: { '@id': `${url}#breadcrumb` },

@@ -15,6 +15,7 @@
 //  - Görseller örnek/stil görselidir (müşteri fotoğrafı gibi sunulmaz) — sayfada bu not yer alır.
 // ============================================================
 import type { Metadata } from 'next';
+import { lastMod } from '@/lib/lastmod';
 import { withTwin } from '@/lib/twin';
 import { businessNode as sharedBusinessNode } from '@/lib/business';
 import { SITE, PHONE_TEL, MAPS, abs } from '@/lib/seo-data';
@@ -749,7 +750,7 @@ const faqNode = (url: string, faq: [string, string][]) => ({
 const webPageNode = (lang: TLang, url: string, name: string, description: string, image: string) => ({
   '@type': 'WebPage', '@id': `${url}#webpage`, url, name, description, inLanguage: lang,
   about: { '@id': `${SITE}#business` }, primaryImageOfPage: { '@type': 'ImageObject', url: image },
-  dateModified: TURIST_UPDATE,
+  dateModified: lastMod(url, TURIST_UPDATE),
   speakable: { '@type': 'SpeakableSpecification', cssSelector: ['#hero-h', '.hero-desc'] },
 });
 

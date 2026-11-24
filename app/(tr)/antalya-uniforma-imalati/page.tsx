@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next';
+import { lastMod } from '@/lib/lastmod';
 import { withTwin } from '@/lib/twin';
 import ReviewsBlock from '@/components/ReviewsBlock';
 import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
@@ -17,7 +18,7 @@ const SITE_URL      = 'https://terzihizmeti.com.tr/antalya-uniforma-imalati';
 const HOME_URL      = 'https://terzihizmeti.com.tr';
 const PHONE         = '+90 531 898 64 18';
 const PHONE_E164    = '+905318986418';
-const LAST_MODIFIED = '2026-10-01';
+const LAST_MODIFIED = lastMod('/antalya-uniforma-imalati', '2026-10-01');
 
 const PAGE_TITLE = 'Antalya Üniforma İmalatı ve Kurumsal Kıyafet';
 const PAGE_DESC  =

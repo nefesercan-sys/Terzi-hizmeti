@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { lastMod } from '@/lib/lastmod';
 import { withTwin } from '@/lib/twin';
 import { INTL_ALT } from '@/lib/intl';
 import { DELIVERY } from '@/lib/delivery';
@@ -18,7 +19,7 @@ const WA        = (m: string) => `https://wa.me/${WA_NUM}?text=${encodeURICompon
 const WA_DEF    = WA('Merhaba, terzi ve tekstil atölyesi hizmetleriniz hakkında bilgi almak istiyorum.');
 const MAPS      = 'https://www.google.com/maps?cid=6436895271281342624';
 const BIZ       = 'TERZİ Can Antalya Tailor Service';
-const TODAY     = '2026-10-04';
+const TODAY     = lastMod('/antalya-terzi', '2026-10-04');
 const OG        = `${SITE}/antalya-terzi-can-dikim-tamir-tadilat.jpg`;
 
 export const metadata: Metadata = {

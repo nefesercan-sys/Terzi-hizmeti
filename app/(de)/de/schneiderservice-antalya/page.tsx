@@ -4,6 +4,7 @@
 // Almanca "genel terzi" sayfası fiilen yoktu. Artık EN/RU karşılıklarına denk, kendi
 // içeriği ve kendi canonical'ı olan gerçek bir Almanca ana hizmet sayfası.
 import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
+import { lastMod } from '@/lib/lastmod';
 import { withTwin } from '@/lib/twin';
 import type { Metadata } from 'next';
 import { DELIVERY } from '@/lib/delivery';
@@ -25,7 +26,7 @@ const WA        = (m: string) => `https://wa.me/905318986418?text=${encodeURICom
 const WA_DEF    = WA('Hallo, ich möchte ein Foto meines Kleidungsstücks senden und einen Preis erfahren.');
 const WA_HOTEL  = WA('Hallo, ich möchte einen Schneider in mein Hotel in Antalya bestellen. Hotelname und Standort sende ich Ihnen.');
 const MAPS      = 'https://www.google.com/maps?cid=6436895271281342624';
-const LAST_MOD  = '2026-10-04';
+const LAST_MOD  = lastMod('/de/schneiderservice-antalya', '2026-10-04');
 const OG        = `${SITE}/antalya-terzi-can-dikim-tamir-tadilat.jpg`;
 
 export const metadata: Metadata = {

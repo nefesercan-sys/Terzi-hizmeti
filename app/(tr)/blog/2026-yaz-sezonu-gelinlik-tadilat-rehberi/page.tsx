@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { lastMod } from '@/lib/lastmod';
 import { withTwin } from '@/lib/twin';
 import { fitDesc } from '@/lib/meta-fit';
 
@@ -9,7 +10,7 @@ const PHONE_TEL = '+905318986418';
 const WA        = 'https://wa.me/905318986418?text=' + encodeURIComponent('Merhaba, gelinlik tadilatı için randevu almak istiyorum.');
 const OG        = `${SITE}/antalya-terzi-can-dikim-tamir-tadilat.jpg`;
 const PUBLISHED = '2026-08-01';
-const MODIFIED  = '2026-08-01';
+const MODIFIED  = lastMod('/blog/2026-yaz-sezonu-gelinlik-tadilat-rehberi', '2026-08-01');
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),

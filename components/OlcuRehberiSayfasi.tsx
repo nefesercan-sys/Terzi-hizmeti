@@ -1,5 +1,6 @@
 // terzihizmeti.com.tr — "Evde ölçü nasıl alınır?" rehberi, 10 dilde tek sayfa. Veri: lib/olcu-rehberi.ts
 import Link from 'next/link';
+import { lastMod } from '@/lib/lastmod';
 import { withTwin } from '@/lib/twin';
 import type { Metadata } from 'next';
 import { PHONE, PHONE_TEL, MAPS, SITE } from '@/lib/seo-data';
@@ -30,7 +31,7 @@ export function olcuJsonLd(lang: GLang) {
     '@context': 'https://schema.org',
     '@graph': [
       businessNode('en'),
-      { '@type': 'WebPage', '@id': `${url}#webpage`, url, name: c.title, description: c.desc, inLanguage: lang, speakable: { '@type': 'SpeakableSpecification', cssSelector: ['#kisa-cevap', 'h1'] }, dateModified: OLCU_UPDATED, about: { '@id': `${SITE}#business` }, primaryImageOfPage: { '@type': 'ImageObject', url: OG_DEFAULT } },
+      { '@type': 'WebPage', '@id': `${url}#webpage`, url, name: c.title, description: c.desc, inLanguage: lang, speakable: { '@type': 'SpeakableSpecification', cssSelector: ['#kisa-cevap', 'h1'] }, dateModified: lastMod(url, OLCU_UPDATED), about: { '@id': `${SITE}#business` }, primaryImageOfPage: { '@type': 'ImageObject', url: OG_DEFAULT } },
       // HowTo: adımlar sayfada görünür tabloda ve listelerde aynen yer alır.
       { '@type': 'HowTo', '@id': `${url}#howto`, name: c.h1, description: c.lead, inLanguage: lang,
         tool: c.tools.slice(0, 2).map((t) => ({ '@type': 'HowToTool', name: t })),

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { lastMod } from '@/lib/lastmod';
 import { withTwin } from '@/lib/twin';
 import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
 import { businessNode } from '@/lib/turist-keten';
@@ -19,7 +20,7 @@ const WA_NUM    = '905318986418';
 const WA        = (m: string) => `https://wa.me/${WA_NUM}?text=${encodeURIComponent(m)}`;
 const WA_DEF    = WA('Hello, I would like a mobile tailor to come to my hotel/address. My location: ');
 const MAPS      = 'https://www.google.com/maps?cid=6436895271281342624';
-const LAST_MOD  = '2026-10-30';
+const LAST_MOD  = lastMod('/en/tailor-service-antalya', '2026-10-30');
 const OG        = `${SITE}/antalya-terzi-can-dikim-tamir-tadilat.jpg`;
 
 export const metadata: Metadata = {

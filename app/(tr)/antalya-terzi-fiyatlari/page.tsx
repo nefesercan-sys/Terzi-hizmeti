@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { lastMod } from '@/lib/lastmod';
 import { withTwin } from '@/lib/twin';
 import { fitKeywords } from '@/lib/meta-fit';
 import { hreflangFiyat } from '@/lib/hreflang';
@@ -18,7 +19,7 @@ const WA_NUM    = '905318986418';
 const WA        = (m: string) => `https://wa.me/${WA_NUM}?text=${encodeURIComponent(m)}`;
 const WA_DEF    = WA('Merhaba, yaptırmak istediğim işin fotoğrafını gönderiyorum, fiyat ve süre öğrenmek istiyorum.');
 const MAPS      = 'https://www.google.com/maps?cid=6436895271281342624';
-const TODAY     = '2026-10-04';
+const TODAY     = lastMod('/antalya-terzi-fiyatlari', '2026-10-04');
 const OG        = `${SITE}/antalya-terzi-can-dikim-tamir-tadilat.jpg`;
 
 export const metadata: Metadata = {

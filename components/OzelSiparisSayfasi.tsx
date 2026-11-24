@@ -1,5 +1,6 @@
 // terzihizmeti.com.tr — "Siparişe özel dikim, yurt dışına kargo" sayfası, 10 dilde tek sayfa. Veri: lib/ozel-siparis.ts
 import Link from 'next/link';
+import { lastMod } from '@/lib/lastmod';
 import { withTwin } from '@/lib/twin';
 import type { Metadata } from 'next';
 import { PHONE, PHONE_TEL, MAPS, SITE } from '@/lib/seo-data';
@@ -37,7 +38,7 @@ export function ozelJsonLd(lang: OLang) {
     '@context': 'https://schema.org',
     '@graph': [
       businessNode('en'),
-      { '@type': 'WebPage', '@id': `${url}#webpage`, url, name: c.title, description: c.desc, inLanguage: lang, speakable: { '@type': 'SpeakableSpecification', cssSelector: ['#kisa-cevap', 'h1'] }, dateModified: OZEL_UPDATED, about: { '@id': `${SITE}#business` }, primaryImageOfPage: { '@type': 'ImageObject', url: OG_DEFAULT } },
+      { '@type': 'WebPage', '@id': `${url}#webpage`, url, name: c.title, description: c.desc, inLanguage: lang, speakable: { '@type': 'SpeakableSpecification', cssSelector: ['#kisa-cevap', 'h1'] }, dateModified: lastMod(url, OZEL_UPDATED), about: { '@id': `${SITE}#business` }, primaryImageOfPage: { '@type': 'ImageObject', url: OG_DEFAULT } },
       { '@type': 'Service', '@id': `${url}#service`, name: c.h1, serviceType: 'Made-to-order clothing', description: c.lead, provider: { '@id': `${SITE}#business` }, areaServed: [{ '@type': 'Place', name: 'Antalya' }, { '@type': 'Place', name: 'Abroad' }], inLanguage: lang,
         availableChannel: [{ '@type': 'ServiceChannel', name: 'WhatsApp', serviceUrl: waLink(c.wa), servicePhone: { '@type': 'ContactPoint', telephone: PHONE_TEL, contactType: 'customer service' }, availableLanguage: ['Turkish', 'English', 'Russian', 'German', 'Polish', 'Ukrainian', 'Dutch', 'French', 'Spanish', 'Arabic'] }] },
       { '@type': 'FAQPage', '@id': `${url}#faq`, mainEntity: c.faq.map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })) },

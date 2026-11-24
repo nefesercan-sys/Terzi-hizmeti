@@ -3,6 +3,7 @@ import Link from 'next/link';
 import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
 import { PHONE, PHONE_TEL, MAPS, SITE } from '@/lib/seo-data';
 import { ILANGS, INTL, NB, NB_DISTRICT, ZONES, iUrl, type ILang } from '@/lib/intl';
+import { OLCU, olcuUrl } from '@/lib/olcu-rehberi';
 import { SVC, svcUrl } from '@/lib/intl-services';
 import { FIYAT, fiyatUrl } from '@/lib/intl-fiyat';
 import { ILETISIM, iletisimUrl } from '@/lib/intl-iletisim';
@@ -110,6 +111,7 @@ export default function IntlLanding({ lang }: { lang: ILang }) {
         </ul>
         <p style={{ margin: '.8rem 0 0', color: C.muted, fontSize: '.92rem' }}>{PRICE_T[lang].note}</p>
         <p style={{ margin: '.5rem 0 0', fontSize: '.92rem' }}><Link href={fiyatUrl(lang)} style={{ color: C.green }}>{FIYAT[lang].h1}</Link></p>
+        <p style={{ margin: '.5rem 0 0', fontSize: '.92rem' }}><Link href={olcuUrl(lang)} style={{ color: C.green }}>{OLCU[lang].h1}</Link></p>
       </Block>
 
       <Block><H2>{c.faqTitle}</H2>

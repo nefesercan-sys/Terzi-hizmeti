@@ -5,6 +5,7 @@
 // Veri: lib/seo-data.ts. Sadece doğrulanmış bilgi kullanılır (bkz. dosya başlığı).
 // ============================================================
 import { sixForService } from '@/lib/intl-hizmet';
+import { lastMod } from '@/lib/lastmod';
 import { withTwin } from '@/lib/twin';
 import { sixAlt } from '@/lib/intl-topics';
 import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
@@ -542,7 +543,7 @@ export function DistrictPage({ lang, d }: { lang: Lang; d: District }) {
       {
         '@type': 'WebPage', '@id': `${url}#webpage`, url, name: c.title, description: c.desc, inLanguage: lang,
         isPartOf: { '@id': `${SITE}#website` }, about: { '@id': `${SITE}#business` },
-        breadcrumb: { '@id': `${url}#breadcrumb` }, dateModified: LAST_UPDATE,
+        breadcrumb: { '@id': `${url}#breadcrumb` }, dateModified: lastMod(url, LAST_UPDATE),
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['#hero-h', '.hero-desc'] },
       },
       {
@@ -742,7 +743,7 @@ export function ServicePage({ lang, s }: { lang: Lang; s: Service }) {
       {
         '@type': 'WebPage', '@id': `${url}#webpage`, url, name: c.title, description: c.desc, inLanguage: lang,
         isPartOf: { '@id': `${SITE}#website` }, about: { '@id': `${SITE}#business` },
-        breadcrumb: { '@id': `${url}#breadcrumb` }, dateModified: LAST_UPDATE,
+        breadcrumb: { '@id': `${url}#breadcrumb` }, dateModified: lastMod(url, LAST_UPDATE),
         speakable: { '@type': 'SpeakableSpecification', cssSelector: ['#hero-h', '.hero-desc'] },
       },
       {
@@ -841,7 +842,7 @@ export function HubPage({ lang }: { lang: Lang }) {
       businessNode(lang),
       {
         '@type': 'CollectionPage', '@id': `${url}#webpage`, url, name: title, description: desc, inLanguage: lang,
-        isPartOf: { '@id': `${SITE}#website` }, about: { '@id': `${SITE}#business` }, dateModified: LAST_UPDATE,
+        isPartOf: { '@id': `${SITE}#website` }, about: { '@id': `${SITE}#business` }, dateModified: lastMod(url, LAST_UPDATE),
         mainEntity: { '@type': 'ItemList', itemListElement: SERVICES.map((s, i) => ({ '@type': 'ListItem', position: i + 1, name: s.name[lang], url: abs(serviceUrl(lang, s)) })) },
         breadcrumb: { '@id': `${url}#breadcrumb` },
       },

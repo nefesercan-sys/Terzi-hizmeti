@@ -27,7 +27,7 @@ import {
   isTrNear, isIndexable, TR_NEAR_SLUGS, trExtraKeywords, isFreeService,
 } from '@/lib/seo-data';
 import { isFar, FAR_TAG, farDesc } from '@/lib/uzak-bolge';
-import { areaKwDesc, serviceKwDesc } from '@/lib/kw-desc';
+import { serviceKwDesc, areaJobsDesc, trAreaJobsDesc } from '@/lib/kw-desc';
 import { angleFor, angleTitles, angleDescs, angleKeywords } from '@/lib/seo-angles';
 import { fgNearDistrict, fgServiceMeta, eurFromText, EUR_FROM } from '@/lib/fg-meta';
 import { trNearDistrict } from '@/lib/tr-meta';
@@ -131,7 +131,8 @@ function sortD(lang: Lang, list: District[]): District[] {
 function districtCopy(lang: Lang, d: District) {
   const r = _districtCopy(lang, d);
   if (isFar(d.slug)) return { ...r, desc: farDesc(lang, d.name[lang]) };
-  return lang === 'tr' ? r : { ...r, desc: areaKwDesc(lang, d.name[lang], 'a', r.desc) };
+  // Açıklama başlıktaki işleri tekrar eder (lib/kw-desc.ts); başlık değişmez.
+  return lang === 'tr' ? { ...r, desc: trAreaJobsDesc(d.loc.tr, r.title, 'a', r.desc) } : { ...r, desc: areaJobsDesc(lang, d.name[lang], r.title, 'a', r.desc) };
 }
 function _districtCopy(lang: Lang, d: District) {
   const n = d.name[lang];

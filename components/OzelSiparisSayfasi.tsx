@@ -1,5 +1,6 @@
 // terzihizmeti.com.tr — "Siparişe özel dikim, yurt dışına kargo" sayfası, 10 dilde tek sayfa. Veri: lib/ozel-siparis.ts
 import Link from 'next/link';
+import { fitDesc } from '@/lib/meta-fit';
 import { lastMod } from '@/lib/lastmod';
 import { withTwin } from '@/lib/twin';
 import type { Metadata } from 'next';
@@ -23,7 +24,7 @@ const LINK_TEXT: Record<OLang, [string, string]> = {
 export function ozelMetadata(lang: OLang): Metadata {
   const c = OZEL[lang]; const url = `${SITE}${ozelUrl(lang)}`;
   return {
-    metadataBase: new URL(SITE), title: { absolute: c.title }, description: c.desc,
+    metadataBase: new URL(SITE), title: { absolute: c.title }, description: fitDesc(c.desc),
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
     alternates: withTwin({ canonical: url, languages: ozelLanguages() }),
     openGraph: { title: c.h1, description: c.desc, url, siteName: 'Terzi Can', locale: c.locale, type: 'website', images: [{ url: OG_DEFAULT, width: 1200, height: 630, alt: c.h1 }] },

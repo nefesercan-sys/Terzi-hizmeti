@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Terzi Can Antalya · Konyaaltı Terzi, 2006'dan Beri" },
   description:
-    "2006'dan beri Konyaaltı Hurma, Liman, Uncalı, Gürsu'da bay bayan terzi: tamir, tadilat, özel dikim. Paça 200 TL'den, fermuar 300 TL'den (KDV dahil). Her gün 08:00–23:00.",
+    "Konyaaltı Hurma'da 2006'dan beri terzi: tamir, tadilat, özel dikim. Paça ₺200'den, fermuar ₺300'den (KDV dahil), aynı gün. Her gün 08:00–23:00.",
   keywords: ['Antalya terzi', 'Konyaaltı terzi', 'otele gelen terzi Antalya', 'acil terzi Antalya', 'paça kısaltma Konyaaltı', 'fermuar değişimi Antalya', 'gelinlik tadilatı Antalya', 'özel dikim Antalya'],
   authors: [{ name: BIZ, url: SITE }],
   creator: BIZ,

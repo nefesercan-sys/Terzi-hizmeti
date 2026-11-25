@@ -54,7 +54,7 @@ const GUIDE: [string, string][] = [
   ["Etek ucunun orijinal görünümü", "Kot eteklerde etek ucu çoğunlukla kalın bir dikiş ve çoğu zaman sökük bir saçak ya da kıvrımla biter. Kısaltırken bu detayı korumak mümkünse etek ucunun yakın fotoğrafını bekleriz. Detay yoksa sade kıvırma dikişiyle bitiririz. Hangisinin uygun olduğunu fotoğrafa göre söyleriz."],
   ["Yırtmaç, cep ve fermuarlı etekler", "Yırtmaçlı bir kot eteği kısaltırken yırtmaç boyu da yeni boya göre ayarlanır, aksi halde yırtmaç eteğin ucuna kadar çıkmaz ya da fazla yüksek kalır. Ön ya da yan fermuarlı eteklerde bel daraltırken fermuar yeri değişmez. Fermuar bozulduysa değişimi de aynı işlemde yapılabilir; fermuar değişimi fiyatı ₺300'den başlar."],
   ["Bel ve kalça daraltma", "Kot etekte bel bolsa arka ortadan ya da yan dikişlerden pay alınır. Kalça ve oturma yeri bol ise yan dikişler birlikte ayarlanır. Büyük eteği çok küçültmek kalıbı bozabilir, bu yüzden en fazla ne kadar daraltılabileceğini fotoğraf ve ölçüye bakarak söyleriz."],
-  ["Fiyat ve teslim", "Kot etek boy kısaltma, bel ve kalça daraltma ₺200'den başlar; net fiyat fotoğrafa göre söylenir. Normal işler aynı gün, acil işler 1–2 saatte teslim edilir. Fiyatlara KDV dahil değildir. Eve ve otele alım-teslim yapılır."],
+  ["Fiyat ve teslim", "Kot etek boy kısaltma, bel ve kalça daraltma ₺200'den başlar; net fiyat fotoğrafa göre söylenir. Normal işler aynı gün, acil işler 1–2 saatte teslim edilir. Fiyatlara KDV dahildir. Eve ve otele alım-teslim yapılır."],
 ];
 
 const jsonLd = {
@@ -178,7 +178,7 @@ export default function Page() {
               </div>
             </div>
             <p style={{ fontSize: '.76rem', color: 'rgba(255,255,255,.4)', marginTop: '1.4rem', fontStyle: 'italic' }}>
-              * Fiyatlar başlangıç fiyatıdır; yırtmaç, astar ve kalıp yapısına göre değişebilir. KDV dahil değildir.
+              * Fiyatlar başlangıç fiyatıdır; yırtmaç, astar ve kalıp yapısına göre değişebilir. KDV dahildir.
             </p>
           </div>
         </section>

@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: 'Änderungsschneiderei Antalya: Hose kürzen, Reparatur' },
   description:
-    'Änderungsschneiderei in Antalya (Konyaaltı): Hose kürzen ab ₺200 (~€10), Reißverschluss ab ₺300. Hotelservice mit Abholung, meist am selben Tag.',
+    'Änderungsschneiderei in Antalya (Konyaaltı): Hose kürzen ab ₺200 (~€4), Reißverschluss ab ₺300. Hotelservice mit Abholung, meist am selben Tag.',
   keywords: ['Änderungsschneiderei Antalya', 'Schneiderei Antalya', 'Schneider Antalya', 'Schneider Hotel Antalya', 'Kleidung ändern Antalya eilig', 'Schneider Konyaaltı', 'Hose kürzen Antalya', 'Reißverschluss wechseln Antalya', 'Maßanfertigung Antalya'],
   alternates: withTwin({
     canonical: PAGE_URL,
@@ -50,9 +50,9 @@ export const metadata: Metadata = {
 
 const SERVICES: { title: string; desc: string; rows: [string, string][] }[] = [
   { title: 'Änderungen', desc: 'Passform-Anpassungen, damit Kleidung genau sitzt.',
-    rows: [['Hose kürzen', 'ab ₺200 (~€10)'], ['Taille enger machen', 'ab ₺200 (~€10)'], ['Ärmel kürzen', 'ab ₺200 (~€10)'], ['Kleid / Jacke anpassen', 'nach Foto'], ['Brautkleid und Abendkleid (nur Änderung)', 'nach Foto']] },
+    rows: [['Hose kürzen', 'ab ₺200 (~€4)'], ['Taille enger machen', 'ab ₺200 (~€4)'], ['Ärmel kürzen', 'ab ₺200 (~€4)'], ['Kleid / Jacke anpassen', 'nach Foto'], ['Brautkleid und Abendkleid (nur Änderung)', 'nach Foto']] },
   { title: 'Reparatur', desc: 'Reißverschluss und Risse.',
-    rows: [['Reißverschluss (Hose)', 'ab ₺300 (~€15)'], ['Reißverschluss (Mantel, Jacke, Leder)', 'ab ₺300 (~€15)']] },
+    rows: [['Reißverschluss (Hose)', 'ab ₺300 (~€5)'], ['Reißverschluss (Mantel, Jacke, Leder)', 'ab ₺300 (~€5)']] },
   { title: 'Maßanfertigung', desc: 'Kleidung nach Ihren Maßen, auch aus Leinen und Baumwolle.',
     rows: [['Herrenhose', 'nach Foto'], ['Damenkleid', 'nach Foto'], ['Abendkleid', 'nach Foto'], ['Kinderkleidung', 'nach Foto']] },
 ];
@@ -76,7 +76,7 @@ const FAQS: [string, string][] = [
   ['Wie schnell ist eine Änderung fertig?', 'Viele Reparaturen und das Kürzen von Hosen sind am selben Tag, eilig in 1–2 Stunden fertig. Die genaue Zeit hängt von Arbeit und Auslastung ab und wird per WhatsApp bestätigt.'],
   ['Können Sie ein Brautkleid oder Abendkleid ändern?', 'Ja. Brautkleid- und Abendkleid-Änderungen sind möglich; der Preis hängt vom Aufwand ab. Senden Sie am besten vorab Fotos.'],
   ['Wo kann ich in Antalya in meiner Nähe eine Hose kürzen lassen?', 'Bei Terzi Can in Hurma, Konyaaltı, täglich von 08:00 bis 23:00 geöffnet. Hosen und Jeans kürzen, meist am selben Tag, eilig in 1–2 Stunden. WhatsApp: ' + PHONE],
-  ['Was kostet Kürzen und Reißverschluss wechseln in Antalya?', 'Kürzen und Taille enger machen ab ₺200 (ca. 10 €), Reißverschluss wechseln ab ₺300 (ca. 15 €, für Mäntel, Jacken und Leder ca. 15 €). Preise ohne MwSt. Maßanfertigung sowie Abend- und Brautkleid-Änderungen nennen wir nach einem Foto per WhatsApp.'],
+  ['Was kostet Kürzen und Reißverschluss wechseln in Antalya?', 'Kürzen und Taille enger machen ab ₺200 (ca. 4 €), Reißverschluss wechseln ab ₺300 (ca. 5 €, für Mäntel, Jacken und Leder ca. 5 €). Preise inkl. MwSt. Maßanfertigung sowie Abend- und Brautkleid-Änderungen nennen wir nach einem Foto per WhatsApp.'],
   ['Ändern Sie auch Jacken, Mäntel, Hemden, Röcke und Shorts?', 'Ja. Wir ändern und reparieren Jacken, Mäntel, Hemden, Röcke, Shorts, Kleider und Hosen für Damen und Herren. Senden Sie ein Foto per WhatsApp, wir nennen Preis und Dauer.'],
   ['Ich bin nur wenige Tage im Hotel. Reicht die Zeit?', 'Ja. Kürzen und Reparaturen sind am selben Tag oder am selben Tag fertig. Wir holen die Kleidung im Hotel ab und bringen sie zurück (für Hotels möglich).'],
   ['Haben Sie am Wochenende geöffnet?', 'Ja, die Werkstatt ist an sieben Tagen in der Woche geöffnet. Die aktuellen Zeiten stehen bei Google Maps.'],
@@ -142,7 +142,7 @@ export default function SchneiderserviceAntalya() {
 
         <section style={{ ...wrap, padding: '2.5rem 1.25rem 0' }}>
           <h2 style={{ fontSize: '1.5rem', fontWeight: 800, margin: '0 0 1rem' }}>Leistungen</h2>
-          <p style={{ margin: '0 0 1.2rem', opacity: .8, fontSize: '.92rem' }}>Preise sind „ab“-Preise ohne MwSt. Der genaue Preis hängt von Stoff und Aufwand ab; wir nennen ihn per WhatsApp anhand eines Fotos.</p>
+          <p style={{ margin: '0 0 1.2rem', opacity: .8, fontSize: '.92rem' }}>Preise sind „ab“-Preise inkl. MwSt. Der genaue Preis hängt von Stoff und Aufwand ab; wir nennen ihn per WhatsApp anhand eines Fotos.</p>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(240px,1fr))', gap: '1rem' }}>
             {SERVICES.map((s) => (
               <div key={s.title} style={card}>

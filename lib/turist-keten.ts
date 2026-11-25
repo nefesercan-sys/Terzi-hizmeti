@@ -667,7 +667,7 @@ export const EXPRESS_COPY: L3<ExpressCopy> = {
   },
   de: {
     title: 'Kleidung ändern in Antalya: Hose kürzen im Urlaub',
-    desc: 'Kleidung passt nicht? Kürzen ab ₺200 (~€10), Taille, Ärmel, Reißverschluss ab ₺300. Meist am selben Tag, eilig 1–2 Stunden. Hotelabholung in Antalya. Terzi Can.',
+    desc: 'Kleidung passt nicht? Kürzen ab ₺200 (~€4), Taille, Ärmel, Reißverschluss ab ₺300. Meist am selben Tag, eilig 1–2 Stunden. Hotelabholung in Antalya. Terzi Can.',
     keywords: ['Kleidung ändern Antalya Urlaub', 'Schneider Antalya dringend', 'Änderungsschneiderei Antalya Touristen', 'Hose kürzen Antalya Urlaub', 'Taille enger machen Antalya', 'Schneider Hotel Antalya Abholung', 'Kleid ändern Antalya eilig', 'Schneider Konyaaltı'],
     h1: 'Kleidung ändern im Urlaub in Antalya',
     lead: 'Im Urlaub in Antalya eingekauft und etwas passt nicht? Terzi Can kürzt Säume, macht Taillen und Seiten enger, ändert Ärmel und repariert Reißverschlüsse. Die meisten Aufträge sind am selben Tag fertig; in dringenden Fällen in 1–2 Stunden. Auf Wunsch holen wir die Kleidung im Hotel ab und liefern sie zurück.',
@@ -838,7 +838,7 @@ export function expressJsonLd(lang: TLang) {
         provider: { '@id': `${SITE}#business` },
         areaServed: { '@type': 'AdministrativeArea', name: 'Antalya' },
         description: c.lead,
-        offers: { '@type': 'Offer', url, priceCurrency: 'EUR', priceSpecification: { '@type': 'PriceSpecification', minPrice: 10, priceCurrency: 'EUR' } },
+        offers: { '@type': 'Offer', url, priceCurrency: 'EUR', priceSpecification: { '@type': 'PriceSpecification', minPrice: 4, priceCurrency: 'EUR' } },
         availableChannel: { '@type': 'ServiceChannel', serviceUrl: url, servicePhone: PHONE_TEL },
       },
       faqNode(url, c.faq),

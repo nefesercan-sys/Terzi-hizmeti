@@ -7,8 +7,8 @@ Güven notu: Rakamlar haber/ihracatçı birliği/blog kaynaklarından; "(doğrul
 - TCMB kuru (bigpara, 30 Ekim 2026 güncellemesi): USD/TRY ≈ 49,86 ; EUR/TRY ≈ 55,82. (Sayfadaki tarih alanı tutarsızdı; yaklaşık değer.)
 - TCMB politika faizi: 22 Ekim 2026'da %37 → %36 (100 baz puan indirim). Mart–Eylül arası %37'de sabit kalmıştı. Karar metni: enflasyonun alttaki seyri düşüyor, enerji fiyatları risk.
 - TÜFE yıllık: Ağustos 2026 %31,51 (Toko blog, doğrulanmadı).
-- ✅ SAHİP KARARI (1 Kasım 2026): € fiyatlar OLDUĞU GİBİ KALACAK. Turist ve yerli için bilinçli olarak farklı fiyat politikası var; € fiyatları gerçek kura çevirme, "tutarsız" diye düzeltme. (Aşağıdaki hesap sadece bilgi.)
-- Bilgi (karar verildi, değiştirme): Sitelerde yabancı dil sayfalarındaki € fiyatlar "₺20 = €1" varsayımıyla yazıldı (tadilat €10, fermuar €15/20, elbise €40, etek-pantolon-çocuk €50, damatlık €1000). Gerçek kurla (≈₺56/€) ₺200 ≈ €3,6; ₺20.000 ≈ €358. Yani € fiyatlar TL fiyatın yaklaşık 2,8 katı. Bu bilinçli bir "turist fiyatı" ise tamam, değilse tutarsızlık. Sahibin kararı.
+- ✅ SAHİP KARARI (25 Kasım 2026, 1 Kasım kararının yerine): € fiyatlar TL fiyatlarla EŞİT olacak; kur 1 € = 56 TL, tam euroya yuvarlanır: tadilat ₺200 = €4, fermuar ₺300 = €5 (mont/ceket/deri fermuarı dahil), deri ₺400 = €7. Tek kaynak: lib/facts.ts TRY_PER_EUR. Kur değişirse yalnız orayı ve metinlerdeki € tutarlarını güncelleyin.
+- Eski durum (25 Kasım 2026'ya kadar): yabancı dil sayfalarında € fiyatlar '₺20 = €1' varsayımıyla yazılmıştı (tadilat €10, fermuar €15, deri €20); bu turist fiyatı kaldırıldı.
 - Enflasyon %30+ olduğundan ₺ "den başlar" fiyatları 3-6 ayda eskir; periyodik gözden geçir.
 
 ## 2. Antalya: ziyaretçi sayıları ve davranış
@@ -55,7 +55,7 @@ Aktiviteler: plaj (Konyaaltı, Lara), tarihi (Kaleiçi, Perge, Aspendos, Myra, O
 ## 6. Sitelerde dikkat edilecek kurallar (sahip kararları, Kasım 2026)
 - Ev ve otele alım-teslim her bölgede ücretsiz (tek genel kural). 08:00–23:00, her gün. WhatsApp +90 531 898 64 18.
 - Hizmet YOK: gelinlik dikimi (sadece tadilat), düğme ve astar hizmeti, kuru temizleme/ütü/çamaşır (şimdilik), ilan/pazar/bal (gizli).
-- Hizmet var: tadilat (paça/bel/kol/boy kısaltma-daraltma ₺200'den = €10; fermuar ₺300'den: pantolon/standart €15, mont/ceket/deri fermuarı €20; deri ceket/pantolon/yelek ₺400'den = €20; kot ~₺200'den), abiye-gelinlik TADİLATI: SABİT FİYAT YOK, 'fotoğrafa veya işin detayına göre' (sahip kararı, Kasım 2026); süre: aynı gün veya duruma göre 1–2 gün; KDV dahil değil; tüm para birimleriyle ödeme (nakit/kart); otellerle ortaklık yok, tüm otellere hizmet; 20 yıl deneyim (2006'dan beri), seri üretim (Anavera Tekstil, alt marka; minimum adet yok; dünyaya gönderim).
+- Hizmet var: tadilat (paça/bel/kol/boy kısaltma-daraltma ₺200'den = €4; fermuar ₺300'den = €5 (pantolon/standart ve mont/ceket/deri fermuarı); deri ceket/pantolon/yelek ₺400'den = €7; kot ~₺200'den), abiye-gelinlik TADİLATI: SABİT FİYAT YOK, 'fotoğrafa veya işin detayına göre' (sahip kararı, Kasım 2026); süre: aynı gün veya duruma göre 1–2 gün; fiyatlara KDV DAHİLDİR (sahip kararı, 25 Kasım 2026); tüm para birimleriyle ödeme (nakit/kart); otellerle ortaklık yok, tüm otellere hizmet; 20 yıl deneyim (2006'dan beri), seri üretim (Anavera Tekstil, alt marka; minimum adet yok; dünyaya gönderim).
 - DİKİM işlerinde (elbise, abiye, etek, pantolon, çocuk, damatlık/takım, özel dikim, yelek/tulum/bluz/eşofman dikimi) SABİT FİYAT YAZILMAZ: "fotoğrafa ve istediğiniz modele göre" (EN: by photo and the model you want; RU: по фото и желаемой модели; DE: nach Foto und gewünschtem Modell). Tek kaynak: lib/facts.ts BY_PHOTO_MODEL. Eski ₺800/₺1000/₺20.000 ve €40/€50/€1000 dikim fiyatları KALDIRILDI.
 - Teslim: acil 1–2 saat, normal işler aynı gün (işin durumuna göre), özel dikim modele/adede göre. "Ertesi gün / 24–48 saat / dakika / km" yazılmaz. Süre cümleleri lib/delivery.ts'ten.
 - Açık sorular: ana dil dışı 6 dilin yerel okuması, Rusya tekstil verisi.

@@ -22,10 +22,10 @@ export function districtAnswer(lang: Lang, d: District): string {
   if (v === 2) {
     // Yakınımdaki terzi / near me kalıbı + başlangıç fiyatları (sesli ve yapay zeka sorguları için)
     const near = {
-      tr: `${loc} yakınımdaki terzi mi arıyorsunuz? Terzi Can ${loc} paça, bel, kol ve boy kısaltma-daraltmayı ₺200'den, fermuar değişimini ₺300'den başlayan fiyatla yapar; fiyatlara KDV dahil değildir. Fotoğrafı WhatsApp'tan (${PHONE}) gönderin. ${D.urgent} ${D.normal} ${HOTEL_FREE.tr}`,
-      en: `Looking for a tailor near me ${loc}? Terzi Can does hemming, waist, sleeve and length alterations from ₺200 and zipper replacement from ₺300 (prices exclude VAT). Send a photo on WhatsApp (${PHONE}). ${D.urgent} ${D.normal} ${HOTEL_FREE.en}`,
-      ru: `Ищете портного рядом ${loc}? Terzi Can: подшить, ушить в талии и по рукаву — от ₺200, замена молнии — от ₺300 (цены без НДС). Пришлите фото в WhatsApp (${PHONE}). ${D.urgent} ${D.normal} ${HOTEL_FREE.ru}`,
-      de: `Schneider in der Nähe ${loc}? Terzi Can kürzt und ändert (Saum, Taille, Ärmel, Länge) ab ₺200, Reißverschlusswechsel ab ₺300 (zzgl. MwSt.). Foto per WhatsApp senden (${PHONE}). ${D.urgent} ${D.normal} ${HOTEL_FREE.de}`,
+      tr: `${loc} yakınımdaki terzi mi arıyorsunuz? Terzi Can ${loc} paça, bel, kol ve boy kısaltma-daraltmayı ₺200'den, fermuar değişimini ₺300'den başlayan fiyatla yapar; fiyatlara KDV dahildir. Fotoğrafı WhatsApp'tan (${PHONE}) gönderin. ${D.urgent} ${D.normal} ${HOTEL_FREE.tr}`,
+      en: `Looking for a tailor near me ${loc}? Terzi Can does hemming, waist, sleeve and length alterations from ₺200 and zipper replacement from ₺300 (prices include VAT). Send a photo on WhatsApp (${PHONE}). ${D.urgent} ${D.normal} ${HOTEL_FREE.en}`,
+      ru: `Ищете портного рядом ${loc}? Terzi Can: подшить, ушить в талии и по рукаву — от ₺200, замена молнии — от ₺300 (цены с НДС). Пришлите фото в WhatsApp (${PHONE}). ${D.urgent} ${D.normal} ${HOTEL_FREE.ru}`,
+      de: `Schneider in der Nähe ${loc}? Terzi Can kürzt und ändert (Saum, Taille, Ärmel, Länge) ab ₺200, Reißverschlusswechsel ab ₺300 (inkl. MwSt.). Foto per WhatsApp senden (${PHONE}). ${D.urgent} ${D.normal} ${HOTEL_FREE.de}`,
     };
     return near[lang];
   }
@@ -88,7 +88,7 @@ const POOL: { id: string; f: Record<Lang, (loc: string, n: string, d: District) 
     de: (loc) => [`Kann ich ${loc} Kleidung nach Maß nähen lassen?`, `Ja. Wir nähen Kleider, Hemden, Hosen und Röcke nach Ihren Maßen; bei Sommerstoffen aus Leinen und Baumwolle legen wir Modell und Größe gemeinsam fest. ${DELIVERY.de.custom} Maßanfertigung hat keinen Festpreis: Der Preis richtet sich nach Foto und gewünschtem Modell.`],
   } },
   { id: 'wedding', f: {
-    tr: (loc) => [`${loc} gelinlik veya abiye tadilatı yapılıyor mu?`, `Evet. Fiyat fotoğrafa veya işin detayına göre belirlenir (KDV dahil değildir). Gelinlik ve abiye tadilatı işin durumuna göre teslim edilir.`],
+    tr: (loc) => [`${loc} gelinlik veya abiye tadilatı yapılıyor mu?`, `Evet. Fiyat fotoğrafa veya işin detayına göre belirlenir (KDV dahildir). Gelinlik ve abiye tadilatı işin durumuna göre teslim edilir.`],
     en: (loc) => [`Do you alter wedding or evening dresses ${loc}?`, 'Yes. We alter evening dresses and wedding dresses; the exact price depends on a photo and the scope of work. Evening dresses are ready the same day; for wedding dresses the time depends on the work.'],
     ru: (loc) => [`Подгоняете ли вы свадебные и вечерние платья ${loc}?`, 'Да. Мы подгоняем вечерние и свадебные платья; точная цена зависит от фото и объёма работ. Вечерние платья готовы в тот же день, для свадебных срок зависит от работы.'],
     de: (loc) => [`Ändern Sie ${loc} auch Braut- und Abendkleider?`, 'Ja. Wir ändern Abend- und Brautkleider; der genaue Preis hängt von Foto und Aufwand ab. Abendkleider sind am selben Tag fertig, beim Brautkleid richtet sich die Dauer nach dem Umfang.'],

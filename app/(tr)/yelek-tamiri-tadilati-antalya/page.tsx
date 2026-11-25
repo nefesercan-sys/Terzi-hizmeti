@@ -103,7 +103,7 @@ export default function Page() {
             <div className="sec-head">
               <span className="eyebrow">₺ Fiyatlar 2026</span>
               <h2 className="sec-h ff" id="price-h">Yelek Tamiri ve Tadilatı Fiyatları</h2>
-              <p className="sec-sub">Net fiyat fotoğrafa veya işin detayına göre söylenir; KDV dahil değildir.</p>
+              <p className="sec-sub">Net fiyat fotoğrafa veya işin detayına göre söylenir; KDV dahildir.</p>
             </div>
             <div className="price-grid">
               <div className="price-card">

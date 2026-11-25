@@ -54,7 +54,7 @@ const GUIDE: [string, string][] = [
   ["Hangi kotlarda daha çok önemli?", "Paça detayı belirgin olan kotlarda, özellikle ham veya koyu denimde, solmuş kenar ve dikiş izi pantolonun karakterinin parçasıdır. Markalı ya da çok sevdiğiniz kotlarda bu detayı korumak ister, kısaltmanın anlaşılmamasını beklersiniz. Paça çok sade bir kotta ise standart kısaltma çoğu zaman yeterlidir."],
   ["Fotoğrafı nasıl çekmelisiniz?", "Paçanın yakın bir fotoğrafını gün ışığında, dikiş izi görünecek şekilde çekin. Mümkünse paçanın iç yüzünü ve kotu giydiğiniz hâlde boy fotoğrafını da ekleyin. Bu görüntülerden paçanın nasıl yapıldığını ve orijinal görünümün korunup korunamayacağını önceden değerlendiririz."],
   ["Her kotta aynen korunabilir mi?", "Kumaşın kalınlığına, paçadaki payın genişliğine ve ne kadar kısaltılacağına göre değişir. Çok fazla kısaltma gerekiyorsa orijinal izin bir kısmı kesilebilir; bunu işlemden önce size açıkça söyleriz ve alternatifi birlikte seçeriz. Net sonucu fotoğrafa bakmadan vaat etmeyiz."],
-  ["Fiyat ve teslim", "Orijinal paça görünümünü koruyarak kot paça kısaltma ₺200'den başlar. Net fiyat fotoğrafa göre söylenir ve fiyatlara KDV dahil değildir. Normal işler aynı gün, acil işler 1–2 saatte teslim edilir; eve ve otele alım-teslim yapılır."],
+  ["Fiyat ve teslim", "Orijinal paça görünümünü koruyarak kot paça kısaltma ₺200'den başlar. Net fiyat fotoğrafa göre söylenir ve fiyatlara KDV dahildir. Normal işler aynı gün, acil işler 1–2 saatte teslim edilir; eve ve otele alım-teslim yapılır."],
 ];
 
 const jsonLd = {
@@ -175,7 +175,7 @@ export default function Page() {
               </div>
             </div>
             <p style={{ fontSize: '.76rem', color: 'rgba(255,255,255,.4)', marginTop: '1.4rem', fontStyle: 'italic' }}>
-              * Fiyat başlangıç fiyatıdır; paçanın yapısına ve ne kadar kısaltılacağına göre değişebilir. KDV dahil değildir.
+              * Fiyat başlangıç fiyatıdır; paçanın yapısına ve ne kadar kısaltılacağına göre değişebilir. KDV dahildir.
             </p>
           </div>
         </section>

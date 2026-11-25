@@ -1,8 +1,8 @@
 // ============================================================
 // lib/sss-merkezi.ts — "Sık sorulan sorular" merkez sayfası (TR/EN/RU/DE) tek kaynak.
 // Görünen SSS ve FAQPage şeması AYNI diziden üretilir. Sahip kuralları:
-// paça/bel/kol/boy ₺200'den (€10), fermuar ₺300'den (€15; mont/kaban/palto/deri €15), deri ₺400'den (€20), kot ~₺200'den;
-// dikim/abiye/gelinlik tadilatı sabit fiyatsız (fotoğrafa/işin detayına göre); KDV dahil değil; ödeme tüm para birimleri, nakit/kart;
+// paça/bel/kol/boy ₺200'den (€4), fermuar ₺300'den (€5; mont/kaban/palto/deri €5), deri ₺400'den (€7), kot ~₺200'den;
+// dikim/abiye/gelinlik tadilatı sabit fiyatsız (fotoğrafa/işin detayına göre); KDV dahil; ödeme tüm para birimleri, nakit/kart;
 // ev/otel alım-teslim yapılır; otellerle ortaklık yok; 2006'dan beri; 10 dil; 08:00–23:00.
 // ============================================================
 export type SssLang = 'tr' | 'en' | 'ru' | 'de';
@@ -23,7 +23,7 @@ export const SSS_META: Record<SssLang, { title: string; description: string; h1:
     title: "Antalya Terzi Sık Sorulan Sorular 2026 · Fiyat, Süre, Otel",
     description: "Antalya terzi hakkında sık sorulan 42 soru: paça ₺200'den, fermuar ₺300'den, deri ₺400'den; süre, alım-teslim, ödeme, otel. WhatsApp.",
     h1: 'Antalya Terzi Sık Sorulan Sorular',
-    lead: "Terzi Can (Konyaaltı, 2006'dan beri) hakkında en çok sorulan soruların kısa ve doğrudan cevapları. Fiyatlar başlangıç fiyatıdır; KDV dahil değildir.",
+    lead: "Terzi Can (Konyaaltı, 2006'dan beri) hakkında en çok sorulan soruların kısa ve doğrudan cevapları. Fiyatlar başlangıç fiyatıdır; KDV dahildir.",
     short: "Kısa cevap: Paça, bel, kol ve boy ₺200'den; fermuar ₺300'den; deri ₺400'den. Normal işler aynı gün, acil işler 1–2 saat. Ev ve otele alım-teslim yapılır. Fotoğrafı WhatsApp'tan gönderin, fiyatı hemen öğrenin.",
     wa: 'Merhaba, yaptırmak istediğim işin fotoğrafını gönderiyorum, fiyat ve süre öğrenmek istiyorum.',
     cta: 'WhatsApp: Fotoğraf at, fiyat al',
@@ -33,8 +33,8 @@ export const SSS_META: Record<SssLang, { title: string; description: string; h1:
     title: 'Antalya Tailor FAQ 2026 · Prices, Turnaround, Hotel Service',
     description: 'Answers to 42 common questions about our Antalya tailor: hemming from ₺200, zipper from ₺300, leather from ₺400, same-day service, hotel pick-up, payment. WhatsApp.',
     h1: 'Antalya Tailor — Frequently Asked Questions',
-    lead: 'Short, direct answers about Terzi Can (Konyaaltı, serving since 2006). Prices are starting prices and do not include VAT.',
-    short: 'Short answer: hemming, waist, sleeve and length from ₺200 (about €10); zipper from ₺300; leather from ₺400. Standard jobs same day, urgent jobs 1–2 hours. pick-up and delivery to homes and hotels. Send a photo on WhatsApp for a price.',
+    lead: 'Short, direct answers about Terzi Can (Konyaaltı, serving since 2006). Prices are starting prices and include VAT.',
+    short: 'Short answer: hemming, waist, sleeve and length from ₺200 (about €4); zipper from ₺300; leather from ₺400. Standard jobs same day, urgent jobs 1–2 hours. pick-up and delivery to homes and hotels. Send a photo on WhatsApp for a price.',
     wa: 'Hello, I am sending a photo of the garment. I would like a price and turnaround time.',
     cta: 'WhatsApp: send a photo, get a price',
     home: 'Terzi Can', crumb: 'FAQ', more: 'More info', prices: 'Price list', services: 'All services', hotel: 'Hotel tailor', contact: 'Contact', locale: 'en_US', htmlLang: 'en',
@@ -43,8 +43,8 @@ export const SSS_META: Record<SssLang, { title: string; description: string; h1:
     title: 'Ателье и портной в Анталье: частые вопросы 2026',
     description: 'Ответы на 42 частых вопросов: подшить брюки от ₺200, молния от ₺300, кожа от ₺400, в тот же день, забор из отеля. WhatsApp.',
     h1: 'Ателье и портной в Анталье — частые вопросы',
-    lead: 'Короткие прямые ответы о ателье Terzi Can (Коньяалты, с 2006 года). Цены — «от», без НДС.',
-    short: 'Коротко: подшить, ушить, укоротить рукав и длину — от ₺200 (около €10); молния — от ₺300; кожа — от ₺400. Обычные работы в тот же день, срочные — 1–2 часа. Забор и доставка домой и в отель возможны. Пришлите фото в WhatsApp.',
+    lead: 'Короткие прямые ответы о ателье Terzi Can (Коньяалты, с 2006 года). Цены — «от», с НДС.',
+    short: 'Коротко: подшить, ушить, укоротить рукав и длину — от ₺200 (около €4); молния — от ₺300; кожа — от ₺400. Обычные работы в тот же день, срочные — 1–2 часа. Забор и доставка домой и в отель возможны. Пришлите фото в WhatsApp.',
     wa: 'Здравствуйте, отправляю фото вещи. Хочу узнать цену и срок.',
     cta: 'WhatsApp: пришлите фото, узнайте цену',
     home: 'Terzi Can', crumb: 'Частые вопросы', more: 'Подробнее', prices: 'Цены', services: 'Все услуги', hotel: 'Портной в отель', contact: 'Контакты', locale: 'ru_RU', htmlLang: 'ru',
@@ -53,8 +53,8 @@ export const SSS_META: Record<SssLang, { title: string; description: string; h1:
     title: 'Schneider Antalya FAQ 2026 · Preise, Dauer, Hotelservice',
     description: 'Antworten auf 42 häufige Fragen: Kürzen ab ₺200, Reißverschluss ab ₺300, Leder ab ₺400, am selben Tag, Hotelabholung. WhatsApp.',
     h1: 'Schneider Antalya — häufige Fragen',
-    lead: 'Kurze, direkte Antworten zu Terzi Can (Konyaaltı, seit 2006). Preise sind Ab-Preise und verstehen sich zuzüglich MwSt.',
-    short: 'Kurz: Kürzen und Enger machen (Hose, Taille, Ärmel, Länge) ab ₺200 (ca. €10); Reißverschluss ab ₺300; Leder ab ₺400. Normale Arbeiten am selben Tag, dringende 1–2 Stunden. Abholung und Lieferung zu Hause und ins Hotel. Foto per WhatsApp senden.',
+    lead: 'Kurze, direkte Antworten zu Terzi Can (Konyaaltı, seit 2006). Preise sind Ab-Preise und verstehen sich inklusive MwSt.',
+    short: 'Kurz: Kürzen und Enger machen (Hose, Taille, Ärmel, Länge) ab ₺200 (ca. €4); Reißverschluss ab ₺300; Leder ab ₺400. Normale Arbeiten am selben Tag, dringende 1–2 Stunden. Abholung und Lieferung zu Hause und ins Hotel. Foto per WhatsApp senden.',
     wa: 'Guten Tag, ich sende ein Foto des Kleidungsstücks und möchte Preis und Dauer erfahren.',
     cta: 'WhatsApp: Foto senden, Preis erfahren',
     home: 'Terzi Can', crumb: 'FAQ', more: 'Mehr Infos', prices: 'Preisliste', services: 'Alle Leistungen', hotel: 'Schneider im Hotel', contact: 'Kontakt', locale: 'de_DE', htmlLang: 'de',
@@ -68,13 +68,13 @@ const CONTACT = { tr: '/iletisim', en: '/en/contact-tailor-antalya', ru: '/ru/ko
 export const SSS_LINKS = { PRICES, HOTEL, SERV, CONTACT };
 
 const TR: SssItem[] = [
-  { q: "Pantolon paçası kısaltma Antalya'da ne kadar?", a: "Paça kısaltma ₺200'den başlar (yaklaşık €10). Kot ve kumaş pantolonda işe göre kesin fiyat için fotoğrafı WhatsApp'tan gönderin. Fiyatlara KDV dahil değildir.", href: '/konyaalti-paca-kisaltma' },
+  { q: "Pantolon paçası kısaltma Antalya'da ne kadar?", a: "Paça kısaltma ₺200'den başlar (yaklaşık €4). Kot ve kumaş pantolonda işe göre kesin fiyat için fotoğrafı WhatsApp'tan gönderin. Fiyatlara KDV dahildir.", href: '/konyaalti-paca-kisaltma' },
   { q: 'Bel daraltma ne kadar tutar?', a: "Bel ve yan daraltma ₺200'den başlar. Normal işte aynı gün, acilde 1–2 saatte teslim edilir.", href: '/terzi-hizmetleri/bel-daraltma' },
   { q: 'Kol ve boy kısaltma ücreti nedir?', a: "Kol boyu ve genel boy kısaltma ₺200'den başlar; ceket, gömlek, elbise ve etekte uygulanır.", href: '/terzi-hizmetleri/kol-boyu-kisaltma' },
-  { q: 'Fermuar değişimi kaç TL?', a: "Fermuar değişimi ₺300'den başlar. Euro karşılığı pantolon ve standart fermuarda yaklaşık €15, mont, kaban, palto ve deri fermuarda €15'dir.", href: '/konyaalti-fermuar-tamiri' },
+  { q: 'Fermuar değişimi kaç TL?', a: "Fermuar değişimi ₺300'den başlar. Euro karşılığı pantolon ve standart fermuarda yaklaşık ₺300 (≈€5), mont, kaban, palto ve deri fermuarda ₺300 (≈€5)'dir.", href: '/konyaalti-fermuar-tamiri' },
   { q: 'Mont, kaban veya palto fermuarı değişir mi?', a: "Evet. Mont, kaban, palto, ceket ve çanta fermuarları değiştirilir (₺300'den).", href: '/mont-fermuar-degisimi-antalya' },
   { q: 'Kot paçası orijinal paça görünümüyle kısaltılır mı?', a: "Evet, orijinal paça görünümü korunarak kısaltılır. Kot işleri yaklaşık ₺200'den başlar.", href: '/orijinal-kot-paca-yapimi-antalya' },
-  { q: 'Deri ceket veya deri pantolon tadilatı yapılıyor mu?', a: "Evet. Deri ceket, pantolon ve yelek tadilatı ₺400'den başlar (yaklaşık €20).", href: '/deri-ceket-tadilati-antalya' },
+  { q: 'Deri ceket veya deri pantolon tadilatı yapılıyor mu?', a: "Evet. Deri ceket, pantolon ve yelek tadilatı ₺400'den başlar (yaklaşık €7).", href: '/deri-ceket-tadilati-antalya' },
   { q: 'Kaban ve palto kısaltma/daraltma yapılıyor mu?', a: "Evet. Kaban ve paltoda kısaltma ve daraltma ₺200'den, fermuar değişimi ₺300'den başlar.", href: '/kaban-palto-tadilati-antalya' },
   { q: 'Takım elbise tadilatı yapıyor musunuz?', a: 'Evet. Takım elbise ceket, pantolon ve yelek tadilatı yapılır; paça kısaltma 200 TL\'den başlar, diğer işlerde fiyat fotoğrafa göre verilir. Hazır takım elbise satışı yapılmaz.', href: '/takim-elbise-tadilati-antalya' },
   { q: 'Mayo tadilatı yapıyor musunuz?', a: 'Evet. Mayo ve bikini tadilatı yapılır; yapılıp yapılamayacağı kumaşa ve modele göre fotoğraftan söylenir, fiyat fotoğrafa göre verilir.', href: '/mayo-tadilati-antalya' },
@@ -95,7 +95,7 @@ const TR: SssItem[] = [
   { q: "Antalya'da otele gelen terzi var mı?", a: "Evet. Terzi Can otellere ve adreslere gelir; WhatsApp'tan otel adını ve konumunu yazmanız yeterli.", href: HOTEL.tr },
   { q: 'Deneme için otelde buluşabilir miyiz?', a: 'Evet, gerekirse deneme (prova) için otelde buluşuyoruz.', href: HOTEL.tr },
   { q: 'Hangi para birimleriyle ödeme alıyorsunuz?', a: 'Tüm para birimleriyle (TL, euro, dolar, ruble, sterlin ve diğerleri) nakit veya kartla ödeme alınır.' },
-  { q: 'Fiyatlara KDV dahil mi?', a: 'Hayır, fiyatlara KDV dahil değildir.' },
+  { q: 'Fiyatlara KDV dahil mi?', a: 'Evet, fiyatlara KDV dahildir.' },
   { q: 'Bir otelle ortak mısınız?', a: "Hayır, hiçbir otelle ortaklığımız yoktur; Antalya'daki tüm otellere hizmet veriyoruz." },
   { q: 'Kaç yıldır hizmet veriyorsunuz?', a: "2006'dan beri, yani 20 yıldır terzilik yapıyoruz." },
   { q: 'Hangi dillerde iletişim kurabiliyorum?', a: '10 dilde: Türkçe, İngilizce, Rusça, Almanca, Lehçe, Ukraynaca, Felemenkçe, Fransızca, İspanyolca ve Arapça.' },
@@ -119,13 +119,13 @@ const TR: SssItem[] = [
 ];
 
 const EN: SssItem[] = [
-  { q: 'How much does hemming trousers cost in Antalya?', a: 'Hemming starts from ₺200 (about €10). Send a photo on WhatsApp for the exact price. Prices exclude VAT.', href: '/en/tailor-services' },
+  { q: 'How much does hemming trousers cost in Antalya?', a: 'Hemming starts from ₺200 (about €4). Send a photo on WhatsApp for the exact price. Prices include VAT.', href: '/en/tailor-services' },
   { q: 'How much is taking in the waist?', a: 'Waist and side taking-in starts from ₺200. Standard jobs the same day, urgent jobs 1–2 hours.' },
   { q: 'What does sleeve or length shortening cost?', a: 'Sleeve and length shortening starts from ₺200 for jackets, shirts, dresses and skirts.' },
-  { q: 'How much is a zipper replacement?', a: 'From ₺300. Euro guide: about €15 for trousers and standard zippers, €15 for coat, overcoat and leather zippers.' },
+  { q: 'How much is a zipper replacement?', a: 'From ₺300. Euro guide: about €5 for trousers and standard zippers, ₺300 (≈€5) for coat, overcoat and leather zippers.' },
   { q: 'Can you replace a coat, overcoat or jacket zipper?', a: 'Yes. Coat, overcoat, jacket and bag zippers are replaced (from ₺300).' },
   { q: 'Can jeans be hemmed with the original hem?', a: 'Yes, the original hem look is kept. Denim jobs start around ₺200.' },
-  { q: 'Do you alter leather jackets or leather trousers?', a: 'Yes. Leather jacket, trousers and vest alterations start from ₺400 (about €20).' },
+  { q: 'Do you alter leather jackets or leather trousers?', a: 'Yes. Leather jacket, trousers and vest alterations start from ₺400 (about €7).' },
   { q: 'Do you shorten or take in overcoats?', a: 'Yes. Overcoat shortening and taking-in from ₺200, zipper replacement from ₺300.' },
   { q: 'Do you repair or alter vests?', a: 'Yes. Vest alteration prices are given from a photo.' },
   { q: 'Do you alter wedding dresses?', a: 'Yes. The price depends on the photo or the details of the job; the time depends on the job.', href: '/antalya-gelinlik-tadilati' },
@@ -140,7 +140,7 @@ const EN: SssItem[] = [
   { q: 'Is there a tailor in Antalya who comes to my hotel?', a: 'Yes. Terzi Can visits hotels and addresses; write your hotel name and location on WhatsApp.', href: '/en/hotel-tailor-antalya' },
   { q: 'Can we meet at the hotel for a fitting?', a: 'Yes, if needed we meet at your hotel for a fitting.' },
   { q: 'Which currencies and payment methods do you accept?', a: 'All currencies (TRY, EUR, USD, GBP, RUB and others), cash or card.' },
-  { q: 'Do the prices include VAT?', a: 'No, prices do not include VAT.' },
+  { q: 'Do the prices include VAT?', a: 'Yes, prices include VAT.' },
   { q: 'Are you partnered with any hotel?', a: 'No, we have no partnership with any hotel; we serve all hotels in Antalya.' },
   { q: 'How long have you been in business?', a: 'Since 2006, that is 20 years of tailoring.' },
   { q: 'Which languages do you speak?', a: 'Ten: Turkish, English, Russian, German, Polish, Ukrainian, Dutch, French, Spanish and Arabic.' },
@@ -164,13 +164,13 @@ const EN: SssItem[] = [
 ];
 
 const RU: SssItem[] = [
-  { q: 'Сколько стоит подшить брюки в Анталье?', a: 'Подшить брюки — от ₺200 (около €10). Точную цену назовём по фото в WhatsApp. Цены без НДС.', href: '/ru/uslugi-portnogo' },
+  { q: 'Сколько стоит подшить брюки в Анталье?', a: 'Подшить брюки — от ₺200 (около €4). Точную цену назовём по фото в WhatsApp. Цены с НДС.', href: '/ru/uslugi-portnogo' },
   { q: 'Сколько стоит ушить в талии?', a: 'Ушивание в талии и по бокам — от ₺200. Обычные работы в тот же день, срочные — 1–2 часа.' },
   { q: 'Сколько стоит укоротить рукав или длину?', a: 'Укорачивание рукава и длины — от ₺200 (пиджак, рубашка, платье, юбка).' },
-  { q: 'Сколько стоит замена молнии?', a: 'От ₺300. Ориентир в евро: около €15 для брюк и обычных молний, €15 для пальто, пуховика и кожи.' },
+  { q: 'Сколько стоит замена молнии?', a: 'От ₺300. Ориентир в евро: около €5 для брюк и обычных молний, €5 для пальто, пуховика и кожи.' },
   { q: 'Заменяете молнию на куртке или пальто?', a: 'Да. Меняем молнии на куртках, пальто, пиджаках и сумках (от ₺300).' },
   { q: 'Можно ли подшить джинсы с сохранением оригинального низа?', a: 'Да, оригинальный низ сохраняется. Работы с джинсами — примерно от ₺200.' },
-  { q: 'Переделываете кожаные куртки и брюки?', a: 'Да. Переделка кожаных курток, брюк и жилетов — от ₺400 (около €20).' },
+  { q: 'Переделываете кожаные куртки и брюки?', a: 'Да. Переделка кожаных курток, брюк и жилетов — от ₺400 (около €7).' },
   { q: 'Укорачиваете и ушиваете пальто?', a: 'Да. Укорачивание и ушивание пальто — от ₺200, замена молнии — от ₺300.' },
   { q: 'Ремонтируете жилеты?', a: 'Да. Стоимость переделки жилета называем по фото.' },
   { q: 'Переделываете свадебные платья?', a: 'Да. Цена зависит от фото или деталей работы; срок зависит от работы.', href: '/antalya-gelinlik-tadilati' },
@@ -185,7 +185,7 @@ const RU: SssItem[] = [
   { q: 'Есть ли портной, который приезжает в отель в Анталье?', a: 'Да. Terzi Can приезжает в отели и по адресам; напишите в WhatsApp название отеля и район.', href: '/ru/vyezdnoy-portnoy-antalya' },
   { q: 'Можно ли встретиться в отеле для примерки?', a: 'Да, при необходимости встречаемся в отеле для примерки.' },
   { q: 'В каких валютах и как можно оплатить?', a: 'Во всех валютах (лира, евро, доллар, рубль, фунт и другие), наличными или картой.' },
-  { q: 'Цены с НДС?', a: 'Нет, цены указаны без НДС.' },
+  { q: 'Цены с НДС?', a: 'Да, цены указаны с НДС.' },
   { q: 'Вы партнёры какого-либо отеля?', a: 'Нет, мы не являемся партнёрами отелей; обслуживаем все отели Антальи.' },
   { q: 'Сколько лет вы работаете?', a: 'С 2006 года — это 20 лет в портняжном деле.' },
   { q: 'На каких языках вы общаетесь?', a: 'На десяти: турецкий, английский, русский, немецкий, польский, украинский, нидерландский, французский, испанский и арабский.' },
@@ -209,13 +209,13 @@ const RU: SssItem[] = [
 ];
 
 const DE: SssItem[] = [
-  { q: 'Was kostet das Kürzen einer Hose in Antalya?', a: 'Kürzen ab ₺200 (ca. €10). Den genauen Preis nennen wir nach Foto per WhatsApp. Preise zzgl. MwSt.', href: '/de/schneider-leistungen' },
+  { q: 'Was kostet das Kürzen einer Hose in Antalya?', a: 'Kürzen ab ₺200 (ca. €4). Den genauen Preis nennen wir nach Foto per WhatsApp. Preise inkl. MwSt.', href: '/de/schneider-leistungen' },
   { q: 'Was kostet das Enger machen in der Taille?', a: 'Taille und Seiten enger machen ab ₺200. Normale Arbeiten am selben Tag, dringende in 1–2 Stunden.' },
   { q: 'Was kostet das Kürzen von Ärmeln oder Länge?', a: 'Ärmel und Länge kürzen ab ₺200 (Jacke, Hemd, Kleid, Rock).' },
-  { q: 'Was kostet ein Reißverschlusswechsel?', a: 'Ab ₺300. Richtwert in Euro: etwa €15 für Hosen und normale Reißverschlüsse, €15 für Mantel, Jacke und Leder.' },
+  { q: 'Was kostet ein Reißverschlusswechsel?', a: 'Ab ₺300. Richtwert in Euro: etwa €5 für Hosen und normale Reißverschlüsse, ₺300 (≈€5) für Mantel, Jacke und Leder.' },
   { q: 'Wechseln Sie Reißverschlüsse bei Jacken und Mänteln?', a: 'Ja. Reißverschlüsse an Jacken, Mänteln, Sakkos und Taschen werden gewechselt (ab ₺300).' },
   { q: 'Kann man Jeans mit Original-Saum kürzen?', a: 'Ja, der Original-Saum bleibt erhalten. Jeans-Arbeiten ab ca. ₺200.' },
-  { q: 'Ändern Sie Lederjacken und Lederhosen?', a: 'Ja. Änderungen an Lederjacken, -hosen und -westen ab ₺400 (ca. €20).' },
+  { q: 'Ändern Sie Lederjacken und Lederhosen?', a: 'Ja. Änderungen an Lederjacken, -hosen und -westen ab ₺400 (ca. €7).' },
   { q: 'Kürzen oder verengen Sie Mäntel?', a: 'Ja. Mäntel kürzen und enger machen ab ₺200, Reißverschlusswechsel ab ₺300.' },
   { q: 'Reparieren oder ändern Sie Westen?', a: 'Ja. Der Preis für Westenänderungen wird nach Foto genannt.' },
   { q: 'Ändern Sie Brautkleider?', a: 'Ja. Der Preis richtet sich nach Foto oder Details der Arbeit; die Dauer richtet sich nach der Arbeit.', href: '/antalya-gelinlik-tadilati' },
@@ -230,7 +230,7 @@ const DE: SssItem[] = [
   { q: 'Kommt ein Schneider in Antalya ins Hotel?', a: 'Ja. Terzi Can kommt in Hotels und zu Adressen; schreiben Sie Hotelname und Ort per WhatsApp.', href: '/de/schneider-service-hotel-antalya' },
   { q: 'Können wir uns im Hotel zur Anprobe treffen?', a: 'Ja, bei Bedarf treffen wir uns zur Anprobe im Hotel.' },
   { q: 'Welche Währungen und Zahlungsarten akzeptieren Sie?', a: 'Alle Währungen (TRY, EUR, USD, GBP, RUB und weitere), bar oder mit Karte.' },
-  { q: 'Verstehen sich die Preise inklusive MwSt.?', a: 'Nein, die Preise verstehen sich zuzüglich MwSt.' },
+  { q: 'Verstehen sich die Preise inklusive MwSt.?', a: 'Ja, die Preise verstehen sich inklusive MwSt.' },
   { q: 'Sind Sie Partner eines Hotels?', a: 'Nein, wir haben keine Partnerschaft mit Hotels; wir bedienen alle Hotels in Antalya.' },
   { q: 'Seit wann gibt es Sie?', a: 'Seit 2006, also 20 Jahre Schneiderhandwerk.' },
   { q: 'Welche Sprachen sprechen Sie?', a: 'Zehn: Türkisch, Englisch, Russisch, Deutsch, Polnisch, Ukrainisch, Niederländisch, Französisch, Spanisch und Arabisch.' },

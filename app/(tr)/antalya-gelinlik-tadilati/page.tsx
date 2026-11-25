@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Gelinlik & Abiye Tadilatı Antalya — Prova ile" },
   description:
-    'Antalya\'da gelinlik ve abiye tadilatı. Hassas daraltma, boy ayarı, detaylı onarım. Fiyat fotoğrafa veya işin detayına göre; randevulu ve özenli hizmet. Konyaaltı merkezli atölye.',
+    'Antalya\'da gelinlik ve abiye tadilatı: daraltma, boy ayarı, onarım. Fiyat fotoğrafa veya işin detayına göre; prova ile. Konyaaltı atölyesi, her gün 08–23.',
   keywords: fitKeywords([
     'gelinlik tadilatı Antalya', 'abiye tadilatı Antalya', 'gelinlik daraltma Antalya',
     'gelinlik boy ayarı Konyaaltı', 'düğün kıyafeti tadilatı', 'nişanlık tadilatı Antalya',

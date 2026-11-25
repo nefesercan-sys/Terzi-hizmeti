@@ -24,8 +24,8 @@ const OG        = `${SITE}/antalya-terzi-can-dikim-tamir-tadilat.jpg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Antalya Terzi · Paça Kısaltma, Bel Daraltma, Fermuar Tamiri" },
-  description: "Konyaaltı'nda bay bayan terzi. Fotoğrafı WhatsApp'tan gönderin, fiyatı hemen öğrenin. Paça 200 TL'den, normal işler aynı gün, acil 1–2 saat. Her gün 08:00–23:00.",
+  title: { absolute: "Antalya Terzi · Paça ₺200'den, Fermuar ₺300 · Aynı Gün" },
+  description: "Konyaaltı'nda bay bayan terzi. Fotoğrafı WhatsApp'tan gönderin, fiyatı hemen öğrenin. Paça ₺200'den, aynı gün; acil 1–2 saat. Her gün 08–23.",
   keywords: ['Antalya terzi', 'Konyaaltı terzi', 'Hurma terzi', 'Liman terzi', 'Uncalı terzi', 'Gürsu terzi', 'otele gelen terzi Antalya', 'acil terzi Antalya'],
   authors: [{ name: BIZ, url: SITE }],
   creator: BIZ,

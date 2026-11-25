@@ -1,5 +1,6 @@
 // terzihizmeti.com.tr — "Evde ölçü nasıl alınır?" rehberi, 10 dilde tek sayfa. Veri: lib/olcu-rehberi.ts
 import Link from 'next/link';
+import { fitDesc } from '@/lib/meta-fit';
 import { lastMod } from '@/lib/lastmod';
 import { withTwin } from '@/lib/twin';
 import type { Metadata } from 'next';
@@ -16,7 +17,7 @@ const HOME: Record<GLang, string> = { tr: '/', en: '/en/tailor-service-antalya',
 export function olcuMetadata(lang: GLang): Metadata {
   const c = OLCU[lang]; const url = `${OLCU_SITE}${olcuUrl(lang)}`;
   return {
-    metadataBase: new URL(SITE), title: { absolute: c.title }, description: c.desc,
+    metadataBase: new URL(SITE), title: { absolute: c.title }, description: fitDesc(c.desc),
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
     alternates: withTwin({ canonical: url, languages: olcuLanguages() }),
     openGraph: { title: c.h1, description: c.desc, url, siteName: 'Terzi Can', locale: c.locale, type: 'website', images: [{ url: OG_DEFAULT, width: 1200, height: 630, alt: c.h1 }] },

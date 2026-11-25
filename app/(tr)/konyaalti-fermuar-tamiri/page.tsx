@@ -24,7 +24,7 @@ const TODAY     = lastMod('/konyaalti-fermuar-tamiri', '2026-10-04');
 // sayfaları genel sayfalara göre daha hızlı ve yüksek sıralar.
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Fermuar Değişimi · Konyaaltı, Aynı Gün | Terzi Can" },
+  title: { absolute: "Fermuar Tamiri ve Değişimi · Konyaaltı, Aynı Gün" },
   description:
     "Pantolon, mont, ceket ve çanta fermuarı ₺300'den. Normal iş aynı gün, acil 1–2 saat. Eve ve otele servis.",
   keywords: fitKeywords([
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   alternates: withTwin({ canonical: PAGE_URL }),
   openGraph: {
-    title: 'Fermuar Tamiri Konyaaltı — Aynı Gün Değişim',
+    title: 'Fermuar Tamiri ve Değişimi Konyaaltı — Aynı Gün',
     description: 'Pantolon, mont, ceket, çanta fermuarı. Normal tadilat aynı gün, acil 1–2 saat.',
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'tr_TR', type: 'website',
     images: [{ url: `${SITE}/antalya-terzi-can-dikim-tamir-tadilat.jpg`, width: 1024, height: 1024, alt: 'Fermuar Tamiri Konyaaltı' }],
@@ -149,7 +149,7 @@ export default function FermuarTamiriPage() {
           <div className="hero-content">
             <span className="hero-tag">🔧 Acil Fermuar Değişimi · Konyaaltı</span>
             <h1 id="hero-h">
-              Fermuar Tamiri <span className="accent">Konyaaltı</span><br />Aynı Gün Teslim, Acilde 1–2 Saat</h1>
+              Fermuar Tamiri ve Değişimi <span className="accent">Konyaaltı</span><br />Aynı Gün Teslim, Acilde 1–2 Saat</h1>
             <p className="hero-desc">
               Pantolon, kot, mont, ceket ve çanta fermuarı değişimi ve tamiri.
               Eve ve otele servis. ₺300'den başlayan

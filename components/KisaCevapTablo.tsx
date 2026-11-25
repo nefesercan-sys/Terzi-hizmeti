@@ -17,7 +17,7 @@ const T: Record<L, { h: string; cols: [string, string, string]; rows: [string, s
       ['Gelinlik ve abiye tadilatı', 'Fotoğrafa veya işin detayına göre', 'İşin durumuna göre'],
       ['Dikim (elbise, etek, pantolon, çocuk, takım)', 'Fotoğrafa ve istenilen modele göre', 'Modele ve adede göre'],
       ['Eve ve otele alım-teslim', 'Var', 'Her bölgede'],
-    ], vat: "Fiyatlara KDV dahil değildir. Ödeme tüm para birimleriyle, nakit veya kartla.",
+    ], vat: "Fiyatlara KDV dahildir. Ödeme tüm para birimleriyle, nakit veya kartla.",
   },
   en: {
     h: 'Quick answer: service, starting price and turnaround', cols: ['Service', 'Starting price', 'Turnaround'],
@@ -30,7 +30,7 @@ const T: Record<L, { h: string; cols: [string, string, string]; rows: [string, s
       ['Wedding and evening dress alterations', 'By photo or job details', 'Depending on the job'],
       ['Sewing (dress, skirt, trousers, children, suit)', 'By photo and the model you want', 'Depends on model and quantity'],
       ['Home and hotel pick-up and delivery', 'Available', 'Every area we serve'],
-    ], vat: 'Prices exclude VAT. Payment in any currency, cash or card.',
+    ], vat: 'Prices include VAT. Payment in any currency, cash or card.',
   },
   ru: {
     h: 'Коротко: работа, цена «от» и срок', cols: ['Работа', 'Цена от', 'Срок'],
@@ -43,7 +43,7 @@ const T: Record<L, { h: string; cols: [string, string, string]; rows: [string, s
       ['Переделка свадебных и вечерних платьев', 'По фото или деталям работы', 'Зависит от работы'],
       ['Пошив (платье, юбка, брюки, детское, костюм)', 'По фото и желаемой модели', 'По модели и количеству'],
       ['Забор и доставка домой и в отель', 'Есть', 'В каждом районе'],
-    ], vat: 'Цены без НДС. Оплата в любой валюте, наличными или картой.',
+    ], vat: 'Цены с НДС. Оплата в любой валюте, наличными или картой.',
   },
   de: {
     h: 'Kurz: Leistung, Ab-Preis und Dauer', cols: ['Leistung', 'Ab-Preis', 'Dauer'],
@@ -56,7 +56,7 @@ const T: Record<L, { h: string; cols: [string, string, string]; rows: [string, s
       ['Änderung von Braut- und Abendkleidern', 'Nach Foto oder Details der Arbeit', 'Je nach Arbeit'],
       ['Nähen (Kleid, Rock, Hose, Kinder, Anzug)', 'Nach Foto und gewünschtem Modell', 'Je nach Modell und Menge'],
       ['Abholung und Lieferung nach Hause und ins Hotel', 'Möglich', 'In jedem Gebiet'],
-    ], vat: 'Preise zzgl. MwSt. Zahlung in jeder Währung, bar oder Karte.',
+    ], vat: 'Preise inkl. MwSt. Zahlung in jeder Währung, bar oder Karte.',
   },
 };
 

@@ -6,7 +6,7 @@
 //   • Gelinlik DİKİMİ yapılmaz (gelinlik/abiye TADİLATI yapılır).
 //   • Abiye/gelinlik TADİLATI (boy, bel, korse/kapama, kuyruk, elbise tadilatı) için SABİT FİYAT YAZILMAZ: BY_PHOTO_OR_JOB ("fotoğrafa veya işin detayına göre"). Eski sabit fiyatlar kaldırıldı (Kasım 2026).
 //   • Gelinlik/abiye tadilatı süresi: WEDDING_TIME ("işin durumuna göre"). Paça/bel/tamir "aynı gün" kuralı (lib/delivery.ts) değişmez.
-//   • Fiyatlara KDV DAHİL DEĞİLDİR (VAT_NOT_INCLUDED).
+//   • Fiyatlara KDV DAHİLDİR (sahip kararı, 25 Kasım 2026; önceki kural 'KDV dahil değildir' idi).
 //   • Otellerle ortaklık YOKTUR; Antalya'daki tüm otellere hizmet verilir (HOTEL_NOTE).
 //   • Yabancı dil sayfalarında fiyat EURO; € fiyatlar sahibin belirlediği turist başlangıç fiyatlarıdır (gerçek kurla çevrilmez; sahip kararı Kasım 2026). TRY_PER_EUR yalnız EUR_OVERRIDE'ı olmayan kalemler içindir.
 // ============================================================
@@ -91,16 +91,16 @@ export type ByPhotoLang = keyof typeof BY_PHOTO_MODEL;
 /** Cümle başı için büyük harfle. */
 export const byPhotoModelCap = (l: ByPhotoLang): string => { const t: string = BY_PHOTO_MODEL[l]; return t.charAt(0).toLocaleUpperCase(l === 'tr' ? 'tr' : l) + t.slice(1); };
 
-/** Ödeme ve KDV notu (sahip kararı, Kasım 2026): tüm para birimleriyle ödeme (nakit/kart); fiyatlara KDV dahil değildir. */
+/** Ödeme ve KDV notu (sahip kararı, 25 Kasım 2026: KDV dahil): tüm para birimleriyle ödeme (nakit/kart); fiyatlara KDV dahildir. */
 export const PAYMENT_NOTE = {
-  tr: 'Ödeme tüm para birimleriyle yapılabilir (nakit veya kart). Fiyatlara KDV dahil değildir.',
-  en: 'Payment in any currency, cash or card. Prices do not include VAT.',
-  ru: 'Оплата в любой валюте, наличными или картой. В цены НДС не включён.',
-  de: 'Zahlung in jeder Währung, bar oder mit Karte. Die Preise verstehen sich ohne MwSt.',
-  es: 'Se puede pagar en cualquier moneda, en efectivo o con tarjeta. Los precios no incluyen IVA.',
-  fr: 'Paiement dans toutes les devises, en espèces ou par carte. Les prix s’entendent hors TVA.',
-  pl: 'Płatność w dowolnej walucie, gotówką lub kartą. Ceny nie zawierają VAT.',
-  uk: 'Оплата в будь-якій валюті, готівкою або карткою. Ціни не включають ПДВ.',
-  nl: 'Betalen kan in elke valuta, contant of met kaart. Prijzen zijn exclusief btw.',
-  ar: 'يمكن الدفع بأي عملة، نقدًا أو بالبطاقة. الأسعار لا تشمل ضريبة القيمة المضافة.',
+  tr: 'Ödeme tüm para birimleriyle yapılabilir (nakit veya kart). Fiyatlara KDV dahildir.',
+  en: 'Payment in any currency, cash or card. Prices include VAT.',
+  ru: 'Оплата в любой валюте, наличными или картой. В цены включён НДС.',
+  de: 'Zahlung in jeder Währung, bar oder mit Karte. Die Preise verstehen sich inkl. MwSt.',
+  es: 'Se puede pagar en cualquier moneda, en efectivo o con tarjeta. Los precios incluyen IVA.',
+  fr: 'Paiement dans toutes les devises, en espèces ou par carte. Les prix s’entendent TVA comprise.',
+  pl: 'Płatność w dowolnej walucie, gotówką lub kartą. Ceny zawierają VAT.',
+  uk: 'Оплата в будь-якій валюті, готівкою або карткою. Ціни включають ПДВ.',
+  nl: 'Betalen kan in elke valuta, contant of met kaart. Prijzen zijn inclusief btw.',
+  ar: 'يمكن الدفع بأي عملة، نقدًا أو بالبطاقة. الأسعار تشمل ضريبة القيمة المضافة.',
 } as const;

@@ -163,9 +163,9 @@ interface LangLabel {
 }
 
 const LANG_LABELS: Record<Lang, LangLabel> = {
-  tr: { name: 'Türkçe', flag: '🇹🇷', note: 'Fiyatlar başlangıç fiyatıdır, kumaş ve işçilik durumuna göre değişebilir. KDV dahil değildir. Ödeme: tüm para birimleriyle, nakit veya kartla.' },
-  en: { name: 'English', flag: '🇬🇧', note: 'Prices are starting prices and may vary depending on fabric and workmanship. VAT not included. Payment in any currency, cash or card.' },
-  ru: { name: 'Русский', flag: '🇷🇺', note: 'Цены указаны от, могут меняться в зависимости от ткани и сложности работы. НДС не включён. Оплата в любой валюте, наличными или картой.' },
+  tr: { name: 'Türkçe', flag: '🇹🇷', note: 'Fiyatlar başlangıç fiyatıdır, kumaş ve işçilik durumuna göre değişebilir. KDV dahildir. Ödeme: tüm para birimleriyle, nakit veya kartla.' },
+  en: { name: 'English', flag: '🇬🇧', note: 'Prices are starting prices and may vary depending on fabric and workmanship. VAT included. Payment in any currency, cash or card.' },
+  ru: { name: 'Русский', flag: '🇷🇺', note: 'Цены указаны от, могут меняться в зависимости от ткани и сложности работы. НДС включён. Оплата в любой валюте, наличными или картой.' },
   de: { name: 'Deutsch', flag: '🇩🇪', note: 'Die Preise sind ab-Preise, können je nach Stoff und Arbeitsaufwand variieren. MwSt. nicht inklusive. Zahlung in jeder Währung, bar oder mit Karte.' },
 };
 

@@ -80,7 +80,7 @@ const T = {
     faq: [
       ['Terzi Can telefon numarası nedir?', `Telefon ve WhatsApp numaramız ${PHONE}. Arayabilir ya da WhatsApp'tan yazabilirsiniz.`],
       ['Pazar günü açık mısınız?', 'Evet. Terzi Can haftanın 7 günü, Cumartesi ve Pazar dahil, 08:00–23:00 arası açıktır.'],
-      ['Fiyatı nasıl öğrenirim?', 'Kıyafetin fotoğrafını WhatsApp\'tan gönderin. Başlangıç fiyatları: paça kısaltma ₺200\'den, fermuar değişimi ₺300\'den, abiye ve gelinlik tadilatı fotoğrafa veya işin detayına göre. Fiyatlara KDV dahil değildir.'],
+      ['Fiyatı nasıl öğrenirim?', 'Kıyafetin fotoğrafını WhatsApp\'tan gönderin. Başlangıç fiyatları: paça kısaltma ₺200\'den, fermuar değişimi ₺300\'den, abiye ve gelinlik tadilatı fotoğrafa veya işin detayına göre. Fiyatlara KDV dahildir.'],
       ['Adrese veya otele geliyor musunuz?', 'Evet, tüm hizmet bölgelerinde eve ve otele alım-teslim yapıyoruz. WhatsApp\'tan yazmanız yeterli.'],
       ['Atölyeniz nerede?', 'Hurma Mahallesi, 07130 Konyaaltı / Antalya. Google Haritalar\'dan yol tarifi alabilirsiniz.'],
       ['Hangi dillerde hizmet veriyorsunuz?', 'Türkçe, İngilizce, Rusça, Almanca, İspanyolca, Fransızca, Lehçe, Ukraynaca, Felemenkçe ve Arapça.'],

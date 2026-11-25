@@ -87,7 +87,7 @@ const jsonLd = {
       '@id': `${PAGE_URL}#faq`,
       mainEntity: [
         { '@type': 'Question', name: 'Gelinlik tadilatı ne kadar sürede tamamlanır?', acceptedAnswer: { '@type': 'Answer', text: 'Basit boy ayarı normal tadilat gibi aynı gün teslim edilir; kapsamlı bel daraltma ve korse onarımında süre işin kapsamına göre WhatsApp\'ta netleşir. Düğün tarihine göre öncelikli randevu ayarlanır.' } },
-        { '@type': 'Question', name: 'Gelinlik tadilatı fiyatı ne kadar?', acceptedAnswer: { '@type': 'Answer', text: 'Gelinlik ve abiye tadilatında sabit fiyat yazmıyoruz: fiyat fotoğrafa veya işin detayına göre belirlenir. Fotoğrafı WhatsApp\'tan gönderin, net fiyatı hemen söyleyelim. Fiyatlara KDV dahil değildir.' } },
+        { '@type': 'Question', name: 'Gelinlik tadilatı fiyatı ne kadar?', acceptedAnswer: { '@type': 'Answer', text: 'Gelinlik ve abiye tadilatında sabit fiyat yazmıyoruz: fiyat fotoğrafa veya işin detayına göre belirlenir. Fotoğrafı WhatsApp\'tan gönderin, net fiyatı hemen söyleyelim. Fiyatlara KDV dahildir.' } },
         { '@type': 'Question', name: 'Dantel ve tül kumaşlarla çalışıyor musunuz?', acceptedAnswer: { '@type': 'Answer', text: 'Evet, dantel, tül, saten, organze gibi hassas gelinlik kumaşlarında uzman işçiliğimiz var. Desen bütünlüğü bozulmadan tadilat yapılır.' } },
         { '@type': 'Question', name: 'Son dakika gelinlik tadilatı yapıyor musunuz?', acceptedAnswer: { '@type': 'Answer', text: 'Düğününüze az kaldıysa bize hemen ulaşın, ekspres randevu için elimizden geleni yaparız. Erken randevu her zaman önerilir.' } },
       ],
@@ -227,7 +227,7 @@ export default function GelinlikTadilatiPage() {
             </div>
             {[
               ['Gelinlik tadilatı ne kadar sürede tamamlanır?', 'Basit boy ayarı normal tadilat gibi aynı gün teslim edilir; kapsamlı bel daraltma ve korse onarımında süre işin kapsamına göre WhatsApp\'ta netleşir. Düğün tarihine göre öncelikli randevu ayarlanır.'],
-              ['Gelinlik tadilatı fiyatı ne kadar?', 'Gelinlik ve abiye tadilatında sabit fiyat yazmıyoruz: fiyat fotoğrafa veya işin detayına göre belirlenir. Fotoğrafı WhatsApp\'tan gönderin, net fiyatı hemen söyleyelim. Fiyatlara KDV dahil değildir.'],
+              ['Gelinlik tadilatı fiyatı ne kadar?', 'Gelinlik ve abiye tadilatında sabit fiyat yazmıyoruz: fiyat fotoğrafa veya işin detayına göre belirlenir. Fotoğrafı WhatsApp\'tan gönderin, net fiyatı hemen söyleyelim. Fiyatlara KDV dahildir.'],
               ['Dantel ve tül kumaşlarla çalışıyor musunuz?', 'Evet, dantel, tül, saten, organze gibi hassas gelinlik kumaşlarında uzman işçiliğimiz var. Desen bütünlüğü bozulmadan tadilat yapılır.'],
               ['Son dakika gelinlik tadilatı yapıyor musunuz?', 'Düğününüze az kaldıysa bize hemen ulaşın, ekspres randevu için elimizden geleni yaparız. Erken randevu her zaman önerilir.'],
             ].map(([q, a]) => (

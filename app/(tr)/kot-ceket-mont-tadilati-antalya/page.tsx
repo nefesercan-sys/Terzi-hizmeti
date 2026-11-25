@@ -55,7 +55,7 @@ const GUIDE: [string, string][] = [
   ["Boy kısaltma ve cep hizası", "Ceket boyunu kısaltırken etek ucundaki kalın dikiş ve bel hizasındaki cepler birlikte düşünülür. Boy çok kısalırsa cep ağızları ceketin ucuna fazla yaklaşır; bu yüzden en uygun boyu fotoğrafa bakarak söyleriz. Kot montta bu kural daha da önemlidir, çünkü mont ceketten daha uzundur ve kaban gibi kullanılır."],
   ["Beden daraltmada sınırlar", "Yan dikişlerden yapılan beden daraltma çoğu kot ceket ve montta mümkündür. Omuz çizgisi ise büyük ölçüde değiştirilemez; omuza oturmayan bir ceketi tadilatla kurtarmak zor olur. Bu nedenle satın alırken omza uyan bedeni seçip bolluğu tadilatla almak en sağlıklı yoldur."],
   ["Düğme ve fermuar", "Kot ceketlerde düşen ya da bozulan düğmeler ve kot montlarda bozulan fermuarlar tadilatla birlikte yenilenebilir. Mont fermuar değişimi ₺300'den başlar. Düğme ve çıtçıt işi için fotoğraf göndermeniz ve yenisinin neye benzemesi gerektiğini yazmanız yeterlidir."],
-  ["Fiyat ve teslim", "Kot ceket ve mont kol, boy kısaltma ve daraltma ₺200'den başlar; net fiyat fotoğrafa göre söylenir. Fiyatlara KDV dahil değildir. Normal işler aynı gün, acil işler 1–2 saatte teslim edilir; eve ve otele alım-teslim yapılır."],
+  ["Fiyat ve teslim", "Kot ceket ve mont kol, boy kısaltma ve daraltma ₺200'den başlar; net fiyat fotoğrafa göre söylenir. Fiyatlara KDV dahildir. Normal işler aynı gün, acil işler 1–2 saatte teslim edilir; eve ve otele alım-teslim yapılır."],
 ];
 
 const jsonLd = {
@@ -180,7 +180,7 @@ export default function Page() {
               </div>
             </div>
             <p style={{ fontSize: '.76rem', color: 'rgba(255,255,255,.4)', marginTop: '1.4rem', fontStyle: 'italic' }}>
-              * Fiyatlar başlangıç fiyatıdır; yapılacak işlem sayısına ve kumaşa göre değişebilir. KDV dahil değildir.
+              * Fiyatlar başlangıç fiyatıdır; yapılacak işlem sayısına ve kumaşa göre değişebilir. KDV dahildir.
             </p>
           </div>
         </section>

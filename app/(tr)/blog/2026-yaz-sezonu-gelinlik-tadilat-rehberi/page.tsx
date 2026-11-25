@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 const FAQS: [string, string][] = [
   ['Yaz düğünü için gelinlik tadilatına ne zaman başlamalıyım?', 'Haziran-Eylül arası yoğun düğün sezonunda randevular hızla doluyor. Gelinliğinizi elinize aldıktan sonra, düğün tarihinden en az 3-4 hafta önce ilk prova için randevu almanızı öneririz. Son dakika hafif düzeltmeler mümkün olsa da, korse ve bel daraltma gibi hassas işlemler için erken planlama en iyi sonucu verir.'],
   ['Antalya\'nın sıcak ve nemli havası gelinlik kumaşını etkiler mi?', 'Evet. Saten ve ipek karışımlı kumaşlar nem oranı yüksek günlerde hafifçe gevşeyebilir, tül ve dantel katmanları ise terleme ve nem nedeniyle vücuda daha farklı oturabilir. Bu yüzden yaz düğünlerinde son prova, mümkünse düğüne yakın bir tarihte ve günün sıcak saatlerinde yapılmalı.'],
-  ['2026 yılında gelinlik tadilatı fiyatları ne kadar?', `Gelinlik ve abiye tadilatında sabit fiyat yazmıyoruz; fiyat fotoğrafa veya işin detayına göre belirlenir (KDV dahil değildir). Kesin fiyat kumaşa ve yapılacak işleme göre netleşir. ☎ ${PHONE}`],
+  ['2026 yılında gelinlik tadilatı fiyatları ne kadar?', `Gelinlik ve abiye tadilatında sabit fiyat yazmıyoruz; fiyat fotoğrafa veya işin detayına göre belirlenir (KDV dahildir). Kesin fiyat kumaşa ve yapılacak işleme göre netleşir. ☎ ${PHONE}`],
   ['Gelinliği düğünden hemen önce mi, yoksa aylar önce mi tadilata götürmeliyim?', 'İdeali iki aşamalı gitmek: kilo ve vücut ölçüsü değişikliklerine karşı ilk provayı düğüne 4-6 hafta kala, son (kesin) provayı ise düğüne 5-10 gün kala yapmak. Böylece hem yeterli düzeltme payı kalır hem de gelinlik son haliyle vücuda tam oturur.'],
 ];
 
@@ -143,7 +143,7 @@ export default function BlogPost() {
           Atölyemizde yaz aylarında en çok talep edilen işlemler: bel daraltma, boy ayarı,
           korse/kapama onarımı ve terleme nedeniyle esneyen askı/omuz bölgelerinin
           sıkılaştırılması. Fiyat fotoğrafa veya işin detayına göre belirlenir (boy ayarı, bel daraltma,
-          korse/kapama onarımı, abiye tadilatı; KDV dahil değildir). Kesin fiyat,
+          korse/kapama onarımı, abiye tadilatı; KDV dahildir). Kesin fiyat,
           kumaş türüne ve yapılacak işlemin kapsamına göre ilk provada netleşiyor. Detaylı
           bilgi ve tüm hizmetler için{' '}
           <a href="/antalya-gelinlik-tadilati" style={{ color: '#2C4A3E', fontWeight: 700 }}>

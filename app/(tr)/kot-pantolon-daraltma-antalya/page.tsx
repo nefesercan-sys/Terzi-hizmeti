@@ -55,7 +55,7 @@ const GUIDE: [string, string][] = [
   ["Dar paça ve slim kesim isteyenler için", "Geniş veya düz kesim bir kotu daha dar bir kalıba çevirmek mümkündür; bunun için bacak dikişleri yeniden ayarlanır. Dar kesim istiyorsanız, mevcut kotun baldır ve diz genişliğini biliyorsanız yazın ya da en sevdiğiniz bir pantolonu referans olarak gösterin. Böylece ölçü tahmine kalmadan belirlenir."],
   ["Streç oranı daraltma payını değiştirir", "Esnek içerikli kotta kumaş vücuda uyum sağladığı için daraltma payı sınırlı tutulur; sert denimde ise pay daha rahat belirlenir. Etiketteki kumaş içeriğini mesaja eklemeniz işimizi kolaylaştırır. Çok daraltma yapılırsa oturma ve diz hareketi sıkışabileceği için ölçüyü üzerinizde kontrol etmeyi öneririz."],
   ["Daraltırken nelere dikkat edilir?", "Kotun cep yerleşimi, arkadaki dikiş çizgileri ve paça şekli daraltma sırasında bozulmamalıdır. Bu yüzden her kotta önce mevcut dikiş yapısına bakılır, sonra hangi dikişten pay alınacağına karar verilir. Paça kısmı da kısalacaksa iki işlem birlikte planlanır; kısaltma ayrıntıları için kot paça kısaltma sayfamıza bakabilirsiniz."],
-  ["Fiyat ve teslim", "Kot pantolon bacak veya bel daraltma ₺200'den başlar. Net fiyat daraltılacak yer sayısına ve kumaşa göre fotoğrafla söylenir. Normal işler aynı gün, acil işler 1–2 saatte teslim edilir; eve ve otele alım-teslim yapılır. Fiyatlara KDV dahil değildir."],
+  ["Fiyat ve teslim", "Kot pantolon bacak veya bel daraltma ₺200'den başlar. Net fiyat daraltılacak yer sayısına ve kumaşa göre fotoğrafla söylenir. Normal işler aynı gün, acil işler 1–2 saatte teslim edilir; eve ve otele alım-teslim yapılır. Fiyatlara KDV dahildir."],
 ];
 
 const jsonLd = {
@@ -178,7 +178,7 @@ export default function Page() {
               </div>
             </div>
             <p style={{ fontSize: '.76rem', color: 'rgba(255,255,255,.4)', marginTop: '1.4rem', fontStyle: 'italic' }}>
-              * Fiyatlar başlangıç fiyatıdır; daraltılacak yer sayısına ve streç oranına göre değişebilir. KDV dahil değildir.
+              * Fiyatlar başlangıç fiyatıdır; daraltılacak yer sayısına ve streç oranına göre değişebilir. KDV dahildir.
             </p>
           </div>
         </section>

@@ -46,7 +46,7 @@ const FAQ: [string, string][] = [
   ["Kot paçasını kısaltırken ayakkabıyla mı ölçüyorsunuz?", "Evet. Kot, giyeceğiniz ayakkabıyla birlikte ve normal bel hizasında dururken işaretlenir. Uzaktan çalışıyorsanız hangi ayakkabıyla giyeceğinizi WhatsApp'tan yazmanız yeterli."],
   ["Streç kot ile sert kot aynı fiyata mı kısalır?", "Kot paça kısaltma her ikisinde de ₺200'den başlar. Kumaşın kalınlığı ve işin kapsamı kesin tutarı etkileyebilir; fotoğrafla net fiyat söylenir."],
   ["Kısaltma sonrası kotun duruşu bozulur mu?", "Makul bir kısaltmada bozulmaz. Çok fazla kısaltma gerekiyorsa diz ve baldır hizasındaki kalıbın etkilenebileceğini, fotoğrafa bakarak önceden söyleriz."],
-  ["Ödemeyi hangi para birimleriyle yapabilirim?", "Tüm para birimleriyle ödeme kabul ediyoruz; nakit veya kartla ödeyebilirsiniz. Fiyatlara KDV dahil değildir."],
+  ["Ödemeyi hangi para birimleriyle yapabilirim?", "Tüm para birimleriyle ödeme kabul ediyoruz; nakit veya kartla ödeyebilirsiniz. Fiyatlara KDV dahildir."],
 ];
 
 // Sayfaya özgü rehber içeriği (kot kümesinde sayfaları farklı niyetlere ayırır).
@@ -55,7 +55,7 @@ const GUIDE: [string, string][] = [
   ["Sert denim ile streç kot aynı şekilde mi kısalır?", "Hayır. Sert, kalın denimde paça kıvrımı dik durur ve dikiş yerinde kumaş kalınlığı artar; bu yüzden kalın kota uygun makine ve iplikle çalışırız. Streç kotta ise kumaş esnediği için dikişin de esnemeye uyması gerekir. Fotoğrafta kumaşın cinsini görebiliyorsak ya da etiketteki içerik bilgisini yazarsanız işlemi ona göre planlarız."],
   ["Ne kadar kısaltılabilir?", "Paçada kıvrılacak pay yeterliyse birkaç santimden çok daha fazlası kısaltılabilir. Fakat çok fazla kısaltma, kotun diz ve baldır hizasındaki kalıbını bozabilir; bu durumda pantolonun formu bozulmadan hangi boya kadar inileceğini fotoğrafa bakarak söyleriz. Kısaltma sonrası paçanın geniş kalması hâlinde daraltma da yapılır."],
   ["Hangi durumda başka bir işlem gerekir?", "Paça dikiş izini aynen korumak istiyorsanız orijinal kot paça yapımı sayfamıza bakın. Kotun bacak veya bel kısmı da bolsa kot pantolon daraltma sayfamızdaki seçenekler size daha uygundur. Kotunuzun paçası yırtıldıysa ya da yıprandıysa kısaltmayla birlikte onarım yapılabilir; bunun için paçanın yakın fotoğrafı yeterlidir."],
-  ["Fiyat nasıl belirlenir?", "Kot paça kısaltma ₺200'den başlar. Kumaşın kalınlığı ve işin kapsamı fiyatı etkiler; kesin tutarı fotoğrafı gördükten sonra WhatsApp'tan söyleriz. Fiyatlara KDV dahil değildir; ödemeyi tüm para birimleriyle, nakit veya kartla yapabilirsiniz."],
+  ["Fiyat nasıl belirlenir?", "Kot paça kısaltma ₺200'den başlar. Kumaşın kalınlığı ve işin kapsamı fiyatı etkiler; kesin tutarı fotoğrafı gördükten sonra WhatsApp'tan söyleriz. Fiyatlara KDV dahildir; ödemeyi tüm para birimleriyle, nakit veya kartla yapabilirsiniz."],
 ];
 
 const jsonLd = {
@@ -179,7 +179,7 @@ export default function Page() {
               </div>
             </div>
             <p style={{ fontSize: '.76rem', color: 'rgba(255,255,255,.4)', marginTop: '1.4rem', fontStyle: 'italic' }}>
-              * Fiyatlar başlangıç fiyatıdır; kumaş kalınlığına ve kaç santim kısaltılacağına göre değişebilir. KDV dahil değildir.
+              * Fiyatlar başlangıç fiyatıdır; kumaş kalınlığına ve kaç santim kısaltılacağına göre değişebilir. KDV dahildir.
             </p>
           </div>
         </section>

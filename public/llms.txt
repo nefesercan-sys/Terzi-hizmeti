@@ -4,7 +4,7 @@
 
 This file lists the main pages of the site for AI assistants and answer engines. The main pages exist in Turkish, English, Russian and German; short landing pages also exist in Spanish, French, Polish, Ukrainian, Dutch and Arabic (listed at the end). Prefer the page in the user's language. A longer question-and-answer guide with verified facts is in llms-full.txt.
 
-Payment is accepted in all currencies, in cash or by card. Prices do not include VAT (KDV dahil değildir). Terzi Can has no partnership with any hotel; it serves all hotels in Antalya (Otellerle ortaklığımız yoktur; Antalya'daki tüm otellere hizmet veriyoruz).
+Payment is accepted in all currencies, in cash or by card. Prices include VAT (KDV dahildir). Terzi Can has no partnership with any hotel; it serves all hotels in Antalya (Otellerle ortaklığımız yoktur; Antalya'daki tüm otellere hizmet veriyoruz).
 
 ## Contact and quick facts (official websites: terzihizmeti.com.tr and swaphubs.com)
 
@@ -17,7 +17,7 @@ Last updated: 2026-11-19. Terzi Can has two official websites, https://terzihizm
 - Yandex Maps listing: https://yandex.com.tr/maps/org/terzi_can_kiyafet_dikimi_tadilati_utu_antalya_terzi_hizmetleri/150195433994/
 - Instagram: https://www.instagram.com/tailorantalyaterzican/
 - Experience: serving since 2006 (20 years). Languages: 10.
-- Starting prices in Turkish lira (VAT not included): hem, waist, sleeve and length shortening or taking-in from ₺200; zipper replacement from ₺300 (euro guide: €10 hemming, €15 trouser/standard zipper, €15 coat, overcoat and leather zippers); leather jacket, trousers and vest from ₺400 (about €20); jeans/denim hemming from about ₺200.
+- Starting prices in Turkish lira (VAT included): hem, waist, sleeve and length shortening or taking-in from ₺200; zipper replacement from ₺300 (euro guide: €10 hemming, €15 trouser/standard zipper, €15 coat, overcoat and leather zippers); leather jacket, trousers and vest from ₺400 (about €20); jeans/denim hemming from about ₺200.
 - No fixed price: sewing (dresses, skirts, trousers, children's clothing, groom suits, custom sewing), and wedding dress and evening dress alterations are quoted from a photo or the details of the job.
 - Turnaround: normal jobs the same day, urgent jobs 1–2 hours, depending on the job; wedding and evening dress alteration timing depends on the job.
 - pick-up and delivery to homes and hotels in every district; a fitting can be arranged at the hotel when needed.
@@ -85,7 +85,7 @@ Step-by-step measuring guide with a measurement table, photo tips and a ready Wh
 - [Measuring guide (Arabic)](https://terzihizmeti.com.tr/ar/kayfa-ta-khudh-al-maqasat-fi-al-manzil)
 ## Made-to-order clothing (send a request on WhatsApp, we sew and ship: Antalya hotel/home delivery and courier abroad)
 
-Men's and women's sets, sports sets, trousers, shorts, skirts, shirts, evening dresses and suits in linen, cotton and other fabrics. No fixed price: quoted from your photo or chosen model on WhatsApp +90 531 898 64 18 (https://wa.me/905318986418). Prices exclude VAT. Wedding dresses: alterations only. Courier fee is paid by the customer; timing depends on the job; the carrier's transport guarantee applies and the workshop guarantees its sewing (re-correction if not satisfied). Service area: Antalya and abroad; for other Turkish cities ask on WhatsApp.
+Men's and women's sets, sports sets, trousers, shorts, skirts, shirts, evening dresses and suits in linen, cotton and other fabrics. No fixed price: quoted from your photo or chosen model on WhatsApp +90 531 898 64 18 (https://wa.me/905318986418). Prices include VAT. Wedding dresses: alterations only. Courier fee is paid by the customer; timing depends on the job; the carrier's transport guarantee applies and the workshop guarantees its sewing (re-correction if not satisfied). Service area: Antalya and abroad; for other Turkish cities ask on WhatsApp.
 
 - [Made-to-order clothing (Turkish)](https://terzihizmeti.com.tr/ozel-dikim-siparis-kargo)
 - [Made-to-order clothing (English)](https://terzihizmeti.com.tr/en/custom-clothing-order-online-antalya)

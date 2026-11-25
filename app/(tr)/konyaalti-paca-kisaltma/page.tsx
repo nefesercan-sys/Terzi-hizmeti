@@ -45,7 +45,7 @@ const FAQ: [string, string][] = [
   ["Takım elbise pantolonunun paçası kısaltılır mı?", "Evet. Kumaş pantolonda paça görünmez dikişle kapatılır, boy giyeceğiniz ayakkabıyla işaretlenir. Manşetli pantolonlarda manşet yeniden yapılır."],
   ["Astarlı etek kısaltılırsa astar da kısalır mı?", "Evet. Astarlı eteklerde astar da yeni boya göre kısaltılır, böylece etek ucunda astar dışarı taşmaz."],
   ["Konyaaltı'nda otelde kalıyorum, servis gelir mi?", "Evet. Konyaaltı'ndaki otellere alım-teslim yapıyoruz; gerekirse deneme için otelde buluşuruz. Otellerle ortaklığımız yoktur, Antalya'daki tüm otellere hizmet veriyoruz."],
-  ["Paça kısaltma için hangi para birimleriyle ödeme yapılır?", "Tüm para birimleriyle ödeme kabul ediyoruz; nakit veya kartla ödeyebilirsiniz. Fiyatlara KDV dahil değildir."],
+  ["Paça kısaltma için hangi para birimleriyle ödeme yapılır?", "Tüm para birimleriyle ödeme kabul ediyoruz; nakit veya kartla ödeyebilirsiniz. Fiyatlara KDV dahildir."],
 ];
 
 // Sayfaya özgü rehber içeriği (kot kümesinde sayfaları farklı niyetlere ayırır).
@@ -54,7 +54,7 @@ const GUIDE: [string, string][] = [
   ["Keten, gabardin ve ince kumaşlar", "İnce ve dökümlü kumaşlarda paçayı sıkı çekmemek gerekir; aksi halde paçada büzülme olur. Keten gibi kolay kırışan kumaşlarda ise dikiş sonrası ütü ile paçanın oturması sağlanır. Kumaş cinsini fotoğrafta ya da mesajda belirtirseniz işi ona göre planlarız."],
   ["Etek kısaltma", "Düz, pilili ya da kloş eteklerin kısaltılma yöntemi birbirinden farklıdır. Düz eteklerde etek ucu düz kıvrılırken kloş eteklerde etek ucu daireseldir ve kenar daha dar bir kıvırmayla bitirilir. Astarlı eteklerde astar da yeni boya göre kısaltılır. Etek boyunu eteği giyerek ve düz dururken belirleriz."],
   ["Konyaaltı'nda eve ve otele servis", "Konyaaltı, Hurma, Liman, Sarısu, Uncalı ve Gürsu gibi mahallelerde eve ve otele alım-teslim yapılır. Pantolonunuzu adresinizden alır, işi tamamladıktan sonra yine adrese teslim ederiz. Gerekirse deneme için otelde buluşuruz. Otellerle ortaklığımız yoktur; Antalya'daki tüm otellere hizmet veriyoruz."],
-  ["Fiyat ve ödeme", "Pantolon, kot ve etek paça kısaltma ₺200'den başlar. Net fiyat işin fotoğrafına göre WhatsApp'tan söylenir. Fiyatlara KDV dahil değildir. Tüm para birimleriyle, nakit veya kartla ödeme yapabilirsiniz. Kotlar için ayrı sayfalarımızda daha ayrıntılı bilgi bulabilirsiniz."],
+  ["Fiyat ve ödeme", "Pantolon, kot ve etek paça kısaltma ₺200'den başlar. Net fiyat işin fotoğrafına göre WhatsApp'tan söylenir. Fiyatlara KDV dahildir. Tüm para birimleriyle, nakit veya kartla ödeme yapabilirsiniz. Kotlar için ayrı sayfalarımızda daha ayrıntılı bilgi bulabilirsiniz."],
 ];
 
 const jsonLd = {

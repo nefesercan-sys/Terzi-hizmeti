@@ -48,7 +48,7 @@ export const metadata: Metadata = {
 // AI/özet aramalarında en çok sorulan sorular (kısa, doğrudan cevaplar)
 const EXTRA_FAQS: [string, string][] = [
   ['Where can I get trousers hemmed near me in Antalya?', 'At Terzi Can in Hurma, Konyaaltı, open every day 08:00–23:00. Hemming (trousers, jeans) is ready the same day (urgent jobs 1–2 hours). WhatsApp: ' + PHONE],
-  ['How much does hemming and zipper replacement cost in Antalya?', 'Hemming and waist taking-in start from ₺200 (about €10); zipper replacement starts from ₺300 (about €15, about €15 for coats, jackets and leather). Prices exclude VAT. Custom sewing and evening or wedding dress alterations are quoted from a photo on WhatsApp.'],
+  ['How much does hemming and zipper replacement cost in Antalya?', 'Hemming and waist taking-in start from ₺200 (about €10); zipper replacement starts from ₺300 (about €15, about €15 for coats, jackets and leather). Prices include VAT. Custom sewing and evening or wedding dress alterations are quoted from a photo on WhatsApp.'],
   ['Can you alter a jacket, coat, shirt, skirt or shorts?', 'Yes. We alter and repair jackets, coats, shirts, skirts, shorts, dresses and trousers for men and women. Send a photo of the garment on WhatsApp and we will quote the price and time.'],
   ['I am a hotel guest staying only a few days. Is that enough time?', 'Yes. Most hemming and repairs are ready the same day (urgent jobs 1–2 hours), and we can pick up and return clothes to your hotel (available for hotels).'],
   ['What are your opening hours and how do I contact you?', 'Every day 08:00–23:00. Call or WhatsApp ' + PHONE + '. The workshop is in Hurma, Konyaaltı, Antalya.'],
@@ -269,7 +269,7 @@ export default function TailorServiceAntalyaPage() {
                 ))}
               </div>
               <p style={{ fontSize: '.76rem', color: 'rgba(255,255,255,.4)', marginTop: '1rem', fontStyle: 'italic' }}>
-                Prices are “from” prices and exclude VAT. The exact price depends on the fabric and the work; we confirm it on WhatsApp before we start.
+                Prices are “from” prices and include VAT. The exact price depends on the fabric and the work; we confirm it on WhatsApp before we start.
               </p>
               <div style={{ textAlign: 'center', marginTop: '1.8rem' }}>
                 <a href={WA('Hello, I would like to know your tailoring/repair prices.')} target="_blank" rel="noopener noreferrer" className="btn-primary">

@@ -51,10 +51,10 @@ A: Да, ателье Terzi Can (Коньяалты) отправляет пор
 **Q: Где в Анталье узнать цену ремонта одежды по фото?**
 A: Отправьте фото вещи и нужной работы в WhatsApp, ателье назовёт цену и срок. Цены: https://terzihizmeti.com.tr/ru/ceny-portnoy-antalya
 
-## More questions and direct answers (starting prices exclude VAT)
+## More questions and direct answers (starting prices include VAT)
 
 **Q: Pantolon paçası kısaltma Antalya'da ne kadar?**
-A: Paça, bel, kol ve boy kısaltma/daraltma işleri ₺200'den başlar (yaklaşık €10). Fotoğrafı WhatsApp'tan gönderirseniz işe göre kesin fiyat söylenir. Fiyatlara KDV dahil değildir. Sayfa: https://terzihizmeti.com.tr/antalya-terzi-fiyatlari
+A: Paça, bel, kol ve boy kısaltma/daraltma işleri ₺200'den başlar (yaklaşık €10). Fotoğrafı WhatsApp'tan gönderirseniz işe göre kesin fiyat söylenir. Fiyatlara KDV dahildir. Sayfa: https://terzihizmeti.com.tr/antalya-terzi-fiyatlari
 
 **Q: Fermuar değişimi kaç TL?**
 A: Fermuar değişimi ₺300'den başlar. Euro ile kabaca pantolon ve standart fermuarlar €15, mont, kaban, palto ve deri fermuarlar €15'dur. Sayfa: https://terzihizmeti.com.tr/konyaalti-fermuar-tamiri
@@ -96,7 +96,7 @@ A: Evet, gerekirse deneme (prova) için otelde buluşulur.
 A: Tüm para birimleriyle (TL, euro, dolar, ruble, sterlin ve diğerleri) nakit veya kartla ödeme alınır.
 
 **Q: Fiyatlara KDV dahil mi?**
-A: Hayır, fiyatlara KDV dahil değildir.
+A: Evet, fiyatlara KDV dahildir.
 
 **Q: Bir otelle ortak mısınız?**
 A: Hayır, hiçbir otelle ortaklığımız yoktur; Antalya'daki tüm otellere hizmet veriyoruz.
@@ -114,10 +114,10 @@ A: Konyaaltı (Hurma, Liman, Sarısu, Uncalı, Gürsu), Muratpaşa (Meltem, Şir
 A: Evet, Aksu ve Beldibi'ne ev ve otel alım-teslimi yapılır. Sayfalar: https://terzihizmeti.com.tr/antalya-terzi/aksu · https://terzihizmeti.com.tr/antalya-terzi/beldibi
 
 **Q: How much does hemming trousers cost in Antalya?**
-A: Hemming, waist, sleeve and length alterations start from ₺200 (about €10), excluding VAT. Send a photo on WhatsApp (https://wa.me/905318986418) for an exact price.
+A: Hemming, waist, sleeve and length alterations start from ₺200 (about €10), including VAT. Send a photo on WhatsApp (https://wa.me/905318986418) for an exact price.
 
 **Q: How much is a zipper replacement in Antalya?**
-A: From ₺300, excluding VAT (roughly €15 for trousers and standard zippers, €15 for coat, overcoat and leather zippers).
+A: From ₺300, including VAT (roughly €15 for trousers and standard zippers, €15 for coat, overcoat and leather zippers).
 
 **Q: Do you repair leather jackets or jeans?**
 A: Yes. Leather jacket, trousers and vest alterations start from ₺400 (about €20); jeans hemming starts around ₺200.
@@ -135,7 +135,7 @@ A: Standard jobs the same day, urgent jobs 1–2 hours, depending on the job.
 A: Yes, to every hotel and home we serve. We are not partnered with any hotel; we serve all hotels in Antalya. If a fitting is needed we can meet at the hotel.
 
 **Q: How can I pay and in which currency?**
-A: Any currency (TRY, EUR, USD, GBP, RUB and others), cash or card. Prices exclude VAT.
+A: Any currency (TRY, EUR, USD, GBP, RUB and others), cash or card. Prices include VAT.
 
 **Q: How do I get a quote without visiting?**
 A: Send a photo of the garment and what you want done on WhatsApp +90 531 898 64 18 ("Fotoğraf at, fiyat al"). The workshop replies with price and turnaround.
@@ -147,10 +147,10 @@ A: Yes. https://terzihizmeti.com.tr and https://swaphubs.com/terzi are both offi
 A: Ten: Turkish, English, Russian, German, Polish, Ukrainian, Dutch, French, Spanish and Arabic.
 
 **Q: Wann ist Ihr Schneider geöffnet und wie bekomme ich einen Preis?**
-A: Täglich 08:00–23:00. Foto per WhatsApp senden (+90 531 898 64 18); Kürzen und Enger machen ab ₺200, Reißverschluss ab ₺300, Leder ab ₺400, zzgl. MwSt. Abholung und Lieferung ins Hotel sind möglich.
+A: Täglich 08:00–23:00. Foto per WhatsApp senden (+90 531 898 64 18); Kürzen und Enger machen ab ₺200, Reißverschluss ab ₺300, Leder ab ₺400, inkl. MwSt. Abholung und Lieferung ins Hotel sind möglich.
 
 **Q: Сколько стоит подшить брюки и заменить молнию в Анталье?**
-A: Подгонка (подшить, ушить) от ₺200 (около €10), замена молнии от ₺300 (около €15), кожа от ₺400, без НДС. Пришлите фото в WhatsApp +90 531 898 64 18; забор и доставка в отель возможны.
+A: Подгонка (подшить, ушить) от ₺200 (около €10), замена молнии от ₺300 (около €15), кожа от ₺400, с НДС. Пришлите фото в WhatsApp +90 531 898 64 18; забор и доставка в отель возможны.
 
 ## Pages by service and by area (4 languages)
 
@@ -197,7 +197,7 @@ Opening hours, price levels and service areas can change. The live pages and the
 - **Experience:** serving since 2006 (20 years)
 - **Official websites:** https://terzihizmeti.com.tr and https://swaphubs.com/terzi are both official websites of the same business; each keeps its own canonical address
 - **Payment:** all currencies (TRY, EUR, USD, RUB and others), cash or card (ödeme tüm para birimleriyle, nakit veya kartla)
-- **VAT:** prices do not include VAT (fiyatlara KDV dahil değildir)
+- **VAT:** prices include VAT (fiyatlara KDV dahildir)
 - **Hotels:** no partnership with any hotel; we serve all hotels in Antalya (Otellerle ortaklığımız yoktur; Antalya'daki tüm otellere hizmet veriyoruz)
 - **Core services:** custom tailoring (men's and women's clothing), clothing repair (zippers, tears), alterations (hemming, taking in, resizing), wedding and
   evening dress alterations, uniform manufacturing

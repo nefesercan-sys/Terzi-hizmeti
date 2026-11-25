@@ -9,9 +9,9 @@ const T: Record<L, { h: string; cols: [string, string, string]; rows: [string, s
   tr: {
     h: 'Kısa cevap: işlem, başlangıç fiyatı ve süre', cols: ['İşlem', 'Başlangıç fiyatı', 'Süre'],
     rows: [
-      ['Paça, bel, kol, boy kısaltma/daraltma', "₺200'den (≈ €10)", 'Normal iş aynı gün, acil 1–2 saat'],
-      ['Fermuar değişimi', "₺300'den (≈ €15; mont/kaban/palto/deri €15)", 'Aynı gün, acil 1–2 saat'],
-      ['Deri ceket, pantolon, yelek tadilatı', "₺400'den (≈ €20)", 'İşin durumuna göre'],
+      ['Paça, bel, kol, boy kısaltma/daraltma', "₺200'den (≈ €4)", 'Normal iş aynı gün, acil 1–2 saat'],
+      ['Fermuar değişimi', "₺300'den (≈ €5; mont/kaban/palto/deri €5)", 'Aynı gün, acil 1–2 saat'],
+      ['Deri ceket, pantolon, yelek tadilatı', "₺400'den (≈ €7)", 'İşin durumuna göre'],
       ['Kot paça kısaltma ve daraltma', "≈ ₺200'den", 'Aynı gün'],
       ['Kaban, palto kısaltma/daraltma', "₺200'den", 'Aynı gün'],
       ['Gelinlik ve abiye tadilatı', 'Fotoğrafa veya işin detayına göre', 'İşin durumuna göre'],
@@ -22,9 +22,9 @@ const T: Record<L, { h: string; cols: [string, string, string]; rows: [string, s
   en: {
     h: 'Quick answer: service, starting price and turnaround', cols: ['Service', 'Starting price', 'Turnaround'],
     rows: [
-      ['Hem, waist, sleeve and length shortening/taking-in', 'From ₺200 (≈ €10)', 'Standard same day, urgent 1–2 hours'],
-      ['Zipper replacement', 'From ₺300 (≈ €15; coat/overcoat/leather €15)', 'Same day, urgent 1–2 hours'],
-      ['Leather jacket, trousers, vest', 'From ₺400 (≈ €20)', 'Depends on the job'],
+      ['Hem, waist, sleeve and length shortening/taking-in', 'From ₺200 (≈ €4)', 'Standard same day, urgent 1–2 hours'],
+      ['Zipper replacement', 'From ₺300 (≈ €5; coat/overcoat/leather €5)', 'Same day, urgent 1–2 hours'],
+      ['Leather jacket, trousers, vest', 'From ₺400 (≈ €7)', 'Depends on the job'],
       ['Jeans hemming and taking-in', 'From ≈ ₺200', 'Same day'],
       ['Overcoat shortening/taking-in', 'From ₺200', 'Same day'],
       ['Wedding and evening dress alterations', 'By photo or job details', 'Depending on the job'],
@@ -35,9 +35,9 @@ const T: Record<L, { h: string; cols: [string, string, string]; rows: [string, s
   ru: {
     h: 'Коротко: работа, цена «от» и срок', cols: ['Работа', 'Цена от', 'Срок'],
     rows: [
-      ['Подшить, ушить: низ, талия, рукав, длина', 'От ₺200 (≈ €10)', 'Обычные — в тот же день, срочные 1–2 часа'],
-      ['Замена молнии', 'От ₺300 (≈ €15; пальто/куртка/кожа €15)', 'В тот же день, срочно 1–2 часа'],
-      ['Кожаная куртка, брюки, жилет', 'От ₺400 (≈ €20)', 'По состоянию работы'],
+      ['Подшить, ушить: низ, талия, рукав, длина', 'От ₺200 (≈ €4)', 'Обычные — в тот же день, срочные 1–2 часа'],
+      ['Замена молнии', 'От ₺300 (≈ €5; пальто/куртка/кожа €5)', 'В тот же день, срочно 1–2 часа'],
+      ['Кожаная куртка, брюки, жилет', 'От ₺400 (≈ €7)', 'По состоянию работы'],
       ['Джинсы: подшить, ушить', 'От ≈ ₺200', 'В тот же день'],
       ['Пальто: укоротить, ушить', 'От ₺200', 'В тот же день'],
       ['Переделка свадебных и вечерних платьев', 'По фото или деталям работы', 'Зависит от работы'],
@@ -48,9 +48,9 @@ const T: Record<L, { h: string; cols: [string, string, string]; rows: [string, s
   de: {
     h: 'Kurz: Leistung, Ab-Preis und Dauer', cols: ['Leistung', 'Ab-Preis', 'Dauer'],
     rows: [
-      ['Kürzen/Enger machen: Saum, Taille, Ärmel, Länge', 'Ab ₺200 (≈ €10)', 'Normal am selben Tag, dringend 1–2 Stunden'],
-      ['Reißverschlusswechsel', 'Ab ₺300 (≈ €15; Mantel/Jacke/Leder €15)', 'Selber Tag, dringend 1–2 Stunden'],
-      ['Lederjacke, -hose, -weste ändern', 'Ab ₺400 (≈ €20)', 'Je nach Arbeit'],
+      ['Kürzen/Enger machen: Saum, Taille, Ärmel, Länge', 'Ab ₺200 (≈ €4)', 'Normal am selben Tag, dringend 1–2 Stunden'],
+      ['Reißverschlusswechsel', 'Ab ₺300 (≈ €5; Mantel/Jacke/Leder €5)', 'Selber Tag, dringend 1–2 Stunden'],
+      ['Lederjacke, -hose, -weste ändern', 'Ab ₺400 (≈ €7)', 'Je nach Arbeit'],
       ['Jeans kürzen und enger machen', 'Ab ≈ ₺200', 'Selber Tag'],
       ['Mantel kürzen/enger machen', 'Ab ₺200', 'Selber Tag'],
       ['Änderung von Braut- und Abendkleidern', 'Nach Foto oder Details der Arbeit', 'Je nach Arbeit'],

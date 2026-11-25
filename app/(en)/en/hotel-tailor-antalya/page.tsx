@@ -11,7 +11,7 @@ const WA_DEF = `https://wa.me/905318986418?text=${encodeURIComponent('Hello, I w
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Hotel Tailor Antalya: We Come to Belek, Lara, Kemer & Side" },
-  description: "Hotel tailor in Antalya: we come to you in Belek, Lara, Kemer, Side. Pick-up, hemming from ₺200 (~€10), same day.",
+  description: "Hotel tailor in Antalya: we come to you in Belek, Lara, Kemer, Side. Pick-up, hemming from ₺200 (~€4), same day.",
   keywords: ['hotel tailor Antalya', 'tailor Belek hotel', 'tailor Lara hotel', 'tailor Kemer hotel', 'tailor Side hotel', 'urgent clothing alteration Antalya', 'mobile tailor Antalya', 'dress alteration hotel Antalya'],
   alternates: withTwin({
     canonical: `${SITE}${BASE_PATH}`,
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 const FAQ: [string, string][] = [
   ['How does the mobile hotel tailor service work?', 'Share your hotel name, room number and a convenient time on WhatsApp. Our tailor comes to you, takes measurements or collects the item, and returns it repaired or altered.'],
   ['Do you offer pick-up and delivery to my hotel?', 'Yes, pick-up and delivery to hotels and homes in the Antalya districts is available. The repair or alteration itself is priced by the job.'],
-  ['How much do hemming and zipper repairs cost?', 'Hemming and taking in start from ₺200 (about €10). Zipper replacement starts from ₺300 (about €15), and from about €15 for coats, jackets and leather. Leather alterations start from ₺400 (about €20). Prices include VAT; the exact price depends on the job, so send a photo on WhatsApp for a quote.'],
+  ['How much do hemming and zipper repairs cost?', 'Hemming and taking in start from ₺200 (about €4). Zipper replacement starts from ₺300 (about €5), and from about €5 for coats, jackets and leather. Leather alterations start from ₺400 (about €7). Prices include VAT; the exact price depends on the job, so send a photo on WhatsApp for a quote.'],
   ['Which hotel districts do you cover?', 'We serve Belek, Lara, Güzeloba, Kemer and Side, and other Antalya districts on request.'],
   ['How long does an alteration or repair take?', 'Most alterations and repairs are completed the same day (urgent jobs 1–2 hours), depending on the job. For wedding or evening dresses, we recommend contacting us as early as possible.'],
   ['How can I pay?', 'You can pay in cash or by card, in any major currency.'],
@@ -101,7 +101,7 @@ export default function OtelBolgeleriEnHub() {
             <p className="hero-desc">
               Choose your district, share your hotel name and preferred time on WhatsApp — our tailor
               comes to you. Alterations and repairs, delivered directly to your
-              hotel. pick-up and delivery, hemming from ₺200 (about €10), most jobs
+              hotel. pick-up and delivery, hemming from ₺200 (about €4), most jobs
               done the same day.
             </p>
             <div className="hero-btns">

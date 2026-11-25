@@ -195,10 +195,10 @@ const REPAIR_CATEGORIES: Record<Lang, RepairCategory[]> = {
       rows: [['Skirt / Trousers Tailoring', 'By photo and the model you want'], ["Women's Dress Making", 'By photo and the model you want'], ['Groom Suit', 'By photo and the model you want'], ["Children's Clothing", 'By photo and the model you want']] },
     { icon: '🔧', title: 'Repair Services', keyword: 'clothing repair Antalya · zipper repair Konyaaltı',
       desc: 'Tears, seams, zippers — the everyday fixes clothing needs most.',
-      rows: [['Zipper Replacement (Trousers/Jeans)', '€15+'], ['Zipper Replacement (Coat/Jacket)', '€15+']] },
+      rows: [['Zipper Replacement (Trousers/Jeans)', '€5+'], ['Zipper Replacement (Coat/Jacket)', '€5+']] },
     { icon: '📏', title: 'Alterations', keyword: 'hemming Antalya · waist taking in Konyaaltı',
       desc: 'Precise fit adjustments so your clothing sits exactly right on your body.',
-      rows: [['Hemming (Trousers/Jeans/Skirt)', 'from €10'], ['Waist Taking In', 'from €10'], ['Sleeve Shortening', 'from €10'], ['Dress / Jacket Taking In', 'from €10'], ['Wedding & Evening Dress Alterations', 'By photo']] },
+      rows: [['Hemming (Trousers/Jeans/Skirt)', 'from €4'], ['Waist Taking In', 'from €4'], ['Sleeve Shortening', 'from €4'], ['Dress / Jacket Taking In', 'from €4'], ['Wedding & Evening Dress Alterations', 'By photo']] },
   ],
   ru: [
     { icon: '✂️', title: 'Пошив одежды', keyword: 'портной Анталья · пошив по меркам Коньяалты',
@@ -206,10 +206,10 @@ const REPAIR_CATEGORIES: Record<Lang, RepairCategory[]> = {
       rows: [['Пошив юбки / брюк', 'По фото и желаемой модели'], ['Пошив женского платья', 'По фото и желаемой модели'], ['Костюм жениха', 'По фото и желаемой модели'], ['Пошив детской одежды', 'По фото и желаемой модели']] },
     { icon: '🔧', title: 'Ремонт одежды', keyword: 'ремонт одежды Анталья · ремонт молнии Коньяалты',
       desc: 'Разрывы, швы, молнии — самый частый ремонт повседневной одежды.',
-      rows: [['Замена молнии (брюки/джинсы)', '€15+'], ['Замена молнии (пальто/куртка)', '€15+']] },
+      rows: [['Замена молнии (брюки/джинсы)', '€5+'], ['Замена молнии (пальто/куртка)', '€5+']] },
     { icon: '📏', title: 'Подгонка одежды', keyword: 'укорачивание брюк Анталья · заужение талии Коньяалты',
       desc: 'Точная подгонка по фигуре — чтобы одежда сидела идеально.',
-      rows: [['Укорачивание (брюки/джинсы/юбка)', 'от €10'], ['Заужение талии', 'от €10'], ['Укорачивание рукавов', 'от €10'], ['Заужение платья / пиджака', 'от €10'], ['Подгонка свадебного/вечернего платья', 'По фото']] },
+      rows: [['Укорачивание (брюки/джинсы/юбка)', 'от €4'], ['Заужение талии', 'от €4'], ['Укорачивание рукавов', 'от €4'], ['Заужение платья / пиджака', 'от €4'], ['Подгонка свадебного/вечернего платья', 'По фото']] },
   ],
   de: [
     { icon: '✂️', title: 'Schneiderdienste', keyword: 'Maßschneiderei Antalya · Konyaaltı',
@@ -217,10 +217,10 @@ const REPAIR_CATEGORIES: Record<Lang, RepairCategory[]> = {
       rows: [['Rock / Hose maßgeschneidert', 'Nach Foto und gewünschtem Modell'], ['Damenkleid maßgeschneidert', 'Nach Foto und gewünschtem Modell'], ['Herrenanzug (Bräutigam)', 'Nach Foto und gewünschtem Modell'], ['Kinderkleidung', 'Nach Foto und gewünschtem Modell']] },
     { icon: '🔧', title: 'Reparaturdienste', keyword: 'Kleidungsreparatur Antalya · Reißverschluss Konyaaltı',
       desc: 'Risse, Nähte, Reißverschlüsse — die alltäglichen Reparaturen, die Kleidung am meisten braucht.',
-      rows: [['Reißverschluss (Hose/Jeans)', '€15+'], ['Reißverschluss (Jacke/Mantel)', '€15+']] },
+      rows: [['Reißverschluss (Hose/Jeans)', '€5+'], ['Reißverschluss (Jacke/Mantel)', '€5+']] },
     { icon: '📏', title: 'Änderungsschneiderei', keyword: 'Hosen kürzen Antalya · Taille Konyaaltı',
       desc: 'Präzise Passformanpassungen, damit Ihre Kleidung genau richtig an Ihrem Körper sitzt.',
-      rows: [['Kürzen (Hose/Jeans/Rock)', 'ab €10'], ['Taille enger machen', 'ab €10'], ['Ärmel kürzen', 'ab €10'], ['Kleid / Jacke enger machen', 'ab €10'], ['Braut- & Abendkleid ändern', 'Per Foto']] },
+      rows: [['Kürzen (Hose/Jeans/Rock)', 'ab €4'], ['Taille enger machen', 'ab €4'], ['Ärmel kürzen', 'ab €4'], ['Kleid / Jacke enger machen', 'ab €4'], ['Braut- & Abendkleid ändern', 'Per Foto']] },
   ],
 };
 

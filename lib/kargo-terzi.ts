@@ -4,7 +4,7 @@
 // Sahip kuralları: kargo ücreti müşteriye aittir; süre işin durumuna göre; garanti = kargo firmasının taşıma garantisi + sahibin dikim/tadilat garantisi,
 // beğenilmezse tekrar tamir (para iadesi vaadi YOK); ödeme/gümrük/yurt dışı ayrıntıları WhatsApp'tan netleşir; Antalya dışındaki iller için "WhatsApp'tan sorun" (vaat yok);
 // alım-teslim YALNIZ Antalya ev/otel; kargo firması adı, kargo/gümrük ücreti rakamı, süre rakamı, ülke listesi YOK.
-// Fiyatlar: paça/bel/kol/boy ₺200'den (≈€10), fermuar ₺300'den (≈€15; mont/kaban/palto/deri €15), deri ₺400'den (≈€20), KDV dahil; abiye/gelinlik tadilatı fotoğrafa göre.
+// Fiyatlar: paça/bel/kol/boy ₺200'den (≈€4), fermuar ₺300'den (≈€5; mont/kaban/palto/deri €5), deri ₺400'den (≈€7), KDV dahil; abiye/gelinlik tadilatı fotoğrafa göre.
 // Swaphubs online sayfalarından farklı slug/H1/açı/SSS (kanibalizasyon önlemi).
 // ============================================================
 export type KLang = 'tr' | 'en' | 'ru' | 'de' | 'es' | 'fr' | 'pl' | 'uk' | 'nl' | 'ar';
@@ -39,9 +39,9 @@ export const KARGO: Record<KLang, KargoCopy> = {
     ],
     pricesTitle: 'Başlangıç fiyatları (KDV dahil)',
     prices: [
-      "Paça, bel, kol ve boy kısaltma-daraltma: ₺200'den (yaklaşık €10)",
-      "Fermuar değişimi: ₺300'den (yaklaşık €15; mont, kaban, palto ve deri €15)",
-      "Deri ceket, pantolon ve yelek tadilatı: ₺400'den (yaklaşık €20)",
+      "Paça, bel, kol ve boy kısaltma-daraltma: ₺200'den (yaklaşık €4)",
+      "Fermuar değişimi: ₺300'den (yaklaşık €5; mont, kaban, palto ve deri €5)",
+      "Deri ceket, pantolon ve yelek tadilatı: ₺400'den (yaklaşık €7)",
       "Kot işleri: yaklaşık ₺200'den",
       "Gelinlik ve abiye tadilatı: fotoğrafa veya işin detayına göre",
       'Dikim, özel dikim ve abiye tadilatı: fotoğrafa veya işin detayına, istenilen modele göre; ölçünün nasıl alınacağı WhatsApp\'tan netleştirilir',
@@ -90,9 +90,9 @@ export const KARGO: Record<KLang, KargoCopy> = {
     ],
     pricesTitle: 'Starting prices (VAT included)',
     prices: [
-      'Hemming, waist, sleeve and length changes: from ₺200 (about €10)',
-      'Zipper replacement: from ₺300 (about €15; coat, jacket and leather €15)',
-      'Leather jacket, trousers and vest alterations: from ₺400 (about €20)',
+      'Hemming, waist, sleeve and length changes: from ₺200 (about €4)',
+      'Zipper replacement: from ₺300 (about €5; coat, jacket and leather €5)',
+      'Leather jacket, trousers and vest alterations: from ₺400 (about €7)',
       'Jeans work: from about ₺200',
       'Wedding and evening dress alterations: by photo or job details',
       'Sewing, made-to-measure and evening dress alterations: by photo, job details or the model you want; how measurements are taken is clarified on WhatsApp',
@@ -140,9 +140,9 @@ export const KARGO: Record<KLang, KargoCopy> = {
     ],
     pricesTitle: 'Цены «от» (с НДС)',
     prices: [
-      'Подшить, ушить, рукав и длина: от ₺200 (около €10)',
-      'Замена молнии: от ₺300 (около €15; пальто, куртка и кожа €15)',
-      'Кожаная куртка, брюки и жилет: от ₺400 (около €20)',
+      'Подшить, ушить, рукав и длина: от ₺200 (около €4)',
+      'Замена молнии: от ₺300 (около €5; пальто, куртка и кожа €5)',
+      'Кожаная куртка, брюки и жилет: от ₺400 (около €7)',
       'Джинсы: примерно от ₺200',
       'Свадебные и вечерние платья (переделка): по фото или деталям работы',
       'Пошив, индивидуальный пошив и переделка вечерних платьев: по фото, деталям работы или желаемой модели; как снимаются мерки, уточняется в WhatsApp',
@@ -190,9 +190,9 @@ export const KARGO: Record<KLang, KargoCopy> = {
     ],
     pricesTitle: 'Preise ab (inkl. MwSt.)',
     prices: [
-      'Kürzen, Taille, Ärmel und Länge: ab ₺200 (ca. €10)',
-      'Reißverschlusswechsel: ab ₺300 (ca. €15; Mantel, Jacke und Leder €15)',
-      'Lederjacke, -hose und -weste: ab ₺400 (ca. €20)',
+      'Kürzen, Taille, Ärmel und Länge: ab ₺200 (ca. €4)',
+      'Reißverschlusswechsel: ab ₺300 (ca. €5; Mantel, Jacke und Leder €5)',
+      'Lederjacke, -hose und -weste: ab ₺400 (ca. €7)',
       'Jeans: ab ca. ₺200',
       'Brautkleid- und Abendkleidänderungen: nach Foto oder Arbeitsumfang',
       'Nähen, Maßanfertigung und Abendkleidänderungen: nach Foto, Arbeitsumfang oder gewünschtem Modell; wie Maße genommen werden, klären wir per WhatsApp',
@@ -240,9 +240,9 @@ export const KARGO: Record<KLang, KargoCopy> = {
     ],
     pricesTitle: 'Precios desde (IVA incluido)',
     prices: [
-      'Bajos, cintura, mangas y largo: desde ₺200 (unos €10)',
-      'Cambio de cremallera: desde ₺300 (unos €15; abrigo, chaqueta y cuero €15)',
-      'Chaqueta, pantalón y chaleco de cuero: desde ₺400 (unos €20)',
+      'Bajos, cintura, mangas y largo: desde ₺200 (unos €4)',
+      'Cambio de cremallera: desde ₺300 (unos €5; abrigo, chaqueta y cuero €5)',
+      'Chaqueta, pantalón y chaleco de cuero: desde ₺400 (unos €7)',
       'Vaqueros: desde unos ₺200',
       'Arreglos de vestidos de novia y de fiesta: según la foto o el trabajo',
       'Costura, confección a medida y arreglos de vestidos de fiesta: según la foto, el trabajo o el modelo deseado; cómo se toman las medidas se aclara por WhatsApp',
@@ -290,9 +290,9 @@ export const KARGO: Record<KLang, KargoCopy> = {
     ],
     pricesTitle: 'Prix à partir de (TVA comprise)',
     prices: [
-      'Ourlet, taille, manches et longueur : dès ₺200 (environ 10 €)',
-      'Changement de fermeture éclair : dès ₺300 (environ 15 € ; manteau, veste et cuir 15 €)',
-      'Veste, pantalon et gilet en cuir : dès ₺400 (environ 20 €)',
+      'Ourlet, taille, manches et longueur : dès ₺200 (environ 4 €)',
+      'Changement de fermeture éclair : dès ₺300 (environ 5 € ; manteau, veste et cuir 5 €)',
+      'Veste, pantalon et gilet en cuir : dès ₺400 (environ 7 €)',
       'Jeans : dès environ ₺200',
       'Retouches de robes de mariée et de soirée : selon la photo ou le travail',
       'Couture, sur-mesure et retouches de robes de soirée : selon la photo, le travail ou le modèle souhaité ; la prise de mesures est précisée sur WhatsApp',
@@ -340,9 +340,9 @@ export const KARGO: Record<KLang, KargoCopy> = {
     ],
     pricesTitle: 'Ceny od (z VAT)',
     prices: [
-      'Nogawki, talia, rękawy i długość: od ₺200 (ok. 10 €)',
-      'Wymiana zamka: od ₺300 (ok. 15 €; płaszcz, kurtka i skóra 15 €)',
-      'Kurtka, spodnie i kamizelka skórzane: od ₺400 (ok. 20 €)',
+      'Nogawki, talia, rękawy i długość: od ₺200 (ok. 4 €)',
+      'Wymiana zamka: od ₺300 (ok. 5 €; płaszcz, kurtka i skóra 5 €)',
+      'Kurtka, spodnie i kamizelka skórzane: od ₺400 (ok. 7 €)',
       'Jeansy: od ok. ₺200',
       'Przeróbki sukien ślubnych i wieczorowych: według zdjęcia lub zakresu pracy',
       'Szycie, szycie na miarę i przeróbki sukien wieczorowych: według zdjęcia, zakresu pracy lub wybranego modelu; sposób zdjęcia miar ustalamy na WhatsApp',
@@ -390,9 +390,9 @@ export const KARGO: Record<KLang, KargoCopy> = {
     ],
     pricesTitle: 'Ціни від (з ПДВ)',
     prices: [
-      'Підшити, звузити, рукав і довжина: від ₺200 (близько €10)',
-      'Заміна блискавки: від ₺300 (близько €15; пальто, куртка й шкіра €15)',
-      'Шкіряна куртка, штани й жилет: від ₺400 (близько €20)',
+      'Підшити, звузити, рукав і довжина: від ₺200 (близько €4)',
+      'Заміна блискавки: від ₺300 (близько €5; пальто, куртка й шкіра €5)',
+      'Шкіряна куртка, штани й жилет: від ₺400 (близько €7)',
       'Джинси: приблизно від ₺200',
       'Весільні та вечірні сукні (переробка): за фото або деталями роботи',
       'Пошиття, індивідуальний пошив і переробка вечірніх суконь: за фото, деталями роботи або бажаною моделлю; як знімаються мірки, уточнюється у WhatsApp',
@@ -440,9 +440,9 @@ export const KARGO: Record<KLang, KargoCopy> = {
     ],
     pricesTitle: 'Prijzen vanaf (incl. btw)',
     prices: [
-      'Pijpen, taille, mouwen en lengte: vanaf ₺200 (ongeveer €10)',
-      'Rits vervangen: vanaf ₺300 (ongeveer €15; jas, jasje en leer €15)',
-      'Leren jas, broek en vest: vanaf ₺400 (ongeveer €20)',
+      'Pijpen, taille, mouwen en lengte: vanaf ₺200 (ongeveer €4)',
+      'Rits vervangen: vanaf ₺300 (ongeveer €5; jas, jasje en leer €5)',
+      'Leren jas, broek en vest: vanaf ₺400 (ongeveer €7)',
       'Spijkerbroeken: vanaf ongeveer ₺200',
       'Aanpassingen van bruids- en avondjurken: naar foto of details van het werk',
       'Naaiwerk, maatwerk en aanpassingen van avondjurken: naar foto, details van het werk of gewenst model; hoe maten worden genomen regelen we via WhatsApp',
@@ -490,9 +490,9 @@ export const KARGO: Record<KLang, KargoCopy> = {
     ],
     pricesTitle: 'الأسعار تبدأ من (شامل ضريبة القيمة المضافة)',
     prices: [
-      'الأرجل والخصر والأكمام والطول: من ₺200 (نحو 10 يورو)',
-      'تبديل السحّاب: من ₺300 (نحو 15 يورو؛ المعطف والجاكيت والجلد 20 يورو)',
-      'جاكيت وبنطال وسترة من الجلد: من ₺400 (نحو 20 يورو)',
+      'الأرجل والخصر والأكمام والطول: من ₺200 (نحو 4 يورو)',
+      'تبديل السحّاب: من ₺300 (نحو 5 يورو؛ المعطف والجاكيت والجلد 7 يورو)',
+      'جاكيت وبنطال وسترة من الجلد: من ₺400 (نحو 7 يورو)',
       'أعمال الجينز: من نحو ₺200',
       'تعديل فساتين الزفاف والسهرة: حسب الصورة أو تفاصيل العمل',
       'الخياطة والتفصيل وتعديل فساتين السهرة: حسب الصورة أو تفاصيل العمل أو الموديل المطلوب؛ وتُوضَّح طريقة أخذ المقاسات عبر واتساب',

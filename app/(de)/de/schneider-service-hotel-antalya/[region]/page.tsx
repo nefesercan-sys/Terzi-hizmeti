@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: { params: Promise<{ region: s
 
   const url = `${SITE}${BASE_PATH}/${r.slug}`;
   const title = `Schneider im Hotel ${r.name}, Antalya | Abholung & Lieferung`;
-  const desc = fitDesc(`Urlaub in ${r.name}? Wir holen im Hotel ab und bringen zurück: Hose kürzen ab ₺200 (~€10), Reißverschluss ab ₺300, Kleider ändern. Täglich 08:00–23:00.`);
+  const desc = fitDesc(`Urlaub in ${r.name}? Wir holen im Hotel ab und bringen zurück: Hose kürzen ab ₺200 (~€4), Reißverschluss ab ₺300, Kleider ändern. Täglich 08:00–23:00.`);
   const kwd = hotelKwDesc('de', r.name, 'a', desc); // anahtar kelimeli kalıp (lib/kw-desc.ts)
   const ogImage = `${SITE}/antalya-terzi-can-dikim-tamir-tadilat.jpg`;
 

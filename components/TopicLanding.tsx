@@ -9,6 +9,7 @@ import { TOPICS, TOPIC_IDS, TOPIC_UI, topicUrl, type TopicId } from '@/lib/intl-
 import { UDATA, U_IDS, uUrl, ANAVERA_HOME } from '@/lib/uretim';
 import KargoFermuarKutusu, { type KFVariant } from '@/components/KargoFermuarKutusu';
 import KargoKisa from '@/components/KargoKisa';
+import IsOzelBlok from '@/components/IsOzelBlok';
 import { HIZMET, HIZMET_IDS, hizmetUrl, type HizmetId } from '@/lib/intl-hizmet';
 const KF_VARIANT: Partial<Record<HizmetId, KFVariant>> = { fermuar: 'both', abiye: 'abiye', mont: 'mont' };
 const KF_SHORT: HizmetId[] = ['paca', 'kot', 'bel', 'gelinlik', 'kol', 'takim', 'deri', 'pantolon', 'beden', 'tamir'];
@@ -50,6 +51,7 @@ export default function TopicLanding({ lang, topic, hizmet }: { lang: ILang; top
           <H2>{c.pointsTitle}</H2>
           <ul style={{ margin: 0, paddingInlineStart: '1.2rem' }}>{c.points.map((x) => <li key={x}>{x}</li>)}</ul>
         </section>
+        {hizmet && <IsOzelBlok lang={lang} id={hizmet} ink={C.ink} accent={C.green} />}
         <section style={{ marginBottom: '1.8rem' }}>
           <H2>{ui.faqTitle}</H2>
           {c.faq.map(([q, a]) => (

@@ -4,6 +4,7 @@
 // Kurallar: fiyat YAZILMAZ; deri/kot yalnız tamir-tadilat; süreler lib/delivery.ts'ten.
 // ============================================================
 import { DELIVERY } from '@/lib/delivery';
+import { isOzel, IS_LANGS } from '@/lib/is-ozel';
 import type { ILang } from '@/lib/intl';
 
 export type HizmetId = 'paca' | 'kot' | 'bel' | 'fermuar' | 'elbise' | 'gelinlik' | 'abiye' | 'kol' | 'takim' | 'mont' | 'deri' | 'pantolon' | 'beden' | 'tamir';
@@ -109,6 +110,13 @@ export const HIZMET: Record<ILang, Record<HizmetId, HizmetCopy>> = {
     tamir: { slug: "islah-malabis-antalya", name: "إصلاح الملابس", title: "إصلاح الملابس في أنطاليا", desc: "إصلاح الملابس في كونيالتي بأنطاليا منذ 2006. يوميًا 08:00–23:00، استلام من الفندق. السعر عبر واتساب بصورة.", h1: "إصلاح الملابس في أنطاليا", lead: "نصلح الدرزات المفتوحة والتمزقات والجيوب والسحّابات. الدرز الذي انفتح أثناء الرحلة يُصلَح بسرعة.", pointsTitle: "كيف نعمل", points: ["نستلم القطعة ونسلّمها في فندقك", `${TIME('ar')}`, "السعر عبر واتساب: أرسل صورة ونخبرك به قبل البدء", "ورشة في كونيالتي منذ عام 2006، مفتوحة يوميًا من 08:00 إلى 23:00"], faq: [["كم يستغرق ذلك؟", TIME('ar')], ["كم السعر؟", "يعتمد السعر على القطعة ونوع العمل. أرسل صورة عبر واتساب ونخبرك بالسعر قبل البدء."]], wa: "مرحبًا، أحتاج إلى: إصلاح الملابس في أنطاليا." },
   },
 };
+
+// Küçük dillerde (es, fr, pl, uk, nl, ar) SSS'deki süre ve fiyat cevapları işe özel (lib/is-ozel.ts): sayfalar birbirinin kopyası
+// olmasın ve gelinlik/abiye/dikimde genel "1–2 saat" süresi yazılmasın (sahip kuralı: işin durumuna göre).
+for (const l of IS_LANGS) for (const h of HIZMET_IDS) {
+  const o = isOzel(l, h); const c = HIZMET[l][h];
+  if (o && c.faq.length >= 2) c.faq = [[c.faq[0][0], `${o.time}.`], [c.faq[1][0], `${o.price}.`], ...c.faq.slice(2)];
+}
 
 export const hizmetUrl = (l: ILang, h: HizmetId) => `/${l}/${HIZMET[l][h].slug}`;
 export const parseHizmet = (l: ILang, slug: string): HizmetId | undefined => HIZMET_IDS.find((h) => HIZMET[l][h].slug === slug);

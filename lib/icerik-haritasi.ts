@@ -63,7 +63,7 @@ const TR_B2B: MapLink[] = [
   { href: '/yurt-disi-gonderim-uretim', label: 'Yurt dışı gönderim ve üretim' },
 ];
 const TR_GENEL: MapLink[] = [
-  { href: '/terzi-hizmetleri', label: 'Tamir ve tadilat hizmetleri' },
+  { href: '/terzi-hizmetleri', label: 'Terzi hizmetleri' },
   { href: '/iletisim', label: 'İletişim' },
 ];
 const TR_EXTRA = new Set<string>(['/', ...TR_B2B.map((l) => l.href), ...TR_GENEL.map((l) => l.href)]);

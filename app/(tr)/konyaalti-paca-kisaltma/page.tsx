@@ -19,7 +19,7 @@ const TODAY     = lastMod('/konyaalti-paca-kisaltma', '2026-10-04');
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Paça Kısaltma · Konyaaltı, Aynı Gün | Terzi Can" },
+  title: { absolute: "Paça Kısaltma Konyaaltı · ₺200'den, Aynı Gün" },
   description:
     fitDesc("Pantolon, kot, etek paça kısaltma ₺200'den, aynı gün teslim, acil 1–2 saat. Eve ve otele servis. Her gün 08:00–23:00."),
   keywords: ['paça kısaltma Konyaaltı', 'pantolon kısaltma Antalya', 'kot paça kısaltma', 'etek kısaltma Antalya', 'acil paça kısaltma', 'paça kısaltma fiyatı', 'Konyaaltı terzi', 'Antalya terzi'],

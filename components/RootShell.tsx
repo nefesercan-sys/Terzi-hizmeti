@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next';
+import FiyatNotu from '@/components/FiyatNotu';
 import SonGuncelleme from '@/components/SonGuncelleme';
 import type { ReactNode } from 'react';
 import { Analytics } from '@vercel/analytics/next';
@@ -62,6 +63,7 @@ export default function RootShell({ lang, dir = 'ltr', children }: { lang: strin
       <body>
         <HizliEylemBandi />
         {children}
+        <FiyatNotu />
         <SonGuncelleme />
         <GoogleYorumSeridi lang={lang} />
         <RuTelegramButton />

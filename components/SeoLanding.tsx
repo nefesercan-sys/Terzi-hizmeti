@@ -87,7 +87,7 @@ const HUB_NAME: Record<Lang, string> = {
   tr: 'Antalya Terzi', en: 'Tailor Service Antalya', ru: 'Услуги портного Анталья', de: 'Schneiderservice Antalya',
 };
 const SVC_HUB_NAME: Record<Lang, string> = {
-  tr: 'Terzi Hizmetleri', en: 'Tailor & Alterations', ru: 'Ремонт одежды и швея', de: 'Änderungsschneiderei',
+  tr: 'Elbise Dikimi, Tamiri ve Tadilatı', en: 'Tailor & Alterations', ru: 'Ремонт одежды и швея', de: 'Änderungsschneiderei',
 };
 
 // ── Ortak şema: işletme düğümü (ana sayfadaki @id ile aynı) ────
@@ -235,7 +235,9 @@ function serviceCopy(lang: Lang, s: Service) {
   // Sahip kararı (26 Kasım 2026): başlıkta rakam YALNIZCA fiyat niyetli başlıklarda ('fiyatları 2026'); genel/bölge başlıklarında fiyat yok
   const trPrice = lang === 'tr' && ps ? [`${Q} fiyatları 2026 Antalya: ₺${s.priceFrom}'den | Terzi Can`, `${Q} fiyatları 2026 Antalya: ₺${s.priceFrom}'den`, `${Q} fiyatları 2026 Antalya · ${ts} | Terzi Can`, `${Q} fiyatları 2026 Antalya | Terzi Can`] : [];
   const trNoPrice = lang === 'tr' && !ps ? [`${Q} Antalya · Fotoğrafla Net Fiyat | Terzi Can`, `${Q} Antalya · Fotoğrafla Fiyat | Terzi Can`, `${Q} Antalya · Fiyat | Terzi Can`] : [];
-  const title = pickFit([...trPrice, ...trNoPrice, ...t1.slice(1)], 60);
+  // Sahip kalıbı (26 Kasım 2026): 'Antalya Terzi · Elbise Dikimi, Tamiri, Tadilatı' temel alınır
+  const TR_TITLE: Partial<Record<string, string>> = { 'kiyafet-tamiri': 'Antalya Terzi · Kıyafet Tamiri ve Elbise Tadilatı' };
+  const title = (lang === 'tr' && TR_TITLE[s.id]) || pickFit([...trPrice, ...trNoPrice, ...t1.slice(1)], 60);
   const price = priceShortOf(lang, s);
   const tm0 = timeOf(lang, s).replace(/[.\s]+$/, '');
   const tm = tm0.charAt(0).toLocaleLowerCase(lang === 'tr' ? 'tr-TR' : lang) + tm0.slice(1);
@@ -381,7 +383,7 @@ export function serviceMetadata(lang: Lang, s: Service): Metadata {
 
 export function hubMetadata(lang: Lang): Metadata {
   const title = {
-    tr: 'Tamir Tadilat Terzi Antalya · Paça, Fermuar, Daraltma',
+    tr: 'Antalya Terzi Hizmetleri · Elbise Dikimi, Tamiri, Tadilatı',
     en: 'Clothing Repair & Alterations Antalya · Hemming',
     ru: 'Ремонт одежды в Анталии: подшив, ушить, молнии',
     de: 'Kleidung ändern & reparieren · Änderungsschneiderei Antalya',

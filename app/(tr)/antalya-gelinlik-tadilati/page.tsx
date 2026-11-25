@@ -19,7 +19,7 @@ const TODAY     = lastMod('/antalya-gelinlik-tadilati', '2026-10-04');
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Gelinlik & Abiye Tadilatı Antalya — Prova ile" },
+  title: { absolute: "Gelinlik Tadilatı Antalya 2026 · Abiye, Prova ile" },
   description:
     'Antalya\'da gelinlik ve abiye tadilatı: daraltma, boy ayarı, onarım. Fiyat fotoğrafa veya işin detayına göre; prova ile. Konyaaltı atölyesi, her gün 08–23.',
   keywords: fitKeywords([

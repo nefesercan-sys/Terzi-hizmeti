@@ -19,7 +19,7 @@ const TODAY     = lastMod('/deri-ceket-tadilati-antalya', '2026-11-03');
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Deri Ceket Tadilatı · Pantolon, Yelek · Antalya" },
+  title: { absolute: "Deri Ceket Tamiri ve Tadilatı · Pantolon, Yelek · Antalya" },
   description:
     "Deri ceket, pantolon ve yelek tamir ve tadilatı ₺400'den. Daraltma, kol kısaltma, onarım; net fiyat fotoğrafla. Eve ve otele servis.",
   keywords: fitKeywords([
@@ -57,7 +57,7 @@ const jsonLd = {
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Terzi Can', item: SITE },
         { '@type': 'ListItem', position: 2, name: "Terzi Hizmetleri", item: `${SITE}/antalya-terzi` },
-        { '@type': 'ListItem', position: 3, name: "Deri Ceket Tadilatı", item: PAGE_URL },
+        { '@type': 'ListItem', position: 3, name: "Deri Ceket Tamiri ve Tadilatı", item: PAGE_URL },
       ],
     },
     {
@@ -130,7 +130,7 @@ export default function Page() {
           <div className="hero-content">
             <span className="hero-tag">🧤 🧤 Deri Ceket · Pantolon · Yelek Tadilatı</span>
             <h1 id="hero-h">
-              Deri Ceket Tadilatı <span className="accent">Antalya</span><br />₺400'den, Fotoğrafla Net Fiyat</h1>
+              Deri Ceket Tamiri ve Tadilatı <span className="accent">Antalya</span><br />₺400'den, Fotoğrafla Net Fiyat</h1>
             <p className="hero-desc">
               Deri ceket, deri pantolon ve deri yelekte daraltma, kol kısaltma ve onarım. Eve ve otele servis; her gün 08:00–23:00.
             </p>

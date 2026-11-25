@@ -6,7 +6,7 @@
 // Sayfalar birbirinin kopyası olmasın diye grup sırası, başlık, giriş cümlesi ve işlem sırası slug karmasına göre döner.
 // ============================================================
 import { hashStr } from '@/lib/seo-angles';
-import { eurFrom } from '@/lib/facts';
+import { eurFrom, TRY_FROM } from '@/lib/facts';
 
 export type ILang = 'en' | 'ru' | 'de';
 export interface MatrisGroup { id: string; heading: string; text: string }
@@ -141,7 +141,7 @@ const LEADS: Record<ILang, ((l: string, n: string) => string)[]> = {
     (l) => `Länge kürzen, Bund enger machen, Reißverschluss wechseln oder Naht schließen: schreiben Sie Terzi Can ${l} per WhatsApp.`,
   ],
 };
-const e = (k: Parameters<typeof eurFrom>[0]) => '€' + eurFrom(k);
+const e = (k: Parameters<typeof eurFrom>[0]) => `₺${TRY_FROM[k]} (≈€${eurFrom(k)})`; // TL önce, € bilgi amaçlı
 const PRICES: Record<ILang, ((n: string) => string)[]> = {
   en: [
     (n) => `Starting prices for ${n}: hem, waist, sleeve and length shortening or taking-in from ${e('hem')}, zipper replacement from ${e('zipperPants')} (coats and jackets ${e('zipperCoat')}), leather repair and alteration from ${e('leather')}. Other jobs are priced by photo.`,

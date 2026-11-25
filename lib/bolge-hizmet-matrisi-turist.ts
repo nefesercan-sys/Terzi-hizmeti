@@ -8,14 +8,14 @@
 // NOT: es/fr/pl/uk/nl/ar metinleri anadili konuşan biri tarafından gözden geçirilmelidir.
 // ============================================================
 import { hashStr } from '@/lib/seo-angles';
-import { eurFrom } from '@/lib/facts';
+import { eurFrom, TRY_FROM } from '@/lib/facts';
 import type { ILang } from '@/lib/intl';
 
 export interface MatrisGroup { id: string; heading: string; text: string }
 export interface Matris { title: string; lead: string; groups: MatrisGroup[]; price: string }
 type G = { id: string; ops: string[]; heads: ((n: string) => string)[]; intro: (n: string, o: string) => string };
 type Pack = { titles: ((n: string) => string)[]; leads: ((n: string) => string)[]; price: (n: string) => string; groups: G[]; faq: { id: string; f: (n: string) => [string, string] }[]; seo: ((n: string) => string)[] };
-const e = (k: Parameters<typeof eurFrom>[0]) => '€' + eurFrom(k);
+const e = (k: Parameters<typeof eurFrom>[0]) => `₺${TRY_FROM[k]} (≈€${eurFrom(k)})`; // TL önce, € bilgi amaçlı
 
 const PACKS: Record<ILang, Pack> = {
   es: {

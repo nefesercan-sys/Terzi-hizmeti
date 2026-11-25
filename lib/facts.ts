@@ -27,7 +27,7 @@ export const EUR_OVERRIDE: Partial<Record<PriceKey, number>> = {}; // 25 Kasım 
 export const eurFrom = (k: PriceKey): number => EUR_OVERRIDE[k] ?? Math.round(TRY_FROM[k] / TRY_PER_EUR);
 const group = (n: number, sep: string) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, sep);
 export const tryText = (k: PriceKey): string => '₺' + (TRY_FROM[k] >= 10000 ? group(TRY_FROM[k], '.') : String(TRY_FROM[k])) + '+';
-export const eurText = (k: PriceKey): string => '€' + eurFrom(k) + '+';
+export const eurText = (k: PriceKey): string => tryText(k) + ' (≈€' + eurFrom(k) + ')'; // TL önce (Fiyat Etiketi Yönetmeliği), € bilgi amaçlı
 
 /** Abiye/gelinlik tadilatı için fiyat yerine kullanılacak ifade (sahip kararı, Kasım 2026): sabit fiyat yazılmaz. */
 export const BY_PHOTO_OR_JOB = {

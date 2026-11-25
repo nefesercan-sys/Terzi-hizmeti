@@ -31,9 +31,9 @@ const EUR_ROWS: { icon: string; rows: (string | null)[] }[] = [
   { icon: '✂️', rows: [null, null, null, null] }, // dikimde sabit fiyat yok: FOREIGN_BY_PHOTO yazılır
 ];
 export const FOREIGN_NOTE: Record<'en' | 'de' | 'ru', string> = {
-  en: 'Starting prices in euro. Leather alterations (length etc.) from €7; coat and leather-jacket zippers from €5. Custom sewing has no fixed price: it is quoted by photo and the model you want. The final price is confirmed from your photo.',
-  de: 'Ab-Preise in Euro. Lederänderungen (z. B. Länge) ab €7; Reißverschlüsse für Mäntel und Lederjacken ab €5. Maßanfertigung hat keinen Festpreis: Der Preis richtet sich nach Foto und gewünschtem Modell. Der Endpreis wird anhand Ihres Fotos bestätigt.',
-  ru: 'Цены указаны «от», в евро. Переделка кожаных изделий (длина и др.) — от €7; замена молний на пальто, куртках и кожаных куртках — от €5. У пошива нет фиксированной цены: она определяется по фото и желаемой модели. Итоговая цена подтверждается по фото.',
+  en: 'Starting prices in euro. Leather alterations (length etc.) from ₺400 (≈€7); coat and leather-jacket zippers from ₺300 (≈€5). Custom sewing has no fixed price: it is quoted by photo and the model you want. The final price is confirmed from your photo.',
+  de: 'Ab-Preise in Euro. Lederänderungen (z. B. Länge) ab ₺400 (≈€7); Reißverschlüsse für Mäntel und Lederjacken ab ₺300 (≈€5). Maßanfertigung hat keinen Festpreis: Der Preis richtet sich nach Foto und gewünschtem Modell. Der Endpreis wird anhand Ihres Fotos bestätigt.',
+  ru: 'Цены указаны «от», в евро. Переделка кожаных изделий (длина и др.) — от ₺400 (≈€7); замена молний на пальто, куртках и кожаных куртках — от ₺300 (≈€5). У пошива нет фиксированной цены: она определяется по фото и желаемой модели. Итоговая цена подтверждается по фото.',
 };
 /** Dile göre fiyat tablosu: tr → ₺ (PRICE_ROWS), en/de/ru → € (EUR_ROWS). */
 export function priceRowsFor(lang: FLang): { icon: string; rows: string[] }[] {
@@ -275,9 +275,9 @@ export const FT: Record<FLang, FiyatText> = {
     "htmlLang": "en",
     "locale": "en_US",
     "metaTitle": "Tailor Prices Antalya 2026 — Every Service, One Page",
-    "metaDesc": "Antalya tailor prices 2026: hemming €4, waist €4, zipper €5, repairs from €4. Send a photo on WhatsApp for the price. Open daily 08:00–23:00.",
+    "metaDesc": "Antalya tailor prices 2026: hemming ₺200 (≈€4), waist ₺200 (≈€4), zipper ₺300 (≈€5), repairs from ₺200 (≈€4). Send a photo on WhatsApp for the price. Open daily 08:00–23:00.",
     "ogTitle": "Tailor Prices Antalya 2026 — Send a Photo, Get Your Price",
-    "ogDesc": "Hemming €4, waist €4, zipper €5, repairs from €4. Mobile tailor to your hotel. Open 7 days.",
+    "ogDesc": "Hemming ₺200 (≈€4), waist ₺200 (≈€4), zipper ₺300 (≈€5), repairs from ₺200 (≈€4). Mobile tailor to your hotel. Open 7 days.",
     "keywords": [
       "tailor Antalya",
       "tailor prices Antalya",
@@ -305,7 +305,7 @@ export const FT: Record<FLang, FiyatText> = {
     "heroTag": "€ Prices · Open every day 08:00–23:00 · Konyaaltı, Antalya",
     "h1a": "Tailor Prices in Antalya 2026",
     "h1b": "Send a Photo, Get Your Price",
-    "heroDesc": "Hemming €4, taking in a waist €4, zipper replacement €5, repairs from €4, leather from €7. Custom sewing by photo and the model you want. Clothing repair, alterations, custom sewing, and a tailor who comes to your hotel or address. Send a photo of the job on WhatsApp and get an exact price and time.",
+    "heroDesc": "Hemming ₺200 (≈€4), taking in a waist ₺200 (≈€4), zipper replacement ₺300 (≈€5), repairs from ₺200 (≈€4), leather from ₺400 (≈€7). Custom sewing by photo and the model you want. Clothing repair, alterations, custom sewing, and a tailor who comes to your hotel or address. Send a photo of the job on WhatsApp and get an exact price and time.",
     "btnPhoto": "💬 Send a Photo →",
     "quickEyebrow": "What do you need?",
     "quickH": "Quick Answers for Your Situation",
@@ -373,21 +373,21 @@ export const FT: Record<FLang, FiyatText> = {
       {
         "q": "I want to take in the waist of my dress",
         "a": "Waist and size reduction, the same day (urgent jobs 1–2 hours).",
-        "price": "from €4",
+        "price": "from ₺200 (≈€4)",
         "href": "#fiyatlar",
         "cta": "Price list"
       },
       {
         "q": "I want to shorten my trousers",
         "a": "Jeans and dress trousers, ready the same day.",
-        "price": "from €4",
+        "price": "from ₺200 (≈€4)",
         "href": "/en/tailor-service-antalya",
         "cta": "Tailor service"
       },
       {
         "q": "Zipper replacement",
         "a": "Trousers, jeans, skirts, coats and bags.",
-        "price": "from €5",
+        "price": "from ₺300 (≈€5)",
         "href": "/en/tailor-service-antalya",
         "cta": "Tailor service"
       },
@@ -438,11 +438,11 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "I want to take in the waist of my dress. How much does it cost?",
-        "Waist and size reduction starts from €4 and depends on fabric and model. Send a photo of the dress; if you visit for a fitting, measurements are taken on the spot."
+        "Waist and size reduction starts from ₺200 (≈€4) and depends on fabric and model. Send a photo of the dress; if you visit for a fitting, measurements are taken on the spot."
       ],
       [
         "I want to shorten my trousers. How long does it take?",
-        "Hem shortening starts from €4; jeans and dress trousers are returned the same day (urgent jobs 1–2 hours)."
+        "Hem shortening starts from ₺200 (≈€4); jeans and dress trousers are returned the same day (urgent jobs 1–2 hours)."
       ],
       [
         "I want to have a dress made for me. How does it work?",
@@ -450,7 +450,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Is there a tailor open on weekends and Sundays for zipper replacement?",
-        "Terzi Can is open every day of the week, including Saturday and Sunday, from 08:00–23:00. Outside these hours you can leave photos and messages on WhatsApp. Zipper replacement starts from €5."
+        "Terzi Can is open every day of the week, including Saturday and Sunday, from 08:00–23:00. Outside these hours you can leave photos and messages on WhatsApp. Zipper replacement starts from ₺300 (≈€5)."
       ],
       [
         "Does a tailor come to my hotel or address?",
@@ -483,9 +483,9 @@ export const FT: Record<FLang, FiyatText> = {
     "htmlLang": "de",
     "locale": "de_DE",
     "metaTitle": "Schneider Preisliste Antalya 2026 — Alle Leistungen",
-    "metaDesc": "Schneiderpreise Antalya 2026: Kürzen ab €4, Taille ab €4, Reißverschluss ab €5, Reparaturen ab €4. Foto per WhatsApp. Täglich 08:00–23:00.",
+    "metaDesc": "Schneiderpreise Antalya 2026: Kürzen ab ₺200 (≈€4), Taille ab ₺200 (≈€4), Reißverschluss ab ₺300 (≈€5), Reparaturen ab ₺200 (≈€4). Foto per WhatsApp. Täglich 08:00–23:00.",
     "ogTitle": "Schneider Preise Antalya 2026 — Foto senden, Preis erfahren",
-    "ogDesc": "Kürzen ab €4, Taille ab €4, Reißverschluss ab €5, Reparaturen ab €4. Mobiler Schneider, 7 Tage geöffnet.",
+    "ogDesc": "Kürzen ab ₺200 (≈€4), Taille ab ₺200 (≈€4), Reißverschluss ab ₺300 (≈€5), Reparaturen ab ₺200 (≈€4). Mobiler Schneider, 7 Tage geöffnet.",
     "keywords": [
       "Schneider Antalya",
       "Schneider Preise Antalya",
@@ -511,7 +511,7 @@ export const FT: Record<FLang, FiyatText> = {
     "heroTag": "€ Preise · Täglich 08:00–23:00 geöffnet · Konyaaltı, Antalya",
     "h1a": "Schneider Preise in Antalya 2026",
     "h1b": "Foto senden, Preis erfahren",
-    "heroDesc": "Hose kürzen ab €4, Taille enger machen ab €4, Reißverschluss wechseln ab €5, Reparaturen ab €4, Leder ab €7. Maßanfertigung nach Foto und gewünschtem Modell. Kleidung reparieren, Änderungen, Maßanfertigung und ein Schneider, der zu Ihrem Hotel oder Ihrer Adresse kommt. Senden Sie ein Foto per WhatsApp und erfahren Sie Preis und Dauer.",
+    "heroDesc": "Hose kürzen ab ₺200 (≈€4), Taille enger machen ab ₺200 (≈€4), Reißverschluss wechseln ab ₺300 (≈€5), Reparaturen ab ₺200 (≈€4), Leder ab ₺400 (≈€7). Maßanfertigung nach Foto und gewünschtem Modell. Kleidung reparieren, Änderungen, Maßanfertigung und ein Schneider, der zu Ihrem Hotel oder Ihrer Adresse kommt. Senden Sie ein Foto per WhatsApp und erfahren Sie Preis und Dauer.",
     "btnPhoto": "💬 Foto senden →",
     "quickEyebrow": "Was brauchen Sie?",
     "quickH": "Schnelle Antworten für Ihren Fall",
@@ -579,21 +579,21 @@ export const FT: Record<FLang, FiyatText> = {
       {
         "q": "Ich möchte die Taille meines Kleides enger machen",
         "a": "Taillen- und Größenanpassung, am selben Tag, eilig in 1–2 Stunden.",
-        "price": "ab €4",
+        "price": "ab ₺200 (≈€4)",
         "href": "#fiyatlar",
         "cta": "Preisliste"
       },
       {
         "q": "Ich möchte meine Hose kürzen",
         "a": "Jeans und Stoffhosen, am selben Tag fertig (eilig in 1–2 Stunden).",
-        "price": "ab €4",
+        "price": "ab ₺200 (≈€4)",
         "href": "/de/schneiderservice-antalya",
         "cta": "Schneiderservice"
       },
       {
         "q": "Reißverschluss wechseln",
         "a": "Hose, Jeans, Rock, Mantel und Tasche.",
-        "price": "ab €5",
+        "price": "ab ₺300 (≈€5)",
         "href": "/de/schneiderservice-antalya",
         "cta": "Schneiderservice"
       },
@@ -644,11 +644,11 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Ich möchte die Taille meines Kleides enger machen. Was kostet das?",
-        "Taillen- und Größenanpassung beginnt ab €4 und hängt von Stoff und Modell ab. Senden Sie ein Foto des Kleides; bei einer Anprobe wird vor Ort Maß genommen."
+        "Taillen- und Größenanpassung beginnt ab ₺200 (≈€4) und hängt von Stoff und Modell ab. Senden Sie ein Foto des Kleides; bei einer Anprobe wird vor Ort Maß genommen."
       ],
       [
         "Ich möchte meine Hose kürzen. Wie lange dauert das?",
-        "Kürzen beginnt ab €4; Jeans und Stoffhosen sind am selben Tag fertig (eilig in 1–2 Stunden)."
+        "Kürzen beginnt ab ₺200 (≈€4); Jeans und Stoffhosen sind am selben Tag fertig (eilig in 1–2 Stunden)."
       ],
       [
         "Ich möchte mir ein Kleid schneidern lassen. Wie läuft das ab?",
@@ -656,7 +656,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Gibt es einen Schneider für Reißverschlüsse, der am Wochenende und sonntags geöffnet ist?",
-        "Terzi Can hat an allen 7 Tagen der Woche geöffnet, auch samstags und sonntags, von 08:00–23:00 Uhr. Außerhalb dieser Zeiten können Sie Fotos und Nachrichten per WhatsApp senden. Reißverschluss wechseln ab €5."
+        "Terzi Can hat an allen 7 Tagen der Woche geöffnet, auch samstags und sonntags, von 08:00–23:00 Uhr. Außerhalb dieser Zeiten können Sie Fotos und Nachrichten per WhatsApp senden. Reißverschluss wechseln ab ₺300 (≈€5)."
       ],
       [
         "Kommt ein Schneider in mein Hotel oder an meine Adresse?",
@@ -689,9 +689,9 @@ export const FT: Record<FLang, FiyatText> = {
     "htmlLang": "ru",
     "locale": "ru_RU",
     "metaTitle": "Цены портного в Анталье 2026 — все услуги на одной странице",
-    "metaDesc": "Цены портного в Анталье 2026: подшив от €4, талия от €4, молния от €5, ремонт от €4. Пришлите фото в WhatsApp. Ежедневно 08:00–23:00.",
+    "metaDesc": "Цены портного в Анталье 2026: подшив от ₺200 (≈€4), талия от ₺200 (≈€4), молния от ₺300 (≈€5), ремонт от ₺200 (≈€4). Пришлите фото в WhatsApp. Ежедневно 08:00–23:00.",
     "ogTitle": "Цены портного в Анталье 2026 — пришлите фото, узнайте цену",
-    "ogDesc": "Подшив от €4, талия от €4, молния от €5, ремонт от €4. Выездной портной, работаем 7 дней.",
+    "ogDesc": "Подшив от ₺200 (≈€4), талия от ₺200 (≈€4), молния от ₺300 (≈€5), ремонт от ₺200 (≈€4). Выездной портной, работаем 7 дней.",
     "keywords": [
       "портной Анталья",
       "цены портного Анталья",
@@ -717,7 +717,7 @@ export const FT: Record<FLang, FiyatText> = {
     "heroTag": "€ Цены · Ежедневно 08:00–23:00 · Коньяалты, Анталья",
     "h1a": "Цены портного в Анталье 2026",
     "h1b": "Пришлите фото — узнайте цену",
-    "heroDesc": "Подшив брюк от €4, ушить в талии от €4, замена молнии от €5, ремонт от €4, кожа от €7. Пошив — по фото и желаемой модели. Ремонт и подгонка одежды, пошив на заказ и портной, который приедет в ваш отель или по адресу. Пришлите фото работы в WhatsApp — назовём точную цену и срок.",
+    "heroDesc": "Подшив брюк от ₺200 (≈€4), ушить в талии от ₺200 (≈€4), замена молнии от ₺300 (≈€5), ремонт от ₺200 (≈€4), кожа от ₺400 (≈€7). Пошив — по фото и желаемой модели. Ремонт и подгонка одежды, пошив на заказ и портной, который приедет в ваш отель или по адресу. Пришлите фото работы в WhatsApp — назовём точную цену и срок.",
     "btnPhoto": "💬 Отправить фото →",
     "quickEyebrow": "Что вам нужно?",
     "quickH": "Быстрые ответы по вашей задаче",
@@ -785,21 +785,21 @@ export const FT: Record<FLang, FiyatText> = {
       {
         "q": "Хочу ушить платье в талии",
         "a": "Уменьшение по талии и размеру, в тот же день, срочно — за 1–2 часа.",
-        "price": "от €4",
+        "price": "от ₺200 (≈€4)",
         "href": "#fiyatlar",
         "cta": "Прайс-лист"
       },
       {
         "q": "Хочу укоротить брюки",
         "a": "Джинсы и классические брюки, чаще всего в тот же день.",
-        "price": "от €4",
+        "price": "от ₺200 (≈€4)",
         "href": "/ru/uslugi-portnogo-antalya",
         "cta": "Услуги портного"
       },
       {
         "q": "Замена молнии",
         "a": "Брюки, джинсы, юбки, куртки и сумки.",
-        "price": "от €5",
+        "price": "от ₺300 (≈€5)",
         "href": "/ru/uslugi-portnogo-antalya",
         "cta": "Услуги портного"
       },
@@ -850,11 +850,11 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Хочу ушить платье в талии. Сколько это стоит?",
-        "Уменьшение по талии и размеру — от €4, зависит от ткани и модели. Пришлите фото платья; если придёте на примерку, мерки снимем на месте."
+        "Уменьшение по талии и размеру — от ₺200 (≈€4), зависит от ткани и модели. Пришлите фото платья; если придёте на примерку, мерки снимем на месте."
       ],
       [
         "Хочу укоротить брюки. Сколько времени это занимает?",
-        "Подшив — от €4; джинсы и классические брюки чаще всего готовы в тот же день."
+        "Подшив — от ₺200 (≈€4); джинсы и классические брюки чаще всего готовы в тот же день."
       ],
       [
         "Хочу платье на заказ. Как это происходит?",
@@ -862,7 +862,7 @@ export const FT: Record<FLang, FiyatText> = {
       ],
       [
         "Есть ли портной для замены молнии, который работает в выходные и в воскресенье?",
-        "Terzi Can работает все 7 дней в неделю, включая субботу и воскресенье, с 08:00–23:00. Вне этого времени можно оставить фото и сообщение в WhatsApp. Замена молнии — от €5."
+        "Terzi Can работает все 7 дней в неделю, включая субботу и воскресенье, с 08:00–23:00. Вне этого времени можно оставить фото и сообщение в WhatsApp. Замена молнии — от ₺300 (≈€5)."
       ],
       [
         "Приедет ли портной в мой отель или по адресу?",

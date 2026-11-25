@@ -20,7 +20,7 @@ const FAQ: [string, string][] = [["Kaban ve palto tadilatı ne kadar?", "Kaban v
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Kaban, Palto Tadilatı Antalya · Daraltma, Kısaltma ₺200'den" },
+  title: { absolute: "Kaban, Palto Tadilatı Antalya · Daraltma, Kısaltma" },
   description: "Kaban ve palto boy, kol kısaltma ve daraltma ₺200'den; fermuar değişimi ₺300'den. Astar ve düğme onarımı. Eve ve otele servis.",
   keywords: fitKeywords(["kaban tadilatı", "palto tadilatı", "kaban kısaltma", "palto kısaltma", "palto daraltma", "kaban kol kısaltma", "palto astar değişimi", "kaban düğme değişimi", "palto tamiri Antalya"]),
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },

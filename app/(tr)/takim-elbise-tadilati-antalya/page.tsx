@@ -28,7 +28,7 @@ const FAQ: [string, string][] = [
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Takım Elbise Tadilatı Antalya · Ceket, Pantolon ₺200'den" },
+  title: { absolute: "Takım Elbise Tadilatı Antalya · Ceket, Pantolon Daraltma" },
   description: "Takım elbise ceket daraltma, kol ve paça kısaltma, bel ayarı, yelek ve astar onarımı. Fiyat fotoğrafa göre. Takım satışı yok, tadilat ve özel dikim.",
   keywords: fitKeywords(["takım elbise tadilatı", "takım elbise daraltma", "ceket daraltma", "ceket kol kısaltma", "takım elbise pantolon paça kısaltma", "takım elbise bel daraltma", "takım elbise yelek tadilatı", "takım elbise tamiri", "takım elbise tadilatı Antalya"]),
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },

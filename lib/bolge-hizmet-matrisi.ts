@@ -159,8 +159,5 @@ export function trDistrictTitles(slug: string, n: string, order = -1): string[] 
     `${n} Terzi: Kol, Boy Kısaltma, Beden Daraltma`,
   ];
   const k = (order >= 0 ? order : hashStr(slug + ':title')) % t.length; // sıra numarası: sayfalar arasında çakışma olmaz
-  // Fiyatlı varyant önde (Search Console, Kasım 2026: '<ilçe> terzi' aramalarında 7.–10. sıra): 60 karaktere sığarsa seçilir
-  const withPrice = (v: string) => v.replace(/ \| (Antalya|Terzi Can)$/, '') + " · ₺200'den";
-  const order2 = [...t.slice(k), ...t.slice(0, k)];
-  return [...order2.flatMap((v) => [withPrice(v), v]), `${n} Terzi · ₺200'den | Antalya`, `${n} Terzi | Antalya`];
+  return [...t.slice(k), ...t.slice(0, k), `${n} Terzi | Antalya`];
 }

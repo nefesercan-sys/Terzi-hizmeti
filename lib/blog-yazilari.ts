@@ -23,6 +23,100 @@ export interface BlogYazi {
 
 export const BLOG_YAZILARI: BlogYazi[] = [
   {
+    slug: 'kaban-palto-mont-tadilati-kis-rehberi',
+    baslik: 'Kaban, Palto ve Mont Tadilatı: Kışa Hazırlık Rehberi (2026)',
+    ozet: 'Kaban ve palto daraltma, kol ve boy kısaltma, mont fermuarı değişimi: hangi tadilat yapılır, ne kadar sürer, fiyat nasıl belirlenir?',
+    tarih: '2026-11-26',
+    gorsel: '/gorseller/antalya-terzi-erkek-palto-tadilati.webp',
+    gorselAlt: 'Terzi atölyesinde erkek paltosu tadilatı (örnek görsel)',
+    gorselBoyut: [1376, 768],
+    giris: "Kış gelince dolaptan çıkan kaban, palto ve montlarda en sık iki sorun görülür: geçen yıldan beri bedene bol ya da dar gelmesi ve fermuarın bozulması. Bu yazıda kışlık giysilerde hangi tadilatların yapılabildiğini, ne kadar sürdüğünü ve fiyatın nasıl belirlendiğini anlatıyoruz. Konyaaltı Hurma'daki atölyemizde her gün 08:00–23:00 arası çalışıyoruz.",
+    bolumler: [
+      {
+        h: 'Kaban ve palto daraltma mümkün mü?',
+        p: [
+          "Evet. Kaban ve paltolar çoğunlukla yan dikişlerden ve arka ortadan daraltılır. Astarlı modellerde astar da aynı ölçüde daraltılır, böylece içi ve dışı birlikte oturur. Omuz genişliğini değiştirmek ise sınırlıdır; omuz bedeninize uyuyorsa daraltma genelde iyi sonuç verir.",
+        ],
+        liste: [
+          'Gövde daraltma: yan dikişlerden ve arka ortadan',
+          'Kol kısaltma: manşet ve düğme yeri korunarak',
+          'Boy kısaltma: etek ucundan, yırtmaç ve astar ayarıyla',
+        ],
+      },
+      {
+        h: 'Mont fermuarı değişimi',
+        p: [
+          "Montlarda kullanılan fermuar genelde ayrılan (alttan açılan) tiptedir. Fermuar dişleri sağlamsa sadece sürgü (kızak) değiştirmek yeterli olabilir; dişler kırık ya da eksikse fermuar komple değiştirilir. Şişme montlarda dikiş hattı dolgunun dökülmemesi için özenle açılıp kapatılır.",
+        ],
+      },
+      {
+        h: 'Fiyat ve süre',
+        p: [
+          "Kısaltma ve daraltma işleri ₺200'den, fermuar değişimi ₺300'den başlar; fiyatlara KDV dahildir. Verilen fiyatlar başlangıç fiyatlarıdır; kesin fiyat kumaş ve işçilik detayına göre netleşir. Normal işler aynı gün, acil işler 1–2 saatte hazırlanır; kalın ve astarlı kabanlarda süre işin durumuna göre değişebilir.",
+          "Kesin fiyatı öğrenmenin en hızlı yolu giysinin fotoğrafını WhatsApp'tan göndermektir. Eve ve otele alım-teslim yapıyoruz.",
+        ],
+      },
+    ],
+    sss: [
+      { q: 'Kaban daraltma ne kadar?', a: "Kısaltma ve daraltma işleri ₺200'den başlar (KDV dahil). Kalın ve astarlı kabanlarda kesin fiyat kumaş ve işçilik detayına göre netleşir; fotoğrafı WhatsApp'tan gönderin." },
+      { q: 'Mont fermuarı değişimi ne kadar sürer?', a: 'Normal işler aynı gün, acil işler 1–2 saatte hazırlanır; süre işin durumuna göre değişebilir.' },
+      { q: 'Palto boyu kısaltılabilir mi?', a: 'Evet. Etek ucundan kısaltılır; yırtmaç ve astar da yeni boya göre ayarlanır.' },
+    ],
+    linkler: [
+      { href: '/kaban-palto-tadilati-antalya', metin: 'Kaban ve palto tadilatı' },
+      { href: '/mont-tamiri-tadilati-antalya', metin: 'Mont tamiri ve tadilatı' },
+      { href: '/mont-fermuar-degisimi-antalya', metin: 'Mont fermuarı değişimi' },
+      { href: '/antalya-terzi-fiyatlari', metin: 'Terzi fiyat listesi 2026' },
+    ],
+    waMesaj: 'Merhaba, kaban/palto/mont tadilatı için fiyat öğrenmek istiyorum. Fotoğrafı gönderiyorum.',
+  },
+  {
+    slug: 'yilbasi-abiye-tadilati-ne-zaman-getirilmeli',
+    baslik: 'Yılbaşı Abiye Tadilatı: Ne Zaman Getirilmeli? (2026)',
+    ozet: 'Yılbaşı ve özel davetler öncesi abiye ve gece elbisesi tadilatı: boy, bel, askı ayarı, fermuar; ne zaman getirmeli, fiyat nasıl belirlenir?',
+    tarih: '2026-11-26',
+    gorsel: '/gorseller/antalya-terzi-abiye-tamiri-tadilati.webp',
+    gorselAlt: 'Askıda abiye elbise, tadilat öncesi (örnek görsel)',
+    giris: "Yılbaşı ve aralık ayındaki davetler öncesinde abiye ve gece elbisesi tadilatı yoğunlaşır. Elbisenin size tam oturması için doğru zamanda getirmek ve provayı doğru ayakkabıyla yapmak önemlidir. Bu yazıda abiye tadilatında nelerin yapılabildiğini ve nasıl planlamanız gerektiğini anlatıyoruz.",
+    bolumler: [
+      {
+        h: 'Abiyede en sık yapılan tadilatlar',
+        p: ['Abiye tadilatı elbisenin kumaşına ve süslemesine göre planlanır. Payetli, boncuklu ya da dantelli modellerde süsleme korunarak çalışılır.'],
+        liste: [
+          'Boy ayarı: giyeceğiniz ayakkabıyla ölçülür',
+          'Bel ve beden daraltma',
+          'Askı boyu ayarı ve askı tamiri',
+          'Fermuar değişimi ve onarımı',
+          'Sökük ve yırtık onarımı',
+        ],
+      },
+      {
+        h: 'Ne zaman getirmelisiniz?',
+        p: [
+          "Davete birkaç gün kala değil, mümkünse daha önceden getirin; böylece gerekirse ikinci bir prova yapılabilir. Provaya davette giyeceğiniz ayakkabı ve iç çamaşırıyla gelin. Tatilde iseniz otelinizden alım-teslim yapabiliriz.",
+        ],
+      },
+      {
+        h: 'Fiyat ve süre',
+        p: [
+          "Abiye ve gelinlik tadilatında sabit fiyat yazmıyoruz: fiyat fotoğrafa veya işin detayına göre belirlenir ve işe başlamadan önce WhatsApp'tan söylenir; fiyatlara KDV dahildir. Süre işin durumuna göre değişir.",
+        ],
+      },
+    ],
+    sss: [
+      { q: 'Abiye tadilatı ne kadar?', a: "Abiye tadilatında fiyat fotoğrafa veya işin detayına göre belirlenir; işe başlamadan WhatsApp'tan söylenir. Fiyatlara KDV dahildir." },
+      { q: 'Abiye boyu ne zaman kısaltılmalı?', a: 'Davetten önce, giyeceğiniz ayakkabıyla prova yaparak. Gerekirse ikinci prova için zaman bırakın.' },
+      { q: 'Otele gelip abiye alıyor musunuz?', a: "Evet, Antalya'daki otellerden ve evlerden alım-teslim yapıyoruz; her gün 08:00–23:00 arası WhatsApp'tan yazabilirsiniz." },
+    ],
+    linkler: [
+      { href: '/abiye-tadilati-antalya', metin: 'Abiye tadilatı ve tamiri' },
+      { href: '/antalya-gelinlik-tadilati', metin: 'Gelinlik tadilatı' },
+      { href: '/otele-gelen-terzi-antalya', metin: 'Otele gelen terzi' },
+      { href: '/antalya-terzi-fiyatlari', metin: 'Terzi fiyat listesi 2026' },
+    ],
+    waMesaj: 'Merhaba, yılbaşı için abiye tadilatı yaptırmak istiyorum. Fotoğrafı gönderiyorum.',
+  },
+  {
     slug: 'pantolon-paca-kisaltma-nasil-yapilir',
     baslik: 'Pantolon Paçası Nasıl Kısaltılır? Ölçü, Yöntem ve Fiyat',
     ozet: 'Paça kısaltmada doğru boy nasıl belirlenir, hangi paça tipi nasıl dikilir, ne kadar sürer ve kaça yapılır?',

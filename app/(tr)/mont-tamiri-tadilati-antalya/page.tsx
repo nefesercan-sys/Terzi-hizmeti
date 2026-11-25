@@ -19,7 +19,7 @@ const TODAY     = lastMod('/mont-tamiri-tadilati-antalya', '2026-11-03');
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Mont Tamiri ve Tadilatı · Fermuar · Antalya | Terzi Can" },
+  title: { absolute: "Mont Tamiri ve Daraltma Ücreti 2026 Antalya · ₺200'den" },
   description:
     "Mont boy ve kol kısaltma, daraltma ₺200'den; fermuar değişimi ₺300'den. Normal iş aynı gün, acil 1–2 saat. Eve ve otele servis.",
   keywords: fitKeywords([

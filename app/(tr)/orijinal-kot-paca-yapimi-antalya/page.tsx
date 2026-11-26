@@ -5,7 +5,7 @@ import ReviewsBlock from '@/components/ReviewsBlock';
 import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
 import KargoKisa from '@/components/KargoKisa';
 import { businessNode } from '@/lib/business';
-import { fitKeywords } from '@/lib/meta-fit';
+import { fitKeywords, resimFiyat } from '@/lib/meta-fit';
 
 const SITE     = 'https://terzihizmeti.com.tr';
 const PAGE_URL = `${SITE}/orijinal-kot-paca-yapimi-antalya`;
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Orijinal Kot Paça Yapımı · Dikiş İzi Korunur" },
   description:
-    "Kot paçayı kısaltırken orijinal paça görünümünü koruyoruz, ₺200'den. Boy ayakkabıyla işaretlenir. Normal iş aynı gün, acil 1–2 saat.",
+    resimFiyat("Kot paçayı kısaltırken orijinal paça görünümünü koruyoruz, ₺200'den. Boy ayakkabıyla işaretlenir. Normal iş aynı gün, acil 1–2 saat."),
   keywords: fitKeywords([
     'orijinal kot paça yapımı', 'orijinal paça kot kısaltma', 'kot paça orijinal dikiş', 'kot paçası orijinal kalsın', 'orijinal paça kısaltma fiyat', 'kot paça kısaltma Antalya',
   ]),

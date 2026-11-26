@@ -5,7 +5,7 @@ import ReviewsBlock from '@/components/ReviewsBlock';
 import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
 import KargoFermuarKutusu from '@/components/KargoFermuarKutusu';
 import { businessNode } from '@/lib/business';
-import { fitKeywords } from '@/lib/meta-fit';
+import { fitKeywords, resimFiyat } from '@/lib/meta-fit';
 
 const SITE     = 'https://terzihizmeti.com.tr';
 const PAGE_URL = `${SITE}/mont-fermuar-degisimi-antalya`;
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Mont Fermuarı Değişimi Fiyatı 2026: ₺300'den · Antalya" },
   description:
-    "Mont, kaban ve ceket fermuarı değişimi ₺300'den; kalın ve su geçirmez montlar dahil. Normal iş aynı gün, acil 1–2 saat.",
+    resimFiyat("Mont, kaban ve ceket fermuarı değişimi ₺300'den; kalın ve su geçirmez montlar dahil. Normal iş aynı gün, acil 1–2 saat."),
   keywords: fitKeywords([
     'mont fermuarı değiştirme', 'mont fermuarı değişimi fiyatları', 'mont fermuar tamiri Antalya',
     'kaban fermuarı değişimi', 'ceket fermuarı değişimi', 'su geçirmez mont fermuarı',

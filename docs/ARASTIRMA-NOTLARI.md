@@ -60,3 +60,20 @@ Aktiviteler: plaj (Konyaaltı, Lara), tarihi (Kaleiçi, Perge, Aspendos, Myra, O
 - Teslim: acil 1–2 saat, normal işler aynı gün (işin durumuna göre), özel dikim modele/adede göre. "Ertesi gün / 24–48 saat / dakika / km" yazılmaz. Süre cümleleri lib/delivery.ts'ten.
 - Açık sorular: ana dil dışı 6 dilin yerel okuması, Rusya tekstil verisi.
 - ✅ SAHİP KARARI (26 Kasım 2026, 23 Kasım'daki 'başlıklarda fiyat yok' kararının güncellemesi): Sayfa başlıklarında rakam (₺) YALNIZCA açık fiyat niyetli sayfalarda (başlığında 'Fiyatı/Fiyatları/Ücreti/Kaç TL/Ne kadar' geçen hizmet sayfaları) yazılır. Ana sayfa, ilçe/mahalle ve genel hizmet başlıklarında fiyat yazılmaz. 3–4 hafta sonra Search Console ile ölçülüp yeniden değerlendirilecek.
+
+### 26 Kasım 2026: Başlık haritası (sahibin kararı)
+- Sahip, ana sayfa ve /antalya-terzi (swaphubs'ta ana sayfa ve /terzi) için önceki başlık seçimini iptal etti.
+- Kural: her sayfanın başlıktaki ana kelimesi ayrıdır. Site içinde iki sayfa aynı kelimeyle başlamaz.
+  - Ana sayfa: marka. /antalya-terzi: "Antalya Terzi · Elbise Dikimi, Tamiri, Tadilatı".
+  - Hizmetler: "Terzi Hizmetleri". Bölgeler: "X Terzi". Otel: "X Otel Terzisi".
+  - swaphubs bölge sayfaları "X Terzi Çağır" (eve, otele servis) ile ayrışır.
+- Dikim, tamir ve tadilat kelimeleri farklı kombinasyonlarla kullanılır (Search Console: "tamir" ve "dikim" en çok aranan).
+- Tek işe odaklı sayfalar (paça, kot, bel, etek, gömlek, kol), fiyat soran başlıklar, blog, rehber ve tekstil sayfaları kendi kelimesini korur.
+- Sahibin son başlık listesi (26 Kasım, sonradan):
+  - Ana sayfa: "Terzi Can Antalya · Elbise Dikim, Tamir, Tadilat"
+  - /antalya-terzi: "Antalya Özel Terzi · Elbise Dikim, Tamiri, Tadilatı"
+  - Hizmetler: "Terzi Hizmetleri Antalya · Elbise Kısaltma, Daraltma, Dikim"
+  - Otel bölgeleri: "X Otele Gelen Terzi Hizmeti · Tamir, Tadilat"
+  - swaphubs ana sayfa: "Antalya'da Elbise Dikim, Tamiri, Tadilatı Servisi"
+  - swaphubs bölge sayfaları: "X Terzi Çağır · Kıyafet Dikimi, Tamiri, Tadilatı"
+- Türkçe açıklamalarda "Resim gönder, fiyat al." görünür (lib/meta-fit.ts resimFiyat). Blog, tekstil ve rehber sayfaları hariç.

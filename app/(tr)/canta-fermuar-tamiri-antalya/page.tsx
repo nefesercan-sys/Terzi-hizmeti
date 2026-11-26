@@ -5,7 +5,7 @@ import ReviewsBlock from '@/components/ReviewsBlock';
 import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
 import KargoKisa from '@/components/KargoKisa';
 import { businessNode } from '@/lib/business';
-import { fitKeywords } from '@/lib/meta-fit';
+import { fitKeywords, resimFiyat } from '@/lib/meta-fit';
 
 const SITE     = 'https://terzihizmeti.com.tr';
 const PAGE_URL = `${SITE}/canta-fermuar-tamiri-antalya`;
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Çanta Fermuar Tamiri · Aynı Gün · Antalya" },
   description:
-    "Çanta, sırt çantası ve valiz fermuarı değişimi ₺300'den. Normal iş aynı gün, acil 1–2 saat. Eve ve otele servis.",
+    resimFiyat("Çanta, sırt çantası ve valiz fermuarı değişimi ₺300'den. Normal iş aynı gün, acil 1–2 saat. Eve ve otele servis."),
   keywords: fitKeywords([
     'çanta fermuar tamiri fiyat', 'çanta fermuarı değiştirme', 'çanta fermuarı tamiri Antalya', 'sırt çantası fermuar tamiri', 'valiz fermuar tamiri', 'çanta fermuarı ne kadar', 'çanta fermuarı kaç TL', 'Konyaaltı çanta fermuarı',
   ]),

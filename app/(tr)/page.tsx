@@ -7,6 +7,7 @@ import Ilustrasyon, { type IlustrasyonTur } from '@/components/Ilustrasyon';
 import { businessNode } from '@/lib/business';
 import { DISTRICTS as SEO_DISTRICTS, SERVICES as SEO_SERVICES, SERVICE_BASE, districtUrl, serviceUrl, isTrNear, isFreeService, byPriority } from '@/lib/seo-data';
 
+import { resimFiyat } from '@/lib/meta-fit';
 // ─── CONSTANTS ────────────────────────────────────────────────────────────────
 const SITE      = 'https://terzihizmeti.com.tr';
 const PHONE     = '+90 531 898 64 18';
@@ -28,9 +29,9 @@ const OG        = `${SITE}/antalya-terzi-can-dikim-tamir-tadilat.jpg`;
 // ─── METADATA ─────────────────────────────────────────────────────────────────
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Terzi Can Antalya · Konyaaltı Terzi, 2006'dan Beri" },
+  title: { absolute: "Terzi Can Antalya · Elbise Dikim, Tamir, Tadilat" },
   description:
-    "Konyaaltı Hurma'da 2006'dan beri terzi: tamir, tadilat, özel dikim. Paça ₺200'den, fermuar ₺300'den (KDV dahil), aynı gün. Her gün 08:00–23:00.",
+    resimFiyat("Konyaaltı Hurma'da 2006'dan beri terzi: tamir, tadilat, özel dikim. Paça ₺200'den, fermuar ₺300'den (KDV dahil), aynı gün. Her gün 08:00–23:00."),
   keywords: ['Antalya terzi', 'Konyaaltı terzi', 'otele gelen terzi Antalya', 'acil terzi Antalya', 'paça kısaltma Konyaaltı', 'fermuar değişimi Antalya', 'gelinlik tadilatı Antalya', 'özel dikim Antalya'],
   authors: [{ name: BIZ, url: SITE }],
   creator: BIZ,
@@ -51,7 +52,7 @@ export const metadata: Metadata = {
     },
   }),
   openGraph: {
-    title: "Terzi Can Antalya · Konyaaltı Terzi, 2006'dan Beri",
+    title: "Terzi Can Antalya · Elbise Dikim, Tamir, Tadilat",
     description: "Konyaaltı Hurma'da terzi: tamir, tadilat ve özel dikim. Paça ₺200'den, fermuar ₺300'den. Eve ve otele alım-teslim, her gün 08:00–23:00.",
     url: SITE, siteName: 'Terzi Hizmeti', locale: 'tr_TR',
     alternateLocale: ['en_US', 'ru_RU', 'de_DE'],
@@ -60,7 +61,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Terzi Can Antalya · Konyaaltı Terzi, 2006'dan Beri",
+    title: "Terzi Can Antalya · Elbise Dikim, Tamir, Tadilat",
     description: "Konyaaltı Hurma'da terzi: tamir, tadilat ve özel dikim. Her gün 08:00–23:00.",
     images: [OG],
   },

@@ -6,7 +6,7 @@ import { OTEL_BOLGELERI, bulOtelBolgesiLang } from '@/lib/otel-bolgeleri';
 import OtelBolgeSayfasi from '@/components/OtelBolgeSayfasi';
 import { regionJsonLd } from '@/lib/otel-copy';
 import { BUSINESS_ID, byPriority } from '@/lib/seo-data';
-import { fitDesc, fitKeywords } from '@/lib/meta-fit';
+import { fitDesc, fitKeywords, photoPrice } from '@/lib/meta-fit';
 import { hotelKwDesc } from '@/lib/kw-desc';
 
 const SITE = 'https://terzihizmeti.com.tr';
@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: { params: Promise<{ region: s
   if (!r) return {};
 
   const url = `${SITE}${BASE_PATH}/${r.slug}`;
-  const title = `Ателье и портной в отель: ${r.name}, Анталья`;
+  const title = `Портной в отель ${r.name}: ремонт, подгонка, пошив`;
   const desc = fitDesc(`Остановились в районе ${r.name}? Заберём вещи из отеля, подгоним в мастерской в Коньяалты и вернём. Ежедневно 08:00–23:00.`);
   const kwd = hotelKwDesc('ru', r.name, 'a', desc); // anahtar kelimeli kalıp (lib/kw-desc.ts)
   const ogImage = `${SITE}/antalya-terzi-can-dikim-tamir-tadilat.jpg`;
@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: { params: Promise<{ region: s
   return {
     metadataBase: new URL(SITE),
     title: { absolute: title },
-    description: kwd,
+    description: photoPrice(kwd, 'ru'),
     keywords: fitKeywords([`портной в отель ${r.name}`, `выездной портной ${r.name}`, `подшить брюки ${r.name}`, `ремонт молнии ${r.name}`, 'портной Анталья отель', 'срочный ремонт одежды Анталья']),
     alternates: withTwin({
       canonical: url,

@@ -4,14 +4,15 @@ import { zoneAlt } from '@/lib/intl-zones';
 import { OTEL_BOLGELERI } from '@/lib/otel-bolgeleri';
 import { byPriority } from '@/lib/seo-data';
 
+import { photoPrice } from '@/lib/meta-fit';
 const SITE = 'https://terzihizmeti.com.tr';
 const BASE_PATH = '/de/schneider-service-hotel-antalya';
 const WA_DEF = `https://wa.me/905318986418?text=${encodeURIComponent('Hallo, ich möchte Informationen zum Schneiderservice in meinem Hotel.')}`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: 'Schneider im Hotel Antalya · Abholung',
-  description: 'Schneider im Hotel in Belek, Lara, Kemer, Side: Abholung, Hose kürzen ab ₺200 (~€4), meist am selben Tag.',
+  title: 'Schneider im Hotel Antalya · Reparatur, Änderung',
+  description: photoPrice('Schneider im Hotel in Belek, Lara, Kemer, Side: Abholung, Hose kürzen ab ₺200 (~€4), meist am selben Tag.', 'de'),
   keywords: ['Schneider Hotel Antalya', 'mobiler Schneider Antalya', 'Schneider Belek Hotel', 'Schneider Lara Hotel', 'Schneider Kemer Hotel', 'Schneider Side Hotel', 'Kleidung ändern Antalya eilig', 'Änderungsschneiderei Hotel Antalya'],
   alternates: withTwin({
     canonical: `${SITE}${BASE_PATH}`,

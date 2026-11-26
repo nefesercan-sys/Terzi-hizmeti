@@ -26,7 +26,7 @@ import { ZCOPY, ZONE_SLUGS, parseZone, zoneData, zoneSlug, zoneUrl } from '@/lib
 import { zoneSeoTitles } from '@/lib/bolge-hizmet-matrisi-turist';
 import { SITE } from '@/lib/seo-data';
 import { OG_DEFAULT } from '@/lib/turist-keten';
-import { fitDesc, withAsk } from '@/lib/meta-fit';
+import { fitDesc, photoPrice, withAsk } from '@/lib/meta-fit';
 import { hreflangFiyat, hreflangIletisim, hreflangSvc } from '@/lib/hreflang';
 import UretimLanding from '@/components/UretimLanding';
 import { UDATA, U_IDS, parseU, uMetadata } from '@/lib/uretim';
@@ -42,7 +42,7 @@ export function generateStaticParams() {
 
 type P = { params: Promise<{ lang: string; zone: string }> };
 
-export async function generateMetadata({ params }: P): Promise<Metadata> {
+async function generateMetadataInner({ params }: P): Promise<Metadata> {
   const { lang, zone: slug } = await params;
   if (!isILang(lang)) return {};
   const uid = parseU(lang, slug);
@@ -55,11 +55,11 @@ export async function generateMetadata({ params }: P): Promise<Metadata> {
     const c = FIYAT[lang]; const url = `${SITE}${fiyatUrl(lang)}`;
     const title = c.title.length + 12 <= 60 ? `${c.title} | Terzi Can` : c.title;
     return {
-      metadataBase: new URL(SITE), title: { absolute: title }, description: fitDesc(withAsk(c.desc, lang), undefined, lang),
+      metadataBase: new URL(SITE), title: { absolute: title }, description: photoPrice(c.desc, lang),
       robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
       alternates: withTwin({ canonical: url, languages: hreflangFiyat() }),
-      openGraph: { title, description: fitDesc(withAsk(c.desc, lang), undefined, lang), url, siteName: 'Terzi Can', locale: INTL[lang].locale, type: 'website', images: [{ url: OG_DEFAULT, width: 1200, height: 630, alt: title }] },
-      twitter: { card: 'summary_large_image', title, description: fitDesc(withAsk(c.desc, lang), undefined, lang), images: [OG_DEFAULT] },
+      openGraph: { title, description: photoPrice(c.desc, lang), url, siteName: 'Terzi Can', locale: INTL[lang].locale, type: 'website', images: [{ url: OG_DEFAULT, width: 1200, height: 630, alt: title }] },
+      twitter: { card: 'summary_large_image', title, description: photoPrice(c.desc, lang), images: [OG_DEFAULT] },
       other: { 'geo.region': 'TR-07', 'geo.placename': 'Antalya' },
     };
   }
@@ -67,11 +67,11 @@ export async function generateMetadata({ params }: P): Promise<Metadata> {
     const c = ILETISIM[lang]; const url = `${SITE}${iletisimUrl(lang)}`;
     const title = c.title.length + 12 <= 60 ? `${c.title} | Terzi Can` : c.title;
     return {
-      metadataBase: new URL(SITE), title: { absolute: title }, description: fitDesc(withAsk(c.desc, lang), undefined, lang),
+      metadataBase: new URL(SITE), title: { absolute: title }, description: photoPrice(c.desc, lang),
       robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
       alternates: withTwin({ canonical: url, languages: hreflangIletisim() }),
-      openGraph: { title, description: fitDesc(withAsk(c.desc, lang), undefined, lang), url, siteName: 'Terzi Can', locale: INTL[lang].locale, type: 'website', images: [{ url: OG_DEFAULT, width: 1200, height: 630, alt: title }] },
-      twitter: { card: 'summary_large_image', title, description: fitDesc(withAsk(c.desc, lang), undefined, lang), images: [OG_DEFAULT] },
+      openGraph: { title, description: photoPrice(c.desc, lang), url, siteName: 'Terzi Can', locale: INTL[lang].locale, type: 'website', images: [{ url: OG_DEFAULT, width: 1200, height: 630, alt: title }] },
+      twitter: { card: 'summary_large_image', title, description: photoPrice(c.desc, lang), images: [OG_DEFAULT] },
       other: { 'geo.region': 'TR-07', 'geo.placename': 'Antalya' },
     };
   }
@@ -79,11 +79,11 @@ export async function generateMetadata({ params }: P): Promise<Metadata> {
     const c = SVC[lang]; const url = `${SITE}${svcUrl(lang)}`;
     const title = c.title.length + 12 <= 60 ? `${c.title} | Terzi Can` : c.title;
     return {
-      metadataBase: new URL(SITE), title: { absolute: title }, description: fitDesc(withAsk(c.desc, lang), undefined, lang),
+      metadataBase: new URL(SITE), title: { absolute: title }, description: photoPrice(c.desc, lang),
       robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
       alternates: withTwin({ canonical: url, languages: hreflangSvc() }),
-      openGraph: { title, description: fitDesc(withAsk(c.desc, lang), undefined, lang), url, siteName: 'Terzi Can', locale: INTL[lang].locale, type: 'website', images: [{ url: OG_DEFAULT, width: 1200, height: 630, alt: title }] },
-      twitter: { card: 'summary_large_image', title, description: fitDesc(withAsk(c.desc, lang), undefined, lang), images: [OG_DEFAULT] },
+      openGraph: { title, description: photoPrice(c.desc, lang), url, siteName: 'Terzi Can', locale: INTL[lang].locale, type: 'website', images: [{ url: OG_DEFAULT, width: 1200, height: 630, alt: title }] },
+      twitter: { card: 'summary_large_image', title, description: photoPrice(c.desc, lang), images: [OG_DEFAULT] },
       other: { 'geo.region': 'TR-07', 'geo.placename': 'Antalya' },
     };
   }
@@ -92,11 +92,11 @@ export async function generateMetadata({ params }: P): Promise<Metadata> {
     const c0 = HIZMET[lang][hz]; const c = { ...c0, desc: serviceKwDesc(lang, c0.name, 'a', c0.desc) }; const url = `${SITE}${hizmetUrl(lang, hz)}`;
     const title = c.title.length + 12 <= 60 ? `${c.title} | Terzi Can` : c.title;
     return {
-      metadataBase: new URL(SITE), title: { absolute: title }, description: fitDesc(withAsk(c.desc, lang), undefined, lang),
+      metadataBase: new URL(SITE), title: { absolute: title }, description: photoPrice(c.desc, lang),
       robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
       alternates: withTwin({ canonical: url, languages: hizmetLanguages(hz) }),
-      openGraph: { title, description: fitDesc(withAsk(c.desc, lang), undefined, lang), url, siteName: 'Terzi Can', locale: INTL[lang].locale, type: 'website', images: [{ url: OG_DEFAULT, width: 1200, height: 630, alt: title }] },
-      twitter: { card: 'summary_large_image', title, description: fitDesc(withAsk(c.desc, lang), undefined, lang), images: [OG_DEFAULT] },
+      openGraph: { title, description: photoPrice(c.desc, lang), url, siteName: 'Terzi Can', locale: INTL[lang].locale, type: 'website', images: [{ url: OG_DEFAULT, width: 1200, height: 630, alt: title }] },
+      twitter: { card: 'summary_large_image', title, description: photoPrice(c.desc, lang), images: [OG_DEFAULT] },
       other: { 'geo.region': 'TR-07', 'geo.placename': 'Antalya' },
     };
   }
@@ -106,11 +106,11 @@ export async function generateMetadata({ params }: P): Promise<Metadata> {
     const brand = topic === 'tekstil' ? 'Anavera Tekstil' : 'Terzi Can';
     const title = c.title.length + brand.length + 3 <= 60 ? `${c.title} | ${brand}` : c.title;
     return {
-      metadataBase: new URL(SITE), title: { absolute: title }, description: (topic === 'tekstil' ? fitDesc(c.desc) : fitDesc(withAsk(c.desc, lang), undefined, lang)),
+      metadataBase: new URL(SITE), title: { absolute: title }, description: (topic === 'tekstil' ? fitDesc(c.desc) : photoPrice(c.desc, lang)),
       robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
       alternates: withTwin({ canonical: url, languages: topicLanguages(topic) }),
-      openGraph: { title, description: (topic === 'tekstil' ? fitDesc(c.desc) : fitDesc(withAsk(c.desc, lang), undefined, lang)), url, siteName: topic === 'tekstil' ? 'Anavera Tekstil' : 'Terzi Can', locale: INTL[lang].locale, type: 'website', images: [{ url: OG_DEFAULT, width: 1200, height: 630, alt: title }] },
-      twitter: { card: 'summary_large_image', title, description: (topic === 'tekstil' ? fitDesc(c.desc) : fitDesc(withAsk(c.desc, lang), undefined, lang)), images: [OG_DEFAULT] },
+      openGraph: { title, description: (topic === 'tekstil' ? fitDesc(c.desc) : photoPrice(c.desc, lang)), url, siteName: topic === 'tekstil' ? 'Anavera Tekstil' : 'Terzi Can', locale: INTL[lang].locale, type: 'website', images: [{ url: OG_DEFAULT, width: 1200, height: 630, alt: title }] },
+      twitter: { card: 'summary_large_image', title, description: (topic === 'tekstil' ? fitDesc(c.desc) : photoPrice(c.desc, lang)), images: [OG_DEFAULT] },
       other: { 'geo.region': 'TR-07', 'geo.placename': 'Antalya' },
     };
   }
@@ -164,4 +164,11 @@ export default async function Page({ params }: P) {
   const zone = parseZone(lang, slug);
   if (!zone) notFound();
   return <><ZoneLanding lang={lang} zone={zone} /><ReviewsBlock lang={lang} schema /></>;
+}
+
+// Arama sonucunda görünsün diye: bu rotadaki tüm alt şablonlarda açıklamaya o dilde "Fotoğraf gönderin, fiyat alın" (photoPrice; zaten varsa dokunmaz)
+export async function generateMetadata(props: P): Promise<Metadata> {
+  const m = await generateMetadataInner(props);
+  const { lang } = await props.params;
+  return typeof m.description === 'string' ? { ...m, description: photoPrice(m.description, lang) } : m;
 }

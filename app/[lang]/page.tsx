@@ -6,7 +6,7 @@ import IntlLanding from '@/components/IntlLanding';
 import { ILANGS, INTL, iUrl, isILang } from '@/lib/intl';
 import { SITE } from '@/lib/seo-data';
 import { OG_DEFAULT } from '@/lib/turist-keten';
-import { fitDesc, fitKeywords, withAsk } from '@/lib/meta-fit';
+import { fitDesc, photoPrice, fitKeywords, withAsk } from '@/lib/meta-fit';
 
 // Yalnızca ILANGS içindeki diller üretilir; diğer tek-segmentli yollar 404 olur.
 export const dynamicParams = false;
@@ -14,7 +14,7 @@ export function generateStaticParams() {
   return ILANGS.map((lang) => ({ lang }));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+async function generateMetadataInner({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params;
   if (!isILang(lang)) return {};
   const c = INTL[lang];
@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   return {
     metadataBase: new URL(SITE),
     title: { absolute: c.title },
-    description: fitDesc(withAsk(c.desc, lang), undefined, lang),
+    description: photoPrice(c.desc, lang),
     keywords: fitKeywords(c.keywords),
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
     alternates: withTwin({
@@ -33,8 +33,8 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
         'x-default': `${SITE}/antalya-terzi`,
       },
     }),
-    openGraph: { title: c.title, description: fitDesc(withAsk(c.desc, lang), undefined, lang), url, siteName: 'Terzi Can', locale: c.locale, type: 'website', images: [{ url: OG_DEFAULT, width: 1200, height: 630, alt: c.h1 }] },
-    twitter: { card: 'summary_large_image', title: c.title, description: fitDesc(withAsk(c.desc, lang), undefined, lang), images: [OG_DEFAULT] },
+    openGraph: { title: c.title, description: photoPrice(c.desc, lang), url, siteName: 'Terzi Can', locale: c.locale, type: 'website', images: [{ url: OG_DEFAULT, width: 1200, height: 630, alt: c.h1 }] },
+    twitter: { card: 'summary_large_image', title: c.title, description: photoPrice(c.desc, lang), images: [OG_DEFAULT] },
     other: { 'geo.region': 'TR-07', 'geo.placename': 'Antalya' },
   };
 }
@@ -43,4 +43,11 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
   const { lang } = await params;
   if (!isILang(lang)) notFound();
   return <><IntlLanding lang={lang} /><ReviewsBlock lang={lang} schema /></>;
+}
+
+// Arama sonucunda görünsün diye: bu rotadaki tüm alt şablonlarda açıklamaya o dilde "Fotoğraf gönderin, fiyat alın" (photoPrice; zaten varsa dokunmaz)
+export async function generateMetadata(props: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const m = await generateMetadataInner(props);
+  const { lang } = await props.params;
+  return typeof m.description === 'string' ? { ...m, description: photoPrice(m.description, lang) } : m;
 }

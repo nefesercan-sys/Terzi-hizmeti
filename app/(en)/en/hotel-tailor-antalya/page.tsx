@@ -4,14 +4,15 @@ import { zoneAlt } from '@/lib/intl-zones';
 import { OTEL_BOLGELERI } from '@/lib/otel-bolgeleri';
 import { byPriority } from '@/lib/seo-data';
 
+import { photoPrice } from '@/lib/meta-fit';
 const SITE = 'https://terzihizmeti.com.tr';
 const BASE_PATH = '/en/hotel-tailor-antalya';
 const WA_DEF = `https://wa.me/905318986418?text=${encodeURIComponent('Hello, I would like information about tailor service to my hotel.')}`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Hotel Tailor Antalya: We Come to Belek, Lara, Kemer & Side" },
-  description: "Hotel tailor in Antalya: we come to you in Belek, Lara, Kemer, Side. Pick-up, hemming from ₺200 (~€4), same day.",
+  title: { absolute: "Hotel Tailor Antalya · Repairs, Alterations, Belek, Side" },
+  description: photoPrice("Hotel tailor in Antalya: we come to you in Belek, Lara, Kemer, Side. Pick-up, hemming from ₺200 (~€4), same day.", 'en'),
   keywords: ['hotel tailor Antalya', 'tailor Belek hotel', 'tailor Lara hotel', 'tailor Kemer hotel', 'tailor Side hotel', 'urgent clothing alteration Antalya', 'mobile tailor Antalya', 'dress alteration hotel Antalya'],
   alternates: withTwin({
     canonical: `${SITE}${BASE_PATH}`,

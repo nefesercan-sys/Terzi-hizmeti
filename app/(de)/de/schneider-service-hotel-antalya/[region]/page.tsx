@@ -6,7 +6,7 @@ import { OTEL_BOLGELERI, bulOtelBolgesi } from '@/lib/otel-bolgeleri';
 import OtelBolgeSayfasi from '@/components/OtelBolgeSayfasi';
 import { regionJsonLd } from '@/lib/otel-copy';
 import { BUSINESS_ID } from '@/lib/seo-data';
-import { fitDesc, fitKeywords } from '@/lib/meta-fit';
+import { fitDesc, fitKeywords, photoPrice } from '@/lib/meta-fit';
 import { hotelKwDesc } from '@/lib/kw-desc';
 
 const SITE = 'https://terzihizmeti.com.tr';
@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: { params: Promise<{ region: s
   if (!r) return {};
 
   const url = `${SITE}${BASE_PATH}/${r.slug}`;
-  const title = `Schneider im Hotel ${r.name}, Antalya | Abholung & Lieferung`;
+  const title = `Schneider im Hotel ${r.name} · Reparatur, Änderung, Abholung`;
   const desc = fitDesc(`Urlaub in ${r.name}? Wir holen im Hotel ab und bringen zurück: Hose kürzen ab ₺200 (~€4), Reißverschluss ab ₺300, Kleider ändern. Täglich 08:00–23:00.`);
   const kwd = hotelKwDesc('de', r.name, 'a', desc); // anahtar kelimeli kalıp (lib/kw-desc.ts)
   const ogImage = `${SITE}/antalya-terzi-can-dikim-tamir-tadilat.jpg`;
@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: { params: Promise<{ region: s
   return {
     metadataBase: new URL(SITE),
     title: { absolute: title },
-    description: kwd,
+    description: photoPrice(kwd, 'de'),
     keywords: fitKeywords([`Schneider Hotel ${r.name}`, `Schneider in der Nähe ${r.name}`, `Änderungsschneiderei ${r.name}`, `Hose kürzen ${r.name}`, `Reißverschluss reparieren ${r.name}`, 'Schneider Antalya Urlaub', 'Kleidung ändern lassen Antalya Hotel']),
     alternates: withTwin({
       canonical: url,

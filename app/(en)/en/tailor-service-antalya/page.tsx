@@ -9,6 +9,7 @@ import FabricsOrderBlock from '@/components/FabricsOrderBlock';
 import ReviewsBlock from '@/components/ReviewsBlock';
 import Image from 'next/image';
 
+import { photoPrice } from '@/lib/meta-fit';
 const SITE      = 'https://terzihizmeti.com.tr';
 const PAGE_URL  = `${SITE}/en/tailor-service-antalya`;
 const TR_URL    = `${SITE}/antalya-terzi`;
@@ -25,9 +26,9 @@ const OG        = `${SITE}/antalya-terzi-can-dikim-tamir-tadilat.jpg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Tailor & Alterations Antalya: Hemming, Repairs | Terzi Can" },
+  title: { absolute: "Terzi Can Antalya · Dressmaking, Repairs, Alterations" },
   // SEO Optimizasyonu: Google'da kesilmemesi için ~150 karaktere optimize edildi
-  description: 'Tailor in Antalya (Konyaaltı): hemming from ₺200 (~€4), zipper from ₺300. Hotel pick-up and delivery in Belek, Lara, Kemer, Side. Same day.',
+  description: photoPrice('Tailor in Antalya (Konyaaltı): hemming from ₺200 (~€4), zipper from ₺300. Hotel pick-up and delivery in Belek, Lara, Kemer, Side. Same day.', 'en'),
   keywords: ['tailor Antalya', 'tailor service Antalya', 'hotel tailor Antalya', 'urgent clothing alteration Antalya', 'tailor Konyaaltı', 'clothing repair Antalya', 'trouser hemming Antalya', 'tailor open Sunday Antalya', 'alterations Antalya', 'seamstress Antalya', 'dressmaker Antalya'],
   authors: [{ name: 'Terzi Can', url: SITE }],
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },

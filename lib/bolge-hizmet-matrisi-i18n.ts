@@ -290,22 +290,11 @@ export function bolgeEkSssI18n(lang: ILang, slug: string, n: string, loc: string
 
 // ── Başlık havuzu: her bölge farklı bir hizmet vurgusuyla başlar; 60 karaktere sığan ilki seçilir, sonda kısa yedek ──
 export function intlDistrictTitles(lang: ILang, n: string, order = -1): string[] {
+  // Dikim/tamir/tadilat mantığı (sahip isteği, 26 Kasım 2026): her şablonda o dilde sewing/repairs/alterations
   const t: Record<ILang, string[]> = {
-    en: [
-      `Tailor ${n} · Hem Shortening, Zipper, Alterations`, `Tailor ${n}: Trousers, Skirt, Jacket Alterations`, `${n} Dress Repair, Taking-in, Shortening | Antalya`,
-      `Tailor ${n} · Waist Taking-in, Zipper Replacement`, `Tailor ${n}: Coat, Jacket, Jeans Alterations`, `Tailor ${n} · Sewing, Repair, Alterations | Antalya`,
-      `Tailor ${n} · Zipper, Button, Lining Replacement`, `Men's & Women's Tailor ${n} · Shorten, Take In`, `Tailor ${n} · Vest, Jumpsuit, Blouse, Tracksuit`,
-      `Tailor ${n} | Jeans Hem, Skirt, Dress Repair`, `Tailor ${n}: Evening Dress, Strap Length, Zipper`, `Tailor ${n} · Leather Jacket & Coat Alterations`],
-    ru: [
-      `Портной ${n}: укорочение, молнии, переделка`, `Портной ${n}: брюки, юбки, куртки`, `${n}: ремонт платьев, ушивание, подшив`,
-      `Портной ${n} · ушить пояс, заменить молнию`, `Портной ${n}: пальто, куртки, джинсы`, `Портной ${n} · пошив, ремонт, переделка`,
-      `Портной ${n} · молния, пуговицы, подкладка`, `Ателье ${n} · укоротить, ушить`, `Портной ${n} · жилет, комбинезон, блузка`,
-      `Портной ${n} | подшив джинсов, юбок, платьев`, `Портной ${n}: вечернее платье, бретели`, `Портной ${n} · кожаные куртки, пальто`],
-    de: [
-      `Schneider ${n} · Kürzen, Reißverschluss, Änderung`, `Schneider ${n}: Hose, Rock, Jacke ändern`, `${n}: Kleid reparieren, enger machen, kürzen`,
-      `Schneider ${n} · Bund enger, Reißverschluss neu`, `Schneider ${n}: Mantel, Jacke, Jeans ändern`, `Schneider ${n} · Nähen, Reparatur, Änderung`,
-      `Schneider ${n} · Reißverschluss, Knopf, Futter`, `Änderungsschneiderei ${n} · Damen & Herren`, `Schneider ${n} · Weste, Overall, Bluse`,
-      `Schneider ${n} | Jeans kürzen, Rock, Kleid`, `Schneider ${n}: Abendkleid, Träger, Reißverschluss`, `Schneider ${n} · Lederjacke & Mantel ändern`],
+    en: [`Tailor ${n} · Dressmaking, Repairs, Alterations`, `Tailor ${n}: Clothing Repairs, Custom Sewing, Alterations`, `${n} Tailor · Dress Repairs, Alterations, Sewing`, `Tailor ${n} · Trouser Alterations, Repairs, Sewing`, `Tailor ${n}: Coat & Jacket Repairs, Alterations`, `Tailor ${n} · Sewing, Repairs, Alterations | Antalya`, `Tailor ${n} · Zipper Repairs, Alterations, Sewing`, `Men's & Women's Tailor ${n} · Sewing, Repairs`, `Tailor ${n} | Evening Dress Sewing & Alterations`, `Tailor ${n}: Jeans, Skirt & Dress Repairs, Alterations`, `Tailor ${n} · Made-to-Measure, Repairs, Alterations`, `Tailor ${n} · Leather Jacket Repairs & Alterations`],
+    ru: [`Портной ${n} · пошив, ремонт, подгонка`, `Ателье ${n}: ремонт одежды, пошив, подгонка`, `Портной ${n} · ремонт платьев, подгонка, пошив`, `Портной ${n}: ремонт и подгонка брюк, пошив`, `Портной ${n} · ремонт пальто и курток, подгонка`, `Портной ${n} · пошив, ремонт, переделка | Анталья`, `Портной ${n}: замена молнии, ремонт, подгонка`, `Ателье ${n} · мужской и женский пошив, ремонт`, `Портной ${n} | пошив и подгонка вечерних платьев`, `Портной ${n} · подшив джинсов, ремонт, подгонка`, `Портной ${n}: пошив по меркам, ремонт, подгонка`, `Портной ${n} · ремонт кожаных курток, подгонка`],
+    de: [`Schneider ${n} · Nähen, Reparatur, Änderungen`, `Schneider ${n}: Kleidung reparieren, ändern, nähen`, `Schneider ${n} · Kleid reparieren, ändern, nähen`, `Schneider ${n}: Hose ändern, reparieren, nähen`, `Schneider ${n} · Mantel & Jacke reparieren, ändern`, `Schneider ${n} · Nähen, Reparatur, Änderung | Antalya`, `Schneider ${n}: Reißverschluss, Reparatur, Änderung`, `Änderungsschneiderei ${n} · Nähen & Reparatur`, `Schneider ${n} | Abendkleid nähen und ändern`, `Schneider ${n} · Jeans kürzen, Reparatur, Änderung`, `Schneider ${n}: Maßanfertigung, Reparatur, Änderung`, `Schneider ${n} · Lederjacke reparieren und ändern`],
   };
   const fb: Record<ILang, string> = { en: `Tailor ${n}, Antalya`, ru: `Портной ${n}, Анталья`, de: `Schneider ${n}, Antalya` };
   const base = t[lang];

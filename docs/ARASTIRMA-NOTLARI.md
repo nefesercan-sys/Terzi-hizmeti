@@ -82,3 +82,4 @@ Aktiviteler: plaj (Konyaaltı, Lara), tarihi (Kaleiçi, Perge, Aspendos, Myra, O
 - Abiye DİKİMİ yapılır (ölçüye göre; sabit fiyat yok, model ve kumaşa göre). Abiye tadilatı da yapılır.
 - Gelinlik DİKİMİ yapılmaz (değişmedi); gelinlikte yalnızca tadilat.
 - Perde dikimi ve perde kısaltma yapılır (tül, fon perde). Fiyat kumaşa ve metreye göre; sabit fiyat ve süre yazılmaz.
+- Yabancı diller (26 Kasım, sahip isteği): "Fotoğraf gönderin, fiyat alın" 10 dilde açıklamada (lib/meta-fit.ts photoPrice; tekstil ve ölçü rehberi hariç). Başlıklarda dikim/tamir/tadilat mantığı o dilin kelimeleriyle (sewing/repairs/alterations, пошив/ремонт/подгонка, Nähen/Reparatur/Änderung…). swaphubs bölge sayfaları "Call a Tailor / Портной на дом / Schneider rufen" yönünde.

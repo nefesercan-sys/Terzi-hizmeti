@@ -8,7 +8,7 @@ import ReviewsBlock from '@/components/ReviewsBlock';
 import { businessNode } from '@/lib/turist-keten';
 import { INTL_ALT } from '@/lib/intl';
 import Image from 'next/image';
-import { fitDesc } from '@/lib/meta-fit';
+import { fitDesc, photoPrice } from '@/lib/meta-fit';
 
 const SITE      = 'https://terzihizmeti.com.tr';
 const PAGE_URL  = `${SITE}/ru/uslugi-portnogo-antalya`;
@@ -26,8 +26,8 @@ const OG        = `${SITE}/antalya-terzi-can-dikim-tamir-tadilat.jpg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Ателье, портной и швея в Анталии: ремонт одежды, подшив" },
-  description: fitDesc('Ателье и швея в Анталии: ремонт одежды, подшив от ₺200 (~€4), замена молнии от ₺300, пошив. Приедем в отель или по адресу, забор и доставка. По-русски.'),
+  title: { absolute: "Ателье в Анталии: пошив, ремонт и подгонка одежды" },
+  description: photoPrice(fitDesc('Ателье и швея в Анталии: ремонт одежды, подшив от ₺200 (~€4), замена молнии от ₺300, пошив. Приедем в отель или по адресу, забор и доставка. По-русски.'), 'ru'),
   keywords: ['ателье Анталия', 'швея Анталия', 'ремонт одежды Анталия', 'портной Анталия', 'портной Анталья', 'выездной портной Анталья', 'портной в отель Анталья', 'срочная подгонка одежды Анталья', 'портной Коньяалты', 'русскоговорящий портной Анталья', 'ремонт одежды Анталья', 'подшить брюки Анталья'],
   authors: [{ name: 'Terzi Can', url: SITE }],
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },

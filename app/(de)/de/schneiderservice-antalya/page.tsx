@@ -13,6 +13,7 @@ import ReviewsBlock from '@/components/ReviewsBlock';
 import { businessNode } from '@/lib/turist-keten';
 import { INTL_ALT } from '@/lib/intl';
 
+import { photoPrice } from '@/lib/meta-fit';
 const SITE      = 'https://terzihizmeti.com.tr';
 const PAGE_URL  = `${SITE}/de/schneiderservice-antalya`;
 const TR_URL    = `${SITE}/antalya-terzi`;
@@ -31,9 +32,9 @@ const OG        = `${SITE}/antalya-terzi-can-dikim-tamir-tadilat.jpg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: 'Änderungsschneiderei Antalya: Hose kürzen, Reparatur' },
+  title: { absolute: 'Schneider Antalya · Nähen, Reparatur, Änderungen | Terzi Can' },
   description:
-    'Änderungsschneiderei in Antalya (Konyaaltı): Hose kürzen ab ₺200 (~€4), Reißverschluss ab ₺300. Hotelservice mit Abholung, meist am selben Tag.',
+    photoPrice('Änderungsschneiderei in Antalya (Konyaaltı): Hose kürzen ab ₺200 (~€4), Reißverschluss ab ₺300. Hotelservice mit Abholung, meist am selben Tag.', 'de'),
   keywords: ['Änderungsschneiderei Antalya', 'Schneiderei Antalya', 'Schneider Antalya', 'Schneider Hotel Antalya', 'Kleidung ändern Antalya eilig', 'Schneider Konyaaltı', 'Hose kürzen Antalya', 'Reißverschluss wechseln Antalya', 'Maßanfertigung Antalya'],
   alternates: withTwin({
     canonical: PAGE_URL,

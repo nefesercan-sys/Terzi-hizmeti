@@ -32,7 +32,7 @@ import { serviceKwDesc, areaJobsDesc, trAreaJobsDesc } from '@/lib/kw-desc';
 import { angleFor, angleTitles, angleDescs, angleKeywords } from '@/lib/seo-angles';
 import { fgNearDistrict, fgServiceMeta, eurFromText, EUR_FROM } from '@/lib/fg-meta';
 import { trNearDistrict } from '@/lib/tr-meta';
-import { fitDesc, fitKeywords, resimFiyat } from '@/lib/meta-fit';
+import { fitDesc, fitKeywords, resimFiyat, photoPrice } from '@/lib/meta-fit';
 import KargoFermuarKutusu, { type KFVariant } from '@/components/KargoFermuarKutusu';
 import KargoKisa from '@/components/KargoKisa';
 import TerziHizmetleriBolumu from '@/components/TerziHizmetleriBolumu';
@@ -264,6 +264,10 @@ function serviceCopy(lang: Lang, s: Service) {
   const desc = pickFit(candidates, 158);
   const o = lang === 'tr' ? undefined : fgServiceMeta(lang, s.id);
   // Yabancı dillerde açıklama anahtar kelimeli kalıptan (lib/kw-desc.ts); başlık değişmez.
+  // Perde gibi giysi dışı işlerde yabancı dilde genel terzi metni yerine işe özel açıklama
+  const FG_DESC: Partial<Record<string, Partial<Record<Lang, string>>>> = { perde: { en: "Curtain sewing and hemming in Antalya: sheer and lined curtains sewn, curtains shortened and re-hemmed. Send a photo and the length; price by fabric and metres.", ru: "Пошив и подшив штор в Анталье: тюль и портьеры на заказ, укорачивание штор и подшив низа. Пришлите фото и длину; цена зависит от ткани и метража.", de: "Gardinen nähen und kürzen in Antalya: Stores und Vorhänge nach Maß, Gardinen kürzen und Säume neu nähen. Foto und Länge senden; Preis nach Stoff und Metern." } };
+  const own = lang !== 'tr' ? FG_DESC[s.id]?.[lang] : undefined;
+  if (own) return { nm, title: o?.title ?? title, desc: own, kw: o?.kw ?? ([] as string[]) };
   if (o) return { nm, title: o.title, desc: lang === 'tr' ? o.desc : serviceKwDesc(lang, nm, 'a', o.desc), kw: o.kw };
   return { nm, title, desc: lang === 'tr' ? desc : serviceKwDesc(lang, nm, 'a', desc), kw: [] as string[] };
 }
@@ -339,7 +343,7 @@ export function districtMetadata(lang: Lang, d: District): Metadata {
   return {
     metadataBase: new URL(SITE),
     title: { absolute: c.title },
-    description: lang === 'tr' ? resimFiyat(c.desc) : fitDesc(c.desc, undefined, lang),
+    description: photoPrice(c.desc, lang),
     keywords: fitKeywords(kw),
     // Türkçe + uzak bölge: dizine alınmasın, linkler takip edilsin.
     robots: !isIndexable(lang, d.slug)
@@ -359,7 +363,7 @@ export function serviceMetadata(lang: Lang, s: Service): Metadata {
   return {
     metadataBase: new URL(SITE),
     title: { absolute: c.title },
-    description: lang === 'tr' ? resimFiyat(c.desc) : fitDesc(c.desc, undefined, lang),
+    description: photoPrice(c.desc, lang),
     keywords: fitKeywords([
       ...c.kw,
       ...s.vars[lang],
@@ -384,9 +388,9 @@ export function serviceMetadata(lang: Lang, s: Service): Metadata {
 export function hubMetadata(lang: Lang): Metadata {
   const title = {
     tr: 'Terzi Hizmetleri Antalya · Elbise Kısaltma, Daraltma, Dikim',
-    en: 'Clothing Repair & Alterations Antalya · Hemming',
-    ru: 'Ремонт одежды в Анталии: подшив, ушить, молнии',
-    de: 'Kleidung ändern & reparieren · Änderungsschneiderei Antalya',
+    en: 'Tailor Services Antalya · Hemming, Taking In, Sewing',
+    ru: 'Услуги портного в Анталии: подшив, ушивание, пошив',
+    de: 'Schneider-Leistungen Antalya · Kürzen, Enger, Nähen',
   }[lang];
   const description = {
     tr: `Bay bayan tamir tadilat: söküğü, yırtığı dikme, paça ve etek kısaltma, fermuar değişimi. Konyaaltı Hurma, Liman, Uncalı, Gürsu.`,
@@ -398,7 +402,7 @@ export function hubMetadata(lang: Lang): Metadata {
   return {
     metadataBase: new URL(SITE),
     title: { absolute: title },
-    description: lang === 'tr' ? resimFiyat(description) : fitDesc(description, undefined, lang),
+    description: photoPrice(description, lang),
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
     alternates: withTwin((() => { const a = alternatesFor(lang, (l) => abs(SERVICE_BASE[l])); return { ...a, languages: { ...a.languages, ...sixAlt('tamir') } }; })()),
     openGraph: { title, description: fitDesc(description, undefined, lang), url, siteName: 'Terzi Can', locale: OG_LOCALE[lang], type: 'website', images: [{ url: OG, width: 1024, height: 1024, alt: title }] },

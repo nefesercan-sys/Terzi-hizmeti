@@ -48,7 +48,7 @@ const PACKS: Record<ILang, Pack> = {
       { id: 'deripant', f: (n) => [`¿Estrechan la cintura y acortan pantalones de piel en ${n}?`, `Sí. En pantalones y chalecos de piel: estrechar cintura, acortar, cambiar y reparar cremalleras; desde ${e('leather')}, precio exacto por foto.`] },
       { id: 'kotmont', f: (n) => [`¿Acortan chaquetas vaqueras, abrigos vaqueros y pantalones cortos vaqueros en ${n}?`, `Sí. Acortamos y entallamos mangas y largo de chaquetas y abrigos vaqueros, y acortamos pantalones cortos vaqueros; desde ${e('hem')}.`] },
     ],
-    seo: [(n) => `Sastre en ${n}: acortar, cremalleras, arreglos`, (n) => `Arreglos de ropa en ${n} · entallar y acortar`, (n) => `Sastre ${n}: pantalón, vestido, chaqueta`],
+    seo: [(n) => `Sastre en ${n}: confección, arreglos y reparación`, (n) => `Arreglos de ropa en ${n} · reparación y confección`, (n) => `Sastre ${n}: arreglos, reparación, ropa a medida`],
   },
   fr: {
     titles: [(n) => `Les retouches que nous faisons à ${n}`, (n) => `Retouches à ${n} : raccourcir, ajuster, réparer`],
@@ -80,7 +80,7 @@ const PACKS: Record<ILang, Pack> = {
       { id: 'deripant', f: (n) => [`Reprenez-vous la taille et raccourcissez-vous les pantalons en cuir à ${n} ?`, `Oui. Pantalons et gilets en cuir : reprise de taille, raccourcissement, changement et réparation de fermeture ; dès ${e('leather')}, prix exact par photo.`] },
       { id: 'kotmont', f: (n) => [`Raccourcissez-vous vestes, manteaux et shorts en jean à ${n} ?`, `Oui. Nous raccourcissons et ajustons manches et longueur des vestes et manteaux en jean, et raccourcissons les shorts en jean ; dès ${e('hem')}.`] },
     ],
-    seo: [(n) => `Couturier à ${n} : raccourcir, fermetures, retouches`, (n) => `Retouches vêtements à ${n} · ajuster, raccourcir`, (n) => `Couturier ${n} : pantalon, robe, veste`],
+    seo: [(n) => `Couturier à ${n} : couture, retouches, réparation`, (n) => `Retouches vêtements à ${n} · réparation et couture`, (n) => `Couturier ${n} : retouches, réparations, sur mesure`],
   },
   pl: {
     titles: [(n) => `Jakie poprawki krawieckie robimy: ${n}`, (n) => `${n}: skracanie, zwężanie, naprawa ubrań`],
@@ -112,7 +112,7 @@ const PACKS: Record<ILang, Pack> = {
       { id: 'deripant', f: (n) => [`Czy zwężacie w pasie i skracacie spodnie skórzane (${n})?`, `Tak. Spodnie i kamizelki skórzane: zwężanie w pasie, skracanie, wymiana i naprawa zamka; od ${e('leather')}, dokładna cena ze zdjęcia.`] },
       { id: 'kotmont', f: (n) => [`Czy skracacie kurtki, płaszcze i szorty jeansowe (${n})?`, `Tak. Skracamy i zwężamy rękawy i długość kurtek i płaszczy jeansowych oraz skracamy szorty jeansowe; od ${e('hem')}.`] },
     ],
-    seo: [(n) => `Krawiec ${n}: skracanie, zamki, przeróbki`, (n) => `${n}: przeróbki krawieckie, zwężanie, skracanie`, (n) => `Krawiec ${n}: spodnie, sukienka, kurtka`],
+    seo: [(n) => `Krawiec ${n}: szycie, naprawa, przeróbki`, (n) => `${n}: przeróbki krawieckie, naprawa, szycie`, (n) => `Krawiec ${n}: przeróbki, naprawy, szycie na miarę`],
   },
   uk: {
     titles: [(n) => `Які роботи ми виконуємо: ${n}`, (n) => `${n}: вкорочення, зауження, ремонт одягу`],
@@ -144,7 +144,7 @@ const PACKS: Record<ILang, Pack> = {
       { id: 'deripant', f: (n) => [`Чи зауджуєте в поясі й підшиваєте шкіряні штани (${n})?`, `Так. Шкіряні штани й жилети: зауження в поясі, підшивання, заміна й ремонт блискавки; від ${e('leather')}, точна ціна за фото.`] },
       { id: 'kotmont', f: (n) => [`Чи вкорочуєте джинсові куртки, пальта й шорти (${n})?`, `Так. Вкорочуємо й зауджуємо рукави та довжину джинсових курток і пальт, а також вкорочуємо джинсові шорти; від ${e('hem')}.`] },
     ],
-    seo: [(n) => `Кравець ${n}: вкорочення, блискавки, переробка`, (n) => `${n}: переробка одягу, зауження, підшивання`, (n) => `Кравець ${n}: штани, сукня, куртка`],
+    seo: [(n) => `Кравець ${n}: пошиття, ремонт, підгонка`, (n) => `${n}: ремонт і підгонка одягу, пошиття`, (n) => `Кравець ${n}: підгонка, ремонт, пошиття на замовлення`],
   },
   nl: {
     titles: [(n) => `Welke kleermakerswerk wij doen in ${n}`, (n) => `Kleding vermaken in ${n}: korter, nauwer, repareren`],
@@ -176,7 +176,7 @@ const PACKS: Record<ILang, Pack> = {
       { id: 'deripant', f: (n) => [`Maken jullie leren broeken nauwer in de taille en korter in ${n}?`, `Ja. Leren broeken en gilets: taille nauwer maken, korter maken, rits vervangen en repareren; vanaf ${e('leather')}, exacte prijs op basis van een foto.`] },
       { id: 'kotmont', f: (n) => [`Maken jullie spijkerjassen, spijkermantels en korte spijkerbroeken korter in ${n}?`, `Ja. Wij maken mouwen en lengte van spijkerjassen en -mantels korter en nemen ze in, en korten korte spijkerbroeken in; vanaf ${e('hem')}.`] },
     ],
-    seo: [(n) => `Kleermaker ${n}: korter maken, ritsen, vermaken`, (n) => `Kleding vermaken in ${n} · inkorten en innemen`, (n) => `Kleermaker ${n}: broek, jurk, jas`],
+    seo: [(n) => `Kleermaker ${n}: maatwerk, reparatie, vermaken`, (n) => `Kleding vermaken in ${n} · reparatie en maatwerk`, (n) => `Kleermaker ${n}: vermaken, repareren, op maat`],
   },
   ar: {
     titles: [(n) => `الأعمال التي نقوم بها في ${n}`, (n) => `تعديل الملابس في ${n}: تقصير وتضييق وإصلاح`],
@@ -208,7 +208,7 @@ const PACKS: Record<ILang, Pack> = {
       { id: 'deripant', f: (n) => [`هل تضيّقون خصر البناطيل الجلدية وتقصّرونها في ${n}؟`, `نعم. للبناطيل والصدريات الجلدية: تضييق الخصر والتقصير واستبدال السحاب وإصلاحه؛ من ${e('leather')}، والسعر الدقيق من الصورة.`] },
       { id: 'kotmont', f: (n) => [`هل تقصّرون سترات ومعاطف وشورتات الجينز في ${n}؟`, `نعم. نقصّر ونضيّق أكمام وطول سترات ومعاطف الجينز، ونقصّر شورتات الجينز؛ تبدأ من ${e('hem')}.`] },
     ],
-    seo: [(n) => `خياط في ${n}: تقصير وسحابات وتعديل`, (n) => `تعديل الملابس في ${n} · تضييق وتقصير`, (n) => `خياط ${n}: بنطال وفستان وسترة`],
+    seo: [(n) => `خياط في ${n}: خياطة وإصلاح وتعديل الملابس`, (n) => `تعديل الملابس في ${n} · إصلاح وخياطة`, (n) => `خياط ${n}: تعديل وإصلاح وتفصيل حسب المقاس`],
   },
 };
 

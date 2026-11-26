@@ -1,6 +1,8 @@
+import { photoPrice } from '@/lib/meta-fit';
 import OzelSiparisSayfasi, { ozelMetadata } from '@/components/OzelSiparisSayfasi';
 
-export const metadata = ozelMetadata('de');
+const baseMeta = ozelMetadata('de');
+export const metadata = { ...baseMeta, description: photoPrice(String(baseMeta.description ?? ''), 'de') };
 export default function Page() {
   return <OzelSiparisSayfasi lang="de" />;
 }

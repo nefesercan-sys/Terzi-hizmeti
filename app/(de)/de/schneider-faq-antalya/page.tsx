@@ -1,7 +1,8 @@
+import { photoPrice } from '@/lib/meta-fit';
 import SssMerkezi, { sssMetadata } from '@/components/SssMerkezi';
 
-export const metadata = sssMetadata('de');
-
+const baseMeta = sssMetadata('de');
+export const metadata = { ...baseMeta, description: photoPrice(String(baseMeta.description ?? ''), 'de') };
 export default function Page() {
   return <SssMerkezi lang="de" />;
 }

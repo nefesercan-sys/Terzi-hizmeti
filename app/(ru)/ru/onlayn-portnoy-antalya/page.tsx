@@ -1,6 +1,8 @@
+import { photoPrice } from '@/lib/meta-fit';
 import KargoSayfasi, { kargoMetadata } from '@/components/KargoSayfasi';
 
-export const metadata = kargoMetadata('ru');
+const baseMeta = kargoMetadata('ru');
+export const metadata = { ...baseMeta, description: photoPrice(String(baseMeta.description ?? ''), 'ru') };
 export default function Page() {
   return <KargoSayfasi lang="ru" />;
 }

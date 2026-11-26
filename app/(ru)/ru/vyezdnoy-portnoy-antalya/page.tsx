@@ -4,14 +4,15 @@ import { zoneAlt } from '@/lib/intl-zones';
 import { OTEL_BOLGELERI, OTEL_AD_RU } from '@/lib/otel-bolgeleri';
 import { byPriority } from '@/lib/seo-data';
 
+import { photoPrice } from '@/lib/meta-fit';
 const SITE = 'https://terzihizmeti.com.tr';
 const BASE_PATH = '/ru/vyezdnoy-portnoy-antalya';
 const WA_DEF = `https://wa.me/905318986418?text=${encodeURIComponent('Здравствуйте, хочу узнать про выездного портного в мой отель.')}`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Выездное ателье и портной: Белек, Лара, Кемер, Сиде" },
-  description: 'Выездное ателье и портной в отели Антальи: Белек, Лара, Кемер, Сиде. Забор вещей, подшив от ₺200 (~€4), в тот же день. Пишите в WhatsApp на своём языке.',
+  title: { absolute: "Выездной портной в Анталии: ремонт, подгонка, Белек" },
+  description: photoPrice('Выездное ателье и портной в отели Антальи: Белек, Лара, Кемер, Сиде. Забор вещей, подшив от ₺200 (~€4), в тот же день. Пишите в WhatsApp на своём языке.', 'ru'),
   keywords: ['портной в отель Анталья', 'выездной портной Анталья', 'портной Белек отель', 'портной Лара отель', 'портной Кемер отель', 'портной Сиде отель', 'срочная подгонка одежды Анталья', 'ремонт одежды в отеле Анталья'],
   alternates: withTwin({
     canonical: `${SITE}${BASE_PATH}`,

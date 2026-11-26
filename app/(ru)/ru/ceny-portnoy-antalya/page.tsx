@@ -1,8 +1,9 @@
+import { photoPrice } from '@/lib/meta-fit';
 import TerziFiyatlariSayfasi from '@/components/TerziFiyatlariSayfasi';
 import { buildFiyatMetadata, buildFiyatJsonLd } from '@/lib/fiyat-meta';
 
-export const metadata = buildFiyatMetadata('ru');
-
+const baseMeta = buildFiyatMetadata('ru');
+export const metadata = { ...baseMeta, description: photoPrice(String(baseMeta.description ?? ''), 'ru') };
 export default function CenyPortnogoRu() {
   return (
     <>

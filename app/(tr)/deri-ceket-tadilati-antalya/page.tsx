@@ -19,7 +19,7 @@ const TODAY     = lastMod('/deri-ceket-tadilati-antalya', '2026-11-03');
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Antalya Terzi · Deri Ceket Tamiri, Tadilatı, Daraltma" },
+  title: { absolute: "Deri Ceket Tamiri Antalya · Daraltma, Kol, Astar | Terzi Can" },
   description:
     "Deri ceket, pantolon ve yelek tamir ve tadilatı ₺400'den. Daraltma, kol kısaltma, onarım; net fiyat fotoğrafla. Eve ve otele servis.",
   keywords: fitKeywords([

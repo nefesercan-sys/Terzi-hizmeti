@@ -138,26 +138,34 @@ export function bolgeEkSss(slug: string, n: string, loc: string, exclude: string
 
 // ── Başlık havuzu (Türkçe bölge sayfaları): her bölge farklı bir hizmet vurgusuyla başlar; 60 karaktere sığan ilki seçilir ──
 export function trDistrictTitles(slug: string, n: string, order = -1): string[] {
+  // Her ilçede dikim/tamir/tadilat farklı kombinasyonla (sıra numarasıyla çakışmasız)
   const t = [
-    `${n} Terzi · Paça Kısaltma, Fermuar, Tadilat | Antalya`,
-    `${n} Terzi: Pantolon, Etek, Ceket Tadilatı | Antalya`,
-    `${n} Elbise Tamiri, Daraltma, Kısaltma | Terzi Can`,
-    `${n} Terzi · Bel Daraltma, Fermuar Değişimi`,
-    `${n} Terzi: Mont, Ceket, Kot Tadilatı | Antalya`,
-    `${n} Terzi · Dikim, Tamir, Tadilat | Antalya`,
-    `${n} Terzi · Fermuar, Düğme, Astar Değişimi`,
-    `${n} Bay Bayan Terzi · Kısaltma, Daraltma`,
-    `${n} Terzi · Yelek, Tulum, Bluz, Eşofman`,
-    `${n} Terzi | Kot Paça, Etek, Elbise Tamiri`,
-    `${n} Terzi: Abiye, Elbise, Askı Boyu Ayarı`,
-    `${n} Terzi · Sökük, Yırtık Tamiri, Tadilat`,
-    `${n} Terzi · Kot Pantolon Daraltma, Kısaltma`,
-    `${n} Terzi: Kaban, Palto, Mont Tamiri`,
-    `${n} Terzi · Etek Kısaltma, Bluz Daraltma`,
-    `${n} Terzi | Gömlek, Tişört, Şort Tadilatı`,
+    `${n} Terzi · Elbise Dikimi, Tamiri, Tadilatı`,
+    `${n} Terzi: Dikim, Tamir, Tadilat | Antalya`,
+    `${n} Terzi | Kıyafet Tamiri, Özel Dikim, Tadilat`,
+    `${n} Terzi · Pantolon, Etek Tadilatı, Elbise Dikimi`,
+    `${n} Terzi: Fermuar Tamiri, Paça, Elbise Dikimi`,
+    `${n} Terzi | Mont, Ceket Tamiri, Kot Tadilatı`,
     `${n} Terzi · Özel Dikim, Tamir, Tadilat`,
-    `${n} Terzi: Kol, Boy Kısaltma, Beden Daraltma`,
+    `${n} Terzi: Abiye Dikimi, Elbise Tamiri, Tadilat`,
+    `${n} Terzi | Sökük, Yırtık Tamiri, Tadilat, Dikim`,
+    `${n} Terzi · Kot Paça, Elbise Tamiri, Tadilat`,
+    `${n} Terzi: Kaban, Palto Tamiri, Tadilat, Dikim`,
+    `${n} Terzi | Gömlek, Tişört Tadilatı, Tamir`,
+    `${n} Terzi · Kıyafet Dikimi, Tamiri, Tadilatı`,
+    `${n} Terzi: Takım Elbise Tadilatı, Tamir, Dikim`,
+    `${n} Terzi | Etek, Bluz Tadilatı, Özel Dikim`,
+    `${n} Terzi · Tamir, Tadilat, Elbise Dikimi`,
+    `${n} Terzi: Beden Daraltma, Tamir, Dikim`,
+    `${n} Terzi | Fermuar, Astar Tamiri, Tadilat`,
+    `${n} Terzi · Elbise Dikim, Tamir ve Tadilat`,
+    `${n} Terzi: Yelek, Ceket Tadilatı, Dikim, Tamir`,
+    `${n} Terzi | Gelinlik, Abiye Tadilatı, Dikim`,
+    `${n} Terzi · Kısaltma, Daraltma, Tamir, Dikim`,
+    `${n} Terzi: Bay Bayan Dikim, Tamir, Tadilat`,
+    `${n} Terzi | Aynı Gün Tamir, Tadilat, Dikim`,
   ];
+
   const k = (order >= 0 ? order : hashStr(slug + ':title')) % t.length; // sıra numarası: sayfalar arasında çakışma olmaz
-  return [...t.slice(k), ...t.slice(0, k), `${n} Terzi | Antalya`];
+  return [...t.slice(k), ...t.slice(0, k), `${n} Terzi · Dikim, Tamir`, `${n} Terzi | Antalya`];
 }

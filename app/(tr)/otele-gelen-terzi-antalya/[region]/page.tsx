@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: { params: Promise<{ region: s
   const r = bulOtelBolgesi(region);
   if (!r) return {};
   const url = `${SITE}${BASE_PATH}/${r.slug}`;
-  const title = `${r.name} Otel Terzisi · Paça Kısaltma, Otelden Alır`;
+  const title = `${r.name} Otel Terzisi · Tamir, Tadilat, Otelden Alır`;
   const desc = fitDesc(`${r.name} otelinde mi kalıyorsunuz? Paça ₺200'den, fermuar ₺300'den; otelden alıp tadil edip getiriyoruz. Eve ve otele alım-teslim yapılır. 08:00–23:00.`);
   return {
     metadataBase: new URL(SITE),

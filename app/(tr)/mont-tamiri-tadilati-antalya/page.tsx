@@ -5,7 +5,7 @@ import ReviewsBlock from '@/components/ReviewsBlock';
 import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
 import KargoFermuarKutusu from '@/components/KargoFermuarKutusu';
 import { businessNode } from '@/lib/business';
-import { fitKeywords } from '@/lib/meta-fit';
+import { fitKeywords, resimFiyat } from '@/lib/meta-fit';
 
 const SITE     = 'https://terzihizmeti.com.tr';
 const PAGE_URL = `${SITE}/mont-tamiri-tadilati-antalya`;
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Mont Tamiri ve Daraltma Ücreti 2026 Antalya · ₺200'den" },
   description:
-    "Mont boy ve kol kısaltma, daraltma ₺200'den; fermuar değişimi ₺300'den. Normal iş aynı gün, acil 1–2 saat. Eve ve otele servis.",
+    resimFiyat("Mont boy ve kol kısaltma, daraltma ₺200'den; fermuar değişimi ₺300'den. Normal iş aynı gün, acil 1–2 saat. Eve ve otele servis."),
   keywords: fitKeywords([
     'mont tamiri', 'mont tadilatı', 'mont kısaltma', 'mont daraltma', 'mont kol kısaltma', 'mont tamiri Antalya', 'mont tadilatı fiyat', 'mont fermuarı değişimi', 'kaban tadilatı',
   ]),

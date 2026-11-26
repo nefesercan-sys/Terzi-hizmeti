@@ -5,7 +5,7 @@ import ReviewsBlock from '@/components/ReviewsBlock';
 import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
 import KargoKisa from '@/components/KargoKisa';
 import { businessNode } from '@/lib/business';
-import { fitKeywords } from '@/lib/meta-fit';
+import { fitKeywords, resimFiyat } from '@/lib/meta-fit';
 
 const SITE     = 'https://terzihizmeti.com.tr';
 const PAGE_URL = `${SITE}/kot-etek-kisaltma-daraltma-antalya`;
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Kot Etek Kısaltma ve Daraltma · Antalya" },
   description:
-    "Kot etek boyu kısaltma, bel daraltma ve orijinal etek ucu ₺200'den. Normal iş aynı gün, acil 1–2 saat. Eve ve otele servis.",
+    resimFiyat("Kot etek boyu kısaltma, bel daraltma ve orijinal etek ucu ₺200'den. Normal iş aynı gün, acil 1–2 saat. Eve ve otele servis."),
   keywords: fitKeywords([
     'kot etek kısaltma', 'kot etek daraltma', 'kot etek boy kısaltma', 'kot etek bel daraltma', 'kot etek orijinal ucu', 'kot etek tadilatı', 'Antalya kot etek kısaltma',
   ]),

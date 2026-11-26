@@ -6,7 +6,7 @@ import ReviewsBlock from '@/components/ReviewsBlock';
 import { DELIVERY } from '@/lib/delivery';
 import { businessNode } from '@/lib/business';
 import Image from 'next/image';
-import { fitDesc } from '@/lib/meta-fit';
+import { fitDesc, resimFiyat } from '@/lib/meta-fit';
 
 
 const SITE      = 'https://terzihizmeti.com.tr';
@@ -24,7 +24,7 @@ const OG        = `${SITE}/antalya-terzi-can-dikim-tamir-tadilat.jpg`;
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Otele Gelen Terzi Antalya · Tamir, Tadilat, Belek, Side" },
-  description: fitDesc("Antalya'da otele gelen terzi: Belek, Lara, Kundu, Kemer, Side bölgelerinde otelden alım, tadilat ve teslimat yapılır. Her gün 08:00–23:00."),
+  description: resimFiyat(fitDesc("Antalya'da otele gelen terzi: Belek, Lara, Kundu, Kemer, Side bölgelerinde otelden alım, tadilat ve teslimat yapılır. Her gün 08:00–23:00.")),
   keywords: ['otele gelen terzi Antalya', 'otelde terzi hizmeti', 'Belek otel terzi', 'Lara otel terzi', 'Kemer otel terzi', 'Side otel terzi', 'acil terzi Antalya', 'turist terzi Antalya'],
   authors: [{ name: BIZ, url: SITE }],
   creator: BIZ,

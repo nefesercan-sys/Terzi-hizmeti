@@ -24,7 +24,7 @@ const OG        = `${SITE}/antalya-terzi-can-dikim-tamir-tadilat.jpg`;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Antalya Terzi · Elbise Dikimi, Tamiri, Tadilatı" },
+  title: { absolute: "Antalya Özel Terzi · Elbise Dikim, Tamiri, Tadilatı" },
   description: "Konyaaltı'nda bay bayan terzi. Fotoğrafı WhatsApp'tan gönderin, fiyatı hemen öğrenin. Paça ₺200'den, aynı gün; acil 1–2 saat. Her gün 08–23.",
   keywords: ['Antalya terzi', 'Konyaaltı terzi', 'Hurma terzi', 'Liman terzi', 'Uncalı terzi', 'Gürsu terzi', 'otele gelen terzi Antalya', 'acil terzi Antalya'],
   authors: [{ name: BIZ, url: SITE }],

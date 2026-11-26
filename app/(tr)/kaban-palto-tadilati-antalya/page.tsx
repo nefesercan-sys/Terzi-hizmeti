@@ -5,7 +5,7 @@ import ReviewsBlock from '@/components/ReviewsBlock';
 import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
 import KargoFermuarKutusu from '@/components/KargoFermuarKutusu';
 import { businessNode } from '@/lib/business';
-import { fitKeywords } from '@/lib/meta-fit';
+import { fitKeywords, resimFiyat } from '@/lib/meta-fit';
 
 const SITE     = 'https://terzihizmeti.com.tr';
 const PAGE_URL = `${SITE}/kaban-palto-tadilati-antalya`;
@@ -21,7 +21,7 @@ const FAQ: [string, string][] = [["Kaban ve palto tadilatı ne kadar?", "Kaban v
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Kaban, Palto Tadilatı Antalya · Daraltma, Kısaltma" },
-  description: "Kaban ve palto boy, kol kısaltma ve daraltma ₺200'den; fermuar değişimi ₺300'den. Astar ve düğme onarımı. Eve ve otele servis.",
+  description: resimFiyat("Kaban ve palto boy, kol kısaltma ve daraltma ₺200'den; fermuar değişimi ₺300'den. Astar ve düğme onarımı. Eve ve otele servis."),
   keywords: fitKeywords(["kaban tadilatı", "palto tadilatı", "kaban kısaltma", "palto kısaltma", "palto daraltma", "kaban kol kısaltma", "palto astar değişimi", "kaban düğme değişimi", "palto tamiri Antalya"]),
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   alternates: withTwin({ canonical: PAGE_URL }),

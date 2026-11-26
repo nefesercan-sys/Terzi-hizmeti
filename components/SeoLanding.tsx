@@ -32,7 +32,7 @@ import { serviceKwDesc, areaJobsDesc, trAreaJobsDesc } from '@/lib/kw-desc';
 import { angleFor, angleTitles, angleDescs, angleKeywords } from '@/lib/seo-angles';
 import { fgNearDistrict, fgServiceMeta, eurFromText, EUR_FROM } from '@/lib/fg-meta';
 import { trNearDistrict } from '@/lib/tr-meta';
-import { fitDesc, fitKeywords } from '@/lib/meta-fit';
+import { fitDesc, fitKeywords, resimFiyat } from '@/lib/meta-fit';
 import KargoFermuarKutusu, { type KFVariant } from '@/components/KargoFermuarKutusu';
 import KargoKisa from '@/components/KargoKisa';
 import TerziHizmetleriBolumu from '@/components/TerziHizmetleriBolumu';
@@ -236,7 +236,7 @@ function serviceCopy(lang: Lang, s: Service) {
   const trPrice = lang === 'tr' && ps ? [`${Q} fiyatları 2026 Antalya: ₺${s.priceFrom}'den | Terzi Can`, `${Q} fiyatları 2026 Antalya: ₺${s.priceFrom}'den`, `${Q} fiyatları 2026 Antalya · ${ts} | Terzi Can`, `${Q} fiyatları 2026 Antalya | Terzi Can`] : [];
   const trNoPrice = lang === 'tr' && !ps ? [`${Q} Antalya · Fotoğrafla Net Fiyat | Terzi Can`, `${Q} Antalya · Fotoğrafla Fiyat | Terzi Can`, `${Q} Antalya · Fiyat | Terzi Can`] : [];
   // Başlık haritası (26 Kasım 2026): her sayfanın ana kelimesi ayrı; sayfalar birbiriyle yarışmaz
-  const TR_TITLE: Partial<Record<string, string>> = { 'kiyafet-tamiri': 'Kıyafet Tamiri Antalya · Sökük, Yırtık, Astar, Düğme', abiye: 'Abiye Elbise Tamiri, Daraltma Fiyatı Antalya | Terzi Can', takim: 'Ceket Daraltma ve Takım Tamiri Antalya | Terzi Can' };
+  const TR_TITLE: Partial<Record<string, string>> = { 'kiyafet-tamiri': 'Kıyafet Tamiri Antalya · Terzi, Tadilat, Onarım', abiye: 'Abiye Elbise Tamiri, Daraltma Fiyatı Antalya | Terzi Can', takim: 'Ceket Daraltma ve Takım Tamiri Antalya | Terzi Can' };
   const title = (lang === 'tr' && TR_TITLE[s.id]) || pickFit([...trPrice, ...trNoPrice, ...t1.slice(1)], 60);
   const price = priceShortOf(lang, s);
   const tm0 = timeOf(lang, s).replace(/[.\s]+$/, '');
@@ -339,7 +339,7 @@ export function districtMetadata(lang: Lang, d: District): Metadata {
   return {
     metadataBase: new URL(SITE),
     title: { absolute: c.title },
-    description: fitDesc(c.desc, undefined, lang),
+    description: lang === 'tr' ? resimFiyat(c.desc) : fitDesc(c.desc, undefined, lang),
     keywords: fitKeywords(kw),
     // Türkçe + uzak bölge: dizine alınmasın, linkler takip edilsin.
     robots: !isIndexable(lang, d.slug)
@@ -359,7 +359,7 @@ export function serviceMetadata(lang: Lang, s: Service): Metadata {
   return {
     metadataBase: new URL(SITE),
     title: { absolute: c.title },
-    description: fitDesc(c.desc, undefined, lang),
+    description: lang === 'tr' ? resimFiyat(c.desc) : fitDesc(c.desc, undefined, lang),
     keywords: fitKeywords([
       ...c.kw,
       ...s.vars[lang],
@@ -383,7 +383,7 @@ export function serviceMetadata(lang: Lang, s: Service): Metadata {
 
 export function hubMetadata(lang: Lang): Metadata {
   const title = {
-    tr: 'Terzi Hizmetleri Antalya · Kısaltma, Daraltma, Dikim',
+    tr: 'Terzi Hizmetleri Antalya · Elbise Kısaltma, Daraltma, Dikim',
     en: 'Clothing Repair & Alterations Antalya · Hemming',
     ru: 'Ремонт одежды в Анталии: подшив, ушить, молнии',
     de: 'Kleidung ändern & reparieren · Änderungsschneiderei Antalya',
@@ -398,7 +398,7 @@ export function hubMetadata(lang: Lang): Metadata {
   return {
     metadataBase: new URL(SITE),
     title: { absolute: title },
-    description: fitDesc(description, undefined, lang),
+    description: lang === 'tr' ? resimFiyat(description) : fitDesc(description, undefined, lang),
     robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
     alternates: withTwin((() => { const a = alternatesFor(lang, (l) => abs(SERVICE_BASE[l])); return { ...a, languages: { ...a.languages, ...sixAlt('tamir') } }; })()),
     openGraph: { title, description: fitDesc(description, undefined, lang), url, siteName: 'Terzi Can', locale: OG_LOCALE[lang], type: 'website', images: [{ url: OG, width: 1024, height: 1024, alt: title }] },

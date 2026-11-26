@@ -5,7 +5,7 @@ import ReviewsBlock from '@/components/ReviewsBlock';
 import OrnekGorselSeridi from '@/components/OrnekGorselSeridi';
 import KargoKisa from '@/components/KargoKisa';
 import { businessNode } from '@/lib/business';
-import { fitKeywords } from '@/lib/meta-fit';
+import { fitKeywords, resimFiyat } from '@/lib/meta-fit';
 
 const SITE     = 'https://terzihizmeti.com.tr';
 const PAGE_URL = `${SITE}/kot-pantolon-daraltma-antalya`;
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE),
   title: { absolute: "Kot Daraltma · Bacak, Bel, Kalça · Antalya" },
   description:
-    "Kot pantolon bacak ve bel daraltma ₺200'den; ölçü üzerinizde alınır. Normal iş aynı gün, acil 1–2 saat. Eve ve otele servis.",
+    resimFiyat("Kot pantolon bacak ve bel daraltma ₺200'den; ölçü üzerinizde alınır. Normal iş aynı gün, acil 1–2 saat. Eve ve otele servis."),
   keywords: fitKeywords([
     'kot pantolon daraltma', 'kot daraltma fiyat', 'kot pantolon bacak daraltma', 'kot bel daraltma', 'kot pantolon daraltma Antalya', 'jean daraltma terzi', 'kot pantolon dar paça yapma',
   ]),

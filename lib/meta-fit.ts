@@ -57,3 +57,14 @@ export function fitDesc(s: string, max = META_DESC_MAX, lang?: string): string {
 export function fitKeywords(list: string[], max = META_KW_MAX): string[] {
   return Array.from(new Set(list.map((k) => k.trim()).filter(Boolean))).slice(0, max);
 }
+
+/** Arama sonucunda görünsün diye (sahip isteği, 26 Kasım 2026): açıklamada fotoğraf/resim bilgisi yoksa
+ *  ilk cümleden sonra "Resim gönder, fiyat al." eklenir; sığmazsa sondaki cümleler kısalır. Yalnızca Türkçe sayfalar. */
+export const RESIM_FIYAT = 'Resim gönder, fiyat al.';
+export function resimFiyat(s: string, max?: number): string {
+  const t = stripPhone(s);
+  const fitted = fitDesc(t, max);
+  if (/fotoğraf|resim/iu.test(fitted)) return fitted; // kısaltılmış hâlde de görünüyorsa dokunma
+  const m = t.match(/^[^.!?]{10,95}[.!?](?=\s)/u);
+  return fitDesc((m ? `${m[0]} ${RESIM_FIYAT} ${t.slice(m[0].length).trim()}` : `${RESIM_FIYAT} ${t}`).trim(), max);
+}

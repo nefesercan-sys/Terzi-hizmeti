@@ -17,6 +17,7 @@ const WA_DEF    = WA("Merhaba, abiye elbisem için tadilat/tamir fiyatı almak i
 const MAPS      = 'https://www.google.com/maps?cid=6436895271281342624';
 const TODAY     = lastMod('/abiye-tadilati-antalya', '2026-11-14');
 const FAQ: [string, string][] = [
+  ["Abiye dikimi yapıyor musunuz?", "Evet. Ölçüye göre abiye dikimi yapıyoruz. Model ve kumaş birlikte seçilir, ölçü alınır, provayla dikilir. Dikimde sabit fiyat yok; model ve kumaşa göre WhatsApp'tan netleşir. Özel gününüzün tarihini yazın, ona göre planlarız."],
   ["Abiye tadilatı ne kadar?", "Abiye tadilatı işe göre değişir (daraltma, boy, fermuar, askı, model değişimi); sabit fiyat yazmıyoruz. Elbisenin fotoğrafını WhatsApp'tan gönderirseniz net fiyatı söyleriz."],
   ["Abiye elbise daraltılır mı, beden ayarlanır mı?", "Evet. Abiye beden ayarlama ve daraltma yapılır; kumaş, astar ve kesime göre fotoğraftan değerlendirilir. Büyütme payı varsa elbise bir beden büyütülebilir."],
   ["Abiye elbise kısaltma yapıyor musunuz?", "Evet. Abiye boyu kısaltılır; şifon, saten, tül ve payetli kumaşlarda kumaşa uygun teknikle yapılır."],
@@ -30,16 +31,16 @@ const FAQ: [string, string][] = [
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE),
-  title: { absolute: "Abiye Tadilatı Antalya · Boy, Bel, Askı · Fotoğrafla Fiyat" },
-  description: "Abiye beden ayarlama, daraltma, kısaltma, fermuar tamiri, askı ayarı, bağcıklı yapma ve model değiştirme. Fiyat fotoğrafa göre.",
+  title: { absolute: "Abiye Dikimi ve Tadilatı Antalya · Boy, Bel, Askı" },
+  description: "Ölçüye göre abiye dikimi; abiyede beden ayarlama, daraltma, kısaltma, fermuar, askı ayarı ve model değiştirme. Fiyat model, kumaş ve fotoğrafa göre.",
   keywords: fitKeywords(["abiye tadilatı", "abiye elbise tamiri", "abiye daraltma", "abiye elbise kısaltma", "abiye beden ayarlama", "abiye fermuar tamiri", "abiye fermuar değişimi", "abiye elbise bağcıklı yapma", "askılı elbise askı ayarlama", "elbise modelini değiştirme", "abiye tadilatı Antalya"]),
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 } },
   alternates: withTwin({ canonical: PAGE_URL }),
   openGraph: {
     title: "Abiye Tadilatı ve Tamiri Antalya | Terzi Can",
-    description: "Abiye elbise daraltma, kısaltma, beden ayarlama, fermuar tamiri, askı ayarı, bağcıklı yapma ve model değiştirme. Fiyat fotoğrafa göre.",
+    description: "Ölçüye göre abiye dikimi; abiye elbise daraltma, kısaltma, beden ayarlama, fermuar, askı ayarı ve model değiştirme. Fiyat model, kumaş ve fotoğrafa göre.",
     url: PAGE_URL, siteName: 'Terzi Hizmeti', locale: 'tr_TR', type: 'website',
-    images: [{ url: `${SITE}/antalya-terzi-can-dikim-tamir-tadilat.jpg`, width: 1024, height: 1024, alt: "Abiye Tadilatı ve Tamiri Antalya" }],
+    images: [{ url: `${SITE}/antalya-terzi-can-dikim-tamir-tadilat.jpg`, width: 1024, height: 1024, alt: "Abiye Dikimi ve Tadilatı Antalya" }],
   },
 };
 
@@ -49,7 +50,7 @@ const jsonLd = {
     businessNode(),
     {
       '@type': 'WebPage', '@id': `${PAGE_URL}#webpage`, url: PAGE_URL,
-      name: "Abiye Tadilatı ve Tamiri Antalya", description: "Abiye elbise daraltma, kısaltma, beden ayarlama, fermuar tamiri, askı ayarı, bağcıklı yapma ve model değiştirme.",
+      name: "Abiye Dikimi ve Tadilatı Antalya", description: "Ölçüye göre abiye dikimi; abiye elbise daraltma, kısaltma, beden ayarlama, fermuar tamiri, askı ayarı, bağcıklı yapma ve model değiştirme.",
       inLanguage: 'tr', isPartOf: { '@id': `${SITE}#website` }, about: { '@id': `${SITE}#business` },
       breadcrumb: { '@id': `${PAGE_URL}#breadcrumb` }, dateModified: TODAY,
     },
@@ -98,9 +99,9 @@ export default function Page() {
           </div>
           <div className="hero-content">
             <span className="hero-tag">👗 Abiye · Daraltma · Fermuar · Model Değişimi</span>
-            <h1 id="hero-h">Abiye Tadilatı ve Tamiri <span className="accent">Antalya</span></h1>
-            <p className="hero-desc">Abiye elbise beden ayarlama, daraltma, kısaltma, fermuar tamiri, askı ayarı, sırtı bağcıklı yapma ve model değiştirme. Antalya'da eve ve otele alım-teslim.</p>
-            <p className="hero-desc"><strong>Kısa cevap:</strong> Abiye elbise tadilatı ve tamiri yapılır; fiyat elbisenin kumaşına ve yapılacak işe göre fotoğrafla söylenir, süre işin durumuna göre belirlenir.</p>
+            <h1 id="hero-h">Abiye Dikimi ve Tadilatı <span className="accent">Antalya</span></h1>
+            <p className="hero-desc">Ölçüye göre abiye dikimi; hazır abiyede beden ayarlama, daraltma, kısaltma, fermuar tamiri, askı ayarı, sırtı bağcıklı yapma ve model değiştirme. Antalya'da eve ve otele alım-teslim.</p>
+            <p className="hero-desc"><strong>Kısa cevap:</strong> Ölçüye göre abiye dikimi ile abiye tadilatı ve tamiri yapılır. Dikimde fiyat model ve kumaşa göre, tadilatta elbisenin kumaşına ve yapılacak işe göre fotoğrafla söylenir; süre işin durumuna göre belirlenir.</p>
             <div className="hero-btns">
               <a href={WA_DEF} target="_blank" rel="noopener noreferrer" className="btn-primary">💬 Elbisenin Fotoğrafını Gönderin →</a>
               <a href={`tel:${PHONE_TEL}`} className="btn-secondary"><span className="ico-tel" aria-hidden="true" /> {PHONE}</a>
@@ -157,7 +158,7 @@ export default function Page() {
           <div className="ctr" style={{ maxWidth: 720 }}>
             <div className="sec-head">
               <span className="eyebrow">SSS</span>
-              <h2 className="sec-h ff" id="faq-h">Abiye Tadilatı ve Tamiri Hakkında Sık Sorulan Sorular</h2>
+              <h2 className="sec-h ff" id="faq-h">Abiye Dikimi ve Tadilatı Hakkında Sık Sorulan Sorular</h2>
             </div>
             {FAQ.map(([q, a]) => (
               <div key={q} className="faq-item">

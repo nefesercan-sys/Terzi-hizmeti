@@ -69,3 +69,11 @@ Aktiviteler: plaj (Konyaaltı, Lara), tarihi (Kaleiçi, Perge, Aspendos, Myra, O
   - swaphubs bölge sayfaları "X Terzi Çağır" (eve, otele servis) ile ayrışır.
 - Dikim, tamir ve tadilat kelimeleri farklı kombinasyonlarla kullanılır (Search Console: "tamir" ve "dikim" en çok aranan).
 - Tek işe odaklı sayfalar (paça, kot, bel, etek, gömlek, kol), fiyat soran başlıklar, blog, rehber ve tekstil sayfaları kendi kelimesini korur.
+- Sahibin son başlık listesi (26 Kasım, sonradan):
+  - Ana sayfa: "Terzi Can Antalya · Elbise Dikim, Tamir, Tadilat"
+  - /antalya-terzi: "Antalya Özel Terzi · Elbise Dikim, Tamiri, Tadilatı"
+  - Hizmetler: "Terzi Hizmetleri Antalya · Elbise Kısaltma, Daraltma, Dikim"
+  - Otel bölgeleri: "X Otele Gelen Terzi Hizmeti · Tamir, Tadilat"
+  - swaphubs ana sayfa: "Antalya'da Elbise Dikim, Tamiri, Tadilatı Servisi"
+  - swaphubs bölge sayfaları: "X Terzi Çağır · Kıyafet Dikimi, Tamiri, Tadilatı"
+- Türkçe açıklamalarda "Resim gönder, fiyat al." görünür (lib/meta-fit.ts resimFiyat). Blog, tekstil ve rehber sayfaları hariç.

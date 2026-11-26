@@ -117,6 +117,8 @@ const jsonLd = {
           { '@type': 'Offer', name: 'Zipper Replacement / Fermuar Değişimi / Замена молнии', price: '300', priceCurrency: 'TRY', priceValidUntil: '2027-12-31', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Zipper Repair & Replacement', description: 'Zipper replacement for jackets, pants, coats, bags.' } },
           { '@type': 'Offer', name: 'Waist & Dress Alterations / Bel Daraltma / Подгонка по фигуре', price: '200', priceCurrency: 'TRY', priceValidUntil: '2027-12-31', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Clothing Alterations', description: 'Resizing dresses, coats, suits, pants.' } },
           { '@type': 'Offer', name: 'Custom Dressmaking / Özel Elbise Dikimi / Индивидуальный пошив', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Custom Tailoring', description: 'Custom dresses, suits, shirts made to measure.' } },
+          { '@type': 'Offer', name: 'Evening Dress Making & Alteration / Abiye Dikimi ve Tadilatı / Пошив и подгонка вечерних платьев', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Evening Dress Making & Alteration', description: 'Evening dresses made to measure; taking in, shortening, straps and zippers on ready-made evening dresses.' } },
+          { '@type': 'Offer', name: 'Curtain Sewing & Hemming / Perde Dikimi ve Kısaltma / Пошив и подшив штор', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Curtain Sewing & Hemming', description: 'Sheer and lined curtains sewn; curtains shortened and re-hemmed.' } },
           { '@type': 'Offer', name: 'Mobile Tailor Service / Eve Gelen Terzi / Выездной портной', availability: 'https://schema.org/InStock', itemOffered: { '@type': 'Service', name: 'Mobile Pickup & Delivery Tailor', description: 'Home pickup and delivery service in Konyaalti (Hurma, Liman, Sarisu).' } },
         ],
       },
@@ -172,9 +174,10 @@ const SERVICES = [
   { n:'02', title:'Fermuar Değişimi', en:'Zipper Replacement', ru:'Замена молнии', sub:'Pantolon · Mont · Ceket · Çanta', desc:'Pantolon, mont, ceket, sweatshirt ve çanta fermuar değişimi, sıkışan fermuar tamiri.', price:'₺300+', time:'Acil 1–2 saat', wa:WA_TR, tur:'fermuar' as IlustrasyonTur },
   { n:'03', title:'Bel Daraltma & Tadilat', en:'Waist Alterations', ru:'Подгонка по фигуре', sub:'Elbise · Pantolon · Ceket', desc:'Elbise, pantolon ve ceketlerde bel daraltma, vücuda tam oturan ölçü ayarı.', price:'₺200+', time:'Acil 1–2 saat', wa:WA_TR, tur:'elbise' as IlustrasyonTur },
   { n:'04', title:'Özel Elbise Dikimi', en:'Custom Tailoring', ru:'Пошив на заказ', sub:'Kadın · Erkek · Çocuk / Women & Men', desc:'Kadın elbisesi, erkek takım elbise, gömlek — ölçünüze özel sıfırdan dikim.', price:'Fotoğrafa ve istediğiniz modele göre', time:'Modele göre', wa:WA_TR, tur:'makas' as IlustrasyonTur },
-  { n:'05', title:'Gelinlik & Abiye Tadilatı', en:'Wedding Dress Alterations', ru:'Ремонт свадебных платьев', sub:'Özel Gün Kıyafetleri / Evening Gowns', desc:'Özel gün kıyafetlerinde hassas daraltma, boy ayarı ve detaylı onarım.', price:'Fotoğrafa göre', time:'Aynı gün', wa:WA_TR, tur:'gelinlik' as IlustrasyonTur },
+  { n:'05', title:'Abiye Dikimi & Gelinlik Tadilatı', en:'Evening Dresses & Wedding Alterations', ru:'Вечерние и свадебные платья', sub:'Özel Gün Kıyafetleri / Evening Gowns', desc:'Ölçüye göre abiye dikimi; abiye ve gelinlikte hassas daraltma, boy ayarı ve onarım.', price:'Fotoğrafa ve modele göre', time:'Tadilat aynı gün', wa:WA_TR, tur:'gelinlik' as IlustrasyonTur },
   { n:'06', title:'Eve Gelen Terzi', en:'Mobile Tailor Pickup', ru:'Выездной портной', sub:'Eve ve Otele Alım-Teslim', desc:'Araçlı terzi servisi: adresinizde ölçü alma; özel dikimde süre modele ve adede göre, normal tadilat aynı gün, acil işler 1–2 saatte teslim.', price:'Alım-teslim / Pickup', time:'Aynı gün', wa:WA_TR, tur:'servis' as IlustrasyonTur },
   { n:'07', title:'Üniforma & Seri İmalat', en:'Uniform Manufacturing', ru:'Пошив униформы', sub:'Otel · Restoran · Okul / Hotel & Uniforms', desc:'Toplu üniforma üretimi, fason tekstil, seri imalat ve nakış hizmeti.', price:'Teklif Al', time:'Proje bazlı', wa:WA_TR, tur:'gomlek' as IlustrasyonTur },
+  { n:'08', title:'Perde Dikimi & Kısaltma', en:'Curtain Sewing & Hemming', ru:'Пошив и подшив штор', sub:'Tül · Fon Perde / Curtains', desc:'Tül ve fon perde dikimi, perde boyu kısaltma ve etek dikişi. Perdenin fotoğrafını ve istediğiniz boyu gönderin.', price:'Kumaş ve metreye göre', time:'İşe göre', wa:WA_TR, tur:'kumas' as IlustrasyonTur },
 ];
 
 // Mahalle listesi TEK kaynaktan (lib/seo-data.ts); eve ve otele servis her bölgede yapılır.
@@ -342,7 +345,7 @@ export default function TerziHizmetiPage() {
             </h1>
 
             <p className="hero-desc" id="hero-desc">
-              <strong>Terzi Can</strong>, Antalya Konyaaltı Hurma'daki atölyesiyle paça kısaltma, daraltma, fermuar değişimi, özel dikim ve gelinlik/abiye tadilatı yapar; WhatsApp ve telefondan +90 531 898 64 18 numarasıyla her gün 08:00–23:00 ulaşılır. {DELIVERY.tr.urgent} {DELIVERY.tr.normal} Otellere alım-teslim yapılır.
+              <strong>Terzi Can</strong>, Antalya Konyaaltı Hurma'daki atölyesiyle paça kısaltma, daraltma, fermuar değişimi, özel dikim, abiye dikimi, gelinlik/abiye tadilatı ve perde dikimi, kısaltması yapar; WhatsApp ve telefondan +90 531 898 64 18 numarasıyla her gün 08:00–23:00 ulaşılır. {DELIVERY.tr.urgent} {DELIVERY.tr.normal} Otellere alım-teslim yapılır.
             </p>
 
             {/* YABANCI MÜŞTERİ HIZLI ERİŞİM KARTLARI */}

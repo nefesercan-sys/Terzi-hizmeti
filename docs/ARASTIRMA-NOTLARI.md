@@ -77,3 +77,8 @@ Aktiviteler: plaj (Konyaaltı, Lara), tarihi (Kaleiçi, Perge, Aspendos, Myra, O
   - swaphubs ana sayfa: "Antalya'da Elbise Dikim, Tamiri, Tadilatı Servisi"
   - swaphubs bölge sayfaları: "X Terzi Çağır · Kıyafet Dikimi, Tamiri, Tadilatı"
 - Türkçe açıklamalarda "Resim gönder, fiyat al." görünür (lib/meta-fit.ts resimFiyat). Blog, tekstil ve rehber sayfaları hariç.
+
+### 26 Kasım 2026: Yeni hizmet bilgisi (sahip)
+- Abiye DİKİMİ yapılır (ölçüye göre; sabit fiyat yok, model ve kumaşa göre). Abiye tadilatı da yapılır.
+- Gelinlik DİKİMİ yapılmaz (değişmedi); gelinlikte yalnızca tadilat.
+- Perde dikimi ve perde kısaltma yapılır (tül, fon perde). Fiyat kumaşa ve metreye göre; sabit fiyat ve süre yazılmaz.

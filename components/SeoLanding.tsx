@@ -236,7 +236,7 @@ function serviceCopy(lang: Lang, s: Service) {
   const trPrice = lang === 'tr' && ps ? [`${Q} fiyatları 2026 Antalya: ₺${s.priceFrom}'den | Terzi Can`, `${Q} fiyatları 2026 Antalya: ₺${s.priceFrom}'den`, `${Q} fiyatları 2026 Antalya · ${ts} | Terzi Can`, `${Q} fiyatları 2026 Antalya | Terzi Can`] : [];
   const trNoPrice = lang === 'tr' && !ps ? [`${Q} Antalya · Fotoğrafla Net Fiyat | Terzi Can`, `${Q} Antalya · Fotoğrafla Fiyat | Terzi Can`, `${Q} Antalya · Fiyat | Terzi Can`] : [];
   // Başlık haritası (26 Kasım 2026): her sayfanın ana kelimesi ayrı; sayfalar birbiriyle yarışmaz
-  const TR_TITLE: Partial<Record<string, string>> = { 'kiyafet-tamiri': 'Kıyafet Tamiri Antalya · Terzi, Tadilat, Onarım', abiye: 'Abiye Elbise Tamiri, Daraltma Fiyatı Antalya | Terzi Can', takim: 'Ceket Daraltma ve Takım Tamiri Antalya | Terzi Can' };
+  const TR_TITLE: Partial<Record<string, string>> = { 'kiyafet-tamiri': 'Kıyafet Tamiri Antalya · Terzi, Tadilat, Onarım', abiye: 'Abiye Elbise Tamiri, Daraltma Fiyatı Antalya | Terzi Can', takim: 'Ceket Daraltma ve Takım Tamiri Antalya | Terzi Can', perde: 'Perde Dikimi ve Kısaltma Antalya · Tül, Fon Perde' };
   const title = (lang === 'tr' && TR_TITLE[s.id]) || pickFit([...trPrice, ...trNoPrice, ...t1.slice(1)], 60);
   const price = priceShortOf(lang, s);
   const tm0 = timeOf(lang, s).replace(/[.\s]+$/, '');

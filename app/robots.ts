@@ -22,6 +22,7 @@ export default function robots(): MetadataRoute.Robots {
         userAgent: [
           'Googlebot',
           'Bingbot',
+          'Yandex', // Yandex'in tüm robotları (arama, görsel, mobil); Yandex Webmaster'ın önerdiği genel ad
           'YandexBot',
           'Google-Extended',
           'GPTBot',
